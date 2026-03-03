@@ -6,6 +6,7 @@
 [id="installation-azure-subscription-tenant-id_{context}"]
 = Recording the subscription and tenant IDs
 
+[role="_abstract"]
 The installation program requires the subscription and tenant IDs that are associated with your {azure-short} account. You can use the {azure-short} CLI to gather this information.
 
 .Prerequisites
