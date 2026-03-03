@@ -6,6 +6,7 @@
 [id="installation-azure-identities_{context}"]
 = Supported identities to access {azure-short} resources
 
+[role="_abstract"]
 An {product-title} cluster requires an {azure-short} identity to create and manage {azure-short} resources. You need one of the following types of identities to complete the installation:
 
 * A service principal
