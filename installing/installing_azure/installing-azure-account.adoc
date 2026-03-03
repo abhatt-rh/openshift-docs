@@ -6,6 +6,7 @@ include::_attributes/common-attributes.adoc[]
 
 toc::[]
 
+[role="_abstract"]
 Before you can install {product-title}, you must configure a {azure-first} account to meet installation requirements.
 
 [IMPORTANT]
@@ -19,7 +20,7 @@ in the {azure-short} documentation.
 include::modules/installation-azure-limits.adoc[leveloffset=+1]
 
 [role="_additional-resources"]
-.Additional resources
+== Additional resources
 
 * xref:../../scalability_and_performance/optimization/optimizing-storage.adoc#optimizing-storage[Optimizing storage].
 
@@ -46,9 +47,8 @@ include::modules/installation-azure-marketplace.adoc[leveloffset=+1]
 
 include::modules/installation-azure-regions.adoc[leveloffset=+1]
 
-== Next steps
+[role="_additional-resources"]
+== Additional resources
 
-* Install an {product-title} cluster on Azure. You can
-xref:../../installing/installing_azure/ipi/installing-azure-customizations.adoc#installing-azure-customizations[install a customized cluster]
-or
-xref:../../installing/installing_azure/ipi/installing-azure-default.adoc#installing-azure-default[quickly install a cluster] with default options.
+* xref:../../installing/installing_azure/ipi/installing-azure-customizations.adoc#installing-azure-customizations[Installing a customized cluster on Azure]
+* xref:../../installing/installing_azure/ipi/installing-azure-default.adoc#installing-azure-default[Installing a cluster quickly on Azure with default options]
