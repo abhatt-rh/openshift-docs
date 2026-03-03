@@ -6,6 +6,7 @@
 [id="installation-creating-azure-service-principal_{context}"]
 = Creating a service principal
 
+[role="_abstract"]
 The installation program requires an Azure identity to complete the installation. You can use a service principal.
 
 If you are unable to use a service principal, you can use a managed identity.
@@ -22,8 +23,8 @@ If you are unable to use a service principal, you can use a managed identity.
 +
 [source,terminal]
 ----
-$ az ad sp create-for-rbac --role <role_name> \// <1>
-     --name <service_principal> \// <2>
+$ az ad sp create-for-rbac --role <role_name> \ <1>
+     --name <service_principal> \ <2>
      --scopes /subscriptions/<subscription_id> <3>
 ----
 <1> Defines the role name. You can use the `Contributor` role, or you can specify a custom role which contains the necessary permissions.
