@@ -31,6 +31,7 @@ endif::[]
 [id="installation-azure-limits_{context}"]
 = {cp} account limits
 
+[role="_abstract"]
 ifndef::ash[]
 The {product-title} cluster uses a number of Microsoft {cp} components, and the default link:https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits[Azure subscription and service limits, quotas, and constraints] affect your ability to install {product-title} clusters.
 
