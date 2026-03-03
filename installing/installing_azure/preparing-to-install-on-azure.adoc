@@ -6,6 +6,7 @@ include::_attributes/common-attributes.adoc[]
 
 toc::[]
 
+[role="_abstract"]
 You can install {product-title} on installer-provisioned or user-provisioned infrastructure. The default installation type uses installer-provisioned infrastructure, where the installation program provisions the underlying infrastructure for the cluster. You can also install {product-title} on infrastructure that you provision. If you do not use infrastructure that the installation program provisions, you must manage and maintain the cluster resources yourself.
 
 See xref:../../architecture/architecture-installation.adoc#installation-process_architecture-installation[Installation process] for more information about installer-provisioned and user-provisioned installation processes.
@@ -38,7 +39,7 @@ You can install a cluster on {azure-short} infrastructure that you provision, by
 
 * **xref:../../installing/installing_azure/upi/installing-azure-user-infra.adoc#installing-azure-user-infra[Installing a cluster on {azure-short} using ARM templates]**: You can install {product-title} on {azure-short} by using infrastructure that you provide. You can use the provided Azure Resource Manager (ARM) templates to assist with an installation.
 
-[id="preparing-to-install-on-azure-next-steps"]
-== Next steps
+[role="_additional-resources"]
+== Additional resources
 
 * xref:../../installing/installing_azure/installing-azure-account.adoc#installing-azure-account[Configuring an {azure-short} account]
