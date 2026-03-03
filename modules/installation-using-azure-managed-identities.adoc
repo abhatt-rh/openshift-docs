@@ -6,6 +6,7 @@
 [id="installation-using-azure-managed-identities_{context}"]
 = Using {azure-short} managed identities
 
+[role="_abstract"]
 The installation program requires an {azure-short} identity to complete the installation. You can use either a system-assigned or user-assigned managed identity.
 
 If you are unable to use a managed identity, you can use a service principal.
