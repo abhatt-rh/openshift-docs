@@ -8,6 +8,7 @@
 [id="installation-azure-permissions_{context}"]
 = Required {azure-short} roles
 
+[role="_abstract"]
 Before you create the identity, verify that your environment meets the following requirements based on the identity:
 
 * The Azure account that you use to create the identity is assigned the `User Access Administrator` and `Contributor` roles. These roles are required when:
