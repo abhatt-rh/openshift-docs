@@ -13,7 +13,7 @@ Deploy the {product-title} cluster using the installer.
 
 
 . Run the {product-title} installer:
-
++
 [source,terminal]
 ----
 $ ./openshift-baremetal-install --dir ~/clusterconfigs --log-level debug create cluster
