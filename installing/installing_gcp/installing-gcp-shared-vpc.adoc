@@ -88,6 +88,11 @@ include::modules/manually-create-identity-access-management.adoc[leveloffset=+2]
 
 To install a cluster that is configured to use {gcp-short} Workload Identity, you must configure the CCO utility and create the required {gcp-short} resources for your cluster.
 
+[IMPORTANT]
+====
+In a shared VPC environment, the component service accounts that the `ccoctl` utility creates require additional permissions in the host project to access shared VPC network resources. Ensure that you grant the required host project permissions to these service accounts after running the `ccoctl` utility. For more information, see xref:../../installing/installing_gcp/installing-gcp-account.adoc#minimum-required-permissions-ipi-gcp-xpn-short-term-creds_installing-gcp-account[Additional host project permissions for {gcp-short} Workload Identity].
+====
+
 //Task part 1: Configuring the Cloud Credential Operator utility
 include::modules/cco-ccoctl-configuring.adoc[leveloffset=+3]
 
