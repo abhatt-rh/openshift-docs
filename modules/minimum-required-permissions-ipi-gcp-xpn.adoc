@@ -23,7 +23,7 @@ If you are not installing to a shared Virtual Private Cloud (VPC), you can skip 
 When installing a cluster on shared Virtual Private Cloud (VPC) infrastructure and you want to manually create credentials, grant the `compute.subnetworks.use` permission on the host project to the credentials that the Machine API Operator uses.
 ====
 
-Ensure that the host project applies one of the following configurations to the service account, noting that the permissions for creating and deleting firewalls are not required if you manage your own firewall rules:
+Ensure that the host project applies one of the following configurations to the installer service account, noting that the permissions for creating and deleting firewalls are not required if you manage your own firewall rules:
 
 .Required permissions for creating firewalls in the host project
 ====
@@ -65,4 +65,38 @@ The following permissions are required when you select a separate project for th
 * `dns.resourceRecordSets.create`
 * `dns.resourceRecordSets.delete`
 * `dns.resourceRecordSets.list`
+====
+
+[id="minimum-required-permissions-ipi-gcp-xpn-short-term-creds_{context}"]
+== Additional host project permissions for {gcp-short} Workload Identity
+
+When you install a cluster into a shared VPC by using short-term credentials with {gcp-short} Workload Identity, the Cloud Credential Operator utility (`ccoctl`) creates individual service accounts for cluster components. These component service accounts require additional permissions in the host project to access shared VPC resources.
+
+Grant the following permissions in the host project to the component service accounts that the `ccoctl` utility creates:
+
+.Required host project permissions for component service accounts
+[cols="1,1",options="header"]
+|===
+|Component service account
+|Required host project permissions
+
+|Machine API (`openshift-machine-api-gcp`)
+a|* `compute.subnetworks.use`
+* `compute.subnetworks.useExternalIp`
+
+|Cluster API (`openshift-cluster-api-gcp`)
+a|* `compute.subnetworks.use`
+* `compute.firewalls.delete` ^[1]^
+
+|Cloud Controller Manager (`openshift-gcp-ccm`)
+a|* `compute.firewalls.delete` ^[1]^
+
+|Cluster Network Operator (`openshift-cloud-network-config-controller-gcp`)
+a|* `compute.subnetworks.use`
+|===
+[.small]^[1]^ Required only if the installer service account manages firewall rules.
+
+[NOTE]
+====
+To determine the exact permissions that each component service account requires, you can inspect the `CredentialsRequest` custom resources for your release image. For more information, see "Manually creating long-term credentials".
 ====
