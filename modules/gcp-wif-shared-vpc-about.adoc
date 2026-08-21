@@ -1,0 +1,48 @@
+// Module included in the following assemblies:
+//
+// * installing/installing_gcp/installing-gcp-shared-vpc.adoc
+
+:_mod-docs-content-type: CONCEPT
+[id="gcp-wif-shared-vpc-about_{context}"]
+= How {gcp-wid-short} interacts with shared VPC
+
+[role="_abstract"]
+When you install {product-title} into a shared VPC by using {gcp-wid-short}, the cluster's credential model and network model interact in ways that differ from a standard installation. Understanding this interaction helps you configure permissions correctly across the host project and service project.
+
+== Shared VPC project structure
+
+In a shared VPC deployment, {gcp-short} resources span two projects:
+
+Host project:: Owns the VPC network, subnets, and firewall rules. Centralized network administration happens here.
+Service project:: Hosts the {product-title} cluster and its compute resources. The cluster's service accounts are created in this project.
+
+For more information, see link:https://cloud.google.com/vpc/docs/shared-vpc[Shared VPC overview] in the {gcp-short} documentation.
+
+== {gcp-wid-short} and service account impersonation
+
+With {gcp-wid-short}, the Cloud Credential Operator utility (`ccoctl`) creates individual {gcp-short} service accounts in the service project for each cluster component. These service accounts use workload identity federation to obtain short-lived tokens instead of long-lived keys. Each component's pod authenticates through an OpenID Connect (OIDC) identity provider and impersonates its assigned {gcp-short} service account.
+
+For more information about how workload identity federation authenticates external workloads, see link:https://cloud.google.com/iam/docs/workload-identity-federation[Workload identity federation] in the {gcp-short} documentation.
+
+== Cross-project permission requirements
+
+In a standard (non-shared VPC) installation, the component service accounts only need permissions in the service project. In a shared VPC installation, certain components must also operate on network resources that belong to the host project. Because {gcp-wid-short} creates per-component service accounts rather than relying on a single installer service account, you must grant host-project permissions to each component service account individually.
+
+The components that require host-project permissions are those that interact with subnets or firewall rules owned by the host project, including:
+
+* Machine API and Cluster API controllers, which provision compute instances attached to shared VPC subnets
+* Cloud Controller Manager, which manages load balancer and firewall resources
+* Cluster Network Operator, which manages network interfaces on shared VPC subnets
+
+For the specific permissions required for each component service account, see xref:../../installing/installing_gcp/installing-gcp-account.adoc#minimum-required-permissions-ipi-gcp-xpn-short-term-creds_installing-gcp-account[Additional host project permissions for {gcp-short} Workload Identity].
+
+For information about granting IAM roles to service accounts on projects, see link:https://cloud.google.com/iam/docs/granting-changing-revoking-access[Manage access to projects, folders, and organizations] in the {gcp-short} documentation.
+
+== How this differs from long-term credentials
+
+With long-term credentials (Mint or Passthrough mode), the installer's single service account holds all necessary permissions in both projects. With {gcp-wid-short}:
+
+* There is no single service account that holds all permissions after installation.
+* Each component operates with the minimum permissions it requires (least privilege).
+* Host-project permissions must be granted to individual component service accounts, not to a shared credential.
+* The `ccoctl` utility creates the service accounts, but does not automatically grant host-project permissions — you must do this manually.
