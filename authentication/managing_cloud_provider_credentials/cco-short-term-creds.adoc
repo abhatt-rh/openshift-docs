@@ -84,6 +84,7 @@ include::modules/cco-short-term-creds-gcp-wid.adoc[leveloffset=+1]
 [role="_additional-resources"]
 .Additional resources
 * xref:../../installing/installing_gcp/installing-gcp-customizations.adoc#installing-gcp-with-short-term-creds_installing-gcp-customizations[Configuring a {gcp-short} cluster to use short-term credentials]
+* xref:../../installing/installing_gcp/installing-gcp-shared-vpc.adoc#installing-gcp-with-short-term-creds_installing-gcp-shared-vpc[Configuring short-term credentials for a shared VPC installation]
 
 //GCP Workload Identity authentication process
 include::modules/cco-short-term-creds-auth-flow-gcp.adoc[leveloffset=+2]

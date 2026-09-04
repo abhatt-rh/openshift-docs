@@ -8,7 +8,7 @@ include::_attributes/common-attributes.adoc[]
 toc::[]
 
 [role="_abstract"]
-In {product-title} version {product-version}, you can install a cluster into a shared Virtual Private Cloud (VPC) on {gcp-first}. In this installation method, the cluster is configured to use a VPC from a different {gcp-short} project. A shared VPC enables an organization to connect resources from multiple projects to a common VPC network. You can communicate within the organization securely and efficiently by using internal IP addresses from that network. For more information about shared VPC, see link:https://cloud.google.com/vpc/docs/shared-vpc[Shared VPC overview in the {gcp-short} documentation].
+In {product-title} version {product-version}, you can install a cluster into a shared Virtual Private Cloud (VPC) on {gcp-first}. In this installation method, the cluster is configured to use a VPC from a different {gcp-short} project. A shared VPC enables an organization to connect resources from multiple projects to a common VPC network. You can communicate within the organization securely and efficiently by using internal IP addresses from that network. For more information, see link:https://cloud.google.com/vpc/docs/shared-vpc[Shared VPC overview in the {gcp-short} documentation].
 
 The installation program provisions the rest of the required infrastructure, which you can further customize. To customize the installation, change parameters in the `install-config.yaml` file before you install the cluster.
 
@@ -82,6 +82,9 @@ By default, administrator secrets are stored in the `kube-system` project. If yo
 //Manually creating long-term credentials
 include::modules/manually-create-identity-access-management.adoc[leveloffset=+2]
 
+//How GCP Workload Identity interacts with shared VPC
+include::modules/gcp-wif-shared-vpc-about.adoc[leveloffset=+2]
+
 //Supertask: Configuring a GCP cluster to use short-term credentials
 [id="installing-gcp-with-short-term-creds_{context}"]
 === Configuring a {gcp-short} cluster to use short-term credentials
@@ -94,6 +97,19 @@ When installing a cluster on a shared Virtual Private Cloud (VPC) by using short
 
 After using the `ccoctl` utility to generate the {gcp-short} credentials, manually grant this permission to the {cluster-capi-operator} and Machine API Operator service accounts.
 ====
+
+[IMPORTANT]
+====
+To use short-term credentials with {gcp-short} Workload Identity, you must set `credentialsMode: Manual` in your `install-config.yaml` file. Other credential modes, such as `Mint` or `Passthrough`, do not support {gcp-short} Workload Identity.
+====
+
+In a shared VPC environment, complete the following sequence to configure short-term credentials:
+
+. Create an `install-config.yaml` file with `credentialsMode: Manual` and the required shared VPC parameters (`networkProjectID`, `network`, `computeSubnet`, `controlPlaneSubnet`).
+. Configure the `ccoctl` utility and create the required {gcp-short} resources for your cluster.
+. Grant the required host project permissions to the component service accounts that the `ccoctl` utility creates. For the required permissions, see xref:../../installing/installing_gcp/installing-gcp-account.adoc#minimum-required-permissions-ipi-gcp-xpn-short-term-creds_installing-gcp-account[Additional host project permissions for {gcp-short} Workload Identity].
+. Incorporate the `ccoctl` utility manifests into the installation directory.
+. Deploy the cluster.
 
 //Task part 1: Configuring the Cloud Credential Operator utility
 include::modules/cco-ccoctl-configuring.adoc[leveloffset=+3]
