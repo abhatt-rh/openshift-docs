@@ -465,6 +465,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_administer.html">Administer</a>
 </li>
 <li><a href="_develop.html"><span class="toc-current">Develop</span></a>
+<ul class="sectlevel2">
+<li><a href="add-nodes-to-an-on-premise-cluster-con_add-nodes-to-an-on-premise-cluster.html">Add nodes to an on-premise cluster</a>
+</li>
+<li><a href="deploy-applications-with-red-hat-s2i-images-con_deploy-applications-with-red-hat-s2i-images.html">Deploy applications with Red Hat S2I images</a>
+</li>
+<li><a href="create-container-images-for-openshift-con_create-container-images-for-openshift.html">Create container images for OpenShift</a>
+</li>
+<li><a href="build-s2i-builder-images-con_build-s2i-builder-images.html">Build S2I builder images</a>
+</li>
+<li><a href="reclaim-registry-storage-con_reclaim-registry-storage.html">Reclaim registry storage</a>
+</li>
+<li><a href="deploy-images-from-external-sources-con_deploy-images-from-external-sources.html">Deploy images from external sources</a>
+</li>
+<li><a href="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console.html">Use developer workflows in the console</a>
+</li>
+<li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
+</li>
+</ul>
 </li>
 <li><a href="_configure.html">Configure</a>
 </li>
@@ -497,18 +515,74 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="ulist">
 <ul>
+<li>
+<p><a href="add-nodes-to-an-on-premise-cluster-con_add-nodes-to-an-on-premise-cluster.html">Add nodes to an on-premise cluster</a></p>
+</li>
+<li>
+<p><a href="deploy-applications-with-red-hat-s2i-images-con_deploy-applications-with-red-hat-s2i-images.html">Deploy applications with Red Hat S2I images</a></p>
+</li>
+<li>
+<p><a href="create-container-images-for-openshift-con_create-container-images-for-openshift.html">Create container images for OpenShift</a></p>
+</li>
+<li>
+<p><a href="build-s2i-builder-images-con_build-s2i-builder-images.html">Build S2I builder images</a></p>
+</li>
+<li>
+<p><a href="reclaim-registry-storage-con_reclaim-registry-storage.html">Reclaim registry storage</a></p>
+</li>
+<li>
+<p><a href="deploy-images-from-external-sources-con_deploy-images-from-external-sources.html">Deploy images from external sources</a></p>
+</li>
+<li>
+<p><a href="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console.html">Use developer workflows in the console</a></p>
+</li>
+<li>
+<p><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a></p>
+</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="_administer.html">Administer</a> | ↑ Up: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="_configure.html">Configure</a> →</p>
+<p>← Previous: <a href="machineconfig-garbage-collect-viewing_view-no-longer-used-machine-config-objects.html">Viewing rendered machine configs</a> | ↑ Up: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="add-nodes-to-an-on-premise-cluster-con_add-nodes-to-an-on-premise-cluster.html">Add nodes to an on-premise cluster</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-09-11 19:00:35 +0100
+Last updated 2026-09-16 16:21:10 +0100
 </div>
 </div>
+<style>
+  #toc ul li.has-children > ul {
+    display: none;
+  }
+  #toc ul li.has-children.open > ul {
+    display: block;
+  }
+  .toc-toggle {
+    cursor: pointer;
+    margin-right: 4px;
+    font-size: 0.75em;
+    user-select: none;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('#toc li').forEach(function(li) {
+      var sublist = li.querySelector(':scope > ul');
+      if (sublist) {
+        li.classList.add('has-children');
+        var toggle = document.createElement('span');
+        toggle.className = 'toc-toggle';
+        toggle.textContent = '▶';
+        li.insertBefore(toggle, li.firstChild);
+        toggle.addEventListener('click', function() {
+          li.classList.toggle('open');
+          toggle.textContent = li.classList.contains('open') ? '▼' : '▶';
+        });
+      }
+    });
+  });
+</script>
 </body>
 </html>

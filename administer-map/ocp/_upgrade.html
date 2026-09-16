@@ -502,13 +502,45 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="images-update-global-pull-secret_configure-cluster-use-registry.html">Updating the global cluster pull secret</a> | ↑ Up: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="_migrate.html">Migrate</a> →</p>
+<p>← Previous: <a href="connected-to-disconnected-restore_convert-a-connected-cluster-to-disconnected.html">Restoring the network</a> | ↑ Up: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="_migrate.html">Migrate</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-09-11 19:00:35 +0100
+Last updated 2026-09-16 16:21:10 +0100
 </div>
 </div>
+<style>
+  #toc ul li.has-children > ul {
+    display: none;
+  }
+  #toc ul li.has-children.open > ul {
+    display: block;
+  }
+  .toc-toggle {
+    cursor: pointer;
+    margin-right: 4px;
+    font-size: 0.75em;
+    user-select: none;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('#toc li').forEach(function(li) {
+      var sublist = li.querySelector(':scope > ul');
+      if (sublist) {
+        li.classList.add('has-children');
+        var toggle = document.createElement('span');
+        toggle.className = 'toc-toggle';
+        toggle.textContent = '▶';
+        li.insertBefore(toggle, li.firstChild);
+        toggle.addEventListener('click', function() {
+          li.classList.toggle('open');
+          toggle.textContent = li.classList.contains('open') ? '▼' : '▶';
+        });
+      }
+    });
+  });
+</script>
 </body>
 </html>
