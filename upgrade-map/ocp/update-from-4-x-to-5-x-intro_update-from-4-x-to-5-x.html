@@ -438,7 +438,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
 </head>
-<body id="update-manifest-application_understand-how-cluster-updates-work" class="book toc2 toc-left">
+<body id="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x" class="book toc2 toc-left">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -464,17 +464,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="update-cluster-version-object_understand-openshift-updates.html">The ClusterVersion object</a>
 </li>
-<li><a href="update-cluster-version-object_understand-how-cluster-updates-work.html">The ClusterVersion object</a>
+<li><a href="understand-update-channels-and-releases-intro_understand-update-channels-and-releases.html">Understand update channels and releases</a>
 </li>
-<li><a href="understand-update-channels-and-releases-intro_{{'context'}}.html">Understand update channels and releases</a>
-</li>
-<li><a href="understand-update-duration-intro_{{'context'}}.html">Understand update duration</a>
+<li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
 </li>
 <li><a href="about-self-service-tsr_prepare-to-update-a-cluster.html">Self-service Technical Supportability Review</a>
-</li>
-<li><a href="about-self-service-tsr_assess-update-impact-on-environment.html">Self-service Technical Supportability Review</a>
-</li>
-<li><a href="about-self-service-tsr_schedule-and-coordinate-cluster-updates.html">Self-service Technical Supportability Review</a>
 </li>
 <li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
 </li>
@@ -486,17 +480,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="example_perform-a-canary-rollout-update.html">Example Canary update strategy</a>
 </li>
-<li><a href="update-a-cluster-in-a-disconnected-environment-intro_{{'context'}}.html">Update a cluster in a disconnected environment</a>
+<li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
 </li>
-<li><a href="migrate-to-a-multi-architecture-cluster-intro_{{'context'}}.html">Migrate to a multi-architecture cluster</a>
+<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a multi-architecture cluster</a>
 </li>
-<li><a href="update-from-4-x-to-5-x-intro_{{'context'}}.html">Update from 4.x to 5.x</a>
+<li><a href="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x.html"><span class="toc-current">Update from 4.x to 5.x</span></a>
 </li>
-<li><a href="kmm-validation-kickoff_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades.html">Validation kickoff</a>
-</li>
-<li><a href="kmm-validation-kickoff_manage-kernel-modules-across-cluster-nodes-configure-module-upgrade-ordering.html">Validation kickoff</a>
-</li>
-<li><a href="upgrade-hosted-control-planes-intro_{{'context'}}.html">Upgrade Hosted Control Planes</a>
+<li><a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a>
 </li>
 </ul>
 </li>
@@ -532,96 +522,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div id="content">
-<div class="sect3">
-<h4 id="update-manifest-application_understand-how-cluster-updates-work">Understanding how manifests are applied during an update</h4>
+<div class="sect2">
+<h3 id="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x">Update from 4.x to 5.x</h3>
 <div class="paragraph _abstract">
-<p>Some manifests supplied in a release image must be applied in a certain order because of the dependencies between them.</p>
-</div>
-<div class="paragraph">
-<p>For example, the <code>CustomResourceDefinition</code> resource must be created before the matching custom resources.
-Additionally, there is a logical order in which the individual cluster Operators must be updated to minimize disruption in the cluster.
-The Cluster Version Operator (CVO) implements this logical order through the concept of Runlevels.</p>
-</div>
-<div class="paragraph">
-<p>These dependencies are encoded in the filenames of the manifests in the release image:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">0000_&lt;runlevel&gt;_&lt;component&gt;_&lt;manifest-name&gt;.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">0000_03_config-operator_01_proxy.crd.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The CVO internally builds a dependency graph for the manifests, where the CVO obeys the following rules:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>During an update, manifests at a lower Runlevel are applied before those at a higher Runlevel.</p>
-</li>
-<li>
-<p>Within one Runlevel, manifests for different components can be applied in parallel.</p>
-</li>
-<li>
-<p>Within one Runlevel, manifests for a single component are applied in lexicographic order.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The CVO then applies manifests following the generated dependency graph.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>For some resource types, the CVO monitors the resource after its manifest is applied, and considers it to be successfully updated only after the resource reaches a stable state.
-Achieving this state can take some time.
-This is especially true for <code>ClusterOperator</code> resources, while the CVO waits for a cluster Operator to update itself and then update its <code>ClusterOperator</code> status.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The CVO waits until all cluster Operators in the Runlevel meet the following conditions before it proceeds to the next Runlevel:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The cluster Operators have an <code>Available=True</code> condition.</p>
-</li>
-<li>
-<p>The cluster Operators have a <code>Degraded=False</code> condition.</p>
-</li>
-<li>
-<p>The cluster Operators declare they have achieved the desired version in their ClusterOperator resource.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Some actions can take significant time to finish. The CVO waits for the actions to complete in order to ensure the subsequent Runlevels can proceed safely.
-Initially reconciling the new release&#8217;s manifests is expected to take 60 to 120 minutes in total; see <strong>Understanding Red&#160;Hat OpenShift Container Platform update duration</strong> for more information about factors that influence update duration.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="data:image/png;base64," alt="A diagram displaying the sequence of Runlevels and the manifests of components within each level">
-</div>
-</div>
-<div class="paragraph">
-<p>In the previous example diagram, the CVO is waiting until all work is completed at Runlevel 20.
-The CVO has applied all manifests to the Operators in the Runlevel, but the <code>kube-apiserver-operator ClusterOperator</code> performs some actions after its new version was deployed. The <code>kube-apiserver-operator ClusterOperator</code> declares this progress through the <code>Progressing=True</code> condition and by not declaring the new version as reconciled in its <code>status.versions</code>.
-The CVO waits until the ClusterOperator reports an acceptable status, and then it will start reconciling manifests at Runlevel 25.</p>
+<p>When I want to update my system from 4.x to 5.x, I need the update procedure to verify compatibility and execute the version update so I can run the latest software release seamlessly.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -629,12 +533,12 @@ The CVO waits until the ClusterOperator reports an acceptable status, and then i
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="update-process-workflow_understand-how-cluster-updates-work.html">Update process workflow</a> | ↑ Up: <a href="update-cluster-version-object_understand-how-cluster-updates-work.html">The ClusterVersion object</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="mco-update-process_understand-how-cluster-updates-work.html">Understanding how the Machine Config Operator updates nodes</a> →</p>
+<p>← Previous: <a href="multiarch-migrating-cp-infra-gcp_migrate-to-a-multi-architecture-cluster.html">Migrating control plane or infra machine sets between architectures on Google Cloud</a> | ↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-09-16 20:46:11 +0100
+Last updated 2026-09-18 20:27:28 +0100
 </div>
 </div>
 <style>

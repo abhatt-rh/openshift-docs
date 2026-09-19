@@ -438,7 +438,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
 </head>
-<body id="update-best-practices_schedule-and-coordinate-cluster-updates" class="book toc2 toc-left">
+<body id="upgrade-hosted-control-planes-updating-the-openshift-container-platform-version-in-a-hosted-cluster-intro_upgrade-hosted-control-planes-updating-the-openshift-container-platform-version-in-a-hosted-cluster" class="book toc2 toc-left">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -464,17 +464,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="update-cluster-version-object_understand-openshift-updates.html">The ClusterVersion object</a>
 </li>
-<li><a href="update-cluster-version-object_understand-how-cluster-updates-work.html">The ClusterVersion object</a>
+<li><a href="understand-update-channels-and-releases-intro_understand-update-channels-and-releases.html">Understand update channels and releases</a>
 </li>
-<li><a href="understand-update-channels-and-releases-intro_{{'context'}}.html">Understand update channels and releases</a>
-</li>
-<li><a href="understand-update-duration-intro_{{'context'}}.html">Understand update duration</a>
+<li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
 </li>
 <li><a href="about-self-service-tsr_prepare-to-update-a-cluster.html">Self-service Technical Supportability Review</a>
-</li>
-<li><a href="about-self-service-tsr_assess-update-impact-on-environment.html">Self-service Technical Supportability Review</a>
-</li>
-<li><a href="about-self-service-tsr_schedule-and-coordinate-cluster-updates.html">Self-service Technical Supportability Review</a>
 </li>
 <li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
 </li>
@@ -486,17 +480,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="example_perform-a-canary-rollout-update.html">Example Canary update strategy</a>
 </li>
-<li><a href="update-a-cluster-in-a-disconnected-environment-intro_{{'context'}}.html">Update a cluster in a disconnected environment</a>
+<li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
 </li>
-<li><a href="migrate-to-a-multi-architecture-cluster-intro_{{'context'}}.html">Migrate to a multi-architecture cluster</a>
+<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a multi-architecture cluster</a>
 </li>
-<li><a href="update-from-4-x-to-5-x-intro_{{'context'}}.html">Update from 4.x to 5.x</a>
+<li><a href="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x.html">Update from 4.x to 5.x</a>
 </li>
-<li><a href="kmm-validation-kickoff_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades.html">Validation kickoff</a>
-</li>
-<li><a href="kmm-validation-kickoff_manage-kernel-modules-across-cluster-nodes-configure-module-upgrade-ordering.html">Validation kickoff</a>
-</li>
-<li><a href="upgrade-hosted-control-planes-intro_{{'context'}}.html">Upgrade Hosted Control Planes</a>
+<li><a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a>
 </li>
 </ul>
 </li>
@@ -533,43 +523,28 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect3">
-<h4 id="update-best-practices_schedule-and-coordinate-cluster-updates">Best practices for cluster updates</h4>
+<h4 id="upgrade-hosted-control-planes-updating-the-openshift-container-platform-version-in-a-hosted-cluster-intro_upgrade-hosted-control-planes-updating-the-openshift-container-platform-version-in-a-hosted-cluster">Updating the OpenShift Container Platform version in a hosted cluster</h4>
 <div class="paragraph _abstract">
-<p>Follow best practices to ensure successful cluster updates. These best practices include selecting recommended versions, resolving critical alerts, maintaining spare node capacity, and properly configuring pod disruption budgets.</p>
-</div>
-<div class="paragraph">
-<p>Red&#160;Hat OpenShift Container Platform minimizes workload disruptions during an update. Updates do not begin unless the cluster is in an upgradeable state at the time of the update request.</p>
-</div>
-<div class="paragraph">
-<p>This design enforces some key conditions before initiating an update, but there are several actions you can take to increase your chances of a successful cluster update.</p>
+<p>Learn about updating the Red&#160;Hat OpenShift Container Platform in a hosted cluster.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="recommended-versions_schedule-and-coordinate-cluster-updates.html">Choose versions recommended by the OpenShift Update Service</a></p>
+<p><a href="hcp-update-ocp-hc_upgrade-hosted-control-planes-updating-the-openshift-container-platform-version-in-a-hosted-cluster.html">Updating a control plane in a hosted cluster</a></p>
 </li>
 <li>
-<p><a href="critical-alerts_schedule-and-coordinate-cluster-updates.html">Address all critical alerts on the cluster</a></p>
-</li>
-<li>
-<p><a href="cluster-upgradeable_schedule-and-coordinate-cluster-updates.html">Ensure that the cluster is in an Upgradeable state</a></p>
-</li>
-<li>
-<p><a href="nodes-ready_schedule-and-coordinate-cluster-updates.html">Ensure that enough spare nodes are available</a></p>
-</li>
-<li>
-<p><a href="pod-disruption-budget_schedule-and-coordinate-cluster-updates.html">Ensure that the cluster&#8217;s PodDisruptionBudget is properly configured</a></p>
+<p><a href="hcp-update-using-mce-console_upgrade-hosted-control-planes-updating-the-openshift-container-platform-version-in-a-hosted-cluster.html">Updating a hosted cluster by using the multicluster engine Operator console</a></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="oc-adm-upgrade-recommend-accept_schedule-and-coordinate-cluster-updates.html">Accepting risks with the oc adm upgrade recommend command</a> | ↑ Up: <a href="about-self-service-tsr_schedule-and-coordinate-cluster-updates.html">Self-service Technical Supportability Review</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="recommended-versions_schedule-and-coordinate-cluster-updates.html">Choose versions recommended by the OpenShift Update Service</a> →</p>
+<p>← Previous: <a href="hcp-np-version-skew_upgrade-hosted-control-planes-hosted-cluster-and-node-pool-version-skew-policy.html">Hosted cluster and node pool version skew policy</a> | ↑ Up: <a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="hcp-update-ocp-hc_upgrade-hosted-control-planes-updating-the-openshift-container-platform-version-in-a-hosted-cluster.html">Updating a control plane in a hosted cluster</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-09-16 20:46:11 +0100
+Last updated 2026-09-18 20:27:28 +0100
 </div>
 </div>
 <style>

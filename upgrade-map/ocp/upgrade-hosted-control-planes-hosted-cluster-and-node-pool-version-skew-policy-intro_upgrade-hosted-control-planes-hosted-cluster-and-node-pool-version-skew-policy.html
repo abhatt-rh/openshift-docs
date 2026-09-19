@@ -438,7 +438,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
 </head>
-<body id="kmm-validation-kickoff_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades" class="book toc2 toc-left">
+<body id="upgrade-hosted-control-planes-hosted-cluster-and-node-pool-version-skew-policy-intro_upgrade-hosted-control-planes-hosted-cluster-and-node-pool-version-skew-policy" class="book toc2 toc-left">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -464,17 +464,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="update-cluster-version-object_understand-openshift-updates.html">The ClusterVersion object</a>
 </li>
-<li><a href="update-cluster-version-object_understand-how-cluster-updates-work.html">The ClusterVersion object</a>
+<li><a href="understand-update-channels-and-releases-intro_understand-update-channels-and-releases.html">Understand update channels and releases</a>
 </li>
-<li><a href="understand-update-channels-and-releases-intro_{{'context'}}.html">Understand update channels and releases</a>
-</li>
-<li><a href="understand-update-duration-intro_{{'context'}}.html">Understand update duration</a>
+<li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
 </li>
 <li><a href="about-self-service-tsr_prepare-to-update-a-cluster.html">Self-service Technical Supportability Review</a>
-</li>
-<li><a href="about-self-service-tsr_assess-update-impact-on-environment.html">Self-service Technical Supportability Review</a>
-</li>
-<li><a href="about-self-service-tsr_schedule-and-coordinate-cluster-updates.html">Self-service Technical Supportability Review</a>
 </li>
 <li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
 </li>
@@ -486,17 +480,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="example_perform-a-canary-rollout-update.html">Example Canary update strategy</a>
 </li>
-<li><a href="update-a-cluster-in-a-disconnected-environment-intro_{{'context'}}.html">Update a cluster in a disconnected environment</a>
+<li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
 </li>
-<li><a href="migrate-to-a-multi-architecture-cluster-intro_{{'context'}}.html">Migrate to a multi-architecture cluster</a>
+<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a multi-architecture cluster</a>
 </li>
-<li><a href="update-from-4-x-to-5-x-intro_{{'context'}}.html">Update from 4.x to 5.x</a>
+<li><a href="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x.html">Update from 4.x to 5.x</a>
 </li>
-<li><a href="kmm-validation-kickoff_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades.html"><span class="toc-current">Validation kickoff</span></a>
-</li>
-<li><a href="kmm-validation-kickoff_manage-kernel-modules-across-cluster-nodes-configure-module-upgrade-ordering.html">Validation kickoff</a>
-</li>
-<li><a href="upgrade-hosted-control-planes-intro_{{'context'}}.html">Upgrade Hosted Control Planes</a>
+<li><a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a>
 </li>
 </ul>
 </li>
@@ -532,77 +522,26 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div id="content">
-<div class="sect2">
-<h3 id="kmm-validation-kickoff_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades">Validation kickoff</h3>
+<div class="sect3">
+<h4 id="upgrade-hosted-control-planes-hosted-cluster-and-node-pool-version-skew-policy-intro_upgrade-hosted-control-planes-hosted-cluster-and-node-pool-version-skew-policy">Hosted cluster and node pool version skew policy</h4>
 <div class="paragraph _abstract">
-<p>Create a <code>PreflightValidationOCP</code> resource to trigger preflight validation and specify the kernel version and DTK image for validation.</p>
-</div>
-<div class="paragraph">
-<p>Preflight validation is triggered by creating a <code>PreflightValidationOCP</code> resource in the cluster. This resource contains the following fields:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>dtkImage</code></dt>
-<dd>
-<p>The DTK container image released for the specific Red&#160;Hat OpenShift Container Platform version of the cluster. If this value is not set, the <code>DTK_AUTO</code> feature cannot be used.</p>
-<div class="paragraph">
-<p>You can obtain the image by running one of the following commands in the cluster:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># For x86_64 image:
-$ oc adm release info quay.io/openshift-release-dev/ocp-release:4.22.0-x86_64 --image-for=driver-toolkit</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># For ARM64 image:
-$ oc adm release info quay.io/openshift-release-dev/ocp-release:4.22.0-aarch64 --image-for=driver-toolkit</code></pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1"><code>kernelVersion</code></dt>
-<dd>
-<p>Required field that provides the version of the kernel that the cluster is upgraded to.</p>
-<div class="paragraph">
-<p>You can obtain the version by running the following command in the cluster:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman run -it --rm $(oc adm release info quay.io/openshift-release-dev/ocp-release:4.22.0-x86_64 --image-for=driver-toolkit) cat /etc/driver-toolkit-release.json</code></pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1"><code>pushBuiltImage</code></dt>
-<dd>
-<p>If <code>true</code>, then the images created during the Build and Sign validation are pushed to their repositories. This field is <code>false</code> by default.</p>
-</dd>
-</dl>
+<p>Learn about hosted cluster and node pool version skew policy.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="kmm-validation-lifecycle_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades.html">Validation lifecycle</a></p>
-</li>
-<li>
-<p><a href="kmm-validation-status_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades.html">Validation status</a></p>
-</li>
-<li>
-<p><a href="kmm-image-validation-stage_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades.html">Image validation stage</a></p>
-</li>
-<li>
-<p><a href="kmm-example-cr_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades.html">Example PreflightValidationOCP resource</a></p>
+<p><a href="hcp-np-version-skew_upgrade-hosted-control-planes-hosted-cluster-and-node-pool-version-skew-policy.html">Hosted cluster and node pool version skew policy</a></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="update-from-4-x-to-5-x-intro_{{'context'}}.html">Update from 4.x to 5.x</a> | ↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="kmm-validation-lifecycle_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades.html">Validation lifecycle</a> →</p>
+<p>← Previous: <a href="hosted-control-planes-upgrading-requirements_upgrade-hosted-control-planes-requirements-to-upgrade-hosted-control-planes.html">Requirements to upgrade hosted control planes</a> | ↑ Up: <a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="hcp-np-version-skew_upgrade-hosted-control-planes-hosted-cluster-and-node-pool-version-skew-policy.html">Hosted cluster and node pool version skew policy</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-09-16 20:46:11 +0100
+Last updated 2026-09-18 20:27:28 +0100
 </div>
 </div>
 <style>

@@ -438,7 +438,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
 </head>
-<body id="update-release-images_understand-how-cluster-updates-work" class="book toc2 toc-left">
+<body id="understand-update-duration-intro_understand-update-duration" class="book toc2 toc-left">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -464,17 +464,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="update-cluster-version-object_understand-openshift-updates.html">The ClusterVersion object</a>
 </li>
-<li><a href="update-cluster-version-object_understand-how-cluster-updates-work.html">The ClusterVersion object</a>
+<li><a href="understand-update-channels-and-releases-intro_understand-update-channels-and-releases.html">Understand update channels and releases</a>
 </li>
-<li><a href="understand-update-channels-and-releases-intro_{{'context'}}.html">Understand update channels and releases</a>
-</li>
-<li><a href="understand-update-duration-intro_{{'context'}}.html">Understand update duration</a>
+<li><a href="understand-update-duration-intro_understand-update-duration.html"><span class="toc-current">Understand update duration</span></a>
 </li>
 <li><a href="about-self-service-tsr_prepare-to-update-a-cluster.html">Self-service Technical Supportability Review</a>
-</li>
-<li><a href="about-self-service-tsr_assess-update-impact-on-environment.html">Self-service Technical Supportability Review</a>
-</li>
-<li><a href="about-self-service-tsr_schedule-and-coordinate-cluster-updates.html">Self-service Technical Supportability Review</a>
 </li>
 <li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
 </li>
@@ -486,17 +480,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="example_perform-a-canary-rollout-update.html">Example Canary update strategy</a>
 </li>
-<li><a href="update-a-cluster-in-a-disconnected-environment-intro_{{'context'}}.html">Update a cluster in a disconnected environment</a>
+<li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
 </li>
-<li><a href="migrate-to-a-multi-architecture-cluster-intro_{{'context'}}.html">Migrate to a multi-architecture cluster</a>
+<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a multi-architecture cluster</a>
 </li>
-<li><a href="update-from-4-x-to-5-x-intro_{{'context'}}.html">Update from 4.x to 5.x</a>
+<li><a href="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x.html">Update from 4.x to 5.x</a>
 </li>
-<li><a href="kmm-validation-kickoff_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades.html">Validation kickoff</a>
-</li>
-<li><a href="kmm-validation-kickoff_manage-kernel-modules-across-cluster-nodes-configure-module-upgrade-ordering.html">Validation kickoff</a>
-</li>
-<li><a href="upgrade-hosted-control-planes-intro_{{'context'}}.html">Upgrade Hosted Control Planes</a>
+<li><a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a>
 </li>
 </ul>
 </li>
@@ -532,86 +522,41 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div id="content">
-<div class="sect3">
-<h4 id="update-release-images_understand-how-cluster-updates-work">Release images</h4>
+<div class="sect2">
+<h3 id="understand-update-duration-intro_understand-update-duration">Understand update duration</h3>
 <div class="paragraph _abstract">
-<p>A release image is the delivery mechanism for a specific Red&#160;Hat OpenShift Container Platform (OCP) version.</p>
-</div>
-<div class="paragraph">
-<p>It contains the release metadata, a Cluster Version Operator (CVO) binary matching the release version, every manifest needed to deploy individual cluster Operators, and a list of SHA digest-versioned references to all container images that make up this version.</p>
-</div>
-<div class="paragraph">
-<p>You can extract a specific release image by running the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm release extract &lt;release image&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example command</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm release extract quay.io/openshift-release-dev/ocp-release:4.12.6-x86_64</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">Extracted release payload from digest sha256:800d1e39d145664975a3bb7cbc6e674fbf78e3c45b5dde9ff2c5a11a8690c87b created at 2023-03-01T12:46:29Z</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>After the release image is extracted, you can inspect its contents by running the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ls</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">0000_03_authorization-openshift_01_rolebindingrestriction.crd.yaml
-0000_03_config-operator_01_proxy.crd.yaml
-0000_03_marketplace-operator_01_operatorhub.crd.yaml
-0000_03_marketplace-operator_02_operatorhub.cr.yaml
-0000_03_quota-openshift_01_clusterresourcequota.crd.yaml
-...
-0000_90_service-ca-operator_02_prometheusrolebinding.yaml
-0000_90_service-ca-operator_03_servicemonitor.yaml
-0000_99_machine-api-operator_00_tombstones.yaml
-image-references
-release-metadata</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In this example output, the following contents can be seen:</p>
+<p>When I am planning an update window, I need to understand how long updates typically take and what factors affect duration so I can schedule maintenance windows.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>0000_03_quota-openshift_01_clusterresourcequota.crd.yaml</code> is the manifest for the <code>ClusterResourceQuota</code> CRD, to be applied on Runlevel 03.</p>
+<p><a href="factors-affecting-update-duration_understand-update-duration.html">Factors affecting update duration</a></p>
 </li>
 <li>
-<p><code>0000_90_service-ca-operator_02_prometheusrolebinding.yaml</code> is the manifest for the <code>PrometheusRoleBinding</code> resource for the <code>service-ca-operator</code>, to be applied on Runlevel 90.</p>
+<p><a href="cluster-update-phases_understand-update-duration.html">Cluster update phases</a></p>
 </li>
 <li>
-<p><code>image-references</code> is the list of SHA digest-versioned references to all required images.</p>
+<p><a href="cluster-version-operator_understand-update-duration.html">Cluster Version Operator target update payload deployment</a></p>
 </li>
-</ul>
-</div>
-<div class="ulist">
-<ul>
+<li>
+<p><a href="machine-config-operator-node-updates_understand-update-duration.html">Machine Config Operator node updates</a></p>
+</li>
+<li>
+<p><a href="update-duration-example_understand-update-duration.html">Example update duration of cluster Operators</a></p>
+</li>
+<li>
+<p><a href="estimating-cluster-update-time_understand-update-duration.html">How to estimate cluster update time</a></p>
+</li>
 </ul>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="update-evaluate-availability_understand-how-cluster-updates-work.html">Evaluation of update availability</a> | ↑ Up: <a href="update-cluster-version-object_understand-how-cluster-updates-work.html">The ClusterVersion object</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="update-process-workflow_understand-how-cluster-updates-work.html">Update process workflow</a> →</p>
+<p>← Previous: <a href="switching-between-channels_understand-update-channels-and-releases.html">Considerations for switching between channels</a> | ↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="factors-affecting-update-duration_understand-update-duration.html">Factors affecting update duration</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-09-16 20:46:11 +0100
+Last updated 2026-09-18 20:27:28 +0100
 </div>
 </div>
 <style>

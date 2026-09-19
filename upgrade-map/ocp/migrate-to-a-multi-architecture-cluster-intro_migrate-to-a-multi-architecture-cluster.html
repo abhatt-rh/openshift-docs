@@ -438,7 +438,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
 </head>
-<body id="critical-alerts_schedule-and-coordinate-cluster-updates" class="book toc2 toc-left">
+<body id="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster" class="book toc2 toc-left">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -464,17 +464,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="update-cluster-version-object_understand-openshift-updates.html">The ClusterVersion object</a>
 </li>
-<li><a href="update-cluster-version-object_understand-how-cluster-updates-work.html">The ClusterVersion object</a>
+<li><a href="understand-update-channels-and-releases-intro_understand-update-channels-and-releases.html">Understand update channels and releases</a>
 </li>
-<li><a href="understand-update-channels-and-releases-intro_{{'context'}}.html">Understand update channels and releases</a>
-</li>
-<li><a href="understand-update-duration-intro_{{'context'}}.html">Understand update duration</a>
+<li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
 </li>
 <li><a href="about-self-service-tsr_prepare-to-update-a-cluster.html">Self-service Technical Supportability Review</a>
-</li>
-<li><a href="about-self-service-tsr_assess-update-impact-on-environment.html">Self-service Technical Supportability Review</a>
-</li>
-<li><a href="about-self-service-tsr_schedule-and-coordinate-cluster-updates.html">Self-service Technical Supportability Review</a>
 </li>
 <li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
 </li>
@@ -486,17 +480,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="example_perform-a-canary-rollout-update.html">Example Canary update strategy</a>
 </li>
-<li><a href="update-a-cluster-in-a-disconnected-environment-intro_{{'context'}}.html">Update a cluster in a disconnected environment</a>
+<li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
 </li>
-<li><a href="migrate-to-a-multi-architecture-cluster-intro_{{'context'}}.html">Migrate to a multi-architecture cluster</a>
+<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html"><span class="toc-current">Migrate to a multi-architecture cluster</span></a>
 </li>
-<li><a href="update-from-4-x-to-5-x-intro_{{'context'}}.html">Update from 4.x to 5.x</a>
+<li><a href="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x.html">Update from 4.x to 5.x</a>
 </li>
-<li><a href="kmm-validation-kickoff_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades.html">Validation kickoff</a>
-</li>
-<li><a href="kmm-validation-kickoff_manage-kernel-modules-across-cluster-nodes-configure-module-upgrade-ordering.html">Validation kickoff</a>
-</li>
-<li><a href="upgrade-hosted-control-planes-intro_{{'context'}}.html">Upgrade Hosted Control Planes</a>
+<li><a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a>
 </li>
 </ul>
 </li>
@@ -532,25 +522,32 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div id="content">
-<div class="sect4">
-<h5 id="critical-alerts_schedule-and-coordinate-cluster-updates">Address all critical alerts on the cluster</h5>
-<div class="paragraph">
-<p>Critical alerts must always be addressed as soon as possible, but it is especially important to address these alerts and resolve any problems before initiating a cluster update.</p>
+<div class="sect2">
+<h3 id="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster">Migrate to a multi-architecture cluster</h3>
+<div class="paragraph _abstract">
+<p>When I want to add nodes with different CPU architectures, I need to migrate my cluster to support multi-architecture compute machines.</p>
 </div>
-<div class="paragraph">
-<p>Failing to address critical alerts before beginning an update can cause problematic conditions for the cluster.</p>
-</div>
-<div class="paragraph">
-<p>In the <strong>Administrator</strong> perspective of the web console, navigate to <strong>Observe</strong> &#8594; <strong>Alerting</strong> to find critical alerts.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="migrating-to-multi-arch-cli_migrate-to-a-multi-architecture-cluster.html">Migrating to a cluster with multi-architecture compute machines using the CLI</a></p>
+</li>
+<li>
+<p><a href="migrating-from-x86-to-arm64-cp_migrate-to-a-multi-architecture-cluster.html">Migrating the x86 control plane to arm64 architecture on Amazon Web Services</a></p>
+</li>
+<li>
+<p><a href="multiarch-migrating-cp-infra-gcp_migrate-to-a-multi-architecture-cluster.html">Migrating control plane or infra machine sets between architectures on Google Cloud</a></p>
+</li>
+</ul>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="recommended-versions_schedule-and-coordinate-cluster-updates.html">Choose versions recommended by the OpenShift Update Service</a> | ↑ Up: <a href="update-best-practices_schedule-and-coordinate-cluster-updates.html">Best practices for cluster updates</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="cluster-upgradeable_schedule-and-coordinate-cluster-updates.html">Ensure that the cluster is in an Upgradeable state</a> →</p>
+<p>← Previous: <a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a> | ↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="migrating-to-multi-arch-cli_migrate-to-a-multi-architecture-cluster.html">Migrating to a cluster with multi-architecture compute machines using the CLI</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-09-16 20:46:11 +0100
+Last updated 2026-09-18 20:27:28 +0100
 </div>
 </div>
 <style>

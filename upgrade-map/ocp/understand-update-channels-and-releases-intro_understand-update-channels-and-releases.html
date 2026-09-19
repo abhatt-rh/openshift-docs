@@ -438,7 +438,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
 </head>
-<body id="kmm-validation-lifecycle_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades" class="book toc2 toc-left">
+<body id="understand-update-channels-and-releases-intro_understand-update-channels-and-releases" class="book toc2 toc-left">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -464,17 +464,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="update-cluster-version-object_understand-openshift-updates.html">The ClusterVersion object</a>
 </li>
-<li><a href="update-cluster-version-object_understand-how-cluster-updates-work.html">The ClusterVersion object</a>
+<li><a href="understand-update-channels-and-releases-intro_understand-update-channels-and-releases.html"><span class="toc-current">Understand update channels and releases</span></a>
 </li>
-<li><a href="understand-update-channels-and-releases-intro_{{'context'}}.html">Understand update channels and releases</a>
-</li>
-<li><a href="understand-update-duration-intro_{{'context'}}.html">Understand update duration</a>
+<li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
 </li>
 <li><a href="about-self-service-tsr_prepare-to-update-a-cluster.html">Self-service Technical Supportability Review</a>
-</li>
-<li><a href="about-self-service-tsr_assess-update-impact-on-environment.html">Self-service Technical Supportability Review</a>
-</li>
-<li><a href="about-self-service-tsr_schedule-and-coordinate-cluster-updates.html">Self-service Technical Supportability Review</a>
 </li>
 <li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
 </li>
@@ -486,17 +480,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="example_perform-a-canary-rollout-update.html">Example Canary update strategy</a>
 </li>
-<li><a href="update-a-cluster-in-a-disconnected-environment-intro_{{'context'}}.html">Update a cluster in a disconnected environment</a>
+<li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
 </li>
-<li><a href="migrate-to-a-multi-architecture-cluster-intro_{{'context'}}.html">Migrate to a multi-architecture cluster</a>
+<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a multi-architecture cluster</a>
 </li>
-<li><a href="update-from-4-x-to-5-x-intro_{{'context'}}.html">Update from 4.x to 5.x</a>
+<li><a href="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x.html">Update from 4.x to 5.x</a>
 </li>
-<li><a href="kmm-validation-kickoff_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades.html">Validation kickoff</a>
-</li>
-<li><a href="kmm-validation-kickoff_manage-kernel-modules-across-cluster-nodes-configure-module-upgrade-ordering.html">Validation kickoff</a>
-</li>
-<li><a href="upgrade-hosted-control-planes-intro_{{'context'}}.html">Upgrade Hosted Control Planes</a>
+<li><a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a>
 </li>
 </ul>
 </li>
@@ -532,29 +522,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div id="content">
-<div class="sect3">
-<h4 id="kmm-validation-lifecycle_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades">Validation lifecycle</h4>
+<div class="sect2">
+<h3 id="understand-update-channels-and-releases-intro_understand-update-channels-and-releases">Understand update channels and releases</h3>
 <div class="paragraph _abstract">
-<p>Preflight validation continuously validates all cluster modules, retrying failures after changes until all modules succeed or the validation resource is deleted.</p>
-</div>
-<div class="paragraph">
-<p>Each module stops being validated after it succeeds individually. Failed modules are retried in subsequent validation loops.</p>
-</div>
-<div class="paragraph">
-<p>If you want to run Preflight validation for an additional kernel, then you should create another <code>PreflightValidationOCP</code> resource for that kernel. After all the modules have been validated, it is recommended to delete the <code>PreflightValidationOCP</code> resource.</p>
+<p>When I want to choose an update strategy, I need to understand the difference between stable, fast, candidate, and EUS channels so I can select the right channel.</p>
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p><a href="understanding-update-channels-overview_understand-update-channels-and-releases.html">Overview of update channels</a></p>
+</li>
+<li>
+<p><a href="understanding-update-channels_understand-update-channels-and-releases.html">Update channels</a></p>
+</li>
+<li>
+<p><a href="restricted-network-clusters_understand-update-channels-and-releases.html">Restricted network clusters</a></p>
+</li>
+<li>
+<p><a href="upgrade-version-paths_understand-update-channels-and-releases.html">Update recommendations in the channel</a></p>
+</li>
+<li>
+<p><a href="conditional-updates-overview_understand-update-channels-and-releases.html">Update recommendations and Conditional Updates</a></p>
+</li>
+<li>
+<p><a href="fast-stable-channel-strategies_understand-update-channels-and-releases.html">What to consider when choosing an update channel</a></p>
+</li>
+<li>
+<p><a href="switching-between-channels_understand-update-channels-and-releases.html">Considerations for switching between channels</a></p>
+</li>
 </ul>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>↑ Up: <a href="kmm-validation-kickoff_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades.html">Validation kickoff</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="kmm-validation-status_manage-kernel-modules-across-cluster-nodes-run-preflight-validation-before-cluster-upgrades.html">Validation status</a> →</p>
+<p>← Previous: <a href="mco-update-process_understand-openshift-updates.html">Understanding how the Machine Config Operator updates nodes</a> | ↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="understanding-update-channels-overview_understand-update-channels-and-releases.html">Overview of update channels</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-09-16 20:46:11 +0100
+Last updated 2026-09-18 20:27:28 +0100
 </div>
 </div>
 <style>
