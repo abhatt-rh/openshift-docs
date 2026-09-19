@@ -474,7 +474,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="storage-ephemeral-storage-overview_manage-ephemeral-storage.html">Overview of ephemeral storage</a>
 </li>
-<li><a href="efs-driver-overview_understand-persistent-storage.html">Overview</a>
+<li><a href="persistent-storage-overview_understand-persistent-storage.html">Persistent storage overview</a>
 </li>
 <li><a href="persistent-storage-csi-cloning-overview_manage-persistent-volumes.html">Overview of CSI volume cloning</a>
 </li>
@@ -500,7 +500,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="expanding-flexvolume_storage-for-legacy-volume-plugins-with-flexvolume.html">Expanding FlexVolume with a supported driver</a>
 </li>
-<li><a href="efs-driver-overview_google-cloud-engine-persistent-storage.html">Overview</a>
+<li><a href="storage-create-storage-class_google-cloud-engine-persistent-storage.html">About the {StorageClass} storage class</a>
 </li>
 <li><a href="persistent-storage-iscsi-provisioning_network-attached-block-storage-with-iscsi.html">Provisioning</a>
 </li>
@@ -581,7 +581,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect3">
-<h4 id="efs-sts_aws-elastic-file-storage">Obtain a role Amazon Resource Name for Security Token Service</h4>
+<h4 id="efs-sts_aws-elastic-file-storage">Obtaining a role Amazon Resource Name for Security Token Service</h4>
 <div class="paragraph _abstract">
 <p>To configure the AWS Elastic File System (EFS) Container Storage Interface (CSI) Driver Operator on clusters using Security Token Service (STS), obtain a role Amazon Resource Name (ARN) using the Cloud Credential Operator utility before installation.</p>
 </div>
@@ -599,14 +599,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>You can obtain the ARN role in multiple ways. The following procedure shows one method that uses the same concept and CCO utility (<code>ccoctl</code>) binary tool as cluster installation.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you are using One Zone file system, you need to create two <code>CredentialRequests</code>, one for the controller and one for the driver node. For more information, see Section <em>Setting up One Zone file systems with STS</em>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have access to the cluster as a user with the cluster-admin role.</p>
+<p>Access to the cluster as a user with the cluster-admin role.</p>
 </li>
 <li>
-<p>You have AWS account credentials.</p>
+<p>AWS account credentials</p>
 </li>
 </ul>
 </div>
@@ -614,140 +631,85 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Create an IAM policy JSON file with the following content:</p>
+<p>Extract the <code>ccoctl</code> from the Red&#160;Hat OpenShift Container Platform release image, which you used to install the cluster with STS. For more information, see "Configuring the Cloud Credential Operator utility".</p>
+</li>
+<li>
+<p>Create and save an EFS <code>CredentialsRequest</code> YAML file, such as shown in the following example, and then place it in the <code>credrequests</code> directory:</p>
 <div class="listingblock">
+<div class="title">Example</div>
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "elasticfilesystem:DescribeAccessPoints",
-        "elasticfilesystem:DescribeFileSystems",
-        "elasticfilesystem:DescribeMountTargets",
-        "ec2:DescribeAvailabilityZones",
-        "elasticfilesystem:TagResource"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "elasticfilesystem:CreateAccessPoint"
-      ],
-      "Resource": "*",
-      "Condition": {
-        "StringLike": {
-          "aws:RequestTag/efs.csi.aws.com/cluster": "true"
-        }
-      }
-    },
-    {
-      "Effect": "Allow",
-      "Action": "elasticfilesystem:DeleteAccessPoint",
-      "Resource": "*",
-      "Condition": {
-        "StringEquals": {
-          "aws:ResourceTag/efs.csi.aws.com/cluster": "true"
-        }
-      }
-    }
-  ]
-}</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  name: openshift-aws-efs-csi-driver
+  namespace: openshift-cloud-credential-operator
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: AWSProviderSpec
+    statementEntries:
+    - action:
+      - elasticfilesystem:*
+      effect: Allow
+      resource: '*'
+  secretRef:
+    name: aws-efs-cloud-credentials
+    namespace: openshift-cluster-csi-drivers
+  serviceAccountNames:
+  - aws-efs-csi-driver-operator
+  - aws-efs-csi-driver-controller-sa</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Create an IAM trust JSON file with the following content:</p>
+<p>Run the <code>ccoctl</code> tool to generate a new IAM role in AWS, and create a YAML file for it in the local file system (<code>&lt;path_to_ccoctl_output_dir&gt;/manifests/openshift-cluster-csi-drivers-aws-efs-cloud-credentials-credentials.yaml</code>).</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Federated": "arn:aws:iam::&lt;your_aws_account_ID&gt;:oidc-provider/&lt;openshift_oidc_provider&gt;"
-      },
-      "Action": "sts:AssumeRoleWithWebIdentity",
-      "Condition": {
-        "StringEquals": {
-          "&lt;openshift_oidc_provider&gt;:sub": [
-            "system:serviceaccount:openshift-cluster-csi-drivers:aws-efs-csi-driver-operator",
-            "system:serviceaccount:openshift-cluster-csi-drivers:aws-efs-csi-driver-controller-sa"
-          ]
-        }
-      }
-    }
-  ]
-}</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ccoctl aws create-iam-roles --name=&lt;name&gt; --region=&lt;aws_region&gt; --credentials-requests-dir=&lt;path_to_directory_with_list_of_credentials_requests&gt;/credrequests --identity-provider-arn=arn:aws:iam::&lt;aws_account_id&gt;:oidc-provider/&lt;name&gt;-oidc.s3.&lt;aws_region&gt;.amazonaws.com</code></pre>
 </div>
 </div>
-<div class="openblock">
+<div class="ulist">
+<ul>
+<li>
+<p><code>name=&lt;name&gt;</code> is the name used to tag any cloud resources that are created for tracking.</p>
+</li>
+<li>
+<p><code>region=&lt;aws_region&gt;</code> is the AWS region where cloud resources are created.</p>
+</li>
+<li>
+<p><code>dir=&lt;path_to_directory_with_list_of_credentials_requests&gt;/credrequests</code> is the directory containing the EFS CredentialsRequest file in previous step.</p>
+</li>
+<li>
+<p><code>&lt;aws_account_id&gt;</code> is the AWS account ID.</p>
+<div class="listingblock">
+<div class="title">Example</div>
 <div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ccoctl aws create-iam-roles --name my-aws-efs --credentials-requests-dir credrequests --identity-provider-arn arn:aws:iam::123456789012:oidc-provider/my-aws-efs-oidc.s3.us-east-2.amazonaws.com</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">2022/03/21 06:24:44 Role arn:aws:iam::123456789012:role/my-aws-efs -openshift-cluster-csi-drivers-aws-efs-cloud- created
+2022/03/21 06:24:44 Saved credentials configuration to: /manifests/openshift-cluster-csi-drivers-aws-efs-cloud-credentials-credentials.yaml
+2022/03/21 06:24:45 Updated Role policy for Role my-aws-efs-openshift-cluster-csi-drivers-aws-efs-cloud-</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Copy the role ARN from the first line of the <em>Example output</em> in the preceding step. The role ARN is between "Role" and "created". In this example, the role ARN is "arn:aws:iam::123456789012:role/my-aws-efs -openshift-cluster-csi-drivers-aws-efs-cloud".</p>
 <div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>Statement.Principal.Federated</code></dt>
-<dd>
-<p>Specifies your AWS account ID and the OpenShift OpenID Connect (OIDC) provider endpoint.</p>
-<div class="paragraph">
-<p>Obtain your AWS account ID by running the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws sts get-caller-identity --query Account --output text</code></pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1"><code>Statement.Condition.StringEquals[0]</code></dt>
-<dd>
-<p>Specify the OpenShift OIDC endpoint again.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-</li>
-<li>
-<p>Create the IAM role:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">ROLE_ARN=$(aws iam create-role \
-  --role-name "&lt;your_cluster_name&gt;-aws-efs-csi-operator" \
-  --assume-role-policy-document file://&lt;your_trust_file_name&gt;.json \
-  --query "Role.Arn" --output text); echo $ROLE_ARN</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Copy the role ARN. You will need it when you install the AWS EFS CSI Driver Operator.</p>
-</div>
-</li>
-<li>
-<p>Create the IAM policy:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">POLICY_ARN=$(aws iam create-policy \
-  --policy-name "&lt;your_cluster_name&gt;-aws-efs-csi" \
-  --policy-document file://&lt;your_policy_file_name&gt;.json \
-  --query 'Policy.Arn' --output text); echo $POLICY_ARN</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Attach the IAM policy to the IAM role:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ aws iam attach-role-policy \
-  --role-name "&lt;your_cluster_name&gt;-aws-efs-csi-operator" \
-  --policy-arn $POLICY_ARN</code></pre>
-</div>
+<p>You will need the role ARN when you install the AWS EFS CSI Driver Operator.</p>
 </div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<div class="title">Next steps</div>
+<p>Install the AWS EFS CSI Driver Operator. For information, see Inst"alling the AWS EFS CSI Driver Operator".</p>
 </div>
 <div class="ulist">
 <ul>
@@ -755,12 +717,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="efs-sts_aws-elastic-file-storage.html">Obtaining a role Amazon Resource Name for Security Token Service</a> | ↑ Up: <a href="efs-driver-overview_aws-elastic-file-storage.html">Overview</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="persistent-storage-csi-olm-operator-install_aws-elastic-file-storage.html">Installing the {FeatureName} CSI Driver Operator</a> →</p>
+<p>← Previous: <a href="persistent-storage-efs-csi-driver-operator-setup_aws-elastic-file-storage.html">Setting up the {FeatureName} CSI Driver Operator</a> | ↑ Up: <a href="efs-driver-overview_aws-elastic-file-storage.html">Overview</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="persistent-storage-csi-olm-operator-install_aws-elastic-file-storage.html">Installing the {FeatureName} CSI Driver Operator</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-09-18 14:51:05 +0100
+Last updated 2026-09-19 17:15:44 +0100
 </div>
 </div>
 <style>
