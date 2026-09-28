@@ -1029,6 +1029,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
+
+<ul class="sectlevel2">
+<li><a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a>
+</li>
+<li><a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a>
+</li>
+<li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
+</li>
+<li><a href="performance-investigation-con_performance-investigation.html">Performance investigation</a>
+</li>
+<li><a href="traffic-analysis-con_traffic-analysis.html">Traffic analysis</a>
+</li>
+<li><a href="anomaly-detection-con_anomaly-detection.html">Anomaly detection</a>
+</li>
+<li><a href="east-west-traffic-monitoring-con_east-west-traffic-monitoring.html">East-west traffic monitoring</a>
+</li>
+<li><a href="egress-monitoring-con_egress-monitoring.html">Egress monitoring</a>
+</li>
+<li><a href="monitor-control-plane-nodes-con_monitor-control-plane-nodes.html">Monitor control plane nodes</a>
+</li>
+<li><a href="hcp-cp-metrics-overview_monitor-hosted-control-planes.html">Control plane metrics for hosted control planes</a>
+</li>
+<li><a href="monitor-image-registry-health-con_monitor-image-registry-health.html">Monitor image registry health</a>
+</li>
+<li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
+</li>
+<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
+</li>
+<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
+</li>
+</ul>
 </li>
 <li><a href="_integrate.html">Integrate</a>
 
@@ -2020,7 +2051,7 @@ metadata:
 </div>
 <div class="sect5">
 <h6 id="nw-enforcing-hsts-per-domain_configure-tls-for-ingress">Enforce HTTP Strict Transport Security per-domain</h6>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>To enforce HTTP Strict Transport Security (HSTS) per-domain for secure routes, add a <code>requiredHSTSPolicies</code> record to the Ingress spec to capture the configuration of the HSTS policy.</p>
 </div>
 <div class="paragraph">
@@ -2098,18 +2129,18 @@ metadata:
   name: cluster
 spec:
   domain: 'hello-openshift-default.apps.username.devcluster.openshift.com'
-  requiredHSTSPolicies: <img src="data:image/png;base64," alt="1">
-  - domainPatterns: <img src="data:image/png;base64," alt="2">
+  requiredHSTSPolicies:
+  - domainPatterns:
     - '*hello-openshift-default.apps.username.devcluster.openshift.com'
     - '*hello-openshift-default2.apps.username.devcluster.openshift.com'
-    namespaceSelector: <img src="data:image/png;base64," alt="3">
+    namespaceSelector:
       matchLabels:
         myPolicy: strict
-    maxAge: <img src="data:image/png;base64," alt="4">
+    maxAge:
       smallestMaxAge: 1
       largestMaxAge: 31536000
-    preloadPolicy: RequirePreload <img src="data:image/png;base64," alt="5">
-    includeSubDomainsPolicy: RequireIncludeSubDomains <img src="data:image/png;base64," alt="6">
+    preloadPolicy: RequirePreload
+    includeSubDomainsPolicy: RequireIncludeSubDomains
   - domainPatterns:
     - 'abc.example.com'
     - '*xyz.example.com'
@@ -2120,37 +2151,42 @@ spec:
     includeSubDomainsPolicy: RequireNoIncludeSubDomains</code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><img src="data:image/png;base64," alt="1"></td>
-<td>Required. <code>requiredHSTSPolicies</code> are validated in order, and the first matching <code>domainPatterns</code> applies.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="2"></td>
-<td>Required. You must specify at least one <code>domainPatterns</code> hostname. Any number of domains can be listed. You can include multiple sections of enforcing options for different <code>domainPatterns</code>.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="3"></td>
-<td>Optional. If you include <code>namespaceSelector</code>, it must match the labels of the project where the routes reside, to enforce the set HSTS policy on the routes. Routes that only match the <code>namespaceSelector</code> and not the <code>domainPatterns</code> are not validated.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="4"></td>
-<td>Required. <code>max-age</code> measures the length of time, in seconds, that the HSTS policy is in effect. This policy setting allows for a smallest and largest <code>max-age</code> to be enforced.
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.requiredHSTSPolicies</code></dt>
+<dd>
+<p>Required. <code>spec.requiredHSTSPolicies</code> entries are validated in order, and the first matching <code>spec.requiredHSTSPolicies.domainPatterns</code> applies.</p>
+</dd>
+<dt class="hdlist1"><code>spec.requiredHSTSPolicies.domainPatterns</code></dt>
+<dd>
+<p>Required. You must specify at least one <code>spec.requiredHSTSPolicies.domainPatterns</code> hostname. Any number of domains can be listed. You can include multiple sections of enforcing options for different <code>spec.requiredHSTSPolicies.domainPatterns</code>.</p>
+</dd>
+<dt class="hdlist1"><code>spec.requiredHSTSPolicies.namespaceSelector</code></dt>
+<dd>
+<p>Optional. If you include <code>spec.requiredHSTSPolicies.namespaceSelector</code>, it must match the labels of the project where the routes reside, to enforce the set HSTS policy on the routes. Routes that only match the <code>spec.requiredHSTSPolicies.namespaceSelector</code> and not the <code>spec.requiredHSTSPolicies.domainPatterns</code> are not validated.</p>
+</dd>
+<dt class="hdlist1"><code>spec.requiredHSTSPolicies.maxAge</code></dt>
+<dd>
+<p>Required. <code>max-age</code> measures the length of time, in seconds, that the HSTS policy is in effect. This policy setting allows for a smallest and largest <code>max-age</code> to be enforced.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The <code>largestMaxAge</code> value must be between <code>0</code> and <code>2147483647</code>. It can be left unspecified, which means no upper limit is enforced.</p>
+<p>The <code>spec.requiredHSTSPolicies.maxAge.largestMaxAge</code> value must be between <code>0</code> and <code>2147483647</code>. It can be left unspecified, which means no upper limit is enforced.</p>
 </li>
 <li>
-<p>The <code>smallestMaxAge</code> value must be between <code>0</code> and <code>2147483647</code>. Enter <code>0</code> to disable HSTS for troubleshooting, otherwise enter <code>1</code> if you never want HSTS to be disabled. It can be left unspecified, which means no lower limit is enforced.</p>
+<p>The <code>spec.requiredHSTSPolicies.maxAge.smallestMaxAge</code> value must be between <code>0</code> and <code>2147483647</code>. Enter <code>0</code> to disable HSTS for troubleshooting, otherwise enter <code>1</code> if you never want HSTS to be disabled. It can be left unspecified, which means no lower limit is enforced.</p>
 </li>
 </ul>
-</div></td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="5"></td>
-<td>Optional. Including <code>preload</code> in <code>haproxy.router.openshift.io/hsts_header</code> allows external services to include this site in their HSTS preload lists. Browsers can then use these lists to determine which sites they can communicate with over HTTPS, before they have interacted with the site. Without <code>preload</code> set, browsers need to interact at least once with the site to get the header. <code>preload</code> can be set with one of the following:
+</div>
+</dd>
+<dt class="hdlist1"><code>spec.requiredHSTSPolicies.preloadPolicy</code></dt>
+<dd>
+<p>Optional. Including <code>preload</code> in <code>haproxy.router.openshift.io/hsts_header</code> allows external services to include this site in their HSTS preload lists. Browsers can then use these lists to determine which sites they can communicate with over HTTPS, before they have interacted with the site. Without <code>preload</code> set, browsers need to interact at least once with the site to get the header. <code>preload</code> can be set with one of the following:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -2163,11 +2199,11 @@ spec:
 <p><code>NoOpinion</code>: <code>preload</code> does not matter to the <code>RequiredHSTSPolicy</code>.</p>
 </li>
 </ul>
-</div></td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="6"></td>
-<td>Optional. <code>includeSubDomainsPolicy</code> can be set with one of the following:
+</div>
+</dd>
+<dt class="hdlist1"><code>spec.requiredHSTSPolicies.includeSubDomainsPolicy</code></dt>
+<dd>
+<p>Optional. <code>spec.requiredHSTSPolicies.includeSubDomainsPolicy</code> can be set with one of the following:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -2180,9 +2216,11 @@ spec:
 <p><code>NoOpinion</code>: <code>includeSubDomains</code> does not matter to the <code>RequiredHSTSPolicy</code>.</p>
 </li>
 </ul>
-</div></td>
-</tr>
-</table>
+</div>
+</dd>
+</dl>
+</div>
+</div>
 </div>
 </li>
 <li>
@@ -13060,8 +13098,6 @@ Last updated 2026-09-24 19:47:20 +0100
     display: inline-block;
     transition: transform .15s ease;
   }
-  .toc-toggle.open {
-    transform: rotate(90deg);
   }
 </style>
 <script>

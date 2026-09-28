@@ -1029,6 +1029,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
+
+<ul class="sectlevel2">
+<li><a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a>
+</li>
+<li><a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a>
+</li>
+<li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
+</li>
+<li><a href="performance-investigation-con_performance-investigation.html">Performance investigation</a>
+</li>
+<li><a href="traffic-analysis-con_traffic-analysis.html">Traffic analysis</a>
+</li>
+<li><a href="anomaly-detection-con_anomaly-detection.html">Anomaly detection</a>
+</li>
+<li><a href="east-west-traffic-monitoring-con_east-west-traffic-monitoring.html">East-west traffic monitoring</a>
+</li>
+<li><a href="egress-monitoring-con_egress-monitoring.html">Egress monitoring</a>
+</li>
+<li><a href="monitor-control-plane-nodes-con_monitor-control-plane-nodes.html">Monitor control plane nodes</a>
+</li>
+<li><a href="hcp-cp-metrics-overview_monitor-hosted-control-planes.html">Control plane metrics for hosted control planes</a>
+</li>
+<li><a href="monitor-image-registry-health-con_monitor-image-registry-health.html">Monitor image registry health</a>
+</li>
+<li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
+</li>
+<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
+</li>
+<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
+</li>
+</ul>
 </li>
 <li><a href="_integrate.html">Integrate</a>
 
@@ -1333,7 +1364,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="network-observability-operator_network-flow-visibility">Network Observability Operator</h3>
 <div class="paragraph _abstract">
-<p>The Network Observability Operator provides the cluster-scoped <code>FlowCollector</code> API custom resource, which manages a pipeline of eBPF agents and services that collect, enrich, and store network flows in Loki or Prometheus.</p>
+<p>The Network Observability Operator monitors and analyzes cluster network traffic by deploying eBPF-based flow collection that captures, enriches, and stores network data for troubleshooting and performance analysis.</p>
 </div>
 <div class="paragraph">
 <p>A <code>FlowCollector</code> instance deploys pods and services that form a monitoring pipeline.</p>
@@ -1344,7 +1375,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="network-observability-openshift-console-integration_network-flow-visibility">Red&#160;Hat OpenShift Container Platform console integration</h4>
 <div class="paragraph _abstract">
-<p>The Network Observability Operator integrates with the Red&#160;Hat OpenShift Container Platform console, providing an overview, topology view, and traffic flow tables.</p>
+<p>The Network Observability Operator integrates with the Red&#160;Hat OpenShift Container Platform console to visualize and analyze network traffic through views that display traffic overviews, topology graphs, and detailed flow tables for troubleshooting connectivity issues.</p>
 </div>
 <div class="paragraph">
 <p>The Network observability metrics dashboards in <strong>Observe</strong> &#8594; <strong>Dashboards</strong> are available only to users with administrator access.</p>
@@ -1366,7 +1397,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect4">
 <h5 id="network-observability-dashboards_network-flow-visibility">Network observability metrics dashboards</h5>
 <div class="paragraph _abstract">
-<p>Review the network observability metrics dashboards in the Red&#160;Hat OpenShift Container Platform console, which provide overall traffic flow aggregation, filtering options, and dedicated dashboards for monitoring operator health.</p>
+<p>The network observability dashboards in the Red&#160;Hat OpenShift Container Platform console provide cluster traffic pattern monitoring, metric filtering, and Network Observability Operator health tracking.</p>
 </div>
 <div class="paragraph">
 <p>In the Red&#160;Hat OpenShift Container Platform console on the <strong>Overview</strong> tab, you can view the overall aggregated metrics of the network traffic flow on the cluster. You can choose to display the information by cluster, node, namespace, owner, pod, and service. Filters and display options can further refine the metrics. For more information, see "Observing the network traffic from the Overview view".</p>
@@ -1387,7 +1418,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect4">
 <h5 id="traffic-flow-tables_network-flow-visibility">Traffic flow tables</h5>
 <div class="paragraph _abstract">
-<p>The <strong>Traffic flow</strong> tables in the Red&#160;Hat OpenShift Container Platform web console provide a detailed view of raw network flows, offering powerful filtering options and configurable columns for in-depth analysis.</p>
+<p>The <strong>Traffic flow</strong> tables in the Red&#160;Hat OpenShift Container Platform console provide detailed network flow data with filtering options, customizable columns, and tools to analyze connection patterns and troubleshoot issues.</p>
 </div>
 <div class="paragraph">
 <p>The <strong>Traffic flows</strong> tab in the Red&#160;Hat OpenShift Container Platform web console displays the data of the network flows and the amount of traffic.</p>
@@ -1397,7 +1428,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="network-observability-network-traffic-overview-view_network-flow-visibility">Observe the network traffic from the Overview view</h4>
 <div class="paragraph _abstract">
-<p>The Network Traffic <strong>Overview</strong> view provides aggregated flow metrics and visual insights into application communications. Administrators can use the metrics to monitor data volume, troubleshoot connectivity, and detect unusual traffic patterns across the cluster.</p>
+<p>Use the Network Traffic <strong>Overview</strong> view to monitor aggregated flow metrics, troubleshoot cluster connectivity, and detect unusual traffic patterns.</p>
 </div>
 <div class="paragraph">
 <p>The <strong>Overview</strong> view shows aggregate network traffic in your Red&#160;Hat OpenShift Container Platform cluster, allowing you to see which applications are communicating and the volume of data being transferred. It provides detailed insights by source, destination, and flow type, along with the top traffic flows and average byte rates.</p>
@@ -1408,7 +1439,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect4">
 <h5 id="network-observability-working-with-overview_network-flow-visibility">Work with the Overview view</h5>
 <div class="paragraph _abstract">
-<p>Navigate to the network traffic <strong>Overview</strong> view in the Red&#160;Hat OpenShift Container Platform console to see graphical representations of flow rate statistics and configure the display scope using available options.</p>
+<p>Navigate to the network traffic <strong>Overview</strong> view in the Red&#160;Hat OpenShift Container Platform console to visualize flow rate statistics and customize the display scope for monitoring cluster network activity.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisite</div>
@@ -1437,7 +1468,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="network-observability-trafficflow_network-flow-visibility">Observe the network traffic from the Traffic flows view</h4>
 <div class="paragraph _abstract">
-<p>Use the <strong>Traffic flows</strong> view to monitor real-time and historical network communication between cluster components. By analyzing granular flow data collected via eBPF, you can audit network traffic, validate network policies, and export data for external reporting and analysis.</p>
+<p>Use the <strong>Traffic flows</strong> view to monitor cluster network communication, audit eBPF flow data, validate network policies, and export metrics for external analysis.</p>
 </div>
 <div class="paragraph">
 <p>The <strong>Traffic flows</strong> view in the Network Observability Operator provides a granular, tabular representation of network activity across a Red&#160;Hat OpenShift Container Platform cluster. By leveraging eBPF technology to collect flow data, this view allows administrators to monitor real-time and historical communication between pods, services, and nodes. This visibility is essential for auditing network traffic, validating network policies, and identifying unexpected communication patterns within the cluster infrastructure.</p>
@@ -1451,7 +1482,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect4">
 <h5 id="network-observability-working-with-trafficflow_network-flow-visibility">Work with the Traffic flows view</h5>
 <div class="paragraph _abstract">
-<p>View and analyze detailed network flow information by using the <strong>Traffic flows</strong> table.</p>
+<p>View and analyze detailed network flow information in the <strong>Traffic flows</strong> table to troubleshoot connectivity issues and monitor traffic patterns between cluster components.</p>
 </div>
 <div class="paragraph">
 <p>As an administrator, you can navigate to <strong>Traffic flows</strong> table to see network flow information.</p>
@@ -1483,7 +1514,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="network-observability-topology_network-flow-visibility">Observe the network traffic from the Topology view</h4>
 <div class="paragraph _abstract">
-<p>The <strong>Topology</strong> view in the <strong>Network Traffic</strong> page provides a graphical representation of network flows and traffic volume across your Red&#160;Hat OpenShift Container Platform cluster. As an administrator, you can use this view to monitor application traffic data and visualize the relationships between various network components.</p>
+<p>Use the <strong>Topology</strong> view in the <strong>Network Traffic</strong> page to visualize network flows, track traffic volume, and monitor relationships across cluster components.</p>
 </div>
 <div class="paragraph">
 <p>The visualization represents network entities as nodes and traffic flows as edges. By selecting individual components within the graph, you can access a side panel containing specific metrics and health details for that resource. This interactive approach allows for rapid identification of traffic patterns and connectivity issues within the cluster.</p>
@@ -1528,7 +1559,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect4">
 <h5 id="network-observability-configuring-options-topology_network-flow-visibility">Configure the advanced options for the Topology view</h5>
 <div class="paragraph _abstract">
-<p>Review the available advanced options in the <strong>Topology</strong> view to customize display settings, configure component grouping and layouts, and export the network graph as an image.</p>
+<p>The <strong>Topology</strong> view provides advanced options that let you customize display settings, configure component grouping and layouts, and export the network graph as an image.</p>
 </div>
 <div class="paragraph">
 <p>You can customize and export the view by using <strong>Show advanced options</strong>. The advanced options view has the following features:</p>
@@ -1678,7 +1709,7 @@ spec:
 <div class="sect3">
 <h4 id="network-observability-quickfilter_network-flow-visibility">Filter the network traffic</h4>
 <div class="paragraph _abstract">
-<p>Review the available query options and filtering parameters in the <strong>Network Traffic</strong> view to optimize data searches, analyze specific log types, and manage directional traffic visibility.</p>
+<p>The <strong>Network Traffic</strong> view provides query options and filtering parameters that let you optimize data searches, analyze specific log types, and manage directional traffic visibility.</p>
 </div>
 <div class="paragraph">
 <p>By default, the <strong>Network Traffic</strong> page displays the traffic flow data in the cluster based on the default filters configured in the <code>FlowCollector</code> instance. You can use the filter options to observe the required data by changing the preset filter.</p>
@@ -1783,8 +1814,6 @@ Last updated 2026-09-24 19:47:20 +0100
     display: inline-block;
     transition: transform .15s ease;
   }
-  .toc-toggle.open {
-    transform: rotate(90deg);
   }
 </style>
 <script>

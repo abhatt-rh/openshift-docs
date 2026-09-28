@@ -1029,6 +1029,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
+
+<ul class="sectlevel2">
+<li><a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a>
+</li>
+<li><a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a>
+</li>
+<li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
+</li>
+<li><a href="performance-investigation-con_performance-investigation.html">Performance investigation</a>
+</li>
+<li><a href="traffic-analysis-con_traffic-analysis.html">Traffic analysis</a>
+</li>
+<li><a href="anomaly-detection-con_anomaly-detection.html">Anomaly detection</a>
+</li>
+<li><a href="east-west-traffic-monitoring-con_east-west-traffic-monitoring.html">East-west traffic monitoring</a>
+</li>
+<li><a href="egress-monitoring-con_egress-monitoring.html">Egress monitoring</a>
+</li>
+<li><a href="monitor-control-plane-nodes-con_monitor-control-plane-nodes.html">Monitor control plane nodes</a>
+</li>
+<li><a href="hcp-cp-metrics-overview_monitor-hosted-control-planes.html">Control plane metrics for hosted control planes</a>
+</li>
+<li><a href="monitor-image-registry-health-con_monitor-image-registry-health.html">Monitor image registry health</a>
+</li>
+<li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
+</li>
+<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
+</li>
+<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
+</li>
+</ul>
 </li>
 <li><a href="_integrate.html">Integrate</a>
 
@@ -1338,8 +1369,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="about-hardware-offloading_configure-high-performance-networking">About hardware offloading</h4>
 <div class="paragraph _abstract">
-<p>Open vSwitch hardware offloading is a method of processing network tasks by diverting them away from the CPU and offloading them to a dedicated processor on a network interface controller.
-As a result, clusters can benefit from faster data transfer speeds, reduced CPU workloads, and lower computing costs.</p>
+<p>Open vSwitch hardware offloading is a method of processing network tasks by diverting them away from the CPU and offloading them to a dedicated processor on a network interface controller.</p>
+</div>
+<div class="paragraph">
+<p>As a result, clusters can benefit from faster data transfer speeds, reduced CPU workloads, and lower computing costs.</p>
 </div>
 <div class="paragraph">
 <p>The key element for this feature is a modern class of network interface controllers known as SmartNICs.
@@ -2093,7 +2126,7 @@ metadata:
 <td class="tableblock halign-left valign-top"><p class="tableblock">Intel</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">IPU E2100</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Version 2.0.0.11126 or later</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A DPU designed to offload networking, storage, and security tasks from host CPUs in data centers, improving efficiency and performance. For instructions on deploying a full end-to-end solution, see the Red&#160;Hat Knowledgebase solution <a href="https://access.redhat.com/articles/7120276">Accelerating Confidential AI on OpenShift with the Intel E2100 IPU, DPU Operator, and F5 NGINX</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A DPU designed to offload networking, storage, and security tasks from host CPUs in data centers, improving efficiency and performance. For instructions on deploying a full end-to-end solution, see "Accelerating Confidential AI on OpenShift with the Intel E2100 IPU, DPU Operator, and F5 NGINX"</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Senao</p></td>
@@ -2122,6 +2155,14 @@ metadata:
 </td>
 </tr>
 </table>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="https://access.redhat.com/articles/7120276">Accelerating Confidential AI on OpenShift with the Intel E2100 IPU, DPU Operator, and F5 NGINX (Red&#160;Hat Knowledgebase)</a></p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -3226,7 +3267,7 @@ spec:
 <div class="sect3">
 <h4 id="nw-running-dpdk-rootless-tap_configure-high-performance-networking">Use the TAP CNI to run a rootless DPDK workload with kernel access</h4>
 <div class="paragraph _abstract">
-<p>DPDK applications can use <code>virtio-user</code> as an exception path to inject certain types of packets, such as log messages, into the kernel for processing. For more information about this feature, see <a href="https://doc.dpdk.org/guides/howto/virtio_user_as_exception_path.html">Virtio_user as Exception Path</a>.</p>
+<p>DPDK applications can use <code>virtio-user</code> as an exception path to inject certain types of packets, such as log messages, into the kernel for processing.</p>
 </div>
 <div class="paragraph">
 <p>In Red&#160;Hat OpenShift Container Platform version 4.14 and later, you can use non-privileged pods to run DPDK applications alongside the tap CNI plugin. To enable this functionality, you need to mount the <code>vhost-net</code> device by setting the <code>needVhostNet</code> parameter to <code>true</code> within the <code>SriovNetworkNodePolicy</code> object.</p>
@@ -4245,8 +4286,10 @@ local_ack_timeout_err  req_cqe_error resp_cqe_error                 rnr_nak_retr
 <div class="sect3">
 <h4 id="nw-high-performance-multicast_configure-high-performance-networking">High performance multicast</h4>
 <div class="paragraph _abstract">
-<p>The OVN-Kubernetes network plugin supports multicast between pods on the default network. This is best used for low-bandwidth coordination or service discovery, and not high-bandwidth applications.
-For applications such as streaming media, such as Internet Protocol television (IPTV) and multipoint videoconferencing, you can use Single Root I/O Virtualization (SR-IOV) hardware to provide near-native performance.</p>
+<p>The OVN-Kubernetes network plugin supports multicast between pods on the default network. This is best used for low-bandwidth coordination or service discovery, and not high-bandwidth applications.</p>
+</div>
+<div class="paragraph">
+<p>For applications such as streaming media, such as Internet Protocol television (IPTV) and multipoint videoconferencing, you can use Single Root I/O Virtualization (SR-IOV) hardware to provide near-native performance.</p>
 </div>
 <div class="paragraph">
 <p>When using additional SR-IOV interfaces for multicast:</p>
@@ -9105,8 +9148,6 @@ Last updated 2026-09-24 19:47:20 +0100
     display: inline-block;
     transition: transform .15s ease;
   }
-  .toc-toggle.open {
-    transform: rotate(90deg);
   }
 </style>
 <script>
