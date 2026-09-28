@@ -1921,7 +1921,6 @@ Last updated 2026-09-24 19:47:20 +0100
 
       if (state[key] === true || isCurrentSection) {
         li.classList.add('open');
-        toggle.classList.add('open');
         toggle.textContent = '\u25BC';
         if (isCurrentSection) { state[key] = true; }
       }
@@ -1929,7 +1928,6 @@ Last updated 2026-09-24 19:47:20 +0100
       li.insertBefore(toggle, li.firstChild);
       toggle.addEventListener('click', function() {
         var expanded = li.classList.toggle('open');
-        toggle.classList.toggle('open', expanded);
         toggle.textContent = expanded ? '\u25BC' : '\u25B6';
         state[key] = expanded;
         try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
