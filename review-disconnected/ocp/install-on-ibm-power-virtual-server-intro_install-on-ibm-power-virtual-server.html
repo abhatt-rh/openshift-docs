@@ -868,29 +868,29 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_disconnected_environments.html">Disconnected environments</a>
 
 <ul class="sectlevel2">
-<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Understand disconnected environments</a>
+<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
 <li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Installing a cluster with the Agent-based Installer</a>
 </li>
-<li><a href="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Prerequisites</a>
-</li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">About oc-mirror plugin v2</a>
-</li>
-<li><a href="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command.html">Prerequisites</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2.html">Changes from oc-mirror plugin v1 to v2</a>
 </li>
-<li><a href="olm-restricted-network-prereqs_manage-olm-operators-in-a-disconnected-environment.html">Prerequisites</a>
+<li><a href="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Prerequisites for mirror registry</a>
+</li>
+<li><a href="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command.html">Prerequisites for mirroring with oc adm release mirror</a>
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
-<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Using the OpenShift Update Service in a disconnected environment</a>
+<li><a href="olm-restricted-network-prereqs_manage-olm-operators-in-a-disconnected-environment.html">Prerequisites</a>
+</li>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
+</li>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service</a>
 </li>
 <li><a href="updating-cli-prereqs_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Prerequisites for a cluster update</a>
 </li>
-<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstalling the OpenShift Update Service from a cluster</a>
-</li>
-<li><a href="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected.html">About the mirror registry</a>
+<li><a href="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected.html">Mirror registry</a>
 </li>
 </ul>
 </li>
@@ -1138,7 +1138,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">About oc-mirror plugin v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1731,7 +1731,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#prereqs-ibm-power-vs_install-on-ibm-power-virtual-server">Prerequisites</a></li><li class="level-4"><a href="#cluster-entitlements_install-on-ibm-power-virtual-server">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#ssh-agent-using_installing-ibm-power-vs-customizations">Generating a key pair for cluster node SSH access</a></li><li class="level-4"><a href="#installation-obtaining-installer_install-on-ibm-power-virtual-server">Obtaining the installation program</a></li><li class="level-4"><a href="#installation-ibm-cloud-export-variables_installing-ibm-power-vs-customizations">Exporting the API key</a></li><li class="level-4"><a href="#installation-initializing_installing-ibm-power-vs-customizations">Creating the installation configuration file</a></li><li class="level-5"><a href="#installation-ibm-power-vs-config-yaml_installing-ibm-power-vs-customizations">Sample customized install-config.yaml file for IBM Power Virtual Server</a></li><li class="level-5"><a href="#installation-configure-proxy_install-on-ibm-power-virtual-server">Configuring the cluster-wide proxy during installation</a></li><li class="level-4"><a href="#manually-create-iam-ibm-cloud_installing-ibm-power-vs-customizations">Manually creating IAM</a></li><li class="level-4"><a href="#installation-launching-installer_installing-ibm-power-vs-customizations">Deploying the cluster</a></li><li class="level-4"><a href="#cli-installing-cli-linux_install-on-ibm-power-virtual-server">Installing the OpenShift CLI on Linux</a></li><li class="level-4"><a href="#cli-installing-cli-windows_install-on-ibm-power-virtual-server">Installing the OpenShift CLI on Windows</a></li><li class="level-4"><a href="#cli-installing-cli-macos_install-on-ibm-power-virtual-server">Installing the OpenShift CLI on macOS</a></li><li class="level-4"><a href="#cli-logging-in-kubeadmin_install-on-ibm-power-virtual-server">Logging in to the cluster by using the CLI</a></li><li class="level-4"><a href="#cluster-telemetry_install-on-ibm-power-virtual-server">Telemetry access for Red Hat OpenShift Container Platform</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#prereqs-ibm-power-vs_install-on-ibm-power-virtual-server">Prerequisites</a></li><li class="level-4"><a href="#cluster-entitlements_install-on-ibm-power-virtual-server">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#ssh-agent-using_installing-ibm-power-vs-customizations">Generating a key pair for cluster node SSH access</a></li><li class="level-4"><a href="#installation-obtaining-installer_install-on-ibm-power-virtual-server">Obtaining the installation program</a></li><li class="level-4"><a href="#installation-ibm-cloud-export-variables_installing-ibm-power-vs-customizations">Exporting the API key</a></li><li class="level-4"><a href="#installation-initializing_installing-ibm-power-vs-customizations">Creating the installation configuration file</a></li><li class="level-5"><a href="#installation-ibm-power-vs-config-yaml_installing-ibm-power-vs-customizations">Sample customized install-config.yaml file for IBM Power Virtual Server</a></li><li class="level-5"><a href="#installation-configure-proxy_install-on-ibm-power-virtual-server">Configuring the cluster-wide proxy during installation</a></li><li class="level-4"><a href="#manually-create-iam-ibm-cloud_installing-ibm-power-vs-customizations">Manually creating IAM</a></li><li class="level-4"><a href="#installation-launching-installer_installing-ibm-power-vs-customizations">Deploying the cluster</a></li><li class="level-4"><a href="#cli-installing-cli-linux_install-on-ibm-power-virtual-server">Install the OpenShift CLI on Linux</a></li><li class="level-4"><a href="#cli-installing-cli-windows_install-on-ibm-power-virtual-server">Install the OpenShift CLI on Windows</a></li><li class="level-4"><a href="#cli-installing-cli-macos_install-on-ibm-power-virtual-server">Install the OpenShift CLI on macOS</a></li><li class="level-4"><a href="#cli-logging-in-kubeadmin_install-on-ibm-power-virtual-server">Logging in to the cluster by using the CLI</a></li><li class="level-4"><a href="#cluster-telemetry_install-on-ibm-power-virtual-server">Telemetry access for Red Hat OpenShift Container Platform</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="install-on-ibm-power-virtual-server-intro_install-on-ibm-power-virtual-server">Install on IBM Power Virtual Server</h3>
@@ -2814,7 +2814,7 @@ INFO Time elapsed: 36m22s</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="cli-installing-cli-linux_install-on-ibm-power-virtual-server">Installing the OpenShift CLI on Linux</h4>
+<h4 id="cli-installing-cli-linux_install-on-ibm-power-virtual-server">Install the OpenShift CLI on Linux</h4>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Linux, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -2886,7 +2886,7 @@ INFO Time elapsed: 36m22s</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="cli-installing-cli-windows_install-on-ibm-power-virtual-server">Installing the OpenShift CLI on Windows</h4>
+<h4 id="cli-installing-cli-windows_install-on-ibm-power-virtual-server">Install the OpenShift CLI on Windows</h4>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Windows, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -2950,7 +2950,7 @@ INFO Time elapsed: 36m22s</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="cli-installing-cli-macos_install-on-ibm-power-virtual-server">Installing the OpenShift CLI on macOS</h4>
+<h4 id="cli-installing-cli-macos_install-on-ibm-power-virtual-server">Install the OpenShift CLI on macOS</h4>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on macOS, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
