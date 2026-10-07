@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1789,7 +1789,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The following section highlights the supported features of the <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs when used as either the primary or secondary network. A separate table for the <code>ClusterUserDefinedNetwork</code> CR is also included.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 704. Primary network support matrix for <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs</caption>
+<caption class="title">Table 707. Primary network support matrix for <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -2109,7 +2109,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 705. Secondary network support matrix for <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs</caption>
+<caption class="title">Table 708. Secondary network support matrix for <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2509,7 +2509,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The Localnet topology is unavailable for use with the <code>UserDefinedNetwork</code> CR. It is only supported on secondary networks for <code>NetworkAttachmentDefinition</code> CRs.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 706. Support matrix for <code>ClusterUserDefinedNetwork</code> CRs</caption>
+<caption class="title">Table 709. Support matrix for <code>ClusterUserDefinedNetwork</code> CRs</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2955,7 +2955,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The configuration for the API is described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 707. <code>NetworkAttachmentDefinition</code> API fields</caption>
+<caption class="title">Table 710. <code>NetworkAttachmentDefinition</code> API fields</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -3177,7 +3177,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The following table describes the configuration parameters for the Bond CNI plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 708. Bond CNI plugin JSON configuration object</caption>
+<caption class="title">Table 711. Bond CNI plugin JSON configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4215,7 +4215,7 @@ worker      rendered-worker-d6c9ca107fba6cd76cdcbfcedcafa0f2      True      Fals
 <p>The following table describes the configuration for static IP address assignment:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 709. <code>ipam</code> static configuration object</caption>
+<caption class="title">Table 712. <code>ipam</code> static configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4255,7 +4255,7 @@ worker      rendered-worker-d6c9ca107fba6cd76cdcbfcedcafa0f2      True      Fals
 <p>The <code>addresses</code> array requires objects with the following fields:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 710. <code>ipam.addresses[]</code> array</caption>
+<caption class="title">Table 713. <code>ipam.addresses[]</code> array</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4282,7 +4282,7 @@ worker      rendered-worker-d6c9ca107fba6cd76cdcbfcedcafa0f2      True      Fals
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 711. <code>ipam.routes[]</code> array</caption>
+<caption class="title">Table 714. <code>ipam.routes[]</code> array</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4309,7 +4309,7 @@ worker      rendered-worker-d6c9ca107fba6cd76cdcbfcedcafa0f2      True      Fals
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 712. <code>ipam.dns</code> object</caption>
+<caption class="title">Table 715. <code>ipam.dns</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4428,7 +4428,7 @@ spec:
 <p>The following table describes the configuration objects for dynamic IP address assignment with Whereabouts:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 713. <code>ipam</code> whereabouts configuration parameters</caption>
+<caption class="title">Table 716. <code>ipam</code> whereabouts configuration parameters</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">

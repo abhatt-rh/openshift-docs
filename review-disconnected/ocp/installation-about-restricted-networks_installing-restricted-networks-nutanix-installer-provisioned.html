@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1731,12 +1731,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#installation-restricted-network-limits_installing-restricted-networks-nutanix-installer-provisioned">Additional limits</a></li><li class="level-4"><a href="#ssh-agent-using_install-on-nutanix-in-a-disconnected-environment">Generating a key pair for cluster node SSH access</a></li><li class="level-4"><a href="#installation-adding-nutanix-root-certificates_install-on-nutanix-in-a-disconnected-environment">Adding Nutanix root CA certificates to your system trust</a></li><li class="level-4"><a href="#installation-nutanix-download-rhcos_install-on-nutanix-in-a-disconnected-environment">Downloading the RHCOS cluster image</a></li><li class="level-4"><a href="#installation-initializing_installing-restricted-networks-nutanix-installer-provisioned">Creating the installation configuration file</a></li><li class="level-5"><a href="#installation-nutanix-config-yaml_installing-restricted-networks-nutanix-installer-provisioned">Sample customized install-config.yaml file for Nutanix</a></li><li class="level-5"><a href="#installation-configuring-nutanix-failure-domains_install-on-nutanix-in-a-disconnected-environment">Configuring failure domains</a></li><li class="level-5"><a href="#installation-configure-proxy_install-on-nutanix-in-a-disconnected-environment">Configuring the cluster-wide proxy during installation</a></li><li class="level-4"><a href="#cli-installing-cli-linux_install-on-nutanix-in-a-disconnected-environment">Install the OpenShift CLI on Linux</a></li><li class="level-4"><a href="#cli-installing-cli-windows_install-on-nutanix-in-a-disconnected-environment">Install the OpenShift CLI on Windows</a></li><li class="level-4"><a href="#cli-installing-cli-macos_install-on-nutanix-in-a-disconnected-environment">Install the OpenShift CLI on macOS</a></li><li class="level-4"><a href="#manually-create-iam-nutanix_install-on-nutanix-in-a-disconnected-environment">Configuring IAM for Nutanix</a></li><li class="level-4"><a href="#installation-launching-installer_installing-restricted-networks-nutanix-installer-provisioned">Deploying the cluster</a></li><li class="level-4"><a href="#olm-restricted-networks-operatorhub_install-on-nutanix-in-a-disconnected-environment">Disabling the default software catalog sources</a></li><li class="level-4"><a href="#oc-mirror-updating-cluster-manifests_install-on-nutanix-in-a-disconnected-environment">Installing the policy resources into the cluster</a></li><li class="level-4"><a href="#registry-configuring-storage-nutanix_install-on-nutanix-in-a-disconnected-environment">Configuring the default storage container</a></li><li class="level-5"><a href="#_additional_resources_2">Additional resources</a></li><li class="level-4"><a href="#cluster-telemetry_install-on-nutanix-in-a-disconnected-environment">Telemetry access for Red Hat OpenShift Container Platform</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#installation-restricted-network-limits_installing-restricted-networks-nutanix-installer-provisioned">Additional limits</a></li><li class="level-4"><a href="#ssh-agent-using_install-on-nutanix-in-a-disconnected-environment">Generating a key pair for cluster node SSH access</a></li><li class="level-4"><a href="#installation-adding-nutanix-root-certificates_install-on-nutanix-in-a-disconnected-environment">Adding Nutanix root CA certificates to your system trust</a></li><li class="level-4"><a href="#installation-nutanix-download-rhcos_install-on-nutanix-in-a-disconnected-environment">Downloading the RHCOS cluster image</a></li><li class="level-4"><a href="#installation-initializing_installing-restricted-networks-nutanix-installer-provisioned">Creating the installation configuration file</a></li><li class="level-5"><a href="#installation-nutanix-config-yaml_installing-restricted-networks-nutanix-installer-provisioned">Sample customized install-config.yaml file for Nutanix</a></li><li class="level-5"><a href="#installation-configuring-nutanix-failure-domains_install-on-nutanix-in-a-disconnected-environment">Configuring failure domains</a></li><li class="level-5"><a href="#installation-configure-proxy_install-on-nutanix-in-a-disconnected-environment">Configuring the cluster-wide proxy during installation</a></li><li class="level-4"><a href="#cli-installing-cli-linux_install-on-nutanix-in-a-disconnected-environment">Installing the OpenShift CLI on Linux</a></li><li class="level-4"><a href="#cli-installing-cli-windows_install-on-nutanix-in-a-disconnected-environment">Installing the OpenShift CLI on Windows</a></li><li class="level-4"><a href="#cli-installing-cli-macos_install-on-nutanix-in-a-disconnected-environment">Installing the OpenShift CLI on macOS</a></li><li class="level-4"><a href="#manually-create-iam-nutanix_install-on-nutanix-in-a-disconnected-environment">Configuring IAM for Nutanix</a></li><li class="level-4"><a href="#installation-launching-installer_installing-restricted-networks-nutanix-installer-provisioned">Deploying the cluster</a></li><li class="level-4"><a href="#olm-restricted-networks-operatorhub_install-on-nutanix-in-a-disconnected-environment">Disabling the default software catalog sources</a></li><li class="level-4"><a href="#oc-mirror-updating-cluster-manifests_install-on-nutanix-in-a-disconnected-environment">Installing the policy resources into the cluster</a></li><li class="level-4"><a href="#registry-configuring-storage-nutanix_install-on-nutanix-in-a-disconnected-environment">Configuring the default storage container</a></li><li class="level-5"><a href="#_additional_resources_2">Additional resources</a></li><li class="level-4"><a href="#cluster-telemetry_install-on-nutanix-in-a-disconnected-environment">Telemetry access for Red Hat OpenShift Container Platform</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="installation-about-restricted-networks_installing-restricted-networks-nutanix-installer-provisioned">About installations in restricted networks</h3>
 <div class="paragraph _abstract">
-<p>You can install Red&#160;Hat OpenShift Container Platform {product-version} in a restricted network without an active internet connection to obtain software components. Restricted network installations can use installer-provisioned or user-provisioned infrastructure, depending on the cloud platform to which you are installing the cluster.</p>
+<p>You can install Red&#160;Hat OpenShift Container Platform {product-version} in a restricted network that lacks an active internet connection. These restricted installations use installer-provisioned or user-provisioned infrastructure, depending on your cloud platform.</p>
 </div>
 <div class="paragraph">
 <p>If you choose to perform a restricted network installation on a cloud platform, you still require access to its cloud APIs. Some cloud functions, such as Amazon Web Service&#8217;s Route 53 DNS and IAM services, require internet access.
@@ -2741,7 +2741,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </div>
 </div>
 <div class="sect3">
-<h4 id="cli-installing-cli-linux_install-on-nutanix-in-a-disconnected-environment">Install the OpenShift CLI on Linux</h4>
+<h4 id="cli-installing-cli-linux_install-on-nutanix-in-a-disconnected-environment">Installing the OpenShift CLI on Linux</h4>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Linux, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -2813,7 +2813,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </div>
 </div>
 <div class="sect3">
-<h4 id="cli-installing-cli-windows_install-on-nutanix-in-a-disconnected-environment">Install the OpenShift CLI on Windows</h4>
+<h4 id="cli-installing-cli-windows_install-on-nutanix-in-a-disconnected-environment">Installing the OpenShift CLI on Windows</h4>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Windows, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -2877,7 +2877,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </div>
 </div>
 <div class="sect3">
-<h4 id="cli-installing-cli-macos_install-on-nutanix-in-a-disconnected-environment">Install the OpenShift CLI on macOS</h4>
+<h4 id="cli-installing-cli-macos_install-on-nutanix-in-a-disconnected-environment">Installing the OpenShift CLI on macOS</h4>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on macOS, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>

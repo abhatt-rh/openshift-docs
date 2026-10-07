@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators" class="book toc2 toc-left navmap-has-right-toc">
+<body id="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html"><span class="toc-current">Example SR-IOV Network Operator for virtual functions</span></a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html"><span class="toc-current">Troubleshoot OVN-Kubernetes networking issues</span></a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1731,203 +1731,83 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-cluster-network-operator_troubleshoot-network-issues-134-troubleshoot-operators">Cluster Network Operator</a></li><li class="level-4"><a href="#network-observability-operator-stub_troubleshoot-network-issues-134-troubleshoot-operators">Network Observability Operator features</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-ovn-kubernetes-readiness-probes_troubleshoot-ovn-kubernetes-networking-issues">Monitoring OVN-Kubernetes health by using readiness probes</a></li><li class="level-4"><a href="#nw-ovn-kubernetes-alerts-console_troubleshoot-ovn-kubernetes-networking-issues">Viewing OVN-Kubernetes alerts in the console</a></li><li class="level-4"><a href="#nw-ovn-kubernetes-alerts-cli_troubleshoot-ovn-kubernetes-networking-issues">Viewing OVN-Kubernetes alerts in the CLI</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators">Example SR-IOV Network Operator for virtual functions</h3>
+<h3 id="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues">Troubleshoot OVN-Kubernetes networking issues</h3>
 <div class="paragraph _abstract">
-<p>You can use the Single Root I/O Virtualization (SR-IOV) Network Operator to allocate and configure Virtual Functions (VFs) from SR-IOV-supporting Physical Function NICs on the nodes.</p>
-</div>
-<div class="paragraph">
-<p>For more information on deploying the Operator, see <em>Installing the SR-IOV Network Operator</em>.
-For more information on configuring an SR-IOV network device, see <em>Configuring an SR-IOV network device</em>.</p>
-</div>
-<div class="paragraph">
-<p>There are some differences between running Data Plane Development Kit (DPDK) workloads on Intel VFs and Mellanox VFs. This section provides object configuration examples for both VF types.
-The following is an example of an <code>sriovNetworkNodePolicy</code> object used to run DPDK applications on Intel NICs:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: sriovnetwork.openshift.io/v1
-kind: SriovNetworkNodePolicy
-metadata:
-  name: dpdk-nic-1
-  namespace: openshift-sriov-network-operator
-spec:
-  deviceType: vfio-pci
-  needVhostNet: true
-  nicSelector:
-    pfNames: ["ens3f0"]
-  nodeSelector:
-    node-role.kubernetes.io/worker-cnf: ""
-  numVfs: 10
-  priority: 99
-  resourceName: dpdk_nic_1
----
-apiVersion: sriovnetwork.openshift.io/v1
-kind: SriovNetworkNodePolicy
-metadata:
-  name: dpdk-nic-1
-  namespace: openshift-sriov-network-operator
-spec:
-  deviceType: vfio-pci
-  needVhostNet: true
-  nicSelector:
-    pfNames: ["ens3f1"]
-  nodeSelector:
-  node-role.kubernetes.io/worker-cnf: ""
-  numVfs: 10
-  priority: 99
-  resourceName: dpdk_nic_2</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.deviceType</code></dt>
-<dd>
-<p>For Intel NICs, <code>deviceType</code> must be <code>vfio-pci</code>.</p>
-</dd>
-<dt class="hdlist1"><code>spec.needVhostNet</code></dt>
-<dd>
-<p>If kernel communication with DPDK workloads is required, set to <code>true</code>. This mounts the <code>/dev/net/tun</code> and <code>/dev/vhost-net</code> devices into the container so the application can create a tap device and connect the tap device to the DPDK workload.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>The following is an example of an <code>sriovNetworkNodePolicy</code> object for Mellanox NICs:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: sriovnetwork.openshift.io/v1
-kind: SriovNetworkNodePolicy
-metadata:
-  name: dpdk-nic-1
-  namespace: openshift-sriov-network-operator
-spec:
-  deviceType: netdevice
-  isRdma: true
-  nicSelector:
-    rootDevices:
-      - "0000:5e:00.1"
-  nodeSelector:
-    node-role.kubernetes.io/worker-cnf: ""
-  numVfs: 5
-  priority: 99
-  resourceName: dpdk_nic_1
----
-apiVersion: sriovnetwork.openshift.io/v1
-kind: SriovNetworkNodePolicy
-metadata:
-  name: dpdk-nic-2
-  namespace: openshift-sriov-network-operator
-spec:
-  deviceType: netdevice
-  isRdma: true
-  nicSelector:
-    rootDevices:
-      - "0000:5e:00.0"
-  nodeSelector:
-    node-role.kubernetes.io/worker-cnf: ""
-  numVfs: 5
-  priority: 99
-  resourceName: dpdk_nic_2</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.deviceType</code></dt>
-<dd>
-<p>For Mellanox devices the <code>deviceType</code> must be <code>netdevice</code>.</p>
-</dd>
-<dt class="hdlist1"><code>spec.isRdma</code></dt>
-<dd>
-<p>For Mellanox devices <code>isRdma</code> must be <code>true</code>. Mellanox cards are connected to DPDK applications using Flow Bifurcation. This mechanism splits traffic between Linux user space and kernel space, and can enhance line rate processing capability.</p>
-</dd>
-</dl>
+<p>To troubleshoot OVN-Kubernetes in Red&#160;Hat OpenShift Container Platform, you can use built-in health checks and alerts. Examine readiness probes and OVN-Kubernetes alerts before you open a support case.</p>
 </div>
 <div class="sect3">
-<h4 id="nw-cluster-network-operator_troubleshoot-network-issues-134-troubleshoot-operators">Cluster Network Operator</h4>
+<h4 id="nw-ovn-kubernetes-readiness-probes_troubleshoot-ovn-kubernetes-networking-issues">Monitoring OVN-Kubernetes health by using readiness probes</h4>
 <div class="paragraph _abstract">
-<p>The Cluster Network Operator implements the <code>network</code> API from the <code>operator.openshift.io</code> API group.
-The Operator deploys the OVN-Kubernetes network plugin, or the network provider plugin that you selected during cluster installation, by using a daemon set.</p>
+<p>To monitor OVN-Kubernetes component health in Red&#160;Hat OpenShift Container Platform, you can review readiness probe configuration and status for <code>ovnkube-control-plane</code> and <code>ovnkube-node</code> pods.</p>
 </div>
-<div class="paragraph">
-<p>The Cluster Network Operator is deployed during installation as a Kubernetes
-<code>Deployment</code>.</p>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Access to the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>You have access to the cluster with <code>cluster-admin</code> privileges.</p>
+</li>
+<li>
+<p>You have installed <code>jq</code>.</p>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Run the following command to view the Deployment status:</p>
+<p>Review the details of the <code>ovnkube-node</code> readiness probe by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get -n openshift-network-operator deployment/network-operator</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME               READY   UP-TO-DATE   AVAILABLE   AGE
-network-operator   1/1     1            1           56m</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Run the following command to view the state of the Cluster Network Operator:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusteroperator/network</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME      VERSION   AVAILABLE   PROGRESSING   DEGRADED   SINCE
-network   4.16.1     True        False         False      50m</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n openshift-ovn-kubernetes -l app=ovnkube-node \
+-o json | jq '.items[0].spec.containers[] | .name,.readinessProbe'</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The following fields provide information about the status of the operator:
-<code>AVAILABLE</code>, <code>PROGRESSING</code>, and <code>DEGRADED</code>. The <code>AVAILABLE</code> field is <code>True</code> when
-the Cluster Network Operator reports an available status condition.</p>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="network-observability-operator-stub_troubleshoot-network-issues-134-troubleshoot-operators">Network Observability Operator features</h4>
-<div class="paragraph _abstract">
-<p>With the Network Observability Operator, you can monitor ingress, egress, and internal network traffic flows between pods, services, and nodes in your cluster.</p>
+<p>The readiness probe for the northbound and southbound database containers in the <code>ovnkube-node</code> pod checks for the health of the databases and the <code>ovnkube-controller</code> container.</p>
 </div>
 <div class="paragraph">
-<p>Use this network flow data to troubleshoot connectivity issues, analyze traffic patterns, detect security threats, and optimize overall network performance.</p>
+<p>The <code>ovnkube-controller</code> container in the <code>ovnkube-node</code> pod has a readiness probe to verify the presence of the OVN-Kubernetes CNI configuration file, the absence of which would indicate that the pod is not running or is not ready to accept requests to configure pods.</p>
 </div>
-<div class="paragraph">
-<p>You can perform the following tasks with this Operator:</p>
+</li>
+<li>
+<p>Show all events including the probe failures, for the namespace by using the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get events -n openshift-ovn-kubernetes</code></pre>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Collect network flow data by using eBPF technology.</p>
+</div>
 </li>
 <li>
-<p>Visualize traffic flows inside the Red&#160;Hat OpenShift Container Platform web console.</p>
+<p>Show the events for just a specific pod:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe pod ovnkube-node-9lqfk -n openshift-ovn-kubernetes</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>Filter and analyze flows by namespace, pod, service, or port attributes.</p>
+<p>Show the messages and statuses from the cluster network operator:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get co/network -o json | jq '.status.conditions[]'</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>Export flow data to external analysis tools for long-term storage or processing.</p>
-</li>
-</ul>
+<p>Show the <code>ready</code> status of each container in <code>ovnkube-node</code> pods by running the following script:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ for p in $(oc get pods --selector app=ovnkube-node -n openshift-ovn-kubernetes \
+-o jsonpath='{range.items[*]}{" "}{.metadata.name}'); do echo === $p ===;  \
+oc get pods -n openshift-ovn-kubernetes $p -o json | jq '.status.containerStatuses[] | .name, .ready'; \
+done</code></pre>
+</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1937,11 +1817,99 @@ the Cluster Network Operator reports an available status condition.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>For complete documentation about installing, configuring, and using the Network Observability Operator, see <a href="../../observability/network_observability/network-observability-overview.html#network-observability-overview">Network Observability overview</a> in the Observability section.</p>
+<p>The expectation is all container statuses are reporting as <code>true</code>. Failure of a readiness probe sets the status to <code>false</code>.</p>
 </div>
 </td>
 </tr>
 </table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nw-ovn-kubernetes-alerts-console_troubleshoot-ovn-kubernetes-networking-issues">Viewing OVN-Kubernetes alerts in the console</h4>
+<div class="paragraph _abstract">
+<p>To view OVN-Kubernetes alerts in the Red&#160;Hat OpenShift Container Platform web console, you can open <strong>Observe</strong> &#8594; <strong>Alerting</strong> to inspect rules, alerts, and silences.</p>
+</div>
+<div class="paragraph">
+<p>The Alerting UI provides detailed information about alerts and their governing alerting rules and silences.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to the cluster as a developer or as a user with view permissions for the project that you are viewing metrics for.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the <strong>Administrator</strong> perspective, select <strong>Observe</strong> &#8594; <strong>Alerting</strong>. The three main pages in the Alerting UI in this perspective are the <strong>Alerts</strong>, <strong>Silences</strong>, and <strong>Alerting Rules</strong> pages.</p>
+</li>
+<li>
+<p>View the rules for OVN-Kubernetes alerts by selecting <strong>Observe</strong> &#8594; <strong>Alerting</strong> &#8594; <strong>Alerting Rules</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nw-ovn-kubernetes-alerts-cli_troubleshoot-ovn-kubernetes-networking-issues">Viewing OVN-Kubernetes alerts in the CLI</h4>
+<div class="paragraph _abstract">
+<p>To view OVN-Kubernetes alerts from the command line in Red&#160;Hat OpenShift Container Platform, you can query the <code>Alertmanager</code> API for active alerts and related rules.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>The OpenShift CLI (<code>oc</code>) installed.</p>
+</li>
+<li>
+<p>You have installed <code>jq</code>.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>View active or firing alerts by running the following commands.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Set the alert manager route environment variable by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ALERT_MANAGER=$(oc get route alertmanager-main -n openshift-monitoring \
+-o jsonpath='{@.spec.host}')</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Issue a <code>curl</code> request to the alert manager route API by running the following command, replacing <code>$ALERT_MANAGER</code> with the URL of your <code>Alertmanager</code> instance:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ curl -s -k -H "Authorization: Bearer $(oc create token prometheus-k8s -n openshift-monitoring)" https://$ALERT_MANAGER/api/v1/alerts | jq '.data[] | "\(.labels.severity) \(.labels.alertname) \(.labels.pod) \(.labels.container) \(.labels.endpoint) \(.labels.instance)"'</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>View alerting rules by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-monitoring exec -c prometheus prometheus-k8s-0 -- curl -s 'http://localhost:9090/api/v1/rules' | jq '.data.groups[].rules[] | select(((.name|contains("ovn")) or (.name|contains("OVN")) or (.name|contains("Ovn")) or (.name|contains("North")) or (.name|contains("South"))) and .type=="alerting")'</code></pre>
+</div>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>

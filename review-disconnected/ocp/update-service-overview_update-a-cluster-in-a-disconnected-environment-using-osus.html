@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1731,7 +1731,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#registry-configuration-for-update-service_update-a-cluster-in-a-disconnected-environment-using-osus">Configure access to a secured registry for the OpenShift Update Service</a></li><li class="level-4"><a href="#images-update-global-pull-secret_update-a-cluster-in-a-disconnected-environment-using-osus">Update the global cluster pull secret</a></li><li class="level-4"><a href="#update-service-install_update-a-cluster-in-a-disconnected-environment-using-osus">Install the OpenShift Update Service Operator</a></li><li class="level-5"><a href="#update-service-install-web-console_update-a-cluster-in-a-disconnected-environment-using-osus">Install the OpenShift Update Service Operator by using the web console</a></li><li class="level-5"><a href="#update-service-install-cli_update-a-cluster-in-a-disconnected-environment-using-osus">Install the OpenShift Update Service Operator by using the CLI</a></li><li class="level-4"><a href="#update-service-graph-data_update-a-cluster-in-a-disconnected-environment-using-osus">Create the OpenShift Update Service graph data container image</a></li><li class="level-4"><a href="#update-service-create-service_update-a-cluster-in-a-disconnected-environment-using-osus">Create an OpenShift Update Service application</a></li><li class="level-5"><a href="#update-service-create-service-web-console_update-a-cluster-in-a-disconnected-environment-using-osus">Create an OpenShift Update Service application by using the web console</a></li><li class="level-5"><a href="#update-service-create-service-cli_update-a-cluster-in-a-disconnected-environment-using-osus">Create an OpenShift Update Service application by using the CLI</a></li><li class="level-4"><a href="#update-service-configure-cvo">Configure the Cluster Version Operator (CVO)</a></li><li class="level-4"><a href="#verifying-local-osus-installation_update-a-cluster-in-a-disconnected-environment-using-osus">Verifying your local OSUS installation</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#registry-configuration-for-update-service_update-a-cluster-in-a-disconnected-environment-using-osus">Configuring access to a secured registry for the OpenShift Update Service</a></li><li class="level-4"><a href="#images-update-global-pull-secret_update-a-cluster-in-a-disconnected-environment-using-osus">Update the global cluster pull secret</a></li><li class="level-4"><a href="#update-service-install_update-a-cluster-in-a-disconnected-environment-using-osus">Installing the OpenShift Update Service Operator</a></li><li class="level-5"><a href="#update-service-install-web-console_update-a-cluster-in-a-disconnected-environment-using-osus">Installing the OpenShift Update Service Operator by using the web console</a></li><li class="level-5"><a href="#update-service-install-cli_update-a-cluster-in-a-disconnected-environment-using-osus">Installing the OpenShift Update Service Operator by using the CLI</a></li><li class="level-4"><a href="#update-service-graph-data_update-a-cluster-in-a-disconnected-environment-using-osus">Creating the OpenShift Update Service graph data container image</a></li><li class="level-4"><a href="#update-service-create-service_update-a-cluster-in-a-disconnected-environment-using-osus">Creating an OpenShift Update Service application</a></li><li class="level-5"><a href="#update-service-create-service-web-console_update-a-cluster-in-a-disconnected-environment-using-osus">Creating an OpenShift Update Service application by using the web console</a></li><li class="level-5"><a href="#update-service-create-service-cli_update-a-cluster-in-a-disconnected-environment-using-osus">Creating an OpenShift Update Service application by using the CLI</a></li><li class="level-4"><a href="#update-service-configure-cvo">Configuring the Cluster Version Operator (CVO)</a></li><li class="level-4"><a href="#verifying-local-osus-installation_update-a-cluster-in-a-disconnected-environment-using-osus">Verifying your local OSUS installation</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus">Use the OpenShift Update Service in a disconnected environment</h3>
@@ -1755,7 +1755,7 @@ For example, in a case where you have separate test and stage environments, you 
 <p>The following sections describe how to install an OSUS instance and configure it to provide update recommendations to a cluster.</p>
 </div>
 <div class="sect3">
-<h4 id="registry-configuration-for-update-service_update-a-cluster-in-a-disconnected-environment-using-osus">Configure access to a secured registry for the OpenShift Update Service</h4>
+<h4 id="registry-configuration-for-update-service_update-a-cluster-in-a-disconnected-environment-using-osus">Configuring access to a secured registry for the OpenShift Update Service</h4>
 <div class="paragraph _abstract">
 <p>If your release images are contained in a registry whose HTTPS X.509 certificate is signed by a custom certificate authority, you must configure additional trust stores for image registry access for the update service.</p>
 </div>
@@ -1825,7 +1825,10 @@ data:
 <div class="sect3">
 <h4 id="images-update-global-pull-secret_update-a-cluster-in-a-disconnected-environment-using-osus">Update the global cluster pull secret</h4>
 <div class="paragraph _abstract">
-<p>To add new registries or update authentication for your Red&#160;Hat OpenShift Container Platform cluster, you can update the global pull secret by appending new credentials to the <em>additional-pull-secret</em>. To do this, you can use the <code>oc set data secret/additional-pull-secret -n kube-system</code> command. Hypershift manages the new credential propagation among the HostedCluster nodes.</p>
+<p>To add new registries or update authentication for your Red&#160;Hat OpenShift Container Platform cluster, you can update the global pull secret by appending new credentials to the <em>additional-pull-secret</em> by using the <code>oc set data secret/additional-pull-secret -n kube-system</code> command.</p>
+</div>
+<div class="paragraph">
+<p>Hypershift manages the new credential propagation among the HostedCluster nodes.</p>
 </div>
 <div class="paragraph">
 <p>Use this procedure when you need a separate registry to store images than the registry used during installation.</p>
@@ -1986,7 +1989,7 @@ data:
 </div>
 </div>
 <div class="sect3">
-<h4 id="update-service-install_update-a-cluster-in-a-disconnected-environment-using-osus">Install the OpenShift Update Service Operator</h4>
+<h4 id="update-service-install_update-a-cluster-in-a-disconnected-environment-using-osus">Installing the OpenShift Update Service Operator</h4>
 <div class="paragraph _abstract">
 <p>To install the OpenShift Update Service, you must first install the OpenShift Update Service Operator by using the Red&#160;Hat OpenShift Container Platform web console or CLI.</p>
 </div>
@@ -2005,7 +2008,7 @@ data:
 </table>
 </div>
 <div class="sect4">
-<h5 id="update-service-install-web-console_update-a-cluster-in-a-disconnected-environment-using-osus">Install the OpenShift Update Service Operator by using the web console</h5>
+<h5 id="update-service-install-web-console_update-a-cluster-in-a-disconnected-environment-using-osus">Installing the OpenShift Update Service Operator by using the web console</h5>
 <div class="paragraph _abstract">
 <p>You can use the web console to install the OpenShift Update Service Operator.</p>
 </div>
@@ -2074,7 +2077,7 @@ data:
 </div>
 </div>
 <div class="sect4">
-<h5 id="update-service-install-cli_update-a-cluster-in-a-disconnected-environment-using-osus">Install the OpenShift Update Service Operator by using the CLI</h5>
+<h5 id="update-service-install-cli_update-a-cluster-in-a-disconnected-environment-using-osus">Installing the OpenShift Update Service Operator by using the CLI</h5>
 <div class="paragraph _abstract">
 <p>You can use the OpenShift CLI (<code>oc</code>) to install the OpenShift Update Service Operator.</p>
 </div>
@@ -2233,7 +2236,7 @@ update-service-operator.v4.6.0   OpenShift Update Service   4.6.0               
 </div>
 </div>
 <div class="sect3">
-<h4 id="update-service-graph-data_update-a-cluster-in-a-disconnected-environment-using-osus">Create the OpenShift Update Service graph data container image</h4>
+<h4 id="update-service-graph-data_update-a-cluster-in-a-disconnected-environment-using-osus">Creating the OpenShift Update Service graph data container image</h4>
 <div class="paragraph _abstract">
 <p>The OpenShift Update Service requires a graph data container image, from which the OpenShift Update Service retrieves information about channel membership and blocked update edges.</p>
 </div>
@@ -2308,12 +2311,12 @@ CMD ["/bin/bash", "-c" ,"exec cp -rp /var/lib/cincinnati-graph-data/* /var/lib/c
 </div>
 </div>
 <div class="sect3">
-<h4 id="update-service-create-service_update-a-cluster-in-a-disconnected-environment-using-osus">Create an OpenShift Update Service application</h4>
+<h4 id="update-service-create-service_update-a-cluster-in-a-disconnected-environment-using-osus">Creating an OpenShift Update Service application</h4>
 <div class="paragraph _abstract">
 <p>You can create an OpenShift Update Service application by using the Red&#160;Hat OpenShift Container Platform web console or CLI.</p>
 </div>
 <div class="sect4">
-<h5 id="update-service-create-service-web-console_update-a-cluster-in-a-disconnected-environment-using-osus">Create an OpenShift Update Service application by using the web console</h5>
+<h5 id="update-service-create-service-web-console_update-a-cluster-in-a-disconnected-environment-using-osus">Creating an OpenShift Update Service application by using the web console</h5>
 <div class="paragraph _abstract">
 <p>You can use the Red&#160;Hat OpenShift Container Platform web console to create an OpenShift Update Service application by using the OpenShift Update Service Operator.</p>
 </div>
@@ -2381,7 +2384,7 @@ CMD ["/bin/bash", "-c" ,"exec cp -rp /var/lib/cincinnati-graph-data/* /var/lib/c
 </div>
 </div>
 <div class="sect4">
-<h5 id="update-service-create-service-cli_update-a-cluster-in-a-disconnected-environment-using-osus">Create an OpenShift Update Service application by using the CLI</h5>
+<h5 id="update-service-create-service-cli_update-a-cluster-in-a-disconnected-environment-using-osus">Creating an OpenShift Update Service application by using the CLI</h5>
 <div class="paragraph _abstract">
 <p>You can use the OpenShift CLI (<code>oc</code>) to create an OpenShift Update Service application.</p>
 </div>
@@ -2503,7 +2506,7 @@ and must be no more than 63 characters</code>, try creating the Update Service w
 </div>
 </div>
 <div class="sect3">
-<h4 id="update-service-configure-cvo">Configure the Cluster Version Operator (CVO)</h4>
+<h4 id="update-service-configure-cvo">Configuring the Cluster Version Operator (CVO)</h4>
 <div class="paragraph _abstract">
 <p>After the OpenShift Update Service Operator has been installed and the OpenShift Update Service application has been created, the Cluster Version Operator (CVO) can be updated to pull graph data from the OpenShift Update Service installed in your environment.</p>
 </div>

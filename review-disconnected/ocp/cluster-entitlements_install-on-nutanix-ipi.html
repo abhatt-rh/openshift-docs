@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1731,7 +1731,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nutanix-entitlements_install-on-nutanix-ipi">Internet access for Prism Central</a></li><li class="level-4"><a href="#ssh-agent-using_install-on-nutanix-ipi">Generating a key pair for cluster node SSH access</a></li><li class="level-4"><a href="#installation-obtaining-installer_install-on-nutanix-ipi">Obtaining the installation program</a></li><li class="level-4"><a href="#installation-adding-nutanix-root-certificates_install-on-nutanix-ipi">Adding Nutanix root CA certificates to your system trust</a></li><li class="level-4"><a href="#installation-initializing_installing-nutanix-installer-provisioned">Creating the installation configuration file</a></li><li class="level-5"><a href="#installation-nutanix-config-yaml_installing-nutanix-installer-provisioned">Sample customized install-config.yaml file for Nutanix</a></li><li class="level-5"><a href="#installation-configuring-nutanix-failure-domains_install-on-nutanix-ipi">Configuring failure domains</a></li><li class="level-5"><a href="#installation-configure-proxy_install-on-nutanix-ipi">Configuring the cluster-wide proxy during installation</a></li><li class="level-4"><a href="#cli-installing-cli-linux_install-on-nutanix-ipi">Install the OpenShift CLI on Linux</a></li><li class="level-4"><a href="#cli-installing-cli-windows_install-on-nutanix-ipi">Install the OpenShift CLI on Windows</a></li><li class="level-4"><a href="#cli-installing-cli-macos_install-on-nutanix-ipi">Install the OpenShift CLI on macOS</a></li><li class="level-4"><a href="#manually-create-iam-nutanix_install-on-nutanix-ipi">Configuring IAM for Nutanix</a></li><li class="level-4"><a href="#nutanix-ccm-config_install-on-nutanix-ipi">Adding config map and secret resources required for Nutanix CCM</a></li><li class="level-4"><a href="#nw-osp-services-external-load-balancer_install-on-nutanix-ipi">Services for a user-managed load balancer</a></li><li class="level-5"><a href="#nw-osp-configuring-external-load-balancer_installing-nutanix-installer-provisioned">Configuring a user-managed load balancer</a></li><li class="level-4"><a href="#installation-launching-installer_installing-nutanix-installer-provisioned">Deploying the cluster</a></li><li class="level-4"><a href="#registry-configuring-storage-nutanix_install-on-nutanix-ipi">Configuring the default storage container</a></li><li class="level-5"><a href="#_additional_resources_3">Additional resources</a></li><li class="level-4"><a href="#cluster-telemetry_install-on-nutanix-ipi">Telemetry access for Red Hat OpenShift Container Platform</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nutanix-entitlements_install-on-nutanix-ipi">Internet access for Prism Central</a></li><li class="level-4"><a href="#ssh-agent-using_install-on-nutanix-ipi">Generating a key pair for cluster node SSH access</a></li><li class="level-4"><a href="#installation-obtaining-installer_install-on-nutanix-ipi">Obtaining the installation program</a></li><li class="level-4"><a href="#installation-adding-nutanix-root-certificates_install-on-nutanix-ipi">Adding Nutanix root CA certificates to your system trust</a></li><li class="level-4"><a href="#installation-initializing_installing-nutanix-installer-provisioned">Creating the installation configuration file</a></li><li class="level-5"><a href="#installation-nutanix-config-yaml_installing-nutanix-installer-provisioned">Sample customized install-config.yaml file for Nutanix</a></li><li class="level-5"><a href="#installation-configuring-nutanix-failure-domains_install-on-nutanix-ipi">Configuring failure domains</a></li><li class="level-5"><a href="#installation-configure-proxy_install-on-nutanix-ipi">Configuring the cluster-wide proxy during installation</a></li><li class="level-4"><a href="#cli-installing-cli-linux_install-on-nutanix-ipi">Installing the OpenShift CLI on Linux</a></li><li class="level-4"><a href="#cli-installing-cli-windows_install-on-nutanix-ipi">Installing the OpenShift CLI on Windows</a></li><li class="level-4"><a href="#cli-installing-cli-macos_install-on-nutanix-ipi">Installing the OpenShift CLI on macOS</a></li><li class="level-4"><a href="#manually-create-iam-nutanix_install-on-nutanix-ipi">Configuring IAM for Nutanix</a></li><li class="level-4"><a href="#nutanix-ccm-config_install-on-nutanix-ipi">Adding config map and secret resources required for Nutanix CCM</a></li><li class="level-4"><a href="#nw-osp-services-external-load-balancer_install-on-nutanix-ipi">Services for a user-managed load balancer</a></li><li class="level-5"><a href="#nw-osp-configuring-external-load-balancer_installing-nutanix-installer-provisioned">Configuring a user-managed load balancer</a></li><li class="level-4"><a href="#installation-launching-installer_installing-nutanix-installer-provisioned">Deploying the cluster</a></li><li class="level-4"><a href="#registry-configuring-storage-nutanix_install-on-nutanix-ipi">Configuring the default storage container</a></li><li class="level-5"><a href="#_additional_resources_3">Additional resources</a></li><li class="level-4"><a href="#cluster-telemetry_install-on-nutanix-ipi">Telemetry access for Red Hat OpenShift Container Platform</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="cluster-entitlements_install-on-nutanix-ipi">Internet access for Red&#160;Hat OpenShift Container Platform</h3>
@@ -2690,7 +2690,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </div>
 </div>
 <div class="sect3">
-<h4 id="cli-installing-cli-linux_install-on-nutanix-ipi">Install the OpenShift CLI on Linux</h4>
+<h4 id="cli-installing-cli-linux_install-on-nutanix-ipi">Installing the OpenShift CLI on Linux</h4>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Linux, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -2762,7 +2762,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </div>
 </div>
 <div class="sect3">
-<h4 id="cli-installing-cli-windows_install-on-nutanix-ipi">Install the OpenShift CLI on Windows</h4>
+<h4 id="cli-installing-cli-windows_install-on-nutanix-ipi">Installing the OpenShift CLI on Windows</h4>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Windows, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -2826,7 +2826,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </div>
 </div>
 <div class="sect3">
-<h4 id="cli-installing-cli-macos_install-on-nutanix-ipi">Install the OpenShift CLI on macOS</h4>
+<h4 id="cli-installing-cli-macos_install-on-nutanix-ipi">Installing the OpenShift CLI on macOS</h4>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on macOS, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>

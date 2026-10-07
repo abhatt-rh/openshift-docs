@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -2289,7 +2289,7 @@ spec:
 <p>Audit works at the API server level, logging all requests coming to the server. Each audit log contains the following information:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 658. Audit log fields</caption>
+<caption class="title">Table 661. Audit log fields</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -3659,7 +3659,7 @@ Events:  &lt;none&gt;</code></pre>
 <div class="sect4">
 <h5 id="file-integrity-events_track-unauthorized-file-changes-on-underlying-host-nodes">Understand events</h5>
 <div class="paragraph _abstract">
-<p>Transitions in the status of the <code>FileIntegrity</code> and <code>FileIntegrityNodeStatus</code> objects are logged by <em>events</em>. The creation time of the event reflects the latest transition, such as <code>Initializing</code> to <code>Active</code>, and not necessarily the latest scan result. However, the newest event always reflects the most recent status.</p>
+<p>Events log status transitions for <code>FileIntegrity</code> and <code>FileIntegrityNodeStatus</code> objects. An event creation time reflects the latest transition, such as <code>Initializing</code> to <code>Active</code>, rather than the latest scan result. However, the newest event reflects the most recent status.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3752,7 +3752,7 @@ Events:  &lt;none&gt;</code></pre>
 <p>The following <code>spec</code> and <code>spec.config</code> attributes are important when configuring a <code>FileIntegrity</code> CR.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 659. Important <code>spec</code> and <code>spec.config</code> attributes</caption>
+<caption class="title">Table 662. Important <code>spec</code> and <code>spec.config</code> attributes</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3887,7 +3887,7 @@ CONTENT_EX = sha512+ftype+p+u+g+n+acl+selinux+xattrs
 <div class="sect4">
 <h5 id="file-integrity-operator-supplying-custom-aide-config_track-unauthorized-file-changes-on-underlying-host-nodes">Supply a custom AIDE configuration</h5>
 <div class="paragraph _abstract">
-<p>Any entries that configure AIDE internal behavior such as <code>DBDIR</code>, <code>LOGDIR</code>, <code>database</code>, and <code>database_out</code> are overwritten by the Operator. The Operator adds a prefix to <code>/hostroot/</code> before all paths to be watched for integrity changes. As a result, you can reuse existing AIDE configs that might not be tailored for a containerized environment and that start from the root directory.</p>
+<p>The Operator overwrites entries that configure internal AIDE behavior, such as <code>DBDIR</code>, <code>LOGDIR</code>, <code>database</code>, and <code>database_out</code>. It prepends <code>/hostroot/</code> to all watched paths. You can reuse existing AIDE configs that start from the root directory and are not tailored for containers.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3907,7 +3907,10 @@ CONTENT_EX = sha512+ftype+p+u+g+n+acl+selinux+xattrs
 <div class="sect4">
 <h5 id="file-integrity-operator-defining-custom-config_track-unauthorized-file-changes-on-underlying-host-nodes">Define a custom File Integrity Operator configuration</h5>
 <div class="paragraph _abstract">
-<p>This example focuses on defining a custom configuration for a scanner that runs on the control plane nodes based on the default configuration provided for the <code>worker-fileintegrity</code> CR. This workflow might be useful if you are planning to deploy a custom software running as a daemon set and storing its data under <code>/opt/mydaemon</code> on the control plane nodes.</p>
+<p>Define a custom configuration for a scanner that runs on the control plane nodes based on the default configuration provided for the <code>worker-fileintegrity</code> CR.</p>
+</div>
+<div class="paragraph">
+<p>This workflow might be useful if you are planning to deploy a custom software running as a daemon set and storing its data under <code>/opt/mydaemon</code> on the control plane nodes.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
@@ -4076,7 +4079,10 @@ spec:
 <div class="sect4">
 <h5 id="file-integrity-operator-exploring-daemon-sets_track-unauthorized-file-changes-on-underlying-host-nodes">Explore the daemon sets</h5>
 <div class="paragraph _abstract">
-<p>Each <code>FileIntegrity</code> object represents a scan on several nodes. The scan itself is performed by pods managed by a daemon set. The config maps created by the AIDE daemon are not retained and are deleted after the File Integrity Operator processes them. However, on failure and error, the contents of these config maps are copied to the config map that the <code>FileIntegrityNodeStatus</code> object points to.</p>
+<p>Each <code>FileIntegrity</code> object represents a scan on several nodes. The scan itself is performed by pods managed by a daemon set. The config maps created by the AIDE daemon are not retained and are deleted after the File Integrity Operator processes them.</p>
+</div>
+<div class="paragraph">
+<p>However, on failure and error, the contents of these config maps are copied to the config map that the <code>FileIntegrityNodeStatus</code> object points to.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>

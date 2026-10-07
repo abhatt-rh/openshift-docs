@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1731,7 +1731,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cluster-entitlements_prepare-to-install-on-azure">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#ssh-agent-using_prepare-to-install-on-azure">Generating a key pair for cluster node SSH access</a></li><li class="level-4"><a href="#installation-obtaining-installer_prepare-to-install-on-azure">Obtaining the installation program</a></li><li class="level-4"><a href="#cli-installing-cli-linux_prepare-to-install-on-azure">Install the OpenShift CLI on Linux</a></li><li class="level-4"><a href="#cli-installing-cli-windows_prepare-to-install-on-azure">Install the OpenShift CLI on Windows</a></li><li class="level-4"><a href="#cli-installing-cli-macos_prepare-to-install-on-azure">Install the OpenShift CLI on macOS</a></li><li class="level-4"><a href="#cluster-telemetry_prepare-to-install-on-azure">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#installation-azure-day2-operations-diskencryptionsets.adoc_prepare-to-install-on-azure">Preparing an Azure Disk Encryption Set for Day2 Operator</a></li><li class="level-4"><a href="#preparing-disk-encryption-sets_prepare-to-install-on-azure">Preparing an Azure Disk Encryption Set</a></li><li class="level-4"><a href="#installation-configuration-parameters_installation-config-parameters-azure">Available installation configuration parameters for Azure</a></li><li class="level-5"><a href="#installation-configuration-parameters-required_installation-config-parameters-azure">Required configuration parameters</a></li><li class="level-5"><a href="#installation-configuration-parameters-network_installation-config-parameters-azure">Network configuration parameters</a></li><li class="level-5"><a href="#installation-configuration-parameters-optional_installation-config-parameters-azure">Optional configuration parameters</a></li><li class="level-5"><a href="#installation-configuration-parameters-additional-azure_installation-config-parameters-azure">Additional Azure configuration parameters</a></li><li class="level-5"><a href="#installation-configuration-parameters-additional-gcp_installation-config-parameters-azure">Additional Google Cloud configuration parameters</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cluster-entitlements_prepare-to-install-on-azure">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#ssh-agent-using_prepare-to-install-on-azure">Generating a key pair for cluster node SSH access</a></li><li class="level-4"><a href="#installation-obtaining-installer_prepare-to-install-on-azure">Obtaining the installation program</a></li><li class="level-4"><a href="#cli-installing-cli-linux_prepare-to-install-on-azure">Installing the OpenShift CLI on Linux</a></li><li class="level-4"><a href="#cli-installing-cli-windows_prepare-to-install-on-azure">Installing the OpenShift CLI on Windows</a></li><li class="level-4"><a href="#cli-installing-cli-macos_prepare-to-install-on-azure">Installing the OpenShift CLI on macOS</a></li><li class="level-4"><a href="#cluster-telemetry_prepare-to-install-on-azure">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#installation-azure-day2-operations-diskencryptionsets.adoc_prepare-to-install-on-azure">Preparing an Azure Disk Encryption Set for Day2 Operator</a></li><li class="level-4"><a href="#preparing-disk-encryption-sets_prepare-to-install-on-azure">Preparing an Azure Disk Encryption Set</a></li><li class="level-4"><a href="#installation-configuration-parameters_installation-config-parameters-azure">Available installation configuration parameters for Azure</a></li><li class="level-5"><a href="#installation-configuration-parameters-required_installation-config-parameters-azure">Required configuration parameters</a></li><li class="level-5"><a href="#installation-configuration-parameters-network_installation-config-parameters-azure">Network configuration parameters</a></li><li class="level-5"><a href="#installation-configuration-parameters-optional_installation-config-parameters-azure">Optional configuration parameters</a></li><li class="level-5"><a href="#installation-configuration-parameters-additional-azure_installation-config-parameters-azure">Additional Azure configuration parameters</a></li><li class="level-5"><a href="#installation-configuration-parameters-additional-gcp_installation-config-parameters-azure">Additional Google Cloud configuration parameters</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="prerequisites-installing-azure_prepare-to-install-on-azure">Prerequisites for installing a cluster on Azure</h3>
@@ -2044,7 +2044,7 @@ However, you must have an active subscription to access this page.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="cli-installing-cli-linux_prepare-to-install-on-azure">Install the OpenShift CLI on Linux</h4>
+<h4 id="cli-installing-cli-linux_prepare-to-install-on-azure">Installing the OpenShift CLI on Linux</h4>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Linux, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -2116,7 +2116,7 @@ However, you must have an active subscription to access this page.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="cli-installing-cli-windows_prepare-to-install-on-azure">Install the OpenShift CLI on Windows</h4>
+<h4 id="cli-installing-cli-windows_prepare-to-install-on-azure">Installing the OpenShift CLI on Windows</h4>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Windows, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -2180,7 +2180,7 @@ However, you must have an active subscription to access this page.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="cli-installing-cli-macos_prepare-to-install-on-azure">Install the OpenShift CLI on macOS</h4>
+<h4 id="cli-installing-cli-macos_prepare-to-install-on-azure">Installing the OpenShift CLI on macOS</h4>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on macOS, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>

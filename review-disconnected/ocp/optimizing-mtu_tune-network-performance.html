@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1878,7 +1878,7 @@ networking:
 <p>The following table summarizes the migration process by segmenting between the user-initiated steps in the process and the actions that the migration performs in response.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 741. Live migration of the cluster MTU</caption>
+<caption class="title">Table 744. Live migration of the cluster MTU</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5474,7 +5474,10 @@ capabilities and performance of the applications behind it, such as language or 
 <div class="sect4">
 <h5 id="ingress-liveness-readiness-startup-probes_tune-ingress-controller-performance">Configuring Ingress Controller liveness, readiness, and startup probes</h5>
 <div class="paragraph _abstract">
-<p>As a cluster administrator, you can configure the timeout values for the kubelet liveness, readiness, and startup probes for router deployments that are managed by the Red&#160;Hat OpenShift Container Platform Ingress Controller (router). The ability to set larger timeout values can reduce the risk of unnecessary and unwanted restarts.</p>
+<p>As a cluster administrator, you can configure the timeout values for the kubelet liveness, readiness, and startup probes for router deployments that are managed by the Red&#160;Hat OpenShift Container Platform Ingress Controller (router).</p>
+</div>
+<div class="paragraph">
+<p>The ability to set larger timeout values can reduce the risk of unnecessary and unwanted restarts.</p>
 </div>
 <div class="paragraph">
 <p>The liveness and readiness probes of the router use the default timeout value of 1 second, which is too brief when networking or runtime performance is severely degraded. Probe timeouts can cause unwanted router restarts that interrupt application connections.</p>

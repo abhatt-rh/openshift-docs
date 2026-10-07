@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -2067,7 +2067,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="infrastructure-node-sizing_optimize-cluster-performance-across-subsystems">Infrastructure node sizing</h4>
 <div class="paragraph _abstract">
-<p><em>Infrastructure nodes</em> are nodes that are labeled to run pieces of the Red&#160;Hat OpenShift Container Platform environment. The infrastructure node resource requirements depend on the cluster age, nodes, and objects in the cluster, as these factors can lead to an increase in the number of metrics or time series in Prometheus. The following infrastructure node size recommendations are based on the results observed in cluster-density testing detailed in the <strong>Control plane node sizing</strong> section, where the monitoring stack and the default ingress-controller were moved to these nodes.</p>
+<p>Infrastructure nodes are nodes that are labeled to run pieces of the Red&#160;Hat OpenShift Container Platform environment. The infrastructure node resource requirements depend on the cluster age, nodes, and objects in the cluster, as these factors can increase the number of metrics or time series in Prometheus.</p>
+</div>
+<div class="paragraph">
+<p>The following infrastructure node size recommendations are based on the results observed in cluster-density testing detailed in the <strong>Control plane node sizing</strong> section, where the monitoring stack and the default ingress-controller were moved to these nodes.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2945,7 +2948,7 @@ networking:
 <p>To optimize your Red&#160;Hat OpenShift Container Platform environment, review the available persistent storage options. By understanding these choices, you can select the appropriate storage configuration to meet your specific workload requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 752. Available storage options</caption>
+<caption class="title">Table 755. Available storage options</caption>
 <colgroup>
 <col style="width: 12.5%;">
 <col style="width: 50%;">
@@ -3050,7 +3053,7 @@ networking:
 <p>Review the recommended and configurable storage technologies for the given Red&#160;Hat OpenShift Container Platform cluster application.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 753. Recommended and configurable storage technology</caption>
+<caption class="title">Table 756. Recommended and configurable storage technology</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3380,7 +3383,7 @@ networking:
 <p>The following table summarizes the main directories that Red&#160;Hat OpenShift Container Platform components write data to.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 754. Main directories for storing Red&#160;Hat OpenShift Container Platform data</caption>
+<caption class="title">Table 757. Main directories for storing Red&#160;Hat OpenShift Container Platform data</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3593,7 +3596,10 @@ capabilities and performance of the applications behind it, such as language or 
 <div class="sect4">
 <h5 id="ingress-liveness-readiness-startup-probes_apply-multi-subsystem-optimizations">Configuring Ingress Controller liveness, readiness, and startup probes</h5>
 <div class="paragraph _abstract">
-<p>As a cluster administrator, you can configure the timeout values for the kubelet liveness, readiness, and startup probes for router deployments that are managed by the Red&#160;Hat OpenShift Container Platform Ingress Controller (router). The ability to set larger timeout values can reduce the risk of unnecessary and unwanted restarts.</p>
+<p>As a cluster administrator, you can configure the timeout values for the kubelet liveness, readiness, and startup probes for router deployments that are managed by the Red&#160;Hat OpenShift Container Platform Ingress Controller (router).</p>
+</div>
+<div class="paragraph">
+<p>The ability to set larger timeout values can reduce the risk of unnecessary and unwanted restarts.</p>
 </div>
 <div class="paragraph">
 <p>The liveness and readiness probes of the router use the default timeout value of 1 second, which is too brief when networking or runtime performance is severely degraded. Probe timeouts can cause unwanted router restarts that interrupt application connections.</p>

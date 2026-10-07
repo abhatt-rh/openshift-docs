@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -3326,7 +3326,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 <p>To troubleshoot your network deployment in Red&#160;Hat OpenShift Container Platform, evaluate the status condition types returned for <code>ClusterUserDefinedNetwork</code> and <code>UserDefinedNetwork</code> custom resources (CRs). Reviewing these conditions ensures that you can identify and resolve configuration errors.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 695. NetworkCreated condition types (<code>ClusterDefinedNetwork</code> and <code>UserDefinedNetwork</code> CRs)</caption>
+<caption class="title">Table 698. NetworkCreated condition types (<code>ClusterDefinedNetwork</code> and <code>UserDefinedNetwork</code> CRs)</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 15.3846%;">
@@ -3592,7 +3592,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 696. NetworkAllocationSucceeded condition types (<code>UserDefinedNetwork</code> CRs)</caption>
+<caption class="title">Table 699. NetworkAllocationSucceeded condition types (<code>UserDefinedNetwork</code> CRs)</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 15.3846%;">
@@ -3726,7 +3726,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 697. Invalid <code>mtu</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 700. Invalid <code>mtu</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3866,7 +3866,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 698. Invalid <code>PhysicalNetworkName</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 701. Invalid <code>PhysicalNetworkName</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4038,7 +4038,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 699. Invalid <code>role</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 702. Invalid <code>role</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4146,7 +4146,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 700. Invalid <code>subnets</code> and <code>ipam</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 703. Invalid <code>subnets</code> and <code>ipam</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4446,7 +4446,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 701. Invalid <code>vlan</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 704. Invalid <code>vlan</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 16.6666%;">
@@ -4864,7 +4864,7 @@ spec:
 <p>The configuration for the API is described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 702. <code>NetworkAttachmentDefinition</code> API fields</caption>
+<caption class="title">Table 705. <code>NetworkAttachmentDefinition</code> API fields</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -5048,7 +5048,7 @@ spec:
 <p>The OVN-Kubernetes network plugin JSON configuration object describes the configuration parameters for the OVN-Kubernetes CNI network plugin.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 703. OVN-Kubernetes network plugin JSON configuration table</caption>
+<caption class="title">Table 706. OVN-Kubernetes network plugin JSON configuration table</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">

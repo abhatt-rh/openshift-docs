@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -3273,7 +3273,10 @@ Outputs:
 <div class="sect4">
 <h5 id="installation-cloudformation-vpc-carrier-gw_installing-aws-wavelength-zone">CloudFormation template for the VPC Carrier Gateway</h5>
 <div class="paragraph _abstract">
-<p>Use the CloudFormation template to deploy the Carrier Gateway on Amazon Web Services (AWS) Wavelength infrastructure. The template automates the creation of an AWS Carrier Gateway for Red&#160;Hat OpenShift Container Platform. The template provisions an <code>AWS::EC2::CarrierGateway</code> and associates it with the cluster VPC to enable traffic routing to provide direct internet connectivity for resources in Wavelength Zones that use carrier networks.</p>
+<p>Use the CloudFormation template to deploy the Carrier Gateway on Amazon Web Services (AWS) Wavelength infrastructure. The template automates the creation of an AWS Carrier Gateway for Red&#160;Hat OpenShift Container Platform.</p>
+</div>
+<div class="paragraph">
+<p>The template provisions an <code>AWS::EC2::CarrierGateway</code> and associates it with the cluster VPC to enable traffic routing to provide direct internet connectivity for resources in Wavelength Zones that use carrier networks.</p>
 </div>
 <div class="listingblock">
 <div class="title">CloudFormation template for VPC Carrier Gateway</div>

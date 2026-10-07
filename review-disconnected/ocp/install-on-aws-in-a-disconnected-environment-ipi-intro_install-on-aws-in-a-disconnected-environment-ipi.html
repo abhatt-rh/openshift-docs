@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1736,7 +1736,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="install-on-aws-in-a-disconnected-environment-ipi-intro_install-on-aws-in-a-disconnected-environment-ipi">Install on AWS in a disconnected environment with installer-provisioned infrastructure</h3>
 <div class="paragraph _abstract">
-<p>You can install a cluster on Amazon Web Services (AWS) in a restricted network by creating an internal mirror of the installation release content on an existing AWS Virtual Private Cloud (VPC). By using this configuration, you can deploy a cluster in an environment with limited internet connectivity to help ensure compliance with security policies.</p>
+<p>You can install a cluster on Amazon Web Services (AWS) in a restricted network by creating an internal mirror of the installation release content on an existing AWS Virtual Private Cloud (VPC).</p>
+</div>
+<div class="paragraph">
+<p>By using this configuration, you can deploy a cluster in an environment with limited internet connectivity to help ensure compliance with security policies.</p>
 </div>
 <div class="sect3">
 <h4 id="prerequisites_installing-restricted-networks-aws-installer-provisioned">Prerequisites</h4>
@@ -1827,7 +1830,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="installation-about-restricted-networks_installing-restricted-networks-aws-installer-provisioned">About installations in restricted networks</h4>
 <div class="paragraph _abstract">
-<p>You can install Red&#160;Hat OpenShift Container Platform {product-version} in a restricted network without an active internet connection to obtain software components. Restricted network installations can use installer-provisioned or user-provisioned infrastructure, depending on the cloud platform to which you are installing the cluster.</p>
+<p>You can install Red&#160;Hat OpenShift Container Platform {product-version} in a restricted network that lacks an active internet connection. These restricted installations use installer-provisioned or user-provisioned infrastructure, depending on your cloud platform.</p>
 </div>
 <div class="paragraph">
 <p>If you choose to perform a restricted network installation on a cloud platform, you still require access to its cloud APIs. Some cloud functions, such as Amazon Web Service&#8217;s Route 53 DNS and IAM services, require internet access.
@@ -4192,7 +4195,7 @@ INFO Time elapsed: 36m22s</code></pre>
 <div class="sect3">
 <h4 id="installation-aws-provisioning-own-dns-records_install-on-aws-in-a-disconnected-environment-ipi">Provisioning your own DNS records</h4>
 <div class="paragraph _abstract">
-<p>Use your cluster name and base cluster domain to configure a CNAME record for the API service <code>api.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code> with the API load balancer DNS name. Similarly, use the load balancer DNS name of the Ingress service to provision a CNAME record for the <code>*.apps.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code> hostname by using your cluster name and base cluster domain.</p>
+<p>Use your cluster name and base cluster domain to configure a CNAME record for the API service <code>api.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code> with the API load balancer DNS name, and provision a CNAME record for the Ingress hostname <code>*.apps.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code> with the Ingress load balancer DNS name.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>

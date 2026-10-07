@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1731,7 +1731,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#installation-azure-limits_installing-azure-stack-hub-account">Azure Stack Hub account limits</a></li><li class="level-4"><a href="#installation-azure-stack-hub-network-config_prepare-to-install-on-azure-stack-hub">Configuring a DNS zone in Azure Stack Hub</a></li><li class="level-4"><a href="#installation-azure-stack-hub-permissions_prepare-to-install-on-azure-stack-hub">Required Azure Stack Hub roles</a></li><li class="level-4"><a href="#installation-azure-service-principal_installing-azure-stack-hub-account">Creating a service principal</a></li><li class="level-4"><a href="#cluster-entitlements_prepare-to-install-on-azure-stack-hub">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#ssh-agent-using_prepare-to-install-on-azure-stack-hub">Generating a key pair for cluster node SSH access</a></li><li class="level-4"><a href="#installation-obtaining-installer_prepare-to-install-on-azure-stack-hub">Obtaining the installation program</a></li><li class="level-4"><a href="#cli-installing-cli-linux_prepare-to-install-on-azure-stack-hub">Install the OpenShift CLI on Linux</a></li><li class="level-4"><a href="#cli-installing-cli-windows_prepare-to-install-on-azure-stack-hub">Install the OpenShift CLI on Windows</a></li><li class="level-4"><a href="#cli-installing-cli-macos_prepare-to-install-on-azure-stack-hub">Install the OpenShift CLI on macOS</a></li><li class="level-4"><a href="#cluster-telemetry_prepare-to-install-on-azure-stack-hub">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#installation-configuration-parameters_installation-config-parameters-ash">Available installation configuration parameters for Azure Stack Hub</a></li><li class="level-5"><a href="#installation-configuration-parameters-required_installation-config-parameters-ash">Required configuration parameters</a></li><li class="level-5"><a href="#installation-configuration-parameters-network_installation-config-parameters-ash">Network configuration parameters</a></li><li class="level-5"><a href="#installation-configuration-parameters-optional_installation-config-parameters-ash">Optional configuration parameters</a></li><li class="level-5"><a href="#installation-configuration-parameters-additional-azure-stack-hub_installation-config-parameters-ash">Additional Azure Stack Hub configuration parameters</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#installation-azure-limits_installing-azure-stack-hub-account">Azure Stack Hub account limits</a></li><li class="level-4"><a href="#installation-azure-stack-hub-network-config_prepare-to-install-on-azure-stack-hub">Configuring a DNS zone in Azure Stack Hub</a></li><li class="level-4"><a href="#installation-azure-stack-hub-permissions_prepare-to-install-on-azure-stack-hub">Required Azure Stack Hub roles</a></li><li class="level-4"><a href="#installation-azure-service-principal_installing-azure-stack-hub-account">Creating a service principal</a></li><li class="level-4"><a href="#cluster-entitlements_prepare-to-install-on-azure-stack-hub">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#ssh-agent-using_prepare-to-install-on-azure-stack-hub">Generating a key pair for cluster node SSH access</a></li><li class="level-4"><a href="#installation-obtaining-installer_prepare-to-install-on-azure-stack-hub">Obtaining the installation program</a></li><li class="level-4"><a href="#cli-installing-cli-linux_prepare-to-install-on-azure-stack-hub">Installing the OpenShift CLI on Linux</a></li><li class="level-4"><a href="#cli-installing-cli-windows_prepare-to-install-on-azure-stack-hub">Installing the OpenShift CLI on Windows</a></li><li class="level-4"><a href="#cli-installing-cli-macos_prepare-to-install-on-azure-stack-hub">Installing the OpenShift CLI on macOS</a></li><li class="level-4"><a href="#cluster-telemetry_prepare-to-install-on-azure-stack-hub">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#installation-configuration-parameters_installation-config-parameters-ash">Available installation configuration parameters for Azure Stack Hub</a></li><li class="level-5"><a href="#installation-configuration-parameters-required_installation-config-parameters-ash">Required configuration parameters</a></li><li class="level-5"><a href="#installation-configuration-parameters-network_installation-config-parameters-ash">Network configuration parameters</a></li><li class="level-5"><a href="#installation-configuration-parameters-optional_installation-config-parameters-ash">Optional configuration parameters</a></li><li class="level-5"><a href="#installation-configuration-parameters-additional-azure-stack-hub_installation-config-parameters-ash">Additional Azure Stack Hub configuration parameters</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="prepare-to-install-on-azure-stack-hub-intro_prepare-to-install-on-azure-stack-hub">Prepare to install on Azure Stack Hub</h3>
@@ -2597,7 +2597,7 @@ However, you must have an active subscription to access this page.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="cli-installing-cli-linux_prepare-to-install-on-azure-stack-hub">Install the OpenShift CLI on Linux</h4>
+<h4 id="cli-installing-cli-linux_prepare-to-install-on-azure-stack-hub">Installing the OpenShift CLI on Linux</h4>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Linux, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -2669,7 +2669,7 @@ However, you must have an active subscription to access this page.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="cli-installing-cli-windows_prepare-to-install-on-azure-stack-hub">Install the OpenShift CLI on Windows</h4>
+<h4 id="cli-installing-cli-windows_prepare-to-install-on-azure-stack-hub">Installing the OpenShift CLI on Windows</h4>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Windows, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -2733,7 +2733,7 @@ However, you must have an active subscription to access this page.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="cli-installing-cli-macos_prepare-to-install-on-azure-stack-hub">Install the OpenShift CLI on macOS</h4>
+<h4 id="cli-installing-cli-macos_prepare-to-install-on-azure-stack-hub">Installing the OpenShift CLI on macOS</h4>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on macOS, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>

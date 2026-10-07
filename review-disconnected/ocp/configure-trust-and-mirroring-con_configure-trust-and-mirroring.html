@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1731,7 +1731,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#images-configuration-cas_configure-trust-and-mirroring">Configure additional trust stores for image registry access</a></li><li class="level-4"><a href="#images-configuration-registry-mirror_configure-trust-and-mirroring">Understanding image registry repository mirroring</a></li><li class="level-5"><a href="#images-configuration-registry-mirror-project-secret_configure-trust-and-mirroring">Configuring project-scoped image pull secrets for mirrored registries</a></li><li class="level-5"><a href="#images-configuration-registry-mirror-configuring_configure-trust-and-mirroring">Configure image registry repository mirroring</a></li><li class="level-5"><a href="#images-configuration-registry-mirror-config-params_configure-trust-and-mirroring">Image registry repository mirroring configuration parameters</a></li><li class="level-5"><a href="#images-configuration-registry-mirror-convert_configure-trust-and-mirroring">Convert ImageContentSourcePolicy (ICSP) files for image registry repository mirroring</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#images-configuration-cas_configure-trust-and-mirroring">Configure additional trust stores for image registry access</a></li><li class="level-4"><a href="#images-configuration-registry-mirror_configure-trust-and-mirroring">Understanding image registry repository mirroring</a></li><li class="level-5"><a href="#images-configuration-registry-mirror-project-secret_configure-trust-and-mirroring">Configuring project-scoped image pull secrets for mirrored registries</a></li><li class="level-5"><a href="#images-configuration-registry-mirror-configuring_configure-trust-and-mirroring">Configuring image registry repository mirroring</a></li><li class="level-5"><a href="#images-configuration-registry-mirror-config-params_configure-trust-and-mirroring">Image registry repository mirroring configuration parameters</a></li><li class="level-5"><a href="#images-configuration-registry-mirror-convert_configure-trust-and-mirroring">Converting ImageContentSourcePolicy (ICSP) files for image registry repository mirroring</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="configure-trust-and-mirroring-con_configure-trust-and-mirroring">Configure trust and mirroring</h3>
@@ -2010,7 +2010,10 @@ data:
 <div class="sect4">
 <h5 id="images-configuration-registry-mirror-project-secret_configure-trust-and-mirroring">Configuring project-scoped image pull secrets for mirrored registries</h5>
 <div class="paragraph _abstract">
-<p>As a cluster administrator, you can edit the cluster-wide <code>CRIOCredentialProviderConfig</code> object, named <code>cluster</code>, to enable project-scoped image pull secrets that you can use with mirrored repositories. By using project-scoped secrets, you can maintain security isolation between projects without exposing credentials in a global pull secret.</p>
+<p>As a cluster administrator, you can edit the cluster-wide <code>CRIOCredentialProviderConfig</code> object, named <code>cluster</code>, to enable project-scoped image pull secrets that you can use with mirrored repositories.</p>
+</div>
+<div class="paragraph">
+<p>By using project-scoped secrets, you can maintain security isolation between projects without exposing credentials in a global pull secret.</p>
 </div>
 <div class="paragraph">
 <p>By default, if your cluster uses an <code>ImageDigestMirrorSet</code>, <code>ImageTagMirrorSet</code>, or <code>ImageContentSourcePolicy</code> object to configure repository mirroring, you must use a global pull secret for mirrored registries. You cannot add an image pull secret to a project. However, you can use the cluster-wide <code>CRIOCredentialProviderConfig</code> object to configure the kubelet to trigger the CRI-O credential provider, which enables project-scoped image pull secrets.</p>
@@ -2335,7 +2338,7 @@ providers:
 </div>
 </div>
 <div class="sect4">
-<h5 id="images-configuration-registry-mirror-configuring_configure-trust-and-mirroring">Configure image registry repository mirroring</h5>
+<h5 id="images-configuration-registry-mirror-configuring_configure-trust-and-mirroring">Configuring image registry repository mirroring</h5>
 <div class="paragraph _abstract">
 <p>You can create postinstallation mirror configuration custom resources (CR) to redirect image pull requests from a source image registry to a mirrored image registry.</p>
 </div>
@@ -2732,7 +2735,7 @@ short-name-mode = ""
 </table>
 </div>
 <div class="sect4">
-<h5 id="images-configuration-registry-mirror-convert_configure-trust-and-mirroring">Convert ImageContentSourcePolicy (ICSP) files for image registry repository mirroring</h5>
+<h5 id="images-configuration-registry-mirror-convert_configure-trust-and-mirroring">Converting ImageContentSourcePolicy (ICSP) files for image registry repository mirroring</h5>
 <div class="paragraph _abstract">
 <p>You can convert existing <code>ImageContentSourcePolicy</code> (ICSP) files to <code>ImageDigestMirrorSet</code> files to configure image registry repository mirroring.</p>
 </div>

@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -2214,7 +2214,7 @@ data:
 <div class="sect3">
 <h4 id="ibm-z-managing-cpu-overcommitment_ibm-z-and-linuxone-optimizations">Manage CPU overcommitment</h4>
 <div class="paragraph _abstract">
-<p>To optimize infrastructure sizing in a highly virtualized IBM Z environment, manage CPU overcommitment. By adopting this strategy, you can allocate more resources to virtual machines than are physically available at the hypervisor level. This capability requires that you plan carefully for specific workload dependencies.</p>
+<p>Manage CPU overcommitment to optimize infrastructure sizing in a virtualized IBM Z environment. This strategy allocates more resources to virtual machines than are physically available, but requires careful workload planning.</p>
 </div>
 <div class="paragraph">
 <p>Depending on your setup, consider the following best practices regarding CPU overcommitment:</p>
@@ -2354,7 +2354,7 @@ spec:
 <div class="sect4">
 <h5 id="ibm-z-ensure-high-disk-performance-hyperpav_ibm-z-and-linuxone-optimizations">Ensure high disk performance with HyperPAV on z/VM</h5>
 <div class="paragraph _abstract">
-<p>To improve I/O performance for Direct Access Storage Devices (DASD) disks in z/VM environments, configure HyperPAV alias devices. To increase throughput for both control plane nodes and compute nodes, add YAML configurations with full-pack minidisks to the Machine Config Operator (MCO) profiles for IBM Z clusters.</p>
+<p>To improve I/O performance for Direct Access Storage Devices (DASD) disks in z/VM, configure HyperPAV alias devices. To increase control plane and compute node throughput, add YAML configurations with full-pack minidisks to Machine Config Operator (MCO) profiles for IBM Z clusters.</p>
 </div>
 <div class="paragraph">
 <p>DASD and Extended Count Key Data (ECKD) devices are commonly used disk types in IBM Z&#174; environments. In a typical Red&#160;Hat OpenShift Container Platform setup in z/VM environments, DASD disks are commonly used to support the local storage for the nodes. You can set up HyperPAV alias devices to provide more throughput and overall better I/O performance for the DASD disks that support the z/VM guests.</p>

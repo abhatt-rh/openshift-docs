@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -2013,7 +2013,7 @@ image:
 <div class="sect3">
 <h4 id="images-getting-info-about-imagestreams_inspect-image-streams-and-tags">Get information about image streams</h4>
 <div class="paragraph _abstract">
-<p>To efficiently manage and monitor your image streams in Red&#160;Hat OpenShift Container Platform, retrieve information about their versions. You can get general information about the image stream and detailed information about all the tags it is pointing to, ensuring your deployed applications rely on the correct image versions.</p>
+<p>To efficiently manage and monitor your image streams in Red&#160;Hat OpenShift Container Platform, you can get general information about the image stream and detailed information about all the tags it is pointing to, ensuring your deployed applications rely on the correct image versions.</p>
 </div>
 <div class="ulist">
 <div class="title">Procedure</div>
@@ -2506,7 +2506,7 @@ latest
 <p>To ensure proper garbage collection, use broader, more generic tags that are designed to be updated when a new image revision is built. The following table provides some recommended tagging conventions using the format <code>&lt;image_name&gt;:&lt;image_tag&gt;</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 50%;">
-<caption class="title">Table 764. Image tag naming conventions</caption>
+<caption class="title">Table 767. Image tag naming conventions</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2850,7 +2850,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 765. Imagestream reference types</caption>
+<caption class="title">Table 768. Imagestream reference types</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -2958,7 +2958,10 @@ spec:
 <div class="sect4">
 <h5 id="images-imagestream-import-images-private-registry_import-from-private-registries-and-manifest-lists">Import images and image streams from private registries</h5>
 <div class="paragraph _abstract">
-<p>To securely manage content from external sources, configure your image streams to import tag and image metadata from private registries requiring authentication. This procedure is essential if you change the registry that the Cluster Samples Operator uses for pulling content to something other than the default <a href="https://registry.redhat.io">registry.redhat.io</a>.</p>
+<p>To securely manage content from external sources, configure your image streams to import tag and image metadata from private registries requiring authentication.</p>
+</div>
+<div class="paragraph">
+<p>This procedure is essential if you change the registry that the Cluster Samples Operator uses for pulling content to something other than the default <a href="https://registry.redhat.io">registry.redhat.io</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3001,7 +3004,7 @@ spec:
 <div class="sect5">
 <h6 id="images-imagestream-import-import-mode_import-from-private-registries-and-manifest-lists">Working with manifest lists</h6>
 <div class="paragraph _abstract">
-<p>To precisely manage multi-architecture or variant images contained within a manifest list, use the <code>--import-mode</code> flag with <code>oc import-image</code> or <code>oc tag</code> CLI commands. This functionality allows you to import a single sub-manifest, or all manifests, of a manifest list, providing fine-grained control over your image stream content.</p>
+<p>To manage multi-architecture images in a manifest list, use the <code>--import-mode</code> flag with <code>oc import-image</code> or <code>oc tag</code>. Importing a single sub-manifest or all manifests provides fine-grained control over your image stream content.</p>
 </div>
 <div class="paragraph">
 <p>In some cases, users might want to use sub-manifests directly. When <code>oc adm prune images</code> is run, or the <code>CronJob</code> pruner runs, they cannot detect when a sub-manifest list is used. As a result, an administrator using <code>oc adm prune images</code>, or the <code>CronJob</code> pruner, might delete entire manifest lists, including sub-manifests.</p>
@@ -3060,7 +3063,10 @@ Manifests:      linux/amd64     sha256:6e325b86566fafd3c4683a05a219c30c421fbccbf
 <div class="sect6">
 <h7 id="images-imagestream-ssl-import-list_import-from-private-registries-and-manifest-lists">Configure SSL/TLS when importing manifest lists</h7>
 <div class="paragraph _abstract">
-<p>To control connection security and access policies for manifest lists sourced from external repositories, configure SSL/TLS settings during image importing. To configure SSL/TLS when importing a manifest list, you can use the <code>--insecure</code> flag to bypass standard certificate validation requirements if necessary.</p>
+<p>To control connection security and access policies for manifest lists sourced from external repositories, configure SSL/TLS settings during image importing.</p>
+</div>
+<div class="paragraph">
+<p>To configure SSL/TLS when importing a manifest list, you can use the <code>--insecure</code> flag to bypass standard certificate validation requirements if necessary.</p>
 </div>
 <div class="ulist">
 <div class="title">Procedure</div>
@@ -3483,7 +3489,10 @@ metadata:
 <div class="sect4">
 <h5 id="images-triggering-updates-imagestream-changes-kubernetes-cli_reference-image-streams-in-kubernetes-workloads">Set the image trigger on Kubernetes resources</h5>
 <div class="paragraph _abstract">
-<p>To enable automatic updates for your deployed applications managed by Kubernetes, use the command-line interface (CLI) to set an image stream change trigger on Kubernetes resources. This ensures that resources, like <code>Deployments</code> and <code>StatefulSets</code>, are automatically invoked when a new version of an upstream image is available.</p>
+<p>To enable automatic updates for your deployed applications managed by Kubernetes, use the command-line interface (CLI) to set an image stream change trigger on Kubernetes resources.</p>
+</div>
+<div class="paragraph">
+<p>This ensures that resources, like <code>Deployments</code> and <code>StatefulSets</code>, are automatically invoked when a new version of an upstream image is available.</p>
 </div>
 <div class="paragraph">
 <p>When adding an image trigger to deployments, you can use the <code>oc set triggers</code> command. For example, the sample command in this procedure adds an image change trigger to the deployment named <code>example</code> so that when the <code>example:latest</code> image stream tag is updated, the <code>web</code> container inside the deployment updates with the new image value. This command sets the correct <code>image.openshift.io/triggers</code> annotation on the deployment resource.</p>

@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -4257,7 +4257,7 @@ INFO Time elapsed: 36m22s</code></pre>
 <div class="sect3">
 <h4 id="installation-aws-provisioning-own-dns-records_install-a-private-cluster-on-aws-ipi">Provisioning your own DNS records</h4>
 <div class="paragraph _abstract">
-<p>Use your cluster name and base cluster domain to configure a CNAME record for the API service <code>api.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code> with the API load balancer DNS name. Similarly, use the load balancer DNS name of the Ingress service to provision a CNAME record for the <code>*.apps.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code> hostname by using your cluster name and base cluster domain.</p>
+<p>Use your cluster name and base cluster domain to configure a CNAME record for the API service <code>api.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code> with the API load balancer DNS name, and provision a CNAME record for the Ingress hostname <code>*.apps.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code> with the Ingress load balancer DNS name.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>

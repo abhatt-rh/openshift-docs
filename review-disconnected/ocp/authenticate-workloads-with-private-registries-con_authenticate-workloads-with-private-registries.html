@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -2079,7 +2079,10 @@ spec:
 <div class="sect4">
 <h5 id="images-update-global-pull-secret_update-global-cluster-pull-secret">Update the global cluster pull secret</h5>
 <div class="paragraph _abstract">
-<p>To add new registries or update authentication for your Red&#160;Hat OpenShift Container Platform cluster, you can update the global pull secret by appending new credentials to the <em>additional-pull-secret</em>. To do this, you can use the <code>oc set data secret/additional-pull-secret -n kube-system</code> command. Hypershift manages the new credential propagation among the HostedCluster nodes.</p>
+<p>To add new registries or update authentication for your Red&#160;Hat OpenShift Container Platform cluster, you can update the global pull secret by appending new credentials to the <em>additional-pull-secret</em> by using the <code>oc set data secret/additional-pull-secret -n kube-system</code> command.</p>
+</div>
+<div class="paragraph">
+<p>Hypershift manages the new credential propagation among the HostedCluster nodes.</p>
 </div>
 <div class="admonitionblock important">
 <table>

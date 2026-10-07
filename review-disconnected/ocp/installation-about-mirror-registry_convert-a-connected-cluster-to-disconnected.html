@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1731,7 +1731,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#prerequisites_connected-to-disconnected_convert-a-connected-cluster-to-disconnected">Prerequisites for converting a connected cluster to a disconnected cluster</a></li><li class="level-4"><a href="#connected-to-disconnected-prepare-mirror_convert-a-connected-cluster-to-disconnected">Prepare the cluster for mirroring</a></li><li class="level-4"><a href="#connected-to-disconnected-mirror-images_convert-a-connected-cluster-to-disconnected">Mirror the images</a></li><li class="level-4"><a href="#connected-to-disconnected-config-registry_convert-a-connected-cluster-to-disconnected">Configure the cluster for the mirror registry</a></li><li class="level-4"><a href="#connected-to-disconnected-verify_convert-a-connected-cluster-to-disconnected">Ensure applications continue to work</a></li><li class="level-4"><a href="#connected-to-disconnected-disconnect_convert-a-connected-cluster-to-disconnected">Disconnect the cluster from the network</a></li><li class="level-4"><a href="#connected-to-disconnected-restore-insights_convert-a-connected-cluster-to-disconnected">Restoring a degraded Insights Operator</a></li><li class="level-4"><a href="#connected-to-disconnected-restore_convert-a-connected-cluster-to-disconnected">Restoring the network</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#prerequisites_connected-to-disconnected_convert-a-connected-cluster-to-disconnected">Prerequisites for converting a connected cluster to a disconnected cluster</a></li><li class="level-4"><a href="#connected-to-disconnected-prepare-mirror_convert-a-connected-cluster-to-disconnected">Preparing the cluster for mirroring</a></li><li class="level-4"><a href="#connected-to-disconnected-mirror-images_convert-a-connected-cluster-to-disconnected">Mirroring the images</a></li><li class="level-4"><a href="#connected-to-disconnected-config-registry_convert-a-connected-cluster-to-disconnected">Configuring the cluster for the mirror registry</a></li><li class="level-4"><a href="#connected-to-disconnected-verify_convert-a-connected-cluster-to-disconnected">Ensure applications continue to work</a></li><li class="level-4"><a href="#connected-to-disconnected-disconnect_convert-a-connected-cluster-to-disconnected">Disconnect the cluster from the network</a></li><li class="level-4"><a href="#connected-to-disconnected-restore-insights_convert-a-connected-cluster-to-disconnected">Restoring a degraded Insights Operator</a></li><li class="level-4"><a href="#connected-to-disconnected-restore_convert-a-connected-cluster-to-disconnected">Restoring the network</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected">Mirror registry</h3>
@@ -1833,7 +1833,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="connected-to-disconnected-prepare-mirror_convert-a-connected-cluster-to-disconnected">Prepare the cluster for mirroring</h4>
+<h4 id="connected-to-disconnected-prepare-mirror_convert-a-connected-cluster-to-disconnected">Preparing the cluster for mirroring</h4>
 <div class="paragraph _abstract">
 <p>Before disconnecting your cluster, you must mirror, or copy, the images to a mirror registry that is reachable by every node in your disconnected cluster.</p>
 </div>
@@ -1952,7 +1952,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="connected-to-disconnected-mirror-images_convert-a-connected-cluster-to-disconnected">Mirror the images</h4>
+<h4 id="connected-to-disconnected-mirror-images_convert-a-connected-cluster-to-disconnected">Mirroring the images</h4>
 <div class="paragraph _abstract">
 <p>After the cluster is properly configured, you can mirror the images from your external repositories to the mirror repository.</p>
 </div>
@@ -2132,7 +2132,7 @@ Mirror prefix: mirror.registry.com:443/ocp/release</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="connected-to-disconnected-config-registry_convert-a-connected-cluster-to-disconnected">Configure the cluster for the mirror registry</h4>
+<h4 id="connected-to-disconnected-config-registry_convert-a-connected-cluster-to-disconnected">Configuring the cluster for the mirror registry</h4>
 <div class="paragraph _abstract">
 <p>After creating and mirroring the images to the mirror registry, you must modify your cluster so that pods can pull images from the mirror registry.</p>
 </div>

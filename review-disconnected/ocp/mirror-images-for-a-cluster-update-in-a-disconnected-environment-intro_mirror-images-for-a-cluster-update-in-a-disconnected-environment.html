@@ -1645,7 +1645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1731,7 +1731,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#mirroring-ocp-resources-ocmirror_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Mirror resources using the oc-mirror plugin</a></li><li class="level-4"><a href="#update-mirror-repository-adm-release-mirror_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Mirror images using the oc adm release mirror command</a></li><li class="level-5"><a href="#updating-disconnected-mirror-host_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Prepare your mirror host</a></li><li class="level-6"><a href="#cli-installing-cli-linux_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Install the OpenShift CLI on Linux</a></li><li class="level-6"><a href="#cli-installing-cli-windows_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Install the OpenShift CLI on Windows</a></li><li class="level-6"><a href="#cli-installing-cli-macos_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Install the OpenShift CLI on macOS</a></li><li class="level-6"><a href="#installation-adding-registry-pull-secret_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Configure credentials that allow images to be mirrored</a></li><li class="level-5"><a href="#update-mirroring-images-to-registry_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Mirror images to a mirror registry</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#mirroring-ocp-resources-ocmirror_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Mirroring resources using the oc-mirror plugin</a></li><li class="level-4"><a href="#update-mirror-repository-adm-release-mirror_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Mirroring images using the oc adm release mirror command</a></li><li class="level-5"><a href="#updating-disconnected-mirror-host_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Preparing your mirror host</a></li><li class="level-6"><a href="#cli-installing-cli-linux_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Installing the OpenShift CLI on Linux</a></li><li class="level-6"><a href="#cli-installing-cli-windows_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Installing the OpenShift CLI on Windows</a></li><li class="level-6"><a href="#cli-installing-cli-macos_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Installing the OpenShift CLI on macOS</a></li><li class="level-6"><a href="#installation-adding-registry-pull-secret_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Configuring credentials that allow images to be mirrored</a></li><li class="level-5"><a href="#update-mirroring-images-to-registry_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Mirroring images to a mirror registry</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Mirror images for a cluster update in a disconnected environment</h3>
@@ -1844,7 +1844,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="sect3">
-<h4 id="mirroring-ocp-resources-ocmirror_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Mirror resources using the oc-mirror plugin</h4>
+<h4 id="mirroring-ocp-resources-ocmirror_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Mirroring resources using the oc-mirror plugin</h4>
 <div class="paragraph _abstract">
 <p>You can use the oc-mirror OpenShift CLI (<code>oc</code>) plugin to mirror images to a mirror registry in your fully or partially disconnected environments. You must run oc-mirror from a system with internet connectivity to download the required images from the official Red&#160;Hat registries.</p>
 </div>
@@ -1853,7 +1853,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="update-mirror-repository-adm-release-mirror_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Mirror images using the oc adm release mirror command</h4>
+<h4 id="update-mirror-repository-adm-release-mirror_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Mirroring images using the oc adm release mirror command</h4>
 <div class="paragraph _abstract">
 <p>You can use the <code>oc adm release mirror</code> command to mirror images to your mirror registry.</p>
 </div>
@@ -1902,12 +1902,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="sect4">
-<h5 id="updating-disconnected-mirror-host_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Prepare your mirror host</h5>
+<h5 id="updating-disconnected-mirror-host_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Preparing your mirror host</h5>
 <div class="paragraph _abstract">
 <p>Before you perform the mirror procedure, you must prepare the host to retrieve content and push it to the remote location.</p>
 </div>
 <div class="sect5">
-<h6 id="cli-installing-cli-linux_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Install the OpenShift CLI on Linux</h6>
+<h6 id="cli-installing-cli-linux_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Installing the OpenShift CLI on Linux</h6>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Linux, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -1979,7 +1979,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect5">
-<h6 id="cli-installing-cli-windows_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Install the OpenShift CLI on Windows</h6>
+<h6 id="cli-installing-cli-windows_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Installing the OpenShift CLI on Windows</h6>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Windows, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -2043,7 +2043,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect5">
-<h6 id="cli-installing-cli-macos_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Install the OpenShift CLI on macOS</h6>
+<h6 id="cli-installing-cli-macos_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Installing the OpenShift CLI on macOS</h6>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on macOS, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -2124,7 +2124,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect5">
-<h6 id="installation-adding-registry-pull-secret_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Configure credentials that allow images to be mirrored</h6>
+<h6 id="installation-adding-registry-pull-secret_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Configuring credentials that allow images to be mirrored</h6>
 <div class="paragraph _abstract">
 <p>Create a container image registry credentials file so that you can mirror images from Red&#160;Hat to your mirror. Complete the following steps on the installation host.</p>
 </div>
@@ -2252,7 +2252,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect4">
-<h5 id="update-mirroring-images-to-registry_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Mirror images to a mirror registry</h5>
+<h5 id="update-mirroring-images-to-registry_mirror-images-for-a-cluster-update-in-a-disconnected-environment">Mirroring images to a mirror registry</h5>
 <div class="paragraph _abstract">
 <p>Before you can update a cluster in a disconnected environment, you must mirror the required Red&#160;Hat OpenShift Container Platform release images onto a local registry mirror.</p>
 </div>
