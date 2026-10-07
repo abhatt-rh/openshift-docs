@@ -477,8 +477,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
 <body id="images-imagestream-use_manage-image-streams-and-imports" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/troubleshoot.adoc:53
+    include::ocp-jobs/use-the-vsphere-problem-detector-operator.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/use-the-vsphere-problem-detector-operator.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -571,6 +607,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
+</li>
+<li><a href="override-resource-util-hosted-cluster-con_override-resource-util-hosted-cluster.html">Overriding resource utilization measurements</a>
 </li>
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
@@ -852,8 +890,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hosted-clusters-openstack-prerequisites_deploying-hosted-control-planes-on-openstack.html">Prerequisites for OpenStack</a>
 </li>
-<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
-</li>
 <li><a href="installing-the-hosted-control-planes-command-line-interface-intro_installing-the-hosted-control-planes-command-line-interface.html">Installing the hosted control planes command-line interface</a>
 </li>
 <li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
@@ -871,6 +907,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
+</li>
 <li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
 <li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
@@ -881,7 +919,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
+</li>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
+</li>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
+</li>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
 <li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
+</li>
+<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
 </li>
 </ul>
 </li>
@@ -979,7 +1027,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
-<li><a href="hcp-import-manual_manually-import-a-hosted-cluster.html">Manually importing hosted clusters</a>
+<li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
 </li>
 <li><a href="nodes-pods-image-volume-about_mount-an-oci-image-onto-a-pod.html">Understanding image volumes</a>
 </li>
@@ -1603,8 +1651,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-oadp-update-channels_troubleshoot-common-update-failures.html">About OADP update channels</a>
 </li>
-<li><a href="about-node-health-check-operator_use-the-vsphere-problem-detector-operator.html">About the Node Health Check Operator</a>
-</li>
 <li><a href="understand-etcd-performance_move-etcd-to-a-different-disk.html">Factors that affect etcd performance</a>
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_gather-data-about-a-cluster-update.html">Gathering bootstrap node diagnostic data</a>
@@ -1635,7 +1681,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -2003,7 +2049,7 @@ image:
 <div class="sect3">
 <h4 id="images-getting-info-about-imagestreams_inspect-image-streams-and-tags">Get information about image streams</h4>
 <div class="paragraph _abstract">
-<p>To efficiently manage and monitor your image streams in Red&#160;Hat OpenShift Container Platform, retrieve information about their versions. You can get general information about the image stream and detailed information about all the tags it is pointing to, ensuring your deployed applications rely on the correct image versions.</p>
+<p>To efficiently manage and monitor your image streams in Red&#160;Hat OpenShift Container Platform, you can get general information about the image stream and detailed information about all the tags it is pointing to, ensuring your deployed applications rely on the correct image versions.</p>
 </div>
 <div class="ulist">
 <div class="title">Procedure</div>
@@ -2496,7 +2542,7 @@ latest
 <p>To ensure proper garbage collection, use broader, more generic tags that are designed to be updated when a new image revision is built. The following table provides some recommended tagging conventions using the format <code>&lt;image_name&gt;:&lt;image_tag&gt;</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 50%;">
-<caption class="title">Table 764. Image tag naming conventions</caption>
+<caption class="title">Table 768. Image tag naming conventions</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2840,7 +2886,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 765. Imagestream reference types</caption>
+<caption class="title">Table 769. Imagestream reference types</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -2948,7 +2994,10 @@ spec:
 <div class="sect4">
 <h5 id="images-imagestream-import-images-private-registry_import-from-private-registries-and-manifest-lists">Import images and image streams from private registries</h5>
 <div class="paragraph _abstract">
-<p>To securely manage content from external sources, configure your image streams to import tag and image metadata from private registries requiring authentication. This procedure is essential if you change the registry that the Cluster Samples Operator uses for pulling content to something other than the default <a href="https://registry.redhat.io">registry.redhat.io</a>.</p>
+<p>To securely manage content from external sources, configure your image streams to import tag and image metadata from private registries requiring authentication.</p>
+</div>
+<div class="paragraph">
+<p>This procedure is essential if you change the registry that the Cluster Samples Operator uses for pulling content to something other than the default <a href="https://registry.redhat.io">registry.redhat.io</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2991,7 +3040,7 @@ spec:
 <div class="sect5">
 <h6 id="images-imagestream-import-import-mode_import-from-private-registries-and-manifest-lists">Working with manifest lists</h6>
 <div class="paragraph _abstract">
-<p>To precisely manage multi-architecture or variant images contained within a manifest list, use the <code>--import-mode</code> flag with <code>oc import-image</code> or <code>oc tag</code> CLI commands. This functionality allows you to import a single sub-manifest, or all manifests, of a manifest list, providing fine-grained control over your image stream content.</p>
+<p>To manage multi-architecture images in a manifest list, use the <code>--import-mode</code> flag with <code>oc import-image</code> or <code>oc tag</code>. Importing a single sub-manifest or all manifests provides fine-grained control over your image stream content.</p>
 </div>
 <div class="paragraph">
 <p>In some cases, users might want to use sub-manifests directly. When <code>oc adm prune images</code> is run, or the <code>CronJob</code> pruner runs, they cannot detect when a sub-manifest list is used. As a result, an administrator using <code>oc adm prune images</code>, or the <code>CronJob</code> pruner, might delete entire manifest lists, including sub-manifests.</p>
@@ -3050,7 +3099,10 @@ Manifests:      linux/amd64     sha256:6e325b86566fafd3c4683a05a219c30c421fbccbf
 <div class="sect6">
 <h7 id="images-imagestream-ssl-import-list_import-from-private-registries-and-manifest-lists">Configure SSL/TLS when importing manifest lists</h7>
 <div class="paragraph _abstract">
-<p>To control connection security and access policies for manifest lists sourced from external repositories, configure SSL/TLS settings during image importing. To configure SSL/TLS when importing a manifest list, you can use the <code>--insecure</code> flag to bypass standard certificate validation requirements if necessary.</p>
+<p>To control connection security and access policies for manifest lists sourced from external repositories, configure SSL/TLS settings during image importing.</p>
+</div>
+<div class="paragraph">
+<p>To configure SSL/TLS when importing a manifest list, you can use the <code>--insecure</code> flag to bypass standard certificate validation requirements if necessary.</p>
 </div>
 <div class="ulist">
 <div class="title">Procedure</div>
@@ -3473,7 +3525,10 @@ metadata:
 <div class="sect4">
 <h5 id="images-triggering-updates-imagestream-changes-kubernetes-cli_reference-image-streams-in-kubernetes-workloads">Set the image trigger on Kubernetes resources</h5>
 <div class="paragraph _abstract">
-<p>To enable automatic updates for your deployed applications managed by Kubernetes, use the command-line interface (CLI) to set an image stream change trigger on Kubernetes resources. This ensures that resources, like <code>Deployments</code> and <code>StatefulSets</code>, are automatically invoked when a new version of an upstream image is available.</p>
+<p>To enable automatic updates for your deployed applications managed by Kubernetes, use the command-line interface (CLI) to set an image stream change trigger on Kubernetes resources.</p>
+</div>
+<div class="paragraph">
+<p>This ensures that resources, like <code>Deployments</code> and <code>StatefulSets</code>, are automatically invoked when a new version of an upstream image is available.</p>
 </div>
 <div class="paragraph">
 <p>When adding an image trigger to deployments, you can use the <code>oc set triggers</code> command. For example, the sample command in this procedure adds an image change trigger to the deployment named <code>example</code> so that when the <code>example:latest</code> image stream tag is updated, the <code>web</code> container inside the deployment updates with the new image value. This command sets the correct <code>image.openshift.io/triggers</code> annotation on the deployment resource.</p>

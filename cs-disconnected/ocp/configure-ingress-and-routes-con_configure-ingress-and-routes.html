@@ -477,8 +477,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
 <body id="configure-ingress-and-routes-con_configure-ingress-and-routes" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/troubleshoot.adoc:53
+    include::ocp-jobs/use-the-vsphere-problem-detector-operator.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/use-the-vsphere-problem-detector-operator.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -571,6 +607,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
+</li>
+<li><a href="override-resource-util-hosted-cluster-con_override-resource-util-hosted-cluster.html">Overriding resource utilization measurements</a>
 </li>
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
@@ -852,8 +890,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hosted-clusters-openstack-prerequisites_deploying-hosted-control-planes-on-openstack.html">Prerequisites for OpenStack</a>
 </li>
-<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
-</li>
 <li><a href="installing-the-hosted-control-planes-command-line-interface-intro_installing-the-hosted-control-planes-command-line-interface.html">Installing the hosted control planes command-line interface</a>
 </li>
 <li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
@@ -871,6 +907,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
+</li>
 <li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
 <li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
@@ -881,7 +919,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
+</li>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
+</li>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
+</li>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
 <li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
+</li>
+<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
 </li>
 </ul>
 </li>
@@ -979,7 +1027,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
-<li><a href="hcp-import-manual_manually-import-a-hosted-cluster.html">Manually importing hosted clusters</a>
+<li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
 </li>
 <li><a href="nodes-pods-image-volume-about_mount-an-oci-image-onto-a-pod.html">Understanding image volumes</a>
 </li>
@@ -1603,8 +1651,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-oadp-update-channels_troubleshoot-common-update-failures.html">About OADP update channels</a>
 </li>
-<li><a href="about-node-health-check-operator_use-the-vsphere-problem-detector-operator.html">About the Node Health Check Operator</a>
-</li>
 <li><a href="understand-etcd-performance_move-etcd-to-a-different-disk.html">Factors that affect etcd performance</a>
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_gather-data-about-a-cluster-update.html">Gathering bootstrap node diagnostic data</a>
@@ -1635,7 +1681,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1860,7 +1906,7 @@ spec:
 <p>The following table shows example routes and their accessibility:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 581. Route availability</caption>
+<caption class="title">Table 582. Route availability</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3381,7 +3427,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 582. Route annotations</caption>
+<caption class="title">Table 583. Route annotations</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3557,7 +3603,7 @@ The part of the request path that matches the path specified in <code>spec.path<
 <p>The following table provides examples of the path rewriting behavior for various combinations of <code>spec.path</code>, request path, and rewrite target.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 583. rewrite-target examples</caption>
+<caption class="title">Table 584. rewrite-target examples</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3645,7 +3691,7 @@ The part of the request path that matches the path specified in <code>spec.path<
 <p>Certain special characters in <code>haproxy.router.openshift.io/rewrite-target</code> require special handling because they must be escaped properly. Refer to the following table to understand how these characters are handled.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 584. Special character handling</caption>
+<caption class="title">Table 585. Special character handling</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -7179,7 +7225,7 @@ backend be_secure:openshift-monitoring:alertmanager-main
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 585. Special case header configuration options</caption>
+<caption class="title">Table 586. Special case header configuration options</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -8699,7 +8745,7 @@ namespace selector that have the label <code>type: sharded</code>.</p>
 <div class="sect3">
 <h4 id="gateway-api-benefits-limitations_understand-gateway-api">Gateway API benefits and limitations</h4>
 <div class="paragraph _abstract">
-<p>To determine if Gateway API is the right routing solution for your cluster, review its benefits and limitations. The project is an effort to provide a standardized ecosystem by using a portable API with broad community support. Understanding these factors ensures your networking infrastructure aligns with your organizational needs and technical capabilities.</p>
+<p>Review the benefits and limitations of Gateway API to determine if it suits your cluster. The portable API and standardized ecosystem offer broad community support, ensuring that your networking aligns with your technical and organizational needs.</p>
 </div>
 <div class="sect4">
 <h5 id="gateway-api-benefits_understand-gateway-api">Benefits</h5>
@@ -8742,7 +8788,10 @@ namespace selector that have the label <code>type: sharded</code>.</p>
 <div class="sect4">
 <h5 id="gateway-api-implementation-specifics_understand-gateway-api">Gateway API implementation specifics</h5>
 <div class="paragraph _abstract">
-<p>To ensure interoperability between external vendor implementations and your networking infrastructure in Red&#160;Hat OpenShift Container Platform, the Ingress Operator manages the lifecycle of Gateway API custom resource definitions (CRDs). Understanding how these CRDs are managed helps you prevent disrupted workloads and security issues caused by incompatible vendor fields.</p>
+<p>To ensure interoperability between external vendor implementations and your networking infrastructure in Red&#160;Hat OpenShift Container Platform, the Ingress Operator manages the lifecycle of Gateway API custom resource definitions (CRDs).</p>
+</div>
+<div class="paragraph">
+<p>Understanding how these CRDs are managed helps you prevent disrupted workloads and security issues caused by incompatible vendor fields.</p>
 </div>
 <div class="paragraph">
 <p>In some situations, Gateway API provides one or more fields that a vendor implementation does not support, but that implementation is otherwise compatible in schema with the rest of the fields. These "dead fields" can result in disrupted Ingress workloads, improperly provisioned applications and services, and security-related issues. Because Red&#160;Hat OpenShift Container Platform uses a specific version of Gateway API CRDs, any use of third-party implementations of Gateway API must conform to the Red&#160;Hat OpenShift Container Platform implementation to ensure that all fields work as expected.</p>
@@ -8791,7 +8840,7 @@ namespace selector that have the label <code>type: sharded</code>.</p>
 <div class="sect4">
 <h5 id="gateway-api-deployment-topologies_understand-gateway-api">Gateway API deployment topologies</h5>
 <div class="paragraph _abstract">
-<p>To effectively organize and secure your routing infrastructure, you must choose an appropriate deployment topology for your cluster. Gateway API is designed to accommodate two topologies: shared gateways or dedicated gateways. You can choose a topology based on its own advantages and different security implications.</p>
+<p>Select an appropriate cluster deployment topology to organize and secure your routing infrastructure. Gateway API accommodates shared gateways or dedicated gateways. Choose a topology based on its distinct advantages and security implications.</p>
 </div>
 <div class="sect5">
 <h6 id="dedicated-gateway_understand-gateway-api">Dedicated gateway</h6>
@@ -9000,7 +9049,7 @@ spec:
 <p>The following table outlines the features that are shared between both resources and how their specific implementations differ:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 586. Shared features and implementation differences</caption>
+<caption class="title">Table 587. Shared features and implementation differences</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -9369,7 +9418,7 @@ Do not set <code>namespaces.from: All</code>; that setting allows routes from ev
 <p>The following table describes common listener conditions and how to resolve them:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 587. Gateway listener status conditions</caption>
+<caption class="title">Table 588. Gateway listener status conditions</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9663,7 +9712,7 @@ spec:
 <p>This configuration is supported on Amazon Web Services (AWS), Microsoft Azure, Google Cloud, Red Hat OpenStack Platform (RHOSP), and IBM Cloud. The following table details the required cloud-specific annotations and their corresponding values.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 588. Internal load balancer annotations by cloud provider</caption>
+<caption class="title">Table 589. Internal load balancer annotations by cloud provider</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -9763,7 +9812,7 @@ spec:
 <p>To verify that your <code>GatewayClass</code> custom resource (CR) is valid and ready to provision gateways, review its <code>status</code> conditions. A healthy <code>GatewayClass</code> CR reports a status of <code>True</code> for core conditions like <code>Accepted</code> and <code>SupportedVersion</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 589. <code>GatewayClass</code> CR status conditions</caption>
+<caption class="title">Table 590. <code>GatewayClass</code> CR status conditions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9877,7 +9926,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 590. Gateway-level status conditions</caption>
+<caption class="title">Table 591. Gateway-level status conditions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9985,7 +10034,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 591. Listener-level status conditions</caption>
+<caption class="title">Table 592. Listener-level status conditions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10802,7 +10851,10 @@ spec:
 <div class="sect5">
 <h6 id="httproute-backendref-configuration_configure-httproute-resources">HTTPRoute backendRef configuration</h6>
 <div class="paragraph _abstract">
-<p>BackendRefs are the service destinations of requests that meet your matches rules, and are composed of group, kind, name, namespace, port, and weight. Name and port are the only required fields and refer to the service name and the service port number Weight is relevant when there is more than one backendRef, and specifies the proportion of requests forwarded to that specific backendRef. Without a backendRef, the rule doesn&#8217;t do any request forwarding and may return an error.</p>
+<p>BackendRefs are the service destinations of requests that meet your matches rules, and are composed of group, kind, name, namespace, port, and weight.</p>
+</div>
+<div class="paragraph">
+<p>Name and port are the only required fields and refer to the service name and the service port number Weight is relevant when there is more than one backendRef, and specifies the proportion of requests forwarded to that specific backendRef. Without a backendRef, the rule doesn&#8217;t do any request forwarding and may return an error.</p>
 </div>
 <div class="paragraph">
 <p>This example shows a BackendRef where there is a single backend destination, a service named <code>&lt;service_v1&gt;</code>:</p>

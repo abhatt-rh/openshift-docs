@@ -477,8 +477,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
-<body id="about-node-health-check-operator_use-the-vsphere-problem-detector-operator" class="book toc2 toc-left navmap-has-right-toc">
+<body id="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/troubleshoot.adoc:53
+    include::ocp-jobs/use-the-vsphere-problem-detector-operator.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/use-the-vsphere-problem-detector-operator.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -571,6 +607,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
+</li>
+<li><a href="override-resource-util-hosted-cluster-con_override-resource-util-hosted-cluster.html">Overriding resource utilization measurements</a>
 </li>
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
@@ -852,8 +890,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hosted-clusters-openstack-prerequisites_deploying-hosted-control-planes-on-openstack.html">Prerequisites for OpenStack</a>
 </li>
-<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
-</li>
 <li><a href="installing-the-hosted-control-planes-command-line-interface-intro_installing-the-hosted-control-planes-command-line-interface.html">Installing the hosted control planes command-line interface</a>
 </li>
 <li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
@@ -867,9 +903,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_disconnected_environments.html">Disconnected environments</a>
-
 <ul class="sectlevel2">
 <li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
+</li>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
 <li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
@@ -881,7 +918,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html"><span class="toc-current">Use the OpenShift Update Service in a disconnected environment</span></a>
+</li>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
+</li>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
+</li>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
 <li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
+</li>
+<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
 </li>
 </ul>
 </li>
@@ -979,7 +1026,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
-<li><a href="hcp-import-manual_manually-import-a-hosted-cluster.html">Manually importing hosted clusters</a>
+<li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
 </li>
 <li><a href="nodes-pods-image-volume-about_mount-an-oci-image-onto-a-pod.html">Understanding image volumes</a>
 </li>
@@ -1554,6 +1601,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_troubleshoot.html">Troubleshoot</a>
+
 <ul class="sectlevel2">
 <li><a href="allow-the-configuration-drift-to-remain-and-return-the-node-to-ready-state-con_allow-the-configuration-drift-to-remain-and-return-the-node-to-ready-state.html">Allow the configuration drift to remain and return the node to ready state</a>
 </li>
@@ -1603,8 +1651,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-oadp-update-channels_troubleshoot-common-update-failures.html">About OADP update channels</a>
 </li>
-<li><a href="about-node-health-check-operator_use-the-vsphere-problem-detector-operator.html"><span class="toc-current">About the Node Health Check Operator</span></a>
-</li>
 <li><a href="understand-etcd-performance_move-etcd-to-a-different-disk.html">Factors that affect etcd performance</a>
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_gather-data-about-a-cluster-update.html">Gathering bootstrap node diagnostic data</a>
@@ -1635,7 +1681,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1721,199 +1767,76 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#understanding-nhc-operator-workflow_use-the-vsphere-problem-detector-operator">Understanding the Node Health Check Operator workflow</a></li><li class="level-4"><a href="#how-nhc-prevent-conflict-with-mhc_use-the-vsphere-problem-detector-operator">About how node health checks prevent conflicts with machine health checks</a></li><li class="level-4"><a href="#control-plane-fencing-node-health-check-operator_use-the-vsphere-problem-detector-operator">Control plane fencing</a></li><li class="level-4"><a href="#eco-node-health-check-operator-creating-node-health-check_use-the-vsphere-problem-detector-operator">Creating a node health check</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#registry-configuration-for-update-service_update-a-cluster-in-a-disconnected-environment-using-osus">Configuring access to a secured registry for the OpenShift Update Service</a></li><li class="level-4"><a href="#images-update-global-pull-secret_update-a-cluster-in-a-disconnected-environment-using-osus">Update the global cluster pull secret</a></li><li class="level-4"><a href="#update-service-install_update-a-cluster-in-a-disconnected-environment-using-osus">Installing the OpenShift Update Service Operator</a></li><li class="level-5"><a href="#update-service-install-web-console_update-a-cluster-in-a-disconnected-environment-using-osus">Installing the OpenShift Update Service Operator by using the web console</a></li><li class="level-5"><a href="#update-service-install-cli_update-a-cluster-in-a-disconnected-environment-using-osus">Installing the OpenShift Update Service Operator by using the CLI</a></li><li class="level-4"><a href="#update-service-graph-data_update-a-cluster-in-a-disconnected-environment-using-osus">Creating the OpenShift Update Service graph data container image</a></li><li class="level-4"><a href="#update-service-create-service_update-a-cluster-in-a-disconnected-environment-using-osus">Creating an OpenShift Update Service application</a></li><li class="level-5"><a href="#update-service-create-service-web-console_update-a-cluster-in-a-disconnected-environment-using-osus">Creating an OpenShift Update Service application by using the web console</a></li><li class="level-5"><a href="#update-service-create-service-cli_update-a-cluster-in-a-disconnected-environment-using-osus">Creating an OpenShift Update Service application by using the CLI</a></li><li class="level-4"><a href="#update-service-configure-cvo">Configuring the Cluster Version Operator (CVO)</a></li><li class="level-4"><a href="#verifying-local-osus-installation_update-a-cluster-in-a-disconnected-environment-using-osus">Verifying your local OSUS installation</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="about-node-health-check-operator_use-the-vsphere-problem-detector-operator">About the Node Health Check Operator</h3>
+<h3 id="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus">Use the OpenShift Update Service in a disconnected environment</h3>
 <div class="paragraph _abstract">
-<p>The Node Health Check Operator detects the health of the nodes in a cluster. The <code>NodeHealthCheck</code> controller creates the <code>NodeHealthCheck</code> custom resource (CR), which defines a set of criteria and thresholds to determine the health of a node.</p>
+<p>The OpenShift Update Service (OSUS) provides update recommendations to Red&#160;Hat OpenShift Container Platform clusters. Red&#160;Hat publicly hosts the OpenShift Update Service, and clusters in a connected environment can connect to the service through public APIs to retrieve update recommendations.</p>
 </div>
 <div class="paragraph">
-<p>The Node Health Check Operator also installs the Self Node Remediation Operator as a default remediation provider.</p>
+<p>However, clusters in a disconnected environment cannot access these public APIs to retrieve update information. To have a similar update experience in a disconnected environment, you can install and configure the OpenShift Update Service so that it is available within the disconnected environment.</p>
 </div>
 <div class="paragraph">
-<p>When the Node Health Check Operator detects an unhealthy node, it creates a remediation CR that triggers the remediation provider. For example, the controller creates the <code>SelfNodeRemediation</code> CR, which triggers the Self Node Remediation Operator to remediate the unhealthy node.</p>
+<p>A single OSUS instance is capable of serving recommendations to thousands of clusters.
+OSUS can be scaled horizontally to cater to more clusters by changing the replica value.
+So for most disconnected use cases, one OSUS instance is enough.
+For example, Red&#160;Hat hosts just one OSUS instance for the entire fleet of connected clusters.</p>
 </div>
 <div class="paragraph">
-<p>The <code>NodeHealthCheck</code> CR resembles the following YAML file:</p>
+<p>If you want to keep update recommendations separate in different environments, you can run one OSUS instance for each environment.
+For example, in a case where you have separate test and stage environments, you might not want a cluster in a stage environment to receive update recommendations to version A if that version has not been tested in the test environment yet.</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: remediation.medik8s.io/v1alpha1
-kind: NodeHealthCheck
-metadata:
-  name: nodehealthcheck-sample
-spec:
-  minHealthy: 51% <img src="data:image/png;base64," alt="1">
-  pauseRequests: <img src="data:image/png;base64," alt="2">
-    - &lt;pause-test-cluster&gt;
-  remediationTemplate: <img src="data:image/png;base64," alt="3">
-    apiVersion: self-node-remediation.medik8s.io/v1alpha1
-    name: self-node-remediation-resource-deletion-template
-    namespace: openshift-operators
-    kind: SelfNodeRemediationTemplate
-  selector: <img src="data:image/png;base64," alt="4">
-    matchExpressions:
-      - key: node-role.kubernetes.io/worker
-        operator: Exists
-  unhealthyConditions: <img src="data:image/png;base64," alt="5">
-    - type: Ready
-      status: "False"
-      duration: 300s <img src="data:image/png;base64," alt="6">
-    - type: Ready
-      status: Unknown
-      duration: 300s <img src="data:image/png;base64," alt="6"></code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><img src="data:image/png;base64," alt="1"></td>
-<td>Specifies the amount of healthy nodes(in percentage or number) required for a remediation provider to concurrently remediate nodes in the targeted pool. If the number of healthy nodes equals to or exceeds the limit set by <code>minHealthy</code>, remediation occurs. The default value is 51%.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="2"></td>
-<td>Prevents any new remediation from starting, while allowing any ongoing remediations to persist. The default value is empty. However, you can enter an array of strings that identify the cause of pausing the remediation. For example, <code>pause-test-cluster</code>.
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
 <div class="paragraph">
-<p>During the upgrade process, nodes in the cluster might become temporarily unavailable and get identified as unhealthy. In the case of worker nodes, when the Operator detects that the cluster is upgrading, it stops remediating new unhealthy nodes to prevent such nodes from rebooting.</p>
-</div>
-</td>
-</tr>
-</table>
-</div></td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="3"></td>
-<td>Specifies a remediation template from the remediation provider. For example, from the Self Node Remediation Operator.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="4"></td>
-<td>Specifies a <code>selector</code> that matches labels or expressions that you want to check. The default value is empty, which selects all nodes.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="5"></td>
-<td>Specifies a list of the conditions that determine whether a node is considered unhealthy.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="6"></td>
-<td>Specifies the timeout duration for a node condition. If a condition is met for the duration of the timeout, the node will be remediated. Long timeouts can result in long periods of downtime for a workload on an unhealthy node.</td>
-</tr>
-</table>
+<p>The following sections describe how to install an OSUS instance and configure it to provide update recommendations to a cluster.</p>
 </div>
 <div class="sect3">
-<h4 id="understanding-nhc-operator-workflow_use-the-vsphere-problem-detector-operator">Understanding the Node Health Check Operator workflow</h4>
-<div class="paragraph">
-<p>When a node is identified as unhealthy, the Node Health Check Operator checks how many other nodes are unhealthy. If the number of healthy nodes exceeds the amount that is specified in the <code>minHealthy</code> field of the <code>NodeHealthCheck</code> CR, the controller creates a remediation CR from the details that are provided in the external remediation template by the remediation provider. After remediation, the kubelet updates the node&#8217;s health status.</p>
-</div>
-<div class="paragraph">
-<p>When the node turns healthy, the controller deletes the external remediation template.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="how-nhc-prevent-conflict-with-mhc_use-the-vsphere-problem-detector-operator">About how node health checks prevent conflicts with machine health checks</h4>
-<div class="paragraph">
-<p>When both, node health checks and machine health checks are deployed, the node health check avoids conflict with the machine health check.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Red&#160;Hat OpenShift Container Platform deploys <code>machine-api-termination-handler</code> as the default <code>MachineHealthCheck</code> resource.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The following list summarizes the system behavior when node health checks and machine health checks are deployed:</p>
+<h4 id="registry-configuration-for-update-service_update-a-cluster-in-a-disconnected-environment-using-osus">Configuring access to a secured registry for the OpenShift Update Service</h4>
+<div class="paragraph _abstract">
+<p>If your release images are contained in a registry whose HTTPS X.509 certificate is signed by a custom certificate authority, you must configure additional trust stores for image registry access for the update service.</p>
 </div>
 <div class="ulist">
+<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>If only the default machine health check exists, the node health check continues to identify unhealthy nodes. However, the node health check ignores unhealthy nodes in a Terminating state. The default machine health check handles the unhealthy nodes with a Terminating state.</p>
-<div class="listingblock">
-<div class="title">Example log message</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">INFO MHCChecker	ignoring unhealthy Node, it is terminating and will be handled by MHC	{"NodeName": "node-1.example.com"}</code></pre>
-</div>
-</div>
+<p>You must have the <code>oc</code> command-line interface (CLI) tool installed.</p>
 </li>
 <li>
-<p>If the default machine health check is modified (for example, the <code>unhealthyConditions</code> is  <code>Ready</code>), or if additional machine health checks are created, the node health check is disabled.</p>
-<div class="listingblock">
-<div class="title">Example log message</div>
-<div class="content">
-<pre>INFO controllers.NodeHealthCheck disabling NHC in order to avoid conflict with custom MHCs configured in the cluster {"NodeHealthCheck": "/nhc-worker-default"}</pre>
-</div>
-</div>
-</li>
-<li>
-<p>When, again, only the default machine health check exists, the node health check is re-enabled.</p>
-<div class="listingblock">
-<div class="title">Example log message</div>
-<div class="content">
-<pre>INFO controllers.NodeHealthCheck re-enabling NHC, no conflicting MHC configured in the cluster {"NodeHealthCheck": "/nhc-worker-default"}</pre>
-</div>
-</div>
+<p>You must provision a container image registry in your environment with the container images for your update.</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="control-plane-fencing-node-health-check-operator_use-the-vsphere-problem-detector-operator">Control plane fencing</h4>
-<div class="paragraph _abstract">
-<p>In earlier releases, you could enable Self Node Remediation and Node Health Check on worker nodes. In the event of node failure, you can now also follow remediation strategies on control plane nodes.</p>
-</div>
-<div class="paragraph">
-<p>Do not use the same <code>NodeHealthCheck</code> CR for worker nodes and control plane nodes. Grouping worker nodes and control plane nodes together can result in incorrect evaluation of the minimum healthy node count, and cause unexpected or missing remediations. This is because of the way the Node Health Check Operator handles control plane nodes. You should group the control plane nodes in their own group and the worker nodes in their own group. If required, you can also create multiple groups of worker nodes.</p>
-</div>
-<div class="paragraph">
-<p>Considerations for remediation strategies:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Avoid Node Health Check configurations that involve multiple configurations overlapping the same nodes because they can result in unexpected behavior. This suggestion applies to both worker and control plane nodes.</p>
-</li>
-<li>
-<p>The Node Health Check Operator implements a hardcoded limitation of remediating a maximum of one control plane node at a time. Multiple control plane nodes should not be remediated at the same time.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="eco-node-health-check-operator-creating-node-health-check_use-the-vsphere-problem-detector-operator">Creating a node health check</h4>
-<div class="paragraph _abstract">
-<p>Using the web console, you can create a node health check to identify unhealthy nodes and specify the remediation type and strategy to fix them.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>From the <strong>Administrator</strong> perspective of the Red&#160;Hat OpenShift Container Platform web console, click <strong>Compute</strong> &#8594; <strong>NodeHealthChecks</strong> &#8594; <strong>CreateNodeHealthCheck</strong>.</p>
-</li>
-<li>
-<p>Specify whether to configure the node health check using the <strong>Form view</strong>  or the <strong>YAML view</strong>.</p>
-</li>
-<li>
-<p>Enter a <strong>Name</strong> for the node health check. The name must consist of lower case, alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character.</p>
-</li>
-<li>
-<p>Specify the <strong>Remediator</strong> type, and <strong>Self node remediation</strong> or <strong>Other</strong>. The Self node remediation option is part of the Self Node Remediation Operator that is installed with the Node Health Check Operator. Selecting <strong>Other</strong> requires an <strong>API version</strong>, <strong>Kind</strong>, <strong>Name</strong>, and <strong>Namespace</strong> to be entered, which then points to the remediation template resource of a remediator.</p>
-</li>
-<li>
-<p>Make a <strong>Nodes</strong> selection by specifying the labels of the nodes you want to remediate. The selection matches labels that you want to check. If more than one label is specified, the nodes must contain each label. The default value is empty, which selects both worker and control-plane nodes.</p>
+<p>Complete the steps in "Configuring additional trust stores for image registry access" along with the following changes for the update service.</p>
+<div class="listingblock">
+<div class="title">Image registry CA config map example for the update service</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-registry-ca
+data:
+  updateservice-registry: |
+    -----BEGIN CERTIFICATE-----
+    ...
+    -----END CERTIFICATE-----
+  registry-with-port.example.com..5000: |
+    -----BEGIN CERTIFICATE-----
+    ...
+    -----END CERTIFICATE-----</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>data.updateservice-registry</code></dt>
+<dd>
+<p>Specifies the required config map key name containing the registry certificate authority (CA) certificate.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1922,7 +1845,223 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>When creating a node health check with the Self Node Remediation Operator, you must select either <code>node-role.kubernetes.io/worker</code> or <code>node-role.kubernetes.io/control-plane</code> as the value.</p>
+<p>If a registry has the port, such as <code>registry-with-port.example.com:5000</code>, <code>:</code> should be replaced with <code>..</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="images-update-global-pull-secret_update-a-cluster-in-a-disconnected-environment-using-osus">Update the global cluster pull secret</h4>
+<div class="paragraph _abstract">
+<p>To add new registries or update authentication for your Red&#160;Hat OpenShift Container Platform cluster, you can update the global pull secret by appending new credentials to the <em>additional-pull-secret</em> by using the <code>oc set data secret/additional-pull-secret -n kube-system</code> command.</p>
+</div>
+<div class="paragraph">
+<p>Hypershift manages the new credential propagation among the HostedCluster nodes.</p>
+</div>
+<div class="paragraph">
+<p>Use this procedure when you need a separate registry to store images than the registry used during installation.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Optional: To append a new pull secret to the existing pull secret:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Download the pull secret by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get secret/pull-secret -n openshift-config --template='{{index .data ".dockerconfigjson" | base64decode}}' &gt; &lt;pull_secret_location&gt;</code></pre>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;pull_secret_location&gt;</code></dt>
+<dd>
+<p>Specifies the path to the pull secret file.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Add the new pull secret by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc registry login --registry="&lt;registry&gt;" \
+--auth-basic="&lt;username&gt;:&lt;password&gt;" \
+--to=&lt;pull_secret_location&gt;</code></pre>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;registry&gt;</code></dt>
+<dd>
+<p>Specifies the new registry. You can include many repositories within the same registry, for example: <code>--registry="&lt;registry/my-namespace/my-repository&gt;</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;username&gt;:&lt;password&gt;</code></dt>
+<dd>
+<p>Specifies the credentials of the new registry.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;pull_secret_location&gt;</code></dt>
+<dd>
+<p>Specifies the path to the pull secret file.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Update the global pull secret for your cluster by entering the following command. Note that this update rolls out to all nodes, which can take some time depending on the size of your cluster.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc set data secret/pull-secret -n openshift-config \
+  --from-file=.dockerconfigjson=&lt;pull_secret_location&gt;</code></pre>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;pull_secret_location&gt;</code></dt>
+<dd>
+<p>Specifies the path to the new pull secret file.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>This merges your additional pull secret with the original HostedCluster pull secret, making it available to all nodes in the cluster.</p>
+</div>
+</li>
+<li>
+<p>Optional: Modify the additional pull secret added by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit secret additional-pull-secret -n kube-system</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The secret must contain a valid DockerConfigJSON format.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example pull secret</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Secret
+metadata:
+  name: additional-pull-secret
+  namespace: kube-system
+type: kubernetes.io/dockerconfigjson
+data:
+  .dockerconfigjson: &lt;base64-encoded-docker-config-json&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This results in the following states of the each pull secret:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Original</strong>: immutable</p>
+</li>
+<li>
+<p><strong>Additional</strong>: mutable</p>
+</li>
+<li>
+<p><strong>Global</strong>: final state of both the original and additional pull secrets</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Optional: Delete the additional pull secret added by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete secret additional-pull-secret -n kube-system</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This triggers the automatic cleanup process across your nodes.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="update-service-install_update-a-cluster-in-a-disconnected-environment-using-osus">Installing the OpenShift Update Service Operator</h4>
+<div class="paragraph _abstract">
+<p>To install the OpenShift Update Service, you must first install the OpenShift Update Service Operator by using the Red&#160;Hat OpenShift Container Platform web console or CLI.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For clusters that are installed in disconnected environments, also known as disconnected clusters, Operator Lifecycle Manager by default cannot access the Red Hat-provided software catalog sources hosted on remote registries because those remote sources require full internet connectivity. For more information, see "Using Operator Lifecycle Manager in disconnected environments".</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="update-service-install-web-console_update-a-cluster-in-a-disconnected-environment-using-osus">Installing the OpenShift Update Service Operator by using the web console</h5>
+<div class="paragraph _abstract">
+<p>You can use the web console to install the OpenShift Update Service Operator.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the web console, click <strong>Ecosystem</strong> &#8594; <strong>Software Catalog</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Enter <code>Update Service</code> into the <strong>Filter by keyword&#8230;&#8203;</strong> field to find the Operator faster.</p>
 </div>
 </td>
 </tr>
@@ -1930,28 +2069,628 @@ spec:
 </div>
 </li>
 <li>
-<p>Specify the minimum number of healthy nodes, using either a percentage or a number, required for a <strong>NodeHealthCheck</strong> to remediate nodes in the targeted pool. If the number of healthy nodes equals to or exceeds the limit set by <strong>Min healthy</strong>, remediation occurs. The default value is 51%.</p>
+<p>Choose <strong>OpenShift Update Service</strong> from the list of available Operators, and click <strong>Install</strong>.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select an <strong>Update channel</strong>.</p>
 </li>
 <li>
-<p>Specify a list of <strong>Unhealthy conditions</strong> that if a node meets determines whether the node is considered unhealthy, and requires remediation. You can specify the <strong>Type</strong>, <strong>Status</strong> and <strong>Duration</strong>. You can also create your own custom type.</p>
+<p>Select a <strong>Version</strong>.</p>
 </li>
 <li>
-<p>Click <strong>Create</strong> to create the node health check.</p>
+<p>Select <strong>A specific namespace on the cluster</strong> under <strong>Installation Mode</strong>.</p>
+</li>
+<li>
+<p>Select a namespace for <strong>Installed Namespace</strong> or accept the recommended namespace <code>openshift-update-service</code>.</p>
+</li>
+<li>
+<p>Select an <strong>Update approval</strong> strategy:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>Automatic</strong> strategy allows Operator Lifecycle Manager (OLM) to automatically update the Operator when a new version is available.</p>
+</li>
+<li>
+<p>The <strong>Manual</strong> strategy requires a cluster administrator to approve the Operator update.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <strong>Install</strong>.</p>
 </li>
 </ol>
 </div>
+</li>
+<li>
+<p>Go to <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong> and verify that the OpenShift Update Service Operator is installed.</p>
+</li>
+<li>
+<p>Ensure that <strong>OpenShift Update Service</strong> is listed in the correct namespace with a <strong>Status</strong> of <strong>Succeeded</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="update-service-install-cli_update-a-cluster-in-a-disconnected-environment-using-osus">Installing the OpenShift Update Service Operator by using the CLI</h5>
+<div class="paragraph _abstract">
+<p>You can use the OpenShift CLI (<code>oc</code>) to install the OpenShift Update Service Operator.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a namespace for the OpenShift Update Service Operator:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a <code>Namespace</code> object YAML file, for example, <code>update-service-namespace.yaml</code>, for the OpenShift Update Service Operator:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Namespace
+metadata:
+  name: openshift-update-service
+  annotations:
+    openshift.io/node-selector: ""
+  labels:
+    openshift.io/cluster-monitoring: "true"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set the <code>openshift.io/cluster-monitoring</code> label to <code>"true"</code> to enable Operator-recommended cluster monitoring on this namespace.</p>
+</div>
+</li>
+<li>
+<p>Create the namespace:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;filename&gt;.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f update-service-namespace.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Install the OpenShift Update Service Operator by creating the following objects:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create an <code>OperatorGroup</code> object YAML file, for example, <code>update-service-operator-group.yaml</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: update-service-operator-group
+  namespace: openshift-update-service
+spec:
+  targetNamespaces:
+  - openshift-update-service</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create an <code>OperatorGroup</code> object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-update-service create -f &lt;filename&gt;.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-update-service create -f update-service-operator-group.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a <code>Subscription</code> object YAML file, for example, <code>update-service-subscription.yaml</code>:</p>
+<div class="listingblock">
+<div class="title">Example Subscription</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: update-service-subscription
+  namespace: openshift-update-service
+spec:
+  channel: v1
+  installPlanApproval: "Automatic"
+  source: "redhat-operators"
+  sourceNamespace: "openshift-marketplace"
+  name: "cincinnati-operator"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.source</code></dt>
+<dd>
+<p>Specifies the name of the catalog source that provides the Operator. For clusters that do not use a custom Operator Lifecycle Manager (OLM), specify <code>redhat-operators</code>. If your Red&#160;Hat OpenShift Container Platform cluster is installed in a disconnected environment, specify the name of the <code>CatalogSource</code> object created when you configured Operator Lifecycle Manager (OLM).</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Create the <code>Subscription</code> object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;filename&gt;.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-update-service create -f update-service-subscription.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The OpenShift Update Service Operator is installed to the <code>openshift-update-service</code> namespace and targets the <code>openshift-update-service</code> namespace.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Verify the Operator installation:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-update-service get clusterserviceversions</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                             DISPLAY                    VERSION   REPLACES   PHASE
+update-service-operator.v4.6.0   OpenShift Update Service   4.6.0                Succeeded
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the OpenShift Update Service Operator is listed, the installation was successful. The version number might be different from shown.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="update-service-graph-data_update-a-cluster-in-a-disconnected-environment-using-osus">Creating the OpenShift Update Service graph data container image</h4>
+<div class="paragraph _abstract">
+<p>The OpenShift Update Service requires a graph data container image, from which the OpenShift Update Service retrieves information about channel membership and blocked update edges.</p>
+</div>
+<div class="paragraph">
+<p>Graph data is typically fetched directly from the update graph data repository. In environments where an internet connection is unavailable, loading this information from an init container is another way to make the graph data available to the OpenShift Update Service.</p>
+</div>
+<div class="paragraph">
+<p>The role of the init container is to provide a local copy of the graph data, and during pod initialization, the init container copies the data to a volume that is accessible by the service.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The oc-mirror OpenShift CLI (<code>oc</code>) plugin creates this graph data container image in addition to mirroring release images. If you used the oc-mirror plugin to mirror your release images, you can skip this procedure.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a Dockerfile, for example, <code>./Dockerfile</code>, containing the following information:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">FROM registry.access.redhat.com/ubi9/ubi:latest
+
+RUN curl -L -o cincinnati-graph-data.tar.gz https://api.openshift.com/api/upgrades_info/graph-data
+
+RUN mkdir -p /var/lib/cincinnati-graph-data &amp;&amp; tar xvzf cincinnati-graph-data.tar.gz -C /var/lib/cincinnati-graph-data/ --no-overwrite-dir --no-same-owner
+
+CMD ["/bin/bash", "-c" ,"exec cp -rp /var/lib/cincinnati-graph-data/* /var/lib/cincinnati/graph-data"]</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Use the docker file created in the above step to build a graph data container image, for example, <code>registry.example.com/openshift/graph-data:latest</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman build -f ./Dockerfile -t registry.example.com/openshift/graph-data:latest</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Push the graph data container image created in the previous step to a repository that is accessible to the OpenShift Update Service, for example, <code>registry.example.com/openshift/graph-data:latest</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman push registry.example.com/openshift/graph-data:latest</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To push a graph data image to a registry in a disconnected environment, copy the graph data container image created in the previous step to a repository that is accessible to the OpenShift Update Service. Run <code>oc image mirror --help</code> for available options.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="update-service-create-service_update-a-cluster-in-a-disconnected-environment-using-osus">Creating an OpenShift Update Service application</h4>
+<div class="paragraph _abstract">
+<p>You can create an OpenShift Update Service application by using the Red&#160;Hat OpenShift Container Platform web console or CLI.</p>
+</div>
+<div class="sect4">
+<h5 id="update-service-create-service-web-console_update-a-cluster-in-a-disconnected-environment-using-osus">Creating an OpenShift Update Service application by using the web console</h5>
+<div class="paragraph _abstract">
+<p>You can use the Red&#160;Hat OpenShift Container Platform web console to create an OpenShift Update Service application by using the OpenShift Update Service Operator.</p>
+</div>
 <div class="ulist">
-<div class="title">Verification</div>
+<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>Navigate to the <strong>Compute</strong> &#8594; <strong>NodeHealthCheck</strong> page and verify that the corresponding node health check is listed, and their status displayed. Once created, node health checks can be paused, modified, and deleted.</p>
+<p>The OpenShift Update Service Operator has been installed.</p>
+</li>
+<li>
+<p>The OpenShift Update Service graph data container image has been created and pushed to a repository that is accessible to the OpenShift Update Service.</p>
+</li>
+<li>
+<p>The current release and update target releases have been mirrored to a registry in the disconnected environment.</p>
 </li>
 </ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the web console, click <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong>.</p>
+</li>
+<li>
+<p>Choose <strong>OpenShift Update Service</strong> from the list of installed Operators.</p>
+</li>
+<li>
+<p>Click the <strong>Update Service</strong> tab.</p>
+</li>
+<li>
+<p>Click <strong>Create UpdateService</strong>.</p>
+</li>
+<li>
+<p>Enter a name in the <strong>Name</strong> field, for example, <code>service</code>.</p>
+</li>
+<li>
+<p>Enter the local pullspec in the <strong>Graph Data Image</strong> field to the graph data container image created in "Creating the OpenShift Update Service graph data container image", for example, <code>registry.example.com/openshift/graph-data:latest</code>.</p>
+</li>
+<li>
+<p>In the <strong>Releases</strong> field, enter the registry and repository created to contain the release images in "Mirroring the Red&#160;Hat OpenShift Container Platform image repository", for example, <code>registry.example.com/ocp4/openshift4-release-images</code>.</p>
+</li>
+<li>
+<p>Enter <code>2</code> in the <strong>Replicas</strong> field.</p>
+</li>
+<li>
+<p>Click <strong>Create</strong> to create the OpenShift Update Service application.</p>
+</li>
+<li>
+<p>Verify the OpenShift Update Service application:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From the <strong>UpdateServices</strong> list in the <strong>Update Service</strong> tab, click the Update Service application just created.</p>
+</li>
+<li>
+<p>Click the <strong>Resources</strong> tab.</p>
+</li>
+<li>
+<p>Verify each application resource has a status of <strong>Created</strong>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="update-service-create-service-cli_update-a-cluster-in-a-disconnected-environment-using-osus">Creating an OpenShift Update Service application by using the CLI</h5>
+<div class="paragraph _abstract">
+<p>You can use the OpenShift CLI (<code>oc</code>) to create an OpenShift Update Service application.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>The OpenShift Update Service Operator has been installed.</p>
+</li>
+<li>
+<p>The OpenShift Update Service graph data container image has been created and pushed to a repository that is accessible to the OpenShift Update Service.</p>
+</li>
+<li>
+<p>The current release and update target releases have been mirrored to a registry in the disconnected environment.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Configure the OpenShift Update Service target namespace, for example, <code>openshift-update-service</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ NAMESPACE=openshift-update-service</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The namespace must match the <code>targetNamespaces</code> value from the operator group.</p>
+</div>
+</li>
+<li>
+<p>Configure the name of the OpenShift Update Service application, for example, <code>service</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ NAME=service</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Configure the registry and repository for the release images as configured in "Mirroring the Red&#160;Hat OpenShift Container Platform image repository", for example, <code>registry.example.com/ocp4/openshift4-release-images</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ RELEASE_IMAGES=registry.example.com/ocp4/openshift4-release-images</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Set the local pullspec for the graph data image to the graph data container image created in "Creating the OpenShift Update Service graph data container image", for example, <code>registry.example.com/openshift/graph-data:latest</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ GRAPH_DATA_IMAGE=registry.example.com/openshift/graph-data:latest</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create an OpenShift Update Service application object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n "${NAMESPACE}" create -f - &lt;&lt;EOF
+apiVersion: updateservice.operator.openshift.io/v1
+kind: UpdateService
+metadata:
+  name: ${NAME}
+spec:
+  replicas: 2
+  releases: ${RELEASE_IMAGES}
+  graphDataImage: ${GRAPH_DATA_IMAGE}
+EOF</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify the OpenShift Update Service application:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Use the following command to obtain a policy engine route:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ while sleep 1; do POLICY_ENGINE_GRAPH_URI="$(oc -n "${NAMESPACE}" get -o jsonpath='{.status.policyEngineURI}/api/upgrades_info/v1/graph{"\n"}' updateservice "${NAME}")"; SCHEME="${POLICY_ENGINE_GRAPH_URI%%:*}"; if test "${SCHEME}" = http -o "${SCHEME}" = https; then break; fi; done</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You might need to poll until the command succeeds.</p>
+</div>
+</li>
+<li>
+<p>Retrieve a graph from the policy engine. Be sure to specify a valid version for <code>channel</code>. For example, if running in Red&#160;Hat OpenShift Container Platform {product-version}, use <code>stable-{product-version}</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ while sleep 10; do HTTP_CODE="$(curl --header Accept:application/json --output /dev/stderr --write-out "%{http_code}" "${POLICY_ENGINE_GRAPH_URI}?channel=stable-4.6")"; if test "${HTTP_CODE}" -eq 200; then break; fi; echo "${HTTP_CODE}"; done</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This polls until the graph request succeeds; however, the resulting graph might be empty depending on which release images you have mirrored.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The policy engine route name must not be more than 63 characters based on RFC-1123. If you see <code>ReconcileCompleted</code> status as <code>false</code>  with the reason <code>CreateRouteFailed</code> caused by <code>host must conform to DNS 1123 naming convention
+and must be no more than 63 characters</code>, try creating the Update Service with a shorter name.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="update-service-configure-cvo">Configuring the Cluster Version Operator (CVO)</h4>
+<div class="paragraph _abstract">
+<p>After the OpenShift Update Service Operator has been installed and the OpenShift Update Service application has been created, the Cluster Version Operator (CVO) can be updated to pull graph data from the OpenShift Update Service installed in your environment.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>The OpenShift Update Service Operator has been installed.</p>
+</li>
+<li>
+<p>The OpenShift Update Service graph data container image has been created and pushed to a repository that is accessible to the OpenShift Update Service.</p>
+</li>
+<li>
+<p>The current release and update target releases have been mirrored to a registry in the disconnected environment.</p>
+</li>
+<li>
+<p>The OpenShift Update Service application has been created.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Set the OpenShift Update Service target namespace, for example, <code>openshift-update-service</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ NAMESPACE=openshift-update-service</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Set the name of the OpenShift Update Service application, for example, <code>service</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ NAME=service</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Obtain the policy engine route:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ POLICY_ENGINE_GRAPH_URI="$(oc -n "${NAMESPACE}" get -o jsonpath='{.status.policyEngineURI}/api/upgrades_info/v1/graph{"\n"}' updateservice "${NAME}")"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Set the patch for the pull graph data:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ PATCH="{\"spec\":{\"upstream\":\"${POLICY_ENGINE_GRAPH_URI}\"}}"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Patch the CVO to use the OpenShift Update Service in your environment:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch clusterversion version -p $PATCH --type merge</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For more information about configuring the CA to trust the update server, see "Configuring the cluster-wide proxy".</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="verifying-local-osus-installation_update-a-cluster-in-a-disconnected-environment-using-osus">Verifying your local OSUS installation</h4>
+<div class="paragraph _abstract">
+<p>Before you proceed to update your cluster, verify that the local OSUS instance is correctly installed and configured in your environment.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Confirm that the following conditions are met:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The Cluster Version Operator (CVO) is configured to use your installed OpenShift Update Service application.</p>
+</li>
+<li>
+<p>The release image signature config map for the new release is applied to your cluster.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The Cluster Version Operator (CVO) uses release image signatures to ensure that release images have not been modified, by verifying that the release image signatures match the expected result.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>The current release and update target release images are mirrored to a registry in the disconnected environment.</p>
+</li>
+<li>
+<p>A recent graph data container image has been mirrored to your registry.</p>
+</li>
+<li>
+<p>A recent version of the OpenShift Update Service Operator is installed.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you have not recently installed or updated the OpenShift Update Service Operator, there might be a more recent version available.
+For more information about how to update your OLM catalog in a disconnected environment, see "Using Operator Lifecycle Manager in disconnected environments".</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>After you configure your cluster to use the installed OpenShift Update Service and local mirror registry, you can proceed to update your cluster.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="about-oadp-update-channels_troubleshoot-common-update-failures.html">About OADP update channels</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="understand-etcd-performance_move-etcd-to-a-different-disk.html">Factors that affect etcd performance</a> →</p>
+<p>← Previous: <a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a> | ↑ Up: <a href="_disconnected_environments.html">Disconnected environments</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a> →</p>
 </div>
 </div>
 <div id="footer">
