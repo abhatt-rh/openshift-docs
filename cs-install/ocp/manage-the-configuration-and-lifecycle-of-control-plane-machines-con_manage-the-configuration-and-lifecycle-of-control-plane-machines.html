@@ -489,6 +489,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="about-kmm_review-kmm-releases-and-updates.html">About the Kernel Module Management Operator</a>
 </li>
+<li><a href="hosted-control-planes-release-notes_hosted-control-planes-release-notes.html">Hosted control planes release notes</a>
+</li>
+<li><a href="review-multiarch-tuning-operator-releases-con_review-multiarch-tuning-operator-releases.html">Review Multiarch Tuning Operator releases</a>
+</li>
 </ul>
 </li>
 <li><a href="_discover.html">Discover</a>
@@ -572,6 +576,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
 </li>
+<li><a href="override-resource-util-hosted-cluster-con_override-resource-util-hosted-cluster.html">Overriding resource utilization measurements</a>
+</li>
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
@@ -644,7 +650,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-single-node-openshift-intro_install-single-node-openshift.html">Install single-node OpenShift</a>
 </li>
+<li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
+</li>
 <li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
+</li>
+<li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
 </li>
 <li><a href="troubleshoot-installation-issues-intro_troubleshoot-installation-issues.html">Troubleshoot installation issues</a>
 </li>
@@ -716,7 +726,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="installation-about-restricted-networks_installing-restricted-networks-nutanix-installer-provisioned.html">About installations in restricted networks</a>
 </li>
-<li><a href="bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift.html">Prerequisites for using Red&#160;Hat Bare Metal as a Service for OpenShift</a>
+<li><a href="bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift.html">Prerequisites for using Red&#160;Hat Bare-Metal-as-a-Service for OpenShift</a>
 </li>
 <li><a href="install-on-aws-upi-intro_install-on-aws-upi.html">Install on AWS with user-provisioned infrastructure</a>
 </li>
@@ -852,11 +862,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hosted-clusters-openstack-prerequisites_deploying-hosted-control-planes-on-openstack.html">Prerequisites for OpenStack</a>
 </li>
-<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
-</li>
 <li><a href="installing-the-hosted-control-planes-command-line-interface-intro_installing-the-hosted-control-planes-command-line-interface.html">Installing the hosted control planes command-line interface</a>
 </li>
 <li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-deploy-azure-con_deploying-hosted-control-planes-on-azure.html">Deploying hosted control planes on Azure</a>
 </li>
 <li><a href="hcp-bm-overview_deploying-hosted-control-planes-on-bare-metal-with-the-agent-platform.html">About hosted control planes on bare metal with the Agent platform</a>
 </li>
@@ -869,29 +879,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_disconnected_environments.html">Disconnected environments</a>
 
 <ul class="sectlevel2">
-<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Understand disconnected environments</a>
+<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
-<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Installing a cluster with the Agent-based Installer</a>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
-<li><a href="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Prerequisites</a>
+<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">About oc-mirror plugin v2</a>
+<li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command.html">Prerequisites</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
-<li><a href="oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2.html">Changes from oc-mirror plugin v1 to v2</a>
-</li>
-<li><a href="olm-restricted-network-prereqs_manage-olm-operators-in-a-disconnected-environment.html">Prerequisites</a>
+<li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
-<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Using the OpenShift Update Service in a disconnected environment</a>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="updating-cli-prereqs_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Prerequisites for a cluster update</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
 </li>
-<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstalling the OpenShift Update Service from a cluster</a>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
-<li><a href="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected.html">About the mirror registry</a>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
+<li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
+</li>
+<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
 </li>
 </ul>
 </li>
@@ -946,7 +958,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="core-user-password_change-the-core-user-password-for-node-access.html">Change the core user password for node access</a>
 </li>
-<li><a href="configure-control-plane-failure-domains-con_configure-control-plane-failure-domains.html">Configure control plane failure domains</a>
+<li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
 </li>
@@ -986,9 +998,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="manage-the-configuration-and-lifecycle-of-control-plane-machines-con_manage-the-configuration-and-lifecycle-of-control-plane-machines.html"><span class="toc-current">Manage the configuration and lifecycle of control plane machines</span></a>
 </li>
+<li><a href="manage-the-configuration-and-lifecycle-of-compute-machines-con_manage-the-configuration-and-lifecycle-of-compute-machines.html">Manage the configuration and lifecycle of compute machines</a>
+</li>
+<li><a href="identify-and-group-compute-machines-con_identify-and-group-compute-machines.html">Identify and group compute machines</a>
+</li>
+<li><a href="identify-and-group-control-plane-machines-con_identify-and-group-control-plane-machines.html">Identify and group control plane machines</a>
+</li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
-<li><a href="hcp-import-manual_manually-import-a-hosted-cluster.html">Manually importing hosted clusters</a>
+<li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
 </li>
 <li><a href="nodes-pods-image-volume-about_mount-an-oci-image-onto-a-pod.html">Understanding image volumes</a>
 </li>
@@ -1020,7 +1038,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
 </li>
-<li><a href="machine-about-phases_understand-the-machine-lifecycle.html">Machine phases</a>
+<li><a href="understand-the-machine-lifecycle-con_understand-the-machine-lifecycle.html">Understand the machine lifecycle</a>
 </li>
 <li><a href="understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature-con_understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature.html">Understand the out-of-cluster mode of the Image Mode for OpenShift feature</a>
 </li>
@@ -1072,6 +1090,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console.html">Use developer workflows in the console</a>
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
+</li>
+<li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
 </li>
 </ul>
 </li>
@@ -1138,7 +1158,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">About oc-mirror plugin v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1164,13 +1184,83 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
 </li>
-<li><a href="change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set-con_change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set.html">Change the configuration of compute machines by updating a compute machine set</a>
+<li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
+</li>
+<li><a href="enable-automated-machine-management-on-user-provisioned-infrastructure-con_enable-automated-machine-management-on-user-provisioned-infrastructure.html">Enable automated machine management on user-provisioned infrastructure</a>
 </li>
 <li><a href="apply-configuration-changes-to-compute-machines-with-automation-con_apply-configuration-changes-to-compute-machines-with-automation.html">Apply configuration changes to compute machines with automation</a>
 </li>
-<li><a href="mapi-to-capi-migration-overview_change-the-authoritative-api-for-machine-management-resources.html">Machine API to Cluster API resource migration</a>
+<li><a href="change-the-authoritative-api-for-machine-management-resources-con_change-the-authoritative-api-for-machine-management-resources.html">Change the authoritative API for machine management resources</a>
 </li>
 <li><a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a>
+</li>
+<li><a href="configure-dns-records-in-a-private-zone-con_configure-dns-records-in-a-private-zone.html">Configure DNS records in a private zone</a>
+</li>
+<li><a href="set-the-ingress-controller-to-private-con_set-the-ingress-controller-to-private.html">Set the Ingress Controller to private</a>
+</li>
+<li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
+</li>
+<li><a href="restrict-the-api-server-to-private-for-azure-con_restrict-the-api-server-to-private-for-azure.html">Restrict the API server to private for Azure</a>
+</li>
+<li><a href="security-rhcos-overview_understand-host-security-controls.html">Red Hat Enterprise Linux CoreOS (RHCOS)</a>
+</li>
+<li><a href="identity-provider-overview_prepare-a-cluster-for-user-access.html">Identity providers in Red&#160;Hat OpenShift Container Platform</a>
+</li>
+<li><a href="manage-workloads-using-taints-and-tolerations-con_manage-workloads-using-taints-and-tolerations.html">Manage workloads using taints and tolerations</a>
+</li>
+<li><a href="infrastructure-components_move-workloads-to-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
+</li>
+<li><a href="registry-configuring-private-storage-endpoint-azure_configure-a-private-storage-endpoint-on-azure.html">Configure a private storage endpoint on Azure</a>
+</li>
+<li><a href="configure-private-storage-endpoint-with-iro-discovery-con_configure-private-storage-endpoint-with-iro-discovery.html">Configure a private storage endpoint by using Image Registry Operator discovery</a>
+</li>
+<li><a href="configure-private-storage-endpoint-with-user-provided-vnet-con_configure-private-storage-endpoint-with-user-provided-vnet.html">Configure a private storage endpoint with a user-provided VNet</a>
+</li>
+<li><a href="multi-architecture-configuring-your-cluster_create-multi-architecture-compute-clusters.html">Configuring your cluster with multi-architecture compute machines</a>
+</li>
+<li><a href="create-arm64-boot-image-using-azure-image-gallery-con_create-arm64-boot-image-using-azure-image-gallery.html">Create a 64-bit ARM boot image by using the Azure Compute Gallery</a>
+</li>
+<li><a href="add-multi-architecture-compute-machine-set-to-azure-cluster-con_add-multi-architecture-compute-machine-set-to-azure-cluster.html">Add a multi-architecture compute machine set to an Azure cluster</a>
+</li>
+<li><a href="add-multi-architecture-compute-machine-set-to-aws-cluster-con_add-multi-architecture-compute-machine-set-to-aws-cluster.html">Add a multi-architecture compute machine set to an AWS cluster</a>
+</li>
+<li><a href="create-multi-architecture-compute-clusters-on-google-cloud-con_create-multi-architecture-compute-clusters-on-google-cloud.html">Create multi-architecture compute clusters on Google Cloud</a>
+</li>
+<li><a href="create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z-con_create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z.html">Create multi-architecture compute clusters on bare metal, IBM Power, or IBM Z</a>
+</li>
+<li><a href="enable-64k-pages-on-rhcos-kernel-con_enable-64k-pages-on-rhcos-kernel.html">Enable 64k pages on the RHCOS kernel</a>
+</li>
+<li><a href="multi-architecture-gather-info-about-workloads_configure-the-multiarch-tuning-operator.html">Multiarch Tuning Operator pod labels and architecture support overview</a>
+</li>
+<li><a href="install-multiarch-tuning-operator-via-cli-con_install-multiarch-tuning-operator-via-cli.html">Install the Multiarch Tuning Operator by using the CLI</a>
+</li>
+<li><a href="install-multiarch-tuning-operator-via-web-console-con_install-multiarch-tuning-operator-via-web-console.html">Install the Multiarch Tuning Operator by using the web console</a>
+</li>
+<li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
+</li>
+<li><a href="create-kubeletconfig-cr-to-edit-kubelet-parameters-con_create-kubeletconfig-cr-to-edit-kubelet-parameters.html">Create a KubeletConfig CR to edit kubelet parameters</a>
+</li>
+<li><a href="modify-number-of-unavailable-worker-nodes-con_modify-number-of-unavailable-worker-nodes.html">Modify the number of unavailable worker nodes</a>
+</li>
+<li><a href="manage-cluster-overcommitment-con_manage-cluster-overcommitment.html">Manage cluster overcommitment</a>
+</li>
+<li><a href="registry-removed_configure-the-image-registry-operator.html">Image registry removed during installation</a>
+</li>
+<li><a href="registry-removed_configure-the-image-registry-after-installation.html">Image registry removed during installation</a>
+</li>
+<li><a href="configure-registry-storage-by-platform-con_configure-registry-storage-by-platform.html">Configure registry storage by platform</a>
+</li>
+<li><a href="odc-customizing-user-perspectives_enable-the-developer-perspective.html">Customize user perspectives</a>
+</li>
+<li><a href="set-user-preferences-con_set-user-preferences.html">Set user preferences</a>
+</li>
+<li><a href="configure-theme-and-language-preferences-con_configure-theme-and-language-preferences.html">Configure theme and language preferences</a>
+</li>
+<li><a href="configure-the-web-console-con_configure-the-web-console.html">Configure the web console</a>
+</li>
+<li><a href="configure-web-terminal-timeout-and-image-settings-con_configure-web-terminal-timeout-and-image-settings.html">Configure web terminal timeout and image settings</a>
+</li>
+<li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
 </li>
 </ul>
 </li>
@@ -1182,6 +1272,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
+</li>
+<li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1349,6 +1441,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-confidential-vms-con_configure-confidential-vms.html">Configure confidential VMs</a>
 </li>
+<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines</a>
+</li>
+<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
+</li>
 <li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
 </li>
 <li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
@@ -1460,7 +1564,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nodes-nodes-managing-max-pods-proc_adjust-maximum-number-of-pods-on-a-node.html">Configure the maximum number of pods per node</a>
 </li>
-<li><a href="machineset-manually-scaling_scale-compute-resources.html">Scale a compute machine set manually</a>
+<li><a href="scale-compute-resources-con_scale-compute-resources.html">Scale workloads to match demand</a>
 </li>
 <li><a href="nodes-cluster-resource-configure-about_configure-cluster-memory-to-meet-container-memory-and-risk-requirements.html">Understanding how to manage application memory</a>
 </li>
@@ -1500,7 +1604,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="machine-mgmt-intro-managing-compute_scale-the-number-of-compute-machines-that-use-a-specific-configuration.html">Compute machine management</a>
+<li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
 <li><a href="machine-mgmt-intro-add-for-upi_add-compute-machines-manually.html">Compute machine creation on user-provisioned infrastructure</a>
 </li>
@@ -1508,11 +1612,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="machineset-label-gpu-autoscaler_label-gpu-machine-sets-for-autoscaler.html">Label GPU machine sets for the cluster autoscaler</a>
 </li>
-<li><a href="machineset-non-guaranteed-instance_creating-machineset-aws.html">Machine sets that deploy machines as Spot Instances</a>
+<li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="machineset-capacity-reservation_creating-machineset-aws.html">Configure Capacity Reservations by using machine sets</a>
+<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
 </li>
-<li><a href="nvidia-gpu-aws-adding-a-gpu-node_add-gpu-nodes-to-machine-sets.html">Add a GPU node to an existing Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+</li>
+<li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
+</li>
+<li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
+</li>
+<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
+</li>
+<li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
+</li>
+<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
 </ul>
 </li>
@@ -1543,6 +1661,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog.html">About Operator installation from the software catalog</a>
 </li>
+<li><a href="cli-manager-about_manage-cli-plugins-with-the-cli-manager.html">About the CLI Manager Operator</a>
+</li>
 <li><a href="nodes-pods-plugins-about_manage-kernel-modules-across-cluster-nodes-deploy-device-plugins-alongside-kernel-modules.html">Understand device plugins</a>
 </li>
 <li><a href="resolve-catalog-content-con_resolve-catalog-content.html">Resolve catalog content</a>
@@ -1552,6 +1672,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_validate.html">Validate</a>
 
 <ul class="sectlevel2">
+<li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
+</li>
 <li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
@@ -1573,13 +1695,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="remediate-node-configuration-drift-to-return-the-node-to-ready-con_remediate-node-configuration-drift-to-return-the-node-to-ready.html">Remediate node configuration drift to return the node to ready</a>
 </li>
+<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
+</li>
+<li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
+</li>
+<li><a href="troubleshoot-hosted-clusters-by-platform-con_troubleshoot-hosted-clusters-by-platform.html">Troubleshoot hosted clusters by platform</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal.html">Troubleshoot hosted clusters on bare metal</a>
 </li>
-<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshoot hosted clusters on OpenShift Virtualization</a>
+<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
-<li><a href="troubleshoot-hosted-clusters-by-platform-con_troubleshoot-hosted-clusters-by-platform.html">Troubleshoot hosted clusters by platform</a>
+<li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
+</li>
+<li><a href="hcp-disaster-recovery-aws-con_disaster-recovery-for-hosted-control-planes-on-aws.html">Disaster recovery for a hosted cluster in AWS</a>
+</li>
+<li><a href="hcp-azure-automated-dr_disaster-recovery-for-hosted-control-planes-on-azure.html">Automated disaster recovery for hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-azure-etcd-snapshot_backup-and-restore-for-hosted-control-planes-on-azure.html">Backup and restore for hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-disaster-recovery-oadp-con_disaster-recovery-for-hosted-control-planes-using-oadp.html">Disaster recovery for a hosted cluster by using OADP</a>
+</li>
+<li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
+</li>
+<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
+</li>
+<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
+</li>
+<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="post-using-node-tuning-operator_troubleshoot-node-performance-issues.html">Using the Node Tuning Operator</a>
 </li>
@@ -1587,7 +1733,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-network-flows-object_incident-investigation.html">Network object configuration for tracking network flows</a>
 </li>
-<li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspecting pod and container logs</a>
+<li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
 <li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
 </li>
@@ -1595,13 +1741,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
+</li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
 </li>
-<li><a href="inspecting-pod-and-container-logs_copy-files-to-or-from-containers.html">Inspecting pod and container logs</a>
+<li><a href="inspecting-pod-and-container-logs_copy-files-to-or-from-containers.html">Inspect pod and container logs</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_replace-failed-bare-metal-control-plane-nodes-without-bmc-credentials.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1613,23 +1761,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-oadp-update-channels_troubleshoot-common-update-failures.html">About OADP update channels</a>
 </li>
-<li><a href="about-node-health-check-operator_use-the-vsphere-problem-detector-operator.html">About the Node Health Check Operator</a>
-</li>
 <li><a href="understand-etcd-performance_move-etcd-to-a-different-disk.html">Factors that affect etcd performance</a>
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_gather-data-about-a-cluster-update.html">Gathering bootstrap node diagnostic data</a>
 </li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes.html">Control plane backup and restore operations</a>
-</li>
-<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-a-hosted-cluster.html">Collecting Windows application event logs</a>
-</li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
-<li><a href="investigating-why-windows-machine-compute-node_troubleshoot-machine-management.html">Investigating why Windows Machine does not become compute node</a>
+<li><a href="troubleshoot-machine-management-con_troubleshoot-machine-management.html">Troubleshoot machine management</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
-<li><a href="understanding-oc-log-levels_identify-resource-limits-and-quotas-in-topology-view.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
+<li><a href="understanding-oc-log-levels_identify-resource-limits-and-quotas-in-topology-view.html">Understand OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
 <li><a href="nw-networkpolicy-project-defaults_troubleshoot-web-terminal-startup-failures.html">Add network policies to the new project template</a>
 </li>
@@ -1645,7 +1787,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1653,13 +1795,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
-</li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
-</li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
+</li>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
 </li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
@@ -1685,11 +1823,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_investigate-an-active-cluster-issue-troubleshoot-cluster-issues.html">Gathering bootstrap node diagnostic data</a>
 </li>
-<li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
+<li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gather Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
 </li>
-<li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
+</li>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
+</li>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
+</li>
+<li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understand OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
 <li><a href="post-install-etcd-tasks_defragment-etcd-data-automatically-defragment-etcd-data.html">etcd tasks</a>
 </li>
@@ -1717,6 +1861,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_encrypt-etcd-test-restore-procedures.html">Control plane backup and restore operations</a>
 </li>
+<li><a href="troubleshoot-clusters-that-use-the-cluster-api-con_troubleshoot-clusters-that-use-the-cluster-api.html">Troubleshoot clusters that use the Cluster API</a>
+</li>
+<li><a href="troubleshoot-the-control-plane-machine-set-con_troubleshoot-the-control-plane-machine-set.html">Troubleshoot the control plane machine set</a>
+</li>
+<li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1731,12 +1881,97 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cpmso-checking-status_manage-the-configuration-and-lifecycle-of-control-plane-machines">Checking the control plane machine set custom resource state</a></li><li class="level-4"><a href="#cpmso-activating_manage-the-configuration-and-lifecycle-of-control-plane-machines">Activating the control plane machine set custom resource</a></li><li class="level-4"><a href="#cpmso-control-plane-recovery_manage-the-configuration-and-lifecycle-of-control-plane-machines">Recovery of failed control plane machines</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cpmso-overview_manage-the-configuration-and-lifecycle-of-control-plane-machines">Control Plane Machine Set Operator overview</a></li><li class="level-5"><a href="#cpmso-limitations_manage-the-configuration-and-lifecycle-of-control-plane-machines">Control Plane Machine Set Operator limitations</a></li><li class="level-4"><a href="#cpmso-checking-status_manage-the-configuration-and-lifecycle-of-control-plane-machines">Checking the control plane machine set custom resource state</a></li><li class="level-4"><a href="#cpmso-activating_manage-the-configuration-and-lifecycle-of-control-plane-machines">Activating the control plane machine set custom resource</a></li><li class="level-4"><a href="#cpmso-creating-cr_manage-the-configuration-and-lifecycle-of-control-plane-machines">Creating a control plane machine set custom resource</a></li><li class="level-4"><a href="#cpmso-deleting_manage-the-configuration-and-lifecycle-of-control-plane-machines">Deleting the control plane machine set</a></li><li class="level-4"><a href="#cpmso-reenabling_manage-the-configuration-and-lifecycle-of-control-plane-machines">Re-enabling the control plane machine set</a></li><li class="level-4"><a href="#cpmso-control-plane-recovery_manage-the-configuration-and-lifecycle-of-control-plane-machines">Recovery of failed control plane machines</a></li><li class="level-4"><a href="#machine-lifecycle-hook-deletion-etcd_manage-the-configuration-and-lifecycle-of-control-plane-machines">Quorum protection with machine lifecycle hooks</a></li><li class="level-5"><a href="#machine-lifecycle-hook-deletion-etcd-order_manage-the-configuration-and-lifecycle-of-control-plane-machines">Control plane deletion with quorum protection processing order</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="manage-the-configuration-and-lifecycle-of-control-plane-machines-con_manage-the-configuration-and-lifecycle-of-control-plane-machines">Manage the configuration and lifecycle of control plane machines</h3>
 <div class="paragraph _abstract">
 <p>A control plane machine set keeps the control plane at the desired count and configuration, replacing a machine when its specification changes or when it becomes unhealthy. You activate the machine set, watch its status, and recover the control plane when a machine is lost.</p>
+</div>
+<div class="sect3">
+<h4 id="cpmso-overview_manage-the-configuration-and-lifecycle-of-control-plane-machines">Control Plane Machine Set Operator overview</h4>
+<div class="paragraph _abstract">
+<p>You can use the Control Plane Machine Set Operator to automate management of control plane machines in your Red&#160;Hat OpenShift Container Platform cluster, including automated replacement of degraded machines and rollout of configuration changes.</p>
+</div>
+<div class="paragraph">
+<p>When the state of the cluster control plane machine set is set to <code>Active</code>, the Operator ensures that the cluster has the correct number of control plane machines with the specified configuration. This allows the automated replacement of degraded control plane machines and rollout of changes to the control plane.</p>
+</div>
+<div class="paragraph">
+<p>A cluster has only one control plane machine set, and the Operator only manages objects in the <code>openshift-machine-api</code> namespace.</p>
+</div>
+<div class="sect4">
+<h5 id="cpmso-limitations_manage-the-configuration-and-lifecycle-of-control-plane-machines">Control Plane Machine Set Operator limitations</h5>
+<div class="paragraph _abstract">
+<p>Before using the Control Plane Machine Set Operator, review platform support, cluster requirements, and unsupported configurations to ensure compatibility with your environment.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Only Amazon Web Services (AWS), Google Cloud, IBM Power&#174; Virtual Server, Microsoft Azure, Nutanix, VMware vSphere, and Red Hat OpenStack Platform (RHOSP) clusters are supported.</p>
+</li>
+<li>
+<p>Clusters that do not have preexisting machines that represent the control plane nodes cannot use a control plane machine set or enable the use of a control plane machine set after installation. Generally, preexisting control plane machines are only present if the installation program provisioned the cluster infrastructure.</p>
+<div class="paragraph">
+<p>To check if a cluster has the required preexisting control plane machines, run the following command as a user with administrator privileges:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machine \
+  -n openshift-machine-api \
+  -l machine.openshift.io/cluster-api-machine-role=master</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output showing preexisting control plane machines</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">NAME                    PHASE     TYPE         REGION      ZONE         AGE
+&lt;infrastructure_id&gt;-master-0   Running   m6i.xlarge   us-west-1   us-west-1a   5h19m
+&lt;infrastructure_id&gt;-master-1   Running   m6i.xlarge   us-west-1   us-west-1b   5h19m
+&lt;infrastructure_id&gt;-master-2   Running   m6i.xlarge   us-west-1   us-west-1a   5h19m</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output missing preexisting control plane machines</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">No resources found in openshift-machine-api namespace.</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>The Operator requires the Machine API Operator to be operational and is therefore not supported on clusters with manually provisioned machines. When installing a Red&#160;Hat OpenShift Container Platform cluster with manually provisioned machines for a platform that creates an active generated <code>ControlPlaneMachineSet</code> custom resource (CR), you must remove the Kubernetes manifest files that define the control plane machine set as instructed in the installation process.</p>
+</li>
+<li>
+<p>Only clusters with three control plane machines are supported.</p>
+</li>
+<li>
+<p>Horizontal scaling of the control plane is not supported.</p>
+</li>
+<li>
+<p>Deploying Azure control plane machines on Ephemeral operating system disks increases risk for data loss and is not supported.</p>
+</li>
+<li>
+<p>Deploying control plane machines as AWS Spot Instances, Google Cloud preemptible VMs, or Azure Spot VMs is not supported.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Attempting to deploy control plane machines as AWS Spot Instances, Google Cloud preemptible VMs, or Azure Spot VMs might cause the cluster to lose etcd quorum. A cluster that loses all control plane machines simultaneously is unrecoverable.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Making changes to the control plane machine set during or before installation is not supported. You must make any changes to the control plane machine set only after installation.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="cpmso-checking-status_manage-the-configuration-and-lifecycle-of-control-plane-machines">Checking the control plane machine set custom resource state</h4>
@@ -1839,6 +2074,182 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
+<h4 id="cpmso-creating-cr_manage-the-configuration-and-lifecycle-of-control-plane-machines">Creating a control plane machine set custom resource</h4>
+<div class="paragraph _abstract">
+<p>To use the control plane machine set, you must ensure that a <code>ControlPlaneMachineSet</code> custom resource (CR) with the correct settings for your cluster exists. On a cluster without a generated CR, you must create the CR manually and activate it.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For more information about the structure and parameters of the CR, see "Control plane machine set configuration".</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a YAML file using the following template:</p>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1
+kind: ControlPlaneMachineSet
+metadata:
+  name: cluster
+  namespace: openshift-machine-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: &lt;cluster_id&gt;
+      machine.openshift.io/cluster-api-machine-role: master
+      machine.openshift.io/cluster-api-machine-type: master
+  state: Active
+  strategy:
+    type: RollingUpdate
+  template:
+    machineType: machines_v1beta1_machine_openshift_io
+    machines_v1beta1_machine_openshift_io:
+      failureDomains:
+        platform: &lt;platform&gt;
+        &lt;platform_failure_domains&gt;
+      metadata:
+        labels:
+          machine.openshift.io/cluster-api-cluster: &lt;cluster_id&gt;
+          machine.openshift.io/cluster-api-machine-role: master
+          machine.openshift.io/cluster-api-machine-type: master
+      spec:
+        providerSpec:
+          value:
+            &lt;platform_provider_spec&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;cluster_id&gt;</code></dt>
+<dd>
+<p>Specifies the infrastructure ID that is based on the cluster ID that you set when you provisioned the cluster. You must specify this value when you create a <code>ControlPlaneMachineSet</code> CR. If you have the OpenShift CLI (<code>oc</code>) installed, you can obtain the infrastructure ID by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get -o jsonpath='{.status.infrastructureName}{"\n"}' infrastructure cluster</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>state: Active</code></dt>
+<dd>
+<p>Specifies the state of the Operator. When the state is <code>Inactive</code>, the Operator is not operational. You can activate the Operator by setting the value to <code>Active</code>.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Before you activate the CR, you must ensure that its configuration is correct for your cluster requirements.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+<dt class="hdlist1"><code>type: RollingUpdate</code></dt>
+<dd>
+<p>Specifies the update strategy for the cluster. Valid values are <code>OnDelete</code> and <code>RollingUpdate</code>. The default value is <code>RollingUpdate</code>. For more information about update strategies, see "Updating the control plane configuration".</p>
+</dd>
+<dt class="hdlist1"><code>platform: &lt;platform&gt;</code></dt>
+<dd>
+<p>Specifies the cloud provider platform name. Valid values are <code>AWS</code>, <code>Azure</code>, <code>GCP</code>, <code>Nutanix</code>, <code>VSphere</code>, and <code>OpenStack</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;platform_failure_domains&gt;</code></dt>
+<dd>
+<p>Specifies the failure domains configuration for the cluster. The format and values of this section are provider-specific. For more information, see the sample failure domain configuration for your cloud provider.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;platform_provider_spec&gt;</code></dt>
+<dd>
+<p>Specifies the provider spec configuration for the cluster. The format and values of this section are provider-specific. For more information, see the sample provider specification for your cloud provider.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Refer to the sample YAML for a control plane machine set CR and populate your file with values that are appropriate for your cluster configuration.</p>
+</li>
+<li>
+<p>Refer to the sample failure domain configuration and sample provider specification for your cloud provider and update those sections of your file with the appropriate values.</p>
+</li>
+<li>
+<p>When the configuration is correct, activate the CR by setting the <code>.spec.state</code> field to <code>Active</code> and saving your changes.</p>
+</li>
+<li>
+<p>Create the CR from your YAML file by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;control_plane_machine_set&gt;.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where <code>&lt;control_plane_machine_set&gt;</code> specifies the name of the YAML file that contains the CR configuration.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cpmso-deleting_manage-the-configuration-and-lifecycle-of-control-plane-machines">Deleting the control plane machine set</h4>
+<div class="paragraph _abstract">
+<p>To stop managing control plane machines with the control plane machine set on your cluster, you must delete the <code>ControlPlaneMachineSet</code> custom resource (CR).</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Delete the control plane machine set CR by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete controlplanemachineset.machine.openshift.io cluster \
+  -n openshift-machine-api</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Check the control plane machine set custom resource state. A result of <code>Inactive</code> indicates that the removal and replacement process is successful. A <code>ControlPlaneMachineSet</code> CR exists but is not activated.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cpmso-reenabling_manage-the-configuration-and-lifecycle-of-control-plane-machines">Re-enabling the control plane machine set</h4>
+<div class="paragraph _abstract">
+<p>Restore automated control plane management after previously disabling the control plane machine set.</p>
+</div>
+<div class="paragraph">
+<p>To re-enable the control plane machine set, you must ensure that the configuration in the CR is correct for your cluster and activate it.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see "Activating the control plane machine set custom resource".</p>
+</div>
+</div>
+<div class="sect3">
 <h4 id="cpmso-control-plane-recovery_manage-the-configuration-and-lifecycle-of-control-plane-machines">Recovery of failed control plane machines</h4>
 <div class="paragraph _abstract">
 <p>The Control Plane Machine Set Operator automates the recovery of control plane machines to maintain cluster availability without manual intervention.</p>
@@ -1870,14 +2281,123 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 </div>
+<div class="sect3">
+<h4 id="machine-lifecycle-hook-deletion-etcd_manage-the-configuration-and-lifecycle-of-control-plane-machines">Quorum protection with machine lifecycle hooks</h4>
+<div class="paragraph _abstract">
+<p>To protect etcd quorum on Red&#160;Hat OpenShift Container Platform clusters that use the Machine API Operator, the etcd Operator uses lifecycle hooks for the machine deletion phase to implement a quorum protection mechanism.</p>
+</div>
+<div class="paragraph">
+<p>By using a <code>preDrain</code> lifecycle hook, the etcd Operator can control when the pods on a control plane machine are drained and removed. To protect etcd quorum, the etcd Operator prevents the removal of an etcd member until it migrates that member onto a new node within the cluster.</p>
+</div>
+<div class="paragraph">
+<p>This mechanism allows the etcd Operator precise control over the members of the etcd quorum and allows the Machine API Operator to safely create and remove control plane machines without specific operational knowledge of the etcd cluster.</p>
+</div>
+<div class="sect4">
+<h5 id="machine-lifecycle-hook-deletion-etcd-order_manage-the-configuration-and-lifecycle-of-control-plane-machines">Control plane deletion with quorum protection processing order</h5>
+<div class="paragraph">
+<p>When a control plane machine is replaced on a cluster that uses a control plane machine set, the cluster temporarily has four control plane machines. When the fourth control plane node joins the cluster, the etcd Operator starts a new etcd member on the replacement node. When the etcd Operator observes that the old control plane machine is marked for deletion, it stops the etcd member on the old node and promotes the replacement etcd member to join the quorum of the cluster.</p>
+</div>
+<div class="paragraph">
+<p>The control plane machine <code>Deleting</code> phase proceeds in the following order:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A control plane machine is slated for deletion.</p>
+</li>
+<li>
+<p>The control plane machine enters the <code>Deleting</code> phase.</p>
+</li>
+<li>
+<p>To satisfy the <code>preDrain</code> lifecycle hook, the etcd Operator takes the following actions:</p>
+<div class="openblock">
+<div class="content">
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The etcd Operator waits until a fourth control plane machine is added to the cluster as an etcd member. This new etcd member has a state of <code>Running</code> but not <code>ready</code> until it receives the full database update from the etcd leader.</p>
+</li>
+<li>
+<p>When the new etcd member receives the full database update, the etcd Operator promotes the new etcd member to a voting member and removes the old etcd member from the cluster.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>After this transition is complete, it is safe for the old etcd pod and its data to be removed, so the <code>preDrain</code> lifecycle hook is removed.</p>
+</div>
+</li>
+<li>
+<p>The control plane machine status condition <code>Drainable</code> is set to <code>True</code>.</p>
+</li>
+<li>
+<p>The machine controller attempts to drain the node that is backed by the control plane machine.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If draining fails, <code>Drained</code> is set to <code>False</code> and the machine controller attempts to drain the node again.</p>
+</li>
+<li>
+<p>If draining succeeds, <code>Drained</code> is set to <code>True</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The control plane machine status condition <code>Drained</code> is set to <code>True</code>.</p>
+</li>
+<li>
+<p>If no other Operators have added a <code>preTerminate</code> lifecycle hook, the control plane machine status condition <code>Terminable</code> is set to <code>True</code>.</p>
+</li>
+<li>
+<p>The machine controller removes the instance from the infrastructure provider.</p>
+</li>
+<li>
+<p>The machine controller deletes the <code>Node</code> object.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">YAML snippet demonstrating the etcd quorum protection <code>preDrain</code> lifecycle hook</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
+kind: Machine
+metadata:
+  ...
+spec:
+  lifecycleHooks:
+    preDrain:
+    - name: EtcdQuorumOperator
+      owner: clusteroperator/etcd
+  ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.lifecycleHooks.preDrain.name</code></dt>
+<dd>
+<p>Specifies the name of the <code>preDrain</code> lifecycle hook.</p>
+</dd>
+<dt class="hdlist1"><code>spec.lifecycleHooks.preDrain.owner</code></dt>
+<dd>
+<p>Specifies the hook-implementing controller that manages the <code>preDrain</code> lifecycle hook.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="manage-multiple-telco-clusters-with-rhacm-con_manage-multiple-telco-clusters-with-rhacm.html">Manage multiple telco clusters with RHACM</a> | ↑ Up: <a href="_administer.html">Administer</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a> →</p>
+<p>← Previous: <a href="manage-multiple-telco-clusters-with-rhacm-con_manage-multiple-telco-clusters-with-rhacm.html">Manage multiple telco clusters with RHACM</a> | ↑ Up: <a href="_administer.html">Administer</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="manage-the-configuration-and-lifecycle-of-compute-machines-con_manage-the-configuration-and-lifecycle-of-compute-machines.html">Manage the configuration and lifecycle of compute machines</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-02 17:45:39 +0100
+Last updated 2026-10-09 12:13:30 +0100
 </div>
 </div>
 <style>

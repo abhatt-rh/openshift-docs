@@ -489,6 +489,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="about-kmm_review-kmm-releases-and-updates.html">About the Kernel Module Management Operator</a>
 </li>
+<li><a href="hosted-control-planes-release-notes_hosted-control-planes-release-notes.html">Hosted control planes release notes</a>
+</li>
+<li><a href="review-multiarch-tuning-operator-releases-con_review-multiarch-tuning-operator-releases.html">Review Multiarch Tuning Operator releases</a>
+</li>
 </ul>
 </li>
 <li><a href="_discover.html">Discover</a>
@@ -572,6 +576,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
 </li>
+<li><a href="override-resource-util-hosted-cluster-con_override-resource-util-hosted-cluster.html">Overriding resource utilization measurements</a>
+</li>
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
@@ -604,6 +610,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_install.html">Install</a>
+
 <ul class="sectlevel2">
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
@@ -643,7 +650,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-single-node-openshift-intro_install-single-node-openshift.html">Install single-node OpenShift</a>
 </li>
+<li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
+</li>
 <li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
+</li>
+<li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
 </li>
 <li><a href="troubleshoot-installation-issues-intro_troubleshoot-installation-issues.html">Troubleshoot installation issues</a>
 </li>
@@ -715,7 +726,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="installation-about-restricted-networks_installing-restricted-networks-nutanix-installer-provisioned.html">About installations in restricted networks</a>
 </li>
-<li><a href="bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift.html">Prerequisites for using Red&#160;Hat Bare Metal as a Service for OpenShift</a>
+<li><a href="bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift.html">Prerequisites for using Red&#160;Hat Bare-Metal-as-a-Service for OpenShift</a>
 </li>
 <li><a href="install-on-aws-upi-intro_install-on-aws-upi.html">Install on AWS with user-provisioned infrastructure</a>
 </li>
@@ -851,11 +862,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hosted-clusters-openstack-prerequisites_deploying-hosted-control-planes-on-openstack.html">Prerequisites for OpenStack</a>
 </li>
-<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html"><span class="toc-current">Deploying hosted control planes in a disconnected environment</span></a>
-</li>
 <li><a href="installing-the-hosted-control-planes-command-line-interface-intro_installing-the-hosted-control-planes-command-line-interface.html">Installing the hosted control planes command-line interface</a>
 </li>
 <li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-deploy-azure-con_deploying-hosted-control-planes-on-azure.html">Deploying hosted control planes on Azure</a>
 </li>
 <li><a href="hcp-bm-overview_deploying-hosted-control-planes-on-bare-metal-with-the-agent-platform.html">About hosted control planes on bare metal with the Agent platform</a>
 </li>
@@ -866,31 +877,32 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_disconnected_environments.html">Disconnected environments</a>
-
 <ul class="sectlevel2">
-<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Understand disconnected environments</a>
+<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
-<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Installing a cluster with the Agent-based Installer</a>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
-<li><a href="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Prerequisites</a>
+<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">About oc-mirror plugin v2</a>
+<li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command.html">Prerequisites</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
-<li><a href="oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2.html">Changes from oc-mirror plugin v1 to v2</a>
-</li>
-<li><a href="olm-restricted-network-prereqs_manage-olm-operators-in-a-disconnected-environment.html">Prerequisites</a>
+<li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
-<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Using the OpenShift Update Service in a disconnected environment</a>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="updating-cli-prereqs_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Prerequisites for a cluster update</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
 </li>
-<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstalling the OpenShift Update Service from a cluster</a>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
-<li><a href="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected.html">About the mirror registry</a>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
+<li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
+</li>
+<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html"><span class="toc-current">Deploying hosted control planes in a disconnected environment</span></a>
 </li>
 </ul>
 </li>
@@ -946,7 +958,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="core-user-password_change-the-core-user-password-for-node-access.html">Change the core user password for node access</a>
 </li>
-<li><a href="configure-control-plane-failure-domains-con_configure-control-plane-failure-domains.html">Configure control plane failure domains</a>
+<li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
 </li>
@@ -986,9 +998,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="manage-the-configuration-and-lifecycle-of-control-plane-machines-con_manage-the-configuration-and-lifecycle-of-control-plane-machines.html">Manage the configuration and lifecycle of control plane machines</a>
 </li>
+<li><a href="manage-the-configuration-and-lifecycle-of-compute-machines-con_manage-the-configuration-and-lifecycle-of-compute-machines.html">Manage the configuration and lifecycle of compute machines</a>
+</li>
+<li><a href="identify-and-group-compute-machines-con_identify-and-group-compute-machines.html">Identify and group compute machines</a>
+</li>
+<li><a href="identify-and-group-control-plane-machines-con_identify-and-group-control-plane-machines.html">Identify and group control plane machines</a>
+</li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
-<li><a href="hcp-import-manual_manually-import-a-hosted-cluster.html">Manually importing hosted clusters</a>
+<li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
 </li>
 <li><a href="nodes-pods-image-volume-about_mount-an-oci-image-onto-a-pod.html">Understanding image volumes</a>
 </li>
@@ -1020,7 +1038,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
 </li>
-<li><a href="machine-about-phases_understand-the-machine-lifecycle.html">Machine phases</a>
+<li><a href="understand-the-machine-lifecycle-con_understand-the-machine-lifecycle.html">Understand the machine lifecycle</a>
 </li>
 <li><a href="understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature-con_understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature.html">Understand the out-of-cluster mode of the Image Mode for OpenShift feature</a>
 </li>
@@ -1072,6 +1090,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console.html">Use developer workflows in the console</a>
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
+</li>
+<li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
 </li>
 </ul>
 </li>
@@ -1138,7 +1158,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">About oc-mirror plugin v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1164,13 +1184,83 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
 </li>
-<li><a href="change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set-con_change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set.html">Change the configuration of compute machines by updating a compute machine set</a>
+<li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
+</li>
+<li><a href="enable-automated-machine-management-on-user-provisioned-infrastructure-con_enable-automated-machine-management-on-user-provisioned-infrastructure.html">Enable automated machine management on user-provisioned infrastructure</a>
 </li>
 <li><a href="apply-configuration-changes-to-compute-machines-with-automation-con_apply-configuration-changes-to-compute-machines-with-automation.html">Apply configuration changes to compute machines with automation</a>
 </li>
-<li><a href="mapi-to-capi-migration-overview_change-the-authoritative-api-for-machine-management-resources.html">Machine API to Cluster API resource migration</a>
+<li><a href="change-the-authoritative-api-for-machine-management-resources-con_change-the-authoritative-api-for-machine-management-resources.html">Change the authoritative API for machine management resources</a>
 </li>
 <li><a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a>
+</li>
+<li><a href="configure-dns-records-in-a-private-zone-con_configure-dns-records-in-a-private-zone.html">Configure DNS records in a private zone</a>
+</li>
+<li><a href="set-the-ingress-controller-to-private-con_set-the-ingress-controller-to-private.html">Set the Ingress Controller to private</a>
+</li>
+<li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
+</li>
+<li><a href="restrict-the-api-server-to-private-for-azure-con_restrict-the-api-server-to-private-for-azure.html">Restrict the API server to private for Azure</a>
+</li>
+<li><a href="security-rhcos-overview_understand-host-security-controls.html">Red Hat Enterprise Linux CoreOS (RHCOS)</a>
+</li>
+<li><a href="identity-provider-overview_prepare-a-cluster-for-user-access.html">Identity providers in Red&#160;Hat OpenShift Container Platform</a>
+</li>
+<li><a href="manage-workloads-using-taints-and-tolerations-con_manage-workloads-using-taints-and-tolerations.html">Manage workloads using taints and tolerations</a>
+</li>
+<li><a href="infrastructure-components_move-workloads-to-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
+</li>
+<li><a href="registry-configuring-private-storage-endpoint-azure_configure-a-private-storage-endpoint-on-azure.html">Configure a private storage endpoint on Azure</a>
+</li>
+<li><a href="configure-private-storage-endpoint-with-iro-discovery-con_configure-private-storage-endpoint-with-iro-discovery.html">Configure a private storage endpoint by using Image Registry Operator discovery</a>
+</li>
+<li><a href="configure-private-storage-endpoint-with-user-provided-vnet-con_configure-private-storage-endpoint-with-user-provided-vnet.html">Configure a private storage endpoint with a user-provided VNet</a>
+</li>
+<li><a href="multi-architecture-configuring-your-cluster_create-multi-architecture-compute-clusters.html">Configuring your cluster with multi-architecture compute machines</a>
+</li>
+<li><a href="create-arm64-boot-image-using-azure-image-gallery-con_create-arm64-boot-image-using-azure-image-gallery.html">Create a 64-bit ARM boot image by using the Azure Compute Gallery</a>
+</li>
+<li><a href="add-multi-architecture-compute-machine-set-to-azure-cluster-con_add-multi-architecture-compute-machine-set-to-azure-cluster.html">Add a multi-architecture compute machine set to an Azure cluster</a>
+</li>
+<li><a href="add-multi-architecture-compute-machine-set-to-aws-cluster-con_add-multi-architecture-compute-machine-set-to-aws-cluster.html">Add a multi-architecture compute machine set to an AWS cluster</a>
+</li>
+<li><a href="create-multi-architecture-compute-clusters-on-google-cloud-con_create-multi-architecture-compute-clusters-on-google-cloud.html">Create multi-architecture compute clusters on Google Cloud</a>
+</li>
+<li><a href="create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z-con_create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z.html">Create multi-architecture compute clusters on bare metal, IBM Power, or IBM Z</a>
+</li>
+<li><a href="enable-64k-pages-on-rhcos-kernel-con_enable-64k-pages-on-rhcos-kernel.html">Enable 64k pages on the RHCOS kernel</a>
+</li>
+<li><a href="multi-architecture-gather-info-about-workloads_configure-the-multiarch-tuning-operator.html">Multiarch Tuning Operator pod labels and architecture support overview</a>
+</li>
+<li><a href="install-multiarch-tuning-operator-via-cli-con_install-multiarch-tuning-operator-via-cli.html">Install the Multiarch Tuning Operator by using the CLI</a>
+</li>
+<li><a href="install-multiarch-tuning-operator-via-web-console-con_install-multiarch-tuning-operator-via-web-console.html">Install the Multiarch Tuning Operator by using the web console</a>
+</li>
+<li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
+</li>
+<li><a href="create-kubeletconfig-cr-to-edit-kubelet-parameters-con_create-kubeletconfig-cr-to-edit-kubelet-parameters.html">Create a KubeletConfig CR to edit kubelet parameters</a>
+</li>
+<li><a href="modify-number-of-unavailable-worker-nodes-con_modify-number-of-unavailable-worker-nodes.html">Modify the number of unavailable worker nodes</a>
+</li>
+<li><a href="manage-cluster-overcommitment-con_manage-cluster-overcommitment.html">Manage cluster overcommitment</a>
+</li>
+<li><a href="registry-removed_configure-the-image-registry-operator.html">Image registry removed during installation</a>
+</li>
+<li><a href="registry-removed_configure-the-image-registry-after-installation.html">Image registry removed during installation</a>
+</li>
+<li><a href="configure-registry-storage-by-platform-con_configure-registry-storage-by-platform.html">Configure registry storage by platform</a>
+</li>
+<li><a href="odc-customizing-user-perspectives_enable-the-developer-perspective.html">Customize user perspectives</a>
+</li>
+<li><a href="set-user-preferences-con_set-user-preferences.html">Set user preferences</a>
+</li>
+<li><a href="configure-theme-and-language-preferences-con_configure-theme-and-language-preferences.html">Configure theme and language preferences</a>
+</li>
+<li><a href="configure-the-web-console-con_configure-the-web-console.html">Configure the web console</a>
+</li>
+<li><a href="configure-web-terminal-timeout-and-image-settings-con_configure-web-terminal-timeout-and-image-settings.html">Configure web terminal timeout and image settings</a>
+</li>
+<li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
 </li>
 </ul>
 </li>
@@ -1182,6 +1272,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
+</li>
+<li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1349,6 +1441,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-confidential-vms-con_configure-confidential-vms.html">Configure confidential VMs</a>
 </li>
+<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines</a>
+</li>
+<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
+</li>
 <li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
 </li>
 <li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
@@ -1460,7 +1564,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nodes-nodes-managing-max-pods-proc_adjust-maximum-number-of-pods-on-a-node.html">Configure the maximum number of pods per node</a>
 </li>
-<li><a href="machineset-manually-scaling_scale-compute-resources.html">Scale a compute machine set manually</a>
+<li><a href="scale-compute-resources-con_scale-compute-resources.html">Scale workloads to match demand</a>
 </li>
 <li><a href="nodes-cluster-resource-configure-about_configure-cluster-memory-to-meet-container-memory-and-risk-requirements.html">Understanding how to manage application memory</a>
 </li>
@@ -1500,7 +1604,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="machine-mgmt-intro-managing-compute_scale-the-number-of-compute-machines-that-use-a-specific-configuration.html">Compute machine management</a>
+<li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
 <li><a href="machine-mgmt-intro-add-for-upi_add-compute-machines-manually.html">Compute machine creation on user-provisioned infrastructure</a>
 </li>
@@ -1508,11 +1612,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="machineset-label-gpu-autoscaler_label-gpu-machine-sets-for-autoscaler.html">Label GPU machine sets for the cluster autoscaler</a>
 </li>
-<li><a href="machineset-non-guaranteed-instance_creating-machineset-aws.html">Machine sets that deploy machines as Spot Instances</a>
+<li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="machineset-capacity-reservation_creating-machineset-aws.html">Configure Capacity Reservations by using machine sets</a>
+<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
 </li>
-<li><a href="nvidia-gpu-aws-adding-a-gpu-node_add-gpu-nodes-to-machine-sets.html">Add a GPU node to an existing Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+</li>
+<li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
+</li>
+<li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
+</li>
+<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
+</li>
+<li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
+</li>
+<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
 </ul>
 </li>
@@ -1543,6 +1661,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog.html">About Operator installation from the software catalog</a>
 </li>
+<li><a href="cli-manager-about_manage-cli-plugins-with-the-cli-manager.html">About the CLI Manager Operator</a>
+</li>
 <li><a href="nodes-pods-plugins-about_manage-kernel-modules-across-cluster-nodes-deploy-device-plugins-alongside-kernel-modules.html">Understand device plugins</a>
 </li>
 <li><a href="resolve-catalog-content-con_resolve-catalog-content.html">Resolve catalog content</a>
@@ -1552,6 +1672,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_validate.html">Validate</a>
 
 <ul class="sectlevel2">
+<li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
+</li>
 <li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
@@ -1573,13 +1695,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="remediate-node-configuration-drift-to-return-the-node-to-ready-con_remediate-node-configuration-drift-to-return-the-node-to-ready.html">Remediate node configuration drift to return the node to ready</a>
 </li>
+<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
+</li>
+<li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
+</li>
+<li><a href="troubleshoot-hosted-clusters-by-platform-con_troubleshoot-hosted-clusters-by-platform.html">Troubleshoot hosted clusters by platform</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal.html">Troubleshoot hosted clusters on bare metal</a>
 </li>
-<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshoot hosted clusters on OpenShift Virtualization</a>
+<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
-<li><a href="troubleshoot-hosted-clusters-by-platform-con_troubleshoot-hosted-clusters-by-platform.html">Troubleshoot hosted clusters by platform</a>
+<li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
+</li>
+<li><a href="hcp-disaster-recovery-aws-con_disaster-recovery-for-hosted-control-planes-on-aws.html">Disaster recovery for a hosted cluster in AWS</a>
+</li>
+<li><a href="hcp-azure-automated-dr_disaster-recovery-for-hosted-control-planes-on-azure.html">Automated disaster recovery for hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-azure-etcd-snapshot_backup-and-restore-for-hosted-control-planes-on-azure.html">Backup and restore for hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-disaster-recovery-oadp-con_disaster-recovery-for-hosted-control-planes-using-oadp.html">Disaster recovery for a hosted cluster by using OADP</a>
+</li>
+<li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
+</li>
+<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
+</li>
+<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
+</li>
+<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="post-using-node-tuning-operator_troubleshoot-node-performance-issues.html">Using the Node Tuning Operator</a>
 </li>
@@ -1587,7 +1733,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-network-flows-object_incident-investigation.html">Network object configuration for tracking network flows</a>
 </li>
-<li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspecting pod and container logs</a>
+<li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
 <li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
 </li>
@@ -1595,13 +1741,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
+</li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
 </li>
-<li><a href="inspecting-pod-and-container-logs_copy-files-to-or-from-containers.html">Inspecting pod and container logs</a>
+<li><a href="inspecting-pod-and-container-logs_copy-files-to-or-from-containers.html">Inspect pod and container logs</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_replace-failed-bare-metal-control-plane-nodes-without-bmc-credentials.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1613,23 +1761,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-oadp-update-channels_troubleshoot-common-update-failures.html">About OADP update channels</a>
 </li>
-<li><a href="about-node-health-check-operator_use-the-vsphere-problem-detector-operator.html">About the Node Health Check Operator</a>
-</li>
 <li><a href="understand-etcd-performance_move-etcd-to-a-different-disk.html">Factors that affect etcd performance</a>
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_gather-data-about-a-cluster-update.html">Gathering bootstrap node diagnostic data</a>
 </li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes.html">Control plane backup and restore operations</a>
-</li>
-<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-a-hosted-cluster.html">Collecting Windows application event logs</a>
-</li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
-<li><a href="investigating-why-windows-machine-compute-node_troubleshoot-machine-management.html">Investigating why Windows Machine does not become compute node</a>
+<li><a href="troubleshoot-machine-management-con_troubleshoot-machine-management.html">Troubleshoot machine management</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
-<li><a href="understanding-oc-log-levels_identify-resource-limits-and-quotas-in-topology-view.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
+<li><a href="understanding-oc-log-levels_identify-resource-limits-and-quotas-in-topology-view.html">Understand OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
 <li><a href="nw-networkpolicy-project-defaults_troubleshoot-web-terminal-startup-failures.html">Add network policies to the new project template</a>
 </li>
@@ -1645,7 +1787,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1653,13 +1795,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
-</li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
-</li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
+</li>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
 </li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
@@ -1685,11 +1823,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_investigate-an-active-cluster-issue-troubleshoot-cluster-issues.html">Gathering bootstrap node diagnostic data</a>
 </li>
-<li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
+<li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gather Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
 </li>
-<li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
+</li>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
+</li>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
+</li>
+<li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understand OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
 <li><a href="post-install-etcd-tasks_defragment-etcd-data-automatically-defragment-etcd-data.html">etcd tasks</a>
 </li>
@@ -1717,6 +1861,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_encrypt-etcd-test-restore-procedures.html">Control plane backup and restore operations</a>
 </li>
+<li><a href="troubleshoot-clusters-that-use-the-cluster-api-con_troubleshoot-clusters-that-use-the-cluster-api.html">Troubleshoot clusters that use the Cluster API</a>
+</li>
+<li><a href="troubleshoot-the-control-plane-machine-set-con_troubleshoot-the-control-plane-machine-set.html">Troubleshoot the control plane machine set</a>
+</li>
+<li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1731,15 +1881,42 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#hcp-dc-bm-arch_deploying-hosted-control-planes-in-a-disconnected-environment">Disconnected environment architecture for bare metal</a></li><li class="level-4"><a href="#hcp-dc-bm-reqs_deploying-hosted-control-planes-in-a-disconnected-environment">Requirements to deploy hosted control planes on bare metal in a disconnected environment</a></li><li class="level-4"><a href="#hcp-dc-extract_deploying-hosted-control-planes-in-a-disconnected-environment">Extracting the release image digest</a></li><li class="level-4"><a href="#hcp-bm-dns_deploying-hosted-control-planes-in-a-disconnected-environment">DNS configurations on bare metal</a></li><li class="level-4"><a href="#hcp-dc-registry_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying a registry for hosted control planes in a disconnected environment</a></li><li class="level-4"><a href="#hcp-dc-mgmt-cluster_deploying-hosted-control-planes-in-a-disconnected-environment">Setting up a management cluster for hosted control planes in a disconnected environment</a></li><li class="level-4"><a href="#hcp-dc-web-server_deploying-hosted-control-planes-in-a-disconnected-environment">Configuring the web server for hosted control planes in a disconnected environment</a></li><li class="level-4"><a href="#hcp-dc-image-mirror_deploying-hosted-control-planes-in-a-disconnected-environment">Configuring image mirroring for hosted control planes in a disconnected environment</a></li><li class="level-4"><a href="#hcp-dc-apply-objects_deploying-hosted-control-planes-in-a-disconnected-environment">Applying objects in the management cluster</a></li><li class="level-4"><a href="#hcp-agentserviceconfig_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying AgentServiceConfig resources</a></li><li class="level-4"><a href="#hcp-dc-tls-mgmt_deploying-hosted-control-planes-in-a-disconnected-environment">Adding the registry CA to the management cluster</a></li><li class="level-4"><a href="#hcp-dc-tls-hosted_deploying-hosted-control-planes-in-a-disconnected-environment">Adding the registry CA to the compute nodes for the hosted cluster</a></li><li class="level-4"><a href="#hcp-dc-bm-hosted_deploying-hosted-control-planes-in-a-disconnected-environment">Hosted clusters on bare metal in a disconnected environment</a></li><li class="level-5"><a href="#hcp-hc-objects_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying hosted cluster objects</a></li><li class="level-5"><a href="#hcp-nodepool-hc_deploying-hosted-control-planes-in-a-disconnected-environment">Creating a NodePool object for the hosted cluster</a></li><li class="level-5"><a href="#hcp-dc-infraenv_deploying-hosted-control-planes-in-a-disconnected-environment">Creating an InfraEnv resource for the hosted cluster</a></li><li class="level-5"><a href="#hcp-bm-hosts_deploying-hosted-control-planes-in-a-disconnected-environment">Creating bare-metal hosts for the hosted cluster</a></li><li class="level-5"><a href="#hcp-dc-scale-np_deploying-hosted-control-planes-in-a-disconnected-environment">Scaling up the node pool</a></li><li class="level-4"><a href="#hcp-dc-mce-virt_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying multicluster engine Operator for a disconnected installation of hosted control planes</a></li><li class="level-4"><a href="#hcp-dc-tls-virt_deploying-hosted-control-planes-in-a-disconnected-environment">TLS certificates for a disconnected installation of hosted control planes</a></li><li class="level-4"><a href="#hcp-dc-virt-hosted_deploying-hosted-control-planes-in-a-disconnected-environment">Creating a hosted cluster on OpenShift Virtualization in a disconnected environment</a></li><li class="level-5"><a href="#hcp-virt-prereqs_deploying-hosted-control-planes-in-a-disconnected-environment">Prerequisites to deploy hosted control planes on OpenShift Virtualization</a></li><li class="level-5"><a href="#hcp-virt-create-hc-cli_deploying-hosted-control-planes-in-a-disconnected-environment">Creating a hosted cluster with the KubeVirt platform by using the CLI</a></li><li class="level-4"><a href="#hcp-virt-ingress-dns_deploying-hosted-control-planes-in-a-disconnected-environment">Configuring the default ingress and DNS for hosted control planes on OpenShift Virtualization</a></li><li class="level-4"><a href="#hcp-dc-virt-ingress-dns-custom_deploying-hosted-control-planes-in-a-disconnected-environment">Customize ingress and DNS behavior</a></li><li class="level-4"><a href="#hcp-virt-hc-base-domain_deploying-hosted-control-planes-in-a-disconnected-environment">Creating a hosted cluster that specifies the base domain</a></li><li class="level-4"><a href="#hcp-virt-load-balancer_deploying-hosted-control-planes-in-a-disconnected-environment">Setting up the load balancer</a></li><li class="level-4"><a href="#hcp-virt-wildcard-dns_deploying-hosted-control-planes-in-a-disconnected-environment">Setting up a wildcard DNS</a></li><li class="level-4"><a href="#hcp-dc-finish_deploying-hosted-control-planes-in-a-disconnected-environment">Deployment finalization</a></li><li class="level-5"><a href="#hcp-monitor-cp_deploying-hosted-control-planes-in-a-disconnected-environment">Monitoring the control plane</a></li><li class="level-5"><a href="#hcp-monitor-dp_deploying-hosted-control-planes-in-a-disconnected-environment">Monitoring the data plane</a></li><li class="level-4"><a href="#hcp-ibm-z-dc-prereqs_deploying-hosted-control-planes-in-a-disconnected-environment">Prerequisites to deploy hosted control planes on IBM Z in a disconnected environment</a></li><li class="level-4"><a href="#hcp-ibm-z-adding-credentials-registry_deploying-hosted-control-planes-in-a-disconnected-environment">Adding credentials and the registry certificate authority to the management cluster</a></li><li class="level-4"><a href="#hcp-ibm-z-update-registry-ca_deploying-hosted-control-planes-in-a-disconnected-environment">Update the registry certificate authority in the AgentServiceConfig resource with the mirror registry</a></li><li class="level-4"><a href="#hcp-ibm-z-adding-registry-ca-hostedcluster_deploying-hosted-control-planes-in-a-disconnected-environment">Adding the registry certificate authority to the hosted cluster</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#hcp-deploy-dc-bm-intro_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying hosted control planes on bare metal in a disconnected environment</a></li><li class="level-5"><a href="#hcp-dc-bm-arch_deploying-hosted-control-planes-in-a-disconnected-environment">Disconnected environment architecture for bare metal</a></li><li class="level-5"><a href="#hcp-dc-bm-reqs_deploying-hosted-control-planes-in-a-disconnected-environment">Requirements to deploy hosted control planes on bare metal in a disconnected environment</a></li><li class="level-5"><a href="#hcp-dc-extract_deploying-hosted-control-planes-in-a-disconnected-environment">Extracting the release image digest</a></li><li class="level-5"><a href="#hcp-bm-dns_deploying-hosted-control-planes-in-a-disconnected-environment">DNS configurations on bare metal</a></li><li class="level-5"><a href="#hcp-dc-registry_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying a registry for hosted control planes in a disconnected environment</a></li><li class="level-5"><a href="#hcp-dc-mgmt-cluster_deploying-hosted-control-planes-in-a-disconnected-environment">Setting up a management cluster for hosted control planes in a disconnected environment</a></li><li class="level-5"><a href="#hcp-dc-web-server_deploying-hosted-control-planes-in-a-disconnected-environment">Configuring the web server for hosted control planes in a disconnected environment</a></li><li class="level-5"><a href="#hcp-dc-image-mirror_deploying-hosted-control-planes-in-a-disconnected-environment">Configuring image mirroring for hosted control planes in a disconnected environment</a></li><li class="level-5"><a href="#hcp-dc-apply-objects_deploying-hosted-control-planes-in-a-disconnected-environment">Applying objects in the management cluster</a></li><li class="level-5"><a href="#hcp-agentserviceconfig_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying AgentServiceConfig resources</a></li><li class="level-5"><a href="#hcp-dc-tls-mgmt_deploying-hosted-control-planes-in-a-disconnected-environment">Adding the registry CA to the management cluster</a></li><li class="level-5"><a href="#hcp-dc-tls-hosted_deploying-hosted-control-planes-in-a-disconnected-environment">Adding the registry CA to the compute nodes for the hosted cluster</a></li><li class="level-5"><a href="#hcp-hc-objects_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying hosted cluster objects</a></li><li class="level-5"><a href="#hcp-nodepool-hc_deploying-hosted-control-planes-in-a-disconnected-environment">Creating a NodePool object for the hosted cluster</a></li><li class="level-5"><a href="#hcp-dc-infraenv_deploying-hosted-control-planes-in-a-disconnected-environment">Creating an InfraEnv resource for the hosted cluster</a></li><li class="level-5"><a href="#hcp-bm-hosts_deploying-hosted-control-planes-in-a-disconnected-environment">Creating bare-metal hosts for the hosted cluster</a></li><li class="level-5"><a href="#hcp-dc-scale-np_deploying-hosted-control-planes-in-a-disconnected-environment">Scaling up the node pool</a></li><li class="level-4"><a href="#hcp-deploy-dc-virt-intro_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying hosted control planes on OpenShift Virtualization in a disconnected environment</a></li><li class="level-5"><a href="#hcp-dc-mce-virt_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying multicluster engine Operator for a disconnected installation of hosted control planes</a></li><li class="level-5"><a href="#hcp-dc-tls-virt_deploying-hosted-control-planes-in-a-disconnected-environment">TLS certificates for a disconnected installation of hosted control planes</a></li><li class="level-5"><a href="#hcp-dc-virt-hosted_deploying-hosted-control-planes-in-a-disconnected-environment">Creating a hosted cluster on OpenShift Virtualization in a disconnected environment</a></li><li class="level-5"><a href="#hcp-virt-prereqs_deploying-hosted-control-planes-in-a-disconnected-environment">Prerequisites to deploy hosted control planes on OpenShift Virtualization</a></li><li class="level-5"><a href="#hcp-virt-create-hc-cli_deploying-hosted-control-planes-in-a-disconnected-environment">Creating a hosted cluster with the KubeVirt platform by using the CLI</a></li><li class="level-5"><a href="#hcp-virt-ingress-dns_deploying-hosted-control-planes-in-a-disconnected-environment">Configuring the default ingress and DNS for hosted control planes on OpenShift Virtualization</a></li><li class="level-5"><a href="#hcp-dc-virt-ingress-dns-custom_deploying-hosted-control-planes-in-a-disconnected-environment">Customize ingress and DNS behavior</a></li><li class="level-5"><a href="#hcp-virt-hc-base-domain_deploying-hosted-control-planes-in-a-disconnected-environment">Creating a hosted cluster that specifies the base domain</a></li><li class="level-5"><a href="#hcp-virt-load-balancer_deploying-hosted-control-planes-in-a-disconnected-environment">Setting up the load balancer</a></li><li class="level-5"><a href="#hcp-virt-wildcard-dns_deploying-hosted-control-planes-in-a-disconnected-environment">Setting up a wildcard DNS</a></li><li class="level-5"><a href="#hcp-dc-finish_deploying-hosted-control-planes-in-a-disconnected-environment">Deployment finalization</a></li><li class="level-5"><a href="#hcp-monitor-cp_deploying-hosted-control-planes-in-a-disconnected-environment">Monitoring the control plane</a></li><li class="level-5"><a href="#hcp-monitor-dp_deploying-hosted-control-planes-in-a-disconnected-environment">Monitoring the data plane</a></li><li class="level-4"><a href="#disconnected-install-ibmz-hcp-intro_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying hosted control planes on IBM Z in a disconnected environment</a></li><li class="level-5"><a href="#hcp-ibm-z-dc-prereqs_deploying-hosted-control-planes-in-a-disconnected-environment">Prerequisites to deploy hosted control planes on IBM Z in a disconnected environment</a></li><li class="level-5"><a href="#hcp-ibm-z-adding-credentials-registry_deploying-hosted-control-planes-in-a-disconnected-environment">Adding credentials and the registry certificate authority to the management cluster</a></li><li class="level-5"><a href="#hcp-ibm-z-update-registry-ca_deploying-hosted-control-planes-in-a-disconnected-environment">Update the registry certificate authority in the AgentServiceConfig resource with the mirror registry</a></li><li class="level-5"><a href="#hcp-ibm-z-adding-registry-ca-hostedcluster_deploying-hosted-control-planes-in-a-disconnected-environment">Adding the registry certificate authority to the hosted cluster</a></li><li class="level-4"><a href="#hcp-dc-monitor-con_deploying-hosted-control-planes-in-a-disconnected-environment">Monitoring user workload in a disconnected environment</a></li><li class="level-5"><a href="#hcp-dc-usr-wkld_deploying-hosted-control-planes-in-a-disconnected-environment">Resolving user workload monitoring issues</a></li><li class="level-5"><a href="#hcp-dc-verify_deploying-hosted-control-planes-in-a-disconnected-environment">Verifying the status of the hosted control plane feature</a></li><li class="level-5"><a href="#hcp-dc-addon_deploying-hosted-control-planes-in-a-disconnected-environment">Configuring the hypershift-addon managed cluster add-on to run on an infrastructure node</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying hosted control planes in a disconnected environment</h3>
 <div class="paragraph _abstract">
-<p>In the context of hosted control planes, a disconnected environment is an Red&#160;Hat OpenShift Container Platform deployment that is not connected to the internet and that uses hosted control planes as a base. You can deploy hosted control planes in a disconnected environment on bare metal.</p>
+<p>In the context of hosted control planes, a disconnected environment is an Red&#160;Hat OpenShift Container Platform deployment that is not connected to the internet and that uses hosted control planes as a base. You can deploy hosted control planes in a disconnected environment on bare metal or OpenShift Virtualization.</p>
+</div>
+<div class="paragraph">
+<p>Hosted control planes in disconnected environments function differently than in standalone Red&#160;Hat OpenShift Container Platform:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The control plane is in the management cluster. The control plane is where the pods of the hosted control plane are run and managed by the Control Plane Operator.</p>
+</li>
+<li>
+<p>The data plane is in the workers of the hosted cluster. The data plane is where the workloads and other pods run, all managed by the HostedClusterConfig Operator.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Depending on where the pods are running, they are affected by the <code>ImageDigestMirrorSet</code> (IDMS) or <code>ImageContentSourcePolicy</code> (ICSP) that is created in the management cluster or by the <code>ImageContentSource</code> that is set in the <code>spec</code> field of the manifest for the hosted cluster. The <code>spec</code> field is translated into an IDMS object on the hosted cluster.</p>
+</div>
+<div class="paragraph">
+<p>You can deploy hosted control planes in a disconnected environment on IPv4, IPv6, and dual-stack networks. IPv4 is one of the simplest network configurations to deploy hosted control planes in a disconnected environment. IPv4 ranges require fewer external components than IPv6 or dual-stack setups. For hosted control planes on OpenShift Virtualization in a disconnected environment, use either an IPv4 or a dual-stack network.</p>
 </div>
 <div class="sect3">
-<h4 id="hcp-dc-bm-arch_deploying-hosted-control-planes-in-a-disconnected-environment">Disconnected environment architecture for bare metal</h4>
+<h4 id="hcp-deploy-dc-bm-intro_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying hosted control planes on bare metal in a disconnected environment</h4>
+<div class="paragraph _abstract">
+<p>In the context of hosted control planes, a disconnected environment is an Red&#160;Hat OpenShift Container Platform deployment that is not connected to the internet and that uses hosted control planes as a base. You can deploy hosted control planes in a disconnected environment on bare metal.</p>
+</div>
+<div class="paragraph">
+<p>When you provision hosted control planes on bare metal, you use the Agent platform. The Agent platform and multicluster engine for Kubernetes Operator work together to enable disconnected deployments. The Agent platform uses the central infrastructure management service to add worker nodes to a hosted cluster. For an introduction to the central infrastructure management service, see "Enabling the central infrastructure management service".</p>
+</div>
+<div class="sect4">
+<h5 id="hcp-dc-bm-arch_deploying-hosted-control-planes-in-a-disconnected-environment">Disconnected environment architecture for bare metal</h5>
 <div class="paragraph _abstract">
 <p>Get familiar with the architecture for a deployment of hosted control planes on bare metal in a disconnected environment.</p>
 </div>
@@ -1846,8 +2023,8 @@ data:
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-dc-bm-reqs_deploying-hosted-control-planes-in-a-disconnected-environment">Requirements to deploy hosted control planes on bare metal in a disconnected environment</h4>
+<div class="sect4">
+<h5 id="hcp-dc-bm-reqs_deploying-hosted-control-planes-in-a-disconnected-environment">Requirements to deploy hosted control planes on bare metal in a disconnected environment</h5>
 <div class="paragraph _abstract">
 <p>To configure hosted control planes in a disconnected environment, you must meet several prerequisites.</p>
 </div>
@@ -1886,8 +2063,8 @@ data:
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-dc-extract_deploying-hosted-control-planes-in-a-disconnected-environment">Extracting the release image digest</h4>
+<div class="sect4">
+<h5 id="hcp-dc-extract_deploying-hosted-control-planes-in-a-disconnected-environment">Extracting the release image digest</h5>
 <div class="paragraph _abstract">
 <p>To deploy hosted control planes on bare metal in a disconnected environment, you need the Red&#160;Hat OpenShift Container Platform release image. You can extract the release image digest by using the tagged image.</p>
 </div>
@@ -1914,8 +2091,8 @@ data:
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-bm-dns_deploying-hosted-control-planes-in-a-disconnected-environment">DNS configurations on bare metal</h4>
+<div class="sect4">
+<h5 id="hcp-bm-dns_deploying-hosted-control-planes-in-a-disconnected-environment">DNS configurations on bare metal</h5>
 <div class="paragraph _abstract">
 <p>The API Server for the hosted cluster is exposed as a <code>NodePort</code> service. In production environments, use a load balancer in front of the API. For example, you can use an external load balancer or a Kubernetes service type load balancer in combination with MetalLB.</p>
 </div>
@@ -1942,8 +2119,8 @@ api-int.cluster.company.example IN AAAA &lt;ipv6_of_api_load_balancer&gt;
 <p>If you have a dual-stack setup, you must include DNS entries for both IPv4 and IPv6.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-dc-registry_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying a registry for hosted control planes in a disconnected environment</h4>
+<div class="sect4">
+<h5 id="hcp-dc-registry_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying a registry for hosted control planes in a disconnected environment</h5>
 <div class="paragraph _abstract">
 <p>For development environments, deploy a small, self-hosted registry by using a Podman container. For production environments, deploy an enterprise-hosted registry, such as Red&#160;Hat Quay, Nexus, or Artifactory.</p>
 </div>
@@ -2103,10 +2280,13 @@ systemctl enable --now registry</code></pre>
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-dc-mgmt-cluster_deploying-hosted-control-planes-in-a-disconnected-environment">Setting up a management cluster for hosted control planes in a disconnected environment</h4>
+<div class="sect4">
+<h5 id="hcp-dc-mgmt-cluster_deploying-hosted-control-planes-in-a-disconnected-environment">Setting up a management cluster for hosted control planes in a disconnected environment</h5>
 <div class="paragraph _abstract">
-<p>An important part of a hosted control planes deployment is the Red&#160;Hat OpenShift Container Platform management cluster. To set up an management cluster for a disconnected environment, you must install multicluster engine for Kubernetes Operator on it. The multicluster engine Operator plays a crucial role in deploying clusters across providers.</p>
+<p>An important part of a hosted control planes deployment is the Red&#160;Hat OpenShift Container Platform management cluster. To set up an management cluster for a disconnected environment, you must install multicluster engine for Kubernetes Operator on it.</p>
+</div>
+<div class="paragraph">
+<p>The multicluster engine Operator plays a crucial role in deploying clusters across providers.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -2158,8 +2338,8 @@ systemctl enable --now registry</code></pre>
 <p>Next, configure the web server.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-dc-web-server_deploying-hosted-control-planes-in-a-disconnected-environment">Configuring the web server for hosted control planes in a disconnected environment</h4>
+<div class="sect4">
+<h5 id="hcp-dc-web-server_deploying-hosted-control-planes-in-a-disconnected-environment">Configuring the web server for hosted control planes in a disconnected environment</h5>
 <div class="paragraph _abstract">
 <p>You must configure an additional web server to host the Red Hat Enterprise Linux CoreOS (RHCOS) images that are associated with the Red&#160;Hat OpenShift Container Platform release that you are deploying as a hosted cluster.</p>
 </div>
@@ -2215,8 +2395,8 @@ fi</code></pre>
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-dc-image-mirror_deploying-hosted-control-planes-in-a-disconnected-environment">Configuring image mirroring for hosted control planes in a disconnected environment</h4>
+<div class="sect4">
+<h5 id="hcp-dc-image-mirror_deploying-hosted-control-planes-in-a-disconnected-environment">Configuring image mirroring for hosted control planes in a disconnected environment</h5>
 <div class="paragraph _abstract">
 <p>Image mirroring is the process of fetching images from external registries, such as <code>registry.redhat.com</code> or <code>quay.io</code>, and storing them in your private registry.</p>
 </div>
@@ -2377,8 +2557,8 @@ mirror:
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-dc-apply-objects_deploying-hosted-control-planes-in-a-disconnected-environment">Applying objects in the management cluster</h4>
+<div class="sect4">
+<h5 id="hcp-dc-apply-objects_deploying-hosted-control-planes-in-a-disconnected-environment">Applying objects in the management cluster</h5>
 <div class="paragraph _abstract">
 <p>After the mirroring process is complete, you must apply two objects required for mirroring in the management cluster.</p>
 </div>
@@ -2480,8 +2660,8 @@ mirror:
 <p>Deploy the multicluster engine Operator by completing the steps in "Deploying multicluster engine Operator for a disconnected installation of hosted control planes".</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-agentserviceconfig_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying AgentServiceConfig resources</h4>
+<div class="sect4">
+<h5 id="hcp-agentserviceconfig_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying AgentServiceConfig resources</h5>
 <div class="paragraph _abstract">
 <p>The <code>AgentServiceConfig</code> custom resource (CR) is an essential component of the Assisted Service add-on that is part of multicluster engine Operator. The CR is responsible for bare-metal cluster deployment. When the add-on is enabled, you deploy the <code>AgentServiceConfig</code> resource to configure the add-on.</p>
 </div>
@@ -2638,8 +2818,8 @@ assisted-service-668b49548-9m7xw                       2/2     Running   5      
 <p>Configure TLS certificates.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-dc-tls-mgmt_deploying-hosted-control-planes-in-a-disconnected-environment">Adding the registry CA to the management cluster</h4>
+<div class="sect4">
+<h5 id="hcp-dc-tls-mgmt_deploying-hosted-control-planes-in-a-disconnected-environment">Adding the registry CA to the management cluster</h5>
 <div class="paragraph _abstract">
 <p>To ensure proper function in a disconnected deployment, you need to configure the registry CA certificates in the management cluster.</p>
 </div>
@@ -2703,8 +2883,8 @@ data:
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-dc-tls-hosted_deploying-hosted-control-planes-in-a-disconnected-environment">Adding the registry CA to the compute nodes for the hosted cluster</h4>
+<div class="sect4">
+<h5 id="hcp-dc-tls-hosted_deploying-hosted-control-planes-in-a-disconnected-environment">Adding the registry CA to the compute nodes for the hosted cluster</h5>
 <div class="paragraph _abstract">
 <p>To ensure that the data plane compute nodes in the hosted cluster can retrieve images from the private registry, you must add the registry certificate authority (CA) to the compute nodes.</p>
 </div>
@@ -2756,18 +2936,10 @@ metadata:
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-dc-bm-hosted_deploying-hosted-control-planes-in-a-disconnected-environment">Hosted clusters on bare metal in a disconnected environment</h4>
-<div class="paragraph _abstract">
-<p>In a disconnected environment, creating a hosted cluster involves deploying hosted cluster objects, creating node pools, creating an <code>InfraEnv</code> resource, creating bare-metal hosts, and scaling the node pools as needed.</p>
-</div>
-<div class="paragraph">
-<p>A hosted cluster is an Red&#160;Hat OpenShift Container Platform cluster with its control plane and API endpoint hosted on a management cluster. The hosted cluster includes the corresponding data plane.</p>
-</div>
 <div class="sect4">
 <h5 id="hcp-hc-objects_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying hosted cluster objects</h5>
 <div class="paragraph _abstract">
-<p>Typically, the HyperShift Operator creates the <code>HostedControlPlane</code> namespace. However, you might want to include all the objects before the HyperShift Operator begins to reconcile the <code>HostedCluster</code> object. Then, when the Operator starts the reconciliation process, it can find all of the objects in place.</p>
+<p>Typically, the HyperShift Operator creates the <code>HostedControlPlane</code> namespace. However, you might want to include all objects before the HyperShift Operator begins to reconcile the <code>HostedCluster</code> object. Then, when the Operator starts the reconciliation process, it finds the objects in place.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
@@ -3429,7 +3601,39 @@ clusters    hosted   hosted    3                               False         Fal
 </div>
 </div>
 <div class="sect3">
-<h4 id="hcp-dc-mce-virt_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying multicluster engine Operator for a disconnected installation of hosted control planes</h4>
+<h4 id="hcp-deploy-dc-virt-intro_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying hosted control planes on OpenShift Virtualization in a disconnected environment</h4>
+<div class="paragraph _abstract">
+<p>When you deploy hosted control planes in a disconnected environment, some of the steps differ depending on whether you use bare metal or OpenShift Virtualization.</p>
+</div>
+<div class="paragraph">
+<p>To get started, you must meet the following requirements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You have a disconnected Red&#160;Hat OpenShift Container Platform environment serving as your management cluster.</p>
+</li>
+<li>
+<p>You have an internal registry to mirror images on. For more information, see "About disconnected installation mirroring".</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A known limitation exists for hosted clusters on an Red&#160;Hat OpenShift Container Platform management cluster that is version 4.21 or later. To avoid issues, you must mirror the 4.20.10 release payload from the <code>quay.io/openshift-release-dev/ocp-release:4.20.10-multi</code> image to the target mirror registry. This temporary limitation is expected to be resolved in a later release.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="hcp-dc-mce-virt_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying multicluster engine Operator for a disconnected installation of hosted control planes</h5>
 <div class="paragraph _abstract">
 <p>The multicluster engine for Kubernetes Operator is crucial in deploying clusters across providers. Ensure that you have multicluster engine Operator installed and configured for your deployment.</p>
 </div>
@@ -3447,16 +3651,20 @@ clusters    hosted   hosted    3                               False         Fal
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-dc-tls-virt_deploying-hosted-control-planes-in-a-disconnected-environment">TLS certificates for a disconnected installation of hosted control planes</h4>
+<div class="sect4">
+<h5 id="hcp-dc-tls-virt_deploying-hosted-control-planes-in-a-disconnected-environment">TLS certificates for a disconnected installation of hosted control planes</h5>
 <div class="paragraph _abstract">
 <p>To ensure proper function in a disconnected deployment, you need to configure the registry CA certificates in the management cluster and the compute nodes for the hosted cluster.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-dc-virt-hosted_deploying-hosted-control-planes-in-a-disconnected-environment">Creating a hosted cluster on OpenShift Virtualization in a disconnected environment</h4>
+<div class="sect4">
+<h5 id="hcp-dc-virt-hosted_deploying-hosted-control-planes-in-a-disconnected-environment">Creating a hosted cluster on OpenShift Virtualization in a disconnected environment</h5>
 <div class="paragraph _abstract">
-<p>As part of the process to deploy hosted control planes on OpenShift Virtualization in a disconnected environment, you need to create a hosted cluster. A hosted cluster is an Red&#160;Hat OpenShift Container Platform cluster with its control plane and API endpoint hosted on a management cluster. The hosted cluster includes the control plane and its corresponding data plane.</p>
+<p>As part of the process to deploy hosted control planes on OpenShift Virtualization in a disconnected environment, you need to create a hosted cluster. A hosted cluster is an Red&#160;Hat OpenShift Container Platform cluster with its control plane and API endpoint hosted on a management cluster.</p>
+</div>
+<div class="paragraph">
+<p>The hosted cluster includes the control plane and its corresponding data plane.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="hcp-virt-prereqs_deploying-hosted-control-planes-in-a-disconnected-environment">Prerequisites to deploy hosted control planes on OpenShift Virtualization</h5>
@@ -3690,9 +3898,8 @@ clusters    my-hosted-cluster   &lt;4.x.0&gt;     example-admin-kubeconfig   Com
 </ul>
 </div>
 </div>
-</div>
-<div class="sect3">
-<h4 id="hcp-virt-ingress-dns_deploying-hosted-control-planes-in-a-disconnected-environment">Configuring the default ingress and DNS for hosted control planes on OpenShift Virtualization</h4>
+<div class="sect4">
+<h5 id="hcp-virt-ingress-dns_deploying-hosted-control-planes-in-a-disconnected-environment">Configuring the default ingress and DNS for hosted control planes on OpenShift Virtualization</h5>
 <div class="paragraph _abstract">
 <p>Every Red&#160;Hat OpenShift Container Platform cluster includes a default application Ingress Controller, which must have an wildcard DNS record associated with it.</p>
 </div>
@@ -3745,8 +3952,8 @@ clusters    my-hosted-cluster   &lt;4.x.0&gt;     example-admin-kubeconfig   Com
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-dc-virt-ingress-dns-custom_deploying-hosted-control-planes-in-a-disconnected-environment">Customize ingress and DNS behavior</h4>
+<div class="sect4">
+<h5 id="hcp-dc-virt-ingress-dns-custom_deploying-hosted-control-planes-in-a-disconnected-environment">Customize ingress and DNS behavior</h5>
 <div class="paragraph _abstract">
 <p>If you do not want to use the default ingress and DNS behavior, you can configure a hosted cluster on OpenShift Virtualization with a unique base domain at creation time.</p>
 </div>
@@ -3754,8 +3961,8 @@ clusters    my-hosted-cluster   &lt;4.x.0&gt;     example-admin-kubeconfig   Com
 <p>This option requires manual configuration steps during creation and involves three main steps: cluster creation, load balancer creation, and wildcard DNS configuration.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-virt-hc-base-domain_deploying-hosted-control-planes-in-a-disconnected-environment">Creating a hosted cluster that specifies the base domain</h4>
+<div class="sect4">
+<h5 id="hcp-virt-hc-base-domain_deploying-hosted-control-planes-in-a-disconnected-environment">Creating a hosted cluster that specifies the base domain</h5>
 <div class="paragraph _abstract">
 <p>If you do not want to use the default ingress and DNS behavior, you can configure a KubeVirt hosted cluster with a unique base domain at creation time.</p>
 </div>
@@ -3882,8 +4089,8 @@ ingress                                    &lt;4.x.0&gt;     True        False  
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-virt-load-balancer_deploying-hosted-control-planes-in-a-disconnected-environment">Setting up the load balancer</h4>
+<div class="sect4">
+<h5 id="hcp-virt-load-balancer_deploying-hosted-control-planes-in-a-disconnected-environment">Setting up the load balancer</h5>
 <div class="paragraph _abstract">
 <p>Set up the load balancer service that routes ingress traffic to the KubeVirt VMs and assigns a wildcard DNS entry to the load balancer IP address.</p>
 </div>
@@ -3977,8 +4184,8 @@ spec:
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-virt-wildcard-dns_deploying-hosted-control-planes-in-a-disconnected-environment">Setting up a wildcard DNS</h4>
+<div class="sect4">
+<h5 id="hcp-virt-wildcard-dns_deploying-hosted-control-planes-in-a-disconnected-environment">Setting up a wildcard DNS</h5>
 <div class="paragraph _abstract">
 <p>If you are customizing the ingress and DNS for your hosted cluster, you need to set up a wildcard DNS record or CNAME that references the external IP of the load balancer service.</p>
 </div>
@@ -4045,10 +4252,11 @@ example         &lt;4.x.0&gt;     example-admin-kubeconfig         Completed   T
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-dc-finish_deploying-hosted-control-planes-in-a-disconnected-environment">Deployment finalization</h4>
+<div class="sect4">
+<h5 id="hcp-dc-finish_deploying-hosted-control-planes-in-a-disconnected-environment">Deployment finalization</h5>
 <div class="paragraph _abstract">
 <p>You can monitor the deployment of a hosted cluster from two perspectives: the control plane and the data plane.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="hcp-monitor-cp_deploying-hosted-control-planes-in-a-disconnected-environment">Monitoring the control plane</h5>
@@ -4162,7 +4370,34 @@ example         &lt;4.x.0&gt;     example-admin-kubeconfig         Completed   T
 </div>
 </div>
 <div class="sect3">
-<h4 id="hcp-ibm-z-dc-prereqs_deploying-hosted-control-planes-in-a-disconnected-environment">Prerequisites to deploy hosted control planes on IBM Z in a disconnected environment</h4>
+<h4 id="disconnected-install-ibmz-hcp-intro_deploying-hosted-control-planes-in-a-disconnected-environment">Deploying hosted control planes on IBM Z in a disconnected environment</h4>
+<div class="paragraph _abstract">
+<p>Hosted control planes deployments in disconnected environments function differently than in a standalone Red&#160;Hat OpenShift Container Platform.</p>
+</div>
+<div class="paragraph">
+<p>Hosted control planes involves two distinct environments:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Control plane: Located in the management cluster, where the hosted control planes pods are run and managed by the Control Plane Operator.</p>
+</li>
+<li>
+<p>Data plane: Located in the workers of the hosted cluster, where the workload and a few other pods run, managed by the Hosted Cluster Config Operator.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>ImageContentSourcePolicy</code> (ICSP) custom resource for the data plane is managed through the <code>ImageContentSources</code> API in the hosted cluster manifest.</p>
+</div>
+<div class="paragraph">
+<p>For the control plane, ICSP objects are managed in the management cluster. These objects are parsed by the HyperShift Operator and are shared as <code>registry-overrides</code> entries with the Control Plane Operator. These entries are injected into any one of the available  deployments in the hosted control planes namespace as an argument.</p>
+</div>
+<div class="paragraph">
+<p>To work with disconnected registries in the hosted control planes, you must first create the appropriate ICSP in the management cluster. Then, to deploy disconnected workloads in the data plane, you need to add the entries that you want into the <code>ImageContentSources</code> field in the hosted cluster manifest.</p>
+</div>
+<div class="sect4">
+<h5 id="hcp-ibm-z-dc-prereqs_deploying-hosted-control-planes-in-a-disconnected-environment">Prerequisites to deploy hosted control planes on IBM Z in a disconnected environment</h5>
 <div class="paragraph _abstract">
 <p>To deploy hosted control planes on IBM Z in a disconnected environment, you must meet a few prerequisites.</p>
 </div>
@@ -4180,8 +4415,8 @@ example         &lt;4.x.0&gt;     example-admin-kubeconfig         Completed   T
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-ibm-z-adding-credentials-registry_deploying-hosted-control-planes-in-a-disconnected-environment">Adding credentials and the registry certificate authority to the management cluster</h4>
+<div class="sect4">
+<h5 id="hcp-ibm-z-adding-credentials-registry_deploying-hosted-control-planes-in-a-disconnected-environment">Adding credentials and the registry certificate authority to the management cluster</h5>
 <div class="paragraph _abstract">
 <p>To pull the mirror registry images from the management cluster, you must first add credentials and the certificate authority of the mirror registry to the management cluster.</p>
 </div>
@@ -4273,8 +4508,8 @@ data:
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-ibm-z-update-registry-ca_deploying-hosted-control-planes-in-a-disconnected-environment">Update the registry certificate authority in the AgentServiceConfig resource with the mirror registry</h4>
+<div class="sect4">
+<h5 id="hcp-ibm-z-update-registry-ca_deploying-hosted-control-planes-in-a-disconnected-environment">Update the registry certificate authority in the AgentServiceConfig resource with the mirror registry</h5>
 <div class="paragraph _abstract">
 <p>When you use a mirror registry for images, agents need to trust the registry&#8217;s certificate to securely pull images. You can add the certificate authority of the mirror registry to the <code>AgentServiceConfig</code> custom resource by creating a <code>ConfigMap</code>.</p>
 </div>
@@ -4347,10 +4582,10 @@ data:
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hcp-ibm-z-adding-registry-ca-hostedcluster_deploying-hosted-control-planes-in-a-disconnected-environment">Adding the registry certificate authority to the hosted cluster</h4>
+<div class="sect4">
+<h5 id="hcp-ibm-z-adding-registry-ca-hostedcluster_deploying-hosted-control-planes-in-a-disconnected-environment">Adding the registry certificate authority to the hosted cluster</h5>
 <div class="paragraph _abstract">
-<p>When you are deploying hosted control planes on IBM Z in a disconnected environment, include the <code>additional-trust-bundle</code> and <code>image-content-sources</code> resources. The hosted cluster uses those resources to inject the certificate authority into the data plane compute nodes so that the images are pulled from the registry.</p>
+<p>When you deploy hosted control planes on IBM Z in a disconnected environment, include the <code>additional-trust-bundle</code> and <code>image-content-sources</code> resources. The hosted cluster uses these resources to inject certificate authorities into data plane compute nodes so that images pull from the registry.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
@@ -4428,13 +4663,183 @@ data:
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="hcp-dc-monitor-con_deploying-hosted-control-planes-in-a-disconnected-environment">Monitoring user workload in a disconnected environment</h4>
+<div class="paragraph _abstract">
+<p>When the <code>--enable-uwm-telemetry-remote-write</code> option is enabled, user workload monitoring is enabled and it can remotely write telemetry metrics from control planes.</p>
+</div>
+<div class="sect4">
+<h5 id="hcp-dc-usr-wkld_deploying-hosted-control-planes-in-a-disconnected-environment">Resolving user workload monitoring issues</h5>
+<div class="paragraph _abstract">
+<p>If you installed multicluster engine Operator on Red&#160;Hat OpenShift Container Platform clusters that are not connected to the internet, when you try to run the user workload monitoring feature, it might fail with an error.</p>
+</div>
+<div class="paragraph">
+<p>For example, when you try to run the user workload monitoring feature by entering the following command, it fails with an error:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get events -n hypershift</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">LAST SEEN   TYPE      REASON           OBJECT                MESSAGE
+4m46s       Warning   ReconcileError   deployment/operator   Failed to ensure UWM telemetry remote write: cannot get telemeter client secret: Secret "telemeter-client" not found</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To resolve the error, you must disable the user workload monitoring option by creating a config map in the <code>local-cluster</code> namespace. You can create the config map either before or after you enable the add-on. The add-on agent reconfigures the HyperShift Operator.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create the following config map:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: hypershift-operator-install-flags
+  namespace: local-cluster
+data:
+  installFlagsToAdd: ""
+  installFlagsToRemove: "--enable-uwm-telemetry-remote-write"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Apply the config map by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f &lt;filename&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="hcp-dc-verify_deploying-hosted-control-planes-in-a-disconnected-environment">Verifying the status of the hosted control plane feature</h5>
+<div class="paragraph _abstract">
+<p>The hosted control plane feature is enabled by default. However, if you are not sure that it is enabled, you can run a command to verify its status.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>If the feature is disabled and you want to enable it, enter the following command. Replace <code>&lt;multiclusterengine&gt;</code> with the name of your multicluster engine Operator instance:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch mce &lt;multiclusterengine&gt; --type=merge -p \
+  '{"spec":{"overrides":{"components":[{"name":"hypershift","enabled": true}]}}}'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When you enable the feature, the <code>hypershift-addon</code> managed cluster add-on is installed in the <code>local-cluster</code> managed cluster, and the add-on agent installs the HyperShift Operator on the multicluster engine Operator hub cluster.</p>
+</div>
+</li>
+<li>
+<p>Confirm that the <code>hypershift-addon</code> managed cluster add-on is installed by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get managedclusteraddons -n local-cluster hypershift-addon</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME               AVAILABLE   DEGRADED   PROGRESSING
+hypershift-addon   True        False</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To avoid a timeout during this process, enter the following commands:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>To avoid a timeout when the condition is <code>Degraded</code>, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc wait --for=condition=Degraded=True managedclusteraddons/hypershift-addon \
+  -n local-cluster --timeout=5m</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To avoid a timeout when the condition is <code>Available</code>, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc wait --for=condition=Available=True managedclusteraddons/hypershift-addon \
+  -n local-cluster --timeout=5m</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When the process is complete, the <code>hypershift-addon</code> managed cluster add-on and the HyperShift Operator are installed, and the <code>local-cluster</code> managed cluster is available to host and manage hosted clusters.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="hcp-dc-addon_deploying-hosted-control-planes-in-a-disconnected-environment">Configuring the hypershift-addon managed cluster add-on to run on an infrastructure node</h5>
+<div class="paragraph _abstract">
+<p>By default, no node placement preference is specified for the <code>hypershift-addon</code> managed cluster add-on. Consider running the add-ons on the infrastructure nodes, because by doing so, you can prevent incurring billing costs against subscription counts and separate maintenance and management tasks.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Log in to the hub cluster.</p>
+</li>
+<li>
+<p>Open the <code>hypershift-addon-deploy-config</code> add-on deployment configuration specification for editing by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit addondeploymentconfig hypershift-addon-deploy-config \
+  -n multicluster-engine</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add the <code>nodePlacement</code> field to the specification, as shown in the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: addon.open-cluster-management.io/v1alpha1
+kind: AddOnDeploymentConfig
+metadata:
+  name: hypershift-addon-deploy-config
+  namespace: multicluster-engine
+spec:
+  nodePlacement:
+    nodeSelector:
+      node-role.kubernetes.io/infra: ""
+    tolerations:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/infra
+      operator: Exists</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Save the changes. The <code>hypershift-addon</code> managed cluster add-on is deployed on an infrastructure node for new and existing managed clusters.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="hosted-clusters-openstack-prerequisites_deploying-hosted-control-planes-on-openstack.html">Prerequisites for OpenStack</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="installing-the-hosted-control-planes-command-line-interface-intro_installing-the-hosted-control-planes-command-line-interface.html">Installing the hosted control planes command-line interface</a> →</p>
+<p>← Previous: <a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a> | ↑ Up: <a href="_disconnected_environments.html">Disconnected environments</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="_upgrade.html">Upgrade</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-02 17:45:39 +0100
+Last updated 2026-10-09 12:13:30 +0100
 </div>
 </div>
 <style>

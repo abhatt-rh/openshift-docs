@@ -489,6 +489,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="about-kmm_review-kmm-releases-and-updates.html">About the Kernel Module Management Operator</a>
 </li>
+<li><a href="hosted-control-planes-release-notes_hosted-control-planes-release-notes.html">Hosted control planes release notes</a>
+</li>
+<li><a href="review-multiarch-tuning-operator-releases-con_review-multiarch-tuning-operator-releases.html">Review Multiarch Tuning Operator releases</a>
+</li>
 </ul>
 </li>
 <li><a href="_discover.html">Discover</a>
@@ -572,6 +576,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
 </li>
+<li><a href="override-resource-util-hosted-cluster-con_override-resource-util-hosted-cluster.html">Overriding resource utilization measurements</a>
+</li>
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
@@ -644,7 +650,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-single-node-openshift-intro_install-single-node-openshift.html">Install single-node OpenShift</a>
 </li>
+<li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
+</li>
 <li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
+</li>
+<li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
 </li>
 <li><a href="troubleshoot-installation-issues-intro_troubleshoot-installation-issues.html">Troubleshoot installation issues</a>
 </li>
@@ -716,7 +726,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="installation-about-restricted-networks_installing-restricted-networks-nutanix-installer-provisioned.html">About installations in restricted networks</a>
 </li>
-<li><a href="bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift.html">Prerequisites for using Red&#160;Hat Bare Metal as a Service for OpenShift</a>
+<li><a href="bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift.html">Prerequisites for using Red&#160;Hat Bare-Metal-as-a-Service for OpenShift</a>
 </li>
 <li><a href="install-on-aws-upi-intro_install-on-aws-upi.html">Install on AWS with user-provisioned infrastructure</a>
 </li>
@@ -852,11 +862,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hosted-clusters-openstack-prerequisites_deploying-hosted-control-planes-on-openstack.html">Prerequisites for OpenStack</a>
 </li>
-<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
-</li>
 <li><a href="installing-the-hosted-control-planes-command-line-interface-intro_installing-the-hosted-control-planes-command-line-interface.html">Installing the hosted control planes command-line interface</a>
 </li>
 <li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-deploy-azure-con_deploying-hosted-control-planes-on-azure.html">Deploying hosted control planes on Azure</a>
 </li>
 <li><a href="hcp-bm-overview_deploying-hosted-control-planes-on-bare-metal-with-the-agent-platform.html">About hosted control planes on bare metal with the Agent platform</a>
 </li>
@@ -869,29 +879,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_disconnected_environments.html">Disconnected environments</a>
 
 <ul class="sectlevel2">
-<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Understand disconnected environments</a>
+<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
-<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Installing a cluster with the Agent-based Installer</a>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
-<li><a href="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Prerequisites</a>
+<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">About oc-mirror plugin v2</a>
+<li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command.html">Prerequisites</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
-<li><a href="oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2.html">Changes from oc-mirror plugin v1 to v2</a>
-</li>
-<li><a href="olm-restricted-network-prereqs_manage-olm-operators-in-a-disconnected-environment.html">Prerequisites</a>
+<li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
-<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Using the OpenShift Update Service in a disconnected environment</a>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="updating-cli-prereqs_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Prerequisites for a cluster update</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
 </li>
-<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstalling the OpenShift Update Service from a cluster</a>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
-<li><a href="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected.html">About the mirror registry</a>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
+<li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
+</li>
+<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
 </li>
 </ul>
 </li>
@@ -947,7 +959,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="core-user-password_change-the-core-user-password-for-node-access.html">Change the core user password for node access</a>
 </li>
-<li><a href="configure-control-plane-failure-domains-con_configure-control-plane-failure-domains.html">Configure control plane failure domains</a>
+<li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
 </li>
@@ -987,9 +999,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="manage-the-configuration-and-lifecycle-of-control-plane-machines-con_manage-the-configuration-and-lifecycle-of-control-plane-machines.html">Manage the configuration and lifecycle of control plane machines</a>
 </li>
+<li><a href="manage-the-configuration-and-lifecycle-of-compute-machines-con_manage-the-configuration-and-lifecycle-of-compute-machines.html">Manage the configuration and lifecycle of compute machines</a>
+</li>
+<li><a href="identify-and-group-compute-machines-con_identify-and-group-compute-machines.html">Identify and group compute machines</a>
+</li>
+<li><a href="identify-and-group-control-plane-machines-con_identify-and-group-control-plane-machines.html">Identify and group control plane machines</a>
+</li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
-<li><a href="hcp-import-manual_manually-import-a-hosted-cluster.html">Manually importing hosted clusters</a>
+<li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
 </li>
 <li><a href="nodes-pods-image-volume-about_mount-an-oci-image-onto-a-pod.html">Understanding image volumes</a>
 </li>
@@ -1021,7 +1039,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
 </li>
-<li><a href="machine-about-phases_understand-the-machine-lifecycle.html">Machine phases</a>
+<li><a href="understand-the-machine-lifecycle-con_understand-the-machine-lifecycle.html">Understand the machine lifecycle</a>
 </li>
 <li><a href="understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature-con_understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature.html">Understand the out-of-cluster mode of the Image Mode for OpenShift feature</a>
 </li>
@@ -1073,6 +1091,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console.html">Use developer workflows in the console</a>
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
+</li>
+<li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
 </li>
 </ul>
 </li>
@@ -1139,7 +1159,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">About oc-mirror plugin v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1165,13 +1185,83 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
 </li>
-<li><a href="change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set-con_change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set.html">Change the configuration of compute machines by updating a compute machine set</a>
+<li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
+</li>
+<li><a href="enable-automated-machine-management-on-user-provisioned-infrastructure-con_enable-automated-machine-management-on-user-provisioned-infrastructure.html">Enable automated machine management on user-provisioned infrastructure</a>
 </li>
 <li><a href="apply-configuration-changes-to-compute-machines-with-automation-con_apply-configuration-changes-to-compute-machines-with-automation.html">Apply configuration changes to compute machines with automation</a>
 </li>
-<li><a href="mapi-to-capi-migration-overview_change-the-authoritative-api-for-machine-management-resources.html">Machine API to Cluster API resource migration</a>
+<li><a href="change-the-authoritative-api-for-machine-management-resources-con_change-the-authoritative-api-for-machine-management-resources.html">Change the authoritative API for machine management resources</a>
 </li>
 <li><a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a>
+</li>
+<li><a href="configure-dns-records-in-a-private-zone-con_configure-dns-records-in-a-private-zone.html">Configure DNS records in a private zone</a>
+</li>
+<li><a href="set-the-ingress-controller-to-private-con_set-the-ingress-controller-to-private.html">Set the Ingress Controller to private</a>
+</li>
+<li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
+</li>
+<li><a href="restrict-the-api-server-to-private-for-azure-con_restrict-the-api-server-to-private-for-azure.html">Restrict the API server to private for Azure</a>
+</li>
+<li><a href="security-rhcos-overview_understand-host-security-controls.html">Red Hat Enterprise Linux CoreOS (RHCOS)</a>
+</li>
+<li><a href="identity-provider-overview_prepare-a-cluster-for-user-access.html">Identity providers in Red&#160;Hat OpenShift Container Platform</a>
+</li>
+<li><a href="manage-workloads-using-taints-and-tolerations-con_manage-workloads-using-taints-and-tolerations.html">Manage workloads using taints and tolerations</a>
+</li>
+<li><a href="infrastructure-components_move-workloads-to-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
+</li>
+<li><a href="registry-configuring-private-storage-endpoint-azure_configure-a-private-storage-endpoint-on-azure.html">Configure a private storage endpoint on Azure</a>
+</li>
+<li><a href="configure-private-storage-endpoint-with-iro-discovery-con_configure-private-storage-endpoint-with-iro-discovery.html">Configure a private storage endpoint by using Image Registry Operator discovery</a>
+</li>
+<li><a href="configure-private-storage-endpoint-with-user-provided-vnet-con_configure-private-storage-endpoint-with-user-provided-vnet.html">Configure a private storage endpoint with a user-provided VNet</a>
+</li>
+<li><a href="multi-architecture-configuring-your-cluster_create-multi-architecture-compute-clusters.html">Configuring your cluster with multi-architecture compute machines</a>
+</li>
+<li><a href="create-arm64-boot-image-using-azure-image-gallery-con_create-arm64-boot-image-using-azure-image-gallery.html">Create a 64-bit ARM boot image by using the Azure Compute Gallery</a>
+</li>
+<li><a href="add-multi-architecture-compute-machine-set-to-azure-cluster-con_add-multi-architecture-compute-machine-set-to-azure-cluster.html">Add a multi-architecture compute machine set to an Azure cluster</a>
+</li>
+<li><a href="add-multi-architecture-compute-machine-set-to-aws-cluster-con_add-multi-architecture-compute-machine-set-to-aws-cluster.html">Add a multi-architecture compute machine set to an AWS cluster</a>
+</li>
+<li><a href="create-multi-architecture-compute-clusters-on-google-cloud-con_create-multi-architecture-compute-clusters-on-google-cloud.html">Create multi-architecture compute clusters on Google Cloud</a>
+</li>
+<li><a href="create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z-con_create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z.html">Create multi-architecture compute clusters on bare metal, IBM Power, or IBM Z</a>
+</li>
+<li><a href="enable-64k-pages-on-rhcos-kernel-con_enable-64k-pages-on-rhcos-kernel.html">Enable 64k pages on the RHCOS kernel</a>
+</li>
+<li><a href="multi-architecture-gather-info-about-workloads_configure-the-multiarch-tuning-operator.html">Multiarch Tuning Operator pod labels and architecture support overview</a>
+</li>
+<li><a href="install-multiarch-tuning-operator-via-cli-con_install-multiarch-tuning-operator-via-cli.html">Install the Multiarch Tuning Operator by using the CLI</a>
+</li>
+<li><a href="install-multiarch-tuning-operator-via-web-console-con_install-multiarch-tuning-operator-via-web-console.html">Install the Multiarch Tuning Operator by using the web console</a>
+</li>
+<li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
+</li>
+<li><a href="create-kubeletconfig-cr-to-edit-kubelet-parameters-con_create-kubeletconfig-cr-to-edit-kubelet-parameters.html">Create a KubeletConfig CR to edit kubelet parameters</a>
+</li>
+<li><a href="modify-number-of-unavailable-worker-nodes-con_modify-number-of-unavailable-worker-nodes.html">Modify the number of unavailable worker nodes</a>
+</li>
+<li><a href="manage-cluster-overcommitment-con_manage-cluster-overcommitment.html">Manage cluster overcommitment</a>
+</li>
+<li><a href="registry-removed_configure-the-image-registry-operator.html">Image registry removed during installation</a>
+</li>
+<li><a href="registry-removed_configure-the-image-registry-after-installation.html">Image registry removed during installation</a>
+</li>
+<li><a href="configure-registry-storage-by-platform-con_configure-registry-storage-by-platform.html">Configure registry storage by platform</a>
+</li>
+<li><a href="odc-customizing-user-perspectives_enable-the-developer-perspective.html">Customize user perspectives</a>
+</li>
+<li><a href="set-user-preferences-con_set-user-preferences.html">Set user preferences</a>
+</li>
+<li><a href="configure-theme-and-language-preferences-con_configure-theme-and-language-preferences.html">Configure theme and language preferences</a>
+</li>
+<li><a href="configure-the-web-console-con_configure-the-web-console.html">Configure the web console</a>
+</li>
+<li><a href="configure-web-terminal-timeout-and-image-settings-con_configure-web-terminal-timeout-and-image-settings.html">Configure web terminal timeout and image settings</a>
+</li>
+<li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
 </li>
 </ul>
 </li>
@@ -1183,6 +1273,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
+</li>
+<li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1350,6 +1442,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-confidential-vms-con_configure-confidential-vms.html">Configure confidential VMs</a>
 </li>
+<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines</a>
+</li>
+<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
+</li>
 <li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
 </li>
 <li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
@@ -1460,7 +1564,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nodes-nodes-managing-max-pods-proc_adjust-maximum-number-of-pods-on-a-node.html">Configure the maximum number of pods per node</a>
 </li>
-<li><a href="machineset-manually-scaling_scale-compute-resources.html">Scale a compute machine set manually</a>
+<li><a href="scale-compute-resources-con_scale-compute-resources.html">Scale workloads to match demand</a>
 </li>
 <li><a href="nodes-cluster-resource-configure-about_configure-cluster-memory-to-meet-container-memory-and-risk-requirements.html">Understanding how to manage application memory</a>
 </li>
@@ -1500,7 +1604,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="machine-mgmt-intro-managing-compute_scale-the-number-of-compute-machines-that-use-a-specific-configuration.html">Compute machine management</a>
+<li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
 <li><a href="machine-mgmt-intro-add-for-upi_add-compute-machines-manually.html">Compute machine creation on user-provisioned infrastructure</a>
 </li>
@@ -1508,11 +1612,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="machineset-label-gpu-autoscaler_label-gpu-machine-sets-for-autoscaler.html">Label GPU machine sets for the cluster autoscaler</a>
 </li>
-<li><a href="machineset-non-guaranteed-instance_creating-machineset-aws.html">Machine sets that deploy machines as Spot Instances</a>
+<li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="machineset-capacity-reservation_creating-machineset-aws.html">Configure Capacity Reservations by using machine sets</a>
+<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
 </li>
-<li><a href="nvidia-gpu-aws-adding-a-gpu-node_add-gpu-nodes-to-machine-sets.html">Add a GPU node to an existing Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+</li>
+<li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
+</li>
+<li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
+</li>
+<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
+</li>
+<li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
+</li>
+<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
 </ul>
 </li>
@@ -1543,6 +1661,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog.html">About Operator installation from the software catalog</a>
 </li>
+<li><a href="cli-manager-about_manage-cli-plugins-with-the-cli-manager.html">About the CLI Manager Operator</a>
+</li>
 <li><a href="nodes-pods-plugins-about_manage-kernel-modules-across-cluster-nodes-deploy-device-plugins-alongside-kernel-modules.html">Understand device plugins</a>
 </li>
 <li><a href="resolve-catalog-content-con_resolve-catalog-content.html">Resolve catalog content</a>
@@ -1552,6 +1672,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_validate.html">Validate</a>
 
 <ul class="sectlevel2">
+<li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
+</li>
 <li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
@@ -1573,13 +1695,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="remediate-node-configuration-drift-to-return-the-node-to-ready-con_remediate-node-configuration-drift-to-return-the-node-to-ready.html">Remediate node configuration drift to return the node to ready</a>
 </li>
+<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
+</li>
+<li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
+</li>
+<li><a href="troubleshoot-hosted-clusters-by-platform-con_troubleshoot-hosted-clusters-by-platform.html">Troubleshoot hosted clusters by platform</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal.html">Troubleshoot hosted clusters on bare metal</a>
 </li>
-<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshoot hosted clusters on OpenShift Virtualization</a>
+<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
-<li><a href="troubleshoot-hosted-clusters-by-platform-con_troubleshoot-hosted-clusters-by-platform.html">Troubleshoot hosted clusters by platform</a>
+<li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
+</li>
+<li><a href="hcp-disaster-recovery-aws-con_disaster-recovery-for-hosted-control-planes-on-aws.html">Disaster recovery for a hosted cluster in AWS</a>
+</li>
+<li><a href="hcp-azure-automated-dr_disaster-recovery-for-hosted-control-planes-on-azure.html">Automated disaster recovery for hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-azure-etcd-snapshot_backup-and-restore-for-hosted-control-planes-on-azure.html">Backup and restore for hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-disaster-recovery-oadp-con_disaster-recovery-for-hosted-control-planes-using-oadp.html">Disaster recovery for a hosted cluster by using OADP</a>
+</li>
+<li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
+</li>
+<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
+</li>
+<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
+</li>
+<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="post-using-node-tuning-operator_troubleshoot-node-performance-issues.html">Using the Node Tuning Operator</a>
 </li>
@@ -1587,7 +1733,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-network-flows-object_incident-investigation.html">Network object configuration for tracking network flows</a>
 </li>
-<li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspecting pod and container logs</a>
+<li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
 <li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
 </li>
@@ -1595,13 +1741,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
+</li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
 </li>
-<li><a href="inspecting-pod-and-container-logs_copy-files-to-or-from-containers.html">Inspecting pod and container logs</a>
+<li><a href="inspecting-pod-and-container-logs_copy-files-to-or-from-containers.html">Inspect pod and container logs</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_replace-failed-bare-metal-control-plane-nodes-without-bmc-credentials.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1613,23 +1761,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-oadp-update-channels_troubleshoot-common-update-failures.html">About OADP update channels</a>
 </li>
-<li><a href="about-node-health-check-operator_use-the-vsphere-problem-detector-operator.html">About the Node Health Check Operator</a>
-</li>
 <li><a href="understand-etcd-performance_move-etcd-to-a-different-disk.html">Factors that affect etcd performance</a>
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_gather-data-about-a-cluster-update.html">Gathering bootstrap node diagnostic data</a>
 </li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes.html">Control plane backup and restore operations</a>
-</li>
-<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-a-hosted-cluster.html">Collecting Windows application event logs</a>
-</li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
-<li><a href="investigating-why-windows-machine-compute-node_troubleshoot-machine-management.html">Investigating why Windows Machine does not become compute node</a>
+<li><a href="troubleshoot-machine-management-con_troubleshoot-machine-management.html">Troubleshoot machine management</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
-<li><a href="understanding-oc-log-levels_identify-resource-limits-and-quotas-in-topology-view.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
+<li><a href="understanding-oc-log-levels_identify-resource-limits-and-quotas-in-topology-view.html">Understand OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
 <li><a href="nw-networkpolicy-project-defaults_troubleshoot-web-terminal-startup-failures.html">Add network policies to the new project template</a>
 </li>
@@ -1645,7 +1787,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1653,13 +1795,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
-</li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
-</li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
+</li>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
 </li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
@@ -1685,11 +1823,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_investigate-an-active-cluster-issue-troubleshoot-cluster-issues.html">Gathering bootstrap node diagnostic data</a>
 </li>
-<li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
+<li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gather Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
 </li>
-<li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
+</li>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
+</li>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
+</li>
+<li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understand OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
 <li><a href="post-install-etcd-tasks_defragment-etcd-data-automatically-defragment-etcd-data.html">etcd tasks</a>
 </li>
@@ -1717,6 +1861,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_encrypt-etcd-test-restore-procedures.html">Control plane backup and restore operations</a>
 </li>
+<li><a href="troubleshoot-clusters-that-use-the-cluster-api-con_troubleshoot-clusters-that-use-the-cluster-api.html">Troubleshoot clusters that use the Cluster API</a>
+</li>
+<li><a href="troubleshoot-the-control-plane-machine-set-con_troubleshoot-the-control-plane-machine-set.html">Troubleshoot the control plane machine set</a>
+</li>
+<li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1731,7 +1881,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#view-networking-dashboards-con_view-networking-dashboards">View networking dashboards</a></li><li class="level-5"><a href="#reviewing-monitoring-dashboards-admin_view-networking-dashboards">Review monitoring dashboards as a cluster administrator</a></li><li class="level-5"><a href="#network-observability-viewing-dashboards_view-networking-dashboards">View network observability metrics dashboards</a></li><li class="level-5"><a href="#network-observability-dashboards_view-networking-dashboards">Network observability metrics dashboards</a></li><li class="level-4"><a href="#view-operator-metrics-con_view-operator-metrics">View operator metrics</a></li><li class="level-5"><a href="#anp-banp-metrics_view-operator-metrics">Metrics for AdminNetworkPolicy</a></li><li class="level-5"><a href="#nw-metallb-metrics_view-operator-metrics">MetalLB metrics for BGP and BFD</a></li><li class="level-5"><a href="#nw-exposing-router-metrics_view-operator-metrics">Expose router metrics</a></li><li class="level-5"><a href="#cnf-network-metrics-daemon_view-operator-metrics">Network Metrics Daemon</a></li><li class="level-6"><a href="#_additional_resources_10">Additional resources</a></li><li class="level-4"><a href="#view-operator-logs-con_view-operator-logs">View operator logs</a></li><li class="level-5"><a href="#nw-cno-logs_view-operator-logs">View Cluster Network Operator logs</a></li><li class="level-5"><a href="#nw-dns-operator-logs_view-operator-logs">View DNS Operator logs</a></li><li class="level-5"><a href="#nw-ingress-operator-logs_view-operator-logs">View Ingress Controller logs</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-logs-cli_view-operator-logs">View the OVN-Kubernetes logs using the CLI</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-logs-console_view-operator-logs">View the OVN-Kubernetes logs using the web console</a></li><li class="level-4"><a href="#monitor-cluster-network-operator-status-con_monitor-cluster-network-operator-status">Monitor Cluster Network Operator status</a></li><li class="level-5"><a href="#nw-cluster-network-operator_monitor-cluster-network-operator-status">Cluster Network Operator</a></li><li class="level-5"><a href="#nw-cno-view_monitor-cluster-network-operator-status">View the cluster network configuration</a></li><li class="level-5"><a href="#nw-cno-status_monitor-cluster-network-operator-status">View Cluster Network Operator status</a></li><li class="level-5"><a href="#nw-dns-operator-status_monitor-cluster-network-operator-status">Check DNS Operator status</a></li><li class="level-4"><a href="#network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability">Observe the network traffic from the Overview view</a></li><li class="level-5"><a href="#network-observability-working-with-overview_monitor-network-traffic-with-network-observability">Work with the Overview view</a></li><li class="level-5"><a href="#network-observability-configuring-options-overview_monitor-network-traffic-with-network-observability">Configure advanced options for the Overview view</a></li><li class="level-6"><a href="#network-observability-cao-managing-panels-overview_monitor-network-traffic-with-network-observability">Managing panels and display</a></li><li class="level-5"><a href="#network-observability-trafficflow_monitor-network-traffic-with-network-observability">Observe the network traffic from the Traffic flows view</a></li><li class="level-5"><a href="#network-observability-working-with-trafficflow_monitor-network-traffic-with-network-observability">Work with the Traffic flows view</a></li><li class="level-5"><a href="#network-observability-configuring-options-trafficflow_monitor-network-traffic-with-network-observability">Traffic flow display settings</a></li><li class="level-6"><a href="#display-options_monitor-network-traffic-with-network-observability">Display options</a></li><li class="level-5"><a href="#network-observability-topology_monitor-network-traffic-with-network-observability">Observe the network traffic from the Topology view</a></li><li class="level-5"><a href="#network-observability-working-with-topology_monitor-network-traffic-with-network-observability">Work with the Topology view</a></li><li class="level-5"><a href="#network-observability-configuring-options-topology_monitor-network-traffic-with-network-observability">Configure the advanced options for the Topology view</a></li><li class="level-6"><a href="#network-observability-cao-export-topology_monitor-network-traffic-with-network-observability">Exporting the topology view</a></li><li class="level-5"><a href="#network-observability-quickfilter_monitor-network-traffic-with-network-observability">Filter the network traffic</a></li><li class="level-5"><a href="#network-observability-health-dashboard-overview_monitor-network-observability-operator-health">Health dashboards</a></li><li class="level-6"><a href="#network-observability-health-alert-overview_monitor-network-observability-operator-health">Health alerts</a></li><li class="level-6"><a href="#network-observability-dashboard-view_monitor-network-observability-operator-health">View health information</a></li><li class="level-6"><a href="#network-observability-disable-alerts_monitor-network-observability-operator-health">Disable health alerts</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-rate-limit-alerts_monitor-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-ebpf-agent-alerts_monitor-network-observability-operator-health">Use the eBPF agent alert</a></li><li class="level-6"><a href="#nw-status-configuration-network-observability-operator_monitor-network-observability-operator-health">View Network Observability Operator status and configuration</a></li><li class="level-5"><a href="#detect-and-investigate-network-observability-issues-con_detect-and-investigate-network-observability-issues">Detect and investigate Network Observability issues</a></li><li class="level-6"><a href="#network-observability-must-gather_detect-and-investigate-network-observability-issues">Use the must-gather tool</a></li><li class="level-6"><a href="#configure-network-traffic-console_detect-and-investigate-network-observability-issues">Configure network traffic menu entry in the Red Hat OpenShift Container Platform console</a></li><li class="level-6"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_detect-and-investigate-network-observability-issues">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-6"><a href="#configure-network-traffic-interfaces_detect-and-investigate-network-observability-issues">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-6"><a href="#controller-manager-pod-runs-out-of-memory_detect-and-investigate-network-observability-issues">Network observability controller manager pod runs out of memory</a></li><li class="level-6"><a href="#troubleshooting-query-loki-manually_detect-and-investigate-network-observability-issues">Run custom queries to Loki</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-resource-exhausted_detect-and-investigate-network-observability-issues">Troubleshoot Loki ResourceExhausted error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-empty-ring_detect-and-investigate-network-observability-issues">Loki empty ring error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-tenant-rate-limit_detect-and-investigate-network-observability-issues">LokiStack rate limit errors</a></li><li class="level-6"><a href="#network-observability-troubleshooting-large-query-timeout_detect-and-investigate-network-observability-issues">Running a large query results in Loki errors</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#view-networking-dashboards-con_view-networking-dashboards">View networking dashboards</a></li><li class="level-5"><a href="#reviewing-monitoring-dashboards-admin_view-networking-dashboards">Review monitoring dashboards as a cluster administrator</a></li><li class="level-5"><a href="#network-observability-viewing-dashboards_view-networking-dashboards">View network observability metrics dashboards</a></li><li class="level-5"><a href="#network-observability-dashboards_view-networking-dashboards">Network observability metrics dashboards</a></li><li class="level-4"><a href="#view-operator-metrics-con_view-operator-metrics">View operator metrics</a></li><li class="level-5"><a href="#anp-banp-metrics_view-operator-metrics">Metrics for AdminNetworkPolicy</a></li><li class="level-5"><a href="#nw-metallb-metrics_view-operator-metrics">MetalLB metrics for BGP and BFD</a></li><li class="level-5"><a href="#nw-exposing-router-metrics_view-operator-metrics">Expose router metrics</a></li><li class="level-5"><a href="#cnf-network-metrics-daemon_view-operator-metrics">Network Metrics Daemon</a></li><li class="level-6"><a href="#_additional_resources_10">Additional resources</a></li><li class="level-4"><a href="#view-operator-logs-con_view-operator-logs">View operator logs</a></li><li class="level-5"><a href="#nw-cno-logs_view-operator-logs">View Cluster Network Operator logs</a></li><li class="level-5"><a href="#nw-dns-operator-logs_view-operator-logs">View DNS Operator logs</a></li><li class="level-5"><a href="#nw-ingress-operator-logs_view-operator-logs">View Ingress Controller logs</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-logs-cli_view-operator-logs">View the OVN-Kubernetes logs using the CLI</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-logs-console_view-operator-logs">View the OVN-Kubernetes logs using the web console</a></li><li class="level-6"><a href="#nw-ovn-kubernetes-change-log-levels_view-operator-logs">Changing the OVN-Kubernetes log levels</a></li><li class="level-4"><a href="#monitor-cluster-network-operator-status-con_monitor-cluster-network-operator-status">Monitor Cluster Network Operator status</a></li><li class="level-5"><a href="#nw-cluster-network-operator_monitor-cluster-network-operator-status">Cluster Network Operator</a></li><li class="level-5"><a href="#nw-cno-view_monitor-cluster-network-operator-status">View the cluster network configuration</a></li><li class="level-5"><a href="#nw-cno-status_monitor-cluster-network-operator-status">View Cluster Network Operator status</a></li><li class="level-5"><a href="#nw-dns-operator-status_monitor-cluster-network-operator-status">Check DNS Operator status</a></li><li class="level-4"><a href="#network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability">Observe the network traffic from the Overview view</a></li><li class="level-5"><a href="#network-observability-working-with-overview_monitor-network-traffic-with-network-observability">Work with the Overview view</a></li><li class="level-5"><a href="#network-observability-configuring-options-overview_monitor-network-traffic-with-network-observability">Configure advanced options for the Overview view</a></li><li class="level-6"><a href="#network-observability-cao-managing-panels-overview_monitor-network-traffic-with-network-observability">Managing panels and display</a></li><li class="level-5"><a href="#network-observability-trafficflow_monitor-network-traffic-with-network-observability">Observe the network traffic from the Traffic flows view</a></li><li class="level-5"><a href="#network-observability-working-with-trafficflow_monitor-network-traffic-with-network-observability">Work with the Traffic flows view</a></li><li class="level-5"><a href="#network-observability-configuring-options-trafficflow_monitor-network-traffic-with-network-observability">Traffic flow display settings</a></li><li class="level-6"><a href="#display-options_monitor-network-traffic-with-network-observability">Display options</a></li><li class="level-5"><a href="#network-observability-topology_monitor-network-traffic-with-network-observability">Observe the network traffic from the Topology view</a></li><li class="level-5"><a href="#network-observability-working-with-topology_monitor-network-traffic-with-network-observability">Work with the Topology view</a></li><li class="level-5"><a href="#network-observability-configuring-options-topology_monitor-network-traffic-with-network-observability">Configure the advanced options for the Topology view</a></li><li class="level-6"><a href="#network-observability-cao-export-topology_monitor-network-traffic-with-network-observability">Exporting the topology view</a></li><li class="level-5"><a href="#network-observability-quickfilter_monitor-network-traffic-with-network-observability">Filter the network traffic</a></li><li class="level-5"><a href="#network-observability-health-dashboard-overview_monitor-network-observability-operator-health">Health dashboards</a></li><li class="level-6"><a href="#network-observability-health-alert-overview_monitor-network-observability-operator-health">Health alerts</a></li><li class="level-6"><a href="#network-observability-dashboard-view_monitor-network-observability-operator-health">View health information</a></li><li class="level-6"><a href="#network-observability-disable-alerts_monitor-network-observability-operator-health">Disable health alerts</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-rate-limit-alerts_monitor-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-ebpf-agent-alerts_monitor-network-observability-operator-health">Use the eBPF agent alert</a></li><li class="level-6"><a href="#nw-status-configuration-network-observability-operator_monitor-network-observability-operator-health">View Network Observability Operator status and configuration</a></li><li class="level-5"><a href="#detect-and-investigate-network-observability-issues-con_detect-and-investigate-network-observability-issues">Detect and investigate Network Observability issues</a></li><li class="level-6"><a href="#network-observability-must-gather_detect-and-investigate-network-observability-issues">Use the must-gather tool</a></li><li class="level-6"><a href="#configure-network-traffic-console_detect-and-investigate-network-observability-issues">Configure network traffic menu entry in the Red Hat OpenShift Container Platform console</a></li><li class="level-6"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_detect-and-investigate-network-observability-issues">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-6"><a href="#configure-network-traffic-interfaces_detect-and-investigate-network-observability-issues">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-6"><a href="#controller-manager-pod-runs-out-of-memory_detect-and-investigate-network-observability-issues">Network observability controller manager pod runs out of memory</a></li><li class="level-6"><a href="#troubleshooting-query-loki-manually_detect-and-investigate-network-observability-issues">Run custom queries to Loki</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-resource-exhausted_detect-and-investigate-network-observability-issues">Troubleshoot Loki ResourceExhausted error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-empty-ring_detect-and-investigate-network-observability-issues">Loki empty ring error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-tenant-rate-limit_detect-and-investigate-network-observability-issues">LokiStack rate limit errors</a></li><li class="level-6"><a href="#network-observability-troubleshooting-large-query-timeout_detect-and-investigate-network-observability-issues">Running a large query results in Loki errors</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="monitor-network-performance-con_monitor-network-performance">Monitor network performance</h3>
@@ -2028,7 +2178,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>To monitor network connectivity and diagnose routing states, refer to the Prometheus metrics for MetalLB. These metrics provide visibility into the status of BGP peers and BFD profiles so that you can ensure stable external communication.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 717. MetalLB BFD metrics</caption>
+<caption class="title">Table 742. MetalLB BFD metrics</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -2075,7 +2225,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 718. MetalLB BGP metrics</caption>
+<caption class="title">Table 743. MetalLB BGP metrics</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -2518,6 +2668,184 @@ oc logs -c $container $p -n openshift-ovn-kubernetes --tail=5; done; done</code>
 <p>Use the down-down menu to select logs for each container in turn.</p>
 </li>
 </ol>
+</div>
+<div class="sect5">
+<h6 id="nw-ovn-kubernetes-change-log-levels_view-operator-logs">Changing the OVN-Kubernetes log levels</h6>
+<div class="paragraph _abstract">
+<p>To debug OVN-Kubernetes in Red&#160;Hat OpenShift Container Platform, you can raise log levels by applying an <code>env-overrides</code> <code>ConfigMap</code> and restarting affected pods.</p>
+</div>
+<div class="paragraph">
+<p>The default log level for OVN-Kubernetes is 4. To debug OVN-Kubernetes, set the log level to 5. Follow this procedure to increase the log level of the OVN-Kubernetes to help you debug an issue.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to the cluster with <code>cluster-admin</code> privileges.</p>
+</li>
+<li>
+<p>You have access to the OpenShift Container Platform web console.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Run the following command to get detailed information for all pods in the OVN-Kubernetes project:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get po -o wide -n openshift-ovn-kubernetes</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                                     READY   STATUS    RESTARTS       AGE    IP           NODE                                       NOMINATED NODE   READINESS GATES
+ovnkube-control-plane-65497d4548-9ptdr   2/2     Running   2 (128m ago)   147m   10.0.0.3     ci-ln-3njdr9b-72292-5nwkp-master-0         &lt;none&gt;           &lt;none&gt;
+ovnkube-control-plane-65497d4548-j6zfk   2/2     Running   0              147m   10.0.0.5     ci-ln-3njdr9b-72292-5nwkp-master-2         &lt;none&gt;           &lt;none&gt;
+ovnkube-node-5dx44                       8/8     Running   0              146m   10.0.0.3     ci-ln-3njdr9b-72292-5nwkp-master-0         &lt;none&gt;           &lt;none&gt;
+ovnkube-node-dpfn4                       8/8     Running   0              146m   10.0.0.4     ci-ln-3njdr9b-72292-5nwkp-master-1         &lt;none&gt;           &lt;none&gt;
+ovnkube-node-kwc9l                       8/8     Running   0              134m   10.0.128.2   ci-ln-3njdr9b-72292-5nwkp-worker-a-2fjcj   &lt;none&gt;           &lt;none&gt;
+ovnkube-node-mcrhl                       8/8     Running   0              134m   10.0.128.4   ci-ln-3njdr9b-72292-5nwkp-worker-c-v9x5v   &lt;none&gt;           &lt;none&gt;
+ovnkube-node-nsct4                       8/8     Running   0              146m   10.0.0.5     ci-ln-3njdr9b-72292-5nwkp-master-2         &lt;none&gt;           &lt;none&gt;
+ovnkube-node-zrj9f                       8/8     Running   0              134m   10.0.128.3   ci-ln-3njdr9b-72292-5nwkp-worker-b-v78h7   &lt;none&gt;           &lt;none&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a <code>ConfigMap</code> file similar to the following example and use a filename such as <code>env-overrides.yaml</code>:</p>
+<div class="listingblock">
+<div class="title">Example <code>ConfigMap</code> file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: env-overrides
+  namespace: openshift-ovn-kubernetes
+data:
+  ci-ln-3njdr9b-72292-5nwkp-master-0: |
+    # This sets the log level for the ovn-kubernetes node process:
+    OVN_KUBE_LOG_LEVEL=5
+    # You might also/instead want to enable debug logging for ovn-controller:
+    OVN_LOG_LEVEL=dbg
+  ci-ln-3njdr9b-72292-5nwkp-master-2: |
+    # This sets the log level for the ovn-kubernetes node process:
+    OVN_KUBE_LOG_LEVEL=5
+    # You might also/instead want to enable debug logging for ovn-controller:
+    OVN_LOG_LEVEL=dbg
+  _master: |
+    # This sets the log level for the ovn-kubernetes master process as well as the ovn-dbchecker:
+    OVN_KUBE_LOG_LEVEL=5
+    # You might also/instead want to enable debug logging for northd, nbdb and sbdb on all masters:
+    OVN_LOG_LEVEL=dbg</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">where</dt>
+<dt class="hdlist1"><code>ci-ln-3njdr9b-72292-5nwkp-master-0:</code></dt>
+<dd>
+<p>Specifies the name of the node you want to set the debug log level on.</p>
+</dd>
+<dt class="hdlist1"><code>_master:</code></dt>
+<dd>
+<p>Specifies <code>_master</code> to set the log levels of <code>ovnkube-master</code> components.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Apply the <code>ConfigMap</code> file by using the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -n openshift-ovn-kubernetes -f env-overrides.yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">configmap/env-overrides.yaml created</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Restart the <code>ovnkube</code> pods to apply the new log level by using the following commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete pod -n openshift-ovn-kubernetes \
+--field-selector spec.nodeName=ci-ln-3njdr9b-72292-5nwkp-master-0 -l app=ovnkube-node</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete pod -n openshift-ovn-kubernetes \
+--field-selector spec.nodeName=ci-ln-3njdr9b-72292-5nwkp-master-2 -l app=ovnkube-node</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete pod -n openshift-ovn-kubernetes -l app=ovnkube-node</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To verify that the `ConfigMap`file has been applied to all nodes for a specific pod, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n openshift-ovn-kubernetes --all-containers --prefix ovnkube-node-&lt;xxxx&gt; | grep -E -m 10 '(Logging config:|vconsole|DBG)'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:
+<code>&lt;XXXX&gt;</code>:: Specifies the random sequence of letters for a pod from the previous step.</p>
+</div>
+<div class="paragraph">
+<p>+
+.Example output</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">[pod/ovnkube-node-2cpjc/sbdb] + exec /usr/share/ovn/scripts/ovn-ctl --no-monitor '--ovn-sb-log=-vconsole:info -vfile:off -vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' run_sb_ovsdb
+[pod/ovnkube-node-2cpjc/ovnkube-controller] I1012 14:39:59.984506   35767 config.go:2247] Logging config: {File: CNIFile:/var/log/ovn-kubernetes/ovn-k8s-cni-overlay.log LibovsdbFile:/var/log/ovnkube/libovsdb.log Level:5 LogFileMaxSize:100 LogFileMaxBackups:5 LogFileMaxAge:0 ACLLoggingRateLimit:20}
+[pod/ovnkube-node-2cpjc/northd] + exec ovn-northd --no-chdir -vconsole:info -vfile:off '-vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' --pidfile /var/run/ovn/ovn-northd.pid --n-threads=1
+[pod/ovnkube-node-2cpjc/nbdb] + exec /usr/share/ovn/scripts/ovn-ctl --no-monitor '--ovn-nb-log=-vconsole:info -vfile:off -vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' run_nb_ovsdb
+[pod/ovnkube-node-2cpjc/ovn-controller] 2023-10-12T14:39:54.552Z|00002|hmap|DBG|lib/shash.c:114: 1 bucket with 6+ nodes, including 1 bucket with 6 nodes (32 nodes total across 32 buckets)
+[pod/ovnkube-node-2cpjc/ovn-controller] 2023-10-12T14:39:54.553Z|00003|hmap|DBG|lib/shash.c:114: 1 bucket with 6+ nodes, including 1 bucket with 6 nodes (64 nodes total across 64 buckets)
+[pod/ovnkube-node-2cpjc/ovn-controller] 2023-10-12T14:39:54.553Z|00004|hmap|DBG|lib/shash.c:114: 1 bucket with 6+ nodes, including 1 bucket with 7 nodes (32 nodes total across 32 buckets)
+[pod/ovnkube-node-2cpjc/ovn-controller] 2023-10-12T14:39:54.553Z|00005|reconnect|DBG|unix:/var/run/openvswitch/db.sock: entering BACKOFF
+[pod/ovnkube-node-2cpjc/ovn-controller] 2023-10-12T14:39:54.553Z|00007|reconnect|DBG|unix:/var/run/openvswitch/db.sock: entering CONNECTING
+[pod/ovnkube-node-2cpjc/ovn-controller] 2023-10-12T14:39:54.553Z|00008|ovsdb_cs|DBG|unix:/var/run/openvswitch/db.sock: SERVER_SCHEMA_REQUESTED -&gt; SERVER_SCHEMA_REQUESTED at lib/ovsdb-cs.c:423</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Optional: Check the <code>ConfigMap</code> file has been applied by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">for f in $(oc -n openshift-ovn-kubernetes get po -l 'app=ovnkube-node' --no-headers -o custom-columns=N:.metadata.name) ; do echo "---- $f ----" ; oc -n openshift-ovn-kubernetes exec -c ovnkube-controller $f --  pgrep -a -f  init-ovnkube-controller | grep -P -o '^.*loglevel\s+\d' ; done</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">---- ovnkube-node-2dt57 ----
+60981 /usr/bin/ovnkube --init-ovnkube-controller xpst8-worker-c-vmh5n.c.openshift-qe.internal --init-node xpst8-worker-c-vmh5n.c.openshift-qe.internal --config-file=/run/ovnkube-config/ovnkube.conf --ovn-empty-lb-events --loglevel 4
+---- ovnkube-node-4zznh ----
+178034 /usr/bin/ovnkube --init-ovnkube-controller xpst8-master-2.c.openshift-qe.internal --init-node xpst8-master-2.c.openshift-qe.internal --config-file=/run/ovnkube-config/ovnkube.conf --ovn-empty-lb-events --loglevel 4
+---- ovnkube-node-548sx ----
+77499 /usr/bin/ovnkube --init-ovnkube-controller xpst8-worker-a-fjtnb.c.openshift-qe.internal --init-node xpst8-worker-a-fjtnb.c.openshift-qe.internal --config-file=/run/ovnkube-config/ovnkube.conf --ovn-empty-lb-events --loglevel 4
+---- ovnkube-node-6btrf ----
+73781 /usr/bin/ovnkube --init-ovnkube-controller xpst8-worker-b-p8rww.c.openshift-qe.internal --init-node xpst8-worker-b-p8rww.c.openshift-qe.internal --config-file=/run/ovnkube-config/ovnkube.conf --ovn-empty-lb-events --loglevel 4
+---- ovnkube-node-fkc9r ----
+130707 /usr/bin/ovnkube --init-ovnkube-controller xpst8-master-0.c.openshift-qe.internal --init-node xpst8-master-0.c.openshift-qe.internal --config-file=/run/ovnkube-config/ovnkube.conf --ovn-empty-lb-events --loglevel 5
+---- ovnkube-node-tk9l4 ----
+181328 /usr/bin/ovnkube --init-ovnkube-controller xpst8-master-1.c.openshift-qe.internal --init-node xpst8-master-1.c.openshift-qe.internal --config-file=/run/ovnkube-config/ovnkube.conf --ovn-empty-lb-events --loglevel 4</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 </div>
@@ -3909,7 +4237,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-02 17:45:39 +0100
+Last updated 2026-10-09 12:13:30 +0100
 </div>
 </div>
 <style>

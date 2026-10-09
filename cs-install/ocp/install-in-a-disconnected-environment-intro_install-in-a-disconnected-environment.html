@@ -489,6 +489,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="about-kmm_review-kmm-releases-and-updates.html">About the Kernel Module Management Operator</a>
 </li>
+<li><a href="hosted-control-planes-release-notes_hosted-control-planes-release-notes.html">Hosted control planes release notes</a>
+</li>
+<li><a href="review-multiarch-tuning-operator-releases-con_review-multiarch-tuning-operator-releases.html">Review Multiarch Tuning Operator releases</a>
+</li>
 </ul>
 </li>
 <li><a href="_discover.html">Discover</a>
@@ -572,6 +576,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
 </li>
+<li><a href="override-resource-util-hosted-cluster-con_override-resource-util-hosted-cluster.html">Overriding resource utilization measurements</a>
+</li>
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
@@ -643,7 +649,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-single-node-openshift-intro_install-single-node-openshift.html">Install single-node OpenShift</a>
 </li>
+<li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
+</li>
 <li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
+</li>
+<li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
 </li>
 <li><a href="troubleshoot-installation-issues-intro_troubleshoot-installation-issues.html">Troubleshoot installation issues</a>
 </li>
@@ -715,7 +725,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="installation-about-restricted-networks_installing-restricted-networks-nutanix-installer-provisioned.html">About installations in restricted networks</a>
 </li>
-<li><a href="bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift.html">Prerequisites for using Red&#160;Hat Bare Metal as a Service for OpenShift</a>
+<li><a href="bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift.html">Prerequisites for using Red&#160;Hat Bare-Metal-as-a-Service for OpenShift</a>
 </li>
 <li><a href="install-on-aws-upi-intro_install-on-aws-upi.html">Install on AWS with user-provisioned infrastructure</a>
 </li>
@@ -851,11 +861,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hosted-clusters-openstack-prerequisites_deploying-hosted-control-planes-on-openstack.html">Prerequisites for OpenStack</a>
 </li>
-<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
-</li>
 <li><a href="installing-the-hosted-control-planes-command-line-interface-intro_installing-the-hosted-control-planes-command-line-interface.html">Installing the hosted control planes command-line interface</a>
 </li>
 <li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-deploy-azure-con_deploying-hosted-control-planes-on-azure.html">Deploying hosted control planes on Azure</a>
 </li>
 <li><a href="hcp-bm-overview_deploying-hosted-control-planes-on-bare-metal-with-the-agent-platform.html">About hosted control planes on bare metal with the Agent platform</a>
 </li>
@@ -868,29 +878,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_disconnected_environments.html">Disconnected environments</a>
 
 <ul class="sectlevel2">
-<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Understand disconnected environments</a>
+<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
-<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Installing a cluster with the Agent-based Installer</a>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
-<li><a href="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Prerequisites</a>
+<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">About oc-mirror plugin v2</a>
+<li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command.html">Prerequisites</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
-<li><a href="oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2.html">Changes from oc-mirror plugin v1 to v2</a>
-</li>
-<li><a href="olm-restricted-network-prereqs_manage-olm-operators-in-a-disconnected-environment.html">Prerequisites</a>
+<li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
-<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Using the OpenShift Update Service in a disconnected environment</a>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="updating-cli-prereqs_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Prerequisites for a cluster update</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
 </li>
-<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstalling the OpenShift Update Service from a cluster</a>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
-<li><a href="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected.html">About the mirror registry</a>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
+<li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
+</li>
+<li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
 </li>
 </ul>
 </li>
@@ -946,7 +958,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="core-user-password_change-the-core-user-password-for-node-access.html">Change the core user password for node access</a>
 </li>
-<li><a href="configure-control-plane-failure-domains-con_configure-control-plane-failure-domains.html">Configure control plane failure domains</a>
+<li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
 </li>
@@ -986,9 +998,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="manage-the-configuration-and-lifecycle-of-control-plane-machines-con_manage-the-configuration-and-lifecycle-of-control-plane-machines.html">Manage the configuration and lifecycle of control plane machines</a>
 </li>
+<li><a href="manage-the-configuration-and-lifecycle-of-compute-machines-con_manage-the-configuration-and-lifecycle-of-compute-machines.html">Manage the configuration and lifecycle of compute machines</a>
+</li>
+<li><a href="identify-and-group-compute-machines-con_identify-and-group-compute-machines.html">Identify and group compute machines</a>
+</li>
+<li><a href="identify-and-group-control-plane-machines-con_identify-and-group-control-plane-machines.html">Identify and group control plane machines</a>
+</li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
-<li><a href="hcp-import-manual_manually-import-a-hosted-cluster.html">Manually importing hosted clusters</a>
+<li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
 </li>
 <li><a href="nodes-pods-image-volume-about_mount-an-oci-image-onto-a-pod.html">Understanding image volumes</a>
 </li>
@@ -1020,7 +1038,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
 </li>
-<li><a href="machine-about-phases_understand-the-machine-lifecycle.html">Machine phases</a>
+<li><a href="understand-the-machine-lifecycle-con_understand-the-machine-lifecycle.html">Understand the machine lifecycle</a>
 </li>
 <li><a href="understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature-con_understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature.html">Understand the out-of-cluster mode of the Image Mode for OpenShift feature</a>
 </li>
@@ -1072,6 +1090,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console.html">Use developer workflows in the console</a>
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
+</li>
+<li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
 </li>
 </ul>
 </li>
@@ -1138,7 +1158,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">About oc-mirror plugin v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1164,13 +1184,83 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
 </li>
-<li><a href="change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set-con_change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set.html">Change the configuration of compute machines by updating a compute machine set</a>
+<li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
+</li>
+<li><a href="enable-automated-machine-management-on-user-provisioned-infrastructure-con_enable-automated-machine-management-on-user-provisioned-infrastructure.html">Enable automated machine management on user-provisioned infrastructure</a>
 </li>
 <li><a href="apply-configuration-changes-to-compute-machines-with-automation-con_apply-configuration-changes-to-compute-machines-with-automation.html">Apply configuration changes to compute machines with automation</a>
 </li>
-<li><a href="mapi-to-capi-migration-overview_change-the-authoritative-api-for-machine-management-resources.html">Machine API to Cluster API resource migration</a>
+<li><a href="change-the-authoritative-api-for-machine-management-resources-con_change-the-authoritative-api-for-machine-management-resources.html">Change the authoritative API for machine management resources</a>
 </li>
 <li><a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a>
+</li>
+<li><a href="configure-dns-records-in-a-private-zone-con_configure-dns-records-in-a-private-zone.html">Configure DNS records in a private zone</a>
+</li>
+<li><a href="set-the-ingress-controller-to-private-con_set-the-ingress-controller-to-private.html">Set the Ingress Controller to private</a>
+</li>
+<li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
+</li>
+<li><a href="restrict-the-api-server-to-private-for-azure-con_restrict-the-api-server-to-private-for-azure.html">Restrict the API server to private for Azure</a>
+</li>
+<li><a href="security-rhcos-overview_understand-host-security-controls.html">Red Hat Enterprise Linux CoreOS (RHCOS)</a>
+</li>
+<li><a href="identity-provider-overview_prepare-a-cluster-for-user-access.html">Identity providers in Red&#160;Hat OpenShift Container Platform</a>
+</li>
+<li><a href="manage-workloads-using-taints-and-tolerations-con_manage-workloads-using-taints-and-tolerations.html">Manage workloads using taints and tolerations</a>
+</li>
+<li><a href="infrastructure-components_move-workloads-to-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
+</li>
+<li><a href="registry-configuring-private-storage-endpoint-azure_configure-a-private-storage-endpoint-on-azure.html">Configure a private storage endpoint on Azure</a>
+</li>
+<li><a href="configure-private-storage-endpoint-with-iro-discovery-con_configure-private-storage-endpoint-with-iro-discovery.html">Configure a private storage endpoint by using Image Registry Operator discovery</a>
+</li>
+<li><a href="configure-private-storage-endpoint-with-user-provided-vnet-con_configure-private-storage-endpoint-with-user-provided-vnet.html">Configure a private storage endpoint with a user-provided VNet</a>
+</li>
+<li><a href="multi-architecture-configuring-your-cluster_create-multi-architecture-compute-clusters.html">Configuring your cluster with multi-architecture compute machines</a>
+</li>
+<li><a href="create-arm64-boot-image-using-azure-image-gallery-con_create-arm64-boot-image-using-azure-image-gallery.html">Create a 64-bit ARM boot image by using the Azure Compute Gallery</a>
+</li>
+<li><a href="add-multi-architecture-compute-machine-set-to-azure-cluster-con_add-multi-architecture-compute-machine-set-to-azure-cluster.html">Add a multi-architecture compute machine set to an Azure cluster</a>
+</li>
+<li><a href="add-multi-architecture-compute-machine-set-to-aws-cluster-con_add-multi-architecture-compute-machine-set-to-aws-cluster.html">Add a multi-architecture compute machine set to an AWS cluster</a>
+</li>
+<li><a href="create-multi-architecture-compute-clusters-on-google-cloud-con_create-multi-architecture-compute-clusters-on-google-cloud.html">Create multi-architecture compute clusters on Google Cloud</a>
+</li>
+<li><a href="create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z-con_create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z.html">Create multi-architecture compute clusters on bare metal, IBM Power, or IBM Z</a>
+</li>
+<li><a href="enable-64k-pages-on-rhcos-kernel-con_enable-64k-pages-on-rhcos-kernel.html">Enable 64k pages on the RHCOS kernel</a>
+</li>
+<li><a href="multi-architecture-gather-info-about-workloads_configure-the-multiarch-tuning-operator.html">Multiarch Tuning Operator pod labels and architecture support overview</a>
+</li>
+<li><a href="install-multiarch-tuning-operator-via-cli-con_install-multiarch-tuning-operator-via-cli.html">Install the Multiarch Tuning Operator by using the CLI</a>
+</li>
+<li><a href="install-multiarch-tuning-operator-via-web-console-con_install-multiarch-tuning-operator-via-web-console.html">Install the Multiarch Tuning Operator by using the web console</a>
+</li>
+<li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
+</li>
+<li><a href="create-kubeletconfig-cr-to-edit-kubelet-parameters-con_create-kubeletconfig-cr-to-edit-kubelet-parameters.html">Create a KubeletConfig CR to edit kubelet parameters</a>
+</li>
+<li><a href="modify-number-of-unavailable-worker-nodes-con_modify-number-of-unavailable-worker-nodes.html">Modify the number of unavailable worker nodes</a>
+</li>
+<li><a href="manage-cluster-overcommitment-con_manage-cluster-overcommitment.html">Manage cluster overcommitment</a>
+</li>
+<li><a href="registry-removed_configure-the-image-registry-operator.html">Image registry removed during installation</a>
+</li>
+<li><a href="registry-removed_configure-the-image-registry-after-installation.html">Image registry removed during installation</a>
+</li>
+<li><a href="configure-registry-storage-by-platform-con_configure-registry-storage-by-platform.html">Configure registry storage by platform</a>
+</li>
+<li><a href="odc-customizing-user-perspectives_enable-the-developer-perspective.html">Customize user perspectives</a>
+</li>
+<li><a href="set-user-preferences-con_set-user-preferences.html">Set user preferences</a>
+</li>
+<li><a href="configure-theme-and-language-preferences-con_configure-theme-and-language-preferences.html">Configure theme and language preferences</a>
+</li>
+<li><a href="configure-the-web-console-con_configure-the-web-console.html">Configure the web console</a>
+</li>
+<li><a href="configure-web-terminal-timeout-and-image-settings-con_configure-web-terminal-timeout-and-image-settings.html">Configure web terminal timeout and image settings</a>
+</li>
+<li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
 </li>
 </ul>
 </li>
@@ -1182,6 +1272,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
+</li>
+<li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1349,6 +1441,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-confidential-vms-con_configure-confidential-vms.html">Configure confidential VMs</a>
 </li>
+<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines</a>
+</li>
+<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
+</li>
 <li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
 </li>
 <li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
@@ -1460,7 +1564,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nodes-nodes-managing-max-pods-proc_adjust-maximum-number-of-pods-on-a-node.html">Configure the maximum number of pods per node</a>
 </li>
-<li><a href="machineset-manually-scaling_scale-compute-resources.html">Scale a compute machine set manually</a>
+<li><a href="scale-compute-resources-con_scale-compute-resources.html">Scale workloads to match demand</a>
 </li>
 <li><a href="nodes-cluster-resource-configure-about_configure-cluster-memory-to-meet-container-memory-and-risk-requirements.html">Understanding how to manage application memory</a>
 </li>
@@ -1500,7 +1604,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="machine-mgmt-intro-managing-compute_scale-the-number-of-compute-machines-that-use-a-specific-configuration.html">Compute machine management</a>
+<li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
 <li><a href="machine-mgmt-intro-add-for-upi_add-compute-machines-manually.html">Compute machine creation on user-provisioned infrastructure</a>
 </li>
@@ -1508,11 +1612,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="machineset-label-gpu-autoscaler_label-gpu-machine-sets-for-autoscaler.html">Label GPU machine sets for the cluster autoscaler</a>
 </li>
-<li><a href="machineset-non-guaranteed-instance_creating-machineset-aws.html">Machine sets that deploy machines as Spot Instances</a>
+<li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="machineset-capacity-reservation_creating-machineset-aws.html">Configure Capacity Reservations by using machine sets</a>
+<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
 </li>
-<li><a href="nvidia-gpu-aws-adding-a-gpu-node_add-gpu-nodes-to-machine-sets.html">Add a GPU node to an existing Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+</li>
+<li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
+</li>
+<li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
+</li>
+<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
+</li>
+<li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
+</li>
+<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
 </ul>
 </li>
@@ -1543,6 +1661,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog.html">About Operator installation from the software catalog</a>
 </li>
+<li><a href="cli-manager-about_manage-cli-plugins-with-the-cli-manager.html">About the CLI Manager Operator</a>
+</li>
 <li><a href="nodes-pods-plugins-about_manage-kernel-modules-across-cluster-nodes-deploy-device-plugins-alongside-kernel-modules.html">Understand device plugins</a>
 </li>
 <li><a href="resolve-catalog-content-con_resolve-catalog-content.html">Resolve catalog content</a>
@@ -1552,6 +1672,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_validate.html">Validate</a>
 
 <ul class="sectlevel2">
+<li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
+</li>
 <li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
@@ -1573,13 +1695,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="remediate-node-configuration-drift-to-return-the-node-to-ready-con_remediate-node-configuration-drift-to-return-the-node-to-ready.html">Remediate node configuration drift to return the node to ready</a>
 </li>
+<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
+</li>
+<li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
+</li>
+<li><a href="troubleshoot-hosted-clusters-by-platform-con_troubleshoot-hosted-clusters-by-platform.html">Troubleshoot hosted clusters by platform</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal.html">Troubleshoot hosted clusters on bare metal</a>
 </li>
-<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshoot hosted clusters on OpenShift Virtualization</a>
+<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
-<li><a href="troubleshoot-hosted-clusters-by-platform-con_troubleshoot-hosted-clusters-by-platform.html">Troubleshoot hosted clusters by platform</a>
+<li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
+</li>
+<li><a href="hcp-disaster-recovery-aws-con_disaster-recovery-for-hosted-control-planes-on-aws.html">Disaster recovery for a hosted cluster in AWS</a>
+</li>
+<li><a href="hcp-azure-automated-dr_disaster-recovery-for-hosted-control-planes-on-azure.html">Automated disaster recovery for hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-azure-etcd-snapshot_backup-and-restore-for-hosted-control-planes-on-azure.html">Backup and restore for hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-disaster-recovery-oadp-con_disaster-recovery-for-hosted-control-planes-using-oadp.html">Disaster recovery for a hosted cluster by using OADP</a>
+</li>
+<li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
+</li>
+<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
+</li>
+<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
+</li>
+<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="post-using-node-tuning-operator_troubleshoot-node-performance-issues.html">Using the Node Tuning Operator</a>
 </li>
@@ -1587,7 +1733,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-network-flows-object_incident-investigation.html">Network object configuration for tracking network flows</a>
 </li>
-<li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspecting pod and container logs</a>
+<li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
 <li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
 </li>
@@ -1595,13 +1741,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
+</li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
 </li>
-<li><a href="inspecting-pod-and-container-logs_copy-files-to-or-from-containers.html">Inspecting pod and container logs</a>
+<li><a href="inspecting-pod-and-container-logs_copy-files-to-or-from-containers.html">Inspect pod and container logs</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_replace-failed-bare-metal-control-plane-nodes-without-bmc-credentials.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1613,23 +1761,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-oadp-update-channels_troubleshoot-common-update-failures.html">About OADP update channels</a>
 </li>
-<li><a href="about-node-health-check-operator_use-the-vsphere-problem-detector-operator.html">About the Node Health Check Operator</a>
-</li>
 <li><a href="understand-etcd-performance_move-etcd-to-a-different-disk.html">Factors that affect etcd performance</a>
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_gather-data-about-a-cluster-update.html">Gathering bootstrap node diagnostic data</a>
 </li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes.html">Control plane backup and restore operations</a>
-</li>
-<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-a-hosted-cluster.html">Collecting Windows application event logs</a>
-</li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
-<li><a href="investigating-why-windows-machine-compute-node_troubleshoot-machine-management.html">Investigating why Windows Machine does not become compute node</a>
+<li><a href="troubleshoot-machine-management-con_troubleshoot-machine-management.html">Troubleshoot machine management</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
-<li><a href="understanding-oc-log-levels_identify-resource-limits-and-quotas-in-topology-view.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
+<li><a href="understanding-oc-log-levels_identify-resource-limits-and-quotas-in-topology-view.html">Understand OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
 <li><a href="nw-networkpolicy-project-defaults_troubleshoot-web-terminal-startup-failures.html">Add network policies to the new project template</a>
 </li>
@@ -1645,7 +1787,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
-<li><a href="nw-sriov-network-operator_troubleshoot-network-issues-134-troubleshoot-operators.html">Example SR-IOV Network Operator for virtual functions</a>
+<li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
@@ -1653,13 +1795,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
-</li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
-</li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
+</li>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
 </li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
@@ -1685,11 +1823,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_investigate-an-active-cluster-issue-troubleshoot-cluster-issues.html">Gathering bootstrap node diagnostic data</a>
 </li>
-<li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
+<li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gather Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
 </li>
-<li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
+</li>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
+</li>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
+</li>
+<li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understand OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
 <li><a href="post-install-etcd-tasks_defragment-etcd-data-automatically-defragment-etcd-data.html">etcd tasks</a>
 </li>
@@ -1717,6 +1861,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_encrypt-etcd-test-restore-procedures.html">Control plane backup and restore operations</a>
 </li>
+<li><a href="troubleshoot-clusters-that-use-the-cluster-api-con_troubleshoot-clusters-that-use-the-cluster-api.html">Troubleshoot clusters that use the Cluster API</a>
+</li>
+<li><a href="troubleshoot-the-control-plane-machine-set-con_troubleshoot-the-control-plane-machine-set.html">Troubleshoot the control plane machine set</a>
+</li>
+<li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1731,7 +1881,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#installing-agent_install-in-a-disconnected-environment">Installing a cluster with the Agent-based Installer</a></li><li class="level-4"><a href="#installing-aws_install-in-a-disconnected-environment">Installing a cluster on Amazon Web Services</a></li><li class="level-4"><a href="#installing-azure_install-in-a-disconnected-environment">Installing a cluster on Microsoft Azure</a></li><li class="level-4"><a href="#installing-gcp_install-in-a-disconnected-environment">Installing a cluster on Google Cloud</a></li><li class="level-4"><a href="#installing-ibm-cloud_install-in-a-disconnected-environment">Installing a cluster on IBM Cloud</a></li><li class="level-4"><a href="#installing-nutanix_install-in-a-disconnected-environment">Installing a cluster on Nutanix</a></li><li class="level-4"><a href="#installing-baremetal_install-in-a-disconnected-environment">Installing a bare metal cluster</a></li><li class="level-4"><a href="#installing-ibm-z_install-in-a-disconnected-environment">Installing a cluster on IBM Z® or IBM® LinuxONE</a></li><li class="level-4"><a href="#installing-ibm-power_install-in-a-disconnected-environment">Installing a cluster on IBM Power</a></li><li class="level-4"><a href="#installing-ibm-openstack_install-in-a-disconnected-environment">Installing a cluster on OpenStack</a></li><li class="level-4"><a href="#installing-vsphere_install-in-a-disconnected-environment">Installing a cluster on vSphere</a></li><li class="level-4"><a href="#prerequisites_install-in-a-disconnected-environment">Prerequisites</a></li><li class="level-4"><a href="#mirror-registry-introduction_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift introduction</a></li><li class="level-5"><a href="#mirror-registry-limitations_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift limitations</a></li><li class="level-4"><a href="#configuring-rootless-podman_install-in-a-disconnected-environment">Configuring rootless Podman networking</a></li><li class="level-4"><a href="#mirror-registry-localhost_install-in-a-disconnected-environment">Mirroring on a local host with mirror registry for Red Hat OpenShift</a></li><li class="level-4"><a href="#mirror-registry-localhost-update_install-in-a-disconnected-environment">Updating mirror registry for Red Hat OpenShift from a local host</a></li><li class="level-4"><a href="#mirror-registry-remote_install-in-a-disconnected-environment">Mirroring on a remote host with mirror registry for Red Hat OpenShift</a></li><li class="level-4"><a href="#mirror-registry-remote-host-update_install-in-a-disconnected-environment">Updating mirror registry for Red Hat OpenShift from a remote host</a></li><li class="level-4"><a href="#mirror-registry-ssl-cert-replace_install-in-a-disconnected-environment">Replacing mirror registry for Red Hat OpenShift SSL/TLS certificates</a></li><li class="level-4"><a href="#uninstalling-mirror-registry_install-in-a-disconnected-environment">Uninstalling the mirror registry for Red Hat OpenShift</a></li><li class="level-4"><a href="#mirror-registry-flags_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift flags</a></li><li class="level-4"><a href="#mirror-registry-release-notes_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift release notes</a></li><li class="level-5"><a href="#mirror-registry-release-notes-2-0_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0 release notes</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-11_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.11</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-10_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.10</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-9_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.9</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-8_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.8</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-7_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.7</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-6_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.6</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-5_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.5</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-4_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.4</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-3_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.3</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-2_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.2</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-1_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.1</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-0_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.0</a></li><li class="level-5"><a href="#mirror-registry-release-notes-1-3_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 1.3 release notes</a></li><li class="level-5"><a href="#mirror-registry-release-notes-1-2_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 1.2 release notes</a></li><li class="level-5"><a href="#mirror-registry-release-notes-1-1_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 1.1 release notes</a></li><li class="level-4"><a href="#mirror-registry-troubleshooting_install-in-a-disconnected-environment">Troubleshooting mirror registry for Red Hat OpenShift</a></li><li class="level-4"><a href="#prerequisites_installing-mirroring-installation-images">Prerequisites</a></li><li class="level-4"><a href="#installation-about-mirror-registry_install-in-a-disconnected-environment">About the mirror registry</a></li><li class="level-4"><a href="#installing-preparing-mirror_install-in-a-disconnected-environment">Preparing your mirror host</a></li><li class="level-5"><a href="#cli-installing-cli-linux_install-in-a-disconnected-environment">Installing the OpenShift CLI on Linux</a></li><li class="level-5"><a href="#cli-installing-cli-windows_install-in-a-disconnected-environment">Installing the OpenShift CLI on Windows</a></li><li class="level-5"><a href="#cli-installing-cli-macos_install-in-a-disconnected-environment">Installing the OpenShift CLI on macOS</a></li><li class="level-4"><a href="#installation-adding-registry-pull-secret_installing-mirroring-installation-images">Configuring credentials that allow images to be mirrored</a></li><li class="level-4"><a href="#installation-mirror-repository_install-in-a-disconnected-environment">Mirroring the Red Hat OpenShift Container Platform image repository</a></li><li class="level-4"><a href="#installing-preparing-samples-operator_install-in-a-disconnected-environment">The Cluster Samples Operator in a disconnected environment</a></li><li class="level-5"><a href="#installation-images-samples-disconnected-mirroring-assist_install-in-a-disconnected-environment">Cluster Samples Operator assistance for mirroring</a></li><li class="level-4"><a href="#olm-mirror-catalog_install-in-a-disconnected-environment">Mirroring Operator catalogs for use with disconnected clusters</a></li><li class="level-5"><a href="#olm-mirror-catalog-prerequisites_install-in-a-disconnected-environment">Prerequisites for mirroring Operator catalogs</a></li><li class="level-5"><a href="#olm-mirror-catalog-extracting_install-in-a-disconnected-environment">Extracting and mirroring catalog contents</a></li><li class="level-6"><a href="#olm-mirror-catalog-colocated_install-in-a-disconnected-environment">Mirroring catalog contents to registries on the same network</a></li><li class="level-6"><a href="#olm-mirror-catalog-airgapped_install-in-a-disconnected-environment">Mirroring catalog contents to airgapped registries</a></li><li class="level-5"><a href="#olm-mirror-catalog-manifests_install-in-a-disconnected-environment">Generated manifests</a></li><li class="level-5"><a href="#olm-mirror-catalog-post_install-in-a-disconnected-environment">Postinstallation requirements</a></li><li class="level-4"><a href="#installation-oc-mirror-v2-about_install-in-a-disconnected-environment">About oc-mirror plugin v2</a></li><li class="level-5"><a href="#oc-mirror-v2-workflow_install-in-a-disconnected-environment">High level workflow</a></li><li class="level-5"><a href="#oc-mirror-v2-support_install-in-a-disconnected-environment">oc-mirror plugin v2 compatibility and support</a></li><li class="level-4"><a href="#prerequisites_oc-mirror-v2_install-in-a-disconnected-environment">Prerequisites</a></li><li class="level-4"><a href="#oc-mirror-preparing-mirror-hosts_install-in-a-disconnected-environment">Preparing your mirror hosts</a></li><li class="level-5"><a href="#installation-oc-mirror-installing-plugin_install-in-a-disconnected-environment">Installing the oc-mirror OpenShift CLI plugin</a></li><li class="level-4"><a href="#using-oc-mirror_install-in-a-disconnected-environment">Mirroring an image set to a mirror registry</a></li><li class="level-5"><a href="#oc-mirror-building-image-set-config-v2_install-in-a-disconnected-environment">Creating the image set configuration</a></li><li class="level-5"><a href="#oc-mirror-workflows-table_install-in-a-disconnected-environment">Comparison of oc-mirror workflows</a></li><li class="level-5"><a href="#oc-mirror-workflows-partially-disconnected-v2_install-in-a-disconnected-environment">Mirroring an image set in a partially disconnected environment</a></li><li class="level-5"><a href="#oc-mirror-workflows-fully-disconnected-v2_install-in-a-disconnected-environment">Mirroring an image set in a fully disconnected environment</a></li><li class="level-6"><a href="#mirror-to-disk-v2_install-in-a-disconnected-environment">Mirroring from mirror to disk</a></li><li class="level-6"><a href="#disk-mirror-v2_install-in-a-disconnected-environment">Mirroring from disk to mirror</a></li><li class="level-4"><a href="#oc-mirror-custom-resources-v2_install-in-a-disconnected-environment">About custom resources generated by oc-mirror plugin v2</a></li><li class="level-5"><a href="#oc-mirror-restricted-fields_install-in-a-disconnected-environment">Restrictions on modifying resources that are generated by the oc-mirror plugin</a></li><li class="level-5"><a href="#oc-mirror-updating-cluster-manifests-v2_install-in-a-disconnected-environment">Configuring your cluster to use the resources generated by oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-workflows-delete-v2_install-in-a-disconnected-environment">Deletion of images from your disconnected environment</a></li><li class="level-5"><a href="#oc-mirror-v2-procedure-garbage-collector_install-in-a-disconnected-environment">Resolving storage cleanup issues in the distribution registry</a></li><li class="level-5"><a href="#oc-mirror-procedure-delete-v2_install-in-a-disconnected-environment">Deleting images from a disconnected environment</a></li><li class="level-4"><a href="#oc-mirror-v2-about-dry-run_install-in-a-disconnected-environment">Verifying your selected images for mirroring</a></li><li class="level-5"><a href="#oc-mirror-dry-run-v2_install-in-a-disconnected-environment">Performing a dry run for oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-troubleshooting-v2_install-in-a-disconnected-environment">Troubleshooting oc-mirror plugin v2 errors</a></li><li class="level-4"><a href="#oc-mirror-enclave-support-about_install-in-a-disconnected-environment">Benefits of enclave support</a></li><li class="level-5"><a href="#oc-mirror-enclave-how-to_install-in-a-disconnected-environment">Enclave mirroring workflow</a></li><li class="level-5"><a href="#oc-mirror-enclave-support_install-in-a-disconnected-environment">Mirroring to an enclave</a></li><li class="level-4"><a href="#oc-mirror-proxy-support_install-in-a-disconnected-environment">oc-mirror plugin v2 support proxy setting</a></li><li class="level-4"><a href="#oc-mirror-signature-mirroring_install-in-a-disconnected-environment">Mirroring and verifying image signatures in oc-mirror plugin v2</a></li><li class="level-5"><a href="#oc-mirror-signature-mirroring-procedure_install-in-a-disconnected-environment">Disabling signature mirroring for oc-mirror plugin v2</a></li><li class="level-5"><a href="#oc-mirror-about-sig-mirroring-verification_install-in-a-disconnected-environment">Enabling signature verification for oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-operator-catalog-filtering_install-in-a-disconnected-environment">How filtering works in the operator catalog</a></li><li class="level-4"><a href="#oc-mirror-imageset-config-parameters-v2_install-in-a-disconnected-environment">ImageSet configuration parameters for oc-mirror plugin v2</a></li><li class="level-5"><a href="#delete-imagset-config-parameters_install-in-a-disconnected-environment">DeleteImageSetConfiguration parameters</a></li><li class="level-4"><a href="#oc-mirror-command-reference-v2_install-in-a-disconnected-environment">Command reference for oc-mirror plugin v2</a></li><li class="level-5"><a href="#oc-mirror-command-reference-delete-v2_install-in-a-disconnected-environment">Command reference for deleting images</a></li><li class="level-5"><a href="#oc-mirror-about-cache-and-workspace-dirs_install-in-a-disconnected-environment">About the --cache-dir and --workspace flags</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#installing-agent_install-in-a-disconnected-environment">Install a cluster with the Agent-based Installer</a></li><li class="level-4"><a href="#installing-aws_install-in-a-disconnected-environment">Installing a cluster on Amazon Web Services</a></li><li class="level-4"><a href="#installing-azure_install-in-a-disconnected-environment">Installing a cluster on Microsoft Azure</a></li><li class="level-4"><a href="#installing-gcp_install-in-a-disconnected-environment">Installing a cluster on Google Cloud</a></li><li class="level-4"><a href="#installing-ibm-cloud_install-in-a-disconnected-environment">Installing a cluster on IBM Cloud</a></li><li class="level-4"><a href="#installing-nutanix_install-in-a-disconnected-environment">Installing a cluster on Nutanix</a></li><li class="level-4"><a href="#installing-baremetal_install-in-a-disconnected-environment">Installing a bare metal cluster</a></li><li class="level-4"><a href="#installing-ibm-z_install-in-a-disconnected-environment">Installing a cluster on IBM Z® or IBM® LinuxONE</a></li><li class="level-4"><a href="#installing-ibm-power_install-in-a-disconnected-environment">Installing a cluster on IBM Power</a></li><li class="level-4"><a href="#installing-ibm-openstack_install-in-a-disconnected-environment">Installing a cluster on OpenStack</a></li><li class="level-4"><a href="#installing-vsphere_install-in-a-disconnected-environment">Installing a cluster on vSphere</a></li><li class="level-4"><a href="#prerequisites_install-in-a-disconnected-environment">Prerequisites for creating a mirror registry</a></li><li class="level-4"><a href="#mirror-registry-introduction_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift introduction</a></li><li class="level-5"><a href="#mirror-registry-limitations_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift limitations</a></li><li class="level-4"><a href="#configuring-rootless-podman_install-in-a-disconnected-environment">Configuring rootless Podman networking</a></li><li class="level-4"><a href="#mirror-registry-localhost_install-in-a-disconnected-environment">Mirroring on a local host with mirror registry for Red Hat OpenShift</a></li><li class="level-4"><a href="#mirror-registry-localhost-update_install-in-a-disconnected-environment">Updating mirror registry for Red Hat OpenShift from a local host</a></li><li class="level-4"><a href="#mirror-registry-remote_install-in-a-disconnected-environment">Mirroring on a remote host with mirror registry for Red Hat OpenShift</a></li><li class="level-4"><a href="#mirror-registry-remote-host-update_install-in-a-disconnected-environment">Updating mirror registry for Red Hat OpenShift from a remote host</a></li><li class="level-4"><a href="#mirror-registry-ssl-cert-replace_install-in-a-disconnected-environment">Replacing mirror registry for Red Hat OpenShift SSL/TLS certificates</a></li><li class="level-4"><a href="#uninstalling-mirror-registry_install-in-a-disconnected-environment">Uninstalling the mirror registry for Red Hat OpenShift</a></li><li class="level-4"><a href="#mirror-registry-flags_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift flags</a></li><li class="level-4"><a href="#mirror-registry-release-notes_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift release notes</a></li><li class="level-5"><a href="#mirror-registry-release-notes-2-0_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0 release notes</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-11_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.11</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-10_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.10</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-9_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.9</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-8_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.8</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-7_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.7</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-6_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.6</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-5_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.5</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-4_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.4</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-3_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.3</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-2_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.2</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-1_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.1</a></li><li class="level-6"><a href="#mirror-registry-for-openshift-2-0-0_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 2.0.0</a></li><li class="level-5"><a href="#mirror-registry-release-notes-1-3_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 1.3 release notes</a></li><li class="level-5"><a href="#mirror-registry-release-notes-1-2_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 1.2 release notes</a></li><li class="level-5"><a href="#mirror-registry-release-notes-1-1_install-in-a-disconnected-environment">Mirror registry for Red Hat OpenShift 1.1 release notes</a></li><li class="level-4"><a href="#mirror-registry-troubleshooting_install-in-a-disconnected-environment">Troubleshooting mirror registry for Red Hat OpenShift</a></li><li class="level-4"><a href="#prerequisites_installing-mirroring-installation-images">Prerequisites for mirroring images with the oc adm command</a></li><li class="level-4"><a href="#installation-about-mirror-registry_install-in-a-disconnected-environment">Mirror registry</a></li><li class="level-4"><a href="#installing-preparing-mirror_install-in-a-disconnected-environment">Preparing your mirror host</a></li><li class="level-5"><a href="#cli-installing-cli-linux_install-in-a-disconnected-environment">Installing the OpenShift CLI on Linux</a></li><li class="level-5"><a href="#cli-installing-cli-windows_install-in-a-disconnected-environment">Installing the OpenShift CLI on Windows</a></li><li class="level-5"><a href="#cli-installing-cli-macos_install-in-a-disconnected-environment">Installing the OpenShift CLI on macOS</a></li><li class="level-4"><a href="#installation-adding-registry-pull-secret_installing-mirroring-installation-images">Configure credentials that allow images to be mirrored</a></li><li class="level-4"><a href="#installation-mirror-repository_install-in-a-disconnected-environment">Mirroring the Red Hat OpenShift Container Platform image repository</a></li><li class="level-4"><a href="#installing-preparing-samples-operator_install-in-a-disconnected-environment">The Cluster Samples Operator in a disconnected environment</a></li><li class="level-5"><a href="#installation-images-samples-disconnected-mirroring-assist_install-in-a-disconnected-environment">Cluster Samples Operator assistance for mirroring</a></li><li class="level-4"><a href="#olm-mirror-catalog_install-in-a-disconnected-environment">Mirroring Operator catalogs for use with disconnected clusters</a></li><li class="level-5"><a href="#olm-mirror-catalog-prerequisites_install-in-a-disconnected-environment">Prerequisites for mirroring Operator catalogs</a></li><li class="level-5"><a href="#olm-mirror-catalog-extracting_install-in-a-disconnected-environment">Extracting and mirroring catalog contents</a></li><li class="level-6"><a href="#olm-mirror-catalog-colocated_install-in-a-disconnected-environment">Mirroring catalog contents to registries on the same network</a></li><li class="level-6"><a href="#olm-mirror-catalog-airgapped_install-in-a-disconnected-environment">Mirroring catalog contents to airgapped registries</a></li><li class="level-5"><a href="#olm-mirror-catalog-manifests_install-in-a-disconnected-environment">Generated manifests</a></li><li class="level-5"><a href="#olm-mirror-catalog-post_install-in-a-disconnected-environment">Postinstallation requirements</a></li><li class="level-4"><a href="#installation-oc-mirror-v2-about_install-in-a-disconnected-environment">Mirror images to a mirror registry using oc-mirror v2</a></li><li class="level-5"><a href="#oc-mirror-v2-workflow_install-in-a-disconnected-environment">High level workflow</a></li><li class="level-5"><a href="#oc-mirror-v2-support_install-in-a-disconnected-environment">oc-mirror plugin v2 compatibility and support</a></li><li class="level-4"><a href="#prerequisites_oc-mirror-v2_install-in-a-disconnected-environment">Prerequisites for mirroring images with oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-preparing-mirror-hosts_install-in-a-disconnected-environment">Prepare your mirror hosts</a></li><li class="level-5"><a href="#installation-oc-mirror-installing-plugin_install-in-a-disconnected-environment">Install the oc-mirror OpenShift CLI plugin</a></li><li class="level-4"><a href="#using-oc-mirror_install-in-a-disconnected-environment">Mirror an image set to a mirror registry</a></li><li class="level-5"><a href="#oc-mirror-building-image-set-config-v2_install-in-a-disconnected-environment">Create the image set configuration</a></li><li class="level-5"><a href="#oc-mirror-workflows-table_install-in-a-disconnected-environment">Comparison of oc-mirror workflows</a></li><li class="level-5"><a href="#oc-mirror-workflows-partially-disconnected-v2_install-in-a-disconnected-environment">Mirror an image set in a partially disconnected environment</a></li><li class="level-5"><a href="#oc-mirror-workflows-fully-disconnected-v2_install-in-a-disconnected-environment">Mirror an image set in a fully disconnected environment</a></li><li class="level-6"><a href="#mirror-to-disk-v2_install-in-a-disconnected-environment">Mirror from mirror to disk</a></li><li class="level-6"><a href="#disk-mirror-v2_install-in-a-disconnected-environment">Mirror from disk to mirror</a></li><li class="level-4"><a href="#oc-mirror-custom-resources-v2_install-in-a-disconnected-environment">About custom resources generated by oc-mirror plugin v2</a></li><li class="level-5"><a href="#oc-mirror-restricted-fields_install-in-a-disconnected-environment">Restrictions on modifying resources that are generated by the oc-mirror plugin</a></li><li class="level-5"><a href="#oc-mirror-updating-cluster-manifests-v2_install-in-a-disconnected-environment">Configure your cluster to use the resources generated by oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-workflows-delete-v2_install-in-a-disconnected-environment">Deletion of images from your disconnected environment</a></li><li class="level-5"><a href="#oc-mirror-v2-procedure-garbage-collector_install-in-a-disconnected-environment">Resolve storage cleanup issues in the distribution registry</a></li><li class="level-5"><a href="#oc-mirror-procedure-delete-v2_install-in-a-disconnected-environment">Delete images from a disconnected environment</a></li><li class="level-4"><a href="#oc-mirror-v2-about-dry-run_install-in-a-disconnected-environment">Verify your selected images for mirroring</a></li><li class="level-5"><a href="#oc-mirror-dry-run-v2_install-in-a-disconnected-environment">Perform a dry run for oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-troubleshooting-v2_install-in-a-disconnected-environment">Troubleshoot oc-mirror plugin v2 errors</a></li><li class="level-4"><a href="#oc-mirror-enclave-support-about_install-in-a-disconnected-environment">Benefits of enclave support</a></li><li class="level-5"><a href="#oc-mirror-enclave-how-to_install-in-a-disconnected-environment">Enclave mirroring workflow</a></li><li class="level-5"><a href="#oc-mirror-enclave-support_install-in-a-disconnected-environment">Mirror to an enclave</a></li><li class="level-4"><a href="#oc-mirror-proxy-support_install-in-a-disconnected-environment">oc-mirror plugin v2 support proxy setting</a></li><li class="level-4"><a href="#oc-mirror-signature-mirroring_install-in-a-disconnected-environment">Mirror and verify image signatures in oc-mirror plugin v2</a></li><li class="level-5"><a href="#oc-mirror-signature-mirroring-procedure_install-in-a-disconnected-environment">Disable signature mirroring for oc-mirror plugin v2</a></li><li class="level-5"><a href="#oc-mirror-about-sig-mirroring-verification_install-in-a-disconnected-environment">Enable signature verification for oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-operator-catalog-filtering_install-in-a-disconnected-environment">How filtering works in the operator catalog</a></li><li class="level-4"><a href="#oc-mirror-imageset-config-parameters-v2_install-in-a-disconnected-environment">ImageSet configuration parameters for oc-mirror plugin v2</a></li><li class="level-5"><a href="#delete-imagset-config-parameters_install-in-a-disconnected-environment">DeleteImageSetConfiguration parameters</a></li><li class="level-4"><a href="#oc-mirror-command-reference-v2_install-in-a-disconnected-environment">Command reference for oc-mirror plugin v2</a></li><li class="level-5"><a href="#oc-mirror-command-reference-delete-v2_install-in-a-disconnected-environment">Command reference for deleting images</a></li><li class="level-5"><a href="#oc-mirror-about-cache-and-workspace-dirs_install-in-a-disconnected-environment">About the --cache-dir and --workspace flags</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment">Install in a disconnected environment</h3>
@@ -1739,7 +1889,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>You can install an Red&#160;Hat OpenShift Container Platform cluster in a disconnected environment, choosing the installation method and infrastructure that best suits your requirements. This includes installing Red&#160;Hat OpenShift Container Platform on either on-premise hardware or on a cloud hosting service such as Amazon Web Services (AWS).</p>
 </div>
 <div class="sect3">
-<h4 id="installing-agent_install-in-a-disconnected-environment">Installing a cluster with the Agent-based Installer</h4>
+<h4 id="installing-agent_install-in-a-disconnected-environment">Install a cluster with the Agent-based Installer</h4>
 <div class="paragraph _abstract">
 <p>You can install an Red&#160;Hat OpenShift Container Platform cluster in a disconnected environment with the Agent-based Installer.</p>
 </div>
@@ -1901,7 +2051,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="prerequisites_install-in-a-disconnected-environment">Prerequisites</h4>
+<h4 id="prerequisites_install-in-a-disconnected-environment">Prerequisites for creating a mirror registry</h4>
 <div class="paragraph _abstract">
 <p>There are several prerequisites that you must meet before you can create a mirror registry.</p>
 </div>
@@ -3183,7 +3333,7 @@ default_rootless_network_cmd = "slirp4netns"
 </div>
 </div>
 <div class="sect3">
-<h4 id="prerequisites_installing-mirroring-installation-images">Prerequisites</h4>
+<h4 id="prerequisites_installing-mirroring-installation-images">Prerequisites for mirroring images with the oc adm command</h4>
 <div class="paragraph _abstract">
 <p>You must meet several prerequisites before you can mirror images using the <code>oc adm release mirror</code> command.</p>
 </div>
@@ -3225,7 +3375,7 @@ default_rootless_network_cmd = "slirp4netns"
 </div>
 </div>
 <div class="sect3">
-<h4 id="installation-about-mirror-registry_install-in-a-disconnected-environment">About the mirror registry</h4>
+<h4 id="installation-about-mirror-registry_install-in-a-disconnected-environment">Mirror registry</h4>
 <div class="paragraph _abstract">
 <p>You must have access to the internet to obtain the necessary container images. Using an alternative registry means that you place the mirror registry on a mirror host that has access to both your network and the internet.</p>
 </div>
@@ -3497,7 +3647,7 @@ default_rootless_network_cmd = "slirp4netns"
 </div>
 </div>
 <div class="sect3">
-<h4 id="installation-adding-registry-pull-secret_installing-mirroring-installation-images">Configuring credentials that allow images to be mirrored</h4>
+<h4 id="installation-adding-registry-pull-secret_installing-mirroring-installation-images">Configure credentials that allow images to be mirrored</h4>
 <div class="paragraph _abstract">
 <p>Create a container image registry credentials file so that you can mirror images from Red&#160;Hat to your mirror. Complete the following steps on the installation host.</p>
 </div>
@@ -4178,7 +4328,6 @@ mirrored, extract it and pin it to the release:</p>
 <div class="openblock">
 <div class="content">
 <div class="listingblock">
-<div class="title">Example output</div>
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">src image has index label for database path: /database/index.db
 using database path mapping: /database/index.db:/tmp/153048078
@@ -4279,7 +4428,6 @@ wrote mirroring manifests to manifests-redhat-operator-index-1614211642</code></
 <div class="openblock">
 <div class="content">
 <div class="listingblock">
-<div class="title">Example output</div>
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">...
 info: Mirroring completed in 5.93s (5.915MB/s)
@@ -4513,7 +4661,7 @@ To upload local images to a registry, run:
 </div>
 </div>
 <div class="sect3">
-<h4 id="installation-oc-mirror-v2-about_install-in-a-disconnected-environment">About oc-mirror plugin v2</h4>
+<h4 id="installation-oc-mirror-v2-about_install-in-a-disconnected-environment">Mirror images to a mirror registry using oc-mirror v2</h4>
 <div class="paragraph _abstract">
 <p>The oc-mirror OpenShift CLI (<code>oc</code>) plugin is a single tool that mirrors all required Red&#160;Hat OpenShift Container Platform content and other images to your mirror registry.</p>
 </div>
@@ -4608,7 +4756,7 @@ To upload local images to a registry, run:
 </div>
 </div>
 <div class="sect3">
-<h4 id="prerequisites_oc-mirror-v2_install-in-a-disconnected-environment">Prerequisites</h4>
+<h4 id="prerequisites_oc-mirror-v2_install-in-a-disconnected-environment">Prerequisites for mirroring images with oc-mirror plugin v2</h4>
 <div class="paragraph _abstract">
 <p>Before you can mirror images with the oc-mirror plugin v2, you must meet several prerequisites.</p>
 </div>
@@ -4648,12 +4796,12 @@ To upload local images to a registry, run:
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-preparing-mirror-hosts_install-in-a-disconnected-environment">Preparing your mirror hosts</h4>
+<h4 id="oc-mirror-preparing-mirror-hosts_install-in-a-disconnected-environment">Prepare your mirror hosts</h4>
 <div class="paragraph _abstract">
 <p>To use the oc-mirror plugin v2 for image mirroring, you must install the plugin and create a file with credentials for container images, enabling you to mirror from Red&#160;Hat to your mirror.</p>
 </div>
 <div class="sect4">
-<h5 id="installation-oc-mirror-installing-plugin_install-in-a-disconnected-environment">Installing the oc-mirror OpenShift CLI plugin</h5>
+<h5 id="installation-oc-mirror-installing-plugin_install-in-a-disconnected-environment">Install the oc-mirror OpenShift CLI plugin</h5>
 <div class="paragraph _abstract">
 <p>You can install the oc-mirror OpenShift CLI plugin to manage image sets in disconnected environments.</p>
 </div>
@@ -4756,12 +4904,12 @@ To upload local images to a registry, run:
 </div>
 </div>
 <div class="sect3">
-<h4 id="using-oc-mirror_install-in-a-disconnected-environment">Mirroring an image set to a mirror registry</h4>
+<h4 id="using-oc-mirror_install-in-a-disconnected-environment">Mirror an image set to a mirror registry</h4>
 <div class="paragraph _abstract">
 <p>Mirroring an image set to a mirror registry ensures that the required images are available in a secure and controlled environment, facilitating smoother deployments, updates, and maintenance tasks.</p>
 </div>
 <div class="sect4">
-<h5 id="oc-mirror-building-image-set-config-v2_install-in-a-disconnected-environment">Creating the image set configuration</h5>
+<h5 id="oc-mirror-building-image-set-config-v2_install-in-a-disconnected-environment">Create the image set configuration</h5>
 <div class="paragraph _abstract">
 <p>Before you can use the oc-mirror plugin v2 to mirror images, you must create an image set configuration file.
 This image set configuration file defines which Red&#160;Hat OpenShift Container Platform releases, Operators, and other images to mirror, along with other configuration settings for the oc-mirror plugin v2.</p>
@@ -4904,7 +5052,7 @@ mirror:
 </table>
 </div>
 <div class="sect4">
-<h5 id="oc-mirror-workflows-partially-disconnected-v2_install-in-a-disconnected-environment">Mirroring an image set in a partially disconnected environment</h5>
+<h5 id="oc-mirror-workflows-partially-disconnected-v2_install-in-a-disconnected-environment">Mirror an image set in a partially disconnected environment</h5>
 <div class="paragraph _abstract">
 <p>You can mirror image sets to a registry using the oc-mirror plugin v2 in environments with restricted internet access.</p>
 </div>
@@ -4972,7 +5120,7 @@ mirror:
 </div>
 </div>
 <div class="sect4">
-<h5 id="oc-mirror-workflows-fully-disconnected-v2_install-in-a-disconnected-environment">Mirroring an image set in a fully disconnected environment</h5>
+<h5 id="oc-mirror-workflows-fully-disconnected-v2_install-in-a-disconnected-environment">Mirror an image set in a fully disconnected environment</h5>
 <div class="paragraph _abstract">
 <p>You can mirror image sets in a fully disconnected environment where the Red&#160;Hat OpenShift Container Platform cluster cannot access the public internet.</p>
 </div>
@@ -4993,7 +5141,7 @@ mirror:
 </ol>
 </div>
 <div class="sect5">
-<h6 id="mirror-to-disk-v2_install-in-a-disconnected-environment">Mirroring from mirror to disk</h6>
+<h6 id="mirror-to-disk-v2_install-in-a-disconnected-environment">Mirror from mirror to disk</h6>
 <div class="paragraph _abstract">
 <p>You can use the oc-mirror plugin v2 to generate an image set and save the content to disk. The plugin retrieves images from the source specified in the image set configuration and packs them into a tar archive.</p>
 </div>
@@ -5052,7 +5200,7 @@ mirror:
 </div>
 </div>
 <div class="sect5">
-<h6 id="disk-mirror-v2_install-in-a-disconnected-environment">Mirroring from disk to mirror</h6>
+<h6 id="disk-mirror-v2_install-in-a-disconnected-environment">Mirror from disk to mirror</h6>
 <div class="paragraph _abstract">
 <p>You can use the oc-mirror plugin v2 to mirror image sets from a disk to a target mirror registry.</p>
 </div>
@@ -5157,7 +5305,7 @@ mirror:
 <p>The following table lists the resources and their fields that must remain unchanged:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 91. Fields that must not be modified in the resources generated by oc-mirror</caption>
+<caption class="title">Table 93. Fields that must not be modified in the resources generated by oc-mirror</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -5308,7 +5456,7 @@ mirror:
 </div>
 </div>
 <div class="sect4">
-<h5 id="oc-mirror-updating-cluster-manifests-v2_install-in-a-disconnected-environment">Configuring your cluster to use the resources generated by oc-mirror plugin v2</h5>
+<h5 id="oc-mirror-updating-cluster-manifests-v2_install-in-a-disconnected-environment">Configure your cluster to use the resources generated by oc-mirror plugin v2</h5>
 <div class="paragraph _abstract">
 <p>After you have mirrored your image set to the mirror registry, you must apply the generated <code>ImageDigestMirrorSet</code> (IDMS), <code>ImageTagMirrorSet</code> (ITMS), <code>CatalogSource</code>, and <code>UpdateService</code> resources to the cluster.</p>
 </div>
@@ -5557,7 +5705,7 @@ delete:
 </table>
 </div>
 <div class="sect4">
-<h5 id="oc-mirror-v2-procedure-garbage-collector_install-in-a-disconnected-environment">Resolving storage cleanup issues in the distribution registry</h5>
+<h5 id="oc-mirror-v2-procedure-garbage-collector_install-in-a-disconnected-environment">Resolve storage cleanup issues in the distribution registry</h5>
 <div class="paragraph _abstract">
 <p>A known issue in the distribution registry prevents the garbage collector from freeing up storage as expected. This issue does not occur when you use Red&#160;Hat Quay.</p>
 </div>
@@ -5623,7 +5771,7 @@ health:
 </div>
 </div>
 <div class="sect4">
-<h5 id="oc-mirror-procedure-delete-v2_install-in-a-disconnected-environment">Deleting images from a disconnected environment</h5>
+<h5 id="oc-mirror-procedure-delete-v2_install-in-a-disconnected-environment">Delete images from a disconnected environment</h5>
 <div class="paragraph _abstract">
 <p>You can delete images from a disconnected environment using the oc-mirror plugin.</p>
 </div>
@@ -5779,7 +5927,7 @@ The Operator catalog image will not get deleted. Its presence in the registry mi
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-v2-about-dry-run_install-in-a-disconnected-environment">Verifying your selected images for mirroring</h4>
+<h4 id="oc-mirror-v2-about-dry-run_install-in-a-disconnected-environment">Verify your selected images for mirroring</h4>
 <div class="paragraph _abstract">
 <p>You can use oc-mirror plugin v2 to perform a test run (dry run) that does not actually mirror any images. This enables you to review the list of images that would be mirrored.</p>
 </div>
@@ -5787,7 +5935,7 @@ The Operator catalog image will not get deleted. Its presence in the registry mi
 <p>You can also use a dry run to catch any errors with your image set configuration early. When running a dry run on a mirror-to-disk workflow, the oc-mirror plugin v2 checks if all the images within the image set are available in its cache. Any missing images are listed in the <code>missing.txt</code> file. When a dry run is performed before mirroring, both <code>missing.txt</code> and <code>mapping.txt</code> files contain the same list of images.</p>
 </div>
 <div class="sect4">
-<h5 id="oc-mirror-dry-run-v2_install-in-a-disconnected-environment">Performing a dry run for oc-mirror plugin v2</h5>
+<h5 id="oc-mirror-dry-run-v2_install-in-a-disconnected-environment">Perform a dry run for oc-mirror plugin v2</h5>
 <div class="paragraph _abstract">
 <p>Verify your image set configuration by performing a dry run without mirroring any images. This ensures your setup is correct and prevents unintended changes.</p>
 </div>
@@ -5860,7 +6008,7 @@ please re-run the mirror to disk process
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-troubleshooting-v2_install-in-a-disconnected-environment">Troubleshooting oc-mirror plugin v2 errors</h4>
+<h4 id="oc-mirror-troubleshooting-v2_install-in-a-disconnected-environment">Troubleshoot oc-mirror plugin v2 errors</h4>
 <div class="paragraph _abstract">
 <p>oc-mirror plugin v2 now logs all image mirroring errors in a separate file, making it easier to track and diagnose failures.</p>
 </div>
@@ -6044,7 +6192,7 @@ error mirroring image docker://registry.redhat.io/3scale-amp2/system-rhel7@sha25
 </div>
 </div>
 <div class="sect4">
-<h5 id="oc-mirror-enclave-support_install-in-a-disconnected-environment">Mirroring to an enclave</h5>
+<h5 id="oc-mirror-enclave-support_install-in-a-disconnected-environment">Mirror to an enclave</h5>
 <div class="paragraph _abstract">
 <p>When you mirror to an enclave, you must first transfer the necessary images from one or more enclaves into the enterprise central registry.</p>
 </div>
@@ -6241,7 +6389,7 @@ file:///disk-enc1/</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-signature-mirroring_install-in-a-disconnected-environment">Mirroring and verifying image signatures in oc-mirror plugin v2</h4>
+<h4 id="oc-mirror-signature-mirroring_install-in-a-disconnected-environment">Mirror and verify image signatures in oc-mirror plugin v2</h4>
 <div class="paragraph _abstract">
 <p>The oc-mirror plugin v2 supports mirroring and verifying cosign tag-based signatures for container images. By default, signature mirroring is enabled. When enabled, the oc-mirror plugin v2 mirrors <code>Sigstore</code> tag-based signatures for the following images:</p>
 </div>
@@ -6281,7 +6429,7 @@ file:///disk-enc1/</code></pre>
 <p>For more details on configuration formats, see "containers-registries.d(5) manual".</p>
 </div>
 <div class="sect4">
-<h5 id="oc-mirror-signature-mirroring-procedure_install-in-a-disconnected-environment">Disabling signature mirroring for oc-mirror plugin v2</h5>
+<h5 id="oc-mirror-signature-mirroring-procedure_install-in-a-disconnected-environment">Disable signature mirroring for oc-mirror plugin v2</h5>
 <div class="paragraph _abstract">
 <p>You can disable signature mirroring for all images by providing the <code>--remove-signatures</code> flag for the <code>oc mirror</code> command when the destination registry does not support signature storage or when you need to bypass invalid or expired source signatures.</p>
 </div>
@@ -6332,7 +6480,7 @@ default-docker:
 </div>
 </div>
 <div class="sect4">
-<h5 id="oc-mirror-about-sig-mirroring-verification_install-in-a-disconnected-environment">Enabling signature verification for oc-mirror plugin v2</h5>
+<h5 id="oc-mirror-about-sig-mirroring-verification_install-in-a-disconnected-environment">Enable signature verification for oc-mirror plugin v2</h5>
 <div class="paragraph _abstract">
 <p>Starting with Red&#160;Hat OpenShift Container Platform 4.19, the oc-mirror plugin v2 supports signature verification, which is disabled by default.</p>
 </div>
@@ -6412,7 +6560,7 @@ default-docker:
 <p>When oc-mirror plugin v2 selects bundles for mirroring, it does not infer Group Version Kind (GVK) or bundle dependencies, omitting them from the mirroring set. Instead, it strictly adheres to the user instructions. You must explicitly specify any required dependent packages and their versions.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 92. Use the following table to see what bundle versions are included in different scenarios</caption>
+<caption class="title">Table 94. Use the following table to see what bundle versions are included in different scenarios</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -6852,7 +7000,7 @@ You might see errors if this filtering leads to a channel with multiple heads. Y
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 93. <code>ImageSetConfiguration</code> parameters</caption>
+<caption class="title">Table 95. <code>ImageSetConfiguration</code> parameters</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 40%;">
@@ -8132,7 +8280,7 @@ The default value is <code>false</code></p>
 <p>To remove images with the oc-mirror plugin v2, you must use a <code>DeleteImageSetConfiguration.yaml</code> configuration file that defines which images to delete from the mirror registry. The following table lists the available parameters for the <code>DeleteImageSetConfiguration</code> resource.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 94. <code>DeleteImageSetConfiguration</code> parameters</caption>
+<caption class="title">Table 96. <code>DeleteImageSetConfiguration</code> parameters</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 40%;">
@@ -8849,7 +8997,7 @@ The default value is <code>false</code></p>
 <p>The following tables describe the <code>oc mirror</code> subcommands and flags for oc-mirror plugin v2:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 95. Subcommands and flags for the oc-mirror plugin v2</caption>
+<caption class="title">Table 97. Subcommands and flags for the oc-mirror plugin v2</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -8876,7 +9024,7 @@ The default value is <code>false</code></p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 96. oc mirror flags</caption>
+<caption class="title">Table 98. oc mirror flags</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -9003,7 +9151,7 @@ The default value is <code>false</code></p>
 <p>The following tables describe the <code>oc mirror</code> subcommands and flags for deleting images:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 97. Subcommands and flags for the deleting images</caption>
+<caption class="title">Table 99. Subcommands and flags for the deleting images</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -9212,7 +9360,7 @@ The default value is <code>false</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-02 17:45:39 +0100
+Last updated 2026-10-09 12:13:30 +0100
 </div>
 </div>
 <style>
