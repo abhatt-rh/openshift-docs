@@ -692,7 +692,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Update the disconnected cluster</a>
 </li>
 <li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
@@ -1699,7 +1699,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#mirror-registry-introduction_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirror registry for Red Hat OpenShift introduction</a></li><li class="level-5"><a href="#mirror-registry-limitations_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirror registry for Red Hat OpenShift limitations</a></li><li class="level-4"><a href="#prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Prerequisites for creating a mirror registry</a></li><li class="level-4"><a href="#configuring-rootless-podman_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Configuring rootless Podman networking</a></li><li class="level-4"><a href="#mirror-registry-localhost_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirroring on a local host with mirror registry for Red Hat OpenShift</a></li><li class="level-4"><a href="#mirror-registry-remote_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirroring on a remote host with mirror registry for Red Hat OpenShift</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#mirror-registry-introduction_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirror registry for Red Hat OpenShift introduction</a></li><li class="level-5"><a href="#mirror-registry-limitations_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirror registry for Red Hat OpenShift limitations</a></li><li class="level-4"><a href="#prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Prerequisites for creating a mirror registry</a></li><li class="level-4"><a href="#configuring-rootless-podman_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Configure rootless Podman networking</a></li><li class="level-4"><a href="#mirror-registry-localhost_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirror on a local host with mirror registry for Red Hat OpenShift</a></li><li class="level-4"><a href="#mirror-registry-remote_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirror on a remote host with mirror registry for Red Hat OpenShift</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Create a mirror registry with mirror registry for Red Hat OpenShift</h3>
@@ -1822,7 +1822,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="configuring-rootless-podman_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Configuring rootless Podman networking</h4>
+<h4 id="configuring-rootless-podman_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Configure rootless Podman networking</h4>
 <div class="paragraph _abstract">
 <p>To restore rootless Podman networking when the default <code>pasta</code> stack fails on Red&#160;Hat OpenShift Container Platform mirror or install hosts, you can set the default rootless network back to <code>slirp4netns</code> in the <code>/etc/containers/containers.conf</code> file, or in the user&#8217;s <code>~/.config/containers/container.conf</code> file.</p>
 </div>
@@ -1892,7 +1892,7 @@ default_rootless_network_cmd = "slirp4netns"
 </div>
 </div>
 <div class="sect3">
-<h4 id="mirror-registry-localhost_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirroring on a local host with mirror registry for Red Hat OpenShift</h4>
+<h4 id="mirror-registry-localhost_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirror on a local host with mirror registry for Red Hat OpenShift</h4>
 <div class="paragraph _abstract">
 <p>You can install the <em>mirror registry for Red&#160;Hat OpenShift</em> on a local host by using the <code>mirror-registry</code> installer tool. By doing so, users can create a local host registry running on port 443 for the purpose of storing a mirror of Red&#160;Hat OpenShift Container Platform images.</p>
 </div>
@@ -1975,7 +1975,7 @@ default_rootless_network_cmd = "slirp4netns"
 </div>
 </div>
 <div class="sect3">
-<h4 id="mirror-registry-remote_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirroring on a remote host with mirror registry for Red Hat OpenShift</h4>
+<h4 id="mirror-registry-remote_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift">Mirror on a remote host with mirror registry for Red Hat OpenShift</h4>
 <div class="paragraph _abstract">
 <p>You can install the <em>mirror registry for Red&#160;Hat OpenShift</em> on a remote host by using the <code>mirror-registry</code> tool. By doing so, users can create a registry to hold a mirror of Red&#160;Hat OpenShift Container Platform images.</p>
 </div>
@@ -2067,7 +2067,7 @@ default_rootless_network_cmd = "slirp4netns"
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-12 21:54:36 +0100
+Last updated 2026-10-12 22:34:40 +0100
 </div>
 </div>
 <style>

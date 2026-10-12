@@ -692,7 +692,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Update the disconnected cluster</a>
 </li>
 <li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
@@ -1704,7 +1704,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="deploy-hosted-control-planes-intro_deploy-hosted-control-planes">Deploy hosted control planes</h3>
 <div class="paragraph _abstract">
-<p>You can deploy hosted control planes on multiple platforms to manage the control plane for your hosted clusters.</p>
+<p>With hosted control planes for Red&#160;Hat OpenShift Container Platform, you create control planes as pods on a management cluster without the need for dedicated virtual or physical machines for each control plane.</p>
 </div>
 <div class="sect3">
 <h4 id="hosted-control-planes-overview_install-hosted-control-planes">Introduction to hosted control planes</h4>
@@ -2815,7 +2815,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The following table maps multicluster engine Operator versions to the management cluster versions that support them:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 481. Supported multicluster engine Operator versions for Red&#160;Hat OpenShift Container Platform management clusters</caption>
+<caption class="title">Table 473. Supported multicluster engine Operator versions for Red&#160;Hat OpenShift Container Platform management clusters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2895,7 +2895,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 482. Hosted cluster version mapped to HyperShift Operator associated with multicluster engine Operator version</caption>
+<caption class="title">Table 474. Hosted cluster version mapped to HyperShift Operator associated with multicluster engine Operator version</caption>
 <colgroup>
 <col style="width: 12.5%;">
 <col style="width: 12.5%;">
@@ -3018,7 +3018,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>In the following table, the management cluster version is the Red&#160;Hat OpenShift Container Platform version where the multicluster engine Operator is enabled:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 483. Required Red&#160;Hat OpenShift Container Platform versions for platforms</caption>
+<caption class="title">Table 475. Required Red&#160;Hat OpenShift Container Platform versions for platforms</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3081,7 +3081,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The following table indicates the supported architectures for hosted control planes, organized by platform. If an architecture is not listed, it is not yet fully supported.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 484. Multi-architecture support for hosted control planes</caption>
+<caption class="title">Table 476. Multi-architecture support for hosted control planes</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3198,7 +3198,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 485. Hosted cluster version supported while updating multicluster engine Operator</caption>
+<caption class="title">Table 477. Hosted cluster version supported while updating multicluster engine Operator</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4089,7 +4089,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li>
 <p>See the following table to confirm that the secret contains the required fields:</p>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 486. Required fields for the AWS secret</caption>
+<caption class="title">Table 478. Required fields for the AWS secret</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -4264,7 +4264,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li>
 <p>Verify that the secret has the required fields. For your reference, the required fields are detailed in the following table.</p>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 487. Required fields for the AWS secret</caption>
+<caption class="title">Table 479. Required fields for the AWS secret</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -4426,7 +4426,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The following table shows when it is valid to set <code>hostname</code> for a service and endpoint combinations:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 488. Service and endpoint combinations to set <code>hostname</code></caption>
+<caption class="title">Table 480. Service and endpoint combinations to set <code>hostname</code></caption>
 <colgroup>
 <col style="width: 57.1428%;">
 <col style="width: 14.2857%;">
@@ -4715,7 +4715,7 @@ spec:
 <p>For compatible combinations of node pools and hosted clusters, see the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 489. Compatible architectures for node pools and hosted clusters</caption>
+<caption class="title">Table 481. Compatible architectures for node pools and hosted clusters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5325,7 +5325,7 @@ spec:
 <p>The secret name formats are shown in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 490. Access secrets</caption>
+<caption class="title">Table 482. Access secrets</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -5400,7 +5400,7 @@ spec:
 <p>For compatible combinations of node pools and hosted clusters, see the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 491. Compatible architectures for node pools and hosted clusters</caption>
+<caption class="title">Table 483. Compatible architectures for node pools and hosted clusters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5924,7 +5924,7 @@ spec:
 <p>You can set up hosted control planes on Azure with or without external DNS. If you plan to use a private or a public-private topology, external DNS is required. See the following table for more information:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 492. DNS approaches for hosted control planes on Azure</caption>
+<caption class="title">Table 484. DNS approaches for hosted control planes on Azure</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -7678,7 +7678,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 493. Setup progress conditions</caption>
+<caption class="title">Table 485. Setup progress conditions</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7869,7 +7869,7 @@ spec:
 <li>
 <p>Review the output and compare it to the following condition table:</p>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 494. Private cluster stuck conditions</caption>
+<caption class="title">Table 486. Private cluster stuck conditions</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -15636,7 +15636,7 @@ redhat-operators-catalog-9d5fd4d44-z8qqk              1/1     Running   0</code>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-12 21:54:36 +0100
+Last updated 2026-10-12 22:34:40 +0100
 </div>
 </div>
 <style>

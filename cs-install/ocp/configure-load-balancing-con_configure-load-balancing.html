@@ -693,7 +693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Update the disconnected cluster</a>
 </li>
 <li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
@@ -2048,7 +2048,7 @@ install-tsz2g   metallb-operator.v{product-version}.0-202503102139   Manual     
 <p>MetalLB exposes status information for several key components, providing a comprehensive view of its configuration and operation.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 609. MetalLB status resources</caption>
+<caption class="title">Table 601. MetalLB status resources</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -3169,7 +3169,7 @@ frr-k8s-statuscleaner-59cf6f5d44-9wkfr   1/1     Running   0          4h</code><
 <p>To monitor network connectivity and diagnose routing states, refer to the Prometheus metrics for MetalLB. These metrics provide visibility into the status of BGP peers and BFD profiles so that you can ensure stable external communication.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 610. MetalLB BFD metrics</caption>
+<caption class="title">Table 602. MetalLB BFD metrics</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -3216,7 +3216,7 @@ frr-k8s-statuscleaner-59cf6f5d44-9wkfr   1/1     Running   0          4h</code><
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 611. MetalLB BGP metrics</caption>
+<caption class="title">Table 603. MetalLB BGP metrics</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -4685,7 +4685,7 @@ spec:
 <p>The IP failover environment variables reference lists all variables you can use to configure IP failover in Red&#160;Hat OpenShift Container Platform, including VIP addresses, monitoring ports, and network interfaces.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 612. IP failover environment variables</caption>
+<caption class="title">Table 604. IP failover environment variables</caption>
 <colgroup>
 <col style="width: 37.5%;">
 <col style="width: 12.5%;">
@@ -6152,7 +6152,7 @@ The old node can continue to forward traffic for outdated clients until their ca
 <p>The following table details the parameters for the <code>IPAddressPool</code> CR:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 613. MetalLB IPAddressPool pool custom resource</caption>
+<caption class="title">Table 605. MetalLB IPAddressPool pool custom resource</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6271,7 +6271,7 @@ Specify <code>false</code> if you want to explicitly request an IP address from 
 <p>You can assign IP addresses from an <code>IPAddressPool</code> to services and namespaces by configuring the <code>spec.serviceAllocation</code> specification.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 614. MetalLB IPAddressPool custom resource spec.serviceAllocation subfields</caption>
+<caption class="title">Table 606. MetalLB IPAddressPool custom resource spec.serviceAllocation subfields</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6704,7 +6704,7 @@ spec:
 <p>The following table details parameters for the <code>l2Advertisements</code> CR:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 615. L2 advertisements configuration</caption>
+<caption class="title">Table 607. L2 advertisements configuration</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7840,7 +7840,7 @@ If you specify a value for this field, you must specify the same value for all o
 <p>The following table describes the parameters for the <code>BGPAdvertisements</code> CR:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 616. BGPAdvertisements configuration</caption>
+<caption class="title">Table 608. BGPAdvertisements configuration</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -8534,7 +8534,7 @@ spec:
 <p>The following table describes the parameters for the BGP peer CR:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 617. MetalLB BGP peer custom resource</caption>
+<caption class="title">Table 609. MetalLB BGP peer custom resource</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9433,7 +9433,7 @@ Each interface is limited to one BGP connection.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 618. MetalLB community custom resource</caption>
+<caption class="title">Table 610. MetalLB community custom resource</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9493,7 +9493,7 @@ Specify the same namespace that the MetalLB Operator uses.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 619. CommunityAlias</caption>
+<caption class="title">Table 611. CommunityAlias</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9693,7 +9693,7 @@ spec:
 <p>The following table describes parameters for the BFD profile CR:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 620. BFD profile custom resource</caption>
+<caption class="title">Table 612. BFD profile custom resource</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10287,7 +10287,7 @@ spec:
 <p>The parameters for the <code>FRRConfiguration</code> custom resource are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 621. MetalLB FRRConfiguration custom resource</caption>
+<caption class="title">Table 613. MetalLB FRRConfiguration custom resource</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -12088,7 +12088,7 @@ You can determine the node name for the FRR-K8s pod with a command such as <code
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-12 21:54:36 +0100
+Last updated 2026-10-12 22:34:40 +0100
 </div>
 </div>
 <style>

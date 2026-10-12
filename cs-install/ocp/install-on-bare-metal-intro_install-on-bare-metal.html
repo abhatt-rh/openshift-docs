@@ -692,7 +692,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Update the disconnected cluster</a>
 </li>
 <li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
@@ -1699,7 +1699,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#prepare-to-install-on-bare-metal-intro_prepare-to-install-on-bare-metal">Prepare to install on bare metal</a></li><li class="level-5"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt_prepare-to-install-on-bare-metal">Bare-metal cluster installation requirements for OpenShift Virtualization</a></li><li class="level-6"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt-HA_prepare-to-install-on-bare-metal">High availability requirements for OpenShift Virtualization</a></li><li class="level-6"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt-LM_prepare-to-install-on-bare-metal">Live migration requirements for OpenShift Virtualization</a></li><li class="level-6"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt-SR-IOV_prepare-to-install-on-bare-metal">SR-IOV requirements for OpenShift Virtualization</a></li><li class="level-5"><a href="#nw-sriov-dual-nic-con_prepare-to-install-on-bare-metal">NIC partitioning for SR-IOV devices</a></li><li class="level-5"><a href="#installation-configuration-parameters_installation-config-parameters-bare-metal">Available installation configuration parameters for bare metal</a></li><li class="level-6"><a href="#installation-configuration-parameters-required_installation-config-parameters-bare-metal">Required configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-network_installation-config-parameters-bare-metal">Network configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional_installation-config-parameters-bare-metal">Optional configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional-aws_installation-config-parameters-bare-metal">Optional AWS configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-additional-gcp_installation-config-parameters-bare-metal">Additional Google Cloud configuration parameters</a></li><li class="level-4"><a href="#verify-bare-metal-ipi-prerequisites-intro_verify-bare-metal-ipi-prerequisites">Verify bare metal IPI prerequisites</a></li><li class="level-5"><a href="#node-requirements_verify-bare-metal-ipi-prerequisites">Node requirements</a></li><li class="level-5"><a href="#installation-minimum-resource-requirements_ipi-install-prerequisites">Minimum resource requirements for cluster installation</a></li><li class="level-5"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt_verify-bare-metal-ipi-prerequisites">Bare-metal cluster installation requirements for OpenShift Virtualization</a></li><li class="level-6"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt-HA_verify-bare-metal-ipi-prerequisites">High availability requirements for OpenShift Virtualization</a></li><li class="level-6"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt-LM_verify-bare-metal-ipi-prerequisites">Live migration requirements for OpenShift Virtualization</a></li><li class="level-6"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt-SR-IOV_verify-bare-metal-ipi-prerequisites">SR-IOV requirements for OpenShift Virtualization</a></li><li class="level-5"><a href="#ipi-install-firmware-requirements-for-installing-with-virtual-media_verify-bare-metal-ipi-prerequisites">Firmware requirements for installing with virtual media</a></li><li class="level-5"><a href="#ncsi-hardware-requirements-for-bare-metal_verify-bare-metal-ipi-prerequisites">NC-SI hardware requirements for bare metal</a></li><li class="level-5"><a href="#network-requirements_verify-bare-metal-ipi-prerequisites">Network requirements</a></li><li class="level-6"><a href="#network-requirements-one-ip-per-subnet_verify-bare-metal-ipi-prerequisites">One IP address for each subnet</a></li><li class="level-6"><a href="#network-requirements-ensuring-required-ports-are-open_verify-bare-metal-ipi-prerequisites">Ensuring required ports are open</a></li><li class="level-6"><a href="#network-requirements-increase-mtu_verify-bare-metal-ipi-prerequisites">Increase the network MTU</a></li><li class="level-6"><a href="#network-requirements-config-nics_verify-bare-metal-ipi-prerequisites">Configuring NICs</a></li><li class="level-6"><a href="#network-requirements-dns_verify-bare-metal-ipi-prerequisites">DNS requirements</a></li><li class="level-6"><a href="#network-requirements-dhcp-reqs_verify-bare-metal-ipi-prerequisites">Dynamic Host Configuration Protocol (DHCP) requirements</a></li><li class="level-6"><a href="#network-requirements-reserving-ip-addresses_verify-bare-metal-ipi-prerequisites">Reserving IP addresses for nodes with the DHCP server</a></li><li class="level-6"><a href="#network-requirements-provisioner_verify-bare-metal-ipi-prerequisites">Provisioner node requirements</a></li><li class="level-6"><a href="#network-requirements-ntp_verify-bare-metal-ipi-prerequisites">Network Time Protocol (NTP)</a></li><li class="level-6"><a href="#network-requirements-out-of-band_verify-bare-metal-ipi-prerequisites">Port access for the out-of-band management IP address</a></li><li class="level-5"><a href="#configuring-nodes_verify-bare-metal-ipi-prerequisites">Nodes configuration</a></li><li class="level-6"><a href="#_node_configuration_when_using_the_provisioning_network">Node configuration when using the provisioning network</a></li><li class="level-6"><a href="#_node_configuration_without_the_provisioning_network">Node configuration without the provisioning network</a></li><li class="level-6"><a href="#configuring-nodes-for-secure-boot_verify-bare-metal-ipi-prerequisites">Configuring nodes for Secure Boot manually</a></li><li class="level-5"><a href="#out-of-band-management_verify-bare-metal-ipi-prerequisites">Out-of-band management</a></li><li class="level-5"><a href="#required-data-for-installation_verify-bare-metal-ipi-prerequisites">Required data for installation</a></li><li class="level-5"><a href="#validation-checklist-for-nodes_verify-bare-metal-ipi-prerequisites">Validation checklist for nodes</a></li><li class="level-5"><a href="#installation-overview_verify-bare-metal-ipi-prerequisites">Installation overview</a></li><li class="level-4"><a href="#install-a-bare-metal-ipi-cluster-intro_install-a-bare-metal-ipi-cluster">Install a bare metal IPI cluster</a></li><li class="level-5"><a href="#installing-rhel-on-the-provisioner-node_install-a-bare-metal-ipi-cluster">Installations RHEL on the provisioner node</a></li><li class="level-5"><a href="#preparing-the-provisioner-node-for-openshift-install_install-a-bare-metal-ipi-cluster">Preparing the provisioner node for Red Hat OpenShift Container Platform installation</a></li><li class="level-5"><a href="#checking-ntp-sync_install-a-bare-metal-ipi-cluster">Checking NTP server synchronization</a></li><li class="level-5"><a href="#configuring-networking_install-a-bare-metal-ipi-cluster">Configuring networking</a></li><li class="level-5"><a href="#ipi-install-baremetal-runtimecfg-ip-assignment_install-a-bare-metal-ipi-cluster">The baremetal-runtimecfg tool</a></li><li class="level-5"><a href="#creating-manifest-file-customized-br-ex-bridge_install-a-bare-metal-ipi-cluster">Creating a manifest object that includes a customized br-ex bridge</a></li><li class="level-6"><a href="#creating-scaling-machine-sets-compute-nodes-networking_install-a-bare-metal-ipi-cluster">Scaling each machine set to compute nodes</a></li><li class="level-5"><a href="#ipi-install-establishing-communication-between-subnets_install-a-bare-metal-ipi-cluster">Establishing communication between subnets</a></li><li class="level-5"><a href="#retrieving-the-openshift-installer_install-a-bare-metal-ipi-cluster">Retrieving the Red Hat OpenShift Container Platform installer</a></li><li class="level-5"><a href="#extracting-the-openshift-installer_install-a-bare-metal-ipi-cluster">Extracting the Red Hat OpenShift Container Platform installer</a></li><li class="level-5"><a href="#ipi-install-creating-an-rhcos-images-cache_install-a-bare-metal-ipi-cluster">Creating an RHCOS images cache</a></li><li class="level-5"><a href="#nw-osp-services-external-load-balancer_install-a-bare-metal-ipi-cluster">Services for a user-managed load balancer</a></li><li class="level-6"><a href="#nw-osp-configuring-external-load-balancer_ipi-install-installation-workflow">Configuring a user-managed load balancer</a></li><li class="level-5"><a href="#ipi-install-setting-cluster-node-hostnames-dhcp_install-a-bare-metal-ipi-cluster">Setting the cluster node hostnames through DHCP</a></li><li class="level-5"><a href="#local-arbiter-node-config-prerequisites_install-a-bare-metal-ipi-cluster">Local arbiter node configuration prerequisites</a></li><li class="level-5"><a href="#ipi-install-config-local-arbiter-node_install-a-bare-metal-ipi-cluster">Configuring a local arbiter node by using installer-provisioned infrastructure</a></li><li class="level-5"><a href="#configuring-the-install-config-file_install-a-bare-metal-ipi-cluster">Configuring the install-config.yaml file</a></li><li class="level-6"><a href="#additional-install-config-parameters_install-a-bare-metal-ipi-cluster">Additional installation configuration parameters</a></li><li class="level-6"><a href="#bmc-addressing_install-a-bare-metal-ipi-cluster">BMC addressing</a></li><li class="level-6"><a href="#verifying-support-for-redfish-apis_install-a-bare-metal-ipi-cluster">Verifying support for Redfish APIs</a></li><li class="level-6"><a href="#bmc-addressing-for-dell-idrac_install-a-bare-metal-ipi-cluster">BMC addressing for Dell iDRAC</a></li><li class="level-6"><a href="#bmc-addressing-for-hpe-ilo_install-a-bare-metal-ipi-cluster">BMC addressing for HPE iLO</a></li><li class="level-6"><a href="#bmc-addressing-for-fujitsu-irmc_install-a-bare-metal-ipi-cluster">BMC addressing for Fujitsu iRMC</a></li><li class="level-6"><a href="#bmc-addressing-for-cisco-cimc_install-a-bare-metal-ipi-cluster">BMC addressing for Cisco Integrated Management Controller</a></li><li class="level-6"><a href="#root-device-hints_install-a-bare-metal-ipi-cluster">Root device hints</a></li><li class="level-6"><a href="#ipi-install-setting-proxy-settings-within-install-config_install-a-bare-metal-ipi-cluster">Setting proxy settings</a></li><li class="level-6"><a href="#modifying-install-config-for-no-provisioning-network_install-a-bare-metal-ipi-cluster">Deploying with no provisioning network</a></li><li class="level-6"><a href="#modifying-install-config-for-dual-stack-network_install-a-bare-metal-ipi-cluster">Deploying IP addressing with dual-stack networking</a></li><li class="level-6"><a href="#configuring-host-network-interfaces-in-the-install-config-yaml-file_install-a-bare-metal-ipi-cluster">Configuring host network interfaces</a></li><li class="level-6"><a href="#ipi-install-configuring-host-network-interfaces-for-subnets_install-a-bare-metal-ipi-cluster">Configuring host network interfaces for subnets</a></li><li class="level-6"><a href="#ipi-install-modifying-install-config-for-slaac-dual-stack-network_install-a-bare-metal-ipi-cluster">Configuring address generation modes for SLAAC in dual-stack networks</a></li><li class="level-6"><a href="#configuring-host-dual-network-interfaces-in-the-install-config-yaml-file_install-a-bare-metal-ipi-cluster">Configuring host network interfaces for dual-port NIC</a></li><li class="level-6"><a href="#ipi-install-configure-multiple-cluster-nodes_install-a-bare-metal-ipi-cluster">Configuring multiple cluster nodes</a></li><li class="level-6"><a href="#configuring-managed-secure-boot-in-the-install-config-file_install-a-bare-metal-ipi-cluster">Configuring managed Secure Boot</a></li><li class="level-5"><a href="#ipi-install-manifest-configuration-files_install-a-bare-metal-ipi-cluster">Manifest configuration files</a></li><li class="level-6"><a href="#creating-the-openshift-manifests_install-a-bare-metal-ipi-cluster">Creating the Red Hat OpenShift Container Platform manifests</a></li><li class="level-6"><a href="#configuring-ntp-for-disconnected-clusters_install-a-bare-metal-ipi-cluster">Configuring NTP for disconnected clusters</a></li><li class="level-6"><a href="#configure-network-components-to-run-on-the-control-plane_ipi-install-installation-workflow">Configuring network components to run on the control plane</a></li><li class="level-6"><a href="#deploying-routers-on-worker-nodes_install-a-bare-metal-ipi-cluster">Deploying routers on compute nodes</a></li><li class="level-6"><a href="#configuring-the-bios_install-a-bare-metal-ipi-cluster">Configuring the BIOS</a></li><li class="level-6"><a href="#configuring-the-raid_install-a-bare-metal-ipi-cluster">Configuring the RAID</a></li><li class="level-6"><a href="#configuring-storage-on-nodes_install-a-bare-metal-ipi-cluster">Configuring storage on nodes</a></li><li class="level-5"><a href="#ipi-install-creating-a-disconnected-registry_install-a-bare-metal-ipi-cluster">Creating a disconnected registry</a></li><li class="level-6"><a href="#ipi-install-preparing-a-disconnected-registry_install-a-bare-metal-ipi-cluster">Preparing the registry node to host the mirrored registry</a></li><li class="level-6"><a href="#ipi-install-mirroring-for-disconnected-registry_install-a-bare-metal-ipi-cluster">Mirroring the Red Hat OpenShift Container Platform image repository for a disconnected registry</a></li><li class="level-6"><a href="#ipi-modify-install-config-for-a-disconnected-registry_install-a-bare-metal-ipi-cluster">Modify the install-config.yaml file to use the disconnected registry</a></li><li class="level-5"><a href="#validation-checklist-for-installation_install-a-bare-metal-ipi-cluster">Validation checklist for installation</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-cleaning-up-previous-installations_install-a-bare-metal-ipi-cluster">Cleaning up previous installations</a></li><li class="level-5"><a href="#deploying-the-cluster-via-the-openshift-installer_install-a-bare-metal-ipi-cluster">Deploying the cluster via the Red Hat OpenShift Container Platform installer</a></li><li class="level-5"><a href="#ipi-install-following-the-progress-of-the-installation_install-a-bare-metal-ipi-cluster">Following the progress of the installation</a></li><li class="level-5"><a href="#verifying-static-ip-address-configuration_install-a-bare-metal-ipi-cluster">Verifying static IP address configuration</a></li><li class="level-4"><a href="#install-on-bare-metal-upi-intro_install-on-bare-metal-upi">Install on bare metal with user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-entitlements_install-on-bare-metal-upi">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-6"><a href="#installation-machine-requirements_installing-bare-metal">Required machines for cluster installation</a></li><li class="level-6"><a href="#installation-minimum-resource-requirements_installing-bare-metal">Minimum resource requirements for cluster installation</a></li><li class="level-6"><a href="#csr-management_install-on-bare-metal-upi">Certificate signing requests management</a></li><li class="level-6"><a href="#installation-network-user-infra_install-on-bare-metal-upi">Networking requirements for user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-dns-user-infra_install-on-bare-metal-upi">User-provisioned DNS requirements</a></li><li class="level-6"><a href="#installation-bare-metal-dns-record-type_install-on-bare-metal-upi">Configuring the dnsRecordsType parameter</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra_install-on-bare-metal-upi">Load balancing requirements for user-provisioned infrastructure</a></li><li class="level-5"><a href="#creating-manifest-file-customized-br-ex-bridge_install-on-bare-metal-upi">Creating a manifest object that includes a customized br-ex bridge</a></li><li class="level-6"><a href="#creating-scaling-machine-sets-compute-nodes-networking_install-on-bare-metal-upi">Scaling each machine set to compute nodes</a></li><li class="level-5"><a href="#enabling-OVS-balance-slb-mode_install-on-bare-metal-upi">Enabling OVS balance-slb mode for your cluster</a></li><li class="level-5"><a href="#installation-infrastructure-user-infra_install-on-bare-metal-upi">Preparing the user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-user-provisioned-validating-dns_install-on-bare-metal-upi">Validating DNS resolution for user-provisioned infrastructure</a></li><li class="level-5"><a href="#ssh-agent-using_installing-bare-metal">Generating a key pair for cluster node SSH access</a></li><li class="level-5"><a href="#installation-obtaining-installer_install-on-bare-metal-upi">Obtaining the installation program</a></li><li class="level-5"><a href="#cli-installing-cli-linux_install-on-bare-metal-upi">Installing the OpenShift CLI on Linux</a></li><li class="level-5"><a href="#cli-installing-cli-windows_install-on-bare-metal-upi">Installing the OpenShift CLI on Windows</a></li><li class="level-5"><a href="#cli-installing-cli-macos_install-on-bare-metal-upi">Installing the OpenShift CLI on macOS</a></li><li class="level-5"><a href="#installation-initializing-manual_install-on-bare-metal-upi">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-bare-metal-config-yaml_install-on-bare-metal-upi">Sample install-config.yaml file for bare metal</a></li><li class="level-6"><a href="#installation-configure-proxy_installing-bare-metal">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#installation-three-node-cluster_install-on-bare-metal-upi">Configuring a three-node cluster</a></li><li class="level-6"><a href="#local-arbiter-node-config-prerequisites_install-on-bare-metal-upi">Local arbiter node configuration prerequisites</a></li><li class="level-6"><a href="#upi-install-config-local-arbiter-node_install-on-bare-metal-upi">Configuring a local arbiter node by using user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-bare-metal">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-5"><a href="#creating-machines-bare-metal_install-on-bare-metal-upi">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-6"><a href="#installation-user-infra-machines-iso_install-on-bare-metal-upi">Installing RHCOS by using an ISO image</a></li><li class="level-6"><a href="#installation-user-infra-machines-pxe_install-on-bare-metal-upi">Installing RHCOS by using PXE or iPXE booting</a></li><li class="level-6"><a href="#installation-user-infra-machines-advanced_install-on-bare-metal-upi">Advanced RHCOS installation configuration</a></li><li class="level-6"><a href="#installation-user-infra-machines-routing-bonding_install-on-bare-metal-upi">Networking and bonding options for ISO installations</a></li><li class="level-6"><a href="#rhcos-enabling-multipath_install-on-bare-metal-upi">Enabling multipathing with kernel arguments on RHCOS</a></li><li class="level-6"><a href="#rhcos-install-iscsi-manual_install-on-bare-metal-upi">Installing RHCOS manually on an iSCSI boot device</a></li><li class="level-6"><a href="#rhcos-install-iscsi-ibft_install-on-bare-metal-upi">Installing RHCOS on an iSCSI boot device using iBFT</a></li><li class="level-5"><a href="#installation-installing-bare-metal_install-on-bare-metal-upi">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-bare-metal-upi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_install-on-bare-metal-upi">Approve the certificate signing requests for your machines</a></li><li class="level-5"><a href="#installation-operators-config_install-on-bare-metal-upi">Initial Operator configuration</a></li><li class="level-6"><a href="#registry-removed_install-on-bare-metal-upi">Image registry removed during installation</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-bare-metal-upi">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_install-on-bare-metal-upi">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-bare-metal-upi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#install-on-bare-metal-with-network-customizations-upi-intro_install-on-bare-metal-with-network-customizations-upi">Install on bare metal with network customizations by using user-provisioned infrastructure</a></li><li class="level-6"><a href="#cluster-entitlements_install-on-bare-metal-with-network-customizations-upi">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-6"><a href="#creating-manifest-file-customized-br-ex-bridge_install-on-bare-metal-with-network-customizations-upi">Creating a manifest object that includes a customized br-ex bridge</a></li><li class="level-6"><a href="#installation-infrastructure-user-infra_install-on-bare-metal-with-network-customizations-upi">Preparing the user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-user-provisioned-validating-dns_install-on-bare-metal-with-network-customizations-upi">Validating DNS resolution for user-provisioned infrastructure</a></li><li class="level-6"><a href="#ssh-agent-using_install-on-bare-metal-with-network-customizations-upi">Generating a key pair for cluster node SSH access</a></li><li class="level-6"><a href="#installation-obtaining-installer_install-on-bare-metal-with-network-customizations-upi">Obtaining the installation program</a></li><li class="level-6"><a href="#cli-installing-cli-linux_install-on-bare-metal-with-network-customizations-upi">Installing the OpenShift CLI on Linux</a></li><li class="level-6"><a href="#cli-installing-cli-windows_install-on-bare-metal-with-network-customizations-upi">Installing the OpenShift CLI on Windows</a></li><li class="level-6"><a href="#cli-installing-cli-macos_install-on-bare-metal-with-network-customizations-upi">Installing the OpenShift CLI on macOS</a></li><li class="level-6"><a href="#installation-initializing-manual_install-on-bare-metal-with-network-customizations-upi">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#nw-network-config_install-on-bare-metal-with-network-customizations-upi">Network configuration phases</a></li><li class="level-6"><a href="#modifying-nwoperator-config-startup_installing-bare-metal-network-customizations">Specifying advanced network configuration</a></li><li class="level-6"><a href="#nw-operator-cr_install-on-bare-metal-with-network-customizations-upi">Cluster Network Operator configuration</a></li><li class="level-6"><a href="#installation-generate-ignition-configs_install-on-bare-metal-with-network-customizations-upi">Creating the Ignition config files</a></li><li class="level-6"><a href="#creating-machines-bare-metal_install-on-bare-metal-with-network-customizations-upi">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-6"><a href="#installation-installing-bare-metal_install-on-bare-metal-with-network-customizations-upi">Waiting for the bootstrap process to complete</a></li><li class="level-6"><a href="#cli-logging-in-kubeadmin_install-on-bare-metal-with-network-customizations-upi">Logging in to the cluster by using the CLI</a></li><li class="level-6"><a href="#installation-approve-csrs_install-on-bare-metal-with-network-customizations-upi">Approve the certificate signing requests for your machines</a></li><li class="level-6"><a href="#installation-operators-config_install-on-bare-metal-with-network-customizations-upi">Initial Operator configuration</a></li><li class="level-6"><a href="#installation-complete-user-infra_install-on-bare-metal-with-network-customizations-upi">Completing installation on user-provisioned infrastructure</a></li><li class="level-6"><a href="#cluster-telemetry_install-on-bare-metal-with-network-customizations-upi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#install-on-bare-metal-in-a-disconnected-environment-upi-intro_install-on-bare-metal-in-a-disconnected-environment-upi">Install on bare metal in a disconnected environment by using user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-about-restricted-networks_install-on-bare-metal-in-a-disconnected-environment-upi">About installations in restricted networks</a></li><li class="level-6"><a href="#installation-restricted-network-limits_install-on-bare-metal-in-a-disconnected-environment-upi">Additional limits</a></li><li class="level-6"><a href="#cluster-entitlements_installing-restricted-networks-bare-metal">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-6"><a href="#installation-machine-requirements_installing-restricted-networks-bare-metal">Required machines for cluster installation</a></li><li class="level-6"><a href="#installation-minimum-resource-requirements_installing-restricted-networks-bare-metal">Minimum resource requirements for cluster installation</a></li><li class="level-6"><a href="#csr-management_install-on-bare-metal-in-a-disconnected-environment-upi">Certificate signing requests management</a></li><li class="level-6"><a href="#installation-network-user-infra_installing-restricted-networks-bare-metal">Networking requirements for user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-dns-user-infra_install-on-bare-metal-in-a-disconnected-environment-upi">User-provisioned DNS requirements</a></li><li class="level-6"><a href="#installation-bare-metal-dns-record-type_install-on-bare-metal-in-a-disconnected-environment-upi">Configuring the dnsRecordsType parameter</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra_install-on-bare-metal-in-a-disconnected-environment-upi">Load balancing requirements for user-provisioned infrastructure</a></li><li class="level-5"><a href="#creating-manifest-file-customized-br-ex-bridge_install-on-bare-metal-in-a-disconnected-environment-upi">Creating a manifest object that includes a customized br-ex bridge</a></li><li class="level-6"><a href="#creating-scaling-machine-sets-compute-nodes-networking_install-on-bare-metal-in-a-disconnected-environment-upi">Scaling each machine set to compute nodes</a></li><li class="level-5"><a href="#installation-infrastructure-user-infra_install-on-bare-metal-in-a-disconnected-environment-upi">Preparing the user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-user-provisioned-validating-dns_install-on-bare-metal-in-a-disconnected-environment-upi">Validating DNS resolution for user-provisioned infrastructure</a></li><li class="level-5"><a href="#ssh-agent-using_installing-restricted-networks-bare-metal">Generating a key pair for cluster node SSH access</a></li><li class="level-5"><a href="#installation-initializing-manual_installing-restricted-networks-bare-metal">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-bare-metal-config-yaml_installing-restricted-networks-bare-metal">Sample install-config.yaml file for bare metal</a></li><li class="level-6"><a href="#installation-configure-proxy_installing-restricted-networks-bare-metal">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#installation-three-node-cluster_install-on-bare-metal-in-a-disconnected-environment-upi">Configuring a three-node cluster</a></li><li class="level-5"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-restricted-networks-bare-metal">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-5"><a href="#installation-special-config-chrony_installing-restricted-networks-bare-metal">Configure chrony time service</a></li><li class="level-5"><a href="#creating-machines-bare-metal_install-on-bare-metal-in-a-disconnected-environment-upi">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-6"><a href="#installation-user-infra-machines-iso_installing-restricted-networks-bare-metal">Installing RHCOS by using an ISO image</a></li><li class="level-6"><a href="#installation-user-infra-machines-pxe_install-on-bare-metal-in-a-disconnected-environment-upi">Installing RHCOS by using PXE or iPXE booting</a></li><li class="level-6"><a href="#installation-user-infra-machines-advanced_installing-restricted-networks-bare-metal">Advanced RHCOS installation configuration</a></li><li class="level-6"><a href="#installation-user-infra-machines-routing-bonding_install-on-bare-metal-in-a-disconnected-environment-upi">Networking and bonding options for ISO installations</a></li><li class="level-6"><a href="#rhcos-enabling-multipath_installing-restricted-networks-bare-metal">Enabling multipathing with kernel arguments on RHCOS</a></li><li class="level-6"><a href="#rhcos-install-iscsi-manual_installing-restricted-networks-bare-metal">Installing RHCOS manually on an iSCSI boot device</a></li><li class="level-6"><a href="#rhcos-install-iscsi-ibft_installing-restricted-networks-bare-metal">Installing RHCOS on an iSCSI boot device using iBFT</a></li><li class="level-5"><a href="#installation-installing-bare-metal_installing-restricted-networks-bare-metal">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-bare-metal-in-a-disconnected-environment-upi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_install-on-bare-metal-in-a-disconnected-environment-upi">Approve the certificate signing requests for your machines</a></li><li class="level-5"><a href="#installation-operators-config_install-on-bare-metal-in-a-disconnected-environment-upi">Initial Operator configuration</a></li><li class="level-6"><a href="#olm-restricted-networks-operatorhub_install-on-bare-metal-in-a-disconnected-environment-upi">Disabling the default software catalog sources</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-bare-metal-in-a-disconnected-environment-upi">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_installing-restricted-networks-bare-metal">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-bare-metal-in-a-disconnected-environment-upi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#use-red-hat-bare-metal-as-a-service-for-openshift-intro_use-red-hat-bare-metal-as-a-service-for-openshift">Provision bare metal nodes with Red Hat Bare-Metal-as-a-Service</a></li><li class="level-5"><a href="#bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift">Prerequisites for using Red Hat Bare-Metal-as-a-Service for OpenShift</a></li><li class="level-5"><a href="#bmaas-using-the-bmo-to-manage-resources-across-all-namespaces_use-red-hat-bare-metal-as-a-service-for-openshift">Using the Bare Metal Operator to manage resources across all namespaces</a></li><li class="level-5"><a href="#bmaas-setting-up-a-dedicated-namespace_use-red-hat-bare-metal-as-a-service-for-openshift">Setting up a dedicated namespace</a></li><li class="level-5"><a href="#bmo-creating-a-bmc-secret_use-red-hat-bare-metal-as-a-service-for-openshift">Creating a BMC secret</a></li><li class="level-5"><a href="#bmo-creating-a-bare-metal-host-resource_use-red-hat-bare-metal-as-a-service-for-openshift">Creating a bare-metal host resource</a></li><li class="level-5"><a href="#bmo-configuring-users-for-bmaas-hosts_use-red-hat-bare-metal-as-a-service-for-openshift">Configuring users for Red Hat Bare-Metal-as-a-Service for OpenShift hosts</a></li><li class="level-5"><a href="#bmo-configuring-the-networkdata-parameter-in-the-bmo-cr_use-red-hat-bare-metal-as-a-service-for-openshift">Configuring the networkData parameter in the BareMetalHost resource</a></li><li class="level-5"><a href="#bmo-deploying-an-image-to-the-bare-metal-host_use-red-hat-bare-metal-as-a-service-for-openshift">Deploying an image to the bare-metal host</a></li><li class="level-4"><a href="#troubleshoot-bare-metal-ipi-installation-intro_troubleshoot-bare-metal-ipi-installation">Troubleshoot a bare metal installation that uses installer-provisioned infrastructure</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-install-workflow_troubleshoot-bare-metal-ipi-installation">Troubleshooting the installation program workflow</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-install-config_troubleshoot-bare-metal-ipi-installation">Troubleshooting install-config.yaml</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-bootstrap-vm_troubleshoot-bare-metal-ipi-installation">Troubleshooting bootstrap VM issues</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-bootstrap-vm-cannot-boot_troubleshoot-bare-metal-ipi-installation">Bootstrap VM cannot boot up the cluster nodes</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-bootstrap-vm-inspecting-logs_troubleshoot-bare-metal-ipi-installation">Inspecting logs</a></li><li class="level-5"><a href="#investigating-an-unavailable-kubernetes-api_troubleshoot-bare-metal-ipi-installation">Investigating an unavailable Kubernetes API</a></li><li class="level-5"><a href="#troubleshooting-failure-to-initialize-the-cluster_troubleshoot-bare-metal-ipi-installation">Troubleshooting a failure to initialize the cluster</a></li><li class="level-5"><a href="#troubleshooting-failure-to-fetch-the-console-url_troubleshoot-bare-metal-ipi-installation">Troubleshooting a failure to fetch the console URL</a></li><li class="level-5"><a href="#troubleshooting-failure-to-add-the-ingress-certificate-to-kubeconfig_troubleshoot-bare-metal-ipi-installation">Troubleshooting a failure to add the ingress certificate to kubeconfig</a></li><li class="level-5"><a href="#troubleshooting-ssh-access-to-cluster-nodes_troubleshoot-bare-metal-ipi-installation">Troubleshooting SSH access to cluster nodes</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-cluster-nodes-will-not-pxe_troubleshoot-bare-metal-ipi-installation">Cluster nodes do not PXE boot</a></li><li class="level-5"><a href="#installing-creates-no-worker-nodes_troubleshoot-bare-metal-ipi-installation">Installing creates no worker nodes</a></li><li class="level-5"><a href="#troubleshooting-the-cluster-network-operator_troubleshoot-bare-metal-ipi-installation">Troubleshooting the Cluster Network Operator</a></li><li class="level-5"><a href="#unable-to-discover-new-bare-metal-hosts-using-the-bmc_troubleshoot-bare-metal-ipi-installation">Unable to discover new bare-metal hosts using the BMC</a></li><li class="level-5"><a href="#worker-nodes-cannot-join-the-cluster_troubleshoot-bare-metal-ipi-installation">Troubleshooting worker nodes that cannot join the cluster</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-cleaning-up-previous-installations_troubleshoot-bare-metal-ipi-installation">Cleaning up previous installations</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-registry-issues_troubleshoot-bare-metal-ipi-installation">Issues with creating the registry</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-misc-issues_troubleshoot-bare-metal-ipi-installation">Miscellaneous issues</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-runtime-network-not-ready_troubleshoot-bare-metal-ipi-installation">Addressing the runtime network not ready error</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-no-matching-rootdevicehints_troubleshoot-bare-metal-ipi-installation">Addressing the &quot;No disk found with matching rootDeviceHints&quot; error message</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-incorrect-ipv6-dhcp_troubleshoot-bare-metal-ipi-installation">Addressing the cluster nodes not getting the correct IPv6 address over DHCP error</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-incorrect-hostname-dhcp_troubleshoot-bare-metal-ipi-installation">Addressing the cluster nodes not getting the correct hostname over DHCP error</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-unreachable-routes_troubleshoot-bare-metal-ipi-installation">Addressing the routes not reaching endpoints error</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-failed-ignition-during-firstboot_troubleshoot-bare-metal-ipi-installation">Addressing the failed Ignition during firstboot error</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-ntp-out-of-sync_troubleshoot-bare-metal-ipi-installation">Addressing the NTP out of sync error</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-reviewing-the-installation_troubleshoot-bare-metal-ipi-installation">Reviewing the installation</a></li><li class="level-4"><a href="#bare-metal-about-the-cluster-api_configure-bare-metal-post-installation">About the cluster API</a></li><li class="level-5"><a href="#configuring-ntp-for-disconnected-clusters_bare-metal-postinstallation-configuration">Configuring NTP for disconnected clusters</a></li><li class="level-5"><a href="#bare-metal-self-signed-cert-post-install_configure-bare-metal-post-installation">Configuring a local or self-signed Baseboard Management Controller CA certificate</a></li><li class="level-6"><a href="#bare-metal-replace-existing-bmc-ca_configure-bare-metal-post-installation">Replacing an existing BMC CA certificate</a></li><li class="level-6"><a href="#bare-metal-install-new-bmc-ca_configure-bare-metal-post-installation">Installing a new BMC CA certificate</a></li><li class="level-5"><a href="#enabling-a-provisioning-network-after-installation_configure-bare-metal-post-installation">Enabling a provisioning network after installation</a></li><li class="level-5"><a href="#creating-manifest-file-customized-br-ex-bridge-post_configure-bare-metal-post-installation">Creating a manifest object that includes a customized br-ex bridge</a></li><li class="level-5"><a href="#making-disruptive-changes-br-ex-bridge.adoc_configure-bare-metal-post-installation">Making disruptive changes to a customized br-ex bridge</a></li><li class="level-5"><a href="#migrating-br-ex-bridge-nmstate_configure-bare-metal-post-installation">Migrating a configured br-ex bridge to NMState</a></li><li class="level-5"><a href="#nw-osp-services-external-load-balancer_configure-bare-metal-post-installation">Services for a user-managed load balancer</a></li><li class="level-6"><a href="#nw-osp-configuring-external-load-balancer_configure-bare-metal-post-installation">Configuring a user-managed load balancer</a></li><li class="level-5"><a href="#bm-about-ipe_configure-bare-metal-post-installation">Hardware metrics in the Monitoring stack</a></li><li class="level-6"><a href="#bm-configuring-ipe_configure-bare-metal-post-installation">Adding node hardware metrics to the Monitoring stack</a></li><li class="level-5"><a href="#bmo-config-using-bare-metal-operator_configure-bare-metal-post-installation">Configuration using the Bare Metal Operator</a></li><li class="level-6"><a href="#bmo-bare-metal-operator-architecture_configure-bare-metal-post-installation">Bare Metal Operator architecture</a></li><li class="level-6"><a href="#bmo-about-the-baremetalhost-resource_configure-bare-metal-post-installation">About the BareMetalHost resource</a></li><li class="level-6"><a href="#bmo-getting-the-baremetalhost-resource_configure-bare-metal-post-installation">Getting the BareMetalHost resource</a></li><li class="level-6"><a href="#bmo-editing-a-baremetalhost-resource_configure-bare-metal-post-installation">Editing a BareMetalHost resource</a></li><li class="level-6"><a href="#ipi-install-troubleshooothing-latency-when-deleting-a-baremetalhost-resource_configure-bare-metal-post-installation">Troubleshooting latency when deleting a BareMetalHost resource</a></li><li class="level-6"><a href="#bmo-attaching-a-non-bootable-iso-to-a-bare-metal-node_configure-bare-metal-post-installation">Attaching a non-bootable ISO to a bare-metal node</a></li><li class="level-6"><a href="#bmo-configuring-ncsi-disable-poweroff_configure-bare-metal-post-installation">Configuring NC-SI and DisablePowerOff for shared NICs</a></li><li class="level-6"><a href="#bmo-about-the-hostfirmwaresettings-resource_configure-bare-metal-post-installation">About the HostFirmwareSettings resource</a></li><li class="level-6"><a href="#bmo-getting-the-hostfirmwaresettings-resource_configure-bare-metal-post-installation">Getting the HostFirmwareSettings resource</a></li><li class="level-6"><a href="#bmo-editing-the-hostfirmwaresettings-resource-of-a-provisioned-host_configure-bare-metal-post-installation">Editing the HostFirmwareSettings resource of a provisioned host</a></li><li class="level-6"><a href="#bmo-performing-a-live-update-to-the-hostfirmwaresettings-resource_configure-bare-metal-post-installation">Performing a live update to the HostFirmwareSettings resource</a></li><li class="level-6"><a href="#bmo-verifying-the-hostfirmware-settings-resource-is-valid_configure-bare-metal-post-installation">Verifying the HostFirmware Settings resource is valid</a></li><li class="level-6"><a href="#bmo-about-the-firmwareschema-resource_configure-bare-metal-post-installation">About the FirmwareSchema resource</a></li><li class="level-6"><a href="#bmo-getting-the-firmwareschema-resource_configure-bare-metal-post-installation">Getting the FirmwareSchema resource</a></li><li class="level-6"><a href="#bmo-about-the-hostfirmwarecomponents-resource_configure-bare-metal-post-installation">About the HostFirmwareComponents resource</a></li><li class="level-6"><a href="#bmo-getting-the-hostfirmwarecomponents-resource_configure-bare-metal-post-installation">Getting the HostFirmwareComponents resource</a></li><li class="level-6"><a href="#bmo-editing-the-hostfirmwarecomponents-resource-of-a-provisioned-host_configure-bare-metal-post-installation">Editing the HostFirmwareComponents resource of a provisioned host</a></li><li class="level-6"><a href="#bmo-performing-a-live-update-to-the-hostfirmwarecomponents-resource_configure-bare-metal-post-installation">Performing a live update to the HostFirmwareComponents resource</a></li><li class="level-6"><a href="#bmo-getting-the-hostfirmwarecomponents-resource_nic_configure-bare-metal-post-installation">Identifying the NICs HostFirmwareComponents resources you can update</a></li><li class="level-6"><a href="#bmo-about-the-hostupdatepolicy-resource_configure-bare-metal-post-installation">About the HostUpdatePolicy resource</a></li><li class="level-6"><a href="#bmo-setting-the-hostupdatepolicy-resource_configure-bare-metal-post-installation">Setting the HostUpdatePolicy resource</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#prepare-to-install-on-bare-metal-intro_prepare-to-install-on-bare-metal">Prepare to install on bare metal</a></li><li class="level-5"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt_prepare-to-install-on-bare-metal">Bare-metal cluster installation requirements for OpenShift Virtualization</a></li><li class="level-6"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt-HA_prepare-to-install-on-bare-metal">High availability requirements for OpenShift Virtualization</a></li><li class="level-6"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt-LM_prepare-to-install-on-bare-metal">Live migration requirements for OpenShift Virtualization</a></li><li class="level-6"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt-SR-IOV_prepare-to-install-on-bare-metal">SR-IOV requirements for OpenShift Virtualization</a></li><li class="level-5"><a href="#nw-sriov-dual-nic-con_prepare-to-install-on-bare-metal">NIC partitioning for SR-IOV devices</a></li><li class="level-5"><a href="#installation-configuration-parameters_installation-config-parameters-bare-metal">Available installation configuration parameters for bare metal</a></li><li class="level-6"><a href="#installation-configuration-parameters-required_installation-config-parameters-bare-metal">Required configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-network_installation-config-parameters-bare-metal">Network configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional_installation-config-parameters-bare-metal">Optional configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional-aws_installation-config-parameters-bare-metal">Optional AWS configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-additional-gcp_installation-config-parameters-bare-metal">Additional Google Cloud configuration parameters</a></li><li class="level-4"><a href="#verify-bare-metal-ipi-prerequisites-intro_verify-bare-metal-ipi-prerequisites">Verify bare metal IPI prerequisites</a></li><li class="level-5"><a href="#node-requirements_verify-bare-metal-ipi-prerequisites">Node requirements</a></li><li class="level-5"><a href="#installation-minimum-resource-requirements_ipi-install-prerequisites">Minimum resource requirements for cluster installation</a></li><li class="level-5"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt_verify-bare-metal-ipi-prerequisites">Bare-metal cluster installation requirements for OpenShift Virtualization</a></li><li class="level-6"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt-HA_verify-bare-metal-ipi-prerequisites">High availability requirements for OpenShift Virtualization</a></li><li class="level-6"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt-LM_verify-bare-metal-ipi-prerequisites">Live migration requirements for OpenShift Virtualization</a></li><li class="level-6"><a href="#virt-planning-bare-metal-cluster-for-ocp-virt-SR-IOV_verify-bare-metal-ipi-prerequisites">SR-IOV requirements for OpenShift Virtualization</a></li><li class="level-5"><a href="#ipi-install-firmware-requirements-for-installing-with-virtual-media_verify-bare-metal-ipi-prerequisites">Firmware requirements for installing with virtual media</a></li><li class="level-5"><a href="#ncsi-hardware-requirements-for-bare-metal_verify-bare-metal-ipi-prerequisites">NC-SI hardware requirements for bare metal</a></li><li class="level-5"><a href="#network-requirements_verify-bare-metal-ipi-prerequisites">Network requirements</a></li><li class="level-6"><a href="#network-requirements-one-ip-per-subnet_verify-bare-metal-ipi-prerequisites">One IP address for each subnet</a></li><li class="level-6"><a href="#network-requirements-ensuring-required-ports-are-open_verify-bare-metal-ipi-prerequisites">Ensuring required ports are open</a></li><li class="level-6"><a href="#network-requirements-increase-mtu_verify-bare-metal-ipi-prerequisites">Increase the network MTU</a></li><li class="level-6"><a href="#network-requirements-config-nics_verify-bare-metal-ipi-prerequisites">Configuring NICs</a></li><li class="level-6"><a href="#network-requirements-dns_verify-bare-metal-ipi-prerequisites">DNS requirements</a></li><li class="level-6"><a href="#network-requirements-dhcp-reqs_verify-bare-metal-ipi-prerequisites">Dynamic Host Configuration Protocol (DHCP) requirements</a></li><li class="level-6"><a href="#network-requirements-reserving-ip-addresses_verify-bare-metal-ipi-prerequisites">Reserving IP addresses for nodes with the DHCP server</a></li><li class="level-6"><a href="#network-requirements-provisioner_verify-bare-metal-ipi-prerequisites">Provisioner node requirements</a></li><li class="level-6"><a href="#network-requirements-ntp_verify-bare-metal-ipi-prerequisites">Network Time Protocol (NTP)</a></li><li class="level-6"><a href="#network-requirements-out-of-band_verify-bare-metal-ipi-prerequisites">Port access for the out-of-band management IP address</a></li><li class="level-5"><a href="#configuring-nodes_verify-bare-metal-ipi-prerequisites">Nodes configuration</a></li><li class="level-6"><a href="#_node_configuration_when_using_the_provisioning_network">Node configuration when using the provisioning network</a></li><li class="level-6"><a href="#_node_configuration_without_the_provisioning_network">Node configuration without the provisioning network</a></li><li class="level-6"><a href="#configuring-nodes-for-secure-boot_verify-bare-metal-ipi-prerequisites">Configuring nodes for Secure Boot manually</a></li><li class="level-5"><a href="#out-of-band-management_verify-bare-metal-ipi-prerequisites">Out-of-band management</a></li><li class="level-5"><a href="#required-data-for-installation_verify-bare-metal-ipi-prerequisites">Required data for installation</a></li><li class="level-5"><a href="#validation-checklist-for-nodes_verify-bare-metal-ipi-prerequisites">Validation checklist for nodes</a></li><li class="level-5"><a href="#installation-overview_verify-bare-metal-ipi-prerequisites">Installation overview</a></li><li class="level-4"><a href="#install-a-bare-metal-ipi-cluster-intro_install-a-bare-metal-ipi-cluster">Install a bare metal IPI cluster</a></li><li class="level-5"><a href="#installing-rhel-on-the-provisioner-node_install-a-bare-metal-ipi-cluster">Installations RHEL on the provisioner node</a></li><li class="level-5"><a href="#preparing-the-provisioner-node-for-openshift-install_install-a-bare-metal-ipi-cluster">Preparing the provisioner node for Red Hat OpenShift Container Platform installation</a></li><li class="level-5"><a href="#checking-ntp-sync_install-a-bare-metal-ipi-cluster">Checking NTP server synchronization</a></li><li class="level-5"><a href="#configuring-networking_install-a-bare-metal-ipi-cluster">Configuring networking</a></li><li class="level-5"><a href="#ipi-install-baremetal-runtimecfg-ip-assignment_install-a-bare-metal-ipi-cluster">The baremetal-runtimecfg tool</a></li><li class="level-5"><a href="#creating-manifest-file-customized-br-ex-bridge_install-a-bare-metal-ipi-cluster">Creating a manifest object that includes a customized br-ex bridge</a></li><li class="level-6"><a href="#creating-scaling-machine-sets-compute-nodes-networking_install-a-bare-metal-ipi-cluster">Scaling each machine set to compute nodes</a></li><li class="level-5"><a href="#ipi-install-establishing-communication-between-subnets_install-a-bare-metal-ipi-cluster">Establishing communication between subnets</a></li><li class="level-5"><a href="#retrieving-the-openshift-installer_install-a-bare-metal-ipi-cluster">Retrieving the Red Hat OpenShift Container Platform installer</a></li><li class="level-5"><a href="#extracting-the-openshift-installer_install-a-bare-metal-ipi-cluster">Extracting the Red Hat OpenShift Container Platform installer</a></li><li class="level-5"><a href="#ipi-install-creating-an-rhcos-images-cache_install-a-bare-metal-ipi-cluster">Creating an RHCOS images cache</a></li><li class="level-5"><a href="#nw-osp-services-external-load-balancer_install-a-bare-metal-ipi-cluster">Services for a user-managed load balancer</a></li><li class="level-6"><a href="#nw-osp-configuring-external-load-balancer_ipi-install-installation-workflow">Configuring a user-managed load balancer</a></li><li class="level-5"><a href="#ipi-install-setting-cluster-node-hostnames-dhcp_install-a-bare-metal-ipi-cluster">Setting the cluster node hostnames through DHCP</a></li><li class="level-5"><a href="#local-arbiter-node-config-prerequisites_install-a-bare-metal-ipi-cluster">Local arbiter node configuration prerequisites</a></li><li class="level-5"><a href="#ipi-install-config-local-arbiter-node_install-a-bare-metal-ipi-cluster">Configuring a local arbiter node by using installer-provisioned infrastructure</a></li><li class="level-5"><a href="#configuring-the-install-config-file_install-a-bare-metal-ipi-cluster">Configuring the install-config.yaml file</a></li><li class="level-6"><a href="#additional-install-config-parameters_install-a-bare-metal-ipi-cluster">Additional installation configuration parameters</a></li><li class="level-6"><a href="#bmc-addressing_install-a-bare-metal-ipi-cluster">BMC addressing</a></li><li class="level-6"><a href="#verifying-support-for-redfish-apis_install-a-bare-metal-ipi-cluster">Verifying support for Redfish APIs</a></li><li class="level-6"><a href="#bmc-addressing-for-dell-idrac_install-a-bare-metal-ipi-cluster">BMC addressing for Dell iDRAC</a></li><li class="level-6"><a href="#bmc-addressing-for-hpe-ilo_install-a-bare-metal-ipi-cluster">BMC addressing for HPE iLO</a></li><li class="level-6"><a href="#bmc-addressing-for-fujitsu-irmc_install-a-bare-metal-ipi-cluster">BMC addressing for Fujitsu iRMC</a></li><li class="level-6"><a href="#bmc-addressing-for-cisco-cimc_install-a-bare-metal-ipi-cluster">BMC addressing for Cisco Integrated Management Controller</a></li><li class="level-6"><a href="#root-device-hints_install-a-bare-metal-ipi-cluster">Root device hints</a></li><li class="level-6"><a href="#ipi-install-setting-proxy-settings-within-install-config_install-a-bare-metal-ipi-cluster">Setting proxy settings</a></li><li class="level-6"><a href="#modifying-install-config-for-no-provisioning-network_install-a-bare-metal-ipi-cluster">Deploying with no provisioning network</a></li><li class="level-6"><a href="#modifying-install-config-for-dual-stack-network_install-a-bare-metal-ipi-cluster">Deploying IP addressing with dual-stack networking</a></li><li class="level-6"><a href="#configuring-host-network-interfaces-in-the-install-config-yaml-file_install-a-bare-metal-ipi-cluster">Configuring host network interfaces</a></li><li class="level-6"><a href="#ipi-install-configuring-host-network-interfaces-for-subnets_install-a-bare-metal-ipi-cluster">Configuring host network interfaces for subnets</a></li><li class="level-6"><a href="#ipi-install-modifying-install-config-for-slaac-dual-stack-network_install-a-bare-metal-ipi-cluster">Configuring address generation modes for SLAAC in dual-stack networks</a></li><li class="level-6"><a href="#configuring-host-dual-network-interfaces-in-the-install-config-yaml-file_install-a-bare-metal-ipi-cluster">Configuring host network interfaces for dual-port NIC</a></li><li class="level-6"><a href="#ipi-install-configure-multiple-cluster-nodes_install-a-bare-metal-ipi-cluster">Configuring multiple cluster nodes</a></li><li class="level-6"><a href="#configuring-managed-secure-boot-in-the-install-config-file_install-a-bare-metal-ipi-cluster">Configuring managed Secure Boot</a></li><li class="level-5"><a href="#ipi-install-manifest-configuration-files_install-a-bare-metal-ipi-cluster">Manifest configuration files</a></li><li class="level-6"><a href="#creating-the-openshift-manifests_install-a-bare-metal-ipi-cluster">Creating the Red Hat OpenShift Container Platform manifests</a></li><li class="level-6"><a href="#configuring-ntp-for-disconnected-clusters_install-a-bare-metal-ipi-cluster">Configuring NTP for disconnected clusters</a></li><li class="level-6"><a href="#configure-network-components-to-run-on-the-control-plane_ipi-install-installation-workflow">Configuring network components to run on the control plane</a></li><li class="level-6"><a href="#deploying-routers-on-worker-nodes_install-a-bare-metal-ipi-cluster">Deploying routers on compute nodes</a></li><li class="level-6"><a href="#configuring-the-bios_install-a-bare-metal-ipi-cluster">Configuring the BIOS</a></li><li class="level-6"><a href="#configuring-the-raid_install-a-bare-metal-ipi-cluster">Configuring the RAID</a></li><li class="level-6"><a href="#configuring-storage-on-nodes_install-a-bare-metal-ipi-cluster">Configuring storage on nodes</a></li><li class="level-5"><a href="#ipi-install-creating-a-disconnected-registry_install-a-bare-metal-ipi-cluster">Creating a disconnected registry</a></li><li class="level-6"><a href="#ipi-install-preparing-a-disconnected-registry_install-a-bare-metal-ipi-cluster">Preparing the registry node to host the mirrored registry</a></li><li class="level-6"><a href="#ipi-install-mirroring-for-disconnected-registry_install-a-bare-metal-ipi-cluster">Mirroring the Red Hat OpenShift Container Platform image repository for a disconnected registry</a></li><li class="level-6"><a href="#ipi-modify-install-config-for-a-disconnected-registry_install-a-bare-metal-ipi-cluster">Modify the install-config.yaml file to use the disconnected registry</a></li><li class="level-5"><a href="#validation-checklist-for-installation_install-a-bare-metal-ipi-cluster">Validation checklist for installation</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-cleaning-up-previous-installations_install-a-bare-metal-ipi-cluster">Cleaning up previous installations</a></li><li class="level-5"><a href="#deploying-the-cluster-via-the-openshift-installer_install-a-bare-metal-ipi-cluster">Deploying the cluster via the Red Hat OpenShift Container Platform installer</a></li><li class="level-5"><a href="#ipi-install-following-the-progress-of-the-installation_install-a-bare-metal-ipi-cluster">Following the progress of the installation</a></li><li class="level-5"><a href="#verifying-static-ip-address-configuration_install-a-bare-metal-ipi-cluster">Verifying static IP address configuration</a></li><li class="level-4"><a href="#install-on-bare-metal-upi-intro_install-on-bare-metal-upi">Install on bare metal with user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-entitlements_install-on-bare-metal-upi">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-6"><a href="#installation-machine-requirements_installing-bare-metal">Required machines for cluster installation</a></li><li class="level-6"><a href="#installation-minimum-resource-requirements_installing-bare-metal">Minimum resource requirements for cluster installation</a></li><li class="level-6"><a href="#csr-management_install-on-bare-metal-upi">Certificate signing requests management</a></li><li class="level-6"><a href="#installation-network-user-infra_install-on-bare-metal-upi">Networking requirements for user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-dns-user-infra_install-on-bare-metal-upi">User-provisioned DNS requirements</a></li><li class="level-6"><a href="#installation-bare-metal-dns-record-type_install-on-bare-metal-upi">Configuring the dnsRecordsType parameter</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra_install-on-bare-metal-upi">Load balancing requirements for user-provisioned infrastructure</a></li><li class="level-5"><a href="#creating-manifest-file-customized-br-ex-bridge_install-on-bare-metal-upi">Creating a manifest object that includes a customized br-ex bridge</a></li><li class="level-6"><a href="#creating-scaling-machine-sets-compute-nodes-networking_install-on-bare-metal-upi">Scaling each machine set to compute nodes</a></li><li class="level-5"><a href="#enabling-OVS-balance-slb-mode_install-on-bare-metal-upi">Enabling OVS balance-slb mode for your cluster</a></li><li class="level-5"><a href="#installation-infrastructure-user-infra_install-on-bare-metal-upi">Preparing the user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-user-provisioned-validating-dns_install-on-bare-metal-upi">Validating DNS resolution for user-provisioned infrastructure</a></li><li class="level-5"><a href="#ssh-agent-using_installing-bare-metal">Generating a key pair for cluster node SSH access</a></li><li class="level-5"><a href="#installation-obtaining-installer_install-on-bare-metal-upi">Obtaining the installation program</a></li><li class="level-5"><a href="#cli-installing-cli-linux_install-on-bare-metal-upi">Install the OpenShift CLI on Linux</a></li><li class="level-5"><a href="#cli-installing-cli-windows_install-on-bare-metal-upi">Install the OpenShift CLI on Windows</a></li><li class="level-5"><a href="#cli-installing-cli-macos_install-on-bare-metal-upi">Install the OpenShift CLI on macOS</a></li><li class="level-5"><a href="#installation-initializing-manual_install-on-bare-metal-upi">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-bare-metal-config-yaml_install-on-bare-metal-upi">Sample install-config.yaml file for bare metal</a></li><li class="level-6"><a href="#installation-configure-proxy_installing-bare-metal">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#installation-three-node-cluster_install-on-bare-metal-upi">Configuring a three-node cluster</a></li><li class="level-6"><a href="#local-arbiter-node-config-prerequisites_install-on-bare-metal-upi">Local arbiter node configuration prerequisites</a></li><li class="level-6"><a href="#upi-install-config-local-arbiter-node_install-on-bare-metal-upi">Configuring a local arbiter node by using user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-bare-metal">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-5"><a href="#creating-machines-bare-metal_install-on-bare-metal-upi">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-6"><a href="#installation-user-infra-machines-iso_install-on-bare-metal-upi">Installing RHCOS by using an ISO image</a></li><li class="level-6"><a href="#installation-user-infra-machines-pxe_install-on-bare-metal-upi">Installing RHCOS by using PXE or iPXE booting</a></li><li class="level-6"><a href="#installation-user-infra-machines-advanced_install-on-bare-metal-upi">Advanced RHCOS installation configuration</a></li><li class="level-6"><a href="#installation-user-infra-machines-routing-bonding_install-on-bare-metal-upi">Networking and bonding options for ISO installations</a></li><li class="level-6"><a href="#rhcos-enabling-multipath_install-on-bare-metal-upi">Enabling multipathing with kernel arguments on RHCOS</a></li><li class="level-6"><a href="#rhcos-install-iscsi-manual_install-on-bare-metal-upi">Installing RHCOS manually on an iSCSI boot device</a></li><li class="level-6"><a href="#rhcos-install-iscsi-ibft_install-on-bare-metal-upi">Installing RHCOS on an iSCSI boot device using iBFT</a></li><li class="level-5"><a href="#installation-installing-bare-metal_install-on-bare-metal-upi">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-bare-metal-upi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_install-on-bare-metal-upi">Approve the certificate signing requests for your machines</a></li><li class="level-5"><a href="#installation-operators-config_install-on-bare-metal-upi">Initial Operator configuration</a></li><li class="level-6"><a href="#registry-removed_install-on-bare-metal-upi">Image registry removed during installation</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-bare-metal-upi">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_install-on-bare-metal-upi">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-bare-metal-upi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#install-on-bare-metal-with-network-customizations-upi-intro_install-on-bare-metal-with-network-customizations-upi">Install on bare metal with network customizations by using user-provisioned infrastructure</a></li><li class="level-6"><a href="#cluster-entitlements_install-on-bare-metal-with-network-customizations-upi">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-6"><a href="#creating-manifest-file-customized-br-ex-bridge_install-on-bare-metal-with-network-customizations-upi">Creating a manifest object that includes a customized br-ex bridge</a></li><li class="level-6"><a href="#installation-infrastructure-user-infra_install-on-bare-metal-with-network-customizations-upi">Preparing the user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-user-provisioned-validating-dns_install-on-bare-metal-with-network-customizations-upi">Validating DNS resolution for user-provisioned infrastructure</a></li><li class="level-6"><a href="#ssh-agent-using_install-on-bare-metal-with-network-customizations-upi">Generating a key pair for cluster node SSH access</a></li><li class="level-6"><a href="#installation-obtaining-installer_install-on-bare-metal-with-network-customizations-upi">Obtaining the installation program</a></li><li class="level-6"><a href="#cli-installing-cli-linux_install-on-bare-metal-with-network-customizations-upi">Install the OpenShift CLI on Linux</a></li><li class="level-6"><a href="#cli-installing-cli-windows_install-on-bare-metal-with-network-customizations-upi">Install the OpenShift CLI on Windows</a></li><li class="level-6"><a href="#cli-installing-cli-macos_install-on-bare-metal-with-network-customizations-upi">Install the OpenShift CLI on macOS</a></li><li class="level-6"><a href="#installation-initializing-manual_install-on-bare-metal-with-network-customizations-upi">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#nw-network-config_install-on-bare-metal-with-network-customizations-upi">Network configuration phases</a></li><li class="level-6"><a href="#modifying-nwoperator-config-startup_installing-bare-metal-network-customizations">Specifying advanced network configuration</a></li><li class="level-6"><a href="#nw-operator-cr_install-on-bare-metal-with-network-customizations-upi">Cluster Network Operator configuration</a></li><li class="level-6"><a href="#installation-generate-ignition-configs_install-on-bare-metal-with-network-customizations-upi">Creating the Ignition config files</a></li><li class="level-6"><a href="#creating-machines-bare-metal_install-on-bare-metal-with-network-customizations-upi">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-6"><a href="#installation-installing-bare-metal_install-on-bare-metal-with-network-customizations-upi">Waiting for the bootstrap process to complete</a></li><li class="level-6"><a href="#cli-logging-in-kubeadmin_install-on-bare-metal-with-network-customizations-upi">Logging in to the cluster by using the CLI</a></li><li class="level-6"><a href="#installation-approve-csrs_install-on-bare-metal-with-network-customizations-upi">Approve the certificate signing requests for your machines</a></li><li class="level-6"><a href="#installation-operators-config_install-on-bare-metal-with-network-customizations-upi">Initial Operator configuration</a></li><li class="level-6"><a href="#installation-complete-user-infra_install-on-bare-metal-with-network-customizations-upi">Completing installation on user-provisioned infrastructure</a></li><li class="level-6"><a href="#cluster-telemetry_install-on-bare-metal-with-network-customizations-upi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#install-on-bare-metal-in-a-disconnected-environment-upi-intro_install-on-bare-metal-in-a-disconnected-environment-upi">Install on bare metal in a disconnected environment by using user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-about-restricted-networks_install-on-bare-metal-in-a-disconnected-environment-upi">About installations in restricted networks</a></li><li class="level-6"><a href="#installation-restricted-network-limits_install-on-bare-metal-in-a-disconnected-environment-upi">Additional limits</a></li><li class="level-6"><a href="#cluster-entitlements_installing-restricted-networks-bare-metal">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-6"><a href="#installation-machine-requirements_installing-restricted-networks-bare-metal">Required machines for cluster installation</a></li><li class="level-6"><a href="#installation-minimum-resource-requirements_installing-restricted-networks-bare-metal">Minimum resource requirements for cluster installation</a></li><li class="level-6"><a href="#csr-management_install-on-bare-metal-in-a-disconnected-environment-upi">Certificate signing requests management</a></li><li class="level-6"><a href="#installation-network-user-infra_installing-restricted-networks-bare-metal">Networking requirements for user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-dns-user-infra_install-on-bare-metal-in-a-disconnected-environment-upi">User-provisioned DNS requirements</a></li><li class="level-6"><a href="#installation-bare-metal-dns-record-type_install-on-bare-metal-in-a-disconnected-environment-upi">Configuring the dnsRecordsType parameter</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra_install-on-bare-metal-in-a-disconnected-environment-upi">Load balancing requirements for user-provisioned infrastructure</a></li><li class="level-5"><a href="#creating-manifest-file-customized-br-ex-bridge_install-on-bare-metal-in-a-disconnected-environment-upi">Creating a manifest object that includes a customized br-ex bridge</a></li><li class="level-6"><a href="#creating-scaling-machine-sets-compute-nodes-networking_install-on-bare-metal-in-a-disconnected-environment-upi">Scaling each machine set to compute nodes</a></li><li class="level-5"><a href="#installation-infrastructure-user-infra_install-on-bare-metal-in-a-disconnected-environment-upi">Preparing the user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-user-provisioned-validating-dns_install-on-bare-metal-in-a-disconnected-environment-upi">Validating DNS resolution for user-provisioned infrastructure</a></li><li class="level-5"><a href="#ssh-agent-using_installing-restricted-networks-bare-metal">Generating a key pair for cluster node SSH access</a></li><li class="level-5"><a href="#installation-initializing-manual_installing-restricted-networks-bare-metal">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-bare-metal-config-yaml_installing-restricted-networks-bare-metal">Sample install-config.yaml file for bare metal</a></li><li class="level-6"><a href="#installation-configure-proxy_installing-restricted-networks-bare-metal">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#installation-three-node-cluster_install-on-bare-metal-in-a-disconnected-environment-upi">Configuring a three-node cluster</a></li><li class="level-5"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-restricted-networks-bare-metal">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-5"><a href="#installation-special-config-chrony_installing-restricted-networks-bare-metal">Configure chrony time service</a></li><li class="level-5"><a href="#creating-machines-bare-metal_install-on-bare-metal-in-a-disconnected-environment-upi">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-6"><a href="#installation-user-infra-machines-iso_installing-restricted-networks-bare-metal">Installing RHCOS by using an ISO image</a></li><li class="level-6"><a href="#installation-user-infra-machines-pxe_install-on-bare-metal-in-a-disconnected-environment-upi">Installing RHCOS by using PXE or iPXE booting</a></li><li class="level-6"><a href="#installation-user-infra-machines-advanced_installing-restricted-networks-bare-metal">Advanced RHCOS installation configuration</a></li><li class="level-6"><a href="#installation-user-infra-machines-routing-bonding_install-on-bare-metal-in-a-disconnected-environment-upi">Networking and bonding options for ISO installations</a></li><li class="level-6"><a href="#rhcos-enabling-multipath_installing-restricted-networks-bare-metal">Enabling multipathing with kernel arguments on RHCOS</a></li><li class="level-6"><a href="#rhcos-install-iscsi-manual_installing-restricted-networks-bare-metal">Installing RHCOS manually on an iSCSI boot device</a></li><li class="level-6"><a href="#rhcos-install-iscsi-ibft_installing-restricted-networks-bare-metal">Installing RHCOS on an iSCSI boot device using iBFT</a></li><li class="level-5"><a href="#installation-installing-bare-metal_installing-restricted-networks-bare-metal">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-bare-metal-in-a-disconnected-environment-upi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_install-on-bare-metal-in-a-disconnected-environment-upi">Approve the certificate signing requests for your machines</a></li><li class="level-5"><a href="#installation-operators-config_install-on-bare-metal-in-a-disconnected-environment-upi">Initial Operator configuration</a></li><li class="level-6"><a href="#olm-restricted-networks-operatorhub_install-on-bare-metal-in-a-disconnected-environment-upi">Disabling the default software catalog sources</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-bare-metal-in-a-disconnected-environment-upi">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_installing-restricted-networks-bare-metal">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-bare-metal-in-a-disconnected-environment-upi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#use-red-hat-bare-metal-as-a-service-for-openshift-intro_use-red-hat-bare-metal-as-a-service-for-openshift">Provision bare metal nodes with Red Hat Bare-Metal-as-a-Service</a></li><li class="level-5"><a href="#bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift">Prerequisites for using Red Hat Bare-Metal-as-a-Service for OpenShift</a></li><li class="level-5"><a href="#bmaas-using-the-bmo-to-manage-resources-across-all-namespaces_use-red-hat-bare-metal-as-a-service-for-openshift">Using the Bare Metal Operator to manage resources across all namespaces</a></li><li class="level-5"><a href="#bmaas-setting-up-a-dedicated-namespace_use-red-hat-bare-metal-as-a-service-for-openshift">Setting up a dedicated namespace</a></li><li class="level-5"><a href="#bmo-creating-a-bmc-secret_use-red-hat-bare-metal-as-a-service-for-openshift">Creating a BMC secret</a></li><li class="level-5"><a href="#bmo-creating-a-bare-metal-host-resource_use-red-hat-bare-metal-as-a-service-for-openshift">Creating a bare-metal host resource</a></li><li class="level-5"><a href="#bmo-configuring-users-for-bmaas-hosts_use-red-hat-bare-metal-as-a-service-for-openshift">Configuring users for Red Hat Bare-Metal-as-a-Service for OpenShift hosts</a></li><li class="level-5"><a href="#bmo-configuring-the-networkdata-parameter-in-the-bmo-cr_use-red-hat-bare-metal-as-a-service-for-openshift">Configuring the networkData parameter in the BareMetalHost resource</a></li><li class="level-5"><a href="#bmo-deploying-an-image-to-the-bare-metal-host_use-red-hat-bare-metal-as-a-service-for-openshift">Deploying an image to the bare-metal host</a></li><li class="level-4"><a href="#troubleshoot-bare-metal-ipi-installation-intro_troubleshoot-bare-metal-ipi-installation">Troubleshoot a bare metal installation that uses installer-provisioned infrastructure</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-install-workflow_troubleshoot-bare-metal-ipi-installation">Troubleshooting the installation program workflow</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-install-config_troubleshoot-bare-metal-ipi-installation">Troubleshooting install-config.yaml</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-bootstrap-vm_troubleshoot-bare-metal-ipi-installation">Troubleshooting bootstrap VM issues</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-bootstrap-vm-cannot-boot_troubleshoot-bare-metal-ipi-installation">Bootstrap VM cannot boot up the cluster nodes</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-bootstrap-vm-inspecting-logs_troubleshoot-bare-metal-ipi-installation">Inspecting logs</a></li><li class="level-5"><a href="#investigating-an-unavailable-kubernetes-api_troubleshoot-bare-metal-ipi-installation">Investigating an unavailable Kubernetes API</a></li><li class="level-5"><a href="#troubleshooting-failure-to-initialize-the-cluster_troubleshoot-bare-metal-ipi-installation">Troubleshooting a failure to initialize the cluster</a></li><li class="level-5"><a href="#troubleshooting-failure-to-fetch-the-console-url_troubleshoot-bare-metal-ipi-installation">Troubleshooting a failure to fetch the console URL</a></li><li class="level-5"><a href="#troubleshooting-failure-to-add-the-ingress-certificate-to-kubeconfig_troubleshoot-bare-metal-ipi-installation">Troubleshooting a failure to add the ingress certificate to kubeconfig</a></li><li class="level-5"><a href="#troubleshooting-ssh-access-to-cluster-nodes_troubleshoot-bare-metal-ipi-installation">Troubleshooting SSH access to cluster nodes</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-cluster-nodes-will-not-pxe_troubleshoot-bare-metal-ipi-installation">Cluster nodes do not PXE boot</a></li><li class="level-5"><a href="#installing-creates-no-worker-nodes_troubleshoot-bare-metal-ipi-installation">Installing creates no worker nodes</a></li><li class="level-5"><a href="#troubleshooting-the-cluster-network-operator_troubleshoot-bare-metal-ipi-installation">Troubleshooting the Cluster Network Operator</a></li><li class="level-5"><a href="#unable-to-discover-new-bare-metal-hosts-using-the-bmc_troubleshoot-bare-metal-ipi-installation">Unable to discover new bare-metal hosts using the BMC</a></li><li class="level-5"><a href="#worker-nodes-cannot-join-the-cluster_troubleshoot-bare-metal-ipi-installation">Troubleshooting worker nodes that cannot join the cluster</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-cleaning-up-previous-installations_troubleshoot-bare-metal-ipi-installation">Cleaning up previous installations</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-registry-issues_troubleshoot-bare-metal-ipi-installation">Issues with creating the registry</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-misc-issues_troubleshoot-bare-metal-ipi-installation">Miscellaneous issues</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-runtime-network-not-ready_troubleshoot-bare-metal-ipi-installation">Addressing the runtime network not ready error</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-no-matching-rootdevicehints_troubleshoot-bare-metal-ipi-installation">Addressing the &quot;No disk found with matching rootDeviceHints&quot; error message</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-incorrect-ipv6-dhcp_troubleshoot-bare-metal-ipi-installation">Addressing the cluster nodes not getting the correct IPv6 address over DHCP error</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-incorrect-hostname-dhcp_troubleshoot-bare-metal-ipi-installation">Addressing the cluster nodes not getting the correct hostname over DHCP error</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-unreachable-routes_troubleshoot-bare-metal-ipi-installation">Addressing the routes not reaching endpoints error</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-failed-ignition-during-firstboot_troubleshoot-bare-metal-ipi-installation">Addressing the failed Ignition during firstboot error</a></li><li class="level-6"><a href="#ipi-install-troubleshooting-ntp-out-of-sync_troubleshoot-bare-metal-ipi-installation">Addressing the NTP out of sync error</a></li><li class="level-5"><a href="#ipi-install-troubleshooting-reviewing-the-installation_troubleshoot-bare-metal-ipi-installation">Reviewing the installation</a></li><li class="level-4"><a href="#bare-metal-about-the-cluster-api_configure-bare-metal-post-installation">About the cluster API</a></li><li class="level-5"><a href="#configuring-ntp-for-disconnected-clusters_bare-metal-postinstallation-configuration">Configuring NTP for disconnected clusters</a></li><li class="level-5"><a href="#bare-metal-self-signed-cert-post-install_configure-bare-metal-post-installation">Configuring a local or self-signed Baseboard Management Controller CA certificate</a></li><li class="level-6"><a href="#bare-metal-replace-existing-bmc-ca_configure-bare-metal-post-installation">Replacing an existing BMC CA certificate</a></li><li class="level-6"><a href="#bare-metal-install-new-bmc-ca_configure-bare-metal-post-installation">Installing a new BMC CA certificate</a></li><li class="level-5"><a href="#enabling-a-provisioning-network-after-installation_configure-bare-metal-post-installation">Enabling a provisioning network after installation</a></li><li class="level-5"><a href="#creating-manifest-file-customized-br-ex-bridge-post_configure-bare-metal-post-installation">Creating a manifest object that includes a customized br-ex bridge</a></li><li class="level-5"><a href="#making-disruptive-changes-br-ex-bridge.adoc_configure-bare-metal-post-installation">Making disruptive changes to a customized br-ex bridge</a></li><li class="level-5"><a href="#migrating-br-ex-bridge-nmstate_configure-bare-metal-post-installation">Migrating a configured br-ex bridge to NMState</a></li><li class="level-5"><a href="#nw-osp-services-external-load-balancer_configure-bare-metal-post-installation">Services for a user-managed load balancer</a></li><li class="level-6"><a href="#nw-osp-configuring-external-load-balancer_configure-bare-metal-post-installation">Configuring a user-managed load balancer</a></li><li class="level-5"><a href="#bm-about-ipe_configure-bare-metal-post-installation">Hardware metrics in the Monitoring stack</a></li><li class="level-6"><a href="#bm-configuring-ipe_configure-bare-metal-post-installation">Adding node hardware metrics to the Monitoring stack</a></li><li class="level-5"><a href="#bmo-config-using-bare-metal-operator_configure-bare-metal-post-installation">Configuration using the Bare Metal Operator</a></li><li class="level-6"><a href="#bmo-bare-metal-operator-architecture_configure-bare-metal-post-installation">Bare Metal Operator architecture</a></li><li class="level-6"><a href="#bmo-about-the-baremetalhost-resource_configure-bare-metal-post-installation">About the BareMetalHost resource</a></li><li class="level-6"><a href="#bmo-getting-the-baremetalhost-resource_configure-bare-metal-post-installation">Getting the BareMetalHost resource</a></li><li class="level-6"><a href="#bmo-editing-a-baremetalhost-resource_configure-bare-metal-post-installation">Editing a BareMetalHost resource</a></li><li class="level-6"><a href="#ipi-install-troubleshooothing-latency-when-deleting-a-baremetalhost-resource_configure-bare-metal-post-installation">Troubleshooting latency when deleting a BareMetalHost resource</a></li><li class="level-6"><a href="#bmo-attaching-a-non-bootable-iso-to-a-bare-metal-node_configure-bare-metal-post-installation">Attaching a non-bootable ISO to a bare-metal node</a></li><li class="level-6"><a href="#bmo-configuring-ncsi-disable-poweroff_configure-bare-metal-post-installation">Configuring NC-SI and DisablePowerOff for shared NICs</a></li><li class="level-6"><a href="#bmo-about-the-hostfirmwaresettings-resource_configure-bare-metal-post-installation">About the HostFirmwareSettings resource</a></li><li class="level-6"><a href="#bmo-getting-the-hostfirmwaresettings-resource_configure-bare-metal-post-installation">Getting the HostFirmwareSettings resource</a></li><li class="level-6"><a href="#bmo-editing-the-hostfirmwaresettings-resource-of-a-provisioned-host_configure-bare-metal-post-installation">Editing the HostFirmwareSettings resource of a provisioned host</a></li><li class="level-6"><a href="#bmo-performing-a-live-update-to-the-hostfirmwaresettings-resource_configure-bare-metal-post-installation">Performing a live update to the HostFirmwareSettings resource</a></li><li class="level-6"><a href="#bmo-verifying-the-hostfirmware-settings-resource-is-valid_configure-bare-metal-post-installation">Verifying the HostFirmware Settings resource is valid</a></li><li class="level-6"><a href="#bmo-about-the-firmwareschema-resource_configure-bare-metal-post-installation">About the FirmwareSchema resource</a></li><li class="level-6"><a href="#bmo-getting-the-firmwareschema-resource_configure-bare-metal-post-installation">Getting the FirmwareSchema resource</a></li><li class="level-6"><a href="#bmo-about-the-hostfirmwarecomponents-resource_configure-bare-metal-post-installation">About the HostFirmwareComponents resource</a></li><li class="level-6"><a href="#bmo-getting-the-hostfirmwarecomponents-resource_configure-bare-metal-post-installation">Getting the HostFirmwareComponents resource</a></li><li class="level-6"><a href="#bmo-editing-the-hostfirmwarecomponents-resource-of-a-provisioned-host_configure-bare-metal-post-installation">Editing the HostFirmwareComponents resource of a provisioned host</a></li><li class="level-6"><a href="#bmo-performing-a-live-update-to-the-hostfirmwarecomponents-resource_configure-bare-metal-post-installation">Performing a live update to the HostFirmwareComponents resource</a></li><li class="level-6"><a href="#bmo-getting-the-hostfirmwarecomponents-resource_nic_configure-bare-metal-post-installation">Identifying the NICs HostFirmwareComponents resources you can update</a></li><li class="level-6"><a href="#bmo-about-the-hostupdatepolicy-resource_configure-bare-metal-post-installation">About the HostUpdatePolicy resource</a></li><li class="level-6"><a href="#bmo-setting-the-hostupdatepolicy-resource_configure-bare-metal-post-installation">Setting the HostUpdatePolicy resource</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="install-on-bare-metal-intro_install-on-bare-metal">Install on bare metal</h3>
@@ -1884,7 +1884,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 79. Required parameters</caption>
+<caption class="title">Table 71. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2073,7 +2073,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 80. Network parameters</caption>
+<caption class="title">Table 72. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2343,7 +2343,7 @@ The prefix length for an IPv6 block is between <code>0</code> and <code>128</cod
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 81. Optional parameters</caption>
+<caption class="title">Table 73. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3004,7 +3004,7 @@ If you are installing on Google Cloud into a shared virtual private cloud (VPC),
 <p>Optional AWS configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 82. Optional AWS parameters</caption>
+<caption class="title">Table 74. Optional AWS parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3887,7 +3887,7 @@ For more information about the support scope of Red Hat Technology Preview featu
 <p>Additional Google Cloud configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 83. Additional Google Cloud parameters</caption>
+<caption class="title">Table 75. Additional Google Cloud parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5378,7 +5378,7 @@ CPU architecture.</p>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 84. Minimum resource requirements</caption>
+<caption class="title">Table 76. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -5567,7 +5567,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 85. Firmware compatibility for HP hardware with Redfish virtual media</caption>
+<caption class="title">Table 77. Firmware compatibility for HP hardware with Redfish virtual media</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -5599,7 +5599,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 86. Firmware compatibility for Dell hardware with Redfish virtual media</caption>
+<caption class="title">Table 78. Firmware compatibility for Dell hardware with Redfish virtual media</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -5636,7 +5636,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 87. Firmware compatibility for Cisco UCS hardware with Redfish virtual media</caption>
+<caption class="title">Table 79. Firmware compatibility for Cisco UCS hardware with Redfish virtual media</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -5691,7 +5691,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 <p>NC-SI enables the BMC to share a system NIC with the host, requiring the <code>DisablePowerOff</code> feature to prevent loss of BMC connectivity during power-offs.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 88. Server compatibility for NC-SI</caption>
+<caption class="title">Table 80. Server compatibility for NC-SI</caption>
 <colgroup>
 <col style="width: 14.2857%;">
 <col style="width: 14.2857%;">
@@ -5752,7 +5752,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 89. Compatible Network Interface Cards (NICs) for NC-SI</caption>
+<caption class="title">Table 81. Compatible Network Interface Cards (NICs) for NC-SI</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -5866,7 +5866,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 <p>Certain ports must be open between cluster nodes for installer-provisioned installations to complete successfully. In certain situations, such as using separate subnets for far edge worker nodes, you must ensure that the nodes in these subnets can communicate with nodes in the other subnets on the following required ports.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 90. Required ports</caption>
+<caption class="title">Table 82. Required ports</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6019,7 +6019,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 <p>Installer-provisioned installation includes functionality that uses cluster membership information to generate A/AAAA records. This resolves the node names to their IP addresses. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 91. Required DNS records</caption>
+<caption class="title">Table 83. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -9384,7 +9384,7 @@ done</code></pre>
 <p>Some parameters, such as the cluster domain name, are required in the <code>install-config.yaml</code> file when installing a cluster on bare metal. Others, such as the provisioning network CIDR, are optional.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 92. Required parameters</caption>
+<caption class="title">Table 84. Required parameters</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 10%;">
@@ -9687,7 +9687,7 @@ done</code></pre>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 93. Optional Parameters</caption>
+<caption class="title">Table 85. Optional Parameters</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9806,7 +9806,7 @@ done</code></pre>
 <p>The <code>hosts</code> parameter is a list of separate bare metal assets used to build the cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 94. Hosts</caption>
+<caption class="title">Table 86. Hosts</caption>
 <colgroup>
 <col style="width: 44.4444%;">
 <col style="width: 11.1111%;">
@@ -10792,7 +10792,7 @@ See "Understanding virtualized control planes" for more information.</p>
 <p>The installer examines the devices in the order it discovers them, and compares the discovered values with the hint values. The installer uses the first discovered device that matches the hint value. The configuration can combine multiple hints, but a device must match all hints for the installer to select it.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 95. Subfields</caption>
+<caption class="title">Table 87. Subfields</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -12289,7 +12289,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 96. Hardware RAID support by vendor</caption>
+<caption class="title">Table 88. Hardware RAID support by vendor</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -13139,7 +13139,7 @@ done</code></pre>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 97. Minimum required hosts</caption>
+<caption class="title">Table 89. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -13207,7 +13207,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 98. Minimum resource requirements</caption>
+<caption class="title">Table 90. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -13360,7 +13360,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 99. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 91. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -13692,7 +13692,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 100. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 92. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -13741,7 +13741,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 101. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 93. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -13839,7 +13839,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 102. Required DNS records</caption>
+<caption class="title">Table 94. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -14502,7 +14502,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 103. Application Ingress load balancer</caption>
+<caption class="title">Table 95. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -15960,7 +15960,7 @@ However, you must have an active subscription to access this page.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="cli-installing-cli-linux_install-on-bare-metal-upi">Installing the OpenShift CLI on Linux</h5>
+<h5 id="cli-installing-cli-linux_install-on-bare-metal-upi">Install the OpenShift CLI on Linux</h5>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Linux, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -16032,7 +16032,7 @@ However, you must have an active subscription to access this page.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="cli-installing-cli-windows_install-on-bare-metal-upi">Installing the OpenShift CLI on Windows</h5>
+<h5 id="cli-installing-cli-windows_install-on-bare-metal-upi">Install the OpenShift CLI on Windows</h5>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Windows, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -16096,7 +16096,7 @@ However, you must have an active subscription to access this page.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="cli-installing-cli-macos_install-on-bare-metal-upi">Installing the OpenShift CLI on macOS</h5>
+<h5 id="cli-installing-cli-macos_install-on-bare-metal-upi">Install the OpenShift CLI on macOS</h5>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on macOS, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -18939,7 +18939,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the subcommands, options, and arguments you can pass to the <code>coreos-installer</code> command.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 104. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
+<caption class="title">Table 96. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -20226,7 +20226,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the RHCOS live installer <code>coreos.inst</code> boot options for ISO and PXE installations.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 105. <code>coreos.inst</code> boot options</caption>
+<caption class="title">Table 97. <code>coreos.inst</code> boot options</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -22010,7 +22010,7 @@ openshift-authentication-operator authentication-operator-69d5d8bf84-vh2n8      
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 106. Minimum required hosts</caption>
+<caption class="title">Table 98. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -22078,7 +22078,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 107. Minimum resource requirements</caption>
+<caption class="title">Table 99. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -22231,7 +22231,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 108. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 100. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -22563,7 +22563,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 109. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 101. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -22612,7 +22612,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 110. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 102. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -22710,7 +22710,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 111. Required DNS records</caption>
+<caption class="title">Table 103. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -23373,7 +23373,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 112. Application Ingress load balancer</caption>
+<caption class="title">Table 104. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -24561,7 +24561,7 @@ However, you must have an active subscription to access this page.</p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="cli-installing-cli-linux_install-on-bare-metal-with-network-customizations-upi">Installing the OpenShift CLI on Linux</h6>
+<h6 id="cli-installing-cli-linux_install-on-bare-metal-with-network-customizations-upi">Install the OpenShift CLI on Linux</h6>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Linux, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -24633,7 +24633,7 @@ However, you must have an active subscription to access this page.</p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="cli-installing-cli-windows_install-on-bare-metal-with-network-customizations-upi">Installing the OpenShift CLI on Windows</h6>
+<h6 id="cli-installing-cli-windows_install-on-bare-metal-with-network-customizations-upi">Install the OpenShift CLI on Windows</h6>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Windows, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -24697,7 +24697,7 @@ However, you must have an active subscription to access this page.</p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="cli-installing-cli-macos_install-on-bare-metal-with-network-customizations-upi">Installing the OpenShift CLI on macOS</h6>
+<h6 id="cli-installing-cli-macos_install-on-bare-metal-with-network-customizations-upi">Install the OpenShift CLI on macOS</h6>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on macOS, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -25295,7 +25295,7 @@ spec:
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 113. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 105. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25448,7 +25448,7 @@ spec:
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 114. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 106. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -25513,7 +25513,7 @@ spec:
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 115. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 107. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25676,7 +25676,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 116. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 108. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25727,7 +25727,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 117. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 109. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25778,7 +25778,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 118. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 110. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25885,7 +25885,7 @@ spec:
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-bare-metal-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 119. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 111. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25979,7 +25979,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-bare-metal-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 120. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 112. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -26024,7 +26024,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-bare-metal-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 121. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 113. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -26069,7 +26069,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-bare-metal-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 122. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 114. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -28114,7 +28114,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the subcommands, options, and arguments you can pass to the <code>coreos-installer</code> command.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 123. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
+<caption class="title">Table 115. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -29401,7 +29401,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the RHCOS live installer <code>coreos.inst</code> boot options for ISO and PXE installations.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 124. <code>coreos.inst</code> boot options</caption>
+<caption class="title">Table 116. <code>coreos.inst</code> boot options</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -31015,7 +31015,7 @@ you cannot access the required image stream tags.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 125. Minimum required hosts</caption>
+<caption class="title">Table 117. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -31083,7 +31083,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 126. Minimum resource requirements</caption>
+<caption class="title">Table 118. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -31221,7 +31221,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>This section provides details about the ports that are required.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 127. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 119. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -31553,7 +31553,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 128. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 120. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -31602,7 +31602,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 129. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 121. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -31700,7 +31700,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 130. Required DNS records</caption>
+<caption class="title">Table 122. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -32363,7 +32363,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 131. Application Ingress load balancer</caption>
+<caption class="title">Table 123. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -36317,7 +36317,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the subcommands, options, and arguments you can pass to the <code>coreos-installer</code> command.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 132. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
+<caption class="title">Table 124. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -37604,7 +37604,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the RHCOS live installer <code>coreos.inst</code> boot options for ISO and PXE installations.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 133. <code>coreos.inst</code> boot options</caption>
+<caption class="title">Table 125. <code>coreos.inst</code> boot options</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -39564,7 +39564,7 @@ openshift-authentication-operator authentication-operator-69d5d8bf84-vh2n8      
 <li>
 <p>Add the identity provider configuration to the <code>spec.identityProviders</code> list:</p>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 134. Identity provider configuration examples</caption>
+<caption class="title">Table 126. Identity provider configuration examples</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -44066,7 +44066,7 @@ Several autocomplete suggestions should appear, such as the following examples:<
 <p>The <code>spec</code> section of the <code>BareMetalHost</code> resource defines the desired state of the host.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 135. BareMetalHost spec</caption>
+<caption class="title">Table 127. BareMetalHost spec</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -44437,7 +44437,7 @@ Several autocomplete suggestions should appear, such as the following examples:<
 <p>The <code>BareMetalHost</code> status represents the host&#8217;s current state, and includes tested credentials, current hardware details, and other information.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 136. BareMetalHost status</caption>
+<caption class="title">Table 128. BareMetalHost status</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -45420,7 +45420,7 @@ spec:
 <p>The <code>status</code> represents the current state of the host&#8217;s BIOS.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 137. HostFirmwareSettings</caption>
+<caption class="title">Table 129. HostFirmwareSettings</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -45915,7 +45915,7 @@ spec:
 <p>The <code>FirmwareSchema</code> resource contains valid types and limits for BIOS settings on each host model, enabling you to identify valid values when configuring the <code>HostFirmwareSettings</code> resource.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 138. FirmwareSchema specification</caption>
+<caption class="title">Table 130. FirmwareSchema specification</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -46073,7 +46073,7 @@ spec:
 <p>The <code>spec</code> section of the <code>HostFirmwareComponents</code> resource defines the desired state of the BIOS and BMC versions of the host, and the NIC firmware components of the host if the information is available by using Redfish.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 139. HostFirmwareComponents spec</caption>
+<caption class="title">Table 131. HostFirmwareComponents spec</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -46130,7 +46130,7 @@ spec:
 <p>The <code>status</code> section of the <code>HostFirmwareComponents</code> resource returns the current status of the BIOS and BMC versions of the host, and the NIC firmware components of the host if the information is available by using Redfish.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 140. HostFirmwareComponents status</caption>
+<caption class="title">Table 132. HostFirmwareComponents status</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -46954,7 +46954,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-12 21:54:36 +0100
+Last updated 2026-10-12 22:34:40 +0100
 </div>
 </div>
 <style>

@@ -692,7 +692,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Update the disconnected cluster</a>
 </li>
 <li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
@@ -1704,7 +1704,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="install-with-agent-based-installer-intro_install-with-agent-based-installer">Install with Agent-based Installer</h3>
 <div class="paragraph _abstract">
-<p>You can use the Agent-based Installer to deploy Red&#160;Hat OpenShift Container Platform clusters in connected or disconnected environments without the need for a provisioning network.</p>
+<p>The Agent-based Installer provides the flexibility to boot your on-premise servers in any way that you choose. It combines the ease of use of the Assisted Installation service with the ability to run offline, including in air-gapped environments.</p>
 </div>
 <div class="sect3">
 <h4 id="understanding-agent-install_prepare-to-install-with-agent-based-installer">Understand Agent-based Installer</h4>
@@ -1818,7 +1818,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The following cluster resources are recommended for each topology:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 141. Recommended cluster resources</caption>
+<caption class="title">Table 133. Recommended cluster resources</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -2174,7 +2174,7 @@ hosts:
 <p>The installation program examines the devices in the order it discovers them, and compares the discovered values with the hint values. The installation program uses the first discovered device that matches the hint value. The configuration can combine multiple hints, but a device must match all hints for the installation program to select it.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 142. Subfields</caption>
+<caption class="title">Table 134. Subfields</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2354,7 +2354,7 @@ Do not set the <code>network.machineNetwork.cidr</code> parameter to include thi
 <p>During the discovery and bootstrap phases of an installation, all the hosts connect to the Assisted Service that runs on the rendezvous host. Configure your firewall to allow the following traffic from each host to the rendezvous host:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 143. Ports required to reach the Assisted Service on the rendezvous host</caption>
+<caption class="title">Table 135. Ports required to reach the Assisted Service on the rendezvous host</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2656,7 +2656,7 @@ spec:
 <p>The following DNS records are required for an Red&#160;Hat OpenShift Container Platform cluster using the platform <code>none</code> option and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 144. Required DNS records</caption>
+<caption class="title">Table 136. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -3096,7 +3096,7 @@ worker1.ocp4.example.com.	IN	A	192.168.1.7
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 145. API load balancer</caption>
+<caption class="title">Table 137. API load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -3201,7 +3201,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 146. Application Ingress load balancer</caption>
+<caption class="title">Table 138. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -4158,7 +4158,7 @@ platform:
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 147. Required parameters</caption>
+<caption class="title">Table 139. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4348,7 +4348,7 @@ The cluster name is set to <code>agent-cluster</code> when you do not provide th
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 148. Network parameters</caption>
+<caption class="title">Table 140. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4618,7 +4618,7 @@ The prefix length for an IPv6 block is between <code>0</code> and <code>128</cod
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 149. Optional parameters</caption>
+<caption class="title">Table 141. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5313,7 +5313,7 @@ If you are installing on Google Cloud into a shared virtual private cloud (VPC),
 <p>Optional AWS configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 150. Optional AWS parameters</caption>
+<caption class="title">Table 142. Optional AWS parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6211,7 +6211,7 @@ Configuring these fields at install time eliminates the need to set them as a Da
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 151. Additional bare metal parameters</caption>
+<caption class="title">Table 143. Additional bare metal parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6513,7 +6513,7 @@ The value should be <code>True</code> when using a self-signed certificate for B
 <p>Additional Google Cloud configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 152. Additional Google Cloud parameters</caption>
+<caption class="title">Table 144. Additional Google Cloud parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7883,7 +7883,7 @@ The value should be <code>True</code> when using a self-signed certificate for B
 <p>Additional VMware vSphere configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 153. Additional VMware vSphere cluster parameters</caption>
+<caption class="title">Table 145. Additional VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8371,7 +8371,7 @@ Red&#160;Hat does not support Storage vMotion, so you must disable Storage vMoti
 <p>The following table lists each deprecated vSphere configuration parameter:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 154. Deprecated VMware vSphere cluster parameters</caption>
+<caption class="title">Table 146. Deprecated VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8559,7 +8559,7 @@ Red&#160;Hat does not support Storage vMotion, so you must disable Storage vMoti
 <p>Required Agent configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 155. Required parameters</caption>
+<caption class="title">Table 147. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8634,7 +8634,7 @@ When you do not provide <code>metadata.name</code> through either the <code>inst
 <p>Optional Agent configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 156. Optional parameters</caption>
+<caption class="title">Table 148. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -14075,7 +14075,7 @@ local-cluster   true           https://&lt;your cluster url&gt;:6443   True     
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-12 21:54:36 +0100
+Last updated 2026-10-12 22:34:40 +0100
 </div>
 </div>
 <style>

@@ -692,7 +692,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Update the disconnected cluster</a>
 </li>
 <li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
@@ -1699,7 +1699,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#prepare-to-install-on-ibm-cloud-intro_prepare-to-install-on-ibm-cloud">Prepare to install on IBM Cloud</a></li><li class="level-5"><a href="#installation-configuration-parameters_installation-config-parameters-ibm-cloud-vpc">Available installation configuration parameters for IBM Cloud</a></li><li class="level-6"><a href="#installation-configuration-parameters-required_installation-config-parameters-ibm-cloud-vpc">Required configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-network_installation-config-parameters-ibm-cloud-vpc">Network configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional_installation-config-parameters-ibm-cloud-vpc">Optional configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-additional-ibm-cloud_installation-config-parameters-ibm-cloud-vpc">Additional IBM Cloud configuration parameters</a></li><li class="level-4"><a href="#configure-an-ibm-cloud-account-for-installation-intro_configure-an-ibm-cloud-account-for-installation">Configure an IBM Cloud account for installation</a></li><li class="level-5"><a href="#quotas-and-limits-ibm-cloud_configure-an-ibm-cloud-account-for-installation">Quotas and limits on IBM Cloud</a></li><li class="level-6"><a href="#_virtual_private_cloud">Virtual Private Cloud</a></li><li class="level-6"><a href="#_application_load_balancer">Application load balancer</a></li><li class="level-6"><a href="#_floating_ip_addresses">Floating IP addresses</a></li><li class="level-6"><a href="#_virtual_server_instances_vsis">Virtual Server Instances (VSIs)</a></li><li class="level-6"><a href="#_block_storage_volumes">Block storage volumes</a></li><li class="level-5"><a href="#configuring-dns-resolution_configure-an-ibm-cloud-account-for-installation">DNS resolution configuration</a></li><li class="level-6"><a href="#installation-cis-ibm-cloud_configure-an-ibm-cloud-account-for-installation">Using IBM Cloud Internet Services for DNS resolution</a></li><li class="level-6"><a href="#installation-dns-ibm-cloud_configure-an-ibm-cloud-account-for-installation">Using IBM Cloud DNS Services for DNS resolution</a></li><li class="level-5"><a href="#installation-ibm-cloud-iam-policies-api-key_installing-ibm-cloud-account">IBM Cloud IAM policies and API key</a></li><li class="level-6"><a href="#required-access-policies-ibm-cloud_installing-ibm-cloud-account">Required access policies</a></li><li class="level-6"><a href="#access-policy-assignment-ibm-cloud_installing-ibm-cloud-account">Access policy assignment</a></li><li class="level-6"><a href="#installation-ibm-cloud-creating-api-key_configure-an-ibm-cloud-account-for-installation">Creating an API key</a></li><li class="level-5"><a href="#installation-ibm-cloud-regions_installing-ibm-cloud-account">Supported IBM Cloud regions</a></li><li class="level-5"><a href="#alternatives-to-storing-admin-secrets-in-kube-system_configuring-iam-ibm-cloud">Alternatives to storing administrator-level secrets in the kube-system project</a></li><li class="level-5"><a href="#cco-ccoctl-configuring_configuring-iam-ibm-cloud">Configuring the Cloud Credential Operator utility</a></li><li class="level-4"><a href="#install-on-ibm-cloud-ipi-intro_install-on-ibm-cloud-ipi">Install on IBM Cloud with installer-provisioned infrastructure</a></li><li class="level-5"><a href="#prereqs-ibm-cloud-installer-provisioned_install-on-ibm-cloud-ipi">Prerequisites for installing a cluster on IBM Cloud®</a></li><li class="level-6"><a href="#cluster-entitlements_install-on-ibm-cloud-ipi">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#ssh-agent-using_install-on-ibm-cloud-ipi">Generating a key pair for cluster node SSH access</a></li><li class="level-5"><a href="#installation-obtaining-installer_install-on-ibm-cloud-ipi">Obtaining the installation program</a></li><li class="level-5"><a href="#installation-ibm-cloud-export-variables_installing-ibm-cloud-customizations">Exporting the API key</a></li><li class="level-5"><a href="#installation-initializing_installing-ibm-cloud-customizations">Creating the installation configuration file</a></li><li class="level-6"><a href="#installation-minimum-resource-requirements_installing-ibm-cloud-customizations">Minimum resource requirements for cluster installation</a></li><li class="level-6"><a href="#installation-ibm-cloud-tested-machine-types_install-on-ibm-cloud-ipi">Tested instance types for IBM Cloud</a></li><li class="level-6"><a href="#installation-ibm-cloud-config-yaml_installing-ibm-cloud-customizations">Sample customized install-config.yaml file for IBM Cloud</a></li><li class="level-6"><a href="#installation-configure-proxy_install-on-ibm-cloud-ipi">Configuring the cluster-wide proxy during installation</a></li><li class="level-5"><a href="#manually-create-iam-ibm-cloud_installing-ibm-cloud-customizations">Manually creating IAM</a></li><li class="level-5"><a href="#nw-network-config_install-on-ibm-cloud-ipi">Network configuration phases</a></li><li class="level-5"><a href="#modifying-nwoperator-config-startup_installing-ibm-cloud-customizations">Specifying advanced network configuration</a></li><li class="level-5"><a href="#nw-operator-cr_installing-ibm-cloud-customizations">Cluster Network Operator configuration</a></li><li class="level-6"><a href="#nw-operator-cr-cno-object_installing-ibm-cloud-customizations">Cluster Network Operator configuration object</a></li><li class="level-6"><a href="#nw-operator-cr-defaultnetwork_installing-ibm-cloud-customizations">defaultNetwork object configuration</a></li><li class="level-6"><a href="#nw-operator-configuration-parameters-for-ovn-sdn_installing-ibm-cloud-customizations">Configuration for the OVN-Kubernetes network plugin</a></li><li class="level-5"><a href="#installation-launching-installer_installing-ibm-cloud-customizations">Deploying the cluster</a></li><li class="level-5"><a href="#cli-installing-cli-linux_install-on-ibm-cloud-ipi">Installing the OpenShift CLI on Linux</a></li><li class="level-5"><a href="#cli-installing-cli-windows_install-on-ibm-cloud-ipi">Installing the OpenShift CLI on Windows</a></li><li class="level-5"><a href="#cli-installing-cli-macos_install-on-ibm-cloud-ipi">Installing the OpenShift CLI on macOS</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-ibm-cloud-ipi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-ibm-cloud-ipi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#install-on-ibm-cloud-bare-metal-classic-intro_install-on-ibm-cloud-bare-metal-classic">Install on IBM Cloud Bare Metal (Classic)</a></li><li class="level-5"><a href="#setting-up-ibm-cloud-infrastructure_install-on-ibm-cloud-bare-metal-classic">About setting up IBM Cloud Bare Metal (Classic) infrastructure</a></li><li class="level-6"><a href="#_use_one_data_center_per_cluster">Use one data center per cluster</a></li><li class="level-6"><a href="#_create_public_and_private_vlans">Create public and private VLANs</a></li><li class="level-6"><a href="#_ensure_subnets_have_enough_ip_addresses">Ensure subnets have enough IP addresses</a></li><li class="level-6"><a href="#_configuring_nics">Configuring NICs</a></li><li class="level-6"><a href="#_configure_canonical_names">Configure canonical names</a></li><li class="level-6"><a href="#_create_dns_entries">Create DNS entries</a></li><li class="level-6"><a href="#_network_time_protocol_ntp">Network Time Protocol (NTP)</a></li><li class="level-6"><a href="#_configure_a_dhcp_server">Configure a DHCP server</a></li><li class="level-6"><a href="#_ensure_bmc_access_privileges">Ensure BMC access privileges</a></li><li class="level-6"><a href="#_create_bare_metal_servers">Create bare-metal servers</a></li><li class="level-5"><a href="#preparing-the-provisioner-node-for-openshift-install-on-ibm-cloud_install-on-ibm-cloud-bare-metal-classic">Preparing the provisioner node on IBM Cloud® Bare Metal (Classic) infrastructure</a></li><li class="level-5"><a href="#configuring-the-public-subnet_install-on-ibm-cloud-bare-metal-classic">Configuring the public subnet</a></li><li class="level-5"><a href="#retrieving-the-openshift-installer_install-on-ibm-cloud-bare-metal-classic">Retrieving the Red Hat OpenShift Container Platform installer</a></li><li class="level-5"><a href="#extracting-the-openshift-installer_install-on-ibm-cloud-bare-metal-classic">Extracting the Red Hat OpenShift Container Platform installer</a></li><li class="level-5"><a href="#configuring-the-install-config-file_install-on-ibm-cloud-bare-metal-classic">Configuring the install-config.yaml file</a></li><li class="level-5"><a href="#additional-install-config-parameters_install-on-ibm-cloud-bare-metal-classic">Additional installation configuration parameters</a></li><li class="level-6"><a href="#_hosts_2">Hosts</a></li><li class="level-5"><a href="#root-device-hints_install-on-ibm-cloud-bare-metal-classic">Root device hints</a></li><li class="level-5"><a href="#creating-the-openshift-manifests_install-on-ibm-cloud-bare-metal-classic">Creating the Red Hat OpenShift Container Platform manifests</a></li><li class="level-5"><a href="#deploying-the-cluster-via-the-openshift-installer_install-on-ibm-cloud-bare-metal-classic">Deploying the cluster via the Red Hat OpenShift Container Platform installer</a></li><li class="level-5"><a href="#ipi-install-following-the-progress-of-the-installation_install-on-ibm-cloud-bare-metal-classic">Following the progress of the installation</a></li><li class="level-4"><a href="#uninstall-a-cluster-on-ibm-cloud-intro_uninstall-a-cluster-on-ibm-cloud">Uninstall a cluster on IBM Cloud</a></li><li class="level-5"><a href="#installation-uninstall-clouds_uninstalling-cluster-ibm-cloud">Removing a cluster that uses installer-provisioned infrastructure</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#prepare-to-install-on-ibm-cloud-intro_prepare-to-install-on-ibm-cloud">Prepare to install on IBM Cloud</a></li><li class="level-5"><a href="#installation-configuration-parameters_installation-config-parameters-ibm-cloud-vpc">Available installation configuration parameters for IBM Cloud</a></li><li class="level-6"><a href="#installation-configuration-parameters-required_installation-config-parameters-ibm-cloud-vpc">Required configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-network_installation-config-parameters-ibm-cloud-vpc">Network configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional_installation-config-parameters-ibm-cloud-vpc">Optional configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-additional-ibm-cloud_installation-config-parameters-ibm-cloud-vpc">Additional IBM Cloud configuration parameters</a></li><li class="level-4"><a href="#configure-an-ibm-cloud-account-for-installation-intro_configure-an-ibm-cloud-account-for-installation">Configure an IBM Cloud account for installation</a></li><li class="level-5"><a href="#quotas-and-limits-ibm-cloud_configure-an-ibm-cloud-account-for-installation">Quotas and limits on IBM Cloud</a></li><li class="level-6"><a href="#_virtual_private_cloud">Virtual Private Cloud</a></li><li class="level-6"><a href="#_application_load_balancer">Application load balancer</a></li><li class="level-6"><a href="#_floating_ip_addresses">Floating IP addresses</a></li><li class="level-6"><a href="#_virtual_server_instances_vsis">Virtual Server Instances (VSIs)</a></li><li class="level-6"><a href="#_block_storage_volumes">Block storage volumes</a></li><li class="level-5"><a href="#configuring-dns-resolution_configure-an-ibm-cloud-account-for-installation">DNS resolution configuration</a></li><li class="level-6"><a href="#installation-cis-ibm-cloud_configure-an-ibm-cloud-account-for-installation">Using IBM Cloud Internet Services for DNS resolution</a></li><li class="level-6"><a href="#installation-dns-ibm-cloud_configure-an-ibm-cloud-account-for-installation">Using IBM Cloud DNS Services for DNS resolution</a></li><li class="level-5"><a href="#installation-ibm-cloud-iam-policies-api-key_installing-ibm-cloud-account">IBM Cloud IAM policies and API key</a></li><li class="level-6"><a href="#required-access-policies-ibm-cloud_installing-ibm-cloud-account">Required access policies</a></li><li class="level-6"><a href="#access-policy-assignment-ibm-cloud_installing-ibm-cloud-account">Access policy assignment</a></li><li class="level-6"><a href="#installation-ibm-cloud-creating-api-key_configure-an-ibm-cloud-account-for-installation">Creating an API key</a></li><li class="level-5"><a href="#installation-ibm-cloud-regions_installing-ibm-cloud-account">Supported IBM Cloud regions</a></li><li class="level-5"><a href="#alternatives-to-storing-admin-secrets-in-kube-system_configuring-iam-ibm-cloud">Alternatives to storing administrator-level secrets in the kube-system project</a></li><li class="level-5"><a href="#cco-ccoctl-configuring_configuring-iam-ibm-cloud">Configuring the Cloud Credential Operator utility</a></li><li class="level-4"><a href="#install-on-ibm-cloud-ipi-intro_install-on-ibm-cloud-ipi">Install on IBM Cloud with installer-provisioned infrastructure</a></li><li class="level-5"><a href="#prereqs-ibm-cloud-installer-provisioned_install-on-ibm-cloud-ipi">Prerequisites for installing a cluster on IBM Cloud®</a></li><li class="level-6"><a href="#cluster-entitlements_install-on-ibm-cloud-ipi">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#ssh-agent-using_install-on-ibm-cloud-ipi">Generating a key pair for cluster node SSH access</a></li><li class="level-5"><a href="#installation-obtaining-installer_install-on-ibm-cloud-ipi">Obtaining the installation program</a></li><li class="level-5"><a href="#installation-ibm-cloud-export-variables_installing-ibm-cloud-customizations">Exporting the API key</a></li><li class="level-5"><a href="#installation-initializing_installing-ibm-cloud-customizations">Creating the installation configuration file</a></li><li class="level-6"><a href="#installation-minimum-resource-requirements_installing-ibm-cloud-customizations">Minimum resource requirements for cluster installation</a></li><li class="level-6"><a href="#installation-ibm-cloud-tested-machine-types_install-on-ibm-cloud-ipi">Tested instance types for IBM Cloud</a></li><li class="level-6"><a href="#installation-ibm-cloud-config-yaml_installing-ibm-cloud-customizations">Sample customized install-config.yaml file for IBM Cloud</a></li><li class="level-6"><a href="#installation-configure-proxy_install-on-ibm-cloud-ipi">Configuring the cluster-wide proxy during installation</a></li><li class="level-5"><a href="#manually-create-iam-ibm-cloud_installing-ibm-cloud-customizations">Manually creating IAM</a></li><li class="level-5"><a href="#nw-network-config_install-on-ibm-cloud-ipi">Network configuration phases</a></li><li class="level-5"><a href="#modifying-nwoperator-config-startup_installing-ibm-cloud-customizations">Specifying advanced network configuration</a></li><li class="level-5"><a href="#nw-operator-cr_installing-ibm-cloud-customizations">Cluster Network Operator configuration</a></li><li class="level-6"><a href="#nw-operator-cr-cno-object_installing-ibm-cloud-customizations">Cluster Network Operator configuration object</a></li><li class="level-6"><a href="#nw-operator-cr-defaultnetwork_installing-ibm-cloud-customizations">defaultNetwork object configuration</a></li><li class="level-6"><a href="#nw-operator-configuration-parameters-for-ovn-sdn_installing-ibm-cloud-customizations">Configuration for the OVN-Kubernetes network plugin</a></li><li class="level-5"><a href="#installation-launching-installer_installing-ibm-cloud-customizations">Deploying the cluster</a></li><li class="level-5"><a href="#cli-installing-cli-linux_install-on-ibm-cloud-ipi">Install the OpenShift CLI on Linux</a></li><li class="level-5"><a href="#cli-installing-cli-windows_install-on-ibm-cloud-ipi">Install the OpenShift CLI on Windows</a></li><li class="level-5"><a href="#cli-installing-cli-macos_install-on-ibm-cloud-ipi">Install the OpenShift CLI on macOS</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-ibm-cloud-ipi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-ibm-cloud-ipi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#install-on-ibm-cloud-bare-metal-classic-intro_install-on-ibm-cloud-bare-metal-classic">Install on IBM Cloud Bare Metal (Classic)</a></li><li class="level-5"><a href="#setting-up-ibm-cloud-infrastructure_install-on-ibm-cloud-bare-metal-classic">About setting up IBM Cloud Bare Metal (Classic) infrastructure</a></li><li class="level-6"><a href="#_use_one_data_center_per_cluster">Use one data center per cluster</a></li><li class="level-6"><a href="#_create_public_and_private_vlans">Create public and private VLANs</a></li><li class="level-6"><a href="#_ensure_subnets_have_enough_ip_addresses">Ensure subnets have enough IP addresses</a></li><li class="level-6"><a href="#_configuring_nics">Configuring NICs</a></li><li class="level-6"><a href="#_configure_canonical_names">Configure canonical names</a></li><li class="level-6"><a href="#_create_dns_entries">Create DNS entries</a></li><li class="level-6"><a href="#_network_time_protocol_ntp">Network Time Protocol (NTP)</a></li><li class="level-6"><a href="#_configure_a_dhcp_server">Configure a DHCP server</a></li><li class="level-6"><a href="#_ensure_bmc_access_privileges">Ensure BMC access privileges</a></li><li class="level-6"><a href="#_create_bare_metal_servers">Create bare-metal servers</a></li><li class="level-5"><a href="#preparing-the-provisioner-node-for-openshift-install-on-ibm-cloud_install-on-ibm-cloud-bare-metal-classic">Preparing the provisioner node on IBM Cloud® Bare Metal (Classic) infrastructure</a></li><li class="level-5"><a href="#configuring-the-public-subnet_install-on-ibm-cloud-bare-metal-classic">Configuring the public subnet</a></li><li class="level-5"><a href="#retrieving-the-openshift-installer_install-on-ibm-cloud-bare-metal-classic">Retrieving the Red Hat OpenShift Container Platform installer</a></li><li class="level-5"><a href="#extracting-the-openshift-installer_install-on-ibm-cloud-bare-metal-classic">Extracting the Red Hat OpenShift Container Platform installer</a></li><li class="level-5"><a href="#configuring-the-install-config-file_install-on-ibm-cloud-bare-metal-classic">Configuring the install-config.yaml file</a></li><li class="level-5"><a href="#additional-install-config-parameters_install-on-ibm-cloud-bare-metal-classic">Additional installation configuration parameters</a></li><li class="level-6"><a href="#_hosts_2">Hosts</a></li><li class="level-5"><a href="#root-device-hints_install-on-ibm-cloud-bare-metal-classic">Root device hints</a></li><li class="level-5"><a href="#creating-the-openshift-manifests_install-on-ibm-cloud-bare-metal-classic">Creating the Red Hat OpenShift Container Platform manifests</a></li><li class="level-5"><a href="#deploying-the-cluster-via-the-openshift-installer_install-on-ibm-cloud-bare-metal-classic">Deploying the cluster via the Red Hat OpenShift Container Platform installer</a></li><li class="level-5"><a href="#ipi-install-following-the-progress-of-the-installation_install-on-ibm-cloud-bare-metal-classic">Following the progress of the installation</a></li><li class="level-4"><a href="#uninstall-a-cluster-on-ibm-cloud-intro_uninstall-a-cluster-on-ibm-cloud">Uninstall a cluster on IBM Cloud</a></li><li class="level-5"><a href="#installation-uninstall-clouds_uninstalling-cluster-ibm-cloud">Removing a cluster that uses installer-provisioned infrastructure</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="install-on-ibm-cloud-intro_install-on-ibm-cloud">Install on IBM Cloud</h3>
@@ -1739,7 +1739,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 365. Required parameters</caption>
+<caption class="title">Table 357. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1876,7 +1876,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Only IPv4 addresses are supported.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 366. Network parameters</caption>
+<caption class="title">Table 358. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2139,7 +2139,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 367. Optional parameters</caption>
+<caption class="title">Table 359. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2744,7 +2744,7 @@ Supported values are <code>3</code>, or <code>1</code> when deploying single-nod
 <p>Additional IBM Cloud&#174; configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 368. Additional IBM Cloud&#174; parameters</caption>
+<caption class="title">Table 360. Additional IBM Cloud&#174; parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3198,7 +3198,7 @@ By default, an installer-provisioned VPC and cluster resources are created and p
 <p>For more information, see the IBM Cloud&#174; documentation on "supported profiles".</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 369. VSI component quotas and limits</caption>
+<caption class="title">Table 361. VSI component quotas and limits</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3539,7 +3539,7 @@ By default, an installer-provisioned VPC and cluster resources are created and p
 <p>You must assign the required access policies to your IBM Cloud&#174; account.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 370. Required access policies</caption>
+<caption class="title">Table 362. Required access policies</caption>
 <colgroup>
 <col style="width: 10%;">
 <col style="width: 20%;">
@@ -4394,7 +4394,7 @@ it to install multiple clusters.</p>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 371. Minimum resource requirements</caption>
+<caption class="title">Table 363. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -5214,7 +5214,7 @@ spec:
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 372. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 364. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5367,7 +5367,7 @@ spec:
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 373. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 365. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -5432,7 +5432,7 @@ spec:
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 374. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 366. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5595,7 +5595,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 375. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 367. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5646,7 +5646,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 376. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 368. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5697,7 +5697,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 377. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 369. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5804,7 +5804,7 @@ spec:
 </tbody>
 </table>
 <table id="gatewayConfig-object_installing-ibm-cloud-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 378. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 370. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5898,7 +5898,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_installing-ibm-cloud-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 379. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 371. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5943,7 +5943,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_installing-ibm-cloud-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 380. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 372. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5988,7 +5988,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_installing-ibm-cloud-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 381. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 373. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6178,7 +6178,7 @@ INFO Time elapsed: 36m22s</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="cli-installing-cli-linux_install-on-ibm-cloud-ipi">Installing the OpenShift CLI on Linux</h5>
+<h5 id="cli-installing-cli-linux_install-on-ibm-cloud-ipi">Install the OpenShift CLI on Linux</h5>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Linux, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -6250,7 +6250,7 @@ INFO Time elapsed: 36m22s</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="cli-installing-cli-windows_install-on-ibm-cloud-ipi">Installing the OpenShift CLI on Windows</h5>
+<h5 id="cli-installing-cli-windows_install-on-ibm-cloud-ipi">Install the OpenShift CLI on Windows</h5>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on Windows, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -6314,7 +6314,7 @@ INFO Time elapsed: 36m22s</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="cli-installing-cli-macos_install-on-ibm-cloud-ipi">Installing the OpenShift CLI on macOS</h5>
+<h5 id="cli-installing-cli-macos_install-on-ibm-cloud-ipi">Install the OpenShift CLI on macOS</h5>
 <div class="paragraph _abstract">
 <p>To manage your cluster and deploy applications from the command line on macOS, install the OpenShift CLI (<code>oc</code>) binary. You can download the OpenShift CLI (<code>oc</code>) from the Red&#160; Customer Portal.</p>
 </div>
@@ -6521,7 +6521,7 @@ INFO Time elapsed: 36m22s</code></pre>
 <p>IBM Cloud&#174; private VLAN subnets use a <code>/26</code> prefix by default, which provides 64 IP addresses. IBM Cloud&#174; Bare Metal (Classic) uses private network IP addresses to access the Baseboard Management Controller (BMC) of each node. Red&#160;Hat OpenShift Container Platform creates an additional subnet for the <code>provisioning</code> network. Network traffic for the <code>provisioning</code> network subnet routes through the private VLAN. For larger clusters, you might need a smaller prefix.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 382. IP addresses per prefix</caption>
+<caption class="title">Table 374. IP addresses per prefix</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7654,7 +7654,7 @@ done</code></pre>
 <p>Some parameters, such as the cluster domain name, are required in the <code>install-config.yaml</code> file when installing a cluster on bare metal. Others, such as the provisioning network CIDR, are optional.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 383. Required parameters</caption>
+<caption class="title">Table 375. Required parameters</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 10%;">
@@ -7957,7 +7957,7 @@ done</code></pre>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 384. Optional Parameters</caption>
+<caption class="title">Table 376. Optional Parameters</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -8076,7 +8076,7 @@ done</code></pre>
 <p>The <code>hosts</code> parameter is a list of separate bare metal assets used to build the cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 385. Hosts</caption>
+<caption class="title">Table 377. Hosts</caption>
 <colgroup>
 <col style="width: 44.4444%;">
 <col style="width: 11.1111%;">
@@ -8237,7 +8237,7 @@ done</code></pre>
 <p>The installer examines the devices in the order it discovers them, and compares the discovered values with the hint values. The installer uses the first discovered device that matches the hint value. The configuration can combine multiple hints, but a device must match all hints for the installer to select it.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 386. Subfields</caption>
+<caption class="title">Table 378. Subfields</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8590,7 +8590,7 @@ cluster.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-12 21:54:36 +0100
+Last updated 2026-10-12 22:34:40 +0100
 </div>
 </div>
 <style>
