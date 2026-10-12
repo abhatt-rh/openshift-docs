@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="network-observability-operator_network-flow-visibility" class="book toc2 toc-left navmap-has-right-toc">
+<body id="troubleshoot-containers-investigate-pod-issues-con_troubleshoot-containers-investigate-pod-issues" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -527,8 +527,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="coreos-layering-configuring-on_understand-the-on-cluster-mode-of-the-image-mode-for-openshift-feature.html">About on-cluster image mode</a>
 </li>
 <li><a href="coreos-layering-updating_understand-how-to-update-a-cluster-that-uses-the-image-mode-for-openshift.html">Update with a RHCOS custom layered image</a>
-</li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
 </li>
 <li><a href="understanding-openshift_evaluate-openshift-platform-capabilities.html">Understand Red&#160;Hat OpenShift Container Platform</a>
 </li>
@@ -786,6 +784,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-a-private-cluster-on-gcp-intro_install-a-private-cluster-on-gcp.html">Install a private cluster on GCP</a>
 </li>
+<li><a href="install-on-gcp-dedicated-intro_install-on-gcp-dedicated.html">Install Red&#160;Hat OpenShift Container Platform on Google Cloud Dedicated</a>
+</li>
 <li><a href="installing-oci-edge-infra-support_install-on-oracle-edge-cloud-with-assisted-installer.html">Supported Oracle Edge Cloud infrastructures</a>
 </li>
 <li><a href="installing-oci-edge-infra-support_install-on-oracle-edge-cloud-with-agent-based-installer.html">Supported Oracle Edge Cloud infrastructures</a>
@@ -943,6 +943,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="update-the-boot-loader-on-rhcos-nodes-con_update-the-boot-loader-on-rhcos-nodes.html">Update the boot loader on RHCOS nodes</a>
 </li>
 <li><a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a>
+</li>
+<li><a href="gathering-data-cluster-update_gather-data-about-a-cluster-update.html">Gathering data about your cluster update</a>
 </li>
 </ul>
 </li>
@@ -1102,6 +1104,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="change-the-installed-disk-partition-schema-for-new-nodes-con_change-the-installed-disk-partition-schema-for-new-nodes.html">Change the installed disk-partition schema for new nodes</a>
 </li>
 <li><a href="configure-and-maintain-the-pod-network-cni-213-ensure-every-pod-gets-a-unique-ip-in-a-flat-network-con_configure-and-maintain-the-pod-network-cni-213-ensure-every-pod-gets-a-unique-ip-in-a-flat-network.html">Ensure every pod gets a unique IP in a flat network</a>
+</li>
+<li><a href="configure-multi-tenant-namespace-isolation-con_configure-multi-tenant-namespace-isolation.html">Configure multi-tenant namespace isolation</a>
 </li>
 <li><a href="define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers-con_define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers.html">Define how much disk space a single container can use</a>
 </li>
@@ -1266,6 +1270,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_networking.html">Networking</a>
+
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
@@ -1309,7 +1314,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
 </li>
-<li><a href="network-observability-operator_network-flow-visibility.html"><span class="toc-current">Network Observability Operator</span></a>
+<li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
 </li>
 </ul>
 </li>
@@ -1502,8 +1507,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a>
 </li>
-<li><a href="network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation-con_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation.html">Control automatic installation during cluster creation</a>
-</li>
 <li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
 </li>
 <li><a href="performance-investigation-con_performance-investigation.html">Performance investigation</a>
@@ -1511,6 +1514,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="traffic-analysis-con_traffic-analysis.html">Traffic analysis</a>
 </li>
 <li><a href="anomaly-detection-con_anomaly-detection.html">Anomaly detection</a>
+</li>
+<li><a href="network-observability-dns-overview_analyze-dns-resolution-patterns-and-errors.html">DNS tracking</a>
 </li>
 <li><a href="east-west-traffic-monitoring-con_east-west-traffic-monitoring.html">East-west traffic monitoring</a>
 </li>
@@ -1536,8 +1541,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
 <li><a href="automate-cicd-with-image-streams-intro_automate-cicd-with-image-streams.html">Automate CI/CD with image streams</a>
-</li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
 </li>
 </ul>
 </li>
@@ -1694,12 +1697,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="cnf-measuring-latency_validate-node-performance-with-latency-tests.html">Measuring latency</a>
 </li>
-<li><a href="verify-network-observability-installation-intro_verify-network-observability-installation.html">Verify Network Observability installation</a>
-</li>
 </ul>
 </li>
 <li><a href="_troubleshoot.html">Troubleshoot</a>
-
 <ul class="sectlevel2">
 <li><a href="allow-the-configuration-drift-to-remain-and-return-the-node-to-ready-state-con_allow-the-configuration-drift-to-remain-and-return-the-node-to-ready-state.html">Allow the configuration drift to remain and return the node to ready state</a>
 </li>
@@ -1763,6 +1763,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
+<li><a href="troubleshoot-containers-investigate-pod-issues-con_troubleshoot-containers-investigate-pod-issues.html"><span class="toc-current">Investigate pod issues</span></a>
+</li>
+<li><a href="troubleshoot-containers-troubleshoot-crio-issues-con_troubleshoot-containers-troubleshoot-crio-issues.html">Troubleshoot CRI-O issues</a>
+</li>
 <li><a href="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data.html">Backing up and restoring etcd data</a>
 </li>
 <li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
@@ -1783,15 +1787,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="querying-operator-status-after-installation_troubleshoot-extension-installation.html">Querying Operator status after installation</a>
 </li>
+<li><a href="troubleshooting-s2i_troubleshoot-source-to-image-builds.html">Troubleshooting the Source-to-Image process</a>
+</li>
 <li><a href="setting-resource-requests-for-a-nodeagent-pod_evaluate-pod-health.html">Setting resource requests for a nodeAgent pod</a>
 </li>
 <li><a href="post-install-etcd-tasks_defragment-etcd-data.html">etcd tasks</a>
 </li>
-<li><a href="about-oadp-update-channels_troubleshoot-common-update-failures.html">About OADP update channels</a>
-</li>
 <li><a href="understand-etcd-performance_move-etcd-to-a-different-disk.html">Factors that affect etcd performance</a>
-</li>
-<li><a href="gathering-bootstrap-diagnostic-data_gather-data-about-a-cluster-update.html">Gathering bootstrap node diagnostic data</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
@@ -1805,21 +1807,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="oadp-performance-network-requirements_troubleshoot-node-performance-issues-collect-node-profiling-data.html">OADP network requirements</a>
 </li>
-<li><a href="network-observability-operator-stub_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli.html">Network Observability Operator features</a>
-</li>
-<li><a href="adminnetworkpolicy_troubleshoot-network-issues-132-troubleshoot-network-policies.html">AdminNetworkPolicy</a>
-</li>
 <li><a href="nw-ingress-sharding-route-labels_troubleshoot-network-issues-133-troubleshoot-ingress-and-routes.html">Configure Ingress Controller sharding by using route labels</a>
-</li>
-<li><a href="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv.html">Flowlogs-Pipeline does not consume network flows after installing Kafka</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
 <li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
-</li>
-<li><a href="network-observability-health-rules-and-performance_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv.html">Identify network issues with automated health rules</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
@@ -1905,185 +1899,121 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#network-observability-openshift-console-integration_network-flow-visibility">Red Hat OpenShift Container Platform console integration</a></li><li class="level-5"><a href="#network-observability-dashboards_network-flow-visibility">Network observability metrics dashboards</a></li><li class="level-5"><a href="#network-observability-topology-views_network-flow-visibility">Network observability topology views</a></li><li class="level-5"><a href="#traffic-flow-tables_network-flow-visibility">Traffic flow tables</a></li><li class="level-4"><a href="#network-observability-network-traffic-overview-view_network-flow-visibility">Observe the network traffic from the Overview view</a></li><li class="level-5"><a href="#network-observability-working-with-overview_network-flow-visibility">Work with the Overview view</a></li><li class="level-4"><a href="#network-observability-trafficflow_network-flow-visibility">Observe the network traffic from the Traffic flows view</a></li><li class="level-5"><a href="#network-observability-working-with-trafficflow_network-flow-visibility">Work with the Traffic flows view</a></li><li class="level-4"><a href="#network-observability-topology_network-flow-visibility">Observe the network traffic from the Topology view</a></li><li class="level-5"><a href="#network-observability-working-with-topology_network-flow-visibility">Work with the Topology view</a></li><li class="level-5"><a href="#network-observability-configuring-options-topology_network-flow-visibility">Configure the advanced options for the Topology view</a></li><li class="level-6"><a href="#network-observability-cao-export-topology_network-flow-visibility">Exporting the topology view</a></li><li class="level-5"><a href="#network-observability-working-with-conversations_network-flow-visibility">Work with conversation tracking</a></li><li class="level-4"><a href="#network-observability-quickfilter_network-flow-visibility">Filter the network traffic</a></li><li class="level-4"><a href="#network-observability-api-specifications-reference_network-flow-visibility">Network observability API specifications</a></li><li class="level-5"><a href="#flowcollector-api_network-flow-visibility">FlowCollector API</a></li><li class="level-5"><a href="#flowmetric-api_network-flow-visibility">FlowMetric API</a></li><li class="level-5"><a href="#flowcollector-slice-api_network-flow-visibility">FlowCollectorSlice API</a></li><li class="level-5"><a href="#network-flows-format_network-flow-visibility">Network flows format</a></li><li class="level-5"><a href="#network-observability-cli-usage_network-flow-visibility">Network Observability CLI usage</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#understanding-pod-error-states_troubleshoot-containers-investigate-pod-issues">Understand pod error states</a></li><li class="level-4"><a href="#reviewing-pod-status_troubleshoot-containers-investigate-pod-issues">Review pod status</a></li><li class="level-4"><a href="#accessing-running-pods_troubleshoot-containers-investigate-pod-issues">Access running pods</a></li><li class="level-4"><a href="#starting-debug-pods-with-root-access_troubleshoot-containers-investigate-pod-issues">Start debug pods with root access</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="network-observability-operator_network-flow-visibility">Network Observability Operator</h3>
+<h3 id="troubleshoot-containers-investigate-pod-issues-con_troubleshoot-containers-investigate-pod-issues">Investigate pod issues</h3>
 <div class="paragraph _abstract">
-<p>The Network Observability Operator monitors and analyzes cluster network traffic by deploying eBPF-based flow collection that captures, enriches, and stores network data for troubleshooting and performance analysis.</p>
-</div>
-<div class="paragraph">
-<p>A <code>FlowCollector</code> instance deploys pods and services that form a monitoring pipeline.</p>
-</div>
-<div class="paragraph">
-<p>The <code>eBPF</code> agent is deployed as a <code>daemonset</code> object and creates the network flows. The pipeline collects and enriches network flows with Kubernetes metadata before storing them in Loki or generating Prometheus metrics.</p>
+<p>When a pod fails or behaves unexpectedly, you examine its status, error states, and logs to identify the root cause. You can access a running pod interactively or start a debug pod with root privileges to perform deeper investigation on the host.</p>
 </div>
 <div class="sect3">
-<h4 id="network-observability-openshift-console-integration_network-flow-visibility">Red&#160;Hat OpenShift Container Platform console integration</h4>
+<h4 id="understanding-pod-error-states_troubleshoot-containers-investigate-pod-issues">Understand pod error states</h4>
 <div class="paragraph _abstract">
-<p>The Network Observability Operator integrates with the Red&#160;Hat OpenShift Container Platform console to visualize and analyze network traffic through views that display traffic overviews, topology graphs, and detailed flow tables for troubleshooting connectivity issues.</p>
+<p>Pod failures return explicit error states that can be observed in the <code>status</code> field in the output of <code>oc get pods</code>. Pod error states cover image, container, and container network related failures.</p>
 </div>
 <div class="paragraph">
-<p>The Network observability metrics dashboards in <strong>Observe</strong> &#8594; <strong>Dashboards</strong> are available only to users with administrator access.</p>
+<p>The following table provides a list of pod error states along with their descriptions.</p>
 </div>
-<div class="admonitionblock note">
-<table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 819. Pod error states</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
 <tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>To enable multi-tenancy for developer access and for administrators with limited access to namespaces, you must specify permissions by defining roles. For more information, see "Enabling multi-tenancy in network observability".</p>
-</div>
-</td>
+<th class="tableblock halign-left valign-top">Pod error state</th>
+<th class="tableblock halign-left valign-top">Description</th>
 </tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrImagePull</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generic image retrieval error.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrImagePullBackOff</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Image retrieval failed and is backed off.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrInvalidImageName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The specified image name was invalid.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrImageInspect</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Image inspection did not succeed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrImageNeverPull</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PullPolicy</code> is set to <code>NeverPullImage</code> and the target image is not present locally on the host.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrRegistryUnavailable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When attempting to retrieve an image from a registry, an HTTP error was encountered.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrContainerNotFound</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The specified container is either not present or not managed by the kubelet, within the declared pod.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrRunInitContainer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Container initialization failed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrRunContainer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None of the pod&#8217;s containers started successfully.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrKillContainer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None of the pod&#8217;s containers were killed successfully.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrCrashLoopBackOff</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A container has terminated. The kubelet will not attempt to restart it.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrVerifyNonRoot</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A container or image attempted to run with root privileges.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrCreatePodSandbox</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pod sandbox creation did not succeed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrConfigPodSandbox</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pod sandbox configuration was not obtained.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrKillPodSandbox</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A pod sandbox did not stop successfully.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrSetupNetwork</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Network initialization failed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ErrTeardownNetwork</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Network termination failed.</p></td>
+</tr>
+</tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="network-observability-dashboards_network-flow-visibility">Network observability metrics dashboards</h5>
-<div class="paragraph _abstract">
-<p>The network observability dashboards in the Red&#160;Hat OpenShift Container Platform console provide cluster traffic pattern monitoring, metric filtering, and Network Observability Operator health tracking.</p>
-</div>
-<div class="paragraph">
-<p>In the Red&#160;Hat OpenShift Container Platform console on the <strong>Overview</strong> tab, you can view the overall aggregated metrics of the network traffic flow on the cluster. You can choose to display the information by cluster, node, namespace, owner, pod, and service. Filters and display options can further refine the metrics. For more information, see "Observing the network traffic from the Overview view".</p>
-</div>
-<div class="paragraph">
-<p>In <strong>Observe</strong> &#8594; <strong>Dashboards</strong>, the <strong>Netobserv</strong> dashboards provide a quick overview of the network flows in your Red&#160;Hat OpenShift Container Platform cluster. The <strong>Netobserv/Health</strong> dashboard provides metrics about the health of the Operator. For more information, see "Network observability metrics" and "Viewing health information".</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-topology-views_network-flow-visibility">Network observability topology views</h5>
-<div class="paragraph _abstract">
-<p>The network observability topology view in the Red&#160;Hat OpenShift Container Platform console displays a graphical representation of traffic flow between components, which you can refine using various filters and display options.</p>
-</div>
-<div class="paragraph">
-<p>The Red&#160;Hat OpenShift Container Platform console offers the <strong>Topology</strong> tab which represents traffic between the Red&#160;Hat OpenShift Container Platform components as a network graph. You can refine the graph by using the filters and display options. You can access the information for cluster, zone, udn, node, namespace, owner, pod, and service.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="traffic-flow-tables_network-flow-visibility">Traffic flow tables</h5>
-<div class="paragraph _abstract">
-<p>The <strong>Traffic flow</strong> tables in the Red&#160;Hat OpenShift Container Platform console provide detailed network flow data with filtering options, customizable columns, and tools to analyze connection patterns and troubleshoot issues.</p>
-</div>
-<div class="paragraph">
-<p>The <strong>Traffic flows</strong> tab in the Red&#160;Hat OpenShift Container Platform web console displays the data of the network flows and the amount of traffic.</p>
-</div>
-</div>
-</div>
 <div class="sect3">
-<h4 id="network-observability-network-traffic-overview-view_network-flow-visibility">Observe the network traffic from the Overview view</h4>
+<h4 id="reviewing-pod-status_troubleshoot-containers-investigate-pod-issues">Review pod status</h4>
 <div class="paragraph _abstract">
-<p>Use the Network Traffic <strong>Overview</strong> view to monitor aggregated flow metrics, troubleshoot cluster connectivity, and detect unusual traffic patterns.</p>
-</div>
-<div class="paragraph">
-<p>The <strong>Overview</strong> view shows aggregate network traffic in your Red&#160;Hat OpenShift Container Platform cluster, allowing you to see which applications are communicating and the volume of data being transferred. It provides detailed insights by source, destination, and flow type, along with the top traffic flows and average byte rates.</p>
-</div>
-<div class="paragraph">
-<p>As an administrator, you can troubleshoot connectivity issues, detect unusual traffic patterns, and optimize application performance. It provides a quick overview of network behavior, making it easier to prioritize actions and ensure efficient resource usage.</p>
-</div>
-<div class="sect4">
-<h5 id="network-observability-working-with-overview_network-flow-visibility">Work with the Overview view</h5>
-<div class="paragraph _abstract">
-<p>Navigate to the network traffic <strong>Overview</strong> view in the Red&#160;Hat OpenShift Container Platform console to visualize flow rate statistics and customize the display scope for monitoring cluster network activity.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisite</div>
-<ul>
-<li>
-<p>Access to the cluster with administrator rights.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate to <strong>Observe</strong> → <strong>Network Traffic</strong>.</p>
-</li>
-<li>
-<p>In the <strong>Network Traffic</strong> page, click the <strong>Overview</strong> tab.</p>
-</li>
-<li>
-<p>Click the menu icon to configure the scope of each flow rate data.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="network-observability-trafficflow_network-flow-visibility">Observe the network traffic from the Traffic flows view</h4>
-<div class="paragraph _abstract">
-<p>Use the <strong>Traffic flows</strong> view to monitor cluster network communication, audit eBPF flow data, validate network policies, and export metrics for external analysis.</p>
-</div>
-<div class="paragraph">
-<p>The <strong>Traffic flows</strong> view in the Network Observability Operator provides a granular, tabular representation of network activity across a Red&#160;Hat OpenShift Container Platform cluster. By leveraging eBPF technology to collect flow data, this view allows administrators to monitor real-time and historical communication between pods, services, and nodes. This visibility is essential for auditing network traffic, validating network policies, and identifying unexpected communication patterns within the cluster infrastructure.</p>
-</div>
-<div class="paragraph">
-<p>In the <strong>Traffic flows</strong> interface, you can analyze specific connection details by interacting with individual rows to retrieve detailed flow information. The view supports advanced customization through the <strong>Display options</strong> menu, where you can adjust row density and manage columns. By selecting and reordering specific columns, you can tailor the table to highlight the most relevant data points for your environment, such as source and destination endpoints or traffic volume.</p>
-</div>
-<div class="paragraph">
-<p>To support external analysis and reporting, the <strong>Traffic flows</strong> view includes data export capabilities. You can export the entire dataset or select specific fields to generate a targeted report of network activity. This functionality ensures that network flow data is accessible for long-term auditing or for use in third-party monitoring tools, providing a flexible way to document and analyze the network health of your Red&#160;Hat OpenShift Container Platform environment.</p>
-</div>
-<div class="sect4">
-<h5 id="network-observability-working-with-trafficflow_network-flow-visibility">Work with the Traffic flows view</h5>
-<div class="paragraph _abstract">
-<p>View and analyze detailed network flow information in the <strong>Traffic flows</strong> table to troubleshoot connectivity issues and monitor traffic patterns between cluster components.</p>
-</div>
-<div class="paragraph">
-<p>As an administrator, you can navigate to <strong>Traffic flows</strong> table to see network flow information.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisite</div>
-<ul>
-<li>
-<p>You have administrator access.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate to <strong>Observe</strong> → <strong>Network Traffic</strong>.</p>
-</li>
-<li>
-<p>In the <strong>Network Traffic</strong> page, click the <strong>Traffic flows</strong> tab.</p>
-</li>
-<li>
-<p>Click on each row to get the corresponding flow information.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="network-observability-topology_network-flow-visibility">Observe the network traffic from the Topology view</h4>
-<div class="paragraph _abstract">
-<p>Use the <strong>Topology</strong> view in the <strong>Network Traffic</strong> page to visualize network flows, track traffic volume, and monitor relationships across cluster components.</p>
-</div>
-<div class="paragraph">
-<p>The visualization represents network entities as nodes and traffic flows as edges. By selecting individual components within the graph, you can access a side panel containing specific metrics and health details for that resource. This interactive approach allows for rapid identification of traffic patterns and connectivity issues within the cluster.</p>
-</div>
-<div class="paragraph">
-<p>To manage complex environments, the <strong>Topology</strong> view includes advanced configuration options that allow you to customize the layout and data density. You can adjust the <strong>Scope</strong> of the view, apply <strong>Groups</strong> to represent resource ownership, and choose different <strong>Layout</strong> algorithms to optimize the graphical display. Additionally, you can enable <strong>Edge labels</strong> to show real-time measurements, such as the average byte rate, directly on the flow lines.</p>
-</div>
-<div class="paragraph">
-<p>For reporting or external analysis, the <strong>Topology</strong> view provides an export feature. You can download the current graphical representation as a PNG image or generate a direct link to the specific view configuration to share with other administrators. These tools ensure that network insights are both accessible and easily documented.</p>
-</div>
-<div class="sect4">
-<h5 id="network-observability-working-with-topology_network-flow-visibility">Work with the Topology view</h5>
-<div class="paragraph _abstract">
-<p>Access the <strong>Topology</strong> view to visually inspect cluster network relationships and select individual components to view detailed traffic metrics and metadata.</p>
-</div>
-<div class="paragraph">
-<p>As an administrator, you can navigate to the <strong>Topology</strong> view to see the details and metrics of the component.</p>
+<p>You can query pod status and error states. You can also query a pod&#8217;s associated deployment configuration and review base image availability.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have administrator access.</p>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p><code>skopeo</code> is installed.</p>
 </li>
 </ul>
 </div>
@@ -2091,88 +2021,83 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Navigate to <strong>Observe</strong> → <strong>Network Traffic</strong>.</p>
+<p>Switch into a project:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc project &lt;project_name&gt;</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>In the <strong>Network Traffic</strong> page, click the <strong>Topology</strong> tab.</p>
+<p>List pods running within the namespace, as well as pod status, error states, restarts, and age:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>Click each component in the <strong>Topology</strong> tab to view its details and metrics.</p>
+<p>Determine whether the namespace is managed by a deployment configuration:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc status</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the namespace is managed by a deployment configuration, the output includes the deployment configuration name and a base image reference.</p>
+</div>
+</li>
+<li>
+<p>Inspect the base image referenced in the preceding command&#8217;s output:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ skopeo inspect docker://&lt;image_reference&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>If the base image reference is not correct, update the reference in the deployment configuration:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit deployment/my-deployment</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>When deployment configuration changes on exit, the configuration will automatically redeploy. Watch pod status as the deployment progresses, to determine whether the issue has been resolved:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -w</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Review events within the namespace for diagnostic information relating to pod failures:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get events</code></pre>
+</div>
+</div>
 </li>
 </ol>
 </div>
 </div>
-<div class="sect4">
-<h5 id="network-observability-configuring-options-topology_network-flow-visibility">Configure the advanced options for the Topology view</h5>
+<div class="sect3">
+<h4 id="accessing-running-pods_troubleshoot-containers-investigate-pod-issues">Access running pods</h4>
 <div class="paragraph _abstract">
-<p>The <strong>Topology</strong> view provides advanced options that let you customize display settings, configure component grouping and layouts, and export the network graph as an image.</p>
-</div>
-<div class="paragraph">
-<p>You can customize and export the view by using <strong>Show advanced options</strong>. The advanced options view has the following features:</p>
+<p>You can review running pods dynamically by opening a shell inside a pod or by gaining network access through port forwarding.</p>
 </div>
 <div class="ulist">
+<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p><strong>Find in view</strong>: To search the required components in the view.</p>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
 </li>
 <li>
-<p><strong>Display options</strong>: To configure the following options:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Edge labels</strong>: To show the specified measurements as edge labels. The default is to show the <strong>Average rate</strong> in <strong>Bytes</strong>.</p>
+<p>Your API service is still functional.</p>
 </li>
 <li>
-<p><strong>Scope</strong>: To select the scope of components between which the network traffic flows. The default value is <strong>Namespace</strong>.</p>
-</li>
-<li>
-<p><strong>Groups</strong>: To enhance the understanding of ownership by grouping the components. The default value is <strong>None</strong>.</p>
-</li>
-<li>
-<p><strong>Layout</strong>: To select the layout of the graphical representation. The default value is <strong>ColaNoForce</strong>.</p>
-</li>
-<li>
-<p><strong>Show</strong>: To select the details that need to be displayed. All the options are checked by default. The options available are: <strong>Edges</strong>, <strong>Edges label</strong>, and <strong>Badges</strong>.</p>
-</li>
-<li>
-<p><strong>Truncate labels</strong>: To select the required width of the label from the drop-down list. The default value is <strong>M</strong>.</p>
-</li>
-<li>
-<p><strong>Collapse groups</strong>: To expand or collapse the groups. The groups are expanded by default. This option is disabled if <strong>Groups</strong> has the value of <strong>None</strong>.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="sect5">
-<h6 id="network-observability-cao-export-topology_network-flow-visibility">Exporting the topology view</h6>
-<div class="paragraph">
-<p>To export the view, click <strong>Export topology view</strong>. The view is downloaded in PNG format.</p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-working-with-conversations_network-flow-visibility">Work with conversation tracking</h5>
-<div class="paragraph _abstract">
-<p>Configure the <code>FlowCollector</code> custom resource to enable conversation tracking for grouping and analyzing related network flows in the web console.</p>
-</div>
-<div class="paragraph">
-<p>As an administrator, you can group network flows that are part of the same conversation. A conversation is defined as a grouping of peers that are identified by their IP addresses, ports, and protocols, resulting in an unique <strong>Conversation Id</strong>. You can query conversation events in the web console. These events are represented in the web console as follows:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Conversation start</strong>: This event happens when a connection is starting or TCP flag intercepted</p>
-</li>
-<li>
-<p><strong>Conversation tick</strong>: This event happens at each specified interval defined in the <code>FlowCollector</code> <code>spec.processor.conversationHeartbeatInterval</code> parameter while the connection is active.</p>
-</li>
-<li>
-<p><strong>Conversation end</strong>: This event happens when the <code>FlowCollector</code> <code>spec.processor.conversationEndTimeout</code> parameter is reached or  the TCP flag is intercepted.</p>
-</li>
-<li>
-<p><strong>Flow</strong>: This is the network traffic flow that occurs within the specified interval.</p>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
 </li>
 </ul>
 </div>
@@ -2180,29 +2105,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>In the web console, navigate to <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong>.</p>
-</li>
-<li>
-<p>Under the <strong>Provided APIs</strong> heading for the <strong>NetObserv Operator</strong>, select <strong>Flow Collector</strong>.</p>
-</li>
-<li>
-<p>Select <strong>cluster</strong> then select the <strong>YAML</strong> tab.</p>
-</li>
-<li>
-<p>Configure the <code>FlowCollector</code> custom resource so that <code>spec.processor.logTypes</code>, <code>conversationEndTimeout</code>, and <code>conversationHeartbeatInterval</code> parameters are set according to your observation needs. A sample configuration is as follows:</p>
+<p>Switch into the project that contains the pod you would like to access. This is necessary because the <code>oc rsh</code> command does not accept the <code>-n</code> namespace option:</p>
 <div class="listingblock">
-<div class="title">Configure <code>FlowCollector</code> for conversation tracking</div>
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: flows.netobserv.io/v1beta2
-kind: FlowCollector
-metadata:
-  name: cluster
-spec:
- processor:
-  logTypes: Flows
-  advanced:
-   conversationEndTimeout: 10s
-   conversationHeartbeatInterval: 30s</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc project &lt;namespace&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Start a remote shell into a pod:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc rsh &lt;pod_name&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2210,17 +2124,107 @@ spec:
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>spec.processor.logTypes</code></dt>
+<dt class="hdlist1"><code>&lt;pod_name&gt;</code></dt>
 <dd>
-<p>Specifies the types of events to export. When set to <code>Flows</code>, only the Flow event is exported. When set to <code>All</code>, both conversation and flow events are exported and visible in the <strong>Network Traffic</strong> page. To focus only on conversation events, specify <code>Conversations</code> to export <strong>Conversation start</strong>, <strong>Conversation tick</strong>, and <strong>Conversation end</strong> events. To export only the <strong>Conversation end</strong> events, specify <code>EndedConversations</code>. Storage requirements are highest for <code>All</code> and lowest for <code>EndedConversations</code>.</p>
+<p>If a pod has multiple containers, <code>oc rsh</code> defaults to the first container unless <code>-c &lt;container_name&gt;</code> is specified.</p>
 </dd>
-<dt class="hdlist1"><code>spec.processor.advanced.conversationEndTimeout</code></dt>
+</dl>
+</div>
+</li>
+<li>
+<p>Start a remote shell into a specific container within a pod:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc rsh -c &lt;container_name&gt; pod/&lt;pod_name&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a port forwarding session to a port on a pod:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc port-forward &lt;pod_name&gt; &lt;host_port&gt;:&lt;pod_port&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;pod_name&gt; &lt;host_port&gt;:&lt;pod_port&gt;</code></dt>
 <dd>
-<p>Specifies the duration at which a <strong>Conversation end</strong> event is triggered once the timeout is reached or a TCP flag is intercepted.</p>
+<p>Enter <code>Ctrl+C</code> to cancel the port forwarding session.</p>
 </dd>
-<dt class="hdlist1"><code>spec.processor.advanced.conversationHeartbeatInterval</code></dt>
-<dd>
-<p>Specifies the interval for the <strong>Conversation tick</strong> event while the network connection is active.</p>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="starting-debug-pods-with-root-access_troubleshoot-containers-investigate-pod-issues">Start debug pods with root access</h4>
+<div class="paragraph _abstract">
+<p>You can start a debug pod with root access, based on a problematic pod&#8217;s deployment or deployment configuration. Pod users typically run with non-root privileges, but running troubleshooting pods with temporary root privileges can be useful during issue investigation.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>Your API service is still functional.</p>
+</li>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Start a debug pod with root access, based on a deployment.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Obtain a project&#8217;s deployment name:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get deployment -n &lt;project_name&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Start a debug pod with root privileges, based on the deployment:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug deployment/my-deployment --as-root -n &lt;project_name&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Start a debug pod with root access, based on a deployment configuration.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Obtain a project&#8217;s deployment configuration name:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get deploymentconfigs -n &lt;project_name&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Start a debug pod with root privileges, based on the deployment configuration:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug deploymentconfig/my-deployment-configuration --as-root -n &lt;project_name&gt;</code></pre>
+</div>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2229,203 +2233,27 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If you update the <code>logType</code> option, the flows from the previous selection do not clear from the console plugin. For example, if you initially set <code>logType</code> to <code>Conversations</code> for a span of time until 10 AM and then move to <code>EndedConversations</code>, the console plugin shows all conversation events before 10 AM and only ended conversations after 10 AM.</p>
+<p>You can append <code>-- &lt;command&gt;</code> to the preceding <code>oc debug</code> commands to run individual commands within a debug pod, instead of running an interactive shell.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-</dd>
-</dl>
+</li>
+</ol>
 </div>
-</li>
-<li>
-<p>Refresh the <strong>Network Traffic</strong> page on the <strong>Traffic flows</strong> tab. Notice there are two new columns, <strong>Event/Type</strong> and <strong>Conversation Id</strong>. All the <strong>Event/Type</strong> fields are <code>Flow</code> when <strong>Flow</strong> is the selected query option.</p>
-</li>
-<li>
-<p>Select <strong>Query Options</strong> and choose the <strong>Log Type</strong>, <strong>Conversation</strong>. Now the <strong>Event/Type</strong> shows all of the desired conversation events.</p>
-</li>
-<li>
-<p>Next you can filter on a specific conversation ID or switch between the <strong>Conversation</strong> and <strong>Flow</strong> log type options from the side panel.</p>
 </li>
 </ol>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="network-observability-quickfilter_network-flow-visibility">Filter the network traffic</h4>
-<div class="paragraph _abstract">
-<p>The <strong>Network Traffic</strong> view provides query options and filtering parameters that let you optimize data searches, analyze specific log types, and manage directional traffic visibility.</p>
-</div>
-<div class="paragraph">
-<p>By default, the <strong>Network Traffic</strong> page displays the traffic flow data in the cluster based on the default filters configured in the <code>FlowCollector</code> instance. You can use the filter options to observe the required data by changing the preset filter.</p>
-</div>
-<div class="paragraph">
-<p>Alternatively, you can access the traffic flow data in the <strong>Network Traffic</strong> tab of the <strong>Namespaces</strong>, <strong>Services</strong>, <strong>Routes</strong>, <strong>Nodes</strong>, and <strong>Workloads</strong> pages which provide the filtered data of the corresponding aggregations.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Query Options</dt>
-<dd>
-<p>You can use <strong>Query Options</strong> to optimize the search results, as listed below:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Log Type</strong>: The available options <strong>Conversation</strong> and <strong>Flows</strong> provide the ability to query flows by log type, such as flow log, new conversation, completed conversation, and a heartbeat, which is a periodic record with updates for long conversations. A conversation is an aggregation of flows between the same peers.</p>
-</li>
-<li>
-<p><strong>Match filters</strong>: You can determine the relation between different filter parameters selected in the advanced filter. The available options are <strong>Match all</strong> and <strong>Match any</strong>. <strong>Match all</strong>  provides results that match all the values, and <strong>Match any</strong> provides results that match any of the values entered. The default value is <strong>Match all</strong>.</p>
-</li>
-<li>
-<p><strong>Datasource</strong>: You can choose the datasource to use for queries: <strong>Loki</strong>, <strong>Prometheus</strong>, or <strong>Auto</strong>. Notable performance improvements can be realized when using Prometheus as a datasource rather than Loki, but Prometheus supports a limited set of filters and aggregations. The default datasource is <strong>Auto</strong>, which uses Prometheus on supported queries or uses Loki if the query does not support Prometheus.</p>
-</li>
-<li>
-<p><strong>Drops filter</strong>: You can view different levels of dropped packets with the following query options:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Fully dropped</strong> shows flow records with fully dropped packets.</p>
-</li>
-<li>
-<p><strong>Containing drops</strong> shows flow records that contain drops but can be sent.</p>
-</li>
-<li>
-<p><strong>Without drops</strong> shows records that contain sent packets.</p>
-</li>
-<li>
-<p><strong>All</strong> shows all the aforementioned records.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Limit</strong>: The data limit for internal backend queries. Depending upon the matching and the filter settings, the number of traffic flow data is displayed within the specified limit.</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Quick filters</dt>
-<dd>
-<p>The default values in <strong>Quick filters</strong> drop-down menu are defined in the <code>FlowCollector</code> configuration. You can modify the options from console.</p>
-</dd>
-<dt class="hdlist1">Advanced filters</dt>
-<dd>
-<p>You can set the advanced filters, <strong>Common</strong>, <strong>Source</strong>, or <strong>Destination</strong>, by selecting the parameter to be filtered from the dropdown list. The flow data is filtered based on the selection. To enable or disable the applied filter, you can click on the applied filter listed below the filter options.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>You can toggle between <span class="image"><img src="data:image/png;base64," alt="arrow up long solid" width="10"></span> <strong>One way</strong> and <span class="image"><img src="data:image/png;base64," alt="arrow up long solid" width="10"></span> <span class="image"><img src="data:image/png;base64," alt="arrow down long solid" width="10"></span> <strong>Back and forth</strong> filtering. The <span class="image"><img src="data:image/png;base64," alt="arrow up long solid" width="10"></span> <strong>One way</strong> filter shows only <strong>Source</strong> and <strong>Destination</strong> traffic according to your filter selections. You can use <strong>Swap</strong> to change the directional view of the <strong>Source</strong> and <strong>Destination</strong> traffic. The <span class="image"><img src="data:image/png;base64," alt="arrow up long solid" width="10"></span> <span class="image"><img src="data:image/png;base64," alt="arrow down long solid" width="10"></span> <strong>Back and forth</strong> filter includes return traffic with the <strong>Source</strong> and <strong>Destination</strong> filters. The directional flow of network traffic is shown in the <strong>Direction</strong> column in the Traffic flows table as <code>Ingress`or `Egress</code> for inter-node traffic and `Inner`for traffic inside a single node.</p>
-</div>
-<div class="paragraph">
-<p>You can click <strong>Reset defaults</strong> to remove the existing filters, and apply the filter defined in <code>FlowCollector</code> configuration.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>To understand the rules of specifying the text value, click <strong>Learn More</strong>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="network-observability-api-specifications-reference_network-flow-visibility">Network observability API specifications</h4>
-<div class="paragraph _abstract">
-<p>Reference documentation for Network Observability custom resources and flow data formats.</p>
-</div>
-<div class="sect4">
-<h5 id="flowcollector-api_network-flow-visibility">FlowCollector API</h5>
-<div class="paragraph">
-<p>The <code>FlowCollector</code> resource configures the Network Observability Operator.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/openshift/network-observability-operator/blob/release-2.0/docs/flowcollector-flows-netobserv-io-v1beta2.adoc">FlowCollector API for network observability 2.0</a></p>
-</li>
-<li>
-<p><a href="https://github.com/openshift/network-observability-operator/blob/release-1.12/docs/flowcollector-flows-netobserv-io-v1beta2.adoc">FlowCollector API for network observability 1.12</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="flowmetric-api_network-flow-visibility">FlowMetric API</h5>
-<div class="paragraph">
-<p>The <code>FlowMetric</code> resource creates custom metrics from collected flow logs.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/openshift/network-observability-operator/blob/release-2.0/docs/flowmetric-flows-netobserv-io-v1alpha1.adoc">FlowMetric API for network observability 2.0</a></p>
-</li>
-<li>
-<p><a href="https://github.com/openshift/network-observability-operator/blob/release-1.12/docs/flowmetric-flows-netobserv-io-v1alpha1.adoc">FlowMetric API for network observability 1.12</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="flowcollector-slice-api_network-flow-visibility">FlowCollectorSlice API</h5>
-<div class="paragraph">
-<p>The <code>FlowCollectorSlice`</code> resource enables per-tenant flow collection configuration.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/openshift/network-observability-operator/blob/release-2.0/docs/FlowCollectorSlice.md">FlowCollectorSlice API for network observability 2.0</a></p>
-</li>
-<li>
-<p><a href="https://github.com/openshift/network-observability-operator/blob/release-1.12/docs/FlowCollectorSlice.md">FlowCollectorSlice API for network observability 1.12</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-flows-format_network-flow-visibility">Network flows format</h5>
-<div class="paragraph">
-<p>The network flows format reference describes the structure and fields of flow data.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/openshift/network-observability-operator/blob/release-2.0/docs/flows-format.adoc">Network flows format reference for network observability 2.0</a></p>
-</li>
-<li>
-<p><a href="https://github.com/openshift/network-observability-operator/blob/release-1.12/docs/flows-format.adoc">Network flows format reference for network observability 1.12</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-cli-usage_network-flow-visibility">Network Observability CLI usage</h5>
-<div class="paragraph">
-<p>The Network Observability CLI (<code>oc netobserv</code>) provides feature and filtering parity with the Network Observability Operator. Use command-line arguments to dynamically toggle features and isolate specific cluster network traffic flows.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/netobserv/netobserv-cli/blob/main/docs/netobserv_cli.adoc">Network Observability CLI usage</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="_storage.html">Storage</a> →</p>
+<p>← Previous: <a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="troubleshoot-containers-troubleshoot-crio-issues-con_troubleshoot-containers-troubleshoot-crio-issues.html">Troubleshoot CRI-O issues</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-12 13:00:31 +0100
+Last updated 2026-10-12 20:49:30 +0100
 </div>
 </div>
 <style>
