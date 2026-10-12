@@ -568,10 +568,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="compare-platform-options-con_compare-platform-options.html">Compare platform options</a>
 </li>
-<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
-</li>
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
@@ -582,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -612,6 +608,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
+<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
+</li>
+<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
+</li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
 <li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
@@ -674,7 +676,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html"><span class="toc-current">Mirror images to a mirror registry using oc-mirror v2</span></a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html"><span class="toc-current">oc-mirror plugin v2</span></a>
 </li>
 <li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
@@ -846,7 +848,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-registry-allowlists-and-blocks-con_configure-registry-allowlists-and-blocks.html">Configure registry allowlists and blocks</a>
 </li>
-<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">About adding registries that allow image short names</a>
+<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">Configure short-name search registries</a>
 </li>
 <li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
 </li>
@@ -908,8 +910,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
 </li>
-<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
-</li>
 <li><a href="change-the-installed-file-system-configuration-for-new-nodes-con_change-the-installed-file-system-configuration-for-new-nodes.html">Change the installed file system configuration for new nodes</a>
 </li>
 <li><a href="change-the-installed-raid-configuration-for-new-nodes-con_change-the-installed-raid-configuration-for-new-nodes.html">Change the installed RAID configuration for new nodes</a>
@@ -946,7 +946,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1057,11 +1057,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
+</li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1241,19 +1267,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
-</li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
-</li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
-</li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
-</li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
-</li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1485,6 +1499,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
 </li>
+<li><a href="graceful-shutdown-cluster-intro_graceful-cluster-shutdown.html">Shutting down the cluster gracefully</a>
+</li>
+<li><a href="graceful-restart-cluster-intro_graceful-cluster-restart.html">Restarting the cluster gracefully</a>
+</li>
+<li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernating an Red&#160;Hat OpenShift Container Platform cluster</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
@@ -1496,6 +1516,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="recovering-unhealthy-etcd-cluster-for-hosted-control-planes-con_recovering-unhealthy-etcd-cluster-for-hosted-control-planes.html">Recovering an unhealthy etcd cluster for hosted control planes</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-a-hosted-cluster-intro_backup-and-restore-etcd-on-a-hosted-cluster.html">Backing up and restoring etcd on a hosted cluster</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a>
+</li>
+<li><a href="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot.html">Backing up etcd data for hosted control planes by using the etcd snapshot method</a>
+</li>
+<li><a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a>
 </li>
 <li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
 </li>
@@ -1509,8 +1539,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
@@ -1523,15 +1551,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
+<li><a href="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data.html">Backing up and restoring etcd data</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
+<li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replacing an unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
@@ -1627,13 +1655,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html">Restoring an etcd snapshot on a hosted cluster</a>
+<li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-restore_etcd-best-practices-restore-etcd-data.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replacing a healthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1643,7 +1667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1669,10 +1693,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#oc-mirror-v2-workflow_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">High level workflow</a></li><li class="level-4"><a href="#oc-mirror-v2-support_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">oc-mirror plugin v2 compatibility and support</a></li><li class="level-4"><a href="#prerequisites_oc-mirror-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Prerequisites for mirroring images with oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-preparing-mirror-hosts_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Prepare your mirror hosts</a></li><li class="level-4"><a href="#installation-oc-mirror-installing-plugin_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Install the oc-mirror OpenShift CLI plugin</a></li><li class="level-4"><a href="#installation-adding-registry-pull-secret_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Configure credentials that allow images to be mirrored</a></li><li class="level-4"><a href="#using-oc-mirror_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirror an image set to a mirror registry</a></li><li class="level-4"><a href="#oc-mirror-building-image-set-config-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Create the image set configuration</a></li><li class="level-4"><a href="#oc-mirror-workflows-table_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Comparison of oc-mirror workflows</a></li><li class="level-4"><a href="#oc-mirror-workflows-partially-disconnected-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirror an image set in a partially disconnected environment</a></li><li class="level-4"><a href="#oc-mirror-workflows-fully-disconnected-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirror an image set in a fully disconnected environment</a></li><li class="level-4"><a href="#mirror-to-disk-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirror from mirror to disk</a></li><li class="level-4"><a href="#disk-mirror-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirror from disk to mirror</a></li><li class="level-4"><a href="#oc-mirror-custom-resources-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">About custom resources generated by oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-restricted-fields_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Restrictions on modifying resources that are generated by the oc-mirror plugin</a></li><li class="level-4"><a href="#oc-mirror-updating-cluster-manifests-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Configure your cluster to use the resources generated by oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-workflows-delete-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Deletion of images from your disconnected environment</a></li><li class="level-4"><a href="#oc-mirror-v2-procedure-garbage-collector_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Resolve storage cleanup issues in the distribution registry</a></li><li class="level-4"><a href="#oc-mirror-procedure-delete-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Delete images from a disconnected environment</a></li><li class="level-4"><a href="#oc-mirror-v2-about-dry-run_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Verify your selected images for mirroring</a></li><li class="level-4"><a href="#oc-mirror-dry-run-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Perform a dry run for oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-troubleshooting-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Troubleshoot oc-mirror plugin v2 errors</a></li><li class="level-4"><a href="#oc-mirror-enclave-support-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Benefits of enclave support</a></li><li class="level-5"><a href="#oc-mirror-enclave-how-to_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Enclave mirroring workflow</a></li><li class="level-4"><a href="#oc-mirror-enclave-support_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirror to an enclave</a></li><li class="level-4"><a href="#oc-mirror-proxy-support_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">oc-mirror plugin v2 support proxy setting</a></li><li class="level-4"><a href="#oc-mirror-signature-mirroring_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirror and verify image signatures in oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-signature-mirroring-procedure_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Disable signature mirroring for oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-about-sig-mirroring-verification_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Enable signature verification for oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-operator-catalog-filtering_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">How filtering works in the operator catalog</a></li><li class="level-4"><a href="#oc-mirror-imageset-config-parameters-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">ImageSet configuration parameters for oc-mirror plugin v2</a></li><li class="level-5"><a href="#delete-imagset-config-parameters_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">DeleteImageSetConfiguration parameters</a></li><li class="level-4"><a href="#oc-mirror-command-reference-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Command reference for oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-command-reference-delete-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Command reference for deleting images</a></li><li class="level-4"><a href="#oc-mirror-about-cache-and-workspace-dirs_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">About the --cache-dir and --workspace flags</a></li><li class="level-4"><a href="#oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2">Changes from oc-mirror plugin v1 to v2</a></li><li class="level-5"><a href="#oc-mirror-migration-process_migrate-from-oc-mirror-v1-to-v2">Migrating to oc-mirror plugin v2</a></li><li class="level-4"><a href="#installation-mirror-repository_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command">Mirroring the Red Hat OpenShift Container Platform image repository</a></li><li class="level-5"><a href="#prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command">Prerequisites for mirroring images with the oc adm command</a></li><li class="level-5"><a href="#installation-about-mirror-registry_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command">Mirror registry</a></li><li class="level-5"><a href="#olm-mirror-catalog_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command">Mirroring Operator catalogs for use with disconnected clusters</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#oc-mirror-v2-workflow_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">High level workflow</a></li><li class="level-4"><a href="#oc-mirror-v2-support_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">oc-mirror plugin v2 compatibility and support</a></li><li class="level-4"><a href="#prerequisites_oc-mirror-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Prerequisites for mirroring images with oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-preparing-mirror-hosts_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Preparing your mirror hosts</a></li><li class="level-4"><a href="#installation-oc-mirror-installing-plugin_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Installing the oc-mirror OpenShift CLI plugin</a></li><li class="level-4"><a href="#installation-adding-registry-pull-secret_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Configuring credentials that allow images to be mirrored</a></li><li class="level-4"><a href="#using-oc-mirror_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirroring an image set to a mirror registry</a></li><li class="level-4"><a href="#oc-mirror-building-image-set-config-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Creating the image set configuration</a></li><li class="level-4"><a href="#oc-mirror-workflows-table_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Comparison of oc-mirror workflows</a></li><li class="level-4"><a href="#oc-mirror-workflows-partially-disconnected-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirroring an image set in a partially disconnected environment</a></li><li class="level-4"><a href="#oc-mirror-workflows-fully-disconnected-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirroring an image set in a fully disconnected environment</a></li><li class="level-4"><a href="#mirror-to-disk-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirroring from mirror to disk</a></li><li class="level-4"><a href="#disk-mirror-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirroring from disk to mirror</a></li><li class="level-4"><a href="#oc-mirror-custom-resources-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">About custom resources generated by oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-restricted-fields_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Restrictions on modifying resources that are generated by the oc-mirror plugin</a></li><li class="level-4"><a href="#oc-mirror-updating-cluster-manifests-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Configuring your cluster to use the resources generated by oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-workflows-delete-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Deletion of images from your disconnected environment</a></li><li class="level-4"><a href="#oc-mirror-v2-procedure-garbage-collector_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Resolving storage cleanup issues in the distribution registry</a></li><li class="level-4"><a href="#oc-mirror-procedure-delete-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Deleting images from a disconnected environment</a></li><li class="level-4"><a href="#oc-mirror-v2-about-dry-run_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Verifying your selected images for mirroring</a></li><li class="level-4"><a href="#oc-mirror-dry-run-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Performing a dry run for oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-troubleshooting-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Troubleshooting oc-mirror plugin v2 errors</a></li><li class="level-4"><a href="#oc-mirror-enclave-support-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Benefits of enclave support</a></li><li class="level-5"><a href="#oc-mirror-enclave-how-to_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Enclave mirroring workflow</a></li><li class="level-4"><a href="#oc-mirror-enclave-support_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirroring to an enclave</a></li><li class="level-4"><a href="#oc-mirror-proxy-support_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">oc-mirror plugin v2 support proxy setting</a></li><li class="level-4"><a href="#oc-mirror-signature-mirroring_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirroring and verifying image signatures in oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-signature-mirroring-procedure_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Disabling signature mirroring for oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-about-sig-mirroring-verification_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Enabling signature verification for oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-operator-catalog-filtering_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">How filtering works in the operator catalog</a></li><li class="level-4"><a href="#oc-mirror-imageset-config-parameters-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">ImageSet configuration parameters for oc-mirror plugin v2</a></li><li class="level-5"><a href="#delete-imagset-config-parameters_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">DeleteImageSetConfiguration parameters</a></li><li class="level-4"><a href="#oc-mirror-command-reference-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Command reference for oc-mirror plugin v2</a></li><li class="level-4"><a href="#oc-mirror-command-reference-delete-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Command reference for deleting images</a></li><li class="level-4"><a href="#oc-mirror-about-cache-and-workspace-dirs_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">About the --cache-dir and --workspace flags</a></li><li class="level-4"><a href="#oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2">Changes from oc-mirror plugin v1 to v2</a></li><li class="level-5"><a href="#oc-mirror-migration-process_migrate-from-oc-mirror-v1-to-v2">Migrating to oc-mirror plugin v2</a></li><li class="level-4"><a href="#installation-mirror-repository_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command">Mirroring the Red Hat OpenShift Container Platform image repository</a></li><li class="level-5"><a href="#prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command">Prerequisites for mirroring images with the oc adm command</a></li><li class="level-5"><a href="#installation-about-mirror-registry_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command">Mirror registry</a></li><li class="level-5"><a href="#olm-mirror-catalog_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command">Mirroring Operator catalogs for use with disconnected clusters</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirror images to a mirror registry using oc-mirror v2</h3>
+<h3 id="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">oc-mirror plugin v2</h3>
 <div class="paragraph _abstract">
 <p>The oc-mirror OpenShift CLI (<code>oc</code>) plugin is a single tool that mirrors all required Red&#160;Hat OpenShift Container Platform content and other images to your mirror registry.</p>
 </div>
@@ -1806,13 +1830,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-preparing-mirror-hosts_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Prepare your mirror hosts</h4>
+<h4 id="oc-mirror-preparing-mirror-hosts_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Preparing your mirror hosts</h4>
 <div class="paragraph _abstract">
 <p>To use the oc-mirror plugin v2 for image mirroring, you must install the plugin and create a file with credentials for container images, enabling you to mirror from Red&#160;Hat to your mirror.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="installation-oc-mirror-installing-plugin_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Install the oc-mirror OpenShift CLI plugin</h4>
+<h4 id="installation-oc-mirror-installing-plugin_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Installing the oc-mirror OpenShift CLI plugin</h4>
 <div class="paragraph _abstract">
 <p>You can install the oc-mirror OpenShift CLI plugin to manage image sets in disconnected environments.</p>
 </div>
@@ -1914,7 +1938,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="installation-adding-registry-pull-secret_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Configure credentials that allow images to be mirrored</h4>
+<h4 id="installation-adding-registry-pull-secret_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Configuring credentials that allow images to be mirrored</h4>
 <div class="paragraph _abstract">
 <p>Create a container image registry credentials file so that you can mirror images from Red&#160;Hat to your mirror. Complete the following steps on the installation host.</p>
 </div>
@@ -2041,13 +2065,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="using-oc-mirror_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirror an image set to a mirror registry</h4>
+<h4 id="using-oc-mirror_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirroring an image set to a mirror registry</h4>
 <div class="paragraph _abstract">
 <p>Mirroring an image set to a mirror registry ensures that the required images are available in a secure and controlled environment, facilitating smoother deployments, updates, and maintenance tasks.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-building-image-set-config-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Create the image set configuration</h4>
+<h4 id="oc-mirror-building-image-set-config-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Creating the image set configuration</h4>
 <div class="paragraph _abstract">
 <p>Before you can use the oc-mirror plugin v2 to mirror images, you must create an image set configuration file.
 This image set configuration file defines which Red&#160;Hat OpenShift Container Platform releases, Operators, and other images to mirror, along with other configuration settings for the oc-mirror plugin v2.</p>
@@ -2190,7 +2214,7 @@ mirror:
 </table>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-workflows-partially-disconnected-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirror an image set in a partially disconnected environment</h4>
+<h4 id="oc-mirror-workflows-partially-disconnected-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirroring an image set in a partially disconnected environment</h4>
 <div class="paragraph _abstract">
 <p>You can mirror image sets to a registry using the oc-mirror plugin v2 in environments with restricted internet access.</p>
 </div>
@@ -2258,7 +2282,7 @@ mirror:
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-workflows-fully-disconnected-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirror an image set in a fully disconnected environment</h4>
+<h4 id="oc-mirror-workflows-fully-disconnected-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirroring an image set in a fully disconnected environment</h4>
 <div class="paragraph _abstract">
 <p>You can mirror image sets in a fully disconnected environment where the Red&#160;Hat OpenShift Container Platform cluster cannot access the public internet.</p>
 </div>
@@ -2280,7 +2304,7 @@ mirror:
 </div>
 </div>
 <div class="sect3">
-<h4 id="mirror-to-disk-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirror from mirror to disk</h4>
+<h4 id="mirror-to-disk-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirroring from mirror to disk</h4>
 <div class="paragraph _abstract">
 <p>You can use the oc-mirror plugin v2 to generate an image set and save the content to disk. The plugin retrieves images from the source specified in the image set configuration and packs them into a tar archive.</p>
 </div>
@@ -2339,7 +2363,7 @@ mirror:
 </div>
 </div>
 <div class="sect3">
-<h4 id="disk-mirror-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirror from disk to mirror</h4>
+<h4 id="disk-mirror-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirroring from disk to mirror</h4>
 <div class="paragraph _abstract">
 <p>You can use the oc-mirror plugin v2 to mirror image sets from a disk to a target mirror registry.</p>
 </div>
@@ -2443,7 +2467,7 @@ mirror:
 <p>The following table lists the resources and their fields that must remain unchanged:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 485. Fields that must not be modified in the resources generated by oc-mirror</caption>
+<caption class="title">Table 503. Fields that must not be modified in the resources generated by oc-mirror</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -2594,7 +2618,7 @@ mirror:
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-updating-cluster-manifests-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Configure your cluster to use the resources generated by oc-mirror plugin v2</h4>
+<h4 id="oc-mirror-updating-cluster-manifests-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Configuring your cluster to use the resources generated by oc-mirror plugin v2</h4>
 <div class="paragraph _abstract">
 <p>After you have mirrored your image set to the mirror registry, you must apply the generated <code>ImageDigestMirrorSet</code> (IDMS), <code>ImageTagMirrorSet</code> (ITMS), <code>CatalogSource</code>, and <code>UpdateService</code> resources to the cluster.</p>
 </div>
@@ -2843,7 +2867,7 @@ delete:
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-v2-procedure-garbage-collector_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Resolve storage cleanup issues in the distribution registry</h4>
+<h4 id="oc-mirror-v2-procedure-garbage-collector_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Resolving storage cleanup issues in the distribution registry</h4>
 <div class="paragraph _abstract">
 <p>A known issue in the distribution registry prevents the garbage collector from freeing up storage as expected. This issue does not occur when you use Red&#160;Hat Quay.</p>
 </div>
@@ -2909,7 +2933,7 @@ health:
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-procedure-delete-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Delete images from a disconnected environment</h4>
+<h4 id="oc-mirror-procedure-delete-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Deleting images from a disconnected environment</h4>
 <div class="paragraph _abstract">
 <p>You can delete images from a disconnected environment using the oc-mirror plugin.</p>
 </div>
@@ -3064,7 +3088,7 @@ The Operator catalog image will not get deleted. Its presence in the registry mi
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-v2-about-dry-run_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Verify your selected images for mirroring</h4>
+<h4 id="oc-mirror-v2-about-dry-run_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Verifying your selected images for mirroring</h4>
 <div class="paragraph _abstract">
 <p>You can use oc-mirror plugin v2 to perform a test run (dry run) that does not actually mirror any images. This enables you to review the list of images that would be mirrored.</p>
 </div>
@@ -3073,7 +3097,7 @@ The Operator catalog image will not get deleted. Its presence in the registry mi
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-dry-run-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Perform a dry run for oc-mirror plugin v2</h4>
+<h4 id="oc-mirror-dry-run-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Performing a dry run for oc-mirror plugin v2</h4>
 <div class="paragraph _abstract">
 <p>Verify your image set configuration by performing a dry run without mirroring any images. This ensures your setup is correct and prevents unintended changes.</p>
 </div>
@@ -3145,7 +3169,7 @@ please re-run the mirror to disk process
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-troubleshooting-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Troubleshoot oc-mirror plugin v2 errors</h4>
+<h4 id="oc-mirror-troubleshooting-v2_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Troubleshooting oc-mirror plugin v2 errors</h4>
 <div class="paragraph _abstract">
 <p>oc-mirror plugin v2 now logs all image mirroring errors in a separate file, making it easier to track and diagnose failures.</p>
 </div>
@@ -3330,7 +3354,7 @@ error mirroring image docker://registry.redhat.io/3scale-amp2/system-rhel7@sha25
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-enclave-support_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirror to an enclave</h4>
+<h4 id="oc-mirror-enclave-support_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirroring to an enclave</h4>
 <div class="paragraph _abstract">
 <p>When you mirror to an enclave, you must first transfer the necessary images from one or more enclaves into the enterprise central registry.</p>
 </div>
@@ -3526,7 +3550,7 @@ file:///disk-enc1/</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-signature-mirroring_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirror and verify image signatures in oc-mirror plugin v2</h4>
+<h4 id="oc-mirror-signature-mirroring_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Mirroring and verifying image signatures in oc-mirror plugin v2</h4>
 <div class="paragraph _abstract">
 <p>The oc-mirror plugin v2 supports mirroring and verifying cosign tag-based signatures for container images. By default, signature mirroring is enabled. When enabled, the oc-mirror plugin v2 mirrors <code>Sigstore</code> tag-based signatures for the following images:</p>
 </div>
@@ -3567,7 +3591,7 @@ file:///disk-enc1/</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-signature-mirroring-procedure_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Disable signature mirroring for oc-mirror plugin v2</h4>
+<h4 id="oc-mirror-signature-mirroring-procedure_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Disabling signature mirroring for oc-mirror plugin v2</h4>
 <div class="paragraph _abstract">
 <p>You can disable signature mirroring for all images by providing the <code>--remove-signatures</code> flag for the <code>oc mirror</code> command when the destination registry does not support signature storage or when you need to bypass invalid or expired source signatures.</p>
 </div>
@@ -3618,7 +3642,7 @@ default-docker:
 </div>
 </div>
 <div class="sect3">
-<h4 id="oc-mirror-about-sig-mirroring-verification_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Enable signature verification for oc-mirror plugin v2</h4>
+<h4 id="oc-mirror-about-sig-mirroring-verification_mirror-images-to-a-mirror-registry-using-oc-mirror-v2">Enabling signature verification for oc-mirror plugin v2</h4>
 <div class="paragraph _abstract">
 <p>Starting with Red&#160;Hat OpenShift Container Platform 4.19, the oc-mirror plugin v2 supports signature verification, which is disabled by default.</p>
 </div>
@@ -3697,7 +3721,7 @@ default-docker:
 <p>When oc-mirror plugin v2 selects bundles for mirroring, it does not infer Group Version Kind (GVK) or bundle dependencies, omitting them from the mirroring set. Instead, it strictly adheres to the user instructions. You must explicitly specify any required dependent packages and their versions.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 486. Use the following table to see what bundle versions are included in different scenarios</caption>
+<caption class="title">Table 504. Use the following table to see what bundle versions are included in different scenarios</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -4137,7 +4161,7 @@ You might see errors if this filtering leads to a channel with multiple heads. Y
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 487. <code>ImageSetConfiguration</code> parameters</caption>
+<caption class="title">Table 505. <code>ImageSetConfiguration</code> parameters</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 40%;">
@@ -5417,7 +5441,7 @@ The default value is <code>false</code></p>
 <p>To remove images with the oc-mirror plugin v2, you must use a <code>DeleteImageSetConfiguration.yaml</code> configuration file that defines which images to delete from the mirror registry. The following table lists the available parameters for the <code>DeleteImageSetConfiguration</code> resource.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 488. <code>DeleteImageSetConfiguration</code> parameters</caption>
+<caption class="title">Table 506. <code>DeleteImageSetConfiguration</code> parameters</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 40%;">
@@ -6134,7 +6158,7 @@ The default value is <code>false</code></p>
 <p>The following tables describe the <code>oc mirror</code> subcommands and flags for oc-mirror plugin v2:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 489. Subcommands and flags for the oc-mirror plugin v2</caption>
+<caption class="title">Table 507. Subcommands and flags for the oc-mirror plugin v2</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -6161,7 +6185,7 @@ The default value is <code>false</code></p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 490. oc mirror flags</caption>
+<caption class="title">Table 508. oc mirror flags</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -6289,7 +6313,7 @@ The default value is <code>false</code></p>
 <p>The following tables describe the <code>oc mirror</code> subcommands and flags for deleting images:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 491. Subcommands and flags for the deleting images</caption>
+<caption class="title">Table 509. Subcommands and flags for the deleting images</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -7245,7 +7269,7 @@ mirrored, extract it and pin it to the release:</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 15:58:47 +0100
+Last updated 2026-10-12 13:29:35 +0100
 </div>
 </div>
 <style>

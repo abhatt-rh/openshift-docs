@@ -568,10 +568,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="compare-platform-options-con_compare-platform-options.html">Compare platform options</a>
 </li>
-<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
-</li>
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
@@ -582,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -612,6 +608,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
+<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
+</li>
+<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
+</li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
 <li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
@@ -675,7 +677,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
@@ -847,7 +849,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-registry-allowlists-and-blocks-con_configure-registry-allowlists-and-blocks.html">Configure registry allowlists and blocks</a>
 </li>
-<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">About adding registries that allow image short names</a>
+<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">Configure short-name search registries</a>
 </li>
 <li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
 </li>
@@ -908,8 +910,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
 </li>
-<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
-</li>
 <li><a href="change-the-installed-file-system-configuration-for-new-nodes-con_change-the-installed-file-system-configuration-for-new-nodes.html">Change the installed file system configuration for new nodes</a>
 </li>
 <li><a href="change-the-installed-raid-configuration-for-new-nodes-con_change-the-installed-raid-configuration-for-new-nodes.html">Change the installed RAID configuration for new nodes</a>
@@ -946,7 +946,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1057,11 +1057,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
+</li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1241,19 +1267,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
-</li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
-</li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
-</li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
-</li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
-</li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1485,6 +1499,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
 </li>
+<li><a href="graceful-shutdown-cluster-intro_graceful-cluster-shutdown.html">Shutting down the cluster gracefully</a>
+</li>
+<li><a href="graceful-restart-cluster-intro_graceful-cluster-restart.html">Restarting the cluster gracefully</a>
+</li>
+<li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernating an Red&#160;Hat OpenShift Container Platform cluster</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
@@ -1496,6 +1516,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="recovering-unhealthy-etcd-cluster-for-hosted-control-planes-con_recovering-unhealthy-etcd-cluster-for-hosted-control-planes.html">Recovering an unhealthy etcd cluster for hosted control planes</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-a-hosted-cluster-intro_backup-and-restore-etcd-on-a-hosted-cluster.html">Backing up and restoring etcd on a hosted cluster</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a>
+</li>
+<li><a href="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot.html">Backing up etcd data for hosted control planes by using the etcd snapshot method</a>
+</li>
+<li><a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a>
 </li>
 <li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
 </li>
@@ -1509,8 +1539,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
@@ -1523,15 +1551,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
+<li><a href="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data.html">Backing up and restoring etcd data</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
+<li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replacing an unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
@@ -1627,13 +1655,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html">Restoring an etcd snapshot on a hosted cluster</a>
+<li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-restore_etcd-best-practices-restore-etcd-data.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replacing a healthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1643,7 +1667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1772,7 +1796,7 @@ As a cluster administrator, you must manually approve the update request to upda
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 15:58:47 +0100
+Last updated 2026-10-12 13:29:35 +0100
 </div>
 </div>
 <style>

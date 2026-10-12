@@ -568,10 +568,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="compare-platform-options-con_compare-platform-options.html">Compare platform options</a>
 </li>
-<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
-</li>
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
@@ -582,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -611,6 +607,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_install.html">Install</a>
 <ul class="sectlevel2">
+<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
+</li>
+<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
+</li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
 <li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
@@ -674,7 +676,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
@@ -846,7 +848,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-registry-allowlists-and-blocks-con_configure-registry-allowlists-and-blocks.html">Configure registry allowlists and blocks</a>
 </li>
-<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">About adding registries that allow image short names</a>
+<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">Configure short-name search registries</a>
 </li>
 <li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
 </li>
@@ -908,8 +910,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
 </li>
-<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
-</li>
 <li><a href="change-the-installed-file-system-configuration-for-new-nodes-con_change-the-installed-file-system-configuration-for-new-nodes.html">Change the installed file system configuration for new nodes</a>
 </li>
 <li><a href="change-the-installed-raid-configuration-for-new-nodes-con_change-the-installed-raid-configuration-for-new-nodes.html">Change the installed RAID configuration for new nodes</a>
@@ -946,7 +946,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1057,11 +1057,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
+</li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1241,19 +1267,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
-</li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
-</li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
-</li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
-</li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
-</li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1485,6 +1499,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
 </li>
+<li><a href="graceful-shutdown-cluster-intro_graceful-cluster-shutdown.html">Shutting down the cluster gracefully</a>
+</li>
+<li><a href="graceful-restart-cluster-intro_graceful-cluster-restart.html">Restarting the cluster gracefully</a>
+</li>
+<li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernating an Red&#160;Hat OpenShift Container Platform cluster</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
@@ -1496,6 +1516,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="recovering-unhealthy-etcd-cluster-for-hosted-control-planes-con_recovering-unhealthy-etcd-cluster-for-hosted-control-planes.html">Recovering an unhealthy etcd cluster for hosted control planes</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-a-hosted-cluster-intro_backup-and-restore-etcd-on-a-hosted-cluster.html">Backing up and restoring etcd on a hosted cluster</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a>
+</li>
+<li><a href="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot.html">Backing up etcd data for hosted control planes by using the etcd snapshot method</a>
+</li>
+<li><a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a>
 </li>
 <li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
 </li>
@@ -1509,8 +1539,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
@@ -1523,15 +1551,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
+<li><a href="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data.html">Backing up and restoring etcd data</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
+<li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replacing an unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
@@ -1627,13 +1655,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html">Restoring an etcd snapshot on a hosted cluster</a>
+<li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-restore_etcd-best-practices-restore-etcd-data.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replacing a healthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1643,7 +1667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1669,7 +1693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#prepare-to-install-on-ibm-z-intro_prepare-to-install-on-ibm-z">Prepare to install on IBM Z</a></li><li class="level-5"><a href="#choosing-an-method-to-install-ocp-on-ibm-z_prepare-to-install-on-ibm-z">Choosing a method to install Red Hat OpenShift Container Platform on IBM Z or IBM LinuxONE</a></li><li class="level-5"><a href="#ibm-z-upi-installation-overview_prepare-to-install-on-ibm-z">User-provisioned infrastructure installation of Red Hat OpenShift Container Platform on IBM Z</a></li><li class="level-5"><a href="#installation-machine-requirements_installing-ibm-z-reqs">Required machines for cluster installation</a></li><li class="level-6"><a href="#installation-minimum-resource-requirements_installing-ibm-z-reqs">Minimum resource requirements for cluster installation</a></li><li class="level-6"><a href="#minimum-ibm-z-system-requirements_prepare-to-install-on-ibm-z">Minimum IBM Z system environment</a></li><li class="level-6"><a href="#preferred-ibm-z-system-requirements_prepare-to-install-on-ibm-z">Preferred IBM Z system environment</a></li><li class="level-6"><a href="#csr-management_prepare-to-install-on-ibm-z">Certificate signing requests management</a></li><li class="level-6"><a href="#installation-network-user-infra_prepare-to-install-on-ibm-z">Networking requirements for user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-dns-user-infra_prepare-to-install-on-ibm-z">User-provisioned DNS requirements</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra_prepare-to-install-on-ibm-z">Load balancing requirements for user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-entitlements_prepare-to-install-on-ibm-z">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-obtaining-installer_upi-ibm-z-preparing-to-install">Obtaining the installation program</a></li><li class="level-5"><a href="#cli-installing-cli-linux_prepare-to-install-on-ibm-z">Installing the OpenShift CLI on Linux</a></li><li class="level-5"><a href="#cli-installing-cli-windows_prepare-to-install-on-ibm-z">Installing the OpenShift CLI on Windows</a></li><li class="level-5"><a href="#cli-installing-cli-macos_prepare-to-install-on-ibm-z">Installing the OpenShift CLI on macOS</a></li><li class="level-5"><a href="#ssh-agent-using_upi-ibm-z-preparing-to-install">Generating a key pair for cluster node SSH access</a></li><li class="level-5"><a href="#installation-user-provisioned-validating-dns_prepare-to-install-on-ibm-z">Validating DNS resolution for user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-configuration-parameters_installation-config-parameters-ibm-z">Available installation configuration parameters for IBM Z</a></li><li class="level-6"><a href="#installation-configuration-parameters-required_installation-config-parameters-ibm-z">Required configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-network_installation-config-parameters-ibm-z">Network configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional_installation-config-parameters-ibm-z">Optional configuration parameters</a></li><li class="level-4"><a href="#install-on-ibm-z-z-vm-intro_install-on-ibm-z-z-vm">Install on IBM Z (z/VM)</a></li><li class="level-5"><a href="#prereqs-ibm-z-upi_install-on-ibm-z-z-vm">Prerequisites for installing a cluster on IBM Z</a></li><li class="level-5"><a href="#installation-infrastructure-user-infra_installing-ibm-z">Preparing the user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra-example_install-on-ibm-z-z-vm">Example load balancer configuration for user-provisioned clusters</a></li><li class="level-5"><a href="#installation-initializing-manual_install-on-ibm-z-z-vm">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-bare-metal-config-yaml_installing-ibm-z">Sample install-config.yaml file for IBM Z</a></li><li class="level-6"><a href="#installation-configure-proxy_install-on-ibm-z-z-vm">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#installation-three-node-cluster_installing-ibm-z">Configuring a three-node cluster</a></li><li class="level-5"><a href="#nw-operator-cr_install-on-ibm-z-z-vm">Cluster Network Operator configuration</a></li><li class="level-6"><a href="#nw-operator-cr-cno-object_install-on-ibm-z-z-vm">Cluster Network Operator configuration object</a></li><li class="level-6"><a href="#nw-operator-cr-defaultnetwork_install-on-ibm-z-z-vm">defaultNetwork object configuration</a></li><li class="level-6"><a href="#nw-operator-configuration-parameters-for-ovn-sdn_install-on-ibm-z-z-vm">Configuration for the OVN-Kubernetes network plugin</a></li><li class="level-5"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-ibm-z">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-5"><a href="#configuring-boot-volume-encryption-ibm-z-linuxone-environment_install-on-ibm-z-z-vm">Configuring boot volume encryption in an IBM Z or IBM LinuxONE environment</a></li><li class="level-6"><a href="#configuring-luks-encryption-via-cex-ibm-z-linuxone-environment_installing-ibm-z">LUKS encryption via CEX in an IBM Z or IBM LinuxONE environment</a></li><li class="level-6"><a href="#configuring-nbde-static-ip-ibm-z-linuxone-environment_installing-ibm-z">Configuring NBDE with static IP in an IBM Z or IBM LinuxONE environment</a></li><li class="level-5"><a href="#installation-user-infra-machines-iso-ibm-z_installing-ibm-z">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-6"><a href="#installation-user-infra-machines-routing-bonding_installing-ibm-z">Networking and bonding options for ISO installations</a></li><li class="level-5"><a href="#installation-installing-bare-metal_install-on-ibm-z-z-vm">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-ibm-z-z-vm">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_installing-ibm-z">Approve the certificate signing requests for your machines</a></li><li class="level-5"><a href="#installation-operators-config_install-on-ibm-z-z-vm">Initial Operator configuration</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-ibm-z-z-vm">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_installing-ibm-z">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-ibm-z-z-vm">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#install-on-ibm-z-lpar-intro_install-on-ibm-z-lpar">Install on IBM Z (LPAR)</a></li><li class="level-5"><a href="#prereqs-ibm-z-upi_install-on-ibm-z-lpar">Prerequisites for installing a cluster on IBM Z</a></li><li class="level-5"><a href="#installation-infrastructure-user-infra_installing-ibm-z-lpar">Preparing the user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra-example_install-on-ibm-z-lpar">Example load balancer configuration for user-provisioned clusters</a></li><li class="level-5"><a href="#installation-initializing-manual_install-on-ibm-z-lpar">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-bare-metal-config-yaml_installing-ibm-z-lpar">Sample install-config.yaml file for IBM Z</a></li><li class="level-6"><a href="#installation-configure-proxy_install-on-ibm-z-lpar">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#installation-three-node-cluster_installing-ibm-z-lpar">Configuring a three-node cluster</a></li><li class="level-5"><a href="#nw-operator-cr_install-on-ibm-z-lpar">Cluster Network Operator configuration</a></li><li class="level-6"><a href="#nw-operator-cr-cno-object_install-on-ibm-z-lpar">Cluster Network Operator configuration object</a></li><li class="level-6"><a href="#nw-operator-cr-defaultnetwork_install-on-ibm-z-lpar">defaultNetwork object configuration</a></li><li class="level-6"><a href="#nw-operator-configuration-parameters-for-ovn-sdn_install-on-ibm-z-lpar">Configuration for the OVN-Kubernetes network plugin</a></li><li class="level-5"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-ibm-z-lpar">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-5"><a href="#configuring-boot-volume-encryption-ibm-z-linuxone-environment_install-on-ibm-z-lpar">Configuring boot volume encryption in an IBM Z or IBM LinuxONE environment</a></li><li class="level-6"><a href="#configuring-luks-encryption-via-cex-ibm-z-linuxone-environment_installing-ibm-z-lpar">LUKS encryption via CEX in an IBM Z or IBM LinuxONE environment</a></li><li class="level-6"><a href="#configuring-nbde-static-ip-ibm-z-linuxone-environment_installing-ibm-z-lpar">Configuring NBDE with static IP in an IBM Z or IBM LinuxONE environment</a></li><li class="level-5"><a href="#installation-user-infra-machines-iso-ibm-z_installing-ibm-z-lpar">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-6"><a href="#installation-user-infra-machines-routing-bonding_installing-ibm-z-lpar">Networking and bonding options for ISO installations</a></li><li class="level-5"><a href="#installation-installing-bare-metal_install-on-ibm-z-lpar">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-ibm-z-lpar">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_installing-ibm-z-lpar">Approve the certificate signing requests for your machines</a></li><li class="level-5"><a href="#installation-operators-config_install-on-ibm-z-lpar">Initial Operator configuration</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-ibm-z-lpar">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_installing-ibm-z-lpar">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-ibm-z-lpar">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#install-on-ibm-z-kvm-intro_install-on-ibm-z-kvm">Install on IBM Z (KVM)</a></li><li class="level-5"><a href="#prereqs-ibm-z-kvm-upi_install-on-ibm-z-kvm">Prerequisites for installing a cluster on IBM Z with RHEL</a></li><li class="level-5"><a href="#installation-infrastructure-user-infra_installing-ibm-z-kvm">Preparing the user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra-example_install-on-ibm-z-kvm">Example load balancer configuration for user-provisioned clusters</a></li><li class="level-5"><a href="#installation-initializing-manual_install-on-ibm-z-kvm">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-bare-metal-config-yaml_installing-ibm-z-kvm">Sample install-config.yaml file for IBM Z</a></li><li class="level-6"><a href="#installation-configure-proxy_install-on-ibm-z-kvm">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#installation-three-node-cluster_installing-ibm-z-kvm">Configuring a three-node cluster</a></li><li class="level-5"><a href="#nw-operator-cr_install-on-ibm-z-kvm">Cluster Network Operator configuration</a></li><li class="level-6"><a href="#nw-operator-cr-cno-object_install-on-ibm-z-kvm">Cluster Network Operator configuration object</a></li><li class="level-6"><a href="#nw-operator-cr-defaultnetwork_install-on-ibm-z-kvm">defaultNetwork object configuration</a></li><li class="level-6"><a href="#nw-operator-configuration-parameters-for-ovn-sdn_install-on-ibm-z-kvm">Configuration for the OVN-Kubernetes network plugin</a></li><li class="level-5"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-ibm-z-kvm">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-5"><a href="#installation-ibm-z-kvm-user-infra-installing-rhcos_install-on-ibm-z-kvm">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-6"><a href="#configuring-encryption-kvm-ibm-z-linuxone-environment_install-on-ibm-z-kvm">Configuring encryption for nodes in an IBM Z or IBM LinuxONE environment</a></li><li class="level-6"><a href="#installation-user-infra-machines-iso-ibm-z_kvm_install-on-ibm-z-kvm">Fast-track installation by using a prepackaged QCOW2 disk image</a></li><li class="level-6"><a href="#installation-user-infra-machines-iso-ibm-z-kvm-full_install-on-ibm-z-kvm">Full installation on a new QCOW2 disk image</a></li><li class="level-6"><a href="#installation-user-infra-machines-routing-bonding_installing-ibm-z-kvm">Networking options for ISO installations</a></li><li class="level-5"><a href="#installation-installing-bare-metal_install-on-ibm-z-kvm">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-ibm-z-kvm">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_installing-ibm-z-kvm">Approve the certificate signing requests for your machines</a></li><li class="level-5"><a href="#installation-operators-config_install-on-ibm-z-kvm">Initial Operator configuration</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-ibm-z-kvm">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_installing-ibm-z-kvm">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-ibm-z-kvm">Telemetry access for Red Hat OpenShift Container Platform</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#prepare-to-install-on-ibm-z-intro_prepare-to-install-on-ibm-z">Prepare to install on IBM Z</a></li><li class="level-5"><a href="#choosing-an-method-to-install-ocp-on-ibm-z_prepare-to-install-on-ibm-z">Choosing a method to install Red Hat OpenShift Container Platform on IBM Z or IBM LinuxONE</a></li><li class="level-5"><a href="#ibm-z-upi-installation-overview_prepare-to-install-on-ibm-z">User-provisioned infrastructure installation of Red Hat OpenShift Container Platform on IBM Z</a></li><li class="level-5"><a href="#installation-machine-requirements_installing-ibm-z-reqs">Required machines for cluster installation</a></li><li class="level-6"><a href="#installation-minimum-resource-requirements_installing-ibm-z-reqs">Minimum resource requirements for cluster installation</a></li><li class="level-6"><a href="#minimum-ibm-z-system-requirements_prepare-to-install-on-ibm-z">Minimum IBM Z system environment</a></li><li class="level-6"><a href="#preferred-ibm-z-system-requirements_prepare-to-install-on-ibm-z">Preferred IBM Z system environment</a></li><li class="level-6"><a href="#csr-management_prepare-to-install-on-ibm-z">Certificate signing requests management</a></li><li class="level-6"><a href="#installation-network-user-infra_prepare-to-install-on-ibm-z">Networking requirements for user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-dns-user-infra_prepare-to-install-on-ibm-z">User-provisioned DNS requirements</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra_prepare-to-install-on-ibm-z">Load balancing requirements for user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-entitlements_prepare-to-install-on-ibm-z">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-obtaining-installer_upi-ibm-z-preparing-to-install">Obtaining the installation program</a></li><li class="level-5"><a href="#cli-installing-cli-linux_prepare-to-install-on-ibm-z">Installing the OpenShift CLI on Linux</a></li><li class="level-5"><a href="#cli-installing-cli-windows_prepare-to-install-on-ibm-z">Installing the OpenShift CLI on Windows</a></li><li class="level-5"><a href="#cli-installing-cli-macos_prepare-to-install-on-ibm-z">Installing the OpenShift CLI on macOS</a></li><li class="level-5"><a href="#ssh-agent-using_upi-ibm-z-preparing-to-install">Generating a key pair for cluster node SSH access</a></li><li class="level-5"><a href="#installation-user-provisioned-validating-dns_prepare-to-install-on-ibm-z">Validating DNS resolution for user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-configuration-parameters_installation-config-parameters-ibm-z">Available installation configuration parameters for IBM Z</a></li><li class="level-6"><a href="#installation-configuration-parameters-required_installation-config-parameters-ibm-z">Required configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-network_installation-config-parameters-ibm-z">Network configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional_installation-config-parameters-ibm-z">Optional configuration parameters</a></li><li class="level-4"><a href="#install-on-ibm-z-z-vm-intro_install-on-ibm-z-z-vm">Install on IBM Z (z/VM)</a></li><li class="level-5"><a href="#prereqs-ibm-z-upi_install-on-ibm-z-z-vm">Prerequisites for installing a cluster on IBM Z</a></li><li class="level-5"><a href="#installation-infrastructure-user-infra_installing-ibm-z">Preparing the user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra-example_install-on-ibm-z-z-vm">Example load balancer configuration for user-provisioned clusters</a></li><li class="level-5"><a href="#installation-initializing-manual_install-on-ibm-z-z-vm">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-bare-metal-config-yaml_installing-ibm-z">Sample install-config.yaml file for IBM Z</a></li><li class="level-6"><a href="#installation-configure-proxy_install-on-ibm-z-z-vm">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#installation-three-node-cluster_installing-ibm-z">Configuring a three-node cluster</a></li><li class="level-5"><a href="#nw-operator-cr_install-on-ibm-z-z-vm">Cluster Network Operator configuration</a></li><li class="level-6"><a href="#nw-operator-cr-cno-object_install-on-ibm-z-z-vm">Cluster Network Operator configuration object</a></li><li class="level-6"><a href="#nw-operator-cr-defaultnetwork_install-on-ibm-z-z-vm">defaultNetwork object configuration</a></li><li class="level-6"><a href="#nw-operator-configuration-parameters-for-ovn-sdn_install-on-ibm-z-z-vm">Configuration for the OVN-Kubernetes network plugin</a></li><li class="level-5"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-ibm-z">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-5"><a href="#configuring-boot-volume-encryption-ibm-z-linuxone-environment_install-on-ibm-z-z-vm">Configuring boot volume encryption in an IBM Z or IBM LinuxONE environment</a></li><li class="level-6"><a href="#configuring-luks-encryption-via-cex-ibm-z-linuxone-environment_installing-ibm-z">LUKS encryption via CEX in an IBM Z or IBM LinuxONE environment</a></li><li class="level-6"><a href="#configuring-nbde-static-ip-ibm-z-linuxone-environment_installing-ibm-z">Configuring NBDE with static IP in an IBM Z or IBM LinuxONE environment</a></li><li class="level-5"><a href="#installation-user-infra-machines-iso-ibm-z_installing-ibm-z">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-6"><a href="#installation-user-infra-machines-routing-bonding_installing-ibm-z">Networking and bonding options for ISO installations</a></li><li class="level-5"><a href="#installation-installing-bare-metal_install-on-ibm-z-z-vm">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-ibm-z-z-vm">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_installing-ibm-z">Approve the certificate signing requests for your machines</a></li><li class="level-5"><a href="#installation-operators-config_install-on-ibm-z-z-vm">Initial Operator configuration</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-ibm-z-z-vm">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_installing-ibm-z">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-ibm-z-z-vm">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#install-on-ibm-z-lpar-intro_install-on-ibm-z-lpar">Install on IBM Z (LPAR)</a></li><li class="level-5"><a href="#prereqs-ibm-z-upi_install-on-ibm-z-lpar">Prerequisites for installing a cluster on IBM Z</a></li><li class="level-5"><a href="#installation-infrastructure-user-infra_installing-ibm-z-lpar">Preparing the user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra-example_install-on-ibm-z-lpar">Example load balancer configuration for user-provisioned clusters</a></li><li class="level-5"><a href="#installation-initializing-manual_install-on-ibm-z-lpar">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-bare-metal-config-yaml_installing-ibm-z-lpar">Sample install-config.yaml file for IBM Z</a></li><li class="level-6"><a href="#installation-configure-proxy_install-on-ibm-z-lpar">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#installation-three-node-cluster_installing-ibm-z-lpar">Configuring a three-node cluster</a></li><li class="level-5"><a href="#nw-operator-cr_install-on-ibm-z-lpar">Cluster Network Operator configuration</a></li><li class="level-6"><a href="#nw-operator-cr-cno-object_install-on-ibm-z-lpar">Cluster Network Operator configuration object</a></li><li class="level-6"><a href="#nw-operator-cr-defaultnetwork_install-on-ibm-z-lpar">defaultNetwork object configuration</a></li><li class="level-6"><a href="#nw-operator-configuration-parameters-for-ovn-sdn_install-on-ibm-z-lpar">Configuration for the OVN-Kubernetes network plugin</a></li><li class="level-5"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-ibm-z-lpar">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-5"><a href="#configuring-boot-volume-encryption-ibm-z-linuxone-environment_install-on-ibm-z-lpar">Configuring boot volume encryption in an IBM Z or IBM LinuxONE environment</a></li><li class="level-6"><a href="#configuring-luks-encryption-via-cex-ibm-z-linuxone-environment_installing-ibm-z-lpar">LUKS encryption via CEX in an IBM Z or IBM LinuxONE environment</a></li><li class="level-6"><a href="#configuring-nbde-static-ip-ibm-z-linuxone-environment_installing-ibm-z-lpar">Configuring NBDE with static IP in an IBM Z or IBM LinuxONE environment</a></li><li class="level-5"><a href="#installation-user-infra-machines-iso-ibm-z_installing-ibm-z-lpar">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-6"><a href="#installation-user-infra-machines-routing-bonding_installing-ibm-z-lpar">Networking and bonding options for ISO installations</a></li><li class="level-5"><a href="#installation-installing-bare-metal_install-on-ibm-z-lpar">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-ibm-z-lpar">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_installing-ibm-z-lpar">Approve the certificate signing requests for your machines</a></li><li class="level-5"><a href="#installation-operators-config_install-on-ibm-z-lpar">Initial Operator configuration</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-ibm-z-lpar">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_installing-ibm-z-lpar">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-ibm-z-lpar">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#install-on-ibm-z-kvm-intro_install-on-ibm-z-kvm">Install on IBM Z (KVM)</a></li><li class="level-5"><a href="#prereqs-ibm-z-kvm-upi_install-on-ibm-z-kvm">Prerequisites for installing a cluster on IBM Z with RHEL</a></li><li class="level-5"><a href="#installation-infrastructure-user-infra_installing-ibm-z-kvm">Preparing the user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra-example_install-on-ibm-z-kvm">Example load balancer configuration for user-provisioned clusters</a></li><li class="level-5"><a href="#installation-initializing-manual_install-on-ibm-z-kvm">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-bare-metal-config-yaml_installing-ibm-z-kvm">Sample install-config.yaml file for IBM Z</a></li><li class="level-6"><a href="#installation-configure-proxy_install-on-ibm-z-kvm">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#installation-three-node-cluster_installing-ibm-z-kvm">Configuring a three-node cluster</a></li><li class="level-5"><a href="#nw-operator-cr_install-on-ibm-z-kvm">Cluster Network Operator configuration</a></li><li class="level-6"><a href="#nw-operator-cr-cno-object_install-on-ibm-z-kvm">Cluster Network Operator configuration object</a></li><li class="level-6"><a href="#nw-operator-cr-defaultnetwork_install-on-ibm-z-kvm">defaultNetwork object configuration</a></li><li class="level-6"><a href="#nw-operator-configuration-parameters-for-ovn-sdn_install-on-ibm-z-kvm">Configuration for the OVN-Kubernetes network plugin</a></li><li class="level-5"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-ibm-z-kvm">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-5"><a href="#installation-ibm-z-kvm-user-infra-installing-rhcos_install-on-ibm-z-kvm">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-6"><a href="#configuring-encryption-kvm-ibm-z-linuxone-environment_install-on-ibm-z-kvm">Configuring encryption for nodes in an IBM Z or IBM LinuxONE environment</a></li><li class="level-6"><a href="#installation-user-infra-machines-iso-ibm-z_kvm_install-on-ibm-z-kvm">Fast-track installation by using a prepackaged QCOW2 disk image</a></li><li class="level-6"><a href="#installation-user-infra-machines-iso-ibm-z-kvm-full_install-on-ibm-z-kvm">Full installation on a new QCOW2 disk image</a></li><li class="level-6"><a href="#installation-user-infra-machines-routing-bonding_installing-ibm-z-kvm">Networking options for ISO installations</a></li><li class="level-5"><a href="#installation-installing-bare-metal_install-on-ibm-z-kvm">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-ibm-z-kvm">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_installing-ibm-z-kvm">Approve the certificate signing requests for your machines</a></li><li class="level-5"><a href="#installation-operators-config_install-on-ibm-z-kvm">Initial Operator configuration</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-ibm-z-kvm">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_installing-ibm-z-kvm">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-ibm-z-kvm">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#complete-ibm-z-post-installation-tasks-intro_complete-ibm-z-post-installation-tasks">Complete IBM Z post-installation tasks</a></li><li class="level-5"><a href="#configure-additional-devices-using-mco_complete-ibm-z-post-installation-tasks">Configuring additional devices by using the Machine Config Operator</a></li><li class="level-5"><a href="#configure-additional-devices-manually_complete-ibm-z-post-installation-tasks">Configuring additional devices manually</a></li><li class="level-5"><a href="#ibm-z-roce-network-cards_complete-ibm-z-post-installation-tasks">RoCE network cards</a></li><li class="level-5"><a href="#enabling-multipathing-fcp-luns_complete-ibm-z-post-installation-tasks">Enabling multipathing for FCP LUNs</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="install-on-ibm-z-intro_install-on-ibm-z">Install on IBM Z and LinuxONE</h3>
@@ -1703,7 +1727,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 375. IBM Z&#174; installation options</caption>
+<caption class="title">Table 393. IBM Z&#174; installation options</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 12.5%;">
@@ -1834,7 +1858,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 376. Minimum required hosts</caption>
+<caption class="title">Table 394. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1887,7 +1911,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 377. Minimum resource requirements</caption>
+<caption class="title">Table 395. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -1993,7 +2017,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To install Red&#160;Hat OpenShift Container Platform on IBM Z&#174; or IBM&#174; LinuxONE, your environment must meet minimum hardware, operating system, network, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 378. Supported IBM&#174; hardware</caption>
+<caption class="title">Table 396. Supported IBM&#174; hardware</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2122,7 +2146,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <div class="sect6">
 <h7 id="ibm-z-operating-system-requirements_prepare-to-install-on-ibm-z">IBM Z operating system requirements</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 379. Operating system requirements</caption>
+<caption class="title">Table 397. Operating system requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2168,7 +2192,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <div class="sect6">
 <h7 id="ibm-z-network-connectivity_prepare-to-install-on-ibm-z">IBM Z network connectivity</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 380. Network connectivity requirements</caption>
+<caption class="title">Table 398. Network connectivity requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2210,7 +2234,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <div class="sect6">
 <h7 id="ibm-z-disk-storage_prepare-to-install-on-ibm-z">Disk storage</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 381. Disk storage requirements</caption>
+<caption class="title">Table 399. Disk storage requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2292,7 +2316,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <div class="sect6">
 <h7 id="preferred-ibm-z-operating-system-requirements_prepare-to-install-on-ibm-z">IBM Z operating system requirements</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 382. Operating system requirements</caption>
+<caption class="title">Table 400. Operating system requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2424,7 +2448,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 383. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 401. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2756,7 +2780,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 384. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 402. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2805,7 +2829,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 385. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 403. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2912,7 +2936,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 386. Required DNS records</caption>
+<caption class="title">Table 404. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -3478,7 +3502,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 387. Application Ingress load balancer</caption>
+<caption class="title">Table 405. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -4245,7 +4269,7 @@ However, you must have an active subscription to access this page.</p>
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 388. Required parameters</caption>
+<caption class="title">Table 406. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4434,7 +4458,7 @@ However, you must have an active subscription to access this page.</p>
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 389. Network parameters</caption>
+<caption class="title">Table 407. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4697,7 +4721,7 @@ However, you must have an active subscription to access this page.</p>
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 390. Optional parameters</caption>
+<caption class="title">Table 408. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6159,7 +6183,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 391. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 409. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6312,7 +6336,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 392. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 410. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -6377,7 +6401,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 393. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 411. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6540,7 +6564,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 394. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 412. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6591,7 +6615,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 395. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 413. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6642,7 +6666,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 396. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 414. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6749,7 +6773,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-ibm-z-z-vm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 397. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 415. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6843,7 +6867,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-ibm-z-z-vm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 398. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 416. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6888,7 +6912,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-ibm-z-z-vm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 399. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 417. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6933,7 +6957,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-ibm-z-z-vm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 400. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 418. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9925,7 +9949,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 401. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 419. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10078,7 +10102,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 402. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 420. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -10143,7 +10167,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 403. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 421. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10306,7 +10330,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 404. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 422. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10357,7 +10381,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 405. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 423. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10408,7 +10432,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 406. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 424. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10515,7 +10539,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 407. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 425. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10609,7 +10633,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 408. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 426. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10654,7 +10678,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 409. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 427. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10699,7 +10723,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 410. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 428. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13749,7 +13773,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 411. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 429. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13902,7 +13926,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 412. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 430. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -13967,7 +13991,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 413. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 431. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14130,7 +14154,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 414. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 432. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14181,7 +14205,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 415. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 433. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14232,7 +14256,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 416. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 434. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14339,7 +14363,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 417. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 435. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14433,7 +14457,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 418. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 436. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14478,7 +14502,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 419. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 437. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14523,7 +14547,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 420. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 438. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -16656,6 +16680,523 @@ openshift-authentication-operator authentication-operator-69d5d8bf84-vh2n8      
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="complete-ibm-z-post-installation-tasks-intro_complete-ibm-z-post-installation-tasks">Complete IBM Z post-installation tasks</h4>
+<div class="paragraph _abstract">
+<p>After installing Red&#160;Hat OpenShift Container Platform, you can configure additional devices for your cluster in an IBM Z&#174; or IBM&#174; LinuxONE environment, which is installed with z/VM.</p>
+</div>
+<div class="sect4">
+<h5 id="configure-additional-devices-using-mco_complete-ibm-z-post-installation-tasks">Configuring additional devices by using the Machine Config Operator</h5>
+<div class="paragraph _abstract">
+<p>You can use the Machine Config Operator (MCO) to configure additional devices in an IBM Z&#174; or IBM&#174; LinuxONE environment. Configuring devices with the MCO is persistent but only allows specific configurations for compute nodes. MCO does not allow control plane nodes to have different configurations.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You are logged in to the cluster as a user with administrative privileges.</p>
+</li>
+<li>
+<p>The device must be available to the z/VM guest.</p>
+</li>
+<li>
+<p>The device is already attached.</p>
+</li>
+<li>
+<p>The device is not included in the <code>cio_ignore</code> list, which can be set in the kernel parameters.</p>
+</li>
+<li>
+<p>You have created a <code>MachineConfig</code> object file with the following YAML:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfigPool
+metadata:
+  name: worker0
+spec:
+  machineConfigSelector:
+    matchExpressions:
+      - {key: machineconfiguration.openshift.io/role, operator: In, values: [worker,worker0]}
+  nodeSelector:
+    matchLabels:
+      node-role.kubernetes.io/worker0: ""</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>To configure an FCP host adapter with N_Port Identifier Virtualization (NPIV) by adding a udev rule, complete the following steps:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Take the following sample udev rule <code>441-zfcp-host-0.0.8000.rules</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">ACTION=="add", SUBSYSTEM=="ccw", KERNEL=="0.0.8000", DRIVER=="zfcp", GOTO="cfg_zfcp_host_0.0.8000"
+ACTION=="add", SUBSYSTEM=="drivers", KERNEL=="zfcp", TEST=="[ccw/0.0.8000]", GOTO="cfg_zfcp_host_0.0.8000"
+GOTO="end_zfcp_host_0.0.8000"
+
+LABEL="cfg_zfcp_host_0.0.8000"
+ATTR{[ccw/0.0.8000]online}="1"
+
+LABEL="end_zfcp_host_0.0.8000"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Convert the rule to Base64 encoded by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ base64 /path/to/file/</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Copy the following MCO sample profile into a YAML file:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+   labels:
+     machineconfiguration.openshift.io/role: worker0
+   name: 99-worker0-devices
+spec:
+   config:
+     ignition:
+       version: 3.2.0
+     storage:
+       files:
+       - contents:
+           source: &lt;base64_data_uri&gt;
+         filesystem: root
+         mode: 420
+         path: /etc/udev/rules.d/41-zfcp-host-0.0.8000.rules</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>metadata.labels.machineconfiguration.openshift.io/role</code></dt>
+<dd>
+<p>Specifies the role you have defined in the machine config file.</p>
+</dd>
+<dt class="hdlist1"><code>spec.config.storage.files.contents.source</code></dt>
+<dd>
+<p>Specifies the data URI for the Base64 encoded udev rule. The value is the Base64 encoded string that you generated in the previous step, formatted as an Ignition data URI.</p>
+</dd>
+<dt class="hdlist1"><code>spec.config.storage.files.path</code></dt>
+<dd>
+<p>Specifies the path where the udev rule is located.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To configure an FCP LUN by adding a udev rule, complete the following steps. You can add new FCP LUNs or add additional paths to LUNs that are already configured with multipathing.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Take the following sample udev rule <code>41-zfcp-lun-0.0.8000:0x500507680d760026:0x00bc000000000000.rules</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">ACTION=="add", SUBSYSTEMS=="ccw", KERNELS=="0.0.8000", GOTO="start_zfcp_lun_0.0.8207"
+GOTO="end_zfcp_lun_0.0.8000"
+
+LABEL="start_zfcp_lun_0.0.8000"
+SUBSYSTEM=="fc_remote_ports", ATTR{port_name}=="0x500507680d760026", GOTO="cfg_fc_0.0.8000_0x500507680d760026"
+GOTO="end_zfcp_lun_0.0.8000"
+
+LABEL="cfg_fc_0.0.8000_0x500507680d760026"
+ATTR{[ccw/0.0.8000]0x500507680d760026/unit_add}="0x00bc000000000000"
+GOTO="end_zfcp_lun_0.0.8000"
+
+LABEL="end_zfcp_lun_0.0.8000"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Convert the rule to Base64 encoded by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ base64 /path/to/file/</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Copy the following MCO sample profile into a YAML file:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+   labels:
+     machineconfiguration.openshift.io/role: worker0
+   name: 99-worker0-devices
+spec:
+   config:
+     ignition:
+       version: 3.2.0
+     storage:
+       files:
+       - contents:
+           source: &lt;base64_data_uri&gt;
+         filesystem: root
+         mode: 420
+         path: /etc/udev/rules.d/41-zfcp-lun-0.0.8000:0x500507680d760026:0x00bc000000000000.rules</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>metadata.labels.machineconfiguration.openshift.io/role</code></dt>
+<dd>
+<p>Specifies the role you have defined in the machine config file.</p>
+</dd>
+<dt class="hdlist1"><code>spec.config.storage.files.contents.source</code></dt>
+<dd>
+<p>Specifies the data URI for the Base64 encoded udev rule. The value is the Base64 encoded string that you generated in the previous step, formatted as an Ignition data URI.</p>
+</dd>
+<dt class="hdlist1"><code>spec.config.storage.files.path</code></dt>
+<dd>
+<p>Specifies the path where the udev rule is located.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To configure a DASD device by adding a udev rule, complete the following steps:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Take the following sample udev rule <code>41-dasd-eckd-0.0.4444.rules</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">ACTION=="add", SUBSYSTEM=="ccw", KERNEL=="0.0.4444", DRIVER=="dasd-eckd", GOTO="cfg_dasd_eckd_0.0.4444"
+ACTION=="add", SUBSYSTEM=="drivers", KERNEL=="dasd-eckd", TEST=="[ccw/0.0.4444]", GOTO="cfg_dasd_eckd_0.0.4444"
+GOTO="end_dasd_eckd_0.0.4444"
+
+LABEL="cfg_dasd_eckd_0.0.4444"
+ATTR{[ccw/0.0.4444]online}="1"
+
+LABEL="end_dasd_eckd_0.0.4444"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Convert the rule to Base64 encoded by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ base64 /path/to/file/</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Copy the following MCO sample profile into a YAML file:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+   labels:
+     machineconfiguration.openshift.io/role: worker0
+   name: 99-worker0-devices
+spec:
+   config:
+     ignition:
+       version: 3.2.0
+     storage:
+       files:
+       - contents:
+           source: &lt;base64_data_uri&gt;
+         filesystem: root
+         mode: 420
+         path: /etc/udev/rules.d/41-dasd-eckd-0.0.4444.rules</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>metadata.labels.machineconfiguration.openshift.io/role</code></dt>
+<dd>
+<p>Specifies the role you have defined in the machine config file.</p>
+</dd>
+<dt class="hdlist1"><code>spec.config.storage.files.contents.source</code></dt>
+<dd>
+<p>Specifies the data URI for the Base64 encoded udev rule. The value is the Base64 encoded string that you generated in the previous step, formatted as an Ignition data URI.</p>
+</dd>
+<dt class="hdlist1"><code>spec.config.storage.files.path</code></dt>
+<dd>
+<p>Specifies the path where the udev rule is located.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To configure a qeth device by adding a udev rule, complete the following steps:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Take the following sample udev rule <code>41-qeth-0.0.1000.rules</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">ACTION=="add", SUBSYSTEM=="drivers", KERNEL=="qeth", GOTO="group_qeth_0.0.1000"
+ACTION=="add", SUBSYSTEM=="ccw", KERNEL=="0.0.1000", DRIVER=="qeth", GOTO="group_qeth_0.0.1000"
+ACTION=="add", SUBSYSTEM=="ccw", KERNEL=="0.0.1001", DRIVER=="qeth", GOTO="group_qeth_0.0.1000"
+ACTION=="add", SUBSYSTEM=="ccw", KERNEL=="0.0.1002", DRIVER=="qeth", GOTO="group_qeth_0.0.1000"
+ACTION=="add", SUBSYSTEM=="ccwgroup", KERNEL=="0.0.1000", DRIVER=="qeth", GOTO="cfg_qeth_0.0.1000"
+GOTO="end_qeth_0.0.1000"
+
+LABEL="group_qeth_0.0.1000"
+TEST=="[ccwgroup/0.0.1000]", GOTO="end_qeth_0.0.1000"
+TEST!="[ccw/0.0.1000]", GOTO="end_qeth_0.0.1000"
+TEST!="[ccw/0.0.1001]", GOTO="end_qeth_0.0.1000"
+TEST!="[ccw/0.0.1002]", GOTO="end_qeth_0.0.1000"
+ATTR{[drivers/ccwgroup:qeth]group}="0.0.1000,0.0.1001,0.0.1002"
+GOTO="end_qeth_0.0.1000"
+
+LABEL="cfg_qeth_0.0.1000"
+ATTR{[ccwgroup/0.0.1000]online}="1"
+
+LABEL="end_qeth_0.0.1000"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Convert the rule to Base64 encoded by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ base64 /path/to/file/</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Copy the following MCO sample profile into a YAML file:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+   labels:
+     machineconfiguration.openshift.io/role: worker0
+   name: 99-worker0-devices
+spec:
+   config:
+     ignition:
+       version: 3.2.0
+     storage:
+       files:
+       - contents:
+           source: &lt;base64_data_uri&gt;
+         filesystem: root
+         mode: 420
+         path: /etc/udev/rules.d/41-dasd-eckd-0.0.4444.rules</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>metadata.labels.machineconfiguration.openshift.io/role</code></dt>
+<dd>
+<p>Specifies the role you have defined in the machine config file.</p>
+</dd>
+<dt class="hdlist1"><code>spec.config.storage.files.contents.source</code></dt>
+<dd>
+<p>Specifies the data URI for the Base64 encoded udev rule. The value is the Base64 encoded string that you generated in the previous step, formatted as an Ignition data URI.</p>
+</dd>
+<dt class="hdlist1"><code>spec.config.storage.files.path</code></dt>
+<dd>
+<p>Specifies the path where the udev rule is located.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="configure-additional-devices-manually_complete-ibm-z-post-installation-tasks">Configuring additional devices manually</h5>
+<div class="paragraph _abstract">
+<p>After installation, you can manually configure additional devices on IBM Z&#174; or IBM&#174; LinuxONE nodes. This configuration persists across node restarts, but you must redo the steps if you replace the node.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You are logged in to the cluster as a user with administrative privileges.</p>
+</li>
+<li>
+<p>The device must be available to the node.</p>
+</li>
+<li>
+<p>In a z/VM environment, the device must be attached to the z/VM guest.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Connect to the node via SSH by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ ssh &lt;user&gt;@&lt;node_ip_address&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also start a debug session to the node by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To enable the devices with the <code>chzdev</code> command, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ sudo chzdev -e &lt;device&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ibm-z-roce-network-cards_complete-ibm-z-post-installation-tasks">RoCE network cards</h5>
+<div class="paragraph _abstract">
+<p>You can configure RoCE (RDMA over Converged Ethernet) interfaces with the Kubernetes NMState Operator when RoCE network cards are available on a node. For example, the cards are available if they are attached in a z/VM environment or passed through in a RHEL KVM environment.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="enabling-multipathing-fcp-luns_complete-ibm-z-post-installation-tasks">Enabling multipathing for FCP LUNs</h5>
+<div class="paragraph _abstract">
+<p>After installation, you can enable multipathing for Fibre Channel Protocol (FCP) logical unit numbers (LUNs) on IBM Z&#174; or IBM&#174; LinuxONE nodes. This configuration persists across node restarts, but you must redo the steps if you replace the node.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>On IBM Z&#174; and IBM&#174; LinuxONE, you can enable multipathing only if you configured your cluster for it during installation. For more information, see "Installing RHCOS and starting the Red&#160;Hat OpenShift Container Platform bootstrap process" in <em>Installing a cluster with z/VM on IBM Z&#174; and IBM&#174; LinuxONE</em>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You are logged in to the cluster as a user with administrative privileges.</p>
+</li>
+<li>
+<p>You have configured multiple paths to a LUN with either method explained above.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Connect to the node via SSH by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ ssh &lt;user&gt;@&lt;node_ip_address&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also start a debug session to the node by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To enable multipathing, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ sudo /sbin/mpathconf --enable</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To start the <code>multipathd</code> daemon, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ sudo multipath</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Optional: To format your multipath device with fdisk, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ sudo fdisk /dev/mapper/mpatha</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>To verify that the devices have been grouped, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ sudo multipath -ll</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">mpatha (20017380030290197) dm-1 IBM,2810XIV
+   size=512G features='1 queue_if_no_path' hwhandler='1 alua' wp=rw
+	-+- policy='service-time 0' prio=50 status=enabled
+ 	|- 1:0:0:6  sde 68:16  active ready running
+ 	|- 1:0:1:6  sdf 69:24  active ready running
+ 	|- 0:0:0:6  sdg  8:80  active ready running
+ 	`- 0:0:1:6  sdh 66:48  active ready running</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div class="paragraph nav-footer">
 <p>← Previous: <a href="install-on-ibm-cloud-intro_install-on-ibm-cloud.html">Install on IBM Cloud</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="install-on-ibm-power-parent-intro_install-on-ibm-power-parent.html">Install on IBM Power and Power Virtual Server</a> →</p>
@@ -16663,7 +17204,7 @@ openshift-authentication-operator authentication-operator-69d5d8bf84-vh2n8      
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 15:58:47 +0100
+Last updated 2026-10-12 13:29:35 +0100
 </div>
 </div>
 <style>

@@ -568,10 +568,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="compare-platform-options-con_compare-platform-options.html">Compare platform options</a>
 </li>
-<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
-</li>
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
@@ -582,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -611,6 +607,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_install.html">Install</a>
 <ul class="sectlevel2">
+<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
+</li>
+<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
+</li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
 <li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
@@ -674,7 +676,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
@@ -846,7 +848,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-registry-allowlists-and-blocks-con_configure-registry-allowlists-and-blocks.html">Configure registry allowlists and blocks</a>
 </li>
-<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">About adding registries that allow image short names</a>
+<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">Configure short-name search registries</a>
 </li>
 <li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
 </li>
@@ -908,8 +910,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
 </li>
-<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
-</li>
 <li><a href="change-the-installed-file-system-configuration-for-new-nodes-con_change-the-installed-file-system-configuration-for-new-nodes.html">Change the installed file system configuration for new nodes</a>
 </li>
 <li><a href="change-the-installed-raid-configuration-for-new-nodes-con_change-the-installed-raid-configuration-for-new-nodes.html">Change the installed RAID configuration for new nodes</a>
@@ -946,7 +946,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1057,11 +1057,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
+</li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1241,19 +1267,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
-</li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
-</li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
-</li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
-</li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
-</li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1485,6 +1499,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
 </li>
+<li><a href="graceful-shutdown-cluster-intro_graceful-cluster-shutdown.html">Shutting down the cluster gracefully</a>
+</li>
+<li><a href="graceful-restart-cluster-intro_graceful-cluster-restart.html">Restarting the cluster gracefully</a>
+</li>
+<li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernating an Red&#160;Hat OpenShift Container Platform cluster</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
@@ -1496,6 +1516,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="recovering-unhealthy-etcd-cluster-for-hosted-control-planes-con_recovering-unhealthy-etcd-cluster-for-hosted-control-planes.html">Recovering an unhealthy etcd cluster for hosted control planes</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-a-hosted-cluster-intro_backup-and-restore-etcd-on-a-hosted-cluster.html">Backing up and restoring etcd on a hosted cluster</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a>
+</li>
+<li><a href="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot.html">Backing up etcd data for hosted control planes by using the etcd snapshot method</a>
+</li>
+<li><a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a>
 </li>
 <li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
 </li>
@@ -1509,8 +1539,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
@@ -1523,15 +1551,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
+<li><a href="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data.html">Backing up and restoring etcd data</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
+<li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replacing an unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
@@ -1627,13 +1655,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html">Restoring an etcd snapshot on a hosted cluster</a>
+<li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-restore_etcd-best-practices-restore-etcd-data.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replacing a healthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1643,7 +1667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1669,7 +1693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#prepare-to-install-on-vsphere-intro_prepare-to-install-on-vsphere">Prepare to install on vSphere</a></li><li class="level-5"><a href="#preparing-to-install-on-vsphere-assisted-installer-reference_prepare-to-install-on-vsphere">Assisted Installer</a></li><li class="level-5"><a href="#preparing-to-install-on-vsphere-agent-based-installer-reference_prepare-to-install-on-vsphere">Agent-based Installer</a></li><li class="level-5"><a href="#preparing-to-install-on-vsphere-installer-provisioned-reference_prepare-to-install-on-vsphere">Installer-provisioned infrastructure installation</a></li><li class="level-5"><a href="#preparing-to-install-on-vsphere-user-provisioned-reference_prepare-to-install-on-vsphere">User-provisioned infrastructure installation</a></li><li class="level-5"><a href="#installation-vsphere-infrastructure_prepare-to-install-on-vsphere">VMware vSphere infrastructure requirements</a></li><li class="level-5"><a href="#installation-vsphere-installer-network-requirements_prepare-to-install-on-vsphere">Network connectivity requirements</a></li><li class="level-5"><a href="#vsphere-csi-driver-reqs_prepare-to-install-on-vsphere">VMware vSphere CSI Driver Operator requirements</a></li><li class="level-5"><a href="#installation-vsphere-installer-infra-requirements_ipi-vsphere-installation-reqs">vCenter requirements</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-requirements-account_ipi-vsphere-installation-reqs">Required vCenter account privileges</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-minimum-requirements_ipi-vsphere-installation-reqs">Minimum required vCenter account privileges</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-requirements-vmotion_ipi-vsphere-installation-reqs">Using Red Hat OpenShift Container Platform with vMotion</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-requirements-resources_ipi-vsphere-installation-reqs">Cluster resources</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-requirements-limits_ipi-vsphere-installation-reqs">Cluster limits</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-requirements-networking_ipi-vsphere-installation-reqs">Networking requirements</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-requirements-_ipi-vsphere-installation-reqs">Required IP addresses</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-requirements-dns-records_ipi-vsphere-installation-reqs">DNS records</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-static-ip-nodes_prepare-to-install-on-vsphere">Static IP addresses for vSphere nodes</a></li><li class="level-5"><a href="#reqs-for-a-cluster-with-user-provisioned-infrastructure_prepare-to-install-on-vsphere">Requirements for a cluster with user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-machine-requirements_prepare-to-install-on-vsphere">Required machines for cluster installation</a></li><li class="level-6"><a href="#installation-minimum-resource-requirements_upi-vsphere-installation-reqs">Minimum resource requirements for cluster installation</a></li><li class="level-6"><a href="#installation-vsphere-encrypted-vms_prepare-to-install-on-vsphere">Requirements for encrypting virtual machines</a></li><li class="level-6"><a href="#csr-management_prepare-to-install-on-vsphere">Certificate signing requests management</a></li><li class="level-6"><a href="#installation-network-user-infra_upi-vsphere-installation-reqs">Networking requirements for user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-dns-user-infra_prepare-to-install-on-vsphere">User-provisioned DNS requirements</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra_prepare-to-install-on-vsphere">Load balancing requirements for user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-configuration-parameters_installation-config-parameters-vsphere">Available installation configuration parameters for vSphere</a></li><li class="level-6"><a href="#installation-configuration-parameters-required_installation-config-parameters-vsphere">Required configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-network_installation-config-parameters-vsphere">Network configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional_installation-config-parameters-vsphere">Optional configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional-aws_installation-config-parameters-vsphere">Optional AWS configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-additional-gcp_installation-config-parameters-vsphere">Additional Google Cloud configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-additional-vsphere_installation-config-parameters-vsphere">Additional VMware vSphere configuration parameters</a></li><li class="level-6"><a href="#deprecated-parameters-vsphere_installation-config-parameters-vsphere">Deprecated VMware vSphere configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional-vsphere_installation-config-parameters-vsphere">Optional VMware vSphere machine pool configuration parameters</a></li><li class="level-4"><a href="#install-on-vsphere-ipi-intro_install-on-vsphere-ipi">Installing a cluster on vSphere with installer-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-entitlements_install-on-vsphere-ipi">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-launching-installer_installing-vsphere-installer-provisioned">Deploying the cluster</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-vsphere-ipi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#registry-removed_install-on-vsphere-ipi">Image registry removed during installation</a></li><li class="level-5"><a href="#installation-registry-storage-config_install-on-vsphere-ipi">Image registry storage configuration</a></li><li class="level-6"><a href="#registry-configuring-storage-vsphere_install-on-vsphere-ipi">Configure registry storage for VMware vSphere</a></li><li class="level-6"><a href="#installation-registry-storage-block-recreate-rollout_install-on-vsphere-ipi">Configure block registry storage for VMware vSphere</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-vsphere-ipi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-obtaining-installer_ipi-vsphere-preparing-to-install">Obtaining the installation program</a></li><li class="level-5"><a href="#cli-installing-cli-linux_install-on-vsphere-ipi">Installing the OpenShift CLI on Linux</a></li><li class="level-5"><a href="#cli-installing-cli-windows_install-on-vsphere-ipi">Installing the OpenShift CLI on Windows</a></li><li class="level-5"><a href="#cli-installing-cli-macos_install-on-vsphere-ipi">Installing the OpenShift CLI on macOS</a></li><li class="level-5"><a href="#ssh-agent-using_install-on-vsphere-ipi">Generating a key pair for cluster node SSH access</a></li><li class="level-5"><a href="#installation-adding-vcenter-root-certificates_install-on-vsphere-ipi">Adding vCenter root CA certificates to your system trust</a></li><li class="level-4"><a href="#install-on-vsphere-ipi-with-customizations-intro_install-on-vsphere-ipi-with-customizations">Install on vSphere with customizations by using installer-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-entitlements_install-on-vsphere-ipi-with-customizations">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-vsphere-regions-zones_install-on-vsphere-ipi-with-customizations">VMware vSphere region and zone enablement</a></li><li class="level-5"><a href="#installation-vsphere-regions-zones-host-groups_install-on-vsphere-ipi-with-customizations">VMware vSphere host group enablement</a></li><li class="level-5"><a href="#installation-initializing_installing-vsphere-installer-provisioned-customizations">Creating the installation configuration file</a></li><li class="level-6"><a href="#installation-vsphere-config-yaml_install-on-vsphere-ipi-with-customizations">Sample install-config.yaml file for a VMware vSphere cluster</a></li><li class="level-6"><a href="#installation-configure-proxy_installing-vsphere-installer-provisioned-customizations">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#modifying-install-config-for-dual-stack-network_install-on-vsphere-ipi-with-customizations">Deploying IP addressing with dual-stack networking</a></li><li class="level-6"><a href="#configuring-vsphere-regions-zones_install-on-vsphere-ipi-with-customizations">Configuring regions and zones for a VMware vCenter</a></li><li class="level-6"><a href="#configuring-vsphere-host-groups_install-on-vsphere-ipi-with-customizations">Configuring host groups for a VMware vCenter</a></li><li class="level-6"><a href="#installation-vsphere-multiple-nics_install-on-vsphere-ipi-with-customizations">Configuring multiple NICs</a></li><li class="level-5"><a href="#nw-network-config_install-on-vsphere-ipi-with-customizations">Network configuration phases</a></li><li class="level-5"><a href="#modifying-nwoperator-config-startup_installing-vsphere-installer-provisioned-customizations">Specifying advanced network configuration</a></li><li class="level-6"><a href="#nw-operator-vsphere-multiple-subnets_install-on-vsphere-ipi-with-customizations">Specifying multiple subnets for your network</a></li><li class="level-5"><a href="#nw-operator-cr_install-on-vsphere-ipi-with-customizations">Cluster Network Operator configuration</a></li><li class="level-6"><a href="#nw-operator-cr-cno-object_install-on-vsphere-ipi-with-customizations">Cluster Network Operator configuration object</a></li><li class="level-6"><a href="#nw-operator-cr-defaultnetwork_install-on-vsphere-ipi-with-customizations">defaultNetwork object configuration</a></li><li class="level-6"><a href="#nw-operator-configuration-parameters-for-ovn-sdn_install-on-vsphere-ipi-with-customizations">Configuration for the OVN-Kubernetes network plugin</a></li><li class="level-5"><a href="#nw-osp-services-external-load-balancer_install-on-vsphere-ipi-with-customizations">Services for a user-managed load balancer</a></li><li class="level-6"><a href="#nw-osp-configuring-external-load-balancer_installing-vsphere-installer-provisioned-customizations">Configuring a user-managed load balancer</a></li><li class="level-5"><a href="#installation-launching-installer_installing-vsphere-installer-provisioned-customizations">Deploying the cluster</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-vsphere-ipi-with-customizations">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#registry-removed_install-on-vsphere-ipi-with-customizations">Image registry removed during installation</a></li><li class="level-5"><a href="#installation-registry-storage-config_install-on-vsphere-ipi-with-customizations">Image registry storage configuration</a></li><li class="level-6"><a href="#registry-configuring-storage-vsphere_install-on-vsphere-ipi-with-customizations">Configure registry storage for VMware vSphere</a></li><li class="level-6"><a href="#installation-registry-storage-block-recreate-rollout_install-on-vsphere-ipi-with-customizations">Configure block registry storage for VMware vSphere</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-vsphere-ipi-with-customizations">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#configure-network-components-to-run-on-the-control-plane_installing-vsphere-installer-provisioned-customizations">Configuring network components to run on the control plane</a></li><li class="level-4"><a href="#install-on-vsphere-upi-intro_install-on-vsphere-upi">Install on vSphere with user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-entitlements_install-on-vsphere-upi">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-vsphere-regions-zones_install-on-vsphere-upi">VMware vSphere region and zone enablement</a></li><li class="level-5"><a href="#installation-initializing-manual_installing-vsphere">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-vsphere-config-yaml_installing-vsphere">Sample install-config.yaml file for a VMware vSphere cluster</a></li><li class="level-6"><a href="#installation-configure-proxy_installing-vsphere">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#configuring-vsphere-regions-zones_install-on-vsphere-upi">Configuring regions and zones for a VMware vCenter</a></li><li class="level-5"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-vsphere">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-5"><a href="#installation-extracting-infraid_installing-vsphere">Extracting the infrastructure name</a></li><li class="level-5"><a href="#installation-vsphere-machines_install-on-vsphere-upi">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-5"><a href="#machine-vsphere-machines_installing-vsphere">Add more compute machines to a cluster in vSphere</a></li><li class="level-5"><a href="#installation-disk-partitioning_install-on-vsphere-upi">Disk partitioning</a></li><li class="level-5"><a href="#_creating_a_separate_var_partition">Creating a separate /var partition</a></li><li class="level-5"><a href="#installation-installing-bare-metal_install-on-vsphere-upi">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-vsphere-upi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_install-on-vsphere-upi">Approve the certificate signing requests for your machines</a></li><li class="level-5"><a href="#installation-operators-config_install-on-vsphere-upi">Initial Operator configuration</a></li><li class="level-6"><a href="#registry-removed_install-on-vsphere-upi">Image registry removed during installation</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-vsphere-upi">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_install-on-vsphere-upi">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#anti-affinity-vsphere_install-on-vsphere-upi">Configuring vSphere DRS anti-affinity rules for control plane nodes</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-vsphere-upi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-obtaining-installer_install-on-vsphere-upi">Obtaining the installation program</a></li><li class="level-5"><a href="#cli-installing-cli-linux_install-on-vsphere-upi">Installing the OpenShift CLI on Linux</a></li><li class="level-5"><a href="#cli-installing-cli-windows_install-on-vsphere-upi">Installing the OpenShift CLI on Windows</a></li><li class="level-5"><a href="#cli-installing-cli-macos_install-on-vsphere-upi">Installing the OpenShift CLI on macOS</a></li><li class="level-5"><a href="#ssh-agent-using_upi-vsphere-preparing-to-install">Generating a key pair for cluster node SSH access</a></li><li class="level-5"><a href="#installation-infrastructure-user-infra_install-on-vsphere-upi">Preparing the user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra-example_install-on-vsphere-upi">Example load balancer configuration for user-provisioned clusters</a></li><li class="level-5"><a href="#installation-user-provisioned-validating-dns_install-on-vsphere-upi">Validating DNS resolution for user-provisioned infrastructure</a></li><li class="level-4"><a href="#install-on-vsphere-with-network-customizations-upi-intro_install-on-vsphere-with-network-customizations-upi">Install on vSphere with network customizations by using user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-entitlements_install-on-vsphere-with-network-customizations-upi">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-vsphere-regions-zones_install-on-vsphere-with-network-customizations-upi">VMware vSphere region and zone enablement</a></li><li class="level-5"><a href="#installation-initializing-manual_installing-vsphere-network-customizations">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-vsphere-config-yaml_installing-vsphere-network-customizations">Sample install-config.yaml file for a VMware vSphere cluster</a></li><li class="level-6"><a href="#installation-configure-proxy_installing-vsphere-network-customizations">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#configuring-vsphere-regions-zones_install-on-vsphere-with-network-customizations-upi">Configuring regions and zones for a VMware vCenter</a></li><li class="level-5"><a href="#nw-network-config_install-on-vsphere-with-network-customizations-upi">Network configuration phases</a></li><li class="level-5"><a href="#modifying-nwoperator-config-startup_install-on-vsphere-with-network-customizations-upi">Specifying advanced network configuration</a></li><li class="level-6"><a href="#nw-operator-vsphere-multiple-subnets_install-on-vsphere-with-network-customizations-upi">Specifying multiple subnets for your network</a></li><li class="level-5"><a href="#nw-operator-cr_install-on-vsphere-with-network-customizations-upi">Cluster Network Operator configuration</a></li><li class="level-6"><a href="#nw-operator-cr-cno-object_install-on-vsphere-with-network-customizations-upi">Cluster Network Operator configuration object</a></li><li class="level-6"><a href="#nw-operator-cr-defaultnetwork_install-on-vsphere-with-network-customizations-upi">defaultNetwork object configuration</a></li><li class="level-6"><a href="#nw-operator-configuration-parameters-for-ovn-sdn_install-on-vsphere-with-network-customizations-upi">Configuration for the OVN-Kubernetes network plugin</a></li><li class="level-5"><a href="#installation-generate-ignition-configs_install-on-vsphere-with-network-customizations-upi">Creating the Ignition config files</a></li><li class="level-5"><a href="#installation-extracting-infraid_installing-vsphere-network-customizations">Extracting the infrastructure name</a></li><li class="level-5"><a href="#installation-vsphere-machines_install-on-vsphere-with-network-customizations-upi">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-5"><a href="#machine-vsphere-machines_install-on-vsphere-with-network-customizations-upi">Add more compute machines to a cluster in vSphere</a></li><li class="level-5"><a href="#installation-disk-partitioning_install-on-vsphere-with-network-customizations-upi">Disk partitioning</a></li><li class="level-5"><a href="#_creating_a_separate_var_partition_2">Creating a separate /var partition</a></li><li class="level-5"><a href="#installation-installing-bare-metal_install-on-vsphere-with-network-customizations-upi">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-vsphere-with-network-customizations-upi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_install-on-vsphere-with-network-customizations-upi">Approve the certificate signing requests for your machines</a></li><li class="level-6"><a href="#installation-operators-config_install-on-vsphere-with-network-customizations-upi">Initial Operator configuration</a></li><li class="level-6"><a href="#registry-removed_install-on-vsphere-with-network-customizations-upi">Image registry removed during installation</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-vsphere-with-network-customizations-upi">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_install-on-vsphere-with-network-customizations-upi">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#anti-affinity-vsphere_install-on-vsphere-with-network-customizations-upi">Configuring vSphere DRS anti-affinity rules for control plane nodes</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-vsphere-with-network-customizations-upi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#install-on-vsphere-in-a-disconnected-environment-ipi-intro_installing-restricted-networks-installer-provisioned-vsphere">Install on vSphere in a disconnected environment with installer-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-about-restricted-networks_installing-restricted-networks-installer-provisioned-vsphere">About installations in restricted networks</a></li><li class="level-6"><a href="#installation-restricted-network-limits_installing-restricted-networks-installer-provisioned-vsphere">Additional limits</a></li><li class="level-5"><a href="#cluster-entitlements_installing-restricted-networks-installer-provisioned-vsphere">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-creating-image-restricted_installing-restricted-networks-installer-provisioned-vsphere">Creating the RHCOS image for restricted network installations</a></li><li class="level-5"><a href="#installation-vsphere-regions-zones_install-on-vsphere-in-a-disconnected-environment-ipi">VMware vSphere region and zone enablement</a></li><li class="level-5"><a href="#installation-vsphere-regions-zones-host-groups_install-on-vsphere-in-a-disconnected-environment-ipi">VMware vSphere host group enablement</a></li><li class="level-5"><a href="#installation-initializing_installing-restricted-networks-installer-provisioned-vsphere">Creating the installation configuration file</a></li><li class="level-6"><a href="#installation-vsphere-config-yaml_install-on-vsphere-in-a-disconnected-environment-ipi">Sample install-config.yaml file for a VMware vSphere cluster</a></li><li class="level-6"><a href="#installation-configure-proxy_installing-restricted-networks-installer-provisioned-vsphere">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#configuring-vsphere-regions-zones_install-on-vsphere-in-a-disconnected-environment-ipi">Configuring regions and zones for a VMware vCenter</a></li><li class="level-6"><a href="#configuring-vsphere-host-groups_install-on-vsphere-in-a-disconnected-environment-ipi">Configuring host groups for a VMware vCenter</a></li><li class="level-5"><a href="#nw-osp-services-external-load-balancer_install-on-vsphere-in-a-disconnected-environment-ipi">Services for a user-managed load balancer</a></li><li class="level-6"><a href="#nw-osp-configuring-external-load-balancer_installing-restricted-networks-installer-provisioned-vsphere">Configuring a user-managed load balancer</a></li><li class="level-5"><a href="#installation-launching-installer_installing-restricted-networks-installer-provisioned-vsphere">Deploying the cluster</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-vsphere-in-a-disconnected-environment-ipi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#olm-restricted-networks-operatorhub_install-on-vsphere-in-a-disconnected-environment-ipi">Disabling the default software catalog sources</a></li><li class="level-5"><a href="#registry-removed_install-on-vsphere-in-a-disconnected-environment-ipi">Image registry removed during installation</a></li><li class="level-5"><a href="#installation-registry-storage-config_install-on-vsphere-in-a-disconnected-environment-ipi">Image registry storage configuration</a></li><li class="level-6"><a href="#registry-configuring-storage-vsphere_install-on-vsphere-in-a-disconnected-environment-ipi">Configure registry storage for VMware vSphere</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-vsphere-in-a-disconnected-environment-ipi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#install-on-vsphere-in-a-disconnected-environment-upi-intro_install-on-vsphere-in-a-disconnected-environment-upi">Install on vSphere in a disconnected environment by using user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-about-restricted-networks_install-on-vsphere-in-a-disconnected-environment-upi">About installations in restricted networks</a></li><li class="level-6"><a href="#installation-restricted-network-limits_install-on-vsphere-in-a-disconnected-environment-upi">Additional limits</a></li><li class="level-5"><a href="#cluster-entitlements_installing-restricted-networks-vsphere">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-vsphere-regions-zones_install-on-vsphere-in-a-disconnected-environment-upi">VMware vSphere region and zone enablement</a></li><li class="level-5"><a href="#installation-initializing-manual_installing-restricted-networks-vsphere">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-vsphere-config-yaml_installing-restricted-networks-vsphere">Sample install-config.yaml file for a VMware vSphere cluster</a></li><li class="level-6"><a href="#installation-configure-proxy_installing-restricted-networks-vsphere">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#configuring-vsphere-regions-zones_install-on-vsphere-in-a-disconnected-environment-upi">Configuring regions and zones for a VMware vCenter</a></li><li class="level-5"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-restricted-networks-vsphere">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-5"><a href="#installation-special-config-chrony_installing-restricted-networks-vsphere">Configure chrony time service</a></li><li class="level-5"><a href="#installation-extracting-infraid_installing-restricted-networks-vsphere">Extracting the infrastructure name</a></li><li class="level-5"><a href="#installation-vsphere-machines_install-on-vsphere-in-a-disconnected-environment-upi">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-5"><a href="#machine-vsphere-machines_install-on-vsphere-in-a-disconnected-environment-upi">Add more compute machines to a cluster in vSphere</a></li><li class="level-5"><a href="#installation-disk-partitioning_install-on-vsphere-in-a-disconnected-environment-upi">Disk partitioning</a></li><li class="level-5"><a href="#_creating_a_separate_var_partition_3">Creating a separate /var partition</a></li><li class="level-5"><a href="#installation-installing-bare-metal_installing-restricted-networks-vsphere">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-vsphere-in-a-disconnected-environment-upi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_install-on-vsphere-in-a-disconnected-environment-upi">Approve the certificate signing requests for your machines</a></li><li class="level-5"><a href="#installation-operators-config_install-on-vsphere-in-a-disconnected-environment-upi">Initial Operator configuration</a></li><li class="level-6"><a href="#olm-restricted-networks-operatorhub_install-on-vsphere-in-a-disconnected-environment-upi">Disabling the default software catalog sources</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-vsphere-in-a-disconnected-environment-upi">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_installing-restricted-networks-vsphere">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#anti-affinity-vsphere_install-on-vsphere-in-a-disconnected-environment-upi">Configuring vSphere DRS anti-affinity rules for control plane nodes</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-vsphere-in-a-disconnected-environment-upi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#install-a-three-node-cluster-on-vsphere-intro_install-a-three-node-cluster-on-vsphere">Install a three-node cluster on vSphere</a></li><li class="level-5"><a href="#installation-three-node-cluster_installing-vsphere-three-node">Configuring a three-node cluster</a></li><li class="level-4"><a href="#uninstall-a-cluster-on-vsphere-intro_uninstall-a-cluster-on-vsphere">Uninstall a cluster on vSphere</a></li><li class="level-5"><a href="#installation-uninstall-clouds_uninstall-a-cluster-on-vsphere">Removing a cluster that uses installer-provisioned infrastructure</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#prepare-to-install-on-vsphere-intro_prepare-to-install-on-vsphere">Prepare to install on vSphere</a></li><li class="level-5"><a href="#preparing-to-install-on-vsphere-assisted-installer-reference_prepare-to-install-on-vsphere">Assisted Installer</a></li><li class="level-5"><a href="#preparing-to-install-on-vsphere-agent-based-installer-reference_prepare-to-install-on-vsphere">Agent-based Installer</a></li><li class="level-5"><a href="#preparing-to-install-on-vsphere-installer-provisioned-reference_prepare-to-install-on-vsphere">Installer-provisioned infrastructure installation</a></li><li class="level-5"><a href="#preparing-to-install-on-vsphere-user-provisioned-reference_prepare-to-install-on-vsphere">User-provisioned infrastructure installation</a></li><li class="level-5"><a href="#installation-vsphere-infrastructure_prepare-to-install-on-vsphere">VMware vSphere infrastructure requirements</a></li><li class="level-5"><a href="#installation-vsphere-installer-network-requirements_prepare-to-install-on-vsphere">Network connectivity requirements</a></li><li class="level-5"><a href="#vsphere-csi-driver-reqs_prepare-to-install-on-vsphere">VMware vSphere CSI Driver Operator requirements</a></li><li class="level-5"><a href="#installation-vsphere-installer-infra-requirements_ipi-vsphere-installation-reqs">vCenter requirements</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-requirements-account_ipi-vsphere-installation-reqs">Required vCenter account privileges</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-minimum-requirements_ipi-vsphere-installation-reqs">Minimum required vCenter account privileges</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-requirements-vmotion_ipi-vsphere-installation-reqs">Using Red Hat OpenShift Container Platform with vMotion</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-requirements-resources_ipi-vsphere-installation-reqs">Cluster resources</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-requirements-limits_ipi-vsphere-installation-reqs">Cluster limits</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-requirements-networking_ipi-vsphere-installation-reqs">Networking requirements</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-requirements-_ipi-vsphere-installation-reqs">Required IP addresses</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-requirements-dns-records_ipi-vsphere-installation-reqs">DNS records</a></li><li class="level-6"><a href="#installation-vsphere-installer-infra-static-ip-nodes_prepare-to-install-on-vsphere">Static IP addresses for vSphere nodes</a></li><li class="level-5"><a href="#reqs-for-a-cluster-with-user-provisioned-infrastructure_prepare-to-install-on-vsphere">Requirements for a cluster with user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-machine-requirements_prepare-to-install-on-vsphere">Required machines for cluster installation</a></li><li class="level-6"><a href="#installation-minimum-resource-requirements_upi-vsphere-installation-reqs">Minimum resource requirements for cluster installation</a></li><li class="level-6"><a href="#installation-vsphere-encrypted-vms_prepare-to-install-on-vsphere">Requirements for encrypting virtual machines</a></li><li class="level-6"><a href="#csr-management_prepare-to-install-on-vsphere">Certificate signing requests management</a></li><li class="level-6"><a href="#installation-network-user-infra_upi-vsphere-installation-reqs">Networking requirements for user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-dns-user-infra_prepare-to-install-on-vsphere">User-provisioned DNS requirements</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra_prepare-to-install-on-vsphere">Load balancing requirements for user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-configuration-parameters_installation-config-parameters-vsphere">Available installation configuration parameters for vSphere</a></li><li class="level-6"><a href="#installation-configuration-parameters-required_installation-config-parameters-vsphere">Required configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-network_installation-config-parameters-vsphere">Network configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional_installation-config-parameters-vsphere">Optional configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional-aws_installation-config-parameters-vsphere">Optional AWS configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-additional-gcp_installation-config-parameters-vsphere">Additional Google Cloud configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-additional-vsphere_installation-config-parameters-vsphere">Additional VMware vSphere configuration parameters</a></li><li class="level-6"><a href="#deprecated-parameters-vsphere_installation-config-parameters-vsphere">Deprecated VMware vSphere configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional-vsphere_installation-config-parameters-vsphere">Optional VMware vSphere machine pool configuration parameters</a></li><li class="level-4"><a href="#install-on-vsphere-ipi-intro_install-on-vsphere-ipi">Installing a cluster on vSphere with installer-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-entitlements_install-on-vsphere-ipi">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-launching-installer_installing-vsphere-installer-provisioned">Deploying the cluster</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-vsphere-ipi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#registry-removed_install-on-vsphere-ipi">Image registry removed during installation</a></li><li class="level-5"><a href="#installation-registry-storage-config_install-on-vsphere-ipi">Image registry storage configuration</a></li><li class="level-6"><a href="#registry-configuring-storage-vsphere_install-on-vsphere-ipi">Configure registry storage for VMware vSphere</a></li><li class="level-6"><a href="#installation-registry-storage-block-recreate-rollout_install-on-vsphere-ipi">Configure block registry storage for VMware vSphere</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-vsphere-ipi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-obtaining-installer_ipi-vsphere-preparing-to-install">Obtaining the installation program</a></li><li class="level-5"><a href="#cli-installing-cli-linux_install-on-vsphere-ipi">Installing the OpenShift CLI on Linux</a></li><li class="level-5"><a href="#cli-installing-cli-windows_install-on-vsphere-ipi">Installing the OpenShift CLI on Windows</a></li><li class="level-5"><a href="#cli-installing-cli-macos_install-on-vsphere-ipi">Installing the OpenShift CLI on macOS</a></li><li class="level-5"><a href="#ssh-agent-using_install-on-vsphere-ipi">Generating a key pair for cluster node SSH access</a></li><li class="level-5"><a href="#installation-adding-vcenter-root-certificates_install-on-vsphere-ipi">Adding vCenter root CA certificates to your system trust</a></li><li class="level-4"><a href="#install-on-vsphere-ipi-with-customizations-intro_install-on-vsphere-ipi-with-customizations">Install on vSphere with customizations by using installer-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-entitlements_install-on-vsphere-ipi-with-customizations">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-vsphere-regions-zones_install-on-vsphere-ipi-with-customizations">VMware vSphere region and zone enablement</a></li><li class="level-5"><a href="#installation-vsphere-regions-zones-host-groups_install-on-vsphere-ipi-with-customizations">VMware vSphere host group enablement</a></li><li class="level-5"><a href="#installation-initializing_installing-vsphere-installer-provisioned-customizations">Creating the installation configuration file</a></li><li class="level-6"><a href="#installation-vsphere-config-yaml_install-on-vsphere-ipi-with-customizations">Sample install-config.yaml file for a VMware vSphere cluster</a></li><li class="level-6"><a href="#installation-configure-proxy_installing-vsphere-installer-provisioned-customizations">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#modifying-install-config-for-dual-stack-network_install-on-vsphere-ipi-with-customizations">Deploying IP addressing with dual-stack networking</a></li><li class="level-6"><a href="#configuring-vsphere-regions-zones_install-on-vsphere-ipi-with-customizations">Configuring regions and zones for a VMware vCenter</a></li><li class="level-6"><a href="#configuring-vsphere-host-groups_install-on-vsphere-ipi-with-customizations">Configuring host groups for a VMware vCenter</a></li><li class="level-6"><a href="#installation-vsphere-multiple-nics_install-on-vsphere-ipi-with-customizations">Configuring multiple NICs</a></li><li class="level-5"><a href="#nw-network-config_install-on-vsphere-ipi-with-customizations">Network configuration phases</a></li><li class="level-5"><a href="#modifying-nwoperator-config-startup_installing-vsphere-installer-provisioned-customizations">Specifying advanced network configuration</a></li><li class="level-6"><a href="#nw-operator-vsphere-multiple-subnets_install-on-vsphere-ipi-with-customizations">Specifying multiple subnets for your network</a></li><li class="level-5"><a href="#nw-operator-cr_install-on-vsphere-ipi-with-customizations">Cluster Network Operator configuration</a></li><li class="level-6"><a href="#nw-operator-cr-cno-object_install-on-vsphere-ipi-with-customizations">Cluster Network Operator configuration object</a></li><li class="level-6"><a href="#nw-operator-cr-defaultnetwork_install-on-vsphere-ipi-with-customizations">defaultNetwork object configuration</a></li><li class="level-6"><a href="#nw-operator-configuration-parameters-for-ovn-sdn_install-on-vsphere-ipi-with-customizations">Configuration for the OVN-Kubernetes network plugin</a></li><li class="level-5"><a href="#nw-osp-services-external-load-balancer_install-on-vsphere-ipi-with-customizations">Services for a user-managed load balancer</a></li><li class="level-6"><a href="#nw-osp-configuring-external-load-balancer_installing-vsphere-installer-provisioned-customizations">Configuring a user-managed load balancer</a></li><li class="level-5"><a href="#installation-launching-installer_installing-vsphere-installer-provisioned-customizations">Deploying the cluster</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-vsphere-ipi-with-customizations">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#registry-removed_install-on-vsphere-ipi-with-customizations">Image registry removed during installation</a></li><li class="level-5"><a href="#installation-registry-storage-config_install-on-vsphere-ipi-with-customizations">Image registry storage configuration</a></li><li class="level-6"><a href="#registry-configuring-storage-vsphere_install-on-vsphere-ipi-with-customizations">Configure registry storage for VMware vSphere</a></li><li class="level-6"><a href="#installation-registry-storage-block-recreate-rollout_install-on-vsphere-ipi-with-customizations">Configure block registry storage for VMware vSphere</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-vsphere-ipi-with-customizations">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#configure-network-components-to-run-on-the-control-plane_installing-vsphere-installer-provisioned-customizations">Configuring network components to run on the control plane</a></li><li class="level-4"><a href="#install-on-vsphere-upi-intro_install-on-vsphere-upi">Install on vSphere with user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-entitlements_install-on-vsphere-upi">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-vsphere-regions-zones_install-on-vsphere-upi">VMware vSphere region and zone enablement</a></li><li class="level-5"><a href="#installation-initializing-manual_installing-vsphere">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-vsphere-config-yaml_installing-vsphere">Sample install-config.yaml file for a VMware vSphere cluster</a></li><li class="level-6"><a href="#installation-configure-proxy_installing-vsphere">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#configuring-vsphere-regions-zones_install-on-vsphere-upi">Configuring regions and zones for a VMware vCenter</a></li><li class="level-5"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-vsphere">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-5"><a href="#installation-extracting-infraid_installing-vsphere">Extracting the infrastructure name</a></li><li class="level-5"><a href="#installation-vsphere-machines_install-on-vsphere-upi">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-5"><a href="#machine-vsphere-machines_installing-vsphere">Add more compute machines to a cluster in vSphere</a></li><li class="level-5"><a href="#installation-disk-partitioning_install-on-vsphere-upi">Disk partitioning</a></li><li class="level-5"><a href="#_creating_a_separate_var_partition">Creating a separate /var partition</a></li><li class="level-5"><a href="#installation-installing-bare-metal_install-on-vsphere-upi">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-vsphere-upi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_install-on-vsphere-upi">Approve the certificate signing requests for your machines</a></li><li class="level-5"><a href="#installation-operators-config_install-on-vsphere-upi">Initial Operator configuration</a></li><li class="level-6"><a href="#registry-removed_install-on-vsphere-upi">Image registry removed during installation</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-vsphere-upi">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_install-on-vsphere-upi">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#anti-affinity-vsphere_install-on-vsphere-upi">Configuring vSphere DRS anti-affinity rules for control plane nodes</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-vsphere-upi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-obtaining-installer_install-on-vsphere-upi">Obtaining the installation program</a></li><li class="level-5"><a href="#cli-installing-cli-linux_install-on-vsphere-upi">Installing the OpenShift CLI on Linux</a></li><li class="level-5"><a href="#cli-installing-cli-windows_install-on-vsphere-upi">Installing the OpenShift CLI on Windows</a></li><li class="level-5"><a href="#cli-installing-cli-macos_install-on-vsphere-upi">Installing the OpenShift CLI on macOS</a></li><li class="level-5"><a href="#ssh-agent-using_upi-vsphere-preparing-to-install">Generating a key pair for cluster node SSH access</a></li><li class="level-5"><a href="#installation-infrastructure-user-infra_install-on-vsphere-upi">Preparing the user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra-example_install-on-vsphere-upi">Example load balancer configuration for user-provisioned clusters</a></li><li class="level-5"><a href="#installation-user-provisioned-validating-dns_install-on-vsphere-upi">Validating DNS resolution for user-provisioned infrastructure</a></li><li class="level-4"><a href="#install-on-vsphere-with-network-customizations-upi-intro_install-on-vsphere-with-network-customizations-upi">Install on vSphere with network customizations by using user-provisioned infrastructure</a></li><li class="level-5"><a href="#cluster-entitlements_install-on-vsphere-with-network-customizations-upi">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-vsphere-regions-zones_install-on-vsphere-with-network-customizations-upi">VMware vSphere region and zone enablement</a></li><li class="level-5"><a href="#installation-initializing-manual_installing-vsphere-network-customizations">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-vsphere-config-yaml_installing-vsphere-network-customizations">Sample install-config.yaml file for a VMware vSphere cluster</a></li><li class="level-6"><a href="#installation-configure-proxy_installing-vsphere-network-customizations">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#configuring-vsphere-regions-zones_install-on-vsphere-with-network-customizations-upi">Configuring regions and zones for a VMware vCenter</a></li><li class="level-5"><a href="#nw-network-config_install-on-vsphere-with-network-customizations-upi">Network configuration phases</a></li><li class="level-5"><a href="#modifying-nwoperator-config-startup_install-on-vsphere-with-network-customizations-upi">Specifying advanced network configuration</a></li><li class="level-6"><a href="#nw-operator-vsphere-multiple-subnets_install-on-vsphere-with-network-customizations-upi">Specifying multiple subnets for your network</a></li><li class="level-5"><a href="#nw-operator-cr_install-on-vsphere-with-network-customizations-upi">Cluster Network Operator configuration</a></li><li class="level-6"><a href="#nw-operator-cr-cno-object_install-on-vsphere-with-network-customizations-upi">Cluster Network Operator configuration object</a></li><li class="level-6"><a href="#nw-operator-cr-defaultnetwork_install-on-vsphere-with-network-customizations-upi">defaultNetwork object configuration</a></li><li class="level-6"><a href="#nw-operator-configuration-parameters-for-ovn-sdn_install-on-vsphere-with-network-customizations-upi">Configuration for the OVN-Kubernetes network plugin</a></li><li class="level-5"><a href="#installation-generate-ignition-configs_install-on-vsphere-with-network-customizations-upi">Creating the Ignition config files</a></li><li class="level-5"><a href="#installation-extracting-infraid_installing-vsphere-network-customizations">Extracting the infrastructure name</a></li><li class="level-5"><a href="#installation-vsphere-machines_install-on-vsphere-with-network-customizations-upi">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-5"><a href="#machine-vsphere-machines_install-on-vsphere-with-network-customizations-upi">Add more compute machines to a cluster in vSphere</a></li><li class="level-5"><a href="#installation-disk-partitioning_install-on-vsphere-with-network-customizations-upi">Disk partitioning</a></li><li class="level-5"><a href="#_creating_a_separate_var_partition_2">Creating a separate /var partition</a></li><li class="level-5"><a href="#installation-installing-bare-metal_install-on-vsphere-with-network-customizations-upi">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-vsphere-with-network-customizations-upi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_install-on-vsphere-with-network-customizations-upi">Approve the certificate signing requests for your machines</a></li><li class="level-6"><a href="#installation-operators-config_install-on-vsphere-with-network-customizations-upi">Initial Operator configuration</a></li><li class="level-6"><a href="#registry-removed_install-on-vsphere-with-network-customizations-upi">Image registry removed during installation</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-vsphere-with-network-customizations-upi">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_install-on-vsphere-with-network-customizations-upi">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#anti-affinity-vsphere_install-on-vsphere-with-network-customizations-upi">Configuring vSphere DRS anti-affinity rules for control plane nodes</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-vsphere-with-network-customizations-upi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#install-on-vsphere-in-a-disconnected-environment-ipi-intro_installing-restricted-networks-installer-provisioned-vsphere">Install on vSphere in a disconnected environment with installer-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-about-restricted-networks_installing-restricted-networks-installer-provisioned-vsphere">About installations in restricted networks</a></li><li class="level-6"><a href="#installation-restricted-network-limits_installing-restricted-networks-installer-provisioned-vsphere">Additional limits</a></li><li class="level-5"><a href="#cluster-entitlements_installing-restricted-networks-installer-provisioned-vsphere">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-creating-image-restricted_installing-restricted-networks-installer-provisioned-vsphere">Creating the RHCOS image for restricted network installations</a></li><li class="level-5"><a href="#installation-vsphere-regions-zones_install-on-vsphere-in-a-disconnected-environment-ipi">VMware vSphere region and zone enablement</a></li><li class="level-5"><a href="#installation-vsphere-regions-zones-host-groups_install-on-vsphere-in-a-disconnected-environment-ipi">VMware vSphere host group enablement</a></li><li class="level-5"><a href="#installation-initializing_installing-restricted-networks-installer-provisioned-vsphere">Creating the installation configuration file</a></li><li class="level-6"><a href="#installation-vsphere-config-yaml_install-on-vsphere-in-a-disconnected-environment-ipi">Sample install-config.yaml file for a VMware vSphere cluster</a></li><li class="level-6"><a href="#installation-configure-proxy_installing-restricted-networks-installer-provisioned-vsphere">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#configuring-vsphere-regions-zones_install-on-vsphere-in-a-disconnected-environment-ipi">Configuring regions and zones for a VMware vCenter</a></li><li class="level-6"><a href="#configuring-vsphere-host-groups_install-on-vsphere-in-a-disconnected-environment-ipi">Configuring host groups for a VMware vCenter</a></li><li class="level-5"><a href="#nw-osp-services-external-load-balancer_install-on-vsphere-in-a-disconnected-environment-ipi">Services for a user-managed load balancer</a></li><li class="level-6"><a href="#nw-osp-configuring-external-load-balancer_installing-restricted-networks-installer-provisioned-vsphere">Configuring a user-managed load balancer</a></li><li class="level-5"><a href="#installation-launching-installer_installing-restricted-networks-installer-provisioned-vsphere">Deploying the cluster</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-vsphere-in-a-disconnected-environment-ipi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#olm-restricted-networks-operatorhub_install-on-vsphere-in-a-disconnected-environment-ipi">Disabling the default software catalog sources</a></li><li class="level-5"><a href="#registry-removed_install-on-vsphere-in-a-disconnected-environment-ipi">Image registry removed during installation</a></li><li class="level-5"><a href="#installation-registry-storage-config_install-on-vsphere-in-a-disconnected-environment-ipi">Image registry storage configuration</a></li><li class="level-6"><a href="#registry-configuring-storage-vsphere_install-on-vsphere-in-a-disconnected-environment-ipi">Configure registry storage for VMware vSphere</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-vsphere-in-a-disconnected-environment-ipi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#install-on-vsphere-in-a-disconnected-environment-upi-intro_install-on-vsphere-in-a-disconnected-environment-upi">Install on vSphere in a disconnected environment by using user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-about-restricted-networks_install-on-vsphere-in-a-disconnected-environment-upi">About installations in restricted networks</a></li><li class="level-6"><a href="#installation-restricted-network-limits_install-on-vsphere-in-a-disconnected-environment-upi">Additional limits</a></li><li class="level-5"><a href="#cluster-entitlements_installing-restricted-networks-vsphere">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#installation-vsphere-regions-zones_install-on-vsphere-in-a-disconnected-environment-upi">VMware vSphere region and zone enablement</a></li><li class="level-5"><a href="#installation-initializing-manual_installing-restricted-networks-vsphere">Manually creating the installation configuration file</a></li><li class="level-6"><a href="#installation-vsphere-config-yaml_installing-restricted-networks-vsphere">Sample install-config.yaml file for a VMware vSphere cluster</a></li><li class="level-6"><a href="#installation-configure-proxy_installing-restricted-networks-vsphere">Configuring the cluster-wide proxy during installation</a></li><li class="level-6"><a href="#configuring-vsphere-regions-zones_install-on-vsphere-in-a-disconnected-environment-upi">Configuring regions and zones for a VMware vCenter</a></li><li class="level-5"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-restricted-networks-vsphere">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-5"><a href="#installation-special-config-chrony_installing-restricted-networks-vsphere">Configure chrony time service</a></li><li class="level-5"><a href="#installation-extracting-infraid_installing-restricted-networks-vsphere">Extracting the infrastructure name</a></li><li class="level-5"><a href="#installation-vsphere-machines_install-on-vsphere-in-a-disconnected-environment-upi">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-5"><a href="#machine-vsphere-machines_install-on-vsphere-in-a-disconnected-environment-upi">Add more compute machines to a cluster in vSphere</a></li><li class="level-5"><a href="#installation-disk-partitioning_install-on-vsphere-in-a-disconnected-environment-upi">Disk partitioning</a></li><li class="level-5"><a href="#_creating_a_separate_var_partition_3">Creating a separate /var partition</a></li><li class="level-5"><a href="#installation-installing-bare-metal_installing-restricted-networks-vsphere">Waiting for the bootstrap process to complete</a></li><li class="level-5"><a href="#cli-logging-in-kubeadmin_install-on-vsphere-in-a-disconnected-environment-upi">Logging in to the cluster by using the CLI</a></li><li class="level-5"><a href="#installation-approve-csrs_install-on-vsphere-in-a-disconnected-environment-upi">Approve the certificate signing requests for your machines</a></li><li class="level-5"><a href="#installation-operators-config_install-on-vsphere-in-a-disconnected-environment-upi">Initial Operator configuration</a></li><li class="level-6"><a href="#olm-restricted-networks-operatorhub_install-on-vsphere-in-a-disconnected-environment-upi">Disabling the default software catalog sources</a></li><li class="level-6"><a href="#installation-registry-storage-config_install-on-vsphere-in-a-disconnected-environment-upi">Image registry storage configuration</a></li><li class="level-5"><a href="#installation-complete-user-infra_installing-restricted-networks-vsphere">Completing installation on user-provisioned infrastructure</a></li><li class="level-5"><a href="#anti-affinity-vsphere_install-on-vsphere-in-a-disconnected-environment-upi">Configuring vSphere DRS anti-affinity rules for control plane nodes</a></li><li class="level-5"><a href="#cluster-telemetry_install-on-vsphere-in-a-disconnected-environment-upi">Telemetry access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#install-a-three-node-cluster-on-vsphere-intro_install-a-three-node-cluster-on-vsphere">Install a three-node cluster on vSphere</a></li><li class="level-5"><a href="#installation-three-node-cluster_installing-vsphere-three-node">Configuring a three-node cluster</a></li><li class="level-4"><a href="#uninstall-a-cluster-on-vsphere-intro_uninstall-a-cluster-on-vsphere">Uninstall a cluster on vSphere</a></li><li class="level-5"><a href="#installation-uninstall-clouds_uninstall-a-cluster-on-vsphere">Removing a cluster that uses installer-provisioned infrastructure</a></li><li class="level-4"><a href="#configure-vsphere-zones-and-regions-post-installation-intro_configure-vsphere-zones-and-regions-post-installation">Configure vSphere zones and regions post-installation</a></li><li class="level-5"><a href="#specifying-regions-zones-infrastructure-vsphere_configure-vsphere-zones-and-regions-post-installation">Specifying multiple regions and zones for your cluster on vSphere</a></li><li class="level-5"><a href="#vsphere-enabling-multiple-layer2-network_configure-vsphere-zones-and-regions-post-installation">Enabling a multiple layer 2 network for your cluster</a></li><li class="level-5"><a href="#references-regions-zones-infrastructure-vsphere_configure-vsphere-zones-and-regions-post-installation">Parameters for the cluster-wide infrastructure CRD</a></li><li class="level-5"><a href="#specifying-host-groups-vsphere_configure-vsphere-zones-and-regions-post-installation">Specifying multiple host groups for your cluster on vSphere</a></li><li class="level-4"><a href="#configure-vsphere-post-installation-settings-intro_configure-vsphere-post-installation-settings">Configure vSphere post-installation settings</a></li><li class="level-5"><a href="#configuring-vSphere-connection-settings_configure-vsphere-post-installation-settings">Configuring the vSphere connection settings</a></li><li class="level-5"><a href="#configuring-vSphere-monitoring-configuration-completion_configure-vsphere-post-installation-settings">Verifying the configuration</a></li><li class="level-5"><a href="#encrypting-virtual-machines_configure-vsphere-post-installation-settings">Encrypting virtual machines</a></li><li class="level-5"><a href="#vsphere-problem-detector-about_configure-vsphere-post-installation-settings">About the {operator-name}</a></li><li class="level-5"><a href="#vsphere-problem-detector-running_configure-vsphere-post-installation-settings">Running the {operator-name} checks</a></li><li class="level-5"><a href="#vsphere-problem-detector-viewing-events_configure-vsphere-post-installation-settings">Viewing the events from the {operator-name}</a></li><li class="level-5"><a href="#vsphere-problem-detector-viewing-logs_configure-vsphere-post-installation-settings">Viewing the logs from the {operator-name}</a></li><li class="level-5"><a href="#vsphere-problem-detector-config-checks_configure-vsphere-post-installation-settings">Configuration checks run by the {operator-name}</a></li><li class="level-5"><a href="#vsphere-problem-detector-storage-class-config-check_configure-vsphere-post-installation-settings">About the storage class configuration check</a></li><li class="level-5"><a href="#vsphere-problem-detector-operator-metrics_configure-vsphere-post-installation-settings">Metrics for the {operator-name}</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="install-on-vsphere-intro_install-on-vsphere">Install on vSphere</h3>
@@ -1781,7 +1805,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>You can host the VMware vSphere infrastructure on-premise or on a <a href="https://cloud.vmware.com/providers">VMware Cloud Verified provider</a> that meets the requirements outlined in the following tables:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 151. Version requirements for vSphere virtual environments</caption>
+<caption class="title">Table 165. Version requirements for vSphere virtual environments</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1822,7 +1846,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 152. Minimum supported vSphere version for VMware components</caption>
+<caption class="title">Table 166. Minimum supported vSphere version for VMware components</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -1923,7 +1947,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Review the following details about the required network ports.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 153. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 167. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2233,7 +2257,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 154. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 168. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2282,7 +2306,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 155. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 169. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2424,7 +2448,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 156. Roles and privileges required for installation in vSphere API</caption>
+<caption class="title">Table 170. Roles and privileges required for installation in vSphere API</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -2923,7 +2947,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 157. Roles and privileges required for installation in vCenter graphical user interface (GUI)</caption>
+<caption class="title">Table 171. Roles and privileges required for installation in vCenter graphical user interface (GUI)</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 37.5%;">
@@ -3428,7 +3452,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>Additionally, the user requires some <code>ReadOnly</code> permissions, and some of the roles require permission to propagate the permissions to child objects. These settings vary depending on whether or not you install the cluster into an existing folder.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 158. Required permissions and propagation settings</caption>
+<caption class="title">Table 172. Required permissions and propagation settings</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3861,7 +3885,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following tables specify how the required vCenter account privileges provided earlier in this document are relevant to different aspects of Red&#160;Hat OpenShift Container Platform architecture.</p>
 </div>
 <table id="installation-vsphere-minimum-permissions-ipi_ipi-vsphere-installation-reqs" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 159. Minimum permissions on installer-provisioned infrastructure</caption>
+<caption class="title">Table 173. Minimum permissions on installer-provisioned infrastructure</caption>
 <colgroup>
 <col style="width: 36.3636%;">
 <col style="width: 36.3636%;">
@@ -4357,7 +4381,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table id="post-installation-vsphere-minimum-permissions_ipi-vsphere-installation-reqs" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 160. Minimum permissions for postinstallation management of components</caption>
+<caption class="title">Table 174. Minimum permissions for postinstallation management of components</caption>
 <colgroup>
 <col style="width: 36.3636%;">
 <col style="width: 36.3636%;">
@@ -4714,7 +4738,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table id="installation-vsphere-minimum-permissions-storage_ipi-vsphere-installation-reqs" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 161. Minimum permissions for the storage components</caption>
+<caption class="title">Table 175. Minimum permissions for the storage components</caption>
 <colgroup>
 <col style="width: 36.3636%;">
 <col style="width: 36.3636%;">
@@ -5001,7 +5025,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table id="post-installation-vsphere-minimum-machine-api_ipi-vsphere-installation-reqs" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 162. Minimum permissions for the Machine API</caption>
+<caption class="title">Table 176. Minimum permissions for the Machine API</caption>
 <colgroup>
 <col style="width: 36.3636%;">
 <col style="width: 36.3636%;">
@@ -5500,7 +5524,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>You must create DNS records for two static IP addresses in the appropriate DNS server for the vCenter instance that hosts your Red&#160;Hat OpenShift Container Platform cluster. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the cluster base domain that you specify when you install the cluster. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 163. Required DNS records</caption>
+<caption class="title">Table 177. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 55.5555%;">
@@ -5696,7 +5720,7 @@ platform:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 164. Minimum required hosts</caption>
+<caption class="title">Table 178. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5750,7 +5774,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 165. Minimum resource requirements</caption>
+<caption class="title">Table 179. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -5980,7 +6004,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 166. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 180. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -6312,7 +6336,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 167. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 181. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -6361,7 +6385,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 168. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 182. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -6459,7 +6483,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 169. Required DNS records</caption>
+<caption class="title">Table 183. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -7025,7 +7049,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 170. Application Ingress load balancer</caption>
+<caption class="title">Table 184. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -7238,7 +7262,7 @@ listen ingress-router-80
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 171. Required parameters</caption>
+<caption class="title">Table 185. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7441,7 +7465,7 @@ listen ingress-router-80
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 172. Network parameters</caption>
+<caption class="title">Table 186. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7717,7 +7741,7 @@ The prefix length for an IPv6 block is between <code>0</code> and <code>128</cod
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 173. Optional parameters</caption>
+<caption class="title">Table 187. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8316,7 +8340,7 @@ If you are installing on Google Cloud into a shared virtual private cloud (VPC),
 <p>Optional AWS configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 174. Optional AWS parameters</caption>
+<caption class="title">Table 188. Optional AWS parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -9199,7 +9223,7 @@ For more information about the support scope of Red Hat Technology Preview featu
 <p>Additional Google Cloud configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 175. Additional Google Cloud parameters</caption>
+<caption class="title">Table 189. Additional Google Cloud parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -10569,7 +10593,7 @@ For more information about the support scope of Red Hat Technology Preview featu
 <p>Additional VMware vSphere configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 176. Additional VMware vSphere cluster parameters</caption>
+<caption class="title">Table 190. Additional VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -11145,7 +11169,7 @@ If you do not specify a value, the installation program installs the resources i
 <p>The following table lists each deprecated vSphere configuration parameter:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 177. Deprecated VMware vSphere cluster parameters</caption>
+<caption class="title">Table 191. Deprecated VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -11392,7 +11416,7 @@ If you do not specify a value, the installation program installs the resources i
 <p>Optional VMware vSphere machine pool configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 178. Optional VMware vSphere machine pool parameters</caption>
+<caption class="title">Table 192. Optional VMware vSphere machine pool parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -14364,7 +14388,7 @@ spec:
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 179. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 193. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14517,7 +14541,7 @@ spec:
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 180. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 194. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -14582,7 +14606,7 @@ spec:
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 181. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 195. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14745,7 +14769,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 182. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 196. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14796,7 +14820,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 183. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 197. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14847,7 +14871,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 184. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 198. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14954,7 +14978,7 @@ spec:
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-vsphere-ipi-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 185. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 199. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15048,7 +15072,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-vsphere-ipi-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 186. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 200. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15093,7 +15117,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-vsphere-ipi-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 187. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 201. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15138,7 +15162,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-vsphere-ipi-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 188. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 202. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15245,19 +15269,19 @@ to use a user-managed load balancer in place of the default load balancer.</p>
 <div class="content">
 <img src="data:image/png;base64," alt="An image that shows an example network workflow of an Ingress Controller operating in an Red&#160;Hat OpenShift Container Platform environment.">
 </div>
-<div class="title">Figure 31. Example network workflow that shows an Ingress Controller operating in an Red&#160;Hat OpenShift Container Platform environment</div>
+<div class="title">Figure 35. Example network workflow that shows an Ingress Controller operating in an Red&#160;Hat OpenShift Container Platform environment</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="data:image/png;base64," alt="An image that shows an example network workflow of an OpenShift API operating in an Red&#160;Hat OpenShift Container Platform environment.">
 </div>
-<div class="title">Figure 32. Example network workflow that shows an OpenShift API operating in an Red&#160;Hat OpenShift Container Platform environment</div>
+<div class="title">Figure 36. Example network workflow that shows an OpenShift API operating in an Red&#160;Hat OpenShift Container Platform environment</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="data:image/png;base64," alt="An image that shows an example network workflow of an OpenShift `MachineConfig` API operating in an Red&#160;Hat OpenShift Container Platform environment.">
 </div>
-<div class="title">Figure 33. Example network workflow that shows an OpenShift <code>MachineConfig</code> API operating in an Red&#160;Hat OpenShift Container Platform environment</div>
+<div class="title">Figure 37. Example network workflow that shows an OpenShift <code>MachineConfig</code> API operating in an Red&#160;Hat OpenShift Container Platform environment</div>
 </div>
 <div class="paragraph">
 <p>The following configuration options are supported for user-managed load balancers:</p>
@@ -21233,7 +21257,7 @@ spec:
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 189. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 203. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21386,7 +21410,7 @@ spec:
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 190. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 204. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -21451,7 +21475,7 @@ spec:
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 191. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 205. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21614,7 +21638,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 192. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 206. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21665,7 +21689,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 193. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 207. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21716,7 +21740,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 194. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 208. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21823,7 +21847,7 @@ spec:
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-vsphere-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 195. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 209. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21917,7 +21941,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-vsphere-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 196. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 210. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21962,7 +21986,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-vsphere-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 197. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 211. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -22007,7 +22031,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-vsphere-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 198. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 212. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25027,19 +25051,19 @@ to use a user-managed load balancer in place of the default load balancer.</p>
 <div class="content">
 <img src="data:image/png;base64," alt="An image that shows an example network workflow of an Ingress Controller operating in an Red&#160;Hat OpenShift Container Platform environment.">
 </div>
-<div class="title">Figure 34. Example network workflow that shows an Ingress Controller operating in an Red&#160;Hat OpenShift Container Platform environment</div>
+<div class="title">Figure 38. Example network workflow that shows an Ingress Controller operating in an Red&#160;Hat OpenShift Container Platform environment</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="data:image/png;base64," alt="An image that shows an example network workflow of an OpenShift API operating in an Red&#160;Hat OpenShift Container Platform environment.">
 </div>
-<div class="title">Figure 35. Example network workflow that shows an OpenShift API operating in an Red&#160;Hat OpenShift Container Platform environment</div>
+<div class="title">Figure 39. Example network workflow that shows an OpenShift API operating in an Red&#160;Hat OpenShift Container Platform environment</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="data:image/png;base64," alt="An image that shows an example network workflow of an OpenShift `MachineConfig` API operating in an Red&#160;Hat OpenShift Container Platform environment.">
 </div>
-<div class="title">Figure 36. Example network workflow that shows an OpenShift <code>MachineConfig</code> API operating in an Red&#160;Hat OpenShift Container Platform environment</div>
+<div class="title">Figure 40. Example network workflow that shows an OpenShift <code>MachineConfig</code> API operating in an Red&#160;Hat OpenShift Container Platform environment</div>
 </div>
 <div class="paragraph">
 <p>The following configuration options are supported for user-managed load balancers:</p>
@@ -29216,6 +29240,1419 @@ cluster.</p>
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="configure-vsphere-zones-and-regions-post-installation-intro_configure-vsphere-zones-and-regions-post-installation">Configure vSphere zones and regions post-installation</h4>
+<div class="paragraph _abstract">
+<p>As an administrator, you can specify multiple regions and zones for your Red&#160;Hat OpenShift Container Platform cluster that runs on a VMware vSphere instance. This configuration reduces the risk of a hardware failure or network outage causing your cluster to fail.</p>
+</div>
+<div class="sect4">
+<h5 id="specifying-regions-zones-infrastructure-vsphere_configure-vsphere-zones-and-regions-post-installation">Specifying multiple regions and zones for your cluster on vSphere</h5>
+<div class="paragraph _abstract">
+<p>You can configure the <code>infrastructures.config.openshift.io</code> configuration resource to specify multiple regions and zones for your Red&#160;Hat OpenShift Container Platform cluster that runs on a VMware vSphere instance.</p>
+</div>
+<div class="paragraph">
+<p>Topology-aware features for the cloud controller manager and the vSphere Container Storage Interface (CSI) Operator Driver require information about the vSphere topology where you host your Red&#160;Hat OpenShift Container Platform cluster. This topology information exists in the <code>infrastructures.config.openshift.io</code> configuration resource.</p>
+</div>
+<div class="paragraph">
+<p>Before you specify regions and zones for your cluster, you must ensure that all data centers and compute clusters contain tags, so that the cloud provider can add labels to your node. For example, if <code>data-center-1</code> represents <code>region-a</code> and <code>compute-cluster-1</code> represents <code>zone-1</code>, the cloud provider adds an <code>openshift-region</code> category label with a value of <code>region-a</code> to <code>data-center-1</code>.  Additionally, the cloud provider adds an <code>openshift-zone</code> category tag with a value of <code>zone-1</code> to <code>compute-cluster-1</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can migrate control plane nodes with vMotion capabilities to a failure domain. After you add these nodes to a failure domain, the cloud provider adds <code>topology.kubernetes.io/zone</code> and <code>topology.kubernetes.io/region</code> labels to these nodes.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You created the <code>openshift-region</code> and <code>openshift-zone</code> tag categories on the vCenter server.</p>
+</li>
+<li>
+<p>You ensured that each data center and compute cluster contains tags that represent the name of their associated region or zone, or both.</p>
+</li>
+<li>
+<p>Optional: If you defined <strong>API</strong> and <strong>Ingress</strong> static IP addresses to the installation program, you must ensure that all regions and zones share a common layer 2 network. This configuration ensures that API and Ingress Virtual IP (VIP) addresses can interact with your cluster.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you do not supply tags to all data centers and compute clusters before you create a node or migrate a node, the cloud provider cannot add the <code>topology.kubernetes.io/zone</code> and <code>topology.kubernetes.io/region</code> labels to the node. This means that services cannot route traffic to your node.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Edit the <code>infrastructures.config.openshift.io</code> custom resource definition (CRD) of your cluster to specify multiple regions and zones in the <code>failureDomains</code> section of the resource by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc edit infrastructures.config.openshift.io cluster</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example shows an <code>infrastructures.config.openshift.io</code> CRD for an instance named <code>cluster</code> with multiple regions and zones defined in its configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">spec:
+  cloudConfig:
+    key: config
+    name: cloud-provider-config
+  platformSpec:
+    type: vSphere
+    vsphere:
+      vcenters:
+        - datacenters:
+            - &lt;region_a_data_center&gt;
+            - &lt;region_b_data_center&gt;
+          port: 443
+          server: &lt;your_vcenter_server&gt;
+      failureDomains:
+        - name: &lt;failure_domain_1&gt;
+          region: &lt;region_a&gt;
+          zone: &lt;zone_a&gt;
+          server: &lt;your_vcenter_server&gt;
+          topology:
+            datacenter: &lt;region_a_dc&gt;
+            computeCluster: "&lt;/region_a_dc/host/zone_a_cluster&gt;"
+            resourcePool: "&lt;/region_a_dc/host/zone_a_cluster/Resources/resource_pool&gt;"
+            datastore: "&lt;/region_a_dc/datastore/datastore_a&gt;"
+            networks:
+            - port-group
+        - name: &lt;failure_domain_2&gt;
+          region: &lt;region_a&gt;
+          zone: &lt;zone_b&gt;
+          server: &lt;your_vcenter_server&gt;
+          topology:
+            computeCluster: &lt;/region_a_dc/host/zone_b_cluster&gt;
+            datacenter: &lt;region_a_dc&gt;
+            datastore: &lt;/region_a_dc/datastore/datastore_a&gt;
+            networks:
+            - port-group
+        - name: &lt;failure_domain_3&gt;
+          region: &lt;region_b&gt;
+          zone: &lt;zone_a&gt;
+          server: &lt;your_vcenter_server&gt;
+          topology:
+            computeCluster: &lt;/region_b_dc/host/zone_a_cluster&gt;
+            datacenter: &lt;region_b_dc&gt;
+            datastore: &lt;/region_b_dc/datastore/datastore_b&gt;
+            networks:
+            - port-group
+      nodeNetworking:
+        external: {}
+        internal: {}</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>After you create a failure domain and you define it in a CRD for a VMware vSphere cluster, you must not modify or delete the failure domain. Doing any of these actions with this configuration can impact the availability and fault tolerance of a control plane machine.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Save the resource file to apply the changes.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="vsphere-enabling-multiple-layer2-network_configure-vsphere-zones-and-regions-post-installation">Enabling a multiple layer 2 network for your cluster</h5>
+<div class="paragraph _abstract">
+<p>You can configure your cluster to use a multiple layer 2 network configuration so that data transfer among nodes can span across multiple networks.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You configured network connectivity among machines so that cluster components can communicate with each other.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>If you installed your cluster with installer-provisioned infrastructure, you must ensure that all control plane nodes share a common layer 2 network. Additionally, ensure compute nodes that are configured for Ingress pod scheduling share a common layer 2 network.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If you need compute nodes to span multiple layer 2 networks, you can create infrastructure nodes that can host Ingress pods.</p>
+</li>
+<li>
+<p>If you need to provision workloads across additional layer 2 networks, you can create compute machine sets on vSphere and then move these workloads to your target layer 2 networks.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If you installed your cluster on infrastructure that you provided, which is defined as a user-provisioned infrastructure, complete the following actions to meet your needs:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Configure your API load balancer and network so that the load balancer can reach the API and Machine Config Server on the control plane nodes.</p>
+</li>
+<li>
+<p>Configure your Ingress load balancer and network so that the load balancer can reach the Ingress pods on the compute or infrastructure nodes.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="references-regions-zones-infrastructure-vsphere_configure-vsphere-zones-and-regions-post-installation">Parameters for the cluster-wide infrastructure CRD</h5>
+<div class="paragraph _abstract">
+<p>You must set values for specific parameters in the cluster-wide infrastructure, <code>infrastructures.config.openshift.io</code>, Custom Resource Definition (CRD) to define multiple regions and zones for your Red&#160;Hat OpenShift Container Platform cluster that runs on a VMware vSphere instance.</p>
+</div>
+<div class="paragraph">
+<p>The following table lists mandatory parameters for defining multiple regions and zones for your Red&#160;Hat OpenShift Container Platform cluster:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>vcenters</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The vCenter servers for your Red&#160;Hat OpenShift Container Platform cluster. You can specify either a single vCenter, or up to 3 vCenters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>datacenters</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vCenter data centers where VMs associated with the Red&#160;Hat OpenShift Container Platform cluster will be created or presently exist.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>port</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The TCP port of the vCenter server.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>server</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The fully qualified domain name (FQDN) of the vCenter server.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>failureDomains</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The list of failure domains.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the failure domain.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>region</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The value of the <code>openshift-region</code> tag assigned to the topology for the failure domain.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>zone</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The value of the <code>openshift-zone</code> tag assigned to the topology for the failure domain.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>topology</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The vCenter resources associated with the failure domain.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>datacenter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The data center associated with the failure domain.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>computeCluster</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The full path of the compute cluster associated with the failure domain.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resourcePool</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The full path of the resource pool associated with the failure domain.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>datastore</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The full path of the datastore associated with the failure domain.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>networks</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A list of port groups associated with the failure domain. Only one portgroup can be defined.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="specifying-host-groups-vsphere_configure-vsphere-zones-and-regions-post-installation">Specifying multiple host groups for your cluster on vSphere</h5>
+<div class="paragraph _abstract">
+<p>You can configure the <code>infrastructures.config.openshift.io</code> configuration resource to specify multiple host groups for your Red&#160;Hat OpenShift Container Platform cluster that runs on a VMware vSphere instance.</p>
+</div>
+<div class="paragraph">
+<p>This is necessary if your vSphere instance is in a stretched cluster configuration, with your ESXi hosts and storage distributed across multiple physical data centers. Use this procedure if you did not already configure host groups for your Red&#160;Hat OpenShift Container Platform cluster at installation, or if you need to update your Red&#160;Hat OpenShift Container Platform cluster with additional host groups.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>ESXi hosts are grouped into host groups, which are linked via VM-host affinity rules to corresponding virtual machine (VM) groups. See the following example <code>govc</code> commands for details:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal"># This example shows the correct configuration for a cluster with two host groups:
+
+# Create host groups:
+govc cluster.group.create -name &lt;host_group_1&gt; -host
+govc cluster.group.create -name &lt;host_group_2&gt; -host
+
+# Create VM groups:
+govc cluster.group.create -name &lt;vm_group_1&gt; -vm
+govc cluster.group.create -name &lt;vm_group_2&gt; -vm
+
+# Create VM-host affinity rules:
+govc cluster.rule.create -name &lt;rule_1&gt; -enable -vm-host -vm-group &lt;vm_group_1&gt; -host-affine-group &lt;host_group_1&gt;
+govc cluster.rule.create -name &lt;rule_2&gt; -enable -vm-host -vm-group &lt;vm_group_2&gt; -host-affine-group &lt;host_group_2&gt;
+
+# Add ESXi hosts to host groups:
+govc cluster.group.change -name &lt;host_group_1&gt; &lt;esxi_host_1_ip&gt;
+govc cluster.group.change -name &lt;host_group_2&gt; &lt;esxi_host_2_ip&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><code>openshift-region</code> and <code>openshift-zone</code> tag categories are created on the vCenter server.</p>
+</li>
+<li>
+<p>Compute clusters have tags from the <code>openshift-region</code> tag category.</p>
+</li>
+<li>
+<p>ESXi hosts within host groups have tags from the <code>openshift-zone</code> tag category.</p>
+</li>
+<li>
+<p><code>Host.Inventory.EditCluster</code> privilege is granted on the vSphere vCenter cluster object.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Edit the infrastructure settings of your Red&#160;Hat OpenShift Container Platform cluster.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>To copy your existing infrastructure settings to a file, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc get infrastructures.config.openshift.io cluster -o yaml &gt; &lt;name_of_infrastructure_file&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Edit your infrastructure file to include a failure domain for each host group in your vSphere cluster. Refer to the following YAML file for an example of this configuration. Ensure you replace any values wrapped in angle brackets (<code>&lt; &gt;</code>) with your values:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1
+kind: Infrastructure
+metadata:
+  name: cluster
+spec:
+  cloudConfig:
+    key: config
+    name: cloud-provider-config
+  platformSpec:
+    type: VSphere
+    vsphere:
+      apiServerInternalIPs:
+      - &lt;internal_ip_of_api_server&gt;
+      failureDomains:
+      - name: &lt;unique_name_for_failure_domain_1&gt;
+        region: &lt;cluster_1_region_tag&gt;
+        server: &lt;vcenter_server_ip_address&gt;
+        zoneAffinity:
+          type: HostGroup
+          hostGroup:
+            vmGroup: &lt;name_of_vm_group_1&gt;
+            hostGroup: &lt;name_of_host_group_1&gt;
+            vmHostRule: &lt;name_of_vm_host_affinity_rule_1&gt;
+        regionAffinity:
+          type: ComputeCluster
+        topology:
+          computeCluster: /&lt;data_center_1&gt;/host/&lt;cluster_1&gt;
+          datacenter: &lt;data_center_1&gt;
+          datastore: /&lt;data_center_1&gt;/datastore/&lt;datastore_1&gt;
+          networks:
+          - VM Network
+          resourcePool: /&lt;data_center_1&gt;/host/&lt;cluster_1&gt;/Resources
+          template: /&lt;data_center_1&gt;/vm/&lt;vm_template&gt;
+        zone: &lt;host_group_1_tag&gt;
+      - name: &lt;unique_name_for_failure_domain_2&gt;
+        region: &lt;cluster_1_region_tag&gt;
+        server: &lt;vcenter_server_ip_address&gt;
+        zoneAffinity:
+          type: HostGroup
+          hostGroup:
+            vmGroup: &lt;name_of_vm_group_2&gt;
+            hostGroup: &lt;name_of_host_group_2&gt;
+            vmHostRule: &lt;name_of_vm_host_affinity_rule_2&gt;
+        regionAffinity:
+          type: ComputeCluster
+        topology:
+          computeCluster: /&lt;data_center_1&gt;/host/&lt;cluster_1&gt;
+          datacenter: &lt;data_center_1&gt;
+          datastore: /&lt;data_center_1&gt;/datastore/&lt;datastore_1&gt;
+          networks:
+          - VM Network
+          resourcePool: /&lt;data_center_1&gt;/host/&lt;cluster_1&gt;/Resources
+          template: /&lt;data_center_1&gt;/vm/&lt;vm_template&gt;
+        zone: &lt;host_group_2_tag&gt;
+# ...</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To update your cluster with these changes, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc replace -f &lt;name_of_infrastructure_file&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Update your <code>ControlPlaneMachineSet</code> custom resource (CR) with the new failure domains by completing the following steps:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Edit the <code>ControlPlaneMachineSet</code> CR by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc edit controlplanemachinesets.machine.openshift.io -n openshift-machine-api cluster</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Edit the <code>failureDomains</code> parameter as shown in the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: jdoe3-whb8l
+      machine.openshift.io/cluster-api-machine-role: master
+      machine.openshift.io/cluster-api-machine-type: master
+  state: Active
+  strategy:
+    type: RollingUpdate
+  template:
+    machineType: machines_v1beta1_machine_openshift_io
+    machines_v1beta1_machine_openshift_io:
+      failureDomains:
+        platform: VSphere
+        vsphere:
+        - name: &lt;failure_domain_1_name&gt;
+        - name: &lt;failure_domain_2_name&gt;
+# ...</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that your control plane nodes have finished updating before proceeding further. To do this, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc get controlplanemachinesets.machine.openshift.io -n openshift-machine-api</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create new <code>MachineSet</code> CRs for your failure domains.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>To retrieve the configuration of an existing <code>MachineSet</code> CR for use as a template, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc get machinesets.machine.openshift.io -n openshift-machine-api &lt;existing_machine_set&gt; -o yaml &gt; machineset-&lt;failure_domain_name&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Copy the template as needed to create <code>MachineSet</code> CR files for each failure domain that you defined in your infrastructure file. Refer to the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata:
+  labels:
+    machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
+  name: &lt;machineset_name&gt;
+  namespace: openshift-machine-api
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
+      machine.openshift.io/cluster-api-machineset: &lt;machineset_name&gt;
+  template:
+    metadata:
+      labels:
+        machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
+        machine.openshift.io/cluster-api-machine-role: worker
+        machine.openshift.io/cluster-api-machine-type: worker
+        machine.openshift.io/cluster-api-machineset: &lt;machineset_name&gt;
+    spec:
+      lifecycleHooks: {}
+      metadata: {}
+      providerSpec:
+        value:
+          apiVersion: machine.openshift.io/v1beta1
+          credentialsSecret:
+            name: vsphere-cloud-credentials
+          diskGiB: &lt;disk_GiB&gt;
+          kind: VSphereMachineProviderSpec
+          memoryMiB: &lt;memory_in_MiB&gt;
+          metadata:
+            creationTimestamp: null
+          network:
+            devices:
+            - networkName: VM Network
+          numCPUs: &lt;number_of_cpus&gt;
+          numCoresPerSocket: &lt;number_of_cores_per_socket&gt;
+          snapshot: ""
+          template: &lt;template_name&gt;
+          userDataSecret:
+            name: worker-user-data
+          workspace:
+            datacenter: &lt;data_center_1&gt;
+            datastore: /&lt;data_center_1&gt;/datastore/&lt;datastore_1&gt;
+            folder: /&lt;data_center_1&gt;/vm/&lt;folder&gt;
+            resourcePool: /&lt;data_center_1&gt;/host/&lt;cluster_1&gt;/Resources
+            server: &lt;server_ip_address&gt;
+            vmGroup: &lt;name_of_vm_group_1&gt;
+# ...</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>For each <code>MachineSet</code> CR file, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;name_of_machine_set_file&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="configure-vsphere-post-installation-settings-intro_configure-vsphere-post-installation-settings">Configure vSphere post-installation settings</h4>
+<div class="paragraph _abstract">
+<p>After installing an Red&#160;Hat OpenShift Container Platform cluster on vSphere with the platform integration feature enabled, you might need to update the vSphere connection settings manually, depending on the installation method.</p>
+</div>
+<div class="sect4">
+<h5 id="configuring-vSphere-connection-settings_configure-vsphere-post-installation-settings">Configuring the vSphere connection settings</h5>
+<div class="paragraph _abstract">
+<p>Modify the following vSphere configuration settings as required:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vCenter address</p>
+</li>
+<li>
+<p>vCenter cluster</p>
+</li>
+<li>
+<p>vCenter username</p>
+</li>
+<li>
+<p>vCenter password</p>
+</li>
+<li>
+<p>vCenter address</p>
+</li>
+<li>
+<p>vSphere data center</p>
+</li>
+<li>
+<p>vSphere datastore</p>
+</li>
+<li>
+<p>Virtual machine folder</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>The Assisted Installer has finished installing the cluster successfully.</p>
+</li>
+<li>
+<p>The cluster is connected to <code><a href="https://console.redhat.com" class="bare">https://console.redhat.com</a></code>.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the Administrator perspective, navigate to <strong>Home &#8594; Overview</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Status</strong>, click <strong>vSphere connection</strong> to open the <strong>vSphere connection configuration</strong> wizard.</p>
+</li>
+<li>
+<p>In the <strong>vCenter</strong> field, enter the network address of the vSphere vCenter server. This can be either a domain name or an IP address. It appears in the vSphere web client URL; for example <code>https://[your_vCenter_address]/ui</code>.</p>
+</li>
+<li>
+<p>In the <strong>vCenter cluster</strong> field, enter the name of the vSphere vCenter cluster where Red&#160;Hat OpenShift Container Platform is installed.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This step is mandatory if you installed Red&#160;Hat OpenShift Container Platform 4.13 or later.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>In the <strong>Username</strong> field, enter your vSphere vCenter username.</p>
+</li>
+<li>
+<p>In the <strong>Password</strong> field, enter your vSphere vCenter password.</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The system stores the username and password in the <code>vsphere-creds</code> secret in the <code>kube-system</code> namespace of the cluster. An incorrect vCenter username or password makes the cluster nodes unschedulable.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>In the <strong>Datacenter</strong> field, enter the name of the vSphere data center that contains the virtual machines used to host the cluster; for example, <code>SDDC-Datacenter</code>.</p>
+</li>
+<li>
+<p>In the <strong>Default data store</strong> field, enter the path and name of the vSphere data store that stores the persistent data volumes; for example, <code>/SDDC-Datacenter/datastore/datastorename</code>.</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Updating the vSphere data center or default data store after the configuration has been saved detaches any active vSphere <code>PersistentVolumes</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>In the <strong>Virtual Machine Folder</strong> field, enter the data center folder that contains the virtual machine of the cluster; for example, <code>/SDDC-Datacenter/vm/ci-ln-hjg4vg2-c61657-t2gzr</code>. For the Red&#160;Hat OpenShift Container Platform installation to succeed, all virtual machines comprising the cluster must be located in a single data center folder.</p>
+</li>
+<li>
+<p>Click <strong>Save Configuration</strong>. This updates the <code>cloud-provider-config</code> ConfigMap resource in the <code>openshift-config</code> namespace, and starts the configuration process.</p>
+</li>
+<li>
+<p>Reopen the <strong>vSphere connection configuration</strong> wizard and expand the <strong>Monitored operators</strong> panel. Check that the status of the operators is either <strong>Progressing</strong> or <strong>Healthy</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="configuring-vSphere-monitoring-configuration-completion_configure-vsphere-post-installation-settings">Verifying the configuration</h5>
+<div class="paragraph _abstract">
+<p>The connection configuration process updates operator statuses and control plane nodes. It takes approximately an hour to complete. During the configuration process, the nodes reboot. Previously bound <code>PersistentVolumeClaims</code> objects might become disconnected.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have saved the configuration settings in the <strong>vSphere connection configuration</strong> wizard.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Check that the configuration process completed successfully:</p>
+<div class="openblock">
+<div class="content">
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In the OpenShift Container Platform Administrator perspective, navigate to <strong>Home &#8594; Overview</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Status</strong> click <strong>Operators</strong>. Wait for all operator statuses to change from  <strong>Progressing</strong> to <strong>All succeeded</strong>.  A <strong>Failed</strong> status indicates that the configuration failed.</p>
+</li>
+<li>
+<p>Under <strong>Status</strong>, click <strong>Control Plane</strong>. Wait for the response rate of all Control Pane components to return to 100%. A <strong>Failed</strong> control plane component indicates that the configuration failed.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>A failure indicates that at least one of the connection settings is incorrect. Change the settings in the <strong>vSphere connection configuration</strong> wizard and save the configuration again.</p>
+</div>
+</li>
+<li>
+<p>Check that you are able to bind <code>PersistentVolumeClaims</code> objects by performing the following steps:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a <code>StorageClass</code> object using the following YAML:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+ name: vsphere-sc
+provisioner: kubernetes.io/vsphere-volume
+parameters:
+ datastore: YOURVCENTERDATASTORE
+ diskformat: thin
+reclaimPolicy: Delete
+volumeBindingMode: Immediate</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a <code>PersistentVolumeClaims</code> object using the following YAML:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+ name: test-pvc
+ namespace: openshift-config
+ annotations:
+   volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/vsphere-volume
+ finalizers:
+   - kubernetes.io/pvc-protection
+spec:
+ accessModes:
+   - ReadWriteOnce
+ resources:
+   requests:
+    storage: 10Gi
+ storageClassName: vsphere-sc
+ volumeMode: Filesystem</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are unable to create a <code>PersistentVolumeClaims</code> object, you can troubleshoot by navigating to <strong>Storage</strong> &#8594; <strong>PersistentVolumeClaims</strong> in the <strong>Administrator</strong> perspective of the Red&#160;Hat OpenShift Container Platform web console.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="encrypting-virtual-machines_configure-vsphere-post-installation-settings">Encrypting virtual machines</h5>
+<div class="paragraph _abstract">
+<p>You can encrypt your virtual machines with the following process. You can drain your virtual machines, power them down and encrypt them using the vCenter interface. Finally, you can create a storage class to use the encrypted storage.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have configured a Standard key provider in vSphere. For more information, see <a href="https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vsan.doc/GUID-AC06B3C3-901F-402E-B25F-1EE7809D1264.html">Adding a KMS to vCenter Server</a>.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The Native key provider in vCenter is not supported. For more information, see <a href="https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-54B9FBA2-FDB1-400B-A6AE-81BF3AC9DF97.html">vSphere Native Key Provider Overview</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>You have enabled host encryption mode on all of the ESXi hosts that are hosting the cluster. For more information, see <a href="https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-A9E1F016-51B3-472F-B8DE-803F6BDB70BC.html">Enabling host encryption mode</a>.</p>
+</li>
+<li>
+<p>You have a vSphere account which has all cryptographic privileges enabled. For more information, see <a href="https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-660CCB35-847F-46B3-81CA-10DDDB9D7AA9.html">Cryptographic Operations Privileges</a>.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Drain and cordon one of your nodes. For detailed instructions on node management, see "Working with Nodes".</p>
+</li>
+<li>
+<p>Shutdown the virtual machine associated with that node in the vCenter interface.</p>
+</li>
+<li>
+<p>Right-click the virtual machine in the vCenter interface and select <strong>VM Policies</strong> &#8594; <strong>Edit VM Storage Policies</strong>.</p>
+</li>
+<li>
+<p>Select an encrypted storage policy and select <strong>OK</strong>.</p>
+</li>
+<li>
+<p>Start the encrypted virtual machine in the vCenter interface.</p>
+</li>
+<li>
+<p>Repeat steps 1-5 for all nodes that you want to encrypt.</p>
+</li>
+<li>
+<p>Configure a storage class that uses the encrypted storage policy. For more information about configuring an encrypted storage class, see "VMware vSphere CSI Driver Operator".</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="vsphere-problem-detector-about_configure-vsphere-post-installation-settings">About the {operator-name}</h5>
+<div class="paragraph _abstract">
+<p>The {operator-name} checks a cluster that you deployed on VMware vSphere for common installation and configuration issues that relate to storage.</p>
+</div>
+<div class="paragraph">
+<p>After the Cluster Storage Operator starts and determines that a cluster runs on VMware vSphere, the Cluster Storage Operator launches the {operator-name}. When the {operator-name} starts, the Operator immediately runs the checks. The {operator-name} communicates with the vSphere vCenter Server to find the virtual machines in the cluster, the default datastore, and other information about the vSphere vCenter Server configuration. The Operator uses the credentials from the Cloud Credential Operator to connect to vSphere.</p>
+</div>
+<div class="paragraph">
+<p>The Operator runs the checks according to the following schedule:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The checks run every hour.</p>
+</li>
+<li>
+<p>If any check fails, the Operator runs the checks again in intervals of 1 minute, 2 minutes, 4, 8, and so on. The Operator doubles the interval up to a maximum interval of 8 hours.</p>
+</li>
+<li>
+<p>When all checks pass, the schedule returns to an hour interval.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>After a failure, the Operator increases its check frequency to quickly report success when the failure condition gets resolved. You can run the Operator manually for immediate troubleshooting information.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="vsphere-problem-detector-running_configure-vsphere-post-installation-settings">Running the {operator-name} checks</h5>
+<div class="paragraph _abstract">
+<p>You can override the schedule for running the {operator-name} checks and run the checks immediately.</p>
+</div>
+<div class="paragraph">
+<p>The {operator-name} automatically runs the checks every hour. After the Operator starts, the Operator runs the checks immediately. After the Cluster Storage Operator starts and determines that a cluster runs on VMware vSphere, the Cluster Storage Operator starts the {operator-name}. To run the checks immediately, you can scale the {operator-name} to <code>0</code> and back to <code>1</code> so that the Cluster Storage Operator restarts the {operator-name}.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Scale the Operator to <code>0</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc scale deployment/vsphere-problem-detector-operator --replicas=0 \
+    -n openshift-cluster-storage-operator</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Verify that the pods have restarted by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-cluster-storage-operator get pod -l name=vsphere-problem-detector-operator -w</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">NAME                                                 READY   STATUS    RESTARTS   AGE
+vsphere-problem-detector-operator-77486bd645-9ntpb   1/1     Running   0          11s</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>AGE</code> field must indicate that the pod restarted.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Next steps</div>
+<ul>
+<li>
+<p>Viewing the events from the {operator-name}</p>
+</li>
+<li>
+<p>Viewing the logs from the {operator-name}</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="vsphere-problem-detector-viewing-events_configure-vsphere-post-installation-settings">Viewing the events from the {operator-name}</h5>
+<div class="paragraph _abstract">
+<p>After the {operator-name} runs and performs the configuration checks, the Operator creates events that you can view from the command-line interface (CLI) or from the Red&#160;Hat OpenShift Container Platform web console.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>The {operator-name} ran checks on your cluster.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>To view the events by using the CLI, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc get event -n openshift-cluster-storage-operator \
+    --sort-by={.metadata.creationTimestamp}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">16m     Normal    Started             pod/vsphere-problem-detector-operator-xxxxx         Started container vsphere-problem-detector
+16m     Normal    Created             pod/vsphere-problem-detector-operator-xxxxx         Created container vsphere-problem-detector
+16m     Normal    LeaderElection      configmap/vsphere-problem-detector-lock    vsphere-problem-detector-operator-xxxxx became leader</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To view the events by using the Red&#160;Hat OpenShift Container Platform web console, navigate to <strong>Home</strong> &#8594; <strong>Events</strong> and select <code>openshift-cluster-storage-operator</code> from the <strong>Project</strong> menu.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="vsphere-problem-detector-viewing-logs_configure-vsphere-post-installation-settings">Viewing the logs from the {operator-name}</h5>
+<div class="paragraph _abstract">
+<p>After the {operator-name} runs and performs the configuration checks, the Operator creates log records that you can view from the command-line interface (CLI) or from the Red&#160;Hat OpenShift Container Platform web console. Log lines that indicate <code>passed</code> means that you do not need to perform any actions.</p>
+</div>
+<div class="paragraph">
+<p>The ideal output for a log line indicates <code>passed</code> or <code>0 problems</code>. If a log line indicates <code>failure</code> or 1 or more problems, see the information in the "Configuration checks run by the {operator-name}" document.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>The {operator-name} ran checks on your cluster.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>To view the logs by using the CLI, run the following command. A log line that shows <code>passed</code> in the output means that you must analyze the log output and resolve the issue.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc logs deployment/vsphere-problem-detector-operator \
+    -n openshift-cluster-storage-operator</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">I0108 08:32:28.445696       1 operator.go:209] ClusterInfo passed
+I0108 08:32:28.451029       1 datastore.go:57] CheckStorageClasses checked 1 storage classes, 0 problems found
+I0108 08:32:28.451047       1 operator.go:209] CheckStorageClasses passed
+I0108 08:32:28.452160       1 operator.go:209] CheckDefaultDatastore passed
+I0108 08:32:28.480648       1 operator.go:271] CheckNodeDiskUUID:&lt;host_name&gt; passed
+I0108 08:32:28.480685       1 operator.go:271] CheckNodeProviderID:&lt;host_name&gt; passed</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To view the Operator logs with the Red&#160;Hat OpenShift Container Platform web console, perform the following steps:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Navigate to <strong>Workloads</strong> &#8594; <strong>Pods</strong>.</p>
+</li>
+<li>
+<p>Select <code>openshift-cluster-storage-operator</code> from the <strong>Projects</strong> menu.</p>
+</li>
+<li>
+<p>Click the link for the <code>vsphere-problem-detector-operator</code> pod.</p>
+</li>
+<li>
+<p>Click the <strong>Logs</strong> tab on the <strong>Pod details</strong> page to view the logs.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="vsphere-problem-detector-config-checks_configure-vsphere-post-installation-settings">Configuration checks run by the {operator-name}</h5>
+<div class="paragraph _abstract">
+<p>The following tables identify the configuration checks that the {operator-name} runs. Some checks verify the configuration of the cluster. Other checks verify the configuration of each node in the cluster.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 213. Cluster configuration checks</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CheckDefaultDatastore</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Verifies that the default datastore name in the VMware vSphere configuration is short enough for use with dynamic provisioning.</p>
+</div>
+<div class="paragraph">
+<p>If this check fails, you can expect the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>systemd</code> logs errors to the journal such as <code>Failed to set up mount unit: Invalid argument</code>.</p>
+</li>
+<li>
+<p><code>systemd</code> does not unmount volumes if the virtual machine shuts down or reboots without draining all the pods from the node.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If this check fails, reconfigure vSphere with a shorter name for the default datastore.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CheckFolderPermissions</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Verifies the permission to list volumes in the default datastore. You must enable the permission to create volumes. The Operator verifies the permission by listing the <code>/</code> and <code>/kubevols</code> directories. When the Operator performs the check, the root directory must exist. The <code>/kubevols</code> directory might not exist at the time of the check. The creation of the <code>/kubevols</code> directory occurs when the datastore supports dynamic provisioning.</p>
+</div>
+<div class="paragraph">
+<p>If this check fails, review the required permissions for the vCenter account that you specified during the Red&#160;Hat OpenShift Container Platform installation.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CheckStorageClasses</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Verifies the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The fully qualified path to each persistent volume that the storage class provisions does not go lower than 255 characters.</p>
+</li>
+<li>
+<p>The storage class can use only one storage policy and the policy must be defined.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CheckTaskPermissions</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Verifies the permission to list recent tasks and datastores.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ClusterInfo</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Collects the cluster version and UUID from vSphere vCenter.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 214. Node configuration checks</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CheckNodeDiskUUID</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Verifies that all the vSphere virtual machines include the <code>disk.enableUUID=TRUE</code> configuration.</p>
+</div>
+<div class="paragraph">
+<p>If this check fails, see the <a href="https://access.redhat.com/solutions/4606201">How to check <code>disk.EnableUUID</code> parameter from VM in vSphere</a> Red Hat Knowledgebase solution.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CheckNodeProviderID</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Verifies that all nodes have the <code>ProviderID</code> configuration from vSphere vCenter. This check fails when the output from the following command does not include a provider ID for each node.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc get nodes -o custom-columns=NAME:.metadata.name,PROVIDER_ID:.spec.providerID,UUID:.status.nodeInfo.systemUUID</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If this check fails, reference the vSphere product documentation on how to set the provider ID for each node in the cluster.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CollectNodeESXiVersion</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Reports the version of the ESXi hosts that run nodes.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CollectNodeHWVersion</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Reports the virtual machine hardware version for a node.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="vsphere-problem-detector-storage-class-config-check_configure-vsphere-post-installation-settings">About the storage class configuration check</h5>
+<div class="paragraph _abstract">
+<p>The datastore name and cluster ID relate to the names for persistent volumes that use VMware vSphere storage. After the creation of a persistent volume, <code>systemd</code> creates a mount unit for the persistent volume.</p>
+</div>
+<div class="paragraph">
+<p>The <code>systemd</code> process has a 255 character limit for the length of the fully qualified path to the virtual machine disk (VMDK) file. This path follows the naming conventions for <code>systemd</code> and vSphere. The naming conventions use the following example pattern:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-text" data-lang="text">/var/lib/kubelet/plugins/kubernetes.io/vsphere-volume/mounts/[&lt;datastore&gt;] 00000000-0000-0000-0000-000000000000/&lt;cluster_id&gt;-dynamic-pvc-00000000-0000-0000-0000-000000000000.vmdk</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The naming conventions require 205 characters of the 255 character limit.</p>
+</li>
+<li>
+<p>The deployment determines the datastore name and the cluster ID.</p>
+</li>
+<li>
+<p>The datastore name and cluster ID substitute into the example pattern. The fully qualified path gets processed with the <code>systemd-escape</code> command to escape special characters. For example, after the escape operation, a hyphen character uses four characters, such as <code>\x2d</code>.</p>
+</li>
+<li>
+<p>After the <code>systemd-escape</code> CLI processes the VMDK file path, the length of the path must not be lower than 255 characters. This criteria ensures that the <code>systemd</code> process can access the fully qualified VMDK file path.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="vsphere-problem-detector-operator-metrics_configure-vsphere-post-installation-settings">Metrics for the {operator-name}</h5>
+<div class="paragraph _abstract">
+<p>The {operator-name} exposes the following metrics for use by the Red&#160;Hat OpenShift Container Platform monitoring stack.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 215. Metrics exposed by the {operator-name}</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>vsphere_cluster_check_total</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Cumulative number of cluster-level checks that the {operator-name} performed. This count includes both successes and failures.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>vsphere_cluster_check_errors</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Number of failed cluster-level checks that the {operator-name} performed. For example, a value of <code>1</code> indicates that one cluster-level check failed.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>vsphere_esxi_version_total</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Counts the number of ESXi hosts with a specific version. Note that if a host runs more than one node, the {operator-name} counts the host only once.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>vsphere_node_check_total</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Cumulative number of node-level checks that the {operator-name} performed. This count includes both successes and failures.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>vsphere_node_check_errors</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Counts the number of failed node-level checks that the {operator-name} performed. For example, a value of <code>1</code> indicates that one node-level check failed.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>vsphere_node_hw_version_total</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Number of vSphere nodes with a specific hardware version.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>vsphere_vcenter_info</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Information about the vSphere vCenter Server.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div class="paragraph nav-footer">
 <p>← Previous: <a href="install-with-agent-based-installer-intro_install-with-agent-based-installer.html">Install with Agent-based Installer</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="install-on-aws-intro_install-on-aws.html">Install on AWS</a> →</p>
@@ -29223,7 +30660,7 @@ cluster.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 15:58:47 +0100
+Last updated 2026-10-12 13:29:35 +0100
 </div>
 </div>
 <style>

@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members" class="book toc2 toc-left navmap-has-right-toc">
+<body id="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -568,10 +568,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="compare-platform-options-con_compare-platform-options.html">Compare platform options</a>
 </li>
-<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
-</li>
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
@@ -582,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -612,6 +608,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
+<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
+</li>
+<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
+</li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
 <li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
@@ -675,7 +677,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
@@ -847,7 +849,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-registry-allowlists-and-blocks-con_configure-registry-allowlists-and-blocks.html">Configure registry allowlists and blocks</a>
 </li>
-<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">About adding registries that allow image short names</a>
+<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">Configure short-name search registries</a>
 </li>
 <li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
 </li>
@@ -909,8 +911,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
 </li>
-<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
-</li>
 <li><a href="change-the-installed-file-system-configuration-for-new-nodes-con_change-the-installed-file-system-configuration-for-new-nodes.html">Change the installed file system configuration for new nodes</a>
 </li>
 <li><a href="change-the-installed-raid-configuration-for-new-nodes-con_change-the-installed-raid-configuration-for-new-nodes.html">Change the installed RAID configuration for new nodes</a>
@@ -947,7 +947,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1058,11 +1058,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
+</li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1242,19 +1268,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
-</li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
-</li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
-</li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
-</li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
-</li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1485,6 +1499,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
 </li>
+<li><a href="graceful-shutdown-cluster-intro_graceful-cluster-shutdown.html">Shutting down the cluster gracefully</a>
+</li>
+<li><a href="graceful-restart-cluster-intro_graceful-cluster-restart.html">Restarting the cluster gracefully</a>
+</li>
+<li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernating an Red&#160;Hat OpenShift Container Platform cluster</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
@@ -1496,6 +1516,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="recovering-unhealthy-etcd-cluster-for-hosted-control-planes-con_recovering-unhealthy-etcd-cluster-for-hosted-control-planes.html">Recovering an unhealthy etcd cluster for hosted control planes</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-a-hosted-cluster-intro_backup-and-restore-etcd-on-a-hosted-cluster.html">Backing up and restoring etcd on a hosted cluster</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a>
+</li>
+<li><a href="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot.html">Backing up etcd data for hosted control planes by using the etcd snapshot method</a>
+</li>
+<li><a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a>
 </li>
 <li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
 </li>
@@ -1509,8 +1539,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
@@ -1523,15 +1551,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
+<li><a href="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data.html"><span class="toc-current">Backing up and restoring etcd data</span></a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html"><span class="toc-current">Replacing the unhealthy etcd member</span></a>
+<li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replacing an unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
@@ -1627,13 +1655,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html">Restoring an etcd snapshot on a hosted cluster</a>
+<li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-restore_etcd-best-practices-restore-etcd-data.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replacing a healthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1643,7 +1667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1669,242 +1693,569 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#removing-etcd-member_replace-unhealthy-etcd-members">Removing the unhealthy etcd member</a></li><li class="level-4"><a href="#enabling-etcd-quorum-guard_replace-unhealthy-etcd-members">Re-enabling the etcd quorum guard</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#backing-up-etcd-data_backup-and-restore-etcd-data">Backing up etcd data</a></li><li class="level-4"><a href="#creating-automated-etcd-backups_backup-and-restore-etcd-data">Creating automated etcd backups</a></li><li class="level-5"><a href="#creating-single-etcd-backup_backup-and-restore-etcd-data">Creating a single automated etcd backup</a></li><li class="level-5"><a href="#creating-recurring-etcd-backups_backup-and-restore-etcd-data">Creating recurring automated etcd backups</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members">Replacing the unhealthy etcd member</h3>
+<h3 id="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data">Backing up and restoring etcd data</h3>
 <div class="paragraph _abstract">
-<p>You can replace an unhealthy etcd member by following one of several procedures, depending on whether the machine is not running, the node is not ready, the etcd pod is crashlooping, or the member is a stopped bare-metal instance.</p>
+<p>Back up etcd data regularly and store it in a secure location so you can restore your cluster to a previous state, using a snapshot from the same z-stream release.</p>
 </div>
 <div class="paragraph">
-<p>Use one of the following procedures, based on the state of your unhealthy etcd member:</p>
+<p>As the key-value store for Red&#160;Hat OpenShift Container Platform, etcd persists the state of all resource objects.</p>
+</div>
+<div class="paragraph">
+<p>Back up the etcd data for your cluster regularly and store it in a secure location, ideally outside the Red&#160;Hat OpenShift Container Platform environment. Do not take an etcd backup before the first certificate rotation completes, which occurs 24 hours after installation, otherwise the backup will contain expired certificates. It is also recommended to take etcd backups during non-peak usage hours because the etcd snapshot has a high I/O cost.</p>
+</div>
+<div class="paragraph">
+<p>Be sure to take an etcd backup before you update your cluster. Taking a backup before you update is important because when you restore your cluster, you must use an etcd backup that was taken from the same z-stream release. For example, an Red&#160;Hat OpenShift Container Platform 4.17.5 cluster must use an etcd backup that was taken from 4.17.5.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Back up your cluster&#8217;s etcd data by performing a single invocation of the backup script on a control plane host. Do not take a backup for each control plane host.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>After you have an etcd backup, you can restore to a previous cluster state.</p>
+</div>
+<div class="sect3">
+<h4 id="backing-up-etcd-data_backup-and-restore-etcd-data">Backing up etcd data</h4>
+<div class="paragraph _abstract">
+<p>You can back up etcd data by creating an etcd snapshot and saving the static pod resources on a control plane host. This backup preserves the cluster state and provides the resources required to restore etcd at a later time.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Only save a backup from a single control plane host. Do not take a backup from each control plane host in the cluster.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For a Two-Node with Fencing (TNF) setup, follow the steps to back up etcd data on only one node in the cluster. The cluster restore process is driven by data from a single node, so you can perform the etcd backup steps on only one node.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>You have verified whether the cluster-wide proxy is enabled.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Tip">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can check whether the proxy is enabled by reviewing the output of <code>oc get proxy cluster -o yaml</code>. The proxy is enabled if the <code>httpProxy</code>, <code>httpsProxy</code>, and <code>noProxy</code> fields have values set.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Start a debug session as root for a control plane node:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug --as-root node/&lt;node_name&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Change your root directory to <code>/host</code> in the debug shell:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.4# chroot /host</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>If the cluster-wide proxy is enabled, export the <code>NO_PROXY</code>, <code>HTTP_PROXY</code>, and <code>HTTPS_PROXY</code> environment variables by running the following commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export HTTP_PROXY=http://&lt;your_proxy.example.com&gt;:8080</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export HTTPS_PROXY=https://&lt;your_proxy.example.com&gt;:8080</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export NO_PROXY=&lt;example.com&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Run the <code>cluster-backup.sh</code> script with the path to the directory where you want to save the backup:</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Tip">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>cluster-backup.sh</code> script is maintained as a component of the etcd Cluster Operator and is a wrapper around the <code>etcdctl snapshot save</code> command.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.4# /usr/local/bin/cluster-backup.sh /home/core/assets/backup</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example script output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">found latest kube-apiserver: /etc/kubernetes/static-pod-resources/kube-apiserver-pod-6
+found latest kube-controller-manager: /etc/kubernetes/static-pod-resources/kube-controller-manager-pod-7
+found latest kube-scheduler: /etc/kubernetes/static-pod-resources/kube-scheduler-pod-6
+found latest etcd: /etc/kubernetes/static-pod-resources/etcd-pod-3
+ede95fe6b88b87ba86a03c15e669fb4aa5bf0991c180d3c6895ce72eaade54a1
+etcdctl version: 3.4.14
+API version: 3.4
+{"level":"info","ts":1624647639.0188997,"caller":"snapshot/v3_snapshot.go:119","msg":"created temporary db file","path":"/home/core/assets/backup/snapshot_2021-06-25_190035.db.part"}
+{"level":"info","ts":"2021-06-25T19:00:39.030Z","caller":"clientv3/maintenance.go:200","msg":"opened snapshot stream; downloading"}
+{"level":"info","ts":1624647639.0301006,"caller":"snapshot/v3_snapshot.go:127","msg":"fetching snapshot","endpoint":"https://10.0.0.5:2379"}
+{"level":"info","ts":"2021-06-25T19:00:40.215Z","caller":"clientv3/maintenance.go:208","msg":"completed snapshot read; closing"}
+{"level":"info","ts":1624647640.6032252,"caller":"snapshot/v3_snapshot.go:142","msg":"fetched snapshot","endpoint":"https://10.0.0.5:2379","size":"114 MB","took":1.584090459}
+{"level":"info","ts":1624647640.6047094,"caller":"snapshot/v3_snapshot.go:152","msg":"saved","path":"/home/core/assets/backup/snapshot_2021-06-25_190035.db"}
+Snapshot saved at /home/core/assets/backup/snapshot_2021-06-25_190035.db
+{"hash":3866667823,"revision":31407,"totalKey":12828,"totalSize":114446336}
+snapshot db and kube resources are successfully saved to /home/core/assets/backup</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example, two files are created in the <code>/home/core/assets/backup/</code> directory on the control plane host:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="../../backup_and_restore/control_plane_backup_and_restore/replacing-unhealthy-etcd-member.html#restore-replace-stopped-etcd-member_replacing-unhealthy-etcd-member">Replacing an unhealthy etcd member whose machine is not running or whose node is not ready</a></p>
+<p><code>snapshot_&lt;datetimestamp&gt;.db</code>: This file is the etcd snapshot. The <code>cluster-backup.sh</code> script confirms the validity of the snapshot.</p>
 </li>
 <li>
-<p><a href="https://docs.redhat.com/en/documentation/assisted_installer_for_openshift_container_platform/2026/html/installing_openshift_container_platform_with_the_assisted_installer/expanding-the-cluster#installing-control-plane-node-unhealthy-cluster_expanding-the-cluster">Replacing a control plane node in an unhealthy cluster</a></p>
-</li>
-<li>
-<p><a href="../../backup_and_restore/control_plane_backup_and_restore/replacing-unhealthy-etcd-member.html#restore-replace-crashlooping-etcd-member_replacing-unhealthy-etcd-member">Replacing an unhealthy etcd member whose etcd pod is crashlooping</a></p>
-</li>
-<li>
-<p><a href="../../backup_and_restore/control_plane_backup_and_restore/replacing-unhealthy-etcd-member.html#restore-replace-stopped-baremetal-etcd-member_replacing-unhealthy-etcd-member">Replacing an unhealthy stopped baremetal etcd member</a></p>
+<p><code>static_kuberesources_&lt;datetimestamp&gt;.tar.gz</code>: This file contains the resources for the static pods. If etcd encryption is enabled, it also contains the encryption keys for the etcd snapshot.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If etcd encryption is enabled, store this second file separately from the etcd snapshot for security reasons. However, this file is required to restore from the etcd snapshot.</p>
+</div>
+<div class="paragraph">
+<p>The etcd encryption only encrypts values, not keys. This means that resource types, namespaces, and object names are not encrypted.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </li>
 </ul>
 </div>
+</li>
+</ol>
+</div>
+</div>
 <div class="sect3">
-<h4 id="removing-etcd-member_replace-unhealthy-etcd-members">Removing the unhealthy etcd member</h4>
+<h4 id="creating-automated-etcd-backups_backup-and-restore-etcd-data">Creating automated etcd backups</h4>
 <div class="paragraph _abstract">
-<p>Begin removing the failed control plane node by first disabling the quorum guard, then removing the unhealthy etcd member and its secrets.</p>
+<p>You can enable automated etcd backups for your cluster by applying a <code>FeatureGate</code> and backup custom resources (CRs).</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Automating etcd backups is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+</div>
+<div class="paragraph">
+<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Enabling the <code>TechPreviewNoUpgrade</code> feature set on your cluster prevents minor version updates. The <code>TechPreviewNoUpgrade</code> feature set cannot be disabled. Do not enable this feature set on production clusters.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>You have access to the OpenShift CLI (<code>oc</code>).</p>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Turn off the etcd quorum guard by running the following command:</p>
+<p>Create a <code>FeatureGate</code> custom resource (CR) file named <code>enable-tech-preview-no-upgrade.yaml</code> with the following contents:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch etcd/cluster --type=merge -p '{"spec": {"unsupportedConfigOverrides": {"useUnsupportedUnsafeNonHANonProductionUnstableEtcd": true}}}'</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1
+kind: FeatureGate
+metadata:
+  name: cluster
+spec:
+  featureSet: TechPreviewNoUpgrade</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>This command ensures that the cluster can temporarily operate with fewer etcd members and allows you to successfully re-create secrets and roll out the static pods.</p>
 </div>
 </li>
 <li>
-<p>List etcd pods by running the following command and make note of a pod that is not on the affected node:</p>
+<p>Apply the CR by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-etcd get pods -l k8s-app=etcd -o wide</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f enable-tech-preview-no-upgrade.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Applying the <code>FeatureGate</code> enables the automated backup APIs. It takes time for the related APIs to become available.</p>
+</div>
+</li>
+<li>
+<p>Verify that the custom resource definition (CRD) was created by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get crd | grep backup</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Example output</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">etcd-openshift-control-plane-0   5/5   Running   11   3h56m   192.168.10.9    openshift-control-plane-0  &lt;none&gt;           &lt;none&gt;
-etcd-openshift-control-plane-1   5/5   Running   0    3h54m   192.168.10.10   openshift-control-plane-1   &lt;none&gt;           &lt;none&gt;
-etcd-openshift-control-plane-2   5/5   Running   0    3h58m   192.168.10.11   openshift-control-plane-2   &lt;none&gt;           &lt;none&gt;</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">backups.config.openshift.io 2023-10-25T13:32:43Z
+etcdbackups.operator.openshift.io 2023-10-25T13:32:04Z</code></pre>
 </div>
 </div>
 </li>
+</ol>
+</div>
+<div class="sect4">
+<h5 id="creating-single-etcd-backup_backup-and-restore-etcd-data">Creating a single automated etcd backup</h5>
+<div class="paragraph _abstract">
+<p>You can create a single automated etcd backup by applying an <code>EtcdBackup</code> custom resource (CR). Backup data is stored on either dynamically-provisioned or local storage.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
 <li>
-<p>Connect to a running etcd container by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc rsh -n openshift-etcd &lt;etcd_pod&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;etcd_pod&gt;</code> with the name of an etcd pod associated with one of the healthy nodes.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example command</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc rsh -n openshift-etcd etcd-openshift-control-plane-0</code></pre>
-</div>
-</div>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
 </li>
 <li>
-<p>View the etcd member list by running the following command. Make note of the ID and the name of the unhealthy etcd member because these values are required later.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.2# etcdctl member list -w table</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">+------------------+---------+------------------------------+---------------------------+---------------------------+
-|        ID        | STATUS  |             NAME             |        PEER ADDRS         |       CLIENT ADDRS        |
-+------------------+---------+------------------------------+---------------------------+---------------------------+
-| 6fc1e7c9db35841d | started | openshift-control-plane-2    | https://10.0.131.183:2380 | https://10.0.131.183:2379 |
-| 757b6793e2408b6c | started | openshift-control-plane-1    | https://10.0.164.97:2380  | https://10.0.164.97:2379  |
-| ca8c2990a0aa29d1 | started | openshift-control-plane-0    | https://10.0.154.204:2380 | https://10.0.154.204:2379 |
-+------------------+---------+------------------------------+---------------------------+---------------------------+</code></pre>
-</div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>etcdctl endpoint health</code> command will list the removed member until the replacement is complete and the new member is added.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
+<p>You have access to the OpenShift CLI (<code>oc</code>).</p>
 </li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
 <li>
-<p>Remove the unhealthy etcd member by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.2# etcdctl member remove &lt;unhealthy_member_id&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;unhealthy_member_id&gt;</code> with the ID of the etcd member on the unhealthy node.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example command</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.2# etcdctl member remove 6fc1e7c9db35841d</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">Member 6fc1e7c9db35841d removed from cluster b23536c33f2cdd1b</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>View the member list again by running the following command and verify that the member was removed:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.2# etcdctl member list -w table</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">+------------------+---------+------------------------------+---------------------------+---------------------------+
-|        ID        | STATUS  |             NAME             |        PEER ADDRS         |       CLIENT ADDRS        |
-+------------------+---------+------------------------------+---------------------------+---------------------------+
-| 757b6793e2408b6c | started | openshift-control-plane-1    | https://10.0.164.97:2380  | https://10.0.164.97:2379  |
-| ca8c2990a0aa29d1 | started | openshift-control-plane-0    | https://10.0.154.204:2380 | https://10.0.154.204:2379 |
-+------------------+---------+------------------------------+---------------------------+---------------------------+</code></pre>
-</div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>After you remove the member, the cluster might be unreachable for a short time while the remaining etcd instances reboot.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Exit the rsh session into the etcd pod by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.2# exit</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>List the secrets for the removed, unhealthy etcd member by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get secrets -n openshift-etcd | grep &lt;node_name&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;node_name&gt;</code> with the name of the failed node whose etcd member you removed.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example command</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get secrets -n openshift-etcd | grep openshift-control-plane-2</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">etcd-peer-openshift-control-plane-2             kubernetes.io/tls   2   134m
-etcd-serving-metrics-openshift-control-plane-2  kubernetes.io/tls   2   134m
-etcd-serving-openshift-control-plane-2          kubernetes.io/tls   2   134m</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Delete the secrets associated with the affected node that was removed:</p>
+<p>If dynamically-provisioned storage is available, complete the following steps to create a single automated etcd backup:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Delete the peer secret by running the following command:</p>
+<p>Create a persistent volume claim (PVC) named <code>etcd-backup-pvc.yaml</code> with contents such as the following example:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete secret -n openshift-etcd etcd-peer-&lt;node_name&gt;</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: etcd-backup-pvc
+  namespace: openshift-etcd
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: &lt;storage_amount&gt;
+  volumeMode: Filesystem</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Replace <code>&lt;node_name&gt;</code> with the name of the affected node.</p>
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;storage_amount&gt;</code></dt>
+<dd>
+<p>Specifies the amount of storage available to the PVC. Adjust this value for your requirements, such as <code>200Gi</code>.</p>
+</dd>
+</dl>
 </div>
 </li>
 <li>
-<p>Delete the serving secret by running the following command:</p>
+<p>Apply the PVC by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete secret -n openshift-etcd etcd-serving-&lt;node_name&gt;</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f etcd-backup-pvc.yaml</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;node_name&gt;</code> with the name of the affected node.</p>
 </div>
 </li>
 <li>
-<p>Delete the metrics secret by running the following command:</p>
+<p>Verify that the PVC was created by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete secret -n openshift-etcd etcd-serving-metrics-&lt;node_name&gt; <img src="data:image/png;base64," alt="1"></code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pvc</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME              STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+etcd-backup-pvc   Bound                                                       51s</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Dynamic PVCs stay in the <code>Pending</code> state until they are mounted.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Create a CR file named <code>etcd-single-backup.yaml</code> with contents such as the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1alpha1
+kind: EtcdBackup
+metadata:
+  name: etcd-single-backup
+  namespace: openshift-etcd
+spec:
+  pvcName: &lt;pvc_name&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Replace <code>&lt;node_name&gt;</code> with the name of the affected node.</p>
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;pvc_name&gt;</code></dt>
+<dd>
+<p>Specifies the name of the PVC to save the backup to. Adjust this value according to your environment, such as <code>etcd-backup-pvc</code>.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Apply the CR to start a single backup by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f etcd-single-backup.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>If dynamically-provisioned storage is not available, complete the following steps to create a single automated etcd backup:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a <code>StorageClass</code> CR file named <code>etcd-backup-local-storage.yaml</code> with the following contents:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: etcd-backup-local-storage
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: Immediate</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Apply the <code>StorageClass</code> CR by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f etcd-backup-local-storage.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a PV named <code>etcd-backup-pv-fs.yaml</code> with contents such as the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: etcd-backup-pv-fs
+spec:
+  capacity:
+    storage: &lt;storage_amount&gt;
+  volumeMode: Filesystem
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: etcd-backup-local-storage
+  local:
+    path: /mnt
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+      - key: kubernetes.io/hostname
+         operator: In
+         values:
+         - &lt;node_name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;storage_amount&gt;</code></dt>
+<dd>
+<p>Specifies the amount of storage available to the PV. Adjust this value for your requirements, such as <code>100Gi</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;node_name&gt;</code></dt>
+<dd>
+<p>Specifies the control plane node to attach this PV to. Replace with the actual node name.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Verify that the PV was created by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pv</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                    CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS                REASON   AGE
+etcd-backup-pv-fs       100Gi      RWO            Retain           Available           etcd-backup-local-storage            10s</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a PVC named <code>etcd-backup-pvc.yaml</code> with contents such as the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: etcd-backup-pvc
+  namespace: openshift-etcd
+spec:
+  accessModes:
+  - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: &lt;storage_amount&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;storage_amount&gt;</code></dt>
+<dd>
+<p>Specifies the amount of storage available to the PVC. Adjust this value for your requirements, such as <code>10Gi</code>.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Apply the PVC by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f etcd-backup-pvc.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a CR file named <code>etcd-single-backup.yaml</code> with contents such as the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1alpha1
+kind: EtcdBackup
+metadata:
+  name: etcd-single-backup
+  namespace: openshift-etcd
+spec:
+  pvcName: &lt;pvc_name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;pvc_name&gt;</code></dt>
+<dd>
+<p>Specifies the name of the PVC to save the backup to. Adjust this value according to your environment, such as <code>etcd-backup-pvc</code>.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Apply the CR to start a single backup by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f etcd-single-backup.yaml</code></pre>
+</div>
 </div>
 </li>
 </ol>
@@ -1913,151 +2264,448 @@ etcd-serving-openshift-control-plane-2          kubernetes.io/tls   2   134m</co
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="enabling-etcd-quorum-guard_replace-unhealthy-etcd-members">Re-enabling the etcd quorum guard</h4>
+<div class="sect4">
+<h5 id="creating-recurring-etcd-backups_backup-and-restore-etcd-data">Creating recurring automated etcd backups</h5>
 <div class="paragraph _abstract">
-<p>Re-enable the etcd quorum guard after completing the control plane node replacement to restore normal cluster operation and verify that the cluster has returned to a healthy three-member etcd configuration.</p>
+<p>You can create recurring automated etcd backups by applying a custom resource (CR) that defines a backup schedule and retention policy. Backup data is stored on either dynamically-provisioned or local storage.</p>
+</div>
+<div class="paragraph">
+<p>Use dynamically-provisioned storage to keep the created etcd backup data in a safe, external location if possible. If dynamically-provisioned storage is not available, consider storing the backup data on an NFS share to make backup recovery more accessible.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>You have access to the OpenShift CLI (<code>oc</code>).</p>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Turn the quorum guard back on by running the following command:</p>
+<p>If dynamically-provisioned storage is available, complete the following steps to create automated recurring backups:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a persistent volume claim (PVC) named <code>etcd-backup-pvc.yaml</code> with contents such as the following example:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch etcd/cluster --type=merge -p '{"spec": {"unsupportedConfigOverrides": null}}'</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: etcd-backup-pvc
+  namespace: openshift-etcd
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 200Gi
+  volumeMode: Filesystem
+  storageClassName: etcd-backup-local-storage</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.resources.requests.storage</code></dt>
+<dd>
+<p>Specifies the amount of storage available to the PVC. Adjust this value for your requirements.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Each of the following providers requires changes to the <code>accessModes</code> and <code>storageClassName</code> keys:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Provider</th>
+<th class="tableblock halign-left valign-top"><code>accessModes</code> value</th>
+<th class="tableblock halign-left valign-top"><code>storageClassName</code> value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AWS with the <code>versioned-installer-efc_operator-ci</code> profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- ReadWriteMany</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>efs-sc</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Google Cloud</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- ReadWriteMany</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>filestore-csi</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microsoft Azure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- ReadWriteMany</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>azurefile-csi</code></p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Apply the PVC by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f etcd-backup-pvc.yaml</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Verify that the <code>unsupportedConfigOverrides</code> section is removed by running the following command:</p>
+<p>Verify that the PVC was created by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get etcd/cluster -oyaml</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pvc</code></pre>
 </div>
 </div>
-</li>
-<li>
-<p>If using single-node OpenShift, restart the node. Otherwise, you might encounter the following error in the etcd cluster Operator:</p>
 <div class="listingblock">
 <div class="title">Example output</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">EtcdCertSignerControllerDegraded: [Operation cannot be fulfilled on secrets "etcd-peer-sno-0": the object has been modified; please apply your changes to the latest version and try again, Operation cannot be fulfilled on secrets "etcd-serving-sno-0": the object has been modified; please apply your changes to the latest version and try again, Operation cannot be fulfilled on secrets "etcd-serving-metrics-sno-0": the object has been modified; please apply your changes to the latest version and try again]</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME              STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+etcd-backup-pvc   Bound                                                       51s</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Dynamic PVCs stay in the <code>Pending</code> state until they are mounted.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>If dynamically-provisioned storage is unavailable, create a local storage PVC by completing the following steps:</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you delete or otherwise lose access to the node that contains the stored backup data, you can lose data.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a <code>StorageClass</code> CR file named <code>etcd-backup-local-storage.yaml</code> with the following contents:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: etcd-backup-local-storage
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: Immediate</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Apply the <code>StorageClass</code> CR by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f etcd-backup-local-storage.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a PV named <code>etcd-backup-pv-fs.yaml</code> from the applied <code>StorageClass</code> with contents such as the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: etcd-backup-pv-fs
+spec:
+  capacity:
+    storage: 100Gi
+  volumeMode: Filesystem
+  accessModes:
+  - ReadWriteMany
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: etcd-backup-local-storage
+  local:
+    path: /mnt/
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - &lt;example_control_plane_node&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.capacity.storage</code></dt>
+<dd>
+<p>Specifies the amount of storage available to the PV. Adjust this value for your requirements.</p>
+</dd>
+<dt class="hdlist1"><code>spec.nodeAffinity.required.nodeSelectorTerms.matchExpressions.values</code></dt>
+<dd>
+<p>Specifies the control plane node to attach this PV to. Replace with the actual node name.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Tip">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>List the available nodes by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Verify that the PV was created by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pv</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                    CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS                REASON   AGE
+etcd-backup-pv-fs       100Gi      RWX            Delete           Available           etcd-backup-local-storage            10s</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a PVC named <code>etcd-backup-pvc.yaml</code> with contents such as the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: etcd-backup-pvc
+spec:
+  accessModes:
+  - ReadWriteMany
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: etcd-backup-local-storage</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.resources.requests.storage</code></dt>
+<dd>
+<p>Specifies the amount of storage available to the PVC. Adjust this value for your requirements.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Apply the PVC by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f etcd-backup-pvc.yaml</code></pre>
 </div>
 </div>
 </li>
 </ol>
 </div>
-<div class="olist arabic">
-<div class="title">Verification</div>
-<ol class="arabic">
+</li>
 <li>
-<p>Verify that all etcd pods are running by running the following command:</p>
+<p>Create a CR file named <code>etcd-recurring-backups.yaml</code>. The contents of the CR define the schedule and retention type of automated backups.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For the default retention type of <code>RetentionNumber</code> with 15 retained backups, use contents such as the following example:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-etcd get pods -l k8s-app=etcd</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">etcd-openshift-control-plane-0      5/5     Running     0     105m
-etcd-openshift-control-plane-1      5/5     Running     0     107m
-etcd-openshift-control-plane-3      5/5     Running     0     12m</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1alpha1
+kind: Backup
+metadata:
+  name: etcd-recurring-backup
+spec:
+  etcd:
+    schedule: "20 4 * * *"
+    timeZone: "UTC"
+    pvcName: etcd-backup-pvc</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>If the output from the previous command only lists two pods, you can manually force an etcd redeployment. In a terminal that has access to the cluster as a <code>cluster-admin</code> user, run the following command:</p>
+<p>where:</p>
 </div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.etcd.schedule</code></dt>
+<dd>
+<p>Specifies the <code>CronTab</code> schedule for recurring backups. Adjust this value for your needs.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>To use retention based on the maximum number of backups, add the following key-value pairs to the <code>etcd</code> key:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch etcd cluster -p='{"spec": {"forceRedeploymentReason": "recovery-'"$( date --rfc-3339=ns )"'"}}' --type=merge</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">spec:
+  etcd:
+    retentionPolicy:
+      retentionType: RetentionNumber
+      retentionNumber:
+        maxNumberOfBackups: 5</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>forceRedeploymentReason</code> value must be unique, which is why a timestamp is appended.</p>
+<p>where:</p>
 </div>
 </li>
+</ol>
+</div>
+</dd>
+<dt class="hdlist1"><code>spec.etcd.retentionPolicy.retentionType</code></dt>
+<dd>
+<p>Specifies the retention type. Defaults to <code>RetentionNumber</code> if unspecified.</p>
+</dd>
+<dt class="hdlist1"><code>spec.etcd.retentionPolicy.retentionNumber.maxNumberOfBackups</code></dt>
+<dd>
+<p>Specifies the maximum number of backups to retain. Adjust this value for your needs. Defaults to 15 backups if unspecified.</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A known issue causes the number of retained backups to be one greater than the configured value.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>Connect to a running etcd container by running the following command:</p>
+<p>For retention based on the file size of backups, use the following:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc rsh -n openshift-etcd etcd-openshift-control-plane-0</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>View the member list by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.2# etcdctl member list -w table</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">+------------------+---------+--------------------+---------------------------+---------------------------+-----------------+
-|        ID        | STATUS  |        NAME        |        PEER ADDRS         |       CLIENT ADDRS        |    IS LEARNER    |
-+------------------+---------+--------------------+---------------------------+---------------------------+-----------------+
-| 8d5abe9669a39192 | started | openshift-control-plane-1 | https://192.168.10.10:2380 | https://192.168.10.10:2379 |   false |
-| cc3830a72fc357f9 | started | openshift-control-plane-0 | https://192.168.10.9:2380 | https://192.168.10.9:2379 |     false |
-| d4f6a4e8b2c91a3f | started | openshift-control-plane-3 | https://192.168.10.12:2380 | https://192.168.10.12:2379 |   false |
-+------------------+---------+--------------------+---------------------------+---------------------------+-----------------+</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">spec:
+  etcd:
+    retentionPolicy:
+      retentionType: RetentionSize
+      retentionSize:
+        maxSizeOfBackupsGb: 20</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Verify that exactly three etcd members are listed.</p>
+<p>where:</p>
+</div>
+</li>
+</ol>
+</div>
+</dd>
+<dt class="hdlist1"><code>spec.etcd.retentionPolicy.retentionSize.maxSizeOfBackupsGb</code></dt>
+<dd>
+<p>Specifies the maximum file size of the retained backups in gigabytes. Adjust this value for your needs. Defaults to 10 GB if unspecified.</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A known issue causes the maximum size of retained backups to be up to 10 GB greater than the configured value.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
 </div>
 </li>
 <li>
-<p>Verify that all etcd members are healthy by running the following command:</p>
+<p>Create the cron job defined by the CRD by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.2# etcdctl endpoint health --cluster</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">https://192.168.10.10:2379 is healthy: successfully committed proposal: took = 8.973065ms
-https://192.168.10.9:2379 is healthy: successfully committed proposal: took = 11.559829ms
-https://192.168.10.12:2379 is healthy: successfully committed proposal: took = 11.665203ms</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f etcd-recurring-backup.yaml</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Exit the rsh session by running the following command:</p>
+<p>To find the created cron job, run the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.2# exit</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Verify that all nodes are at the latest revision by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get etcd -o=jsonpath='{range.items[0].status.conditions[?(@.type=="NodeInstallerProgressing")]}{.reason}{"\n"}{.message}{"\n"}'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">AllNodesAtLatestRevision</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get cronjob -n openshift-etcd</code></pre>
 </div>
 </div>
 </li>
 </ol>
+</div>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a> →</p>
+<p>← Previous: <a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 15:58:47 +0100
+Last updated 2026-10-12 13:29:35 +0100
 </div>
 </div>
 <style>

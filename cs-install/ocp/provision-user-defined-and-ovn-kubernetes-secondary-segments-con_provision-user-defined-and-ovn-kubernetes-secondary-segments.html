@@ -568,10 +568,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="compare-platform-options-con_compare-platform-options.html">Compare platform options</a>
 </li>
-<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
-</li>
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
@@ -582,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -612,6 +608,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
+<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
+</li>
+<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
+</li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
 <li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
@@ -675,7 +677,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
@@ -847,7 +849,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-registry-allowlists-and-blocks-con_configure-registry-allowlists-and-blocks.html">Configure registry allowlists and blocks</a>
 </li>
-<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">About adding registries that allow image short names</a>
+<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">Configure short-name search registries</a>
 </li>
 <li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
 </li>
@@ -909,8 +911,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
 </li>
-<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
-</li>
 <li><a href="change-the-installed-file-system-configuration-for-new-nodes-con_change-the-installed-file-system-configuration-for-new-nodes.html">Change the installed file system configuration for new nodes</a>
 </li>
 <li><a href="change-the-installed-raid-configuration-for-new-nodes-con_change-the-installed-raid-configuration-for-new-nodes.html">Change the installed RAID configuration for new nodes</a>
@@ -947,7 +947,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1054,15 +1054,40 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_networking.html">Networking</a>
-
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html"><span class="toc-current">Provision user-defined and OVN-Kubernetes secondary segments</span></a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
+</li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1176,6 +1201,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_secure.html">Secure</a>
+
 <ul class="sectlevel2">
 <li><a href="control-user-access-to-extensions-con_control-user-access-to-extensions.html">Control user access to extensions</a>
 </li>
@@ -1241,19 +1267,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
-</li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
-</li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
-</li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html"><span class="toc-current">Provision user-defined and OVN-Kubernetes secondary segments</span></a>
-</li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
-</li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1485,6 +1499,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
 </li>
+<li><a href="graceful-shutdown-cluster-intro_graceful-cluster-shutdown.html">Shutting down the cluster gracefully</a>
+</li>
+<li><a href="graceful-restart-cluster-intro_graceful-cluster-restart.html">Restarting the cluster gracefully</a>
+</li>
+<li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernating an Red&#160;Hat OpenShift Container Platform cluster</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
@@ -1496,6 +1516,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="recovering-unhealthy-etcd-cluster-for-hosted-control-planes-con_recovering-unhealthy-etcd-cluster-for-hosted-control-planes.html">Recovering an unhealthy etcd cluster for hosted control planes</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-a-hosted-cluster-intro_backup-and-restore-etcd-on-a-hosted-cluster.html">Backing up and restoring etcd on a hosted cluster</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a>
+</li>
+<li><a href="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot.html">Backing up etcd data for hosted control planes by using the etcd snapshot method</a>
+</li>
+<li><a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a>
 </li>
 <li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
 </li>
@@ -1509,8 +1539,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
@@ -1523,15 +1551,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
+<li><a href="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data.html">Backing up and restoring etcd data</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
+<li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replacing an unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
@@ -1627,13 +1655,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html">Restoring an etcd snapshot on a hosted cluster</a>
+<li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-restore_etcd-best-practices-restore-etcd-data.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replacing a healthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1643,7 +1667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1669,7 +1693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-udn-overview_provision-user-defined-and-ovn-kubernetes-secondary-segments">Overview of user-defined networks</a></li><li class="level-4"><a href="#nw-udn-benefits_provision-user-defined-and-ovn-kubernetes-secondary-segments">Benefits of a user-defined network</a></li><li class="level-4"><a href="#limitations-for-udn_provision-user-defined-and-ovn-kubernetes-secondary-segments">Limitations of a user-defined network</a></li><li class="level-4"><a href="#nw-udn-l2-l3_provision-user-defined-and-ovn-kubernetes-secondary-segments">Layer 2 and layer 3 topologies</a></li><li class="level-4"><a href="#nw-udn-overview_design-and-deploy-user-defined-network-segments">Overview of user-defined networks</a></li><li class="level-5"><a href="#nw-udn-benefits_design-and-deploy-user-defined-network-segments">Benefits of a user-defined network</a></li><li class="level-5"><a href="#limitations-for-udn_design-and-deploy-user-defined-network-segments">Limitations of a user-defined network</a></li><li class="level-5"><a href="#nw-udn-l2-l3_design-and-deploy-user-defined-network-segments">Layer 2 and layer 3 topologies</a></li><li class="level-5"><a href="#about-cudn_design-and-deploy-user-defined-network-segments">About the ClusterUserDefinedNetwork CR</a></li><li class="level-6"><a href="#cudn-transport-considerations_design-and-deploy-user-defined-network-segments">Considerations for ClusterUserDefinedNetwork transport</a></li><li class="level-6"><a href="#considerations-for-cudn_design-and-deploy-user-defined-network-segments">Best practices for ClusterUserDefinedNetwork CRs</a></li><li class="level-6"><a href="#nw-cudn-cr_design-and-deploy-user-defined-network-segments">Create a ClusterUserDefinedNetwork CR by using the CLI</a></li><li class="level-6"><a href="#nw-cudn-localnet_design-and-deploy-user-defined-network-segments">Create a ClusterUserDefinedNetwork CR for a Localnet topology</a></li><li class="level-6"><a href="#nw-cudn-cr-ui_design-and-deploy-user-defined-network-segments">Create a ClusterUserDefinedNetwork CR by using the web console</a></li><li class="level-5"><a href="#about-udn_design-and-deploy-user-defined-network-segments">About the UserDefinedNetwork CR</a></li><li class="level-6"><a href="#considerations-for-udn_design-and-deploy-user-defined-network-segments">Best practices for UserDefinedNetwork CRs</a></li><li class="level-6"><a href="#nw-udn-cr_design-and-deploy-user-defined-network-segments">Create a UserDefinedNetwork CR by using the CLI</a></li><li class="level-6"><a href="#nw-udn-cr-ui_design-and-deploy-user-defined-network-segments">Create a UserDefinedNetwork CR by using the web console</a></li><li class="level-5"><a href="#nw-udn-additional-config-details_design-and-deploy-user-defined-network-segments">Additional configuration details for user-defined networks</a></li><li class="level-5"><a href="#cudn-status-conditions_design-and-deploy-user-defined-network-segments">User-defined network status condition types</a></li><li class="level-5"><a href="#opening-default-network-ports-udn_design-and-deploy-user-defined-network-segments">Open default network ports on user-defined network pods</a></li><li class="level-4"><a href="#create-a-primary-network-with-a-network-attachment-definition-con_create-a-primary-network-with-a-network-attachment-definition">Create a primary network with a network attachment definition</a></li><li class="level-5"><a href="#approaches-managing-additional-network_create-a-primary-network-with-a-network-attachment-definition">Approaches to managing a primary network</a></li><li class="level-5"><a href="#nw-multus-create-network_create-a-primary-network-with-a-network-attachment-definition">Create a primary network attachment with the Cluster Network Operator</a></li><li class="level-5"><a href="#nw-nad-cr_create-a-primary-network-with-a-network-attachment-definition">Configuration for a primary network attachment</a></li><li class="level-5"><a href="#nw-multus-create-network-apply_create-a-primary-network-with-a-network-attachment-definition">Create a primary network attachment by applying a YAML manifest</a></li><li class="level-4"><a href="#configuration-ovnk-additional-networks_create-secondary-networks-on-ovn-kubernetes">Configuration for an OVN-Kubernetes secondary network</a></li><li class="level-5"><a href="#configuration-additional-network-types-supported-platforms_create-secondary-networks-on-ovn-kubernetes">Supported platforms for OVN-Kubernetes secondary network</a></li><li class="level-5"><a href="#configuration-ovnk-network-plugin-json-object_create-secondary-networks-on-ovn-kubernetes">OVN-Kubernetes network plugin JSON configuration table</a></li><li class="level-6"><a href="#compatibility-with-multi-network-policy_create-secondary-networks-on-ovn-kubernetes">Compatibility with multi-network policy</a></li><li class="level-6"><a href="#configuration-localnet-switched-topology_create-secondary-networks-on-ovn-kubernetes">Configuration for a localnet switched topology</a></li><li class="level-6"><a href="#configuring-pods-secondary-network_create-secondary-networks-on-ovn-kubernetes">Configure pods for secondary networks</a></li><li class="level-6"><a href="#configuring-pods-static-ip_create-secondary-networks-on-ovn-kubernetes">Configure pods with a static IP address</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-udn-overview_provision-user-defined-and-ovn-kubernetes-secondary-segments">Overview of user-defined networks</a></li><li class="level-4"><a href="#nw-udn-benefits_provision-user-defined-and-ovn-kubernetes-secondary-segments">Benefits of a user-defined network</a></li><li class="level-4"><a href="#limitations-for-udn_provision-user-defined-and-ovn-kubernetes-secondary-segments">Limitations of a user-defined network</a></li><li class="level-4"><a href="#nw-udn-l2-l3_provision-user-defined-and-ovn-kubernetes-secondary-segments">Layer 2 and layer 3 topologies</a></li><li class="level-4"><a href="#design-and-deploy-user-defined-network-segments-con_design-and-deploy-user-defined-network-segments">Design and deploy user-defined network segments</a></li><li class="level-5"><a href="#nw-udn-overview_design-and-deploy-user-defined-network-segments">Overview of user-defined networks</a></li><li class="level-5"><a href="#nw-udn-benefits_design-and-deploy-user-defined-network-segments">Benefits of a user-defined network</a></li><li class="level-5"><a href="#limitations-for-udn_design-and-deploy-user-defined-network-segments">Limitations of a user-defined network</a></li><li class="level-5"><a href="#nw-udn-l2-l3_design-and-deploy-user-defined-network-segments">Layer 2 and layer 3 topologies</a></li><li class="level-5"><a href="#about-cudn_design-and-deploy-user-defined-network-segments">About the ClusterUserDefinedNetwork CR</a></li><li class="level-6"><a href="#cudn-transport-considerations_design-and-deploy-user-defined-network-segments">Considerations for ClusterUserDefinedNetwork transport</a></li><li class="level-6"><a href="#considerations-for-cudn_design-and-deploy-user-defined-network-segments">Best practices for ClusterUserDefinedNetwork CRs</a></li><li class="level-6"><a href="#nw-cudn-cr_design-and-deploy-user-defined-network-segments">Create a ClusterUserDefinedNetwork CR by using the CLI</a></li><li class="level-6"><a href="#nw-cudn-localnet_design-and-deploy-user-defined-network-segments">Create a ClusterUserDefinedNetwork CR for a Localnet topology</a></li><li class="level-6"><a href="#nw-cudn-cr-ui_design-and-deploy-user-defined-network-segments">Create a ClusterUserDefinedNetwork CR by using the web console</a></li><li class="level-5"><a href="#about-udn_design-and-deploy-user-defined-network-segments">About the UserDefinedNetwork CR</a></li><li class="level-6"><a href="#considerations-for-udn_design-and-deploy-user-defined-network-segments">Best practices for UserDefinedNetwork CRs</a></li><li class="level-6"><a href="#nw-udn-cr_design-and-deploy-user-defined-network-segments">Create a UserDefinedNetwork CR by using the CLI</a></li><li class="level-6"><a href="#nw-udn-cr-ui_design-and-deploy-user-defined-network-segments">Create a UserDefinedNetwork CR by using the web console</a></li><li class="level-5"><a href="#nw-udn-additional-config-details_design-and-deploy-user-defined-network-segments">Additional configuration details for user-defined networks</a></li><li class="level-5"><a href="#cudn-status-conditions_design-and-deploy-user-defined-network-segments">User-defined network status condition types</a></li><li class="level-5"><a href="#opening-default-network-ports-udn_design-and-deploy-user-defined-network-segments">Open default network ports on user-defined network pods</a></li><li class="level-5"><a href="#nw-bgp-evpn-about_design-and-deploy-user-defined-network-segments">Overview of BGP EVPN with OVN-Kubernetes</a></li><li class="level-6"><a href="#bgp-evpn-primary-use-cases_design-and-deploy-user-defined-network-segments">Benefits of BGP EVPN with primary CUDNs</a></li><li class="level-6"><a href="#bgp-evpn-supported-platforms_design-and-deploy-user-defined-network-segments">Platform support and feature compatibility</a></li><li class="level-6"><a href="#bgp-evpn-limitations_design-and-deploy-user-defined-network-segments">Limitations</a></li><li class="level-6"><a href="#nw-enabling-bgp-evpn-primary-cudn_design-and-deploy-user-defined-network-segments">Enabling BGP EVPN on a primary ClusterUserDefinedNetwork CR</a></li><li class="level-4"><a href="#create-a-primary-network-with-a-network-attachment-definition-con_create-a-primary-network-with-a-network-attachment-definition">Create a primary network with a network attachment definition</a></li><li class="level-5"><a href="#approaches-managing-additional-network_create-a-primary-network-with-a-network-attachment-definition">Approaches to managing a primary network</a></li><li class="level-5"><a href="#nw-multus-create-network_create-a-primary-network-with-a-network-attachment-definition">Create a primary network attachment with the Cluster Network Operator</a></li><li class="level-5"><a href="#nw-nad-cr_create-a-primary-network-with-a-network-attachment-definition">Configuration for a primary network attachment</a></li><li class="level-5"><a href="#nw-multus-create-network-apply_create-a-primary-network-with-a-network-attachment-definition">Create a primary network attachment by applying a YAML manifest</a></li><li class="level-4"><a href="#create-secondary-networks-on-ovn-kubernetes-con_create-secondary-networks-on-ovn-kubernetes">Create secondary networks on OVN-Kubernetes</a></li><li class="level-5"><a href="#configuration-ovnk-additional-networks_create-secondary-networks-on-ovn-kubernetes">Configuration for an OVN-Kubernetes secondary network</a></li><li class="level-6"><a href="#configuration-additional-network-types-supported-platforms_create-secondary-networks-on-ovn-kubernetes">Supported platforms for OVN-Kubernetes secondary network</a></li><li class="level-5"><a href="#configuration-ovnk-network-plugin-json-object_create-secondary-networks-on-ovn-kubernetes">OVN-Kubernetes network plugin JSON configuration table</a></li><li class="level-6"><a href="#compatibility-with-multi-network-policy_create-secondary-networks-on-ovn-kubernetes">Compatibility with multi-network policy</a></li><li class="level-6"><a href="#configuration-localnet-switched-topology_create-secondary-networks-on-ovn-kubernetes">Configuration for a localnet switched topology</a></li><li class="level-6"><a href="#configuring-pods-secondary-network_create-secondary-networks-on-ovn-kubernetes">Configure pods for secondary networks</a></li><li class="level-6"><a href="#configuring-pods-static-ip_create-secondary-networks-on-ovn-kubernetes">Configure pods with a static IP address</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments">Provision user-defined and OVN-Kubernetes secondary segments</h3>
@@ -1858,7 +1882,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="A flat layer 2 topology with a virtual switch so that virtual machines in node-1 to node-2 can communicate with each other">
 </div>
-<div class="title">Figure 75. A flat layer 2 topology that uses a virtual switch for component communication</div>
+<div class="title">Figure 64. A flat layer 2 topology that uses a virtual switch for component communication</div>
 </div>
 <div class="paragraph">
 <p>If you decide not to specify a layer 2 subnet, then you must manually configure IP addresses for each pod in your cluster. When you do not specify a layer 2 subnet, port security is limited to preventing Media Access Control (MAC) spoofing only, and does not include IP spoofing. A layer 2 topology creates a single broadcast domain that can be challenging in large network environments, where the topology might cause a broadcast storm that can degrade network performance.</p>
@@ -1883,14 +1907,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="A UDN that uses a layer 2 topology for migrating a VM from node-1 to node-2">
 </div>
-<div class="title">Figure 76. A user-defined network (UDN) that uses a layer 2 topology</div>
+<div class="title">Figure 65. A user-defined network (UDN) that uses a layer 2 topology</div>
 </div>
 <div class="paragraph">
 <p>A layer 3 topology creates a unique layer 2 segment for each node in a cluster. The layer 3 routing mechanism interconnects these segments so that virtual machines and pods that are hosted on different nodes can communicate with each other. A layer 3 topology can effectively manage large broadcast domains by assigning each domain to a specific node, so that broadcast traffic has a reduced scope. To configure a layer 3 topology, you must configure <code>cidr</code> and <code>hostSubnet</code> parameters.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="nw-udn-overview_design-and-deploy-user-defined-network-segments">Overview of user-defined networks</h4>
+<h4 id="design-and-deploy-user-defined-network-segments-con_design-and-deploy-user-defined-network-segments">Design and deploy user-defined network segments</h4>
+<div class="paragraph _abstract">
+<p>User-defined networks (UDNs) extend OVN-Kubernetes to enable custom layer 2 and layer 3 network segments with default isolation. UDNs provide enhanced network flexibility, security, and segmentation capabilities for multi-tenant deployments and custom network architectures.</p>
+</div>
+<div class="sect4">
+<h5 id="nw-udn-overview_design-and-deploy-user-defined-network-segments">Overview of user-defined networks</h5>
 <div class="paragraph _abstract">
 <p>Cluster administrators can create primary or secondary networks that span namespaces by using the <code>ClusterUserDefinedNetwork</code> CR, while developers can define secondary networks at the namespace level by using the <code>UserDefinedNetwork</code> CR.</p>
 </div>
@@ -1905,6 +1934,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="paragraph">
 <p>The following sections further emphasize the benefits and limitations of user-defined networks, the best practices when creating a <code>ClusterUserDefinedNetwork</code> or <code>UserDefinedNetwork</code> CR, how to create the CR, and additional configuration details that might be relevant to your deployment.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="nw-udn-benefits_design-and-deploy-user-defined-network-segments">Benefits of a user-defined network</h5>
@@ -2070,7 +2100,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="A flat layer 2 topology with a virtual switch so that virtual machines in node-1 to node-2 can communicate with each other">
 </div>
-<div class="title">Figure 77. A flat layer 2 topology that uses a virtual switch for component communication</div>
+<div class="title">Figure 66. A flat layer 2 topology that uses a virtual switch for component communication</div>
 </div>
 <div class="paragraph">
 <p>If you decide not to specify a layer 2 subnet, then you must manually configure IP addresses for each pod in your cluster. When you do not specify a layer 2 subnet, port security is limited to preventing Media Access Control (MAC) spoofing only, and does not include IP spoofing. A layer 2 topology creates a single broadcast domain that can be challenging in large network environments, where the topology might cause a broadcast storm that can degrade network performance.</p>
@@ -2095,7 +2125,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="A UDN that uses a layer 2 topology for migrating a VM from node-1 to node-2">
 </div>
-<div class="title">Figure 78. A user-defined network (UDN) that uses a layer 2 topology</div>
+<div class="title">Figure 67. A user-defined network (UDN) that uses a layer 2 topology</div>
 </div>
 <div class="paragraph">
 <p>A layer 3 topology creates a unique layer 2 segment for each node in a cluster. The layer 3 routing mechanism interconnects these segments so that virtual machines and pods that are hosted on different nodes can communicate with each other. A layer 3 topology can effectively manage large broadcast domains by assigning each domain to a specific node, so that broadcast traffic has a reduced scope. To configure a layer 3 topology, you must configure <code>cidr</code> and <code>hostSubnet</code> parameters.</p>
@@ -2113,7 +2143,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="The tenant isolation concept in a user-defined network (UDN)">
 </div>
-<div class="title">Figure 79. Tenant isolation using a ClusterUserDefinedNetwork CR</div>
+<div class="title">Figure 68. Tenant isolation using a ClusterUserDefinedNetwork CR</div>
 </div>
 <div class="sect5">
 <h6 id="cudn-transport-considerations_design-and-deploy-user-defined-network-segments">Considerations for ClusterUserDefinedNetwork transport</h6>
@@ -2747,7 +2777,7 @@ status:
 <div class="content">
 <img src="data:image/png;base64," alt="The namespace isolation concept in a user-defined network (UDN)">
 </div>
-<div class="title">Figure 80. Namespace isolation using a UserDefinedNetwork CR</div>
+<div class="title">Figure 69. Namespace isolation using a UserDefinedNetwork CR</div>
 </div>
 <div class="sect5">
 <h6 id="considerations-for-udn_design-and-deploy-user-defined-network-segments">Best practices for UserDefinedNetwork CRs</h6>
@@ -3264,7 +3294,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 <p>To troubleshoot your network deployment in Red&#160;Hat OpenShift Container Platform, evaluate the status condition types returned for <code>ClusterUserDefinedNetwork</code> and <code>UserDefinedNetwork</code> custom resources (CRs). Reviewing these conditions ensures that you can identify and resolve configuration errors.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 710. NetworkCreated condition types (<code>ClusterDefinedNetwork</code> and <code>UserDefinedNetwork</code> CRs)</caption>
+<caption class="title">Table 579. NetworkCreated condition types (<code>ClusterDefinedNetwork</code> and <code>UserDefinedNetwork</code> CRs)</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 15.3846%;">
@@ -3530,7 +3560,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 711. NetworkAllocationSucceeded condition types (<code>UserDefinedNetwork</code> CRs)</caption>
+<caption class="title">Table 580. NetworkAllocationSucceeded condition types (<code>UserDefinedNetwork</code> CRs)</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 15.3846%;">
@@ -3664,7 +3694,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 712. Invalid <code>mtu</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 581. Invalid <code>mtu</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3804,7 +3834,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 713. Invalid <code>PhysicalNetworkName</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 582. Invalid <code>PhysicalNetworkName</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3976,7 +4006,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 714. Invalid <code>role</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 583. Invalid <code>role</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4084,7 +4114,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 715. Invalid <code>subnets</code> and <code>ipam</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 584. Invalid <code>subnets</code> and <code>ipam</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4384,7 +4414,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 716. Invalid <code>vlan</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 585. Invalid <code>vlan</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 16.6666%;">
@@ -4628,6 +4658,1003 @@ metadata:
 </table>
 </div>
 </div>
+<div class="sect4">
+<h5 id="nw-bgp-evpn-about_design-and-deploy-user-defined-network-segments">Overview of BGP EVPN with OVN-Kubernetes</h5>
+<div class="paragraph _abstract">
+<p>Border Gateway Protocol Ethernet Virtual Private Networking (BGP EVPN) is a standards-based control plane that exchanges layer 2 and layer 3 overlay network reachability within the data center. Enabling this feature on Red&#160;Hat OpenShift Container Platform allows a <code>ClusterUserDefinedNetwork</code> (CUDN) overlay network to use the EVPN control plane for deeper integration with the data center network.</p>
+</div>
+<div class="paragraph">
+<p>Before EVPN support for primary cluster user-defined networks (CUDNs), VRF-lite was the only way to advertise CUDNs into one or more Virtual Routing and Forwarding (VRF) tables while keeping them isolated on the network. However, that approach required a VLAN interface per VRF and a separate BGP session for each VRF.</p>
+</div>
+<div class="paragraph">
+<p>BGP EVPN simplifies that workflow: you avoid extra VLAN interfaces and per-VRF BGP sessions by using a single multiprotocol BGP (MP-BGP) session toward the fabric.</p>
+</div>
+<div class="paragraph">
+<p>EVPN defines the following two VPN types that you can deploy with primary CUDNs when you attach the overlay to the fabric:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">MAC-VRF</dt>
+<dd>
+<p>Stretches a layer 2 segment across the EVPN fabric for east-west bridged traffic and workloads such as VM live migration.</p>
+</dd>
+<dt class="hdlist1">IP-VRF</dt>
+<dd>
+<p>Provides layer 3 routing across the EVPN fabric for routed north-south traffic.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Enabling EVPN transport on a primary cluster user-defined network (CUDN) implements EVPN using VXLAN overlay. FRR implements the BGP EVPN control plane and integrates with Linux network devices for the VXLAN data plane.</p>
+</div>
+<div class="paragraph">
+<p>This design does not model the cluster default pod network as an EVPN VPN. EVPN applies only to primary CUDNs that you configure for EVPN transport. EVPN on primary CUDNs requires and builds on the OVN-Kubernetes route advertisements feature. You use <code>RouteAdvertisements</code> custom resources to associate fabric-facing FRR configuration with labeled primary CUDNs that use EVPN transport. For more information, see "About route advertisements".</p>
+</div>
+<div class="sect5">
+<h6 id="bgp-evpn-primary-use-cases_design-and-deploy-user-defined-network-segments">Benefits of BGP EVPN with primary CUDNs</h6>
+<div class="paragraph">
+<p>BGP EVPN extends the isolated primary network in each namespace to an external BGP EVPN fabric, improving segmentation between tenants and external sites while simplifying network operations by aligning CUDNs with fabric route targets and shared uplinks instead of complex per-node routes and host-specific wiring.</p>
+</div>
+<div class="paragraph">
+<p>Primary CUDNs that use BGP EVPN offer the following benefits:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Fabric integration</dt>
+<dd>
+<p>Map tenant networks to the same route-target and external virtual routing and forwarding (VRF) segments that you already use on an external BGP EVPN fabric.</p>
+</dd>
+<dt class="hdlist1">Layer 2 stretch for mobility</dt>
+<dd>
+<p>Extend a layer 2 segment into the cluster so that virtual machines or pods can keep addresses stable. EVPN MAC mobility can help when workloads move between nodes.</p>
+</dd>
+<dt class="hdlist1">Simpler attachment than per-node local wiring</dt>
+<dd>
+<p>Reduce dependence on host-specific local attachment patterns when the fabric can carry many tenant VNIs over shared uplinks.</p>
+</dd>
+<dt class="hdlist1">Isolation for overlapping tenant networks</dt>
+<dd>
+<p>Connect primary CUDNs that use overlapping address space to different external EVPN segments while preserving isolation between tenants.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect5">
+<h6 id="bgp-evpn-supported-platforms_design-and-deploy-user-defined-network-segments">Platform support and feature compatibility</h6>
+<div class="paragraph">
+<p>BGP EVPN with primary CUDNs is supported only on bare-metal clusters.</p>
+</div>
+<div class="paragraph">
+<p>The following table lists the supported and unsupported features when EVPN is enabled on primary CUDNs.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 586. BGP EVPN with primary CUDNs feature compatibility</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Network feature</th>
+<th class="tableblock halign-center valign-top">Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Egress firewall</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Supported</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Egress QoS</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Supported</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Network QoS</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Supported</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Network Policy</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Supported</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Services (Cluster IP)</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Supported</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Services (NodePort, External IP, LoadBalancer)</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Limited<sup>[1]</sup></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Multicast (MAC-VRF)</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Supported</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Multicast (IP-VRF)</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Unsupported</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Multiple External Gateways (MEG)</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Unsupported</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>EgressIP</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Unsupported</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Egress Service</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Unsupported</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>IPsec</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
+<p>Unsupported</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="openblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>For <code>Service</code> objects (NodePort, External IP, and LoadBalancer), the node IP, external IP, and LoadBalancer IP must be reachable on the EVPN fabric at the appropriate cluster nodes. OVN-Kubernetes does not advertise those addresses onto the fabric. Service traffic behaves normally when the fabric delivers packets to the nodes.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="bgp-evpn-limitations_design-and-deploy-user-defined-network-segments">Limitations</h6>
+<div class="paragraph">
+<p>The following limitations apply to BGP EVPN with primary CUDNs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>BGP EVPN with primary CUDNs is supported only on bare-metal clusters.</p>
+</li>
+<li>
+<p>BGP EVPN with primary CUDNs requires setting <code>gatewayConfig.routingViaHost</code> to <code>true</code> and <code>gatewayConfig.ipForwarding</code> to <code>Global</code> in the Cluster Network Operator configuration. For more information, see "Configuring a gateway".</p>
+</li>
+<li>
+<p>A maximum of 4094 combined MAC-VRF and IP-VRF instances per <code>VTEP</code> applies because OVN-Kubernetes uses one shared VXLAN device per <code>VTEP</code>, maps VLAN IDs to VNIs on that device, and the Linux bridge VLAN space is limited to 4094.</p>
+</li>
+<li>
+<p>Only IPv4 VTEP addresses are supported. IPv6 VTEPs are not supported because of limitations in FRR, which implements the BGP EVPN control plane.</p>
+</li>
+<li>
+<p>The VXLAN destination UDP port is 4789. Customizing the UDP port is not supported.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="nw-enabling-bgp-evpn-primary-cudn_design-and-deploy-user-defined-network-segments">Enabling BGP EVPN on a primary ClusterUserDefinedNetwork CR</h6>
+<div class="paragraph _abstract">
+<p>To connect primary <code>ClusterUserDefinedNetwork</code> (CUDN) custom resource (CR) traffic to an external BGP EVPN fabric in Red&#160;Hat OpenShift Container Platform, you create <code>FRRConfiguration</code>, <code>VTEP</code>, <code>RouteAdvertisements</code>, and <code>ClusterUserDefinedNetwork</code> resources. Use these resources to establish BGP EVPN toward peers on your provider network and to advertise labeled CUDNs that use EVPN transport.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have enabled route advertisements in the Cluster Network Operator configuration. For more information, see "Enabling route advertisements".</p>
+</li>
+<li>
+<p>You have set <code>gatewayConfig.routingViaHost</code> to <code>true</code> and <code>gatewayConfig.ipForwarding</code> to <code>Global</code> in the Cluster Network Operator configuration. BGP EVPN for primary CUDNs is only supported with this gateway configuration. For more information, see "Configuring a gateway".</p>
+</li>
+<li>
+<p>You have logged in to the Red&#160;Hat OpenShift Container Platform cluster as an administrator.</p>
+</li>
+<li>
+<p>You have the autonomous system numbers (ASNs), BGP neighbor addresses, expected virtual network identifiers (VNIs), and route targets if you set them explicitly. If you omit route targets, the implementation derives default values from your ASN and VNI.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>VNIs must be unique and unused across multiple IP-VRF or MAC-VRF instances.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For Unmanaged <code>VTEP</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The Kubernetes NMState Operator is available if you choose the NNCP option for Unmanaged VTEP addresses.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create an <code>FRRConfiguration</code> object that establishes BGP peering toward your provider network. The manifest must define at least one BGP router in the default VRF that will act as the EVPN underlay. Multiple routers can be defined for redundancy. OVN-Kubernetes reads neighbors from that router to enable EVPN toward the fabric.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Use the following example as a template when creating the <code>FRRConfiguration</code> object. Use a descriptive label so <code>RouteAdvertisements</code> can select this configuration in a subsequent step.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: frrk8s.metallb.io/v1beta1
+kind: FRRConfiguration
+metadata:
+  name: &lt;frrconfiguration_evpn_name&gt;
+  namespace: openshift-frr-k8s
+  labels:
+    &lt;frr_label_key&gt;: &lt;frr_label_value&gt;
+spec:
+  nodeSelector: {}
+  bgp:
+    routers:
+      - asn: &lt;cluster_asn&gt;
+        neighbors:
+          - address: &lt;peer_address&gt;
+            asn: &lt;peer_asn&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;frrconfiguration_evpn_name&gt;</code></dt>
+<dd>
+<p>Specifies the name of the <code>FRRConfiguration</code> object.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;frr_label_key&gt;</code> and <code>&lt;frr_label_value&gt;</code></dt>
+<dd>
+<p>Specifies a label key and value on the <code>FRRConfiguration</code> object that must match <code>frrConfigurationSelector.matchLabels</code> in the <code>RouteAdvertisements</code> object.</p>
+</dd>
+<dt class="hdlist1"><code>spec.nodeSelector</code></dt>
+<dd>
+<p>Specifies a <code>nodeSelector</code> so the configuration applies to the nodes where you want FRR to establish BGP toward the fabric.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;cluster_asn&gt;</code></dt>
+<dd>
+<p>Specifies the autonomous system number (ASN) of the Red&#160;Hat OpenShift Container Platform cluster.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;peer_address&gt;</code></dt>
+<dd>
+<p>Specifies the address of the BGP neighbor on the provider fabric.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;peer_asn&gt;</code></dt>
+<dd>
+<p>Specifies the ASN of the BGP neighbor on the provider fabric.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Apply the <code>FRRConfiguration</code> object by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f &lt;frrconfiguration_evpn_name&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create a VXLAN tunnel endpoint, or <code>VTEP</code>, object in <code>Unmanaged</code> mode. The <code>VTEP</code> custom resource defines VTEP IPs.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Use the following example as a template when creating the <code>VTEP</code> object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: k8s.ovn.org/v1
+kind: VTEP
+metadata:
+  name: &lt;evpn_vtep_name&gt;
+spec:
+  mode: Unmanaged
+  cidrs:
+    - &lt;vtep_cidr&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;evpn_vtep_name&gt;</code></dt>
+<dd>
+<p>Specifies the name of the <code>VTEP</code> object.</p>
+</dd>
+<dt class="hdlist1"><code>Unmanaged</code></dt>
+<dd>
+<p>Must be set to <code>Unmanaged</code> mode. <code>Managed</code> mode is unsupported for this release.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;vtep_cidr&gt;</code></dt>
+<dd>
+<p>Specifies an IPv4 prefix that includes the VTEP primary address on each participating node. On every such node, configure one IPv4 address from this range as the primary address on an interface. OVN-Kubernetes discovers that address and uses it as the VTEP IP for that node. For how the address is used and how to configure the interface, see the following note.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In <code>Unmanaged</code> mode, OVN-Kubernetes does not allocate a VTEP address. Consider the following when configuring the VTEP IP:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Each node needs one IPv4 address from <code>&lt;vtep_cidr&gt;</code> configured as the primary address of an interface on that node.</p>
+</li>
+<li>
+<p>OVN-Kubernetes discovers the IPv4 address configured on the interface and uses it as the VTEP IP for that node. OVN-Kubernetes then advertises the VTEP IP on the BGP EVPN underlay so that it is reachable from other nodes.</p>
+</li>
+<li>
+<p>Avoid using an interface associated with a physical link carrier when using redundant BGP peering. Instead, use a dummy interface where the IP is configured as the primary address.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See the following optional step to configure a dummy interface and assign a primary IPv4 address from <code>&lt;vtep_cidr&gt;</code> by using the Kubernetes NMState Operator.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Optional. Configure a dummy interface with a <code>NodeNetworkConfigurationPolicy</code> (NNCP) object from the Kubernetes NMState Operator. Assign a primary IPv4 address on it that falls within the VTEP CIDR. Use the following manifest as a template.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: nmstate.io/v1
+kind: NodeNetworkConfigurationPolicy
+metadata:
+  name: &lt;nncp_evpn_vtep_name&gt;
+spec:
+  nodeSelector: {}
+  desiredState:
+    interfaces:
+      - name: &lt;evpn_vtep_dummy_name&gt;
+        type: dummy
+        state: up
+        ipv4:
+          enabled: true
+          address:
+            - ip: &lt;vtep_ipv4&gt;
+              prefix-length: 32
+          dhcp: false
+        ipv6:
+          enabled: false</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;nncp_evpn_vtep_name&gt;</code></dt>
+<dd>
+<p>Specifies the name of the <code>NodeNetworkConfigurationPolicy</code> object.</p>
+</dd>
+<dt class="hdlist1"><code>spec.nodeSelector</code></dt>
+<dd>
+<p>Specifies a <code>nodeSelector</code> so the policy applies to the node or nodes you expect to host EVPN workloads.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;evpn_vtep_dummy_name&gt;</code></dt>
+<dd>
+<p>Specifies the name for the dummy device on the node.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;vtep_ipv4&gt;</code></dt>
+<dd>
+<p>Specifies an IPv4 address from <code>&lt;vtep_cidr&gt;</code> for this node. Use a different address on each node.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>For information about applying and verifying the <code>NodeNetworkConfigurationPolicy</code> object, see "Managing the NodeNetworkConfigurationPolicy manifest file".</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Apply the <code>VTEP</code> object by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f &lt;evpn_vtep_name&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the <code>VTEP</code> CR is created and accepted by entering the following command. A healthy VTEP has a valid VTEP IP and reports <code>Accepted: True</code> and <code>Reason: Allocated</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get vtep</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                ACCEPTED   REASON
+&lt;evpn_vtep_name&gt;    True       Allocated</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If <code>Accepted</code> is <code>False</code>, check node annotations.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create a <code>RouteAdvertisements</code> object.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Use the following example as a template when creating the <code>RouteAdvertisements</code> object. Ensure that the <code>RouteAdvertisements</code> object selects a labeled <code>FRRConfiguration</code> object and labeled primary <code>ClusterUserDefinedNetwork</code> objects so that the pod network is advertised for EVPN.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: k8s.ovn.org/v1
+kind: RouteAdvertisements
+metadata:
+  name: &lt;routeadvertisements_evpn_name&gt;
+spec:
+  targetVRF: auto
+  advertisements:
+    - PodNetwork
+  nodeSelector: {}
+  frrConfigurationSelector:
+    matchLabels:
+      &lt;frr_label_key&gt;: &lt;frr_label_value&gt;
+  networkSelectors:
+    - networkSelectionType: ClusterUserDefinedNetworks
+      clusterUserDefinedNetworkSelector:
+        networkSelector:
+          matchLabels:
+            &lt;cudn_label_key&gt;: &lt;cudn_label_value&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.targetVRF</code></dt>
+<dd>
+<p>Specifies the target VRF. Each CUDN is advertised in its own IP-VRF by design.</p>
+</dd>
+<dt class="hdlist1"><code>spec.advertisements</code></dt>
+<dd>
+<p>Specifies the advertisements to configure. Only pod IP advertisements are supported. Egress IP advertisements are not supported for EVPN.</p>
+</dd>
+<dt class="hdlist1"><code>spec.nodeSelector</code></dt>
+<dd>
+<p>Specifies the nodes from which advertisements are propagated. Pod IP advertisements are supported only from all nodes. This limitation is not specific to EVPN and applies to <code>RouteAdvertisements</code> objects.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;routeadvertisements_evpn_name&gt;</code></dt>
+<dd>
+<p>Specifies the name of the <code>RouteAdvertisements</code> object.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;frr_label_key&gt;</code> and <code>&lt;frr_label_value&gt;</code></dt>
+<dd>
+<p>Specifies a label key and value on the <code>FRRConfiguration</code> object that must match <code>frrConfigurationSelector.matchLabels</code> in the <code>RouteAdvertisements</code> object. The selected <code>FRRConfiguration</code> must define at least a default VRF BGP router; OVN-Kubernetes uses neighbors from that router to enable EVPN for those peers.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;cudn_label_key&gt;</code> and <code>&lt;cudn_label_value&gt;</code></dt>
+<dd>
+<p>Specifies a label key and value on the <code>ClusterUserDefinedNetwork</code> object that must match <code>networkSelectors.clusterUserDefinedNetworkSelector.networkSelector.matchLabels</code> in the <code>RouteAdvertisements</code> object. For example, the key <code>evpn</code> with the value <code>enabled</code> selects every CUDN labeled <code>evpn: enabled</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>For IP-VRF primary CUDNs, if the <code>FRRConfiguration</code> defines a VRF-specific BGP router whose name matches the CUDN name, the IP-VRF EVPN router is derived from that router. If that router does not exist, the IP-VRF EVPN router is derived from the underlay (default VRF) router.</p>
+</div>
+</li>
+<li>
+<p>Apply the <code>RouteAdvertisements</code> object by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f &lt;routeadvertisements_evpn_name&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the <code>RouteAdvertisements</code> CR is created and accepted by entering the following command. A healthy <code>RouteAdvertisements</code> CR reports <code>Accepted: True</code> and <code>Reason: Accepted</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get routeadvertisements -o \
+    custom-columns='NAME:.metadata.name,ACCEPTED:.status.conditions[?(@.type=="Accepted")].status,REASON:.status.conditions[?(@.type=="Accepted")].reason'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                               ACCEPTED   REASON
+&lt;routeadvertisements_evpn_name&gt;    True       Accepted</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If <code>Accepted</code> is <code>False</code>, check that the <code>networkSelectors</code> field matches an existing <code>ClusterUserDefinedNetwork</code> resource, that the <code>frrConfigurationSelector</code> object matches an existing <code>FRRConfiguration</code> resource, and that the <code>FRRConfiguration</code> contains at least a default VRF router with neighbors.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create a Layer 2 or Layer 3 primary <code>ClusterUserDefinedNetwork</code> object.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You cannot retroactively enable EVPN on an existing <code>ClusterUserDefinedNetwork</code> object whose specification is immutable. You must create a new <code>ClusterUserDefinedNetwork</code> object for EVPN workloads instead.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a Layer 2 primary CUDN object across the EVPN network as a MAC-VRF. Use the following example as a template:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: k8s.ovn.org/v1
+kind: ClusterUserDefinedNetwork
+metadata:
+  name: &lt;l2_cudn_name&gt;
+  labels:
+    &lt;cudn_label_key&gt;: &lt;cudn_label_value&gt;
+spec:
+  namespaceSelector:
+    matchLabels:
+      kubernetes.io/metadata.name: &lt;namespace_label_value&gt;
+  network:
+    topology: Layer2
+    layer2:
+      role: Primary
+      subnets:
+        - &lt;cudn_subnet&gt;
+    transport: EVPN
+    evpn:
+      vtep: &lt;evpn_vtep_name&gt;
+      macVRF:
+        vni: &lt;mac_vrf_vni&gt;
+        routeTarget: &lt;mac_vrf_rt&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;l2_cudn_name&gt;</code></dt>
+<dd>
+<p>Specifies the name of the Layer 2 <code>ClusterUserDefinedNetwork</code> object.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;cudn_label_key&gt;</code> and <code>&lt;cudn_label_value&gt;</code></dt>
+<dd>
+<p>Specifies a label key and value on the CUDN that must match <code>networkSelectors</code> in the <code>RouteAdvertisements</code> object.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;namespace_label_value&gt;</code></dt>
+<dd>
+<p>Specifies the value of the label so that the CUDN applies to the namespace or namespaces that you expect to host EVPN workloads.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;cudn_subnet&gt;</code></dt>
+<dd>
+<p>Specifies the subnet for the CUDN, for example, <code>10.0.10.0/24</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;evpn_vtep_name&gt;</code></dt>
+<dd>
+<p>Specifies the <code>metadata.name</code> of the <code>VTEP</code> object that this CUDN uses for EVPN transport. It must match the name you set when you created the <code>VTEP</code> object.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;mac_vrf_vni&gt;</code></dt>
+<dd>
+<p>Specifies the VNI for the MAC VRF, for example, <code>100</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;mac_vrf_rt&gt;</code></dt>
+<dd>
+<p>Optional. Specifies the route target for the MAC VRF, for example, <code>65000:100</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Optional. Add an IP-VRF on top of the MAC-VRF. This enables Layer 3 routing for the same network, allowing pods to reach external routed destinations via the IP-VRF while maintaining Layer 2 reachability via the MAC VRF. Use the following example as a template:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml"># ...
+    evpn:
+      vtep: &lt;evpn_vtep_name&gt;
+      macVRF:
+        vni: &lt;mac_vrf_vni&gt;
+        routeTarget: &lt;mac_vrf_rt&gt;
+      ipVRF:
+        vni: &lt;ip_vrf_vni&gt;
+        routeTarget: &lt;ip_vrf_rt&gt;
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;ip_vrf_vni&gt;</code></dt>
+<dd>
+<p>Specifies the VNI for the IP VRF, for example, <code>101</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;ip_vrf_rt&gt;</code></dt>
+<dd>
+<p>Optional. Specifies the route target for the IP VRF, for example, <code>65000:200</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Create a Layer 3 primary CUDN object that uses routing via the IP-VRF. In the following Layer 3 topology, each node maintains its own local Layer 2 domain (per-node subnets), and inter-node communication is handled via EVPN Type 5 routes to advertise these IP prefixes across the fabric. Use the following example as a template:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: k8s.ovn.org/v1
+kind: ClusterUserDefinedNetwork
+metadata:
+  name: &lt;l3_cudn_name&gt;
+  labels:
+    &lt;cudn_label_key&gt;: &lt;cudn_label_value&gt;
+spec:
+  namespaceSelector:
+    matchLabels:
+      kubernetes.io/metadata.name: &lt;namespace_label_value&gt;
+  network:
+    topology: Layer3
+    layer3:
+      role: Primary
+      subnets:
+        - cidr: &lt;cudn_subnet&gt;
+          hostSubnet: 24
+    transport: EVPN
+    evpn:
+      vtep: &lt;evpn_vtep_name&gt;
+      ipVRF:
+        vni: &lt;ip_vrf_vni&gt;
+        routeTarget: &lt;ip_vrf_rt&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;l3_cudn_name&gt;</code></dt>
+<dd>
+<p>Specifies the name of the Layer 3 <code>ClusterUserDefinedNetwork</code> object.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;cudn_label_key&gt;</code> and <code>&lt;cudn_label_value&gt;</code></dt>
+<dd>
+<p>Specifies a label key and value on the CUDN that must match <code>networkSelectors</code> in the <code>RouteAdvertisements</code> object.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;namespace_label_value&gt;</code></dt>
+<dd>
+<p>Specifies the value of the label so that the CUDN applies to the namespace or namespaces that you expect to host EVPN workloads.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;cudn_subnet&gt;</code></dt>
+<dd>
+<p>Specifies the subnet for the CUDN, for example, <code>10.0.20.0/16</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;evpn_vtep_name&gt;</code></dt>
+<dd>
+<p>Specifies the name of the <code>VTEP</code> object that this CUDN uses for EVPN transport. It must match the name you set when you created the <code>VTEP</code> object.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;ip_vrf_vni&gt;</code></dt>
+<dd>
+<p>Specifies the VNI for the IP VRF, for example, <code>200</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;ip_vrf_rt&gt;</code></dt>
+<dd>
+<p>Optional. Specifies the route target for the IP VRF, for example, <code>65000:101</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Apply the Layer 2 or Layer 3 <code>ClusterUserDefinedNetwork</code> object by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f &lt;clusteruserdefinednetwork_name&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the <code>ClusterUserDefinedNetwork</code> CR is created and accepted by entering the following command. A healthy <code>ClusterUserDefinedNetwork</code> CR reports <code>Accepted: True</code> and <code>Reason: EVPNTransportAccepted</code>.</p>
+<div class="paragraph">
+<p>Check the <code>ClusterUserDefinedNetwork</code> status by entering the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusteruserdefinednetwork &lt;clusteruserdefinednetwork_name&gt; -o \
+    custom-columns='NAME:.metadata.name,ACCEPTED:.status.conditions[?(@.type=="clusteruserdefinednetwork")].status,REASON:.status.conditions[?(@.type=="clusteruserdefinednetwork")].reason'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                                ACCEPTED   REASON
+&lt;clusteruserdefinednetwork_name&gt;    True       EVPNTransportAccepted</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If <code>Accepted</code> is <code>False</code>, check that the referenced <code>VTEP</code> CR exists and is itself accepted.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Ensure that pods in a selected namespace can reach peers on the same CUDN and, where your design allows, endpoints on the external EVPN fabric.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="create-a-primary-network-with-a-network-attachment-definition-con_create-a-primary-network-with-a-network-attachment-definition">Create a primary network with a network attachment definition</h4>
@@ -4802,7 +5829,7 @@ spec:
 <p>The configuration for the API is described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 717. <code>NetworkAttachmentDefinition</code> API fields</caption>
+<caption class="title">Table 587. <code>NetworkAttachmentDefinition</code> API fields</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -4914,7 +5941,12 @@ spec:
 </div>
 </div>
 <div class="sect3">
-<h4 id="configuration-ovnk-additional-networks_create-secondary-networks-on-ovn-kubernetes">Configuration for an OVN-Kubernetes secondary network</h4>
+<h4 id="create-secondary-networks-on-ovn-kubernetes-con_create-secondary-networks-on-ovn-kubernetes">Create secondary networks on OVN-Kubernetes</h4>
+<div class="paragraph _abstract">
+<p>As a cluster administrator, you can configure secondary networks for your cluster by using the <code>NetworkAttachmentDefinition</code> (NAD) resource with the OVN-Kubernetes CNI plug-in. OVN-Kubernetes supports layer 2, layer 3, and localnet topologies for secondary network segments.</p>
+</div>
+<div class="sect4">
+<h5 id="configuration-ovnk-additional-networks_create-secondary-networks-on-ovn-kubernetes">Configuration for an OVN-Kubernetes secondary network</h5>
 <div class="paragraph _abstract">
 <p>The Red Hat OpenShift Networking OVN-Kubernetes network plugin allows the configuration of secondary network interfaces for pods. To configure secondary network interfaces, you must define the configurations in the <code>NetworkAttachmentDefinition</code> custom resource definition (CRD).</p>
 </div>
@@ -4952,8 +5984,8 @@ spec:
 </tr>
 </table>
 </div>
-<div class="sect4">
-<h5 id="configuration-additional-network-types-supported-platforms_create-secondary-networks-on-ovn-kubernetes">Supported platforms for OVN-Kubernetes secondary network</h5>
+<div class="sect5">
+<h6 id="configuration-additional-network-types-supported-platforms_create-secondary-networks-on-ovn-kubernetes">Supported platforms for OVN-Kubernetes secondary network</h6>
 <div class="paragraph">
 <p>You can use an OVN-Kubernetes secondary network with the following supported platforms:</p>
 </div>
@@ -4980,13 +6012,14 @@ spec:
 </ul>
 </div>
 </div>
+</div>
 <div class="sect4">
 <h5 id="configuration-ovnk-network-plugin-json-object_create-secondary-networks-on-ovn-kubernetes">OVN-Kubernetes network plugin JSON configuration table</h5>
 <div class="paragraph _abstract">
 <p>The OVN-Kubernetes network plugin JSON configuration object describes the configuration parameters for the OVN-Kubernetes CNI network plugin.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 718. OVN-Kubernetes network plugin JSON configuration table</caption>
+<caption class="title">Table 588. OVN-Kubernetes network plugin JSON configuration table</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5515,12 +6548,12 @@ spec:
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a> | ↑ Up: <a href="_secure.html">Secure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a> →</p>
+<p>← Previous: <a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 15:58:47 +0100
+Last updated 2026-10-12 13:29:35 +0100
 </div>
 </div>
 <style>

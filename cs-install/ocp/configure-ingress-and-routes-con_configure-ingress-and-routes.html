@@ -568,10 +568,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="compare-platform-options-con_compare-platform-options.html">Compare platform options</a>
 </li>
-<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
-</li>
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
@@ -582,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -612,6 +608,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
+<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
+</li>
+<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
+</li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
 <li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
@@ -675,7 +677,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
@@ -847,7 +849,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-registry-allowlists-and-blocks-con_configure-registry-allowlists-and-blocks.html">Configure registry allowlists and blocks</a>
 </li>
-<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">About adding registries that allow image short names</a>
+<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">Configure short-name search registries</a>
 </li>
 <li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
 </li>
@@ -909,8 +911,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
 </li>
-<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
-</li>
 <li><a href="change-the-installed-file-system-configuration-for-new-nodes-con_change-the-installed-file-system-configuration-for-new-nodes.html">Change the installed file system configuration for new nodes</a>
 </li>
 <li><a href="change-the-installed-raid-configuration-for-new-nodes-con_change-the-installed-raid-configuration-for-new-nodes.html">Change the installed RAID configuration for new nodes</a>
@@ -947,7 +947,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1057,11 +1057,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
+</li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1241,19 +1267,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
-</li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
-</li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
-</li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
-</li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
-</li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1485,6 +1499,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
 </li>
+<li><a href="graceful-shutdown-cluster-intro_graceful-cluster-shutdown.html">Shutting down the cluster gracefully</a>
+</li>
+<li><a href="graceful-restart-cluster-intro_graceful-cluster-restart.html">Restarting the cluster gracefully</a>
+</li>
+<li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernating an Red&#160;Hat OpenShift Container Platform cluster</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
@@ -1496,6 +1516,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="recovering-unhealthy-etcd-cluster-for-hosted-control-planes-con_recovering-unhealthy-etcd-cluster-for-hosted-control-planes.html">Recovering an unhealthy etcd cluster for hosted control planes</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-a-hosted-cluster-intro_backup-and-restore-etcd-on-a-hosted-cluster.html">Backing up and restoring etcd on a hosted cluster</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a>
+</li>
+<li><a href="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot.html">Backing up etcd data for hosted control planes by using the etcd snapshot method</a>
+</li>
+<li><a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a>
 </li>
 <li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
 </li>
@@ -1509,8 +1539,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
@@ -1523,15 +1551,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
+<li><a href="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data.html">Backing up and restoring etcd data</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
+<li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replacing an unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
@@ -1627,13 +1655,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html">Restoring an etcd snapshot on a hosted cluster</a>
+<li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-restore_etcd-best-practices-restore-etcd-data.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replacing a healthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1643,7 +1667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1669,7 +1693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-creating-a-route_configure-ingress-and-routes">Create an HTTP-based route</a></li><li class="level-4"><a href="#nw-path-based-routes_configure-ingress-and-routes">Path-based routes</a></li><li class="level-4"><a href="#nw-ingress-creating-a-route-via-an-ingress_configure-ingress-and-routes">Create a route through an Ingress object</a></li><li class="level-4"><a href="#networking-ingress-label-propagation-about_configure-ingress-and-routes">About label propagation from Ingress to Route resources</a></li><li class="level-4"><a href="#networking-ingress-label-propagation-enabling_configure-ingress-and-routes">Enable label propagation from Ingress to Route resources</a></li><li class="level-4"><a href="#nw-ingress-creating-an-edge-route-with-a-custom-certificate_configure-ingress-and-routes">Create an edge route with a custom certificate</a></li><li class="level-4"><a href="#nw-ingress-creating-a-reencrypt-route-with-a-custom-certificate_configure-ingress-and-routes">Create a re-encrypt route with a custom certificate</a></li><li class="level-4"><a href="#nw-ingress-creating-a-passthrough-route_configure-ingress-and-routes">Create a passthrough route</a></li><li class="level-4"><a href="#nw-ingress-route-secret-load-external-cert_configure-ingress-and-routes">Create a route with externally managed certificates</a></li><li class="level-4"><a href="#nw-enabling-hsts_configure-ingress-and-routes">HTTP Strict Transport Security</a></li><li class="level-5"><a href="#nw-enabling-hsts-per-route_configure-ingress-and-routes">Enable HTTP Strict Transport Security per-route</a></li><li class="level-5"><a href="#nw-disabling-hsts_configure-ingress-and-routes">Disable HTTP Strict Transport Security per-route</a></li><li class="level-5"><a href="#nw-enforcing-hsts-per-domain_configure-ingress-and-routes">Enforce HTTP Strict Transport Security per-domain</a></li><li class="level-4"><a href="#nw-configuring-route-timeouts_configure-ingress-and-routes">Configure route timeouts</a></li><li class="level-4"><a href="#nw-route-set-or-delete-http-headers_configure-ingress-and-routes">Set or delete HTTP request and response headers in a route</a></li><li class="level-4"><a href="#nw-using-cookies-keep-route-statefulness_configure-ingress-and-routes">Use cookies to keep route statefulness</a></li><li class="level-5"><a href="#nw-annotating-a-route-with-a-cookie-name_configure-ingress-and-routes">Annotate a route with a cookie</a></li><li class="level-4"><a href="#nw-route-specific-annotations_configure-ingress-and-routes">Route-specific annotations</a></li><li class="level-4"><a href="#nw-throughput-troubleshoot_configure-ingress-and-routes">Throughput issue troubleshooting methods</a></li><li class="level-4"><a href="#nw-ingress-re-encrypt-route-custom-cert_configure-ingress-and-routes">Create a route using the destination CA certificate in the Ingress annotation</a></li><li class="level-4"><a href="#nw-ingress-edge-route-default-certificate_configure-ingress-and-routes">Create a route using the default certificate through an Ingress object</a></li><li class="level-4"><a href="#understand-ingress-architecture-con_understand-ingress-architecture">Understand ingress architecture</a></li><li class="level-5"><a href="#nw-ne-openshift-ingress_understand-ingress-architecture">Red Hat OpenShift Container Platform Ingress Operator</a></li><li class="level-5"><a href="#nw-installation-ingress-config-asset_understand-ingress-architecture">The Ingress configuration asset</a></li><li class="level-5"><a href="#nw-ingress-controller-endpoint-publishing-strategies_understand-ingress-architecture">Ingress Controller endpoint publishing strategy</a></li><li class="level-6"><a href="#additional-resources">Additional resources</a></li><li class="level-5"><a href="#nw-using-ingress-and-routes_understand-ingress-architecture">Use Ingress Controllers and routes</a></li><li class="level-4"><a href="#configure-ingress-controller-parameters-con_configure-ingress-controller-parameters">Configure Ingress Controller parameters</a></li><li class="level-5"><a href="#nw-ingress-controller-configuration-parameters_configure-ingress-controller-parameters">Ingress Controller configuration parameters</a></li><li class="level-5"><a href="#nw-ingress-view_configure-ingress-controller-parameters">View the default Ingress Controller</a></li><li class="level-5"><a href="#nw-ingress-controller-status_configure-ingress-controller-parameters">View Ingress Controller status</a></li><li class="level-5"><a href="#nw-ingress-operator-status_configure-ingress-controller-parameters">View Ingress Operator status</a></li><li class="level-5"><a href="#nw-ingress-operator-logs_configure-ingress-controller-parameters">View Ingress Controller logs</a></li><li class="level-5"><a href="#nw-create-custom-ingress-controller_configure-ingress-controller-parameters">Create a custom Ingress Controller</a></li><li class="level-6"><a href="#nw-ingress-setting-a-custom-default-certificate_configure-ingress-controller-parameters">Set a custom default certificate</a></li><li class="level-6"><a href="#nw-ingress-custom-default-certificate-remove_configure-ingress-controller-parameters">Remove a custom default certificate</a></li><li class="level-6"><a href="#nw-ingress-setting-internal-lb_configure-ingress-controller-parameters">Configure an Ingress Controller to use an internal load balancer</a></li><li class="level-6"><a href="#nw-ingress-default-internal_configure-ingress-controller-parameters">Configure the default Ingress Controller for your cluster to be internal</a></li><li class="level-6"><a href="#nw-ingress-configuring-application-domain_configure-ingress-controller-parameters">Specify an alternative cluster domain using the appsDomain option</a></li><li class="level-6"><a href="#nw-route-admission-policy_configure-ingress-controller-parameters">Configure the route admission policy</a></li><li class="level-6"><a href="#using-wildcard-routes_configure-ingress-controller-parameters">Use wildcard routes</a></li><li class="level-6"><a href="#nw-ingresscontroller-change-internal_configure-ingress-controller-parameters">Configure the Ingress Controller endpoint publishing scope to Internal</a></li><li class="level-6"><a href="#nw-ingresscontroller-change-external_configure-ingress-controller-parameters">Configure the Ingress Controller endpoint publishing scope to External</a></li><li class="level-6"><a href="#nw-ingress-controller-nodeportservice-projects_configure-ingress-controller-parameters">Add a single NodePort service to an Ingress Controller</a></li><li class="level-6"><a href="#creating-a-custom-ingress-controller_configure-ingress-controller-parameters">Creating an Ingress Controller for manual DNS management</a></li><li class="level-6"><a href="#modifying-an-existing-ingress-controller_configure-ingress-controller-parameters">Modifying an existing Ingress Controller for manual DNS management</a></li><li class="level-4"><a href="#configure-advanced-ingress-features-con_configure-advanced-ingress-features">Configure advanced ingress features</a></li><li class="level-5"><a href="#nw-autoscaling-ingress-controller_configure-advanced-ingress-features">Autoscale an Ingress Controller</a></li><li class="level-5"><a href="#nw-ingress-controller-configuration_configure-advanced-ingress-features">Scale an Ingress Controller</a></li><li class="level-5"><a href="#nw-ingress-setting-thread-count_configure-advanced-ingress-features">Set Ingress Controller thread count</a></li><li class="level-5"><a href="#nw-ingress-setting-max-connections_configure-advanced-ingress-features">Set the Ingress Controller maximum connections</a></li><li class="level-5"><a href="#nw-ingress-controller-config-tuningoptions-healthcheckinterval_configure-advanced-ingress-features">Set the Ingress Controller health check interval</a></li><li class="level-5"><a href="#nw-configuring-router-compression_configure-advanced-ingress-features">Use router compression</a></li><li class="level-5"><a href="#nw-http2-haproxy_configure-advanced-ingress-features">Enable or disable HTTP/2 on Ingress Controllers</a></li><li class="level-6"><a href="#nw-enable-http2_configure-advanced-ingress-features">Enable HTTP/2</a></li><li class="level-6"><a href="#nw-disable-http2_configure-advanced-ingress-features">Disable HTTP/2</a></li><li class="level-5"><a href="#nw-http-header-configuration_configure-advanced-ingress-features">HTTP header configuration</a></li><li class="level-5"><a href="#nw-ingress-set-or-delete-http-headers_configure-advanced-ingress-features">Set or delete HTTP request and response headers in an Ingress Controller</a></li><li class="level-5"><a href="#nw-ingress-converting-http-header-case_configure-advanced-ingress-features">Convert HTTP header case</a></li><li class="level-5"><a href="#nw-using-ingress-forwarded_configure-advanced-ingress-features">Use X-Forwarded headers</a></li><li class="level-6"><a href="#nw-using-ingress-forwarded-example-use-cases_configure-advanced-ingress-features">Example use cases for X-Forwarded headers</a></li><li class="level-5"><a href="#nw-ingress-controller-configuration-proxy-protocol_configure-advanced-ingress-features">Configure the PROXY protocol for an Ingress Controller</a></li><li class="level-5"><a href="#nw-configure-ingress-access-logging_configure-advanced-ingress-features">Configure Ingress access logging</a></li><li class="level-5"><a href="#nw-exposing-router-metrics_configure-advanced-ingress-features">Expose router metrics</a></li><li class="level-5"><a href="#nw-customize-ingress-error-pages_configure-advanced-ingress-features">Customize HAProxy error code response pages</a></li><li class="level-5"><a href="#nw-ingress-controller-configuration-gcp-global-access_configure-advanced-ingress-features">Configure global access for an Ingress Controller on Google Cloud</a></li><li class="level-5"><a href="#nw-ingress-sharding-concept_configure-advanced-ingress-features">Ingress sharding in Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#nw-ingress-sharding_configure-advanced-ingress-features">Ingress Controller sharding</a></li><li class="level-6"><a href="#nw-traditional-sharding_configure-advanced-ingress-features">Traditional sharding example</a></li><li class="level-6"><a href="#nw-overlapped-sharding_configure-advanced-ingress-features">Overlapped sharding example</a></li><li class="level-6"><a href="#nw-ingress-sharding-default_configure-advanced-ingress-features">Sharding the default Ingress Controller</a></li><li class="level-6"><a href="#nw-ingress-sharding-dns_configure-advanced-ingress-features">Ingress sharding and DNS</a></li><li class="level-6"><a href="#nw-ingress-sharding-route-labels_configure-advanced-ingress-features">Configure Ingress Controller sharding by using route labels</a></li><li class="level-6"><a href="#nw-ingress-sharding-namespace-labels_configure-advanced-ingress-features">Configure Ingress Controller sharding by using namespace labels</a></li><li class="level-4"><a href="#gateway-api-benefits-limitations_understand-gateway-api">Gateway API benefits and limitations</a></li><li class="level-5"><a href="#gateway-api-benefits_understand-gateway-api">Benefits</a></li><li class="level-5"><a href="#gateway-api-limitations_understand-gateway-api">Limitations</a></li><li class="level-5"><a href="#gateway-api-implementation-specifics_understand-gateway-api">Gateway API implementation specifics</a></li><li class="level-6"><a href="#gateway-api-x-k8s-io-crds_understand-gateway-api">Gateway API CRDs for gateway.networking.x-k8s.io</a></li><li class="level-5"><a href="#gateway-api-deployment-topologies_understand-gateway-api">Gateway API deployment topologies</a></li><li class="level-6"><a href="#dedicated-gateway_understand-gateway-api">Dedicated gateway</a></li><li class="level-6"><a href="#shared-gateway_understand-gateway-api">Shared gateway</a></li><li class="level-5"><a href="#comparing-openshift-routes-and-httproutes_understand-gateway-api">Red Hat OpenShift Container Platform routes and HTTPRoutes comparison</a></li><li class="level-4"><a href="#configure-gateway-resources-con_configure-gateway-resources">Configure Gateway resources</a></li><li class="level-5"><a href="#enable-gateway-api-ingress-operator_configure-gateway-resources">Enabling Gateway API for the Ingress Operator</a></li><li class="level-5"><a href="#configuring-listener-routing-security_configure-gateway-resources">Configuring listener routing and security settings</a></li><li class="level-6"><a href="#gateway-listener-configuration-reference_configure-gateway-resources">Gateway listener configuration reference</a></li><li class="level-5"><a href="#resolving-listener-routing-conflicts_configure-gateway-resources">Understanding listener routing conflicts</a></li><li class="level-5"><a href="#troubleshooting-listener-conditions_configure-gateway-resources">Troubleshooting listener connections using status conditions</a></li><li class="level-6"><a href="#gateway-listener-troubleshooting-reference_configure-gateway-resources">Gateway listener troubleshooting reference</a></li><li class="level-5"><a href="#understand-gateway-address-assignment_configure-gateway-resources">Understanding gateway address assignment and types</a></li><li class="level-6"><a href="#_address_types">Address types</a></li><li class="level-5"><a href="#on-premise-gateway-routing-requirements_configure-gateway-resources">On-premise gateway routing requirements</a></li><li class="level-5"><a href="#configuring-automatic-address-assignment-gateway_configure-gateway-resources">Configuring automatic address assignment for a gateway</a></li><li class="level-5"><a href="#configuring-internal-lb-gateway_configure-gateway-resources">Configuring an internal load balancer for a gateway</a></li><li class="level-6"><a href="#internal-lb-annotations-reference_configure-gateway-resources">Cloud provider annotations for internal load balancers</a></li><li class="level-5"><a href="#configuring-dns-on-premise-gateways_configure-gateway-resources">Configuring DNS for on-premise gateways</a></li><li class="level-5"><a href="#gatewayclass-status-conditions_configure-gateway-resources">GatewayClass status conditions reference</a></li><li class="level-5"><a href="#gateway-listener-status-conditions_configure-gateway-resources">Gateway and listener status conditions reference</a></li><li class="level-5"><a href="#querying-gateway-status-cli_configure-gateway-resources">Querying Gateway infrastructure status using the CLI</a></li><li class="level-4"><a href="#configure-httproute-resources-con_configure-httproute-resources">Configure HTTPRoute resources</a></li><li class="level-5"><a href="#creating-httproute_configure-httproute-resources">Creating a basic HTTPRoute custom resource</a></li><li class="level-5"><a href="#configuring-http-request-matching-conditions_configure-httproute-resources">Configuring path-based routing</a></li><li class="level-6"><a href="#supported-httproute-match-types_configure-httproute-resources">Supported HTTPRoute match types</a></li><li class="level-5"><a href="#applying-processing-filters-http-requests_configure-httproute-resources">Applying processing filters to HTTP requests</a></li><li class="level-6"><a href="#supported-httproute-filters_configure-httproute-resources">Supported HTTPRoute filters</a></li><li class="level-5"><a href="#configuring-routing-destinations-weights_configure-httproute-resources">Configuring routing destinations and traffic weights</a></li><li class="level-6"><a href="#httproute-backendref-configuration_configure-httproute-resources">HTTPRoute backendRef configuration</a></li><li class="level-5"><a href="#setting-timeouts-http-requests_configure-httproute-resources">Setting timeouts for HTTP requests</a></li><li class="level-6"><a href="#httproute-timeout-configuration_configure-httproute-resources">HTTPRoute timeout configuration</a></li><li class="level-5"><a href="#httproute-tls-options_configure-httproute-resources">HTTPRoute Transport Layer Security (TLS) configuration</a></li><li class="level-5"><a href="#securing-client-connections-edge-tls_configure-httproute-resources">Securing client connections with edge TLS termination</a></li><li class="level-5"><a href="#about-backend-tls-validation_configure-httproute-resources">About backend TLS validation</a></li><li class="level-5"><a href="#configuring-backend-reencrypt-tls_configure-httproute-resources">Configuring re-encrypt termination with a BackendTLSPolicy</a></li><li class="level-4"><a href="#configure-grpcroute-resources-con_configure-grpcroute-resources">Configure GRPCRoute resources</a></li><li class="level-5"><a href="#configuring-grpc-request-matching-conditions_configure-grpcroute-resources">Configuring gRPC request matching conditions</a></li><li class="level-5"><a href="#applying-processing-filters-grpc-requests_configure-grpcroute-resources">Applying processing filters to gRPC requests</a></li><li class="level-5"><a href="#configuring-routing-destinations-traffic-weights-grpc_configure-grpcroute-resources">Configuring routing destinations and traffic weights for gRPC</a></li><li class="level-5"><a href="#understanding-grpcroute-implementation-details_configure-grpcroute-resources">GRPCRoute implementation details</a></li><li class="level-4"><a href="#nw-configuring-ingress-cluster-traffic-aws-network-load-balancer_configure-aws-network-load-balancers-for-ingress">Configuring ingress cluster traffic on AWS using a Network Load Balancer</a></li><li class="level-5"><a href="#nw-ingress-setting-select-subnet-Loadbalancerservice_configure-aws-network-load-balancers-for-ingress">Choosing subnets while creating a LoadBalancerService Ingress Controller</a></li><li class="level-5"><a href="#nw-ingress-setting-update-subnet-Loadbalancerservice_configure-aws-network-load-balancers-for-ingress">Updating the subnets on an existing Ingress Controller</a></li><li class="level-5"><a href="#nw-ingress-aws-static-eip-nlb-configuration_configure-aws-network-load-balancers-for-ingress">Configuring AWS Elastic IP (EIP) addresses for a Network Load Balancer (NLB)</a></li><li class="level-4"><a href="#nw-ingress-aws-about-byo-security-groups_manage-security-groups-for-aws-network-load-balancers">BYO security groups for AWS Network Load Balancers</a></li><li class="level-5"><a href="#nw-ingress-aws-creating-service-byo-security-groups_manage-security-groups-for-aws-network-load-balancers">Creating a service with an NLB by using BYO security groups</a></li><li class="level-5"><a href="#nw-ingress-aws-switching-management-byo-security-groups_manage-security-groups-for-aws-network-load-balancers">Switching the management service for security groups</a></li><li class="level-5"><a href="#nw-ingress-aws-reverting-management-byo-security-groups_manage-security-groups-for-aws-network-load-balancers">Reverting the management service for security groups</a></li><li class="level-5"><a href="#nw-ingress-aws-updating-service-byo-security-groups_manage-security-groups-for-aws-network-load-balancers">Updating BYO security groups</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-creating-a-route_configure-ingress-and-routes">Create an HTTP-based route</a></li><li class="level-4"><a href="#nw-path-based-routes_configure-ingress-and-routes">Path-based routes</a></li><li class="level-4"><a href="#nw-ingress-creating-a-route-via-an-ingress_configure-ingress-and-routes">Create a route through an Ingress object</a></li><li class="level-4"><a href="#networking-ingress-label-propagation-about_configure-ingress-and-routes">About label propagation from Ingress to Route resources</a></li><li class="level-4"><a href="#networking-ingress-label-propagation-enabling_configure-ingress-and-routes">Enable label propagation from Ingress to Route resources</a></li><li class="level-4"><a href="#nw-ingress-creating-an-edge-route-with-a-custom-certificate_configure-ingress-and-routes">Create an edge route with a custom certificate</a></li><li class="level-4"><a href="#nw-ingress-creating-a-reencrypt-route-with-a-custom-certificate_configure-ingress-and-routes">Create a re-encrypt route with a custom certificate</a></li><li class="level-4"><a href="#nw-ingress-creating-a-passthrough-route_configure-ingress-and-routes">Create a passthrough route</a></li><li class="level-4"><a href="#nw-ingress-route-secret-load-external-cert_configure-ingress-and-routes">Create a route with externally managed certificates</a></li><li class="level-4"><a href="#nw-enabling-hsts_configure-ingress-and-routes">HTTP Strict Transport Security</a></li><li class="level-5"><a href="#nw-enabling-hsts-per-route_configure-ingress-and-routes">Enable HTTP Strict Transport Security per-route</a></li><li class="level-5"><a href="#nw-disabling-hsts_configure-ingress-and-routes">Disable HTTP Strict Transport Security per-route</a></li><li class="level-5"><a href="#nw-enforcing-hsts-per-domain_configure-ingress-and-routes">Enforce HTTP Strict Transport Security per-domain</a></li><li class="level-4"><a href="#nw-configuring-route-timeouts_configure-ingress-and-routes">Configure route timeouts</a></li><li class="level-4"><a href="#nw-route-set-or-delete-http-headers_configure-ingress-and-routes">Set or delete HTTP request and response headers in a route</a></li><li class="level-4"><a href="#nw-using-cookies-keep-route-statefulness_configure-ingress-and-routes">Use cookies to keep route statefulness</a></li><li class="level-5"><a href="#nw-annotating-a-route-with-a-cookie-name_configure-ingress-and-routes">Annotate a route with a cookie</a></li><li class="level-4"><a href="#nw-route-specific-annotations_configure-ingress-and-routes">Route-specific annotations</a></li><li class="level-4"><a href="#nw-throughput-troubleshoot_configure-ingress-and-routes">Throughput issue troubleshooting methods</a></li><li class="level-4"><a href="#nw-ingress-re-encrypt-route-custom-cert_configure-ingress-and-routes">Create a route using the destination CA certificate in the Ingress annotation</a></li><li class="level-4"><a href="#nw-ingress-edge-route-default-certificate_configure-ingress-and-routes">Create a route using the default certificate through an Ingress object</a></li><li class="level-4"><a href="#understand-ingress-architecture-con_understand-ingress-architecture">Understand ingress architecture</a></li><li class="level-5"><a href="#nw-ne-openshift-ingress_understand-ingress-architecture">Red Hat OpenShift Container Platform Ingress Operator</a></li><li class="level-5"><a href="#nw-installation-ingress-config-asset_understand-ingress-architecture">The Ingress configuration asset</a></li><li class="level-5"><a href="#nw-ingress-controller-endpoint-publishing-strategies_understand-ingress-architecture">Ingress Controller endpoint publishing strategy</a></li><li class="level-6"><a href="#additional-resources">Additional resources</a></li><li class="level-5"><a href="#nw-using-ingress-and-routes_understand-ingress-architecture">Use Ingress Controllers and routes</a></li><li class="level-4"><a href="#configure-ingress-controller-parameters-con_configure-ingress-controller-parameters">Configure Ingress Controller parameters</a></li><li class="level-5"><a href="#nw-ingress-controller-configuration-parameters_configure-ingress-controller-parameters">Ingress Controller configuration parameters</a></li><li class="level-5"><a href="#nw-ingress-view_configure-ingress-controller-parameters">View the default Ingress Controller</a></li><li class="level-5"><a href="#nw-ingress-controller-status_configure-ingress-controller-parameters">View Ingress Controller status</a></li><li class="level-5"><a href="#nw-ingress-operator-status_configure-ingress-controller-parameters">View Ingress Operator status</a></li><li class="level-5"><a href="#nw-ingress-operator-logs_configure-ingress-controller-parameters">View Ingress Controller logs</a></li><li class="level-5"><a href="#nw-create-custom-ingress-controller_configure-ingress-controller-parameters">Create a custom Ingress Controller</a></li><li class="level-6"><a href="#nw-ingress-setting-a-custom-default-certificate_configure-ingress-controller-parameters">Set a custom default certificate</a></li><li class="level-6"><a href="#nw-ingress-custom-default-certificate-remove_configure-ingress-controller-parameters">Remove a custom default certificate</a></li><li class="level-6"><a href="#nw-ingress-setting-internal-lb_configure-ingress-controller-parameters">Configure an Ingress Controller to use an internal load balancer</a></li><li class="level-6"><a href="#nw-ingress-default-internal_configure-ingress-controller-parameters">Configure the default Ingress Controller for your cluster to be internal</a></li><li class="level-6"><a href="#nw-ingress-configuring-application-domain_configure-ingress-controller-parameters">Specify an alternative cluster domain using the appsDomain option</a></li><li class="level-6"><a href="#nw-route-admission-policy_configure-ingress-controller-parameters">Configure the route admission policy</a></li><li class="level-6"><a href="#using-wildcard-routes_configure-ingress-controller-parameters">Use wildcard routes</a></li><li class="level-6"><a href="#nw-ingresscontroller-change-internal_configure-ingress-controller-parameters">Configure the Ingress Controller endpoint publishing scope to Internal</a></li><li class="level-6"><a href="#nw-ingresscontroller-change-external_configure-ingress-controller-parameters">Configure the Ingress Controller endpoint publishing scope to External</a></li><li class="level-6"><a href="#nw-ingress-controller-nodeportservice-projects_configure-ingress-controller-parameters">Add a single NodePort service to an Ingress Controller</a></li><li class="level-6"><a href="#creating-a-custom-ingress-controller_configure-ingress-controller-parameters">Creating an Ingress Controller for manual DNS management</a></li><li class="level-6"><a href="#modifying-an-existing-ingress-controller_configure-ingress-controller-parameters">Modifying an existing Ingress Controller for manual DNS management</a></li><li class="level-4"><a href="#configure-advanced-ingress-features-con_configure-advanced-ingress-features">Configure advanced ingress features</a></li><li class="level-5"><a href="#nw-autoscaling-ingress-controller_configure-advanced-ingress-features">Autoscale an Ingress Controller</a></li><li class="level-5"><a href="#nw-ingress-controller-configuration_configure-advanced-ingress-features">Scale an Ingress Controller</a></li><li class="level-5"><a href="#nw-ingress-setting-thread-count_configure-advanced-ingress-features">Set Ingress Controller thread count</a></li><li class="level-5"><a href="#nw-ingress-setting-max-connections_configure-advanced-ingress-features">Set the Ingress Controller maximum connections</a></li><li class="level-5"><a href="#nw-ingress-controller-config-tuningoptions-healthcheckinterval_configure-advanced-ingress-features">Set the Ingress Controller health check interval</a></li><li class="level-5"><a href="#nw-configuring-router-compression_configure-advanced-ingress-features">Use router compression</a></li><li class="level-5"><a href="#nw-http2-haproxy_configure-advanced-ingress-features">Enable or disable HTTP/2 on Ingress Controllers</a></li><li class="level-6"><a href="#nw-enable-http2_configure-advanced-ingress-features">Enable HTTP/2</a></li><li class="level-6"><a href="#nw-disable-http2_configure-advanced-ingress-features">Disable HTTP/2</a></li><li class="level-5"><a href="#nw-http-header-configuration_configure-advanced-ingress-features">HTTP header configuration</a></li><li class="level-5"><a href="#nw-ingress-set-or-delete-http-headers_configure-advanced-ingress-features">Set or delete HTTP request and response headers in an Ingress Controller</a></li><li class="level-5"><a href="#nw-ingress-converting-http-header-case_configure-advanced-ingress-features">Convert HTTP header case</a></li><li class="level-5"><a href="#nw-using-ingress-forwarded_configure-advanced-ingress-features">Use X-Forwarded headers</a></li><li class="level-6"><a href="#nw-using-ingress-forwarded-example-use-cases_configure-advanced-ingress-features">Example use cases for X-Forwarded headers</a></li><li class="level-5"><a href="#nw-ingress-controller-configuration-proxy-protocol_configure-advanced-ingress-features">Configure the PROXY protocol for an Ingress Controller</a></li><li class="level-5"><a href="#nw-configure-ingress-access-logging_configure-advanced-ingress-features">Configure Ingress access logging</a></li><li class="level-5"><a href="#nw-exposing-router-metrics_configure-advanced-ingress-features">Expose router metrics</a></li><li class="level-5"><a href="#nw-customize-ingress-error-pages_configure-advanced-ingress-features">Customize HAProxy error code response pages</a></li><li class="level-5"><a href="#nw-ingress-controller-configuration-gcp-global-access_configure-advanced-ingress-features">Configure global access for an Ingress Controller on Google Cloud</a></li><li class="level-5"><a href="#nw-ingress-sharding-concept_configure-advanced-ingress-features">Ingress sharding in Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#nw-ingress-sharding_configure-advanced-ingress-features">Ingress Controller sharding</a></li><li class="level-6"><a href="#nw-traditional-sharding_configure-advanced-ingress-features">Traditional sharding example</a></li><li class="level-6"><a href="#nw-overlapped-sharding_configure-advanced-ingress-features">Overlapped sharding example</a></li><li class="level-6"><a href="#nw-ingress-sharding-default_configure-advanced-ingress-features">Sharding the default Ingress Controller</a></li><li class="level-6"><a href="#nw-ingress-sharding-dns_configure-advanced-ingress-features">Ingress sharding and DNS</a></li><li class="level-6"><a href="#nw-ingress-sharding-route-labels_configure-advanced-ingress-features">Configure Ingress Controller sharding by using route labels</a></li><li class="level-6"><a href="#nw-ingress-sharding-namespace-labels_configure-advanced-ingress-features">Configure Ingress Controller sharding by using namespace labels</a></li><li class="level-4"><a href="#gateway-api-benefits-limitations_understand-gateway-api">Gateway API benefits and limitations</a></li><li class="level-5"><a href="#gateway-api-benefits_understand-gateway-api">Benefits</a></li><li class="level-5"><a href="#gateway-api-limitations_understand-gateway-api">Limitations</a></li><li class="level-5"><a href="#gateway-api-implementation-specifics_understand-gateway-api">Gateway API implementation specifics</a></li><li class="level-6"><a href="#gateway-api-x-k8s-io-crds_understand-gateway-api">Gateway API CRDs for gateway.networking.x-k8s.io</a></li><li class="level-5"><a href="#gateway-api-deployment-topologies_understand-gateway-api">Gateway API deployment topologies</a></li><li class="level-6"><a href="#dedicated-gateway_understand-gateway-api">Dedicated gateway</a></li><li class="level-6"><a href="#shared-gateway_understand-gateway-api">Shared gateway</a></li><li class="level-5"><a href="#comparing-openshift-routes-and-httproutes_understand-gateway-api">Red Hat OpenShift Container Platform routes and HTTPRoutes comparison</a></li><li class="level-4"><a href="#configure-gateway-resources-con_configure-gateway-resources">Configure Gateway resources</a></li><li class="level-5"><a href="#enable-gateway-api-ingress-operator_configure-gateway-resources">Enabling Gateway API for the Ingress Operator</a></li><li class="level-5"><a href="#configuring-listener-routing-security_configure-gateway-resources">Configuring listener routing and security settings</a></li><li class="level-6"><a href="#gateway-listener-configuration-reference_configure-gateway-resources">Gateway listener configuration reference</a></li><li class="level-5"><a href="#resolving-listener-routing-conflicts_configure-gateway-resources">Understanding listener routing conflicts</a></li><li class="level-5"><a href="#troubleshooting-listener-conditions_configure-gateway-resources">Troubleshooting listener connections using status conditions</a></li><li class="level-6"><a href="#gateway-listener-troubleshooting-reference_configure-gateway-resources">Gateway listener troubleshooting reference</a></li><li class="level-5"><a href="#understand-gateway-address-assignment_configure-gateway-resources">Understanding gateway address assignment and types</a></li><li class="level-5"><a href="#on-premise-gateway-routing-requirements_configure-gateway-resources">On-premise gateway routing requirements</a></li><li class="level-5"><a href="#configuring-automatic-address-assignment-gateway_configure-gateway-resources">Configuring automatic address assignment for a gateway</a></li><li class="level-5"><a href="#configuring-internal-lb-gateway_configure-gateway-resources">Configuring an internal load balancer for a gateway</a></li><li class="level-6"><a href="#internal-lb-annotations-reference_configure-gateway-resources">Cloud provider annotations for internal load balancers</a></li><li class="level-5"><a href="#configuring-dns-on-premise-gateways_configure-gateway-resources">Configuring DNS for on-premise gateways</a></li><li class="level-5"><a href="#gatewayclass-status-conditions_configure-gateway-resources">GatewayClass status conditions reference</a></li><li class="level-5"><a href="#gateway-listener-status-conditions_configure-gateway-resources">Gateway and listener status conditions reference</a></li><li class="level-5"><a href="#querying-gateway-status-cli_configure-gateway-resources">Querying Gateway infrastructure status using the CLI</a></li><li class="level-4"><a href="#configure-httproute-resources-con_configure-httproute-resources">Configure HTTPRoute resources</a></li><li class="level-5"><a href="#creating-httproute_configure-httproute-resources">Creating a basic HTTPRoute custom resource</a></li><li class="level-5"><a href="#configuring-http-request-matching-conditions_configure-httproute-resources">Configuring path-based routing</a></li><li class="level-6"><a href="#supported-httproute-match-types_configure-httproute-resources">Supported HTTPRoute match types</a></li><li class="level-5"><a href="#applying-processing-filters-http-requests_configure-httproute-resources">Applying processing filters to HTTP requests</a></li><li class="level-6"><a href="#supported-httproute-filters_configure-httproute-resources">Supported HTTPRoute filters</a></li><li class="level-5"><a href="#configuring-routing-destinations-weights_configure-httproute-resources">Configuring routing destinations and traffic weights</a></li><li class="level-6"><a href="#httproute-backendref-configuration_configure-httproute-resources">HTTPRoute backendRef configuration</a></li><li class="level-5"><a href="#setting-timeouts-http-requests_configure-httproute-resources">Setting timeouts for HTTP requests</a></li><li class="level-6"><a href="#httproute-timeout-configuration_configure-httproute-resources">HTTPRoute timeout configuration</a></li><li class="level-5"><a href="#httproute-tls-options_configure-httproute-resources">HTTPRoute Transport Layer Security (TLS) configuration</a></li><li class="level-5"><a href="#securing-client-connections-edge-tls_configure-httproute-resources">Securing client connections with edge TLS termination</a></li><li class="level-5"><a href="#about-backend-tls-validation_configure-httproute-resources">About backend TLS validation</a></li><li class="level-5"><a href="#configuring-backend-reencrypt-tls_configure-httproute-resources">Configuring re-encrypt termination with a BackendTLSPolicy</a></li><li class="level-4"><a href="#configure-grpcroute-resources-con_configure-grpcroute-resources">Configure GRPCRoute resources</a></li><li class="level-5"><a href="#configuring-grpc-request-matching-conditions_configure-grpcroute-resources">Configuring gRPC request matching conditions</a></li><li class="level-5"><a href="#applying-processing-filters-grpc-requests_configure-grpcroute-resources">Applying processing filters to gRPC requests</a></li><li class="level-5"><a href="#configuring-routing-destinations-traffic-weights-grpc_configure-grpcroute-resources">Configuring routing destinations and traffic weights for gRPC</a></li><li class="level-5"><a href="#understanding-grpcroute-implementation-details_configure-grpcroute-resources">GRPCRoute implementation details</a></li><li class="level-4"><a href="#nw-configuring-ingress-cluster-traffic-aws-network-load-balancer_configure-aws-network-load-balancers-for-ingress">Configuring ingress cluster traffic on AWS using a Network Load Balancer</a></li><li class="level-5"><a href="#nw-ingress-setting-select-subnet-Loadbalancerservice_configure-aws-network-load-balancers-for-ingress">Choosing subnets while creating a LoadBalancerService Ingress Controller</a></li><li class="level-5"><a href="#nw-ingress-setting-update-subnet-Loadbalancerservice_configure-aws-network-load-balancers-for-ingress">Updating the subnets on an existing Ingress Controller</a></li><li class="level-5"><a href="#nw-ingress-aws-static-eip-nlb-configuration_configure-aws-network-load-balancers-for-ingress">Configuring AWS Elastic IP (EIP) addresses for a Network Load Balancer (NLB)</a></li><li class="level-4"><a href="#nw-ingress-aws-about-byo-security-groups_manage-security-groups-for-aws-network-load-balancers">BYO security groups for AWS Network Load Balancers</a></li><li class="level-5"><a href="#nw-ingress-aws-creating-service-byo-security-groups_manage-security-groups-for-aws-network-load-balancers">Creating a service with an NLB by using BYO security groups</a></li><li class="level-5"><a href="#nw-ingress-aws-switching-management-byo-security-groups_manage-security-groups-for-aws-network-load-balancers">Switching the management service for security groups</a></li><li class="level-5"><a href="#nw-ingress-aws-reverting-management-byo-security-groups_manage-security-groups-for-aws-network-load-balancers">Reverting the management service for security groups</a></li><li class="level-5"><a href="#nw-ingress-aws-updating-service-byo-security-groups_manage-security-groups-for-aws-network-load-balancers">Updating BYO security groups</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="configure-ingress-and-routes-con_configure-ingress-and-routes">Configure ingress and routes</h3>
@@ -1808,7 +1832,7 @@ spec:
 <p>The following table shows example routes and their accessibility:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 587. Route availability</caption>
+<caption class="title">Table 630. Route availability</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3329,7 +3353,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 588. Route annotations</caption>
+<caption class="title">Table 631. Route annotations</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3505,7 +3529,7 @@ The part of the request path that matches the path specified in <code>spec.path<
 <p>The following table provides examples of the path rewriting behavior for various combinations of <code>spec.path</code>, request path, and rewrite target.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 589. rewrite-target examples</caption>
+<caption class="title">Table 632. rewrite-target examples</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3593,7 +3617,7 @@ The part of the request path that matches the path specified in <code>spec.path<
 <p>Certain special characters in <code>haproxy.router.openshift.io/rewrite-target</code> require special handling because they must be escaped properly. Refer to the following table to understand how these characters are handled.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 590. Special character handling</caption>
+<caption class="title">Table 633. Special character handling</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3987,7 +4011,7 @@ spec:
 <div class="content">
 <img src="data:image/png;base64," alt="Red&#160;Hat OpenShift Container Platform Ingress NodePort endpoint publishing strategy">
 </div>
-<div class="title">Figure 60. Diagram of NodePortService</div>
+<div class="title">Figure 73. Diagram of NodePortService</div>
 </div>
 <div class="paragraph">
 <p>The preceding graphic shows the following concepts pertaining to Red&#160;Hat OpenShift Container Platform Ingress NodePort endpoint publishing strategy:</p>
@@ -5456,7 +5480,7 @@ If you do not, all of your nodes will lose egress connectivity to the internet.<
 <div class="content">
 <img src="data:image/png;base64," alt="Red&#160;Hat OpenShift Container Platform Ingress LoadBalancerService endpoint publishing strategy">
 </div>
-<div class="title">Figure 61. Diagram of LoadBalancer</div>
+<div class="title">Figure 74. Diagram of LoadBalancer</div>
 </div>
 <div class="paragraph">
 <p>The preceding graphic shows the following concepts pertaining to Red&#160;Hat OpenShift Container Platform Ingress LoadBalancerService endpoint publishing strategy:</p>
@@ -7254,7 +7278,7 @@ backend be_secure:openshift-monitoring:alertmanager-main
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 591. Special case header configuration options</caption>
+<caption class="title">Table 634. Special case header configuration options</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -8739,7 +8763,7 @@ spec:
 <div class="content">
 <img src="data:image/png;base64," alt="A diagram showing multiple Ingress Controllers with different route selectors serving any route containing a label that matches a given route selector regardless of the namespace a route belongs to">
 </div>
-<div class="title">Figure 62. Ingress sharding by using route labels</div>
+<div class="title">Figure 75. Ingress sharding by using route labels</div>
 </div>
 <div class="paragraph">
 <p>Ingress Controller sharding is useful when balancing incoming traffic load among a set of Ingress Controllers and when isolating traffic to a specific Ingress Controller. For example, company A goes to one Ingress Controller and company B to another.</p>
@@ -8807,7 +8831,7 @@ spec:
 <div class="content">
 <img src="data:image/png;base64," alt="A diagram showing multiple Ingress Controllers with different namespace selectors serving routes that belong to the namespace containing a label that matches a given namespace selector">
 </div>
-<div class="title">Figure 63. Ingress sharding by using namespace labels</div>
+<div class="title">Figure 76. Ingress sharding by using namespace labels</div>
 </div>
 <div class="paragraph">
 <p>Ingress Controller sharding is useful when balancing incoming traffic load among
@@ -9184,7 +9208,7 @@ spec:
 <p>The following table outlines the features that are shared between both resources and how their specific implementations differ:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 592. Shared features and implementation differences</caption>
+<caption class="title">Table 635. Shared features and implementation differences</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -9553,7 +9577,7 @@ Do not set <code>namespaces.from: All</code>; that setting allows routes from ev
 <p>The following table describes common listener conditions and how to resolve them:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 593. Gateway listener status conditions</caption>
+<caption class="title">Table 636. Gateway listener status conditions</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9611,8 +9635,6 @@ Do not set <code>namespaces.from: All</code>; that setting allows routes from ev
 </tr>
 </table>
 </div>
-<div class="sect5">
-<h6 id="_address_types">Address types</h6>
 <div class="paragraph">
 <p>When the controller dynamically assigns an address to your gateway and populates the <code>status.addresses</code> field, it uses one of the following primary types to reflect the underlying load balancer:</p>
 </div>
@@ -9627,7 +9649,6 @@ Do not set <code>namespaces.from: All</code>; that setting allows routes from ev
 <p>A textual representation of a numeric IP address (IPv4 or IPv6) assigned by the load balancing infrastructure.</p>
 </dd>
 </dl>
-</div>
 </div>
 </div>
 <div class="sect4">
@@ -9847,7 +9868,7 @@ spec:
 <p>This configuration is supported on Amazon Web Services (AWS), Microsoft Azure, Google Cloud, Red Hat OpenStack Platform (RHOSP), and IBM Cloud. The following table details the required cloud-specific annotations and their corresponding values.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 594. Internal load balancer annotations by cloud provider</caption>
+<caption class="title">Table 637. Internal load balancer annotations by cloud provider</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -9947,7 +9968,7 @@ spec:
 <p>To verify that your <code>GatewayClass</code> custom resource (CR) is valid and ready to provision gateways, review its <code>status</code> conditions. A healthy <code>GatewayClass</code> CR reports a status of <code>True</code> for core conditions like <code>Accepted</code> and <code>SupportedVersion</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 595. <code>GatewayClass</code> CR status conditions</caption>
+<caption class="title">Table 638. <code>GatewayClass</code> CR status conditions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10061,7 +10082,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 596. Gateway-level status conditions</caption>
+<caption class="title">Table 639. Gateway-level status conditions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10169,7 +10190,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 597. Listener-level status conditions</caption>
+<caption class="title">Table 640. Listener-level status conditions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -12699,7 +12720,7 @@ This means that you can update ingress and egress rules dynamically and align ne
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 15:58:47 +0100
+Last updated 2026-10-12 13:29:35 +0100
 </div>
 </div>
 <style>

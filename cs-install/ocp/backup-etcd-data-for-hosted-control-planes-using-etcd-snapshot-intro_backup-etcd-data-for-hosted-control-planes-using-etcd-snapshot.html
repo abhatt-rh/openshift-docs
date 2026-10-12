@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup" class="book toc2 toc-left navmap-has-right-toc">
+<body id="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -568,10 +568,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="compare-platform-options-con_compare-platform-options.html">Compare platform options</a>
 </li>
-<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
-</li>
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
@@ -582,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -612,6 +608,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
+<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
+</li>
+<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
+</li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
 <li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
@@ -675,7 +677,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
@@ -847,7 +849,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-registry-allowlists-and-blocks-con_configure-registry-allowlists-and-blocks.html">Configure registry allowlists and blocks</a>
 </li>
-<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">About adding registries that allow image short names</a>
+<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">Configure short-name search registries</a>
 </li>
 <li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
 </li>
@@ -909,8 +911,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
 </li>
-<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
-</li>
 <li><a href="change-the-installed-file-system-configuration-for-new-nodes-con_change-the-installed-file-system-configuration-for-new-nodes.html">Change the installed file system configuration for new nodes</a>
 </li>
 <li><a href="change-the-installed-raid-configuration-for-new-nodes-con_change-the-installed-raid-configuration-for-new-nodes.html">Change the installed RAID configuration for new nodes</a>
@@ -947,7 +947,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1058,11 +1058,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
+</li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1242,19 +1268,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
-</li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
-</li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
-</li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
-</li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
-</li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1485,6 +1499,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
 </li>
+<li><a href="graceful-shutdown-cluster-intro_graceful-cluster-shutdown.html">Shutting down the cluster gracefully</a>
+</li>
+<li><a href="graceful-restart-cluster-intro_graceful-cluster-restart.html">Restarting the cluster gracefully</a>
+</li>
+<li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernating an Red&#160;Hat OpenShift Container Platform cluster</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
@@ -1496,6 +1516,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="recovering-unhealthy-etcd-cluster-for-hosted-control-planes-con_recovering-unhealthy-etcd-cluster-for-hosted-control-planes.html">Recovering an unhealthy etcd cluster for hosted control planes</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-a-hosted-cluster-intro_backup-and-restore-etcd-on-a-hosted-cluster.html">Backing up and restoring etcd on a hosted cluster</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a>
+</li>
+<li><a href="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot.html"><span class="toc-current">Backing up etcd data for hosted control planes by using the etcd snapshot method</span></a>
+</li>
+<li><a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a>
 </li>
 <li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
 </li>
@@ -1509,8 +1539,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
@@ -1523,15 +1551,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
+<li><a href="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data.html">Backing up and restoring etcd data</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
+<li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replacing an unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
@@ -1627,13 +1655,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html">Restoring an etcd snapshot on a hosted cluster</a>
+<li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html"><span class="toc-current">Backing up etcd data</span></a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-restore_etcd-best-practices-restore-etcd-data.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replacing a healthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1643,7 +1667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1669,12 +1693,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#creating-automated-etcd-backups_etcd-best-practices-create-single-automatic-etcd-backup">Creating automated etcd backups</a></li><li class="level-4"><a href="#creating-single-etcd-backup_etcd-best-practices-create-single-automatic-etcd-backup">Creating a single automated etcd backup</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#hcp-backup-etcd-snapshot-about_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot">Overview of the etcd snapshot method</a></li><li class="level-4"><a href="#hcp-backup-etcd-snapshot-config_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot">Configuring the etcd snapshot method</a></li><li class="level-4"><a href="#hcp-backup-etcd-snapshot-backup_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot">Backing up etcd data by using the etcd snapshot method</a></li><li class="level-4"><a href="#hcp-backup-etcd-snapshot-restore_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot">Restoring etcd data by using the etcd snapshot method</a></li><li class="level-4"><a href="#hcp-backup-etcd-snapshot-reference_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot">Condition codes for the etcd snapshot method</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup">Backing up etcd data</h3>
+<h3 id="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot">Backing up etcd data for hosted control planes by using the etcd snapshot method</h3>
 <div class="paragraph _abstract">
-<p>You can back up etcd data by creating an etcd snapshot and saving the static pod resources on a control plane host. This backup preserves the cluster state and provides the resources required to restore etcd at a later time.</p>
+<p>To back up etcd data for hosted control planes, you can use the default volume snapshot approach, or you can take the etcd snapshot approach, which results in smaller backup artifacts.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -1684,166 +1708,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Only save a backup from a single control plane host. Do not take a backup from each control plane host in the cluster.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>For a Two-Node with Fencing (TNF) setup, follow the steps to back up etcd data on only one node in the cluster. The cluster restore process is driven by data from a single node, so you can perform the etcd backup steps on only one node.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
-</li>
-<li>
-<p>You have verified whether the cluster-wide proxy is enabled.</p>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Tip">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You can check whether the proxy is enabled by reviewing the output of <code>oc get proxy cluster -o yaml</code>. The proxy is enabled if the <code>httpProxy</code>, <code>httpsProxy</code>, and <code>noProxy</code> fields have values set.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Start a debug session as root for a control plane node:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug --as-root node/&lt;node_name&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Change your root directory to <code>/host</code> in the debug shell:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.4# chroot /host</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>If the cluster-wide proxy is enabled, export the <code>NO_PROXY</code>, <code>HTTP_PROXY</code>, and <code>HTTPS_PROXY</code> environment variables by running the following commands:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export HTTP_PROXY=http://&lt;your_proxy.example.com&gt;:8080</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export HTTPS_PROXY=https://&lt;your_proxy.example.com&gt;:8080</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export NO_PROXY=&lt;example.com&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Run the <code>cluster-backup.sh</code> script with the path to the directory where you want to save the backup:</p>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Tip">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>cluster-backup.sh</code> script is maintained as a component of the etcd Cluster Operator and is a wrapper around the <code>etcdctl snapshot save</code> command.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.4# /usr/local/bin/cluster-backup.sh /home/core/assets/backup</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example script output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">found latest kube-apiserver: /etc/kubernetes/static-pod-resources/kube-apiserver-pod-6
-found latest kube-controller-manager: /etc/kubernetes/static-pod-resources/kube-controller-manager-pod-7
-found latest kube-scheduler: /etc/kubernetes/static-pod-resources/kube-scheduler-pod-6
-found latest etcd: /etc/kubernetes/static-pod-resources/etcd-pod-3
-ede95fe6b88b87ba86a03c15e669fb4aa5bf0991c180d3c6895ce72eaade54a1
-etcdctl version: 3.4.14
-API version: 3.4
-{"level":"info","ts":1624647639.0188997,"caller":"snapshot/v3_snapshot.go:119","msg":"created temporary db file","path":"/home/core/assets/backup/snapshot_2021-06-25_190035.db.part"}
-{"level":"info","ts":"2021-06-25T19:00:39.030Z","caller":"clientv3/maintenance.go:200","msg":"opened snapshot stream; downloading"}
-{"level":"info","ts":1624647639.0301006,"caller":"snapshot/v3_snapshot.go:127","msg":"fetching snapshot","endpoint":"https://10.0.0.5:2379"}
-{"level":"info","ts":"2021-06-25T19:00:40.215Z","caller":"clientv3/maintenance.go:208","msg":"completed snapshot read; closing"}
-{"level":"info","ts":1624647640.6032252,"caller":"snapshot/v3_snapshot.go:142","msg":"fetched snapshot","endpoint":"https://10.0.0.5:2379","size":"114 MB","took":1.584090459}
-{"level":"info","ts":1624647640.6047094,"caller":"snapshot/v3_snapshot.go:152","msg":"saved","path":"/home/core/assets/backup/snapshot_2021-06-25_190035.db"}
-Snapshot saved at /home/core/assets/backup/snapshot_2021-06-25_190035.db
-{"hash":3866667823,"revision":31407,"totalKey":12828,"totalSize":114446336}
-snapshot db and kube resources are successfully saved to /home/core/assets/backup</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In this example, two files are created in the <code>/home/core/assets/backup/</code> directory on the control plane host:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>snapshot_&lt;datetimestamp&gt;.db</code>: This file is the etcd snapshot. The <code>cluster-backup.sh</code> script confirms the validity of the snapshot.</p>
-</li>
-<li>
-<p><code>static_kuberesources_&lt;datetimestamp&gt;.tar.gz</code>: This file contains the resources for the static pods. If etcd encryption is enabled, it also contains the encryption keys for the etcd snapshot.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If etcd encryption is enabled, store this second file separately from the etcd snapshot for security reasons. However, this file is required to restore from the etcd snapshot.</p>
-</div>
-<div class="paragraph">
-<p>The etcd encryption only encrypts values, not keys. This means that resource types, namespaces, and object names are not encrypted.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-<div class="sect3">
-<h4 id="creating-automated-etcd-backups_etcd-best-practices-create-single-automatic-etcd-backup">Creating automated etcd backups</h4>
-<div class="paragraph _abstract">
-<p>You can enable automated etcd backups for your cluster by applying a <code>FeatureGate</code> and backup custom resources (CRs).</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Automating etcd backups is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+<p>The etcd snapshot method is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
 </div>
 <div class="paragraph">
 <p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
@@ -1852,28 +1717,116 @@ snapshot db and kube resources are successfully saved to /home/core/assets/backu
 </tr>
 </table>
 </div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Warning">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Enabling the <code>TechPreviewNoUpgrade</code> feature set on your cluster prevents minor version updates. The <code>TechPreviewNoUpgrade</code> feature set cannot be disabled. Do not enable this feature set on production clusters.</p>
+<div class="sect3">
+<h4 id="hcp-backup-etcd-snapshot-about_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot">Overview of the etcd snapshot method</h4>
+<div class="paragraph _abstract">
+<p>You can use the etcd snapshot method as an alternative to the default volume snapshot approach to back up etcd data for hosted control planes. The etcd snapshot method results in smaller backup artifacts.</p>
 </div>
-</td>
+<div class="paragraph">
+<p>Instead of capturing persistent volume claim (PVC) content by using container storage interface (CSI) volume snapshots or a filesystem backup, you can take a snapshot of the etcd database and upload it to object storage.</p>
+</div>
+<div class="paragraph">
+<p>The etcd snapshot approach is driven by the <code>HCPEtcdBackup</code> custom resource and is orchestrated through the OpenShift API for Data Protection (OADP) <code>hypershift</code> plugin during Velero backup operations.</p>
+</div>
+<div class="paragraph">
+<p>For a more detailed comparison of the etcd snapshot method and the default volume snapshot method, see the following table.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 809. Comparing the etcd snapshot and volume snapshot methods</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Aspect</th>
+<th class="tableblock halign-left valign-top">Volume snapshot (default)</th>
+<th class="tableblock halign-left valign-top">etcd snapshot</th>
 </tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backup mechanism</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CSI volume snapshots or a Kopia filesystem backup of etcd PVCs. One per replica; typically 3.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>etcdctl snapshot save</code> mechanism produces a single snapshot file and uploads it to object storage.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Portability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tied to the storage provider and the CSI driver.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Storage-agnostic.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backup size</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full PVC content. Highly available deployments have 3 PVCs.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A single etcd database snapshot.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Restore mechanism</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PVC restore from snapshot.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>etcdutl snapshot restore</code> by using the init container.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A CSI driver with snapshot support or a Kopia node agent.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>HCPEtcdBackup</code> feature gate must be enabled.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Encryption</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Depends on the storage provider.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional Key Management Service (KMS) encryption for hosted control planes on AWS.</p></td>
+</tr>
+</tbody>
 </table>
+</div>
+<div class="sect3">
+<h4 id="hcp-backup-etcd-snapshot-config_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot">Configuring the etcd snapshot method</h4>
+<div class="paragraph _abstract">
+<p>Before you can use the etcd snapshot method to back up your etcd data for hosted control planes, you must meet a few prerequisites and configure a plugin.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+<p>The <code>HCPEtcdBackup</code> feature gate is enabled in the HyperShift Operator.</p>
 </li>
 <li>
-<p>You have access to the OpenShift CLI (<code>oc</code>).</p>
+<p>The OpenShift API for Data Protection (OADP) Operator version 1.6 or later with the <code>hypershift</code> plugin is deployed. For more information, see "Configuring OADP" and "Automating the backup and restore process by using a DPA".</p>
+</li>
+<li>
+<p>Object storage is configured. Use a Velero backup storage location that points to AWS S3.</p>
+</li>
+<li>
+<p>Service publishing requirements:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If you are restoring a hosted cluster to a different management cluster, use a fixed hostname that is configured through DNS so that you can update the DNS record to point to the endpoint of the new management cluster and make the migration transparent for existing nodes.</p>
+</li>
+<li>
+<p>For production environments, all services must have fixed hostnames.</p>
+</li>
+<li>
+<p>On AWS, the API server can also use a <code>Route</code> service publishing strategy with a fixed hostname.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Platform-specific requirements:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For hosted control planes on AWS, ensure that the OIDC provider configuration is accessible for any fixes that are needed after the restore process. If you use AWS S3 for backup storage, ensure that IAM roles and policies are configured according to "About installing OADP".</p>
+</li>
+<li>
+<p>For hosted control planes on bare metal with the Agent provider, ensure that the <code>InfraEnv</code> resource is in a separate namespace from the hosted control plane namespace. Be careful to not delete the <code>InfraEnv</code> resource during the backup or restore processes.</p>
+</li>
+<li>
+<p>For hosted control planes on Microsoft Azure, see the requirements and steps in <a href="../../hosted_control_planes/hcp-deploy/hcp-deploy-azure.html#hcp-azure-etcd-snapshot_hcp-deploy-azure">Backup and restore for hosted control planes on Azure</a>.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -1881,41 +1834,43 @@ snapshot db and kube resources are successfully saved to /home/core/assets/backu
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Create a <code>FeatureGate</code> custom resource (CR) file named <code>enable-tech-preview-no-upgrade.yaml</code> with the following contents:</p>
+<p>Configure the OADP <code>hypershift</code> plugin by creating a config map in the OADP namespace and specifying the etcd backup method, as shown in the following example:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1
-kind: FeatureGate
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: ConfigMap
 metadata:
-  name: cluster
-spec:
-  featureSet: TechPreviewNoUpgrade</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Apply the CR by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f enable-tech-preview-no-upgrade.yaml</code></pre>
+  name: hypershift-oadp-plugin-config
+  namespace: openshift-adp
+data:
+  etcdBackupMethod: "etcdSnapshot"</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Applying the <code>FeatureGate</code> enables the automated backup APIs. It takes time for the related APIs to become available.</p>
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">metadata.name</dt>
+<dd>
+<p>Specifies the name of the config map. Use <code>hypershift-oadp-plugin-config</code> as the name of the config map.</p>
+</dd>
+<dt class="hdlist1">metadata.namespace</dt>
+<dd>
+<p>Specifies the OADP namespace.</p>
+</dd>
+<dt class="hdlist1">data.etcdBackupMethod</dt>
+<dd>
+<p>Specifies the etcd backup method. The default is <code>volumeSnapshot</code>. Use <code>etcdSnapshot</code> to enable the etcd snapshot method. If the <code>etcdBackupMethod</code> parameter is set to <code>etcdSnapshot</code> but the <code>HCPEtcdBackup</code> custom resource is not installed, the plugin fails.</p>
+</dd>
+</dl>
 </div>
 </li>
 <li>
-<p>Verify that the custom resource definition (CRD) was created by running the following command:</p>
+<p>Apply the configuration by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get crd | grep backup</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">backups.config.openshift.io 2023-10-25T13:32:43Z
-etcdbackups.operator.openshift.io 2023-10-25T13:32:04Z</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f hypershift-oadp-plugin-config.yaml</code></pre>
 </div>
 </div>
 </li>
@@ -1923,300 +1878,207 @@ etcdbackups.operator.openshift.io 2023-10-25T13:32:04Z</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="creating-single-etcd-backup_etcd-best-practices-create-single-automatic-etcd-backup">Creating a single automated etcd backup</h4>
+<h4 id="hcp-backup-etcd-snapshot-backup_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot">Backing up etcd data by using the etcd snapshot method</h4>
 <div class="paragraph _abstract">
-<p>You can create a single automated etcd backup by applying an <code>EtcdBackup</code> custom resource (CR). Backup data is stored on either dynamically-provisioned or local storage.</p>
+<p>You can start the etcd snapshot backup process from the hosted control planes command-line interface (CLI).</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisite</div>
+<ul>
+<li>
+<p>You completed the steps in "Configuring the etcd snapshot method".</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Start the backup process by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ hcp create oadp-backup \
+  --hc-name &lt;my_hosted_cluster&gt; \
+  --hc-namespace &lt;my_hosted_cluster_namespace&gt; \
+  --name &lt;my_backup&gt; \
+  --storage-location default \
+  --use-etcd-snapshot</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The command generates an <code>oadp-backup</code> custom resource (CR) that includes the namespaces of the hosted cluster and the hosted control plane, a platform-aware resource list that excludes etcd-related resources, and snapshot settings.</p>
+</div>
+<div class="paragraph">
+<p>Next, the OADP <code>hypershift</code> plugin and the <code>HCPEtcdBackup</code> CR work to complete the backup process.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="hcp-backup-etcd-snapshot-restore_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot">Restoring etcd data by using the etcd snapshot method</h4>
+<div class="paragraph _abstract">
+<p>You can specify a backup to recover from or set a schedule to run the recovery process on.</p>
+</div>
+<div class="paragraph">
+<p>The process to recover a hosted control plane from an etcd snapshot backup involves the OADP <code>hypershift</code> plugin, the Control Plane Operator, and the etcd init container.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+<p>You completed the steps in "Configuring the etcd snapshot method".</p>
 </li>
 <li>
-<p>You have access to the OpenShift CLI (<code>oc</code>).</p>
+<p>No running pods or persistent volume claims (PVCs) are in the hosted control plane namespace. If you are restoring on the same management cluster, delete the hosted cluster and node pools first.</p>
+</li>
+<li>
+<p>The status of the Velero backup is <code>status.phase: Completed</code>.</p>
+</li>
+<li>
+<p>The OADP components are running and the <code>DataProtectionApplication</code> (DPA) custom resource (CR) is reconciled.</p>
+</li>
+<li>
+<p>For hosted control planes on AWS, your backup storage location (BSL) credentials are valid and have permission to read the snapshot from S3.</p>
+</li>
+<li>
+<p>For bare metal on the Agent platform, your <code>InfraEnv</code> objects are preserved. Do not delete them.</p>
+</li>
+<li>
+<p>For hosted control planes on Azure, see <a href="../../hosted_control_planes/hcp-deploy/hcp-deploy-azure.html#hcp-azure-etcd-snapshot-restore_hcp-deploy-azure">Restoring a hosted cluster on Azure from an etcd snapshot</a>.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Start the restore process by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ hcp create oadp-restore \
+  --hc-name &lt;my_hosted_cluster&gt; \
+  --hc-namespace &lt;my_hosted_cluster_namespace&gt; \
+  --name &lt;my_restore&gt; \
+  --from-backup &lt;my_backup&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;my_backup&gt;</code></dt>
+<dd>
+<p>Specifies the name of the backup to use. If you run the restore process on a schedule, replace the <code>--from-backup</code> flag with the <code>--from-schedule</code> flag and specify the name of the schedule to use.</p>
+</dd>
+</dl>
+</div>
 </li>
 </ul>
 </div>
 <div class="olist arabic">
-<div class="title">Procedure</div>
+<div class="title">Verification</div>
 <ol class="arabic">
 <li>
-<p>If dynamically-provisioned storage is available, complete the following steps to create a single automated etcd backup:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Create a persistent volume claim (PVC) named <code>etcd-backup-pvc.yaml</code> with contents such as the following example:</p>
+<p>Check that the etcd pods are running and that the cluster is functioning as expected by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: etcd-backup-pvc
-  namespace: openshift-etcd
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: &lt;storage_amount&gt;
-  volumeMode: Filesystem</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;storage_amount&gt;</code></dt>
-<dd>
-<p>Specifies the amount of storage available to the PVC. Adjust this value for your requirements, such as <code>200Gi</code>.</p>
-</dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Apply the PVC by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f etcd-backup-pvc.yaml</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n &lt;my_hosted_cluster_namespace&gt;-&lt;my_hosted_cluster&gt; -l app=etcd</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Verify that the PVC was created by running the following command:</p>
+<p>Check the restore conditions by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pvc</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get hostedcluster &lt;my_hosted_cluster&gt; -n &lt;my_hosted_cluster_namespace&gt; -o jsonpath='{.status.conditions}' | jq '.[] | select(.type | test("Restore|Etcd"))'</code></pre>
 </div>
 </div>
+</li>
+<li>
+<p>On AWS deployments, when you restore to a different management cluster, the OIDC provider might need to be updated. Enter the following command:</p>
 <div class="listingblock">
-<div class="title">Example output</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME              STATUS    VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS   AGE
-etcd-backup-pvc   Bound                                                       51s</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ hcp fix dr-oidc-iam --hc-name &lt;my_hosted_cluster&gt; --hc-namespace &lt;my_hosted_cluster_namespace&gt;</code></pre>
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
+</li>
+<li>
+<p>Confirm that the API server of the hosted cluster is accessible by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig &lt;hosted_cluster_kubeconfig&gt; get nodes</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Confirm that workloads are running by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig &lt;hosted_cluster_kubeconfig&gt; get clusteroperators</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="hcp-backup-etcd-snapshot-reference_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot">Condition codes for the etcd snapshot method</h4>
+<div class="paragraph _abstract">
+<p>During the backup and restore process with the etcd snapshot method, you might see messages about the condition of hosted control planes resources.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 810. Explanations of conditions during etcd snapshot backup and restore processes</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
 <tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Dynamic PVCs stay in the <code>Pending</code> state until they are mounted.</p>
-</div>
-</td>
+<th class="tableblock halign-left valign-top">Resource</th>
+<th class="tableblock halign-left valign-top">Condition, field, or annotation</th>
+<th class="tableblock halign-left valign-top">Meaning</th>
 </tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>HCPEtcdBackup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BackupCompleted</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tracks the backup lifecycle: <code>InProgress</code>, <code>Succeeded</code>, <code>Failed</code>, <code>Rejected</code>, or <code>EtcdUnhealthy</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>HostedControlPlane</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EtcdSnapshotRestored</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This value is set to <code>True</code> after etcd is restored from the snapshot.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>HostedCluster</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Status.LastSuccessfulEtcdBackupURL</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Persists the last snapshot URL. After a successful backup, the HyperShift Operator sets this condition.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>HostedCluster</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>etcd-snapshot-url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The OADP plugin inserts this annotation during the backup process. During the restore process, the plugin reads this annotation to set the <code>RestoreSnapshotURL</code> value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>HostedCluster</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>restored-from-backup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This annotation is set during the restore process. It is removed after the <code>HostedClusterRestoredFromBackup</code> condition is <code>True</code>.</p></td>
+</tr>
+</tbody>
 </table>
-</div>
-</li>
-<li>
-<p>Create a CR file named <code>etcd-single-backup.yaml</code> with contents such as the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1alpha1
-kind: EtcdBackup
-metadata:
-  name: etcd-single-backup
-  namespace: openshift-etcd
-spec:
-  pvcName: &lt;pvc_name&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;pvc_name&gt;</code></dt>
-<dd>
-<p>Specifies the name of the PVC to save the backup to. Adjust this value according to your environment, such as <code>etcd-backup-pvc</code>.</p>
-</dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Apply the CR to start a single backup by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f etcd-single-backup.yaml</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>If dynamically-provisioned storage is not available, complete the following steps to create a single automated etcd backup:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Create a <code>StorageClass</code> CR file named <code>etcd-backup-local-storage.yaml</code> with the following contents:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: etcd-backup-local-storage
-provisioner: kubernetes.io/no-provisioner
-volumeBindingMode: Immediate</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Apply the <code>StorageClass</code> CR by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f etcd-backup-local-storage.yaml</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create a PV named <code>etcd-backup-pv-fs.yaml</code> with contents such as the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: etcd-backup-pv-fs
-spec:
-  capacity:
-    storage: &lt;storage_amount&gt;
-  volumeMode: Filesystem
-  accessModes:
-  - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
-  storageClassName: etcd-backup-local-storage
-  local:
-    path: /mnt
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-      - matchExpressions:
-      - key: kubernetes.io/hostname
-         operator: In
-         values:
-         - &lt;node_name&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;storage_amount&gt;</code></dt>
-<dd>
-<p>Specifies the amount of storage available to the PV. Adjust this value for your requirements, such as <code>100Gi</code>.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;node_name&gt;</code></dt>
-<dd>
-<p>Specifies the control plane node to attach this PV to. Replace with the actual node name.</p>
-</dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Verify that the PV was created by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pv</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                    CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS                REASON   AGE
-etcd-backup-pv-fs       100Gi      RWO            Retain           Available           etcd-backup-local-storage            10s</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create a PVC named <code>etcd-backup-pvc.yaml</code> with contents such as the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: etcd-backup-pvc
-  namespace: openshift-etcd
-spec:
-  accessModes:
-  - ReadWriteOnce
-  volumeMode: Filesystem
-  resources:
-    requests:
-      storage: &lt;storage_amount&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;storage_amount&gt;</code></dt>
-<dd>
-<p>Specifies the amount of storage available to the PVC. Adjust this value for your requirements, such as <code>10Gi</code>.</p>
-</dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Apply the PVC by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f etcd-backup-pvc.yaml</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create a CR file named <code>etcd-single-backup.yaml</code> with contents such as the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1alpha1
-kind: EtcdBackup
-metadata:
-  name: etcd-single-backup
-  namespace: openshift-etcd
-spec:
-  pvcName: &lt;pvc_name&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;pvc_name&gt;</code></dt>
-<dd>
-<p>Specifies the name of the PVC to save the backup to. Adjust this value according to your environment, such as <code>etcd-backup-pvc</code>.</p>
-</dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Apply the CR to start a single backup by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f etcd-single-backup.yaml</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html">Restoring an etcd snapshot on a hosted cluster</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a> →</p>
+<p>← Previous: <a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 15:58:47 +0100
+Last updated 2026-10-12 13:29:35 +0100
 </div>
 </div>
 <style>

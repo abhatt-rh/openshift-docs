@@ -568,10 +568,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="compare-platform-options-con_compare-platform-options.html">Compare platform options</a>
 </li>
-<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
-</li>
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
@@ -582,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -612,6 +608,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
+<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
+</li>
+<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
+</li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
 <li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
@@ -675,7 +677,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
@@ -847,7 +849,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-registry-allowlists-and-blocks-con_configure-registry-allowlists-and-blocks.html">Configure registry allowlists and blocks</a>
 </li>
-<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">About adding registries that allow image short names</a>
+<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">Configure short-name search registries</a>
 </li>
 <li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
 </li>
@@ -909,8 +911,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
 </li>
-<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
-</li>
 <li><a href="change-the-installed-file-system-configuration-for-new-nodes-con_change-the-installed-file-system-configuration-for-new-nodes.html">Change the installed file system configuration for new nodes</a>
 </li>
 <li><a href="change-the-installed-raid-configuration-for-new-nodes-con_change-the-installed-raid-configuration-for-new-nodes.html">Change the installed RAID configuration for new nodes</a>
@@ -947,7 +947,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1057,11 +1057,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html"><span class="toc-current">Configure and maintain the pod network</span></a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
+</li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1241,19 +1267,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
-</li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
-</li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
-</li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
-</li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
-</li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1485,6 +1499,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
 </li>
+<li><a href="graceful-shutdown-cluster-intro_graceful-cluster-shutdown.html">Shutting down the cluster gracefully</a>
+</li>
+<li><a href="graceful-restart-cluster-intro_graceful-cluster-restart.html">Restarting the cluster gracefully</a>
+</li>
+<li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernating an Red&#160;Hat OpenShift Container Platform cluster</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
@@ -1496,6 +1516,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="recovering-unhealthy-etcd-cluster-for-hosted-control-planes-con_recovering-unhealthy-etcd-cluster-for-hosted-control-planes.html">Recovering an unhealthy etcd cluster for hosted control planes</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-a-hosted-cluster-intro_backup-and-restore-etcd-on-a-hosted-cluster.html">Backing up and restoring etcd on a hosted cluster</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a>
+</li>
+<li><a href="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot.html">Backing up etcd data for hosted control planes by using the etcd snapshot method</a>
+</li>
+<li><a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a>
 </li>
 <li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
 </li>
@@ -1509,8 +1539,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
@@ -1523,15 +1551,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
+<li><a href="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data.html">Backing up and restoring etcd data</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
+<li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replacing an unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
@@ -1627,13 +1655,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html">Restoring an etcd snapshot on a hosted cluster</a>
+<li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-restore_etcd-best-practices-restore-etcd-data.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replacing a healthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1643,7 +1667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1669,7 +1693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-cluster-network-operator_configure-and-maintain-the-pod-network-cni">Cluster Network Operator</a></li><li class="level-4"><a href="#nw-operator-cr_cluster-network-operator">Cluster Network Operator configuration</a></li><li class="level-5"><a href="#nw-operator-cr-cno-object_cluster-network-operator">Cluster Network Operator configuration object</a></li><li class="level-5"><a href="#nw-operator-cr-defaultnetwork_cluster-network-operator">defaultNetwork object configuration</a></li><li class="level-5"><a href="#nw-operator-configuration-parameters-for-ovn-sdn_cluster-network-operator">Configuration for the OVN-Kubernetes network plugin</a></li><li class="level-5"><a href="#nw-operator-example-cr_cluster-network-operator">Cluster Network Operator example configuration</a></li><li class="level-4"><a href="#nw-cno-view_configure-and-maintain-the-pod-network-cni">View the cluster network configuration</a></li><li class="level-4"><a href="#nw-cno-status_configure-and-maintain-the-pod-network-cni">View Cluster Network Operator status</a></li><li class="level-4"><a href="#machine-cidr-description_configure-and-maintain-the-pod-network-cni">Machine CIDR</a></li><li class="level-4"><a href="#service-cidr-description_configure-and-maintain-the-pod-network-cni">Service classless inter-domain routing (CIDR)</a></li><li class="level-4"><a href="#pod-cidr-description_configure-and-maintain-the-pod-network-cni">Pod classless inter-domain routing (CIDR)</a></li><li class="level-4"><a href="#host-prefix-description_configure-and-maintain-the-pod-network-cni">Host prefix</a></li><li class="level-5"><a href="#additional-resources_host-prefix-description_configure-and-maintain-the-pod-network-cni">Additional resources</a></li><li class="level-4"><a href="#configuring-ovn-kubernetes-internal-ip-address-subnets-con_configuring-ovn-kubernetes-internal-ip-address-subnets">Configure OVN-Kubernetes internal IP address subnets</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-change-join-subnet_configuring-ovn-kubernetes-internal-ip-address-subnets">Configure the OVN-Kubernetes join subnet</a></li><li class="level-5"><a href="#nw-ovn-k-day-2-masq-subnet_configuring-ovn-kubernetes-internal-ip-address-subnets">Configure the OVN-Kubernetes masquerade subnet as a postinstallation operation</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-change-transit-subnet_configuring-ovn-kubernetes-internal-ip-address-subnets">Configure the OVN-Kubernetes transit subnet</a></li><li class="level-4"><a href="#configuring-the-cluster-network-range-con_configuring-the-cluster-network-range">Configure the cluster network range</a></li><li class="level-5"><a href="#nw-cluster-network-range-edit_configuring-the-cluster-network-range">Expand the cluster network IP address range</a></li><li class="level-4"><a href="#node-network-configuration-policy-file_configure-node-network-interfaces">About the NodeNetworkConfigurationPolicy manifest file</a></li><li class="level-5"><a href="#virt-manage-nncp-cli_configure-node-network-interfaces">Manage the NodeNetworkConfigurationPolicy manifest file</a></li><li class="level-6"><a href="#virt-creating-interface-on-nodes_configure-node-network-interfaces">Create an interface on nodes</a></li><li class="level-6"><a href="#virt-confirming-policy-updates-on-nodes_configure-node-network-interfaces">Confirm node network policy updates on nodes</a></li><li class="level-6"><a href="#virt-removing-interface-from-nodes_configure-node-network-interfaces">Remove an interface from nodes</a></li><li class="level-5"><a href="#virt-node-network-config-console_configure-node-network-interfaces">Manage policy from the web console</a></li><li class="level-6"><a href="#virt-create-node-network-config-console_configure-node-network-interfaces">Create a policy</a></li><li class="level-5"><a href="#virt-updating-policy-k8s-nmstate_configure-node-network-interfaces">Update the NodeNetworkConfigurationPolicy manifest file</a></li><li class="level-6"><a href="#virt-update-node-network-config-form_configure-node-network-interfaces">Update the policy by using form</a></li><li class="level-6"><a href="#virt-update-node-network-config-yaml_configure-node-network-interfaces">Update the policy by using YAML</a></li><li class="level-6"><a href="#virt-delete-node-network-config_configure-node-network-interfaces">Delete the policy</a></li><li class="level-5"><a href="#virt-troubleshooting-incorrect-policy-config_configure-node-network-interfaces">Troubleshoot an incorrect node network configuration policy configuration</a></li><li class="level-5"><a href="#verify-network-configurations-by-observing-interface-states-con_verify-network-configurations-by-observing-interface-states">Verify network configurations by observing interface states</a></li><li class="level-6"><a href="#virt-viewing-network-state-of-node_verify-network-configurations-by-observing-interface-states">View the network state of a node by using the CLI</a></li><li class="level-6"><a href="#virt-viewing-graphical-representation-of-network-state-of-node-console_verify-network-configurations-by-observing-interface-states">View a graphical representation of the network state of a node (NNS) topology from the web console</a></li><li class="level-6"><a href="#virt-viewing-list-of-nodenetworkstate-resources-console_verify-network-configurations-by-observing-interface-states">View the list of NodeNetworkState resources</a></li><li class="level-5"><a href="#segment-traffic-by-configuring-specific-network-interfaces-con_segment-traffic-by-configuring-specific-network-interfaces">Segment traffic by configuring specific network interfaces</a></li><li class="level-6"><a href="#virt-nmstate-example-policy-configurations_segment-traffic-by-configuring-specific-network-interfaces">Example policy configurations for different interfaces</a></li><li class="level-6"><a href="#virt-creating-infiniband-interface-on-nodes_segment-traffic-by-configuring-specific-network-interfaces">Create an IP over InfiniBand interface on nodes</a></li><li class="level-6"><a href="#virt-example-dynamic-matching-templating_segment-traffic-by-configuring-specific-network-interfaces">Example policy configurations that use dynamic matching and templating</a></li><li class="level-5"><a href="#k8s-nmstate-alternative-interface-names_simplify-automation-by-assigning-alternative-interface-names">Configure alternative network interface names</a></li><li class="level-6"><a href="#k8s-nmstate-creating-alternative-interface-names-by-name_simplify-automation-by-assigning-alternative-interface-names">Create alternative interface names by interface name</a></li><li class="level-6"><a href="#k8s-nmstate-creating-alternative-interface-names-by-identifier_simplify-automation-by-assigning-alternative-interface-names">Create alternative interface names by MAC address or PCI address</a></li><li class="level-6"><a href="#k8s-nmstate-deleting-alternative-interface-names_simplify-automation-by-assigning-alternative-interface-names">Delete alternative interface names</a></li><li class="level-5"><a href="#ensure-external-communication-by-customizing-ip-dns-and-routing-con_ensure-external-communication-by-customizing-ip-dns-and-routing">Ensure external communication by customizing IP, DNS, and routing</a></li><li class="level-6"><a href="#virt-example-nmstate-IP-management_ensure-external-communication-by-customizing-ip-dns-and-routing">Examples: IP management</a></li><li class="level-6"><a href="#virt-routes-route-rules_ensure-external-communication-by-customizing-ip-dns-and-routing">Routes and route rules</a></li><li class="level-6"><a href="#nw-nmstate-enable-per-interface-ip-forwarding_ensure-external-communication-by-customizing-ip-dns-and-routing">Enable IP forwarding on specific interfaces</a></li><li class="level-6"><a href="#troubleshooting-dns-disconnected-env_ensure-external-communication-by-customizing-ip-dns-and-routing">Troubleshoot DNS connectivity issues in a disconnected environment</a></li><li class="level-6"><a href="#nw-dns-forward_ensure-external-communication-by-customizing-ip-dns-and-routing">Use DNS forwarding</a></li><li class="level-4"><a href="#convert-to-ipv4-ipv6-dual-stack-networking-con_convert-to-ipv4-ipv6-dual-stack-networking">Convert to IPv4/IPv6 dual-stack networking</a></li><li class="level-5"><a href="#nw-dual-stack-convert_convert-to-ipv4-ipv6-dual-stack-networking">Convert to a dual-stack cluster network</a></li><li class="level-5"><a href="#nw-dual-stack-convert-back-single-stack_convert-to-ipv4-ipv6-dual-stack-networking">Convert to a single-stack cluster network</a></li><li class="level-5"><a href="#nw-router-configuring-dual-stack_convert-to-ipv4-ipv6-dual-stack-networking">Configure the Red Hat OpenShift Container Platform Ingress Controller for dual-stack networking</a></li><li class="level-4"><a href="#configure-hybrid-networking-with-ovn-kubernetes-con_configure-hybrid-networking-with-ovn-kubernetes">Configure hybrid networking with OVN-Kubernetes</a></li><li class="level-5"><a href="#configuring-hybrid-ovnkubernetes_configuring-hybrid-networking">Configure hybrid networking with OVN-Kubernetes</a></li><li class="level-4"><a href="#nw-about-multicast_enable-and-disable-multicast-for-a-project">About multicast</a></li><li class="level-5"><a href="#nw-enabling-multicast_ovn-kubernetes-enabling-multicast">Enable multicast between pods</a></li><li class="level-5"><a href="#nw-disabling-multicast_ovn-kubernetes-disabling-multicast">Disable multicast between pods</a></li><li class="level-4"><a href="#configure-the-node-port-service-range-con_configure-the-node-port-service-range">Configure the node port service range</a></li><li class="level-5"><a href="#nw-nodeport-service-range-edit_configure-the-node-port-service-range">Expand the node port range</a></li><li class="level-4"><a href="#configure-storage-and-flow-collection-for-network-observability-con_configure-storage-and-flow-collection-for-network-observability">Configure storage and flow collection for network observability</a></li><li class="level-5"><a href="#network-observability-resource-recommendations_configure-storage-and-flow-collection-for-network-observability">Resource management and performance considerations</a></li><li class="level-6"><a href="#network-observability-resources-table_configure-storage-and-flow-collection-for-network-observability">Resource considerations</a></li><li class="level-6"><a href="#network-observability-total-resource-usage-table_configure-storage-and-flow-collection-for-network-observability">Total average memory and CPU usage</a></li><li class="level-5"><a href="#network-observability-multi-tenancy_configure-storage-and-flow-collection-for-network-observability">Network observability deployment in specific nodes</a></li><li class="level-5"><a href="#configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector">Configure the Network Observability Operator FlowCollector</a></li><li class="level-6"><a href="#network-observability-flowcollector-view_configure-the-network-observability-operator-flowcollector">View the FlowCollector resource</a></li><li class="level-6"><a href="#network-observability-config-FLP-sampling_configure-the-network-observability-operator-flowcollector">Update the FlowCollector resource</a></li><li class="level-6"><a href="#network-observability-filter-network-flows-at-ingestion_configure-the-network-observability-operator-flowcollector">Filter network flows at ingestion</a></li><li class="level-6"><a href="#network-observability-config-quick-filters_configure-the-network-observability-operator-flowcollector">Configure quick filters</a></li><li class="level-6"><a href="#network-observability-flowcollector-kafka-config_configure-the-network-observability-operator-flowcollector">Configure the FlowCollector resource with Kafka</a></li><li class="level-6"><a href="#network-observability-enriched-flows_configure-the-network-observability-operator-flowcollector">Export enriched network flow data</a></li><li class="level-5"><a href="#configure-network-observability-storage-collection-con_configure-network-observability-storage-collection">Configure network observability storage collection</a></li><li class="level-6"><a href="#network-observability-loki-installation_configure-network-observability-storage-collection">Install the Loki Operator</a></li><li class="level-6"><a href="#network-observability-without-loki_configure-network-observability-storage-collection">Network observability without Loki</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-cluster-network-operator_configure-and-maintain-the-pod-network-cni">Cluster Network Operator</a></li><li class="level-4"><a href="#nw-operator-cr_cluster-network-operator">Cluster Network Operator configuration</a></li><li class="level-5"><a href="#nw-operator-cr-cno-object_cluster-network-operator">Cluster Network Operator configuration object</a></li><li class="level-5"><a href="#nw-operator-cr-defaultnetwork_cluster-network-operator">defaultNetwork object configuration</a></li><li class="level-5"><a href="#nw-operator-configuration-parameters-for-ovn-sdn_cluster-network-operator">Configuration for the OVN-Kubernetes network plugin</a></li><li class="level-5"><a href="#nw-operator-example-cr_cluster-network-operator">Cluster Network Operator example configuration</a></li><li class="level-4"><a href="#nw-cno-view_configure-and-maintain-the-pod-network-cni">View the cluster network configuration</a></li><li class="level-4"><a href="#nw-cno-status_configure-and-maintain-the-pod-network-cni">View Cluster Network Operator status</a></li><li class="level-4"><a href="#machine-cidr-description_configure-and-maintain-the-pod-network-cni">Machine CIDR</a></li><li class="level-4"><a href="#service-cidr-description_configure-and-maintain-the-pod-network-cni">Service classless inter-domain routing (CIDR)</a></li><li class="level-4"><a href="#pod-cidr-description_configure-and-maintain-the-pod-network-cni">Pod classless inter-domain routing (CIDR)</a></li><li class="level-4"><a href="#host-prefix-description_configure-and-maintain-the-pod-network-cni">Host prefix</a></li><li class="level-5"><a href="#additional-resources_host-prefix-description_configure-and-maintain-the-pod-network-cni">Additional resources</a></li><li class="level-4"><a href="#nw-sctp-about_configure-and-maintain-the-pod-network-cni">Support for SCTP on Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#example_configurations_configure-and-maintain-the-pod-network-cni">Example configurations using SCTP protocol</a></li><li class="level-5"><a href="#nw-sctp-enabling_configure-and-maintain-the-pod-network-cni">Enabling Stream Control Transmission Protocol (SCTP)</a></li><li class="level-5"><a href="#nw-sctp-verifying_configure-and-maintain-the-pod-network-cni">Verifying Stream Control Transmission Protocol (SCTP) is enabled</a></li><li class="level-4"><a href="#configuring-ovn-kubernetes-internal-ip-address-subnets-con_configuring-ovn-kubernetes-internal-ip-address-subnets">Configure OVN-Kubernetes internal IP address subnets</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-change-join-subnet_configuring-ovn-kubernetes-internal-ip-address-subnets">Configure the OVN-Kubernetes join subnet</a></li><li class="level-5"><a href="#nw-ovn-k-day-2-masq-subnet_configuring-ovn-kubernetes-internal-ip-address-subnets">Configure the OVN-Kubernetes masquerade subnet as a postinstallation operation</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-change-transit-subnet_configuring-ovn-kubernetes-internal-ip-address-subnets">Configure the OVN-Kubernetes transit subnet</a></li><li class="level-4"><a href="#configuring-the-cluster-network-range-con_configuring-the-cluster-network-range">Configure the cluster network range</a></li><li class="level-5"><a href="#nw-cluster-network-range-edit_configuring-the-cluster-network-range">Expand the cluster network IP address range</a></li><li class="level-4"><a href="#node-network-configuration-policy-file_configure-node-network-interfaces">About the NodeNetworkConfigurationPolicy manifest file</a></li><li class="level-5"><a href="#virt-manage-nncp-cli_configure-node-network-interfaces">Manage the NodeNetworkConfigurationPolicy manifest file</a></li><li class="level-6"><a href="#virt-creating-interface-on-nodes_configure-node-network-interfaces">Create an interface on nodes</a></li><li class="level-6"><a href="#virt-confirming-policy-updates-on-nodes_configure-node-network-interfaces">Confirm node network policy updates on nodes</a></li><li class="level-6"><a href="#virt-removing-interface-from-nodes_configure-node-network-interfaces">Remove an interface from nodes</a></li><li class="level-5"><a href="#virt-node-network-config-console_configure-node-network-interfaces">Manage policy from the web console</a></li><li class="level-6"><a href="#virt-create-node-network-config-console_configure-node-network-interfaces">Create a policy</a></li><li class="level-5"><a href="#virt-updating-policy-k8s-nmstate_configure-node-network-interfaces">Update the NodeNetworkConfigurationPolicy manifest file</a></li><li class="level-6"><a href="#virt-update-node-network-config-form_configure-node-network-interfaces">Update the policy by using form</a></li><li class="level-6"><a href="#virt-update-node-network-config-yaml_configure-node-network-interfaces">Update the policy by using YAML</a></li><li class="level-6"><a href="#virt-delete-node-network-config_configure-node-network-interfaces">Delete the policy</a></li><li class="level-5"><a href="#virt-troubleshooting-incorrect-policy-config_configure-node-network-interfaces">Troubleshoot an incorrect node network configuration policy configuration</a></li><li class="level-5"><a href="#verify-network-configurations-by-observing-interface-states-con_verify-network-configurations-by-observing-interface-states">Verify network configurations by observing interface states</a></li><li class="level-6"><a href="#virt-viewing-network-state-of-node_verify-network-configurations-by-observing-interface-states">View the network state of a node by using the CLI</a></li><li class="level-6"><a href="#virt-viewing-graphical-representation-of-network-state-of-node-console_verify-network-configurations-by-observing-interface-states">View a graphical representation of the network state of a node (NNS) topology from the web console</a></li><li class="level-6"><a href="#virt-viewing-list-of-nodenetworkstate-resources-console_verify-network-configurations-by-observing-interface-states">View the list of NodeNetworkState resources</a></li><li class="level-5"><a href="#segment-traffic-by-configuring-specific-network-interfaces-con_segment-traffic-by-configuring-specific-network-interfaces">Segment traffic by configuring specific network interfaces</a></li><li class="level-6"><a href="#virt-nmstate-example-policy-configurations_segment-traffic-by-configuring-specific-network-interfaces">Example policy configurations for different interfaces</a></li><li class="level-6"><a href="#virt-creating-infiniband-interface-on-nodes_segment-traffic-by-configuring-specific-network-interfaces">Create an IP over InfiniBand interface on nodes</a></li><li class="level-6"><a href="#virt-example-dynamic-matching-templating_segment-traffic-by-configuring-specific-network-interfaces">Example policy configurations that use dynamic matching and templating</a></li><li class="level-5"><a href="#k8s-nmstate-alternative-interface-names_simplify-automation-by-assigning-alternative-interface-names">Configure alternative network interface names</a></li><li class="level-6"><a href="#k8s-nmstate-creating-alternative-interface-names-by-name_simplify-automation-by-assigning-alternative-interface-names">Create alternative interface names by interface name</a></li><li class="level-6"><a href="#k8s-nmstate-creating-alternative-interface-names-by-identifier_simplify-automation-by-assigning-alternative-interface-names">Create alternative interface names by MAC address or PCI address</a></li><li class="level-6"><a href="#k8s-nmstate-deleting-alternative-interface-names_simplify-automation-by-assigning-alternative-interface-names">Delete alternative interface names</a></li><li class="level-5"><a href="#ensure-external-communication-by-customizing-ip-dns-and-routing-con_ensure-external-communication-by-customizing-ip-dns-and-routing">Ensure external communication by customizing IP, DNS, and routing</a></li><li class="level-6"><a href="#virt-example-nmstate-IP-management_ensure-external-communication-by-customizing-ip-dns-and-routing">Examples: IP management</a></li><li class="level-6"><a href="#virt-routes-route-rules_ensure-external-communication-by-customizing-ip-dns-and-routing">Routes and route rules</a></li><li class="level-6"><a href="#nw-nmstate-enable-per-interface-ip-forwarding_ensure-external-communication-by-customizing-ip-dns-and-routing">Enable IP forwarding on specific interfaces</a></li><li class="level-6"><a href="#troubleshooting-dns-disconnected-env_ensure-external-communication-by-customizing-ip-dns-and-routing">Troubleshoot DNS connectivity issues in a disconnected environment</a></li><li class="level-6"><a href="#nw-dns-forward_ensure-external-communication-by-customizing-ip-dns-and-routing">Use DNS forwarding</a></li><li class="level-4"><a href="#convert-to-ipv4-ipv6-dual-stack-networking-con_convert-to-ipv4-ipv6-dual-stack-networking">Convert to IPv4/IPv6 dual-stack networking</a></li><li class="level-5"><a href="#nw-dual-stack-convert_convert-to-ipv4-ipv6-dual-stack-networking">Convert to a dual-stack cluster network</a></li><li class="level-5"><a href="#nw-dual-stack-convert-back-single-stack_convert-to-ipv4-ipv6-dual-stack-networking">Convert to a single-stack cluster network</a></li><li class="level-5"><a href="#nw-router-configuring-dual-stack_convert-to-ipv4-ipv6-dual-stack-networking">Configure the Red Hat OpenShift Container Platform Ingress Controller for dual-stack networking</a></li><li class="level-4"><a href="#configure-hybrid-networking-with-ovn-kubernetes-con_configure-hybrid-networking-with-ovn-kubernetes">Configure hybrid networking with OVN-Kubernetes</a></li><li class="level-5"><a href="#configuring-hybrid-ovnkubernetes_configuring-hybrid-networking">Configure hybrid networking with OVN-Kubernetes</a></li><li class="level-4"><a href="#nw-about-multicast_enable-and-disable-multicast-for-a-project">About multicast</a></li><li class="level-5"><a href="#nw-enabling-multicast_ovn-kubernetes-enabling-multicast">Enable multicast between pods</a></li><li class="level-5"><a href="#nw-disabling-multicast_ovn-kubernetes-disabling-multicast">Disable multicast between pods</a></li><li class="level-4"><a href="#configure-the-node-port-service-range-con_configure-the-node-port-service-range">Configure the node port service range</a></li><li class="level-5"><a href="#nw-nodeport-service-range-edit_configure-the-node-port-service-range">Expand the node port range</a></li><li class="level-4"><a href="#configure-storage-and-flow-collection-for-network-observability-con_configure-storage-and-flow-collection-for-network-observability">Configure storage and flow collection for network observability</a></li><li class="level-5"><a href="#network-observability-resource-recommendations_configure-storage-and-flow-collection-for-network-observability">Resource management and performance considerations</a></li><li class="level-6"><a href="#network-observability-resources-table_configure-storage-and-flow-collection-for-network-observability">Resource considerations</a></li><li class="level-6"><a href="#network-observability-total-resource-usage-table_configure-storage-and-flow-collection-for-network-observability">Total average memory and CPU usage</a></li><li class="level-5"><a href="#network-observability-multi-tenancy_configure-storage-and-flow-collection-for-network-observability">Network observability deployment in specific nodes</a></li><li class="level-5"><a href="#configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector">Configure the Network Observability Operator FlowCollector</a></li><li class="level-6"><a href="#network-observability-flowcollector-view_configure-the-network-observability-operator-flowcollector">View the FlowCollector resource</a></li><li class="level-6"><a href="#network-observability-config-FLP-sampling_configure-the-network-observability-operator-flowcollector">Update the FlowCollector resource</a></li><li class="level-6"><a href="#network-observability-filter-network-flows-at-ingestion_configure-the-network-observability-operator-flowcollector">Filter network flows at ingestion</a></li><li class="level-6"><a href="#network-observability-config-quick-filters_configure-the-network-observability-operator-flowcollector">Configure quick filters</a></li><li class="level-6"><a href="#network-observability-flowcollector-kafka-config_configure-the-network-observability-operator-flowcollector">Configure the FlowCollector resource with Kafka</a></li><li class="level-6"><a href="#network-observability-enriched-flows_configure-the-network-observability-operator-flowcollector">Export enriched network flow data</a></li><li class="level-5"><a href="#configure-network-observability-storage-collection-con_configure-network-observability-storage-collection">Configure network observability storage collection</a></li><li class="level-6"><a href="#network-observability-loki-installation_configure-network-observability-storage-collection">Install the Loki Operator</a></li><li class="level-6"><a href="#network-observability-without-loki_configure-network-observability-storage-collection">Network observability without Loki</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni">Configure and maintain the pod network</h3>
@@ -1780,7 +1804,7 @@ the Cluster Network Operator reports an available status condition.</p>
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 549. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 561. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -1933,7 +1957,7 @@ the Cluster Network Operator reports an available status condition.</p>
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 550. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 562. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -1998,7 +2022,7 @@ the Cluster Network Operator reports an available status condition.</p>
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 551. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 563. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2155,7 +2179,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 552. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 564. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2206,7 +2230,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 553. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 565. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2257,7 +2281,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 554. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 566. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2364,7 +2388,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table id="gatewayConfig-object_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 555. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 567. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2458,7 +2482,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 556. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 568. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2503,7 +2527,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 557. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 569. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2548,7 +2572,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 558. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 570. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2810,6 +2834,344 @@ You can expand the range after cluster installation.</p>
 <p><a href="https://access.redhat.com/labs/ocpnc/">Red Hat OpenShift Network Calculator: calculate the maximum number of nodes for your cluster</a></p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nw-sctp-about_configure-and-maintain-the-pod-network-cni">Support for SCTP on Red&#160;Hat OpenShift Container Platform</h4>
+<div class="paragraph">
+<p>As a cluster administrator, you can enable SCTP on the hosts in the cluster. On Red Hat Enterprise Linux CoreOS (RHCOS), the SCTP module is disabled by default.</p>
+</div>
+<div class="paragraph">
+<p>SCTP is a reliable message based protocol that runs on top of an IP network.</p>
+</div>
+<div class="paragraph">
+<p>When enabled, you can use SCTP as a protocol with pods, services, and network policy.
+A <code>Service</code> object must be defined with the <code>type</code> parameter set to either the <code>ClusterIP</code> or <code>NodePort</code> value.</p>
+</div>
+<div class="sect4">
+<h5 id="example_configurations_configure-and-maintain-the-pod-network-cni">Example configurations using SCTP protocol</h5>
+<div class="paragraph">
+<p>You can configure a pod or service to use SCTP by setting the <code>protocol</code> parameter to the <code>SCTP</code> value in the pod or service object.</p>
+</div>
+<div class="paragraph">
+<p>In the following example, a pod is configured to use SCTP:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Pod
+metadata:
+  namespace: project1
+  name: example-pod
+spec:
+  containers:
+    - name: example-pod
+...
+      ports:
+        - containerPort: 30100
+          name: sctpserver
+          protocol: SCTP</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the following example, a service is configured to use SCTP:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Service
+metadata:
+  namespace: project1
+  name: sctpserver
+spec:
+...
+  ports:
+    - name: sctpserver
+      protocol: SCTP
+      port: 30100
+      targetPort: 30100
+  type: ClusterIP</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the following example, a <code>NetworkPolicy</code> object is configured to apply to SCTP network traffic on port <code>80</code> from any pods with a specific label:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-sctp-on-http
+spec:
+  podSelector:
+    matchLabels:
+      role: web
+  ingress:
+  - ports:
+    - protocol: SCTP
+      port: 80</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="nw-sctp-enabling_configure-and-maintain-the-pod-network-cni">Enabling Stream Control Transmission Protocol (SCTP)</h5>
+<div class="paragraph">
+<p>As a cluster administrator, you can load and enable the blacklisted SCTP kernel module on worker nodes in your cluster.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Install the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>Access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a file named <code>load-sctp-module.yaml</code> that contains the following YAML definition:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  name: load-sctp-module
+  labels:
+    machineconfiguration.openshift.io/role: worker
+spec:
+  config:
+    ignition:
+      version: 3.2.0
+    storage:
+      files:
+        - path: /etc/modprobe.d/sctp-blacklist.conf
+          mode: 0644
+          overwrite: true
+          contents:
+            source: data:,
+        - path: /etc/modules-load.d/sctp-load.conf
+          mode: 0644
+          overwrite: true
+          contents:
+            source: data:,sctp</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To create the <code>MachineConfig</code> object, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f load-sctp-module.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Optional: To watch the status of the nodes while the MachineConfig Operator applies the configuration change, enter the following command. When the status of a node transitions to <code>Ready</code>, the configuration update is applied.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="nw-sctp-verifying_configure-and-maintain-the-pod-network-cni">Verifying Stream Control Transmission Protocol (SCTP) is enabled</h5>
+<div class="paragraph">
+<p>You can verify that SCTP is working on a cluster by creating a pod with an application that listens for SCTP traffic, associating it with a service, and then connecting to the exposed service.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Access to the internet from the cluster to install the <code>nc</code> package.</p>
+</li>
+<li>
+<p>Install the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>Access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a pod starts an SCTP listener:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a file named <code>sctp-server.yaml</code> that defines a pod with the following YAML:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: sctpserver
+  labels:
+    app: sctpserver
+spec:
+  containers:
+    - name: sctpserver
+      image: registry.access.redhat.com/ubi9/ubi
+      command: ["/bin/sh", "-c"]
+      args:
+        ["dnf install -y nc &amp;&amp; sleep inf"]
+      ports:
+        - containerPort: 30102
+          name: sctpserver
+          protocol: SCTP</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the pod by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f sctp-server.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create a service for the SCTP listener pod.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a file named <code>sctp-service.yaml</code> that defines a service with the following YAML:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: sctpservice
+  labels:
+    app: sctpserver
+spec:
+  type: NodePort
+  selector:
+    app: sctpserver
+  ports:
+    - name: sctpserver
+      protocol: SCTP
+      port: 30102
+      targetPort: 30102</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To create the service, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f sctp-service.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create a pod for the SCTP client.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a file named <code>sctp-client.yaml</code> with the following YAML:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: sctpclient
+  labels:
+    app: sctpclient
+spec:
+  containers:
+    - name: sctpclient
+      image: registry.access.redhat.com/ubi9/ubi
+      command: ["/bin/sh", "-c"]
+      args:
+        ["dnf install -y nc &amp;&amp; sleep inf"]</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To create the <code>Pod</code> object, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f sctp-client.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Run an SCTP listener on the server.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>To connect to the server pod, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc rsh sctpserver</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To start the SCTP listener, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ nc -l 30102 --sctp</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Connect to the SCTP listener on the server.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Open a new terminal window or tab in your terminal program.</p>
+</li>
+<li>
+<p>Obtain the IP address of the <code>sctpservice</code> service. Enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get services sctpservice -o go-template='{{.spec.clusterIP}}{{"\n"}}'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To connect to the client pod, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc rsh sctpclient</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To start the SCTP client, enter the following command. Replace <code>&lt;cluster_IP&gt;</code> with the cluster IP address of the <code>sctpservice</code> service.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># nc &lt;cluster_IP&gt; 30102 --sctp</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -7990,7 +8352,7 @@ spec:
 </ul>
 </div>
 <table id="network-observability-resource-recommendations-table_configure-storage-and-flow-collection-for-network-observability" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 559. Resource recommendations for cluster sizes</caption>
+<caption class="title">Table 571. Resource recommendations for cluster sizes</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 20%;">
@@ -8099,7 +8461,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 560. Total average resource usage</caption>
+<caption class="title">Table 572. Total average resource usage</caption>
 <colgroup>
 <col>
 <col>
@@ -8382,7 +8744,7 @@ spec:
 <p>The query language uses the following syntax:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 561. Query language syntax</caption>
+<caption class="title">Table 573. Query language syntax</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -8478,7 +8840,7 @@ spec:
 <p>Here is a list of all available filter keys:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 562. Filter keys</caption>
+<caption class="title">Table 574. Filter keys</caption>
 <colgroup>
 <col style="width: 9.0909%;">
 <col style="width: 9.0909%;">
@@ -9195,7 +9557,7 @@ spec:
 <p>If you only want to export flows to a Kafka consumer or IPFIX collector, or you only need dashboard metrics, then you do not need to install Loki or provide storage for Loki. The following table compares available features with and without Loki.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 563. Comparison of feature availability with and without Loki</caption>
+<caption class="title">Table 575. Comparison of feature availability with and without Loki</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -9367,12 +9729,12 @@ spec:
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a> →</p>
+<p>↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 15:58:47 +0100
+Last updated 2026-10-12 13:29:35 +0100
 </div>
 </div>
 <style>

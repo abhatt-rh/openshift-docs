@@ -568,10 +568,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="compare-platform-options-con_compare-platform-options.html">Compare platform options</a>
 </li>
-<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
-</li>
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
@@ -582,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -610,8 +606,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_install.html">Install</a>
-
 <ul class="sectlevel2">
+<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
+</li>
+<li><a href="installation-special-config-butane_customize-installation-configuration.html"><span class="toc-current">Creating machine configs with Butane</span></a>
+</li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
 <li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
@@ -675,7 +676,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
@@ -847,7 +848,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-registry-allowlists-and-blocks-con_configure-registry-allowlists-and-blocks.html">Configure registry allowlists and blocks</a>
 </li>
-<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">About adding registries that allow image short names</a>
+<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">Configure short-name search registries</a>
 </li>
 <li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
 </li>
@@ -885,6 +886,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_configure.html">Configure</a>
+
 <ul class="sectlevel2">
 <li><a href="change-the-installed-disk-partition-schema-for-new-nodes-con_change-the-installed-disk-partition-schema-for-new-nodes.html">Change the installed disk-partition schema for new nodes</a>
 </li>
@@ -907,8 +909,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machine-config-node-drain_understand-node-disruption-behavior.html">Understanding the Machine Config Operator node drain behavior</a>
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
-</li>
-<li><a href="installation-special-config-butane_customize-installation-configuration.html"><span class="toc-current">Creating machine configs with Butane</span></a>
 </li>
 <li><a href="change-the-installed-file-system-configuration-for-new-nodes-con_change-the-installed-file-system-configuration-for-new-nodes.html">Change the installed file system configuration for new nodes</a>
 </li>
@@ -946,7 +946,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1057,11 +1057,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
+</li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1241,19 +1267,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
-</li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
-</li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
-</li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
-</li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
-</li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1485,6 +1499,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
 </li>
+<li><a href="graceful-shutdown-cluster-intro_graceful-cluster-shutdown.html">Shutting down the cluster gracefully</a>
+</li>
+<li><a href="graceful-restart-cluster-intro_graceful-cluster-restart.html">Restarting the cluster gracefully</a>
+</li>
+<li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernating an Red&#160;Hat OpenShift Container Platform cluster</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
@@ -1496,6 +1516,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="recovering-unhealthy-etcd-cluster-for-hosted-control-planes-con_recovering-unhealthy-etcd-cluster-for-hosted-control-planes.html">Recovering an unhealthy etcd cluster for hosted control planes</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-a-hosted-cluster-intro_backup-and-restore-etcd-on-a-hosted-cluster.html">Backing up and restoring etcd on a hosted cluster</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a>
+</li>
+<li><a href="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot.html">Backing up etcd data for hosted control planes by using the etcd snapshot method</a>
+</li>
+<li><a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a>
 </li>
 <li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
 </li>
@@ -1509,8 +1539,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
@@ -1523,15 +1551,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
+<li><a href="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data.html">Backing up and restoring etcd data</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
+<li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replacing an unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
@@ -1627,13 +1655,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html">Restoring an etcd snapshot on a hosted cluster</a>
+<li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-restore_etcd-best-practices-restore-etcd-data.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replacing a healthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1643,7 +1667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1669,7 +1693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#installation-special-config-kargs_customize-installation-configuration">Adding day-1 kernel arguments</a></li><li class="level-4"><a href="#installation-special-config-storage_customize-installation-configuration">Boot disk encryption and mirroring during installation</a></li><li class="level-5"><a href="#installation-special-config-encryption-threshold_customize-installation-configuration">Configuring an encryption threshold</a></li><li class="level-4"><a href="#installation-special-config-mirrored-disk_customize-installation-configuration">About disk mirroring</a></li><li class="level-5"><a href="#installation-special-config-storage-procedure_customize-installation-configuration">Configuring disk encryption and mirroring</a></li><li class="level-4"><a href="install-on-vsphere-intro_install-on-vsphere.html#installation-configuration-parameters_installation-config-parameters-vsphere">Available installation configuration parameters for vSphere</a></li><li class="level-5"><a href="install-on-vsphere-intro_install-on-vsphere.html#installation-configuration-parameters-required_installation-config-parameters-vsphere">Required configuration parameters</a></li><li class="level-5"><a href="install-on-vsphere-intro_install-on-vsphere.html#installation-configuration-parameters-network_installation-config-parameters-vsphere">Network configuration parameters</a></li><li class="level-5"><a href="install-on-vsphere-intro_install-on-vsphere.html#installation-configuration-parameters-optional_installation-config-parameters-vsphere">Optional configuration parameters</a></li><li class="level-5"><a href="install-on-vsphere-intro_install-on-vsphere.html#installation-configuration-parameters-additional-vsphere_installation-config-parameters-vsphere">Additional VMware vSphere configuration parameters</a></li><li class="level-5"><a href="install-on-vsphere-intro_install-on-vsphere.html#deprecated-parameters-vsphere_installation-config-parameters-vsphere">Deprecated VMware vSphere configuration parameters</a></li><li class="level-5"><a href="install-on-vsphere-intro_install-on-vsphere.html#installation-configuration-parameters-optional-vsphere_installation-config-parameters-vsphere">Optional VMware vSphere machine pool configuration parameters</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#installation-special-config-kargs_customize-installation-configuration">Adding day-1 kernel arguments</a></li><li class="level-4"><a href="#installation-special-config-storage_customize-installation-configuration">Boot disk encryption and mirroring during installation</a></li><li class="level-5"><a href="#installation-special-config-encryption-threshold_customize-installation-configuration">Configuring an encryption threshold</a></li><li class="level-4"><a href="#installation-special-config-mirrored-disk_customize-installation-configuration">About disk mirroring</a></li><li class="level-5"><a href="#installation-special-config-storage-procedure_customize-installation-configuration">Configuring disk encryption and mirroring</a></li><li class="level-4"><a href="install-on-vsphere-intro_install-on-vsphere.html#installation-configuration-parameters_installation-config-parameters-vsphere">Available installation configuration parameters for vSphere</a></li><li class="level-5"><a href="install-on-vsphere-intro_install-on-vsphere.html#installation-configuration-parameters-required_installation-config-parameters-vsphere">Required configuration parameters</a></li><li class="level-5"><a href="install-on-vsphere-intro_install-on-vsphere.html#installation-configuration-parameters-network_installation-config-parameters-vsphere">Network configuration parameters</a></li><li class="level-5"><a href="install-on-vsphere-intro_install-on-vsphere.html#installation-configuration-parameters-optional_installation-config-parameters-vsphere">Optional configuration parameters</a></li><li class="level-5"><a href="install-on-vsphere-intro_install-on-vsphere.html#installation-configuration-parameters-optional-aws_installation-config-parameters-vsphere">Optional AWS configuration parameters</a></li><li class="level-5"><a href="install-on-vsphere-intro_install-on-vsphere.html#installation-configuration-parameters-additional-gcp_installation-config-parameters-vsphere">Additional Google Cloud configuration parameters</a></li><li class="level-5"><a href="install-on-vsphere-intro_install-on-vsphere.html#installation-configuration-parameters-additional-vsphere_installation-config-parameters-vsphere">Additional VMware vSphere configuration parameters</a></li><li class="level-5"><a href="install-on-vsphere-intro_install-on-vsphere.html#deprecated-parameters-vsphere_installation-config-parameters-vsphere">Deprecated VMware vSphere configuration parameters</a></li><li class="level-5"><a href="install-on-vsphere-intro_install-on-vsphere.html#installation-configuration-parameters-optional-vsphere_installation-config-parameters-vsphere">Optional VMware vSphere machine pool configuration parameters</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="installation-special-config-butane_customize-installation-configuration">Creating machine configs with Butane</h3>
@@ -2585,7 +2609,7 @@ Consistency Policy : resync
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 516. Required parameters</caption>
+<caption class="title">Table 65. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2788,7 +2812,7 @@ Consistency Policy : resync
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 517. Network parameters</caption>
+<caption class="title">Table 66. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2868,7 +2892,9 @@ Consistency Policy : resync
 <pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">networking:
   clusterNetwork:
   - cidr: 10.128.0.0/14
-    hostPrefix: 23</code></pre>
+    hostPrefix: 23
+  - cidr: fd01::/48
+    hostPrefix: 64</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -2888,6 +2914,13 @@ Consistency Policy : resync
 </div>
 <div class="paragraph">
 <p>An IPv4 network.</p>
+</div>
+<div class="paragraph">
+<p>If you use the OVN-Kubernetes network plugin, you can specify IPv4 and IPv6 networks.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> An IP address block in Classless Inter-Domain Routing (CIDR) notation. The prefix length for an IPv4 block is between <code>0</code> and <code>32</code>.
+The prefix length for an IPv6 block is between <code>0</code> and <code>128</code>. For example, <code>10.128.0.0/14</code> or <code>fd01::/48</code>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2910,6 +2943,9 @@ Consistency Policy : resync
 <div class="paragraph">
 <p>The default value is <code>23</code>.</p>
 </div>
+<div class="paragraph">
+<p>For an IPv4 network the default value is <code>23</code>. For an IPv6 network <code>hostPrefix</code> must be set to <code>64</code>, which is the default value.</p>
+</div>
 <div class="ulist">
 <ul>
 </ul>
@@ -2925,13 +2961,17 @@ Consistency Policy : resync
 <p>The IP address block for services. The default value is <code>172.30.0.0/16</code>.</p>
 </div>
 <div class="paragraph">
+<p>If you use the OVN-Kubernetes network plugin, you can specify an IP address block for both of the IPv4 and IPv6 address families.</p>
+</div>
+<div class="paragraph">
 <p><strong>Value:</strong> An array with an IP address block in CIDR format. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">networking:
   serviceNetwork:
-   - 172.30.0.0/16</code></pre>
+   - 172.30.0.0/16
+   - fd02::/112</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -3048,7 +3088,7 @@ Consistency Policy : resync
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 518. Optional parameters</caption>
+<caption class="title">Table 67. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3162,7 +3202,10 @@ Consistency Policy : resync
 <td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
   architecture:</pre></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Determines the instruction set architecture of the machines in the pool. Currently, clusters with varied architectures are not supported. All pools must specify the same architecture. Valid values are <code>amd64</code> (the default).</p>
+<p>Determines the instruction set architecture of the machines in the pool. Currently, clusters with varied architectures are not supported. All pools must specify the same architecture. Valid values are <code>amd64</code> and <code>arm64</code>.</p>
+</div>
+<div class="paragraph">
+<p>Not all installation options support the 64-bit ARM architecture. To verify if your installation option is supported on your platform, see <em>Supported installation methods for different platforms</em> in <em>Selecting a cluster installation method and preparing it for users</em>.</p>
 </div>
 <div class="paragraph">
 <p><strong>Value:</strong> String</p>
@@ -3263,7 +3306,10 @@ Consistency Policy : resync
 <td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
   architecture:</pre></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Determines the instruction set architecture of the machines in the pool. Currently, clusters with varied architectures are not supported. All pools must specify the same architecture. Valid values are <code>amd64</code> (the default).</p>
+<p>Determines the instruction set architecture of the machines in the pool. Currently, clusters with varied architectures are not supported. All pools must specify the same architecture. Valid values are <code>amd64</code> and <code>arm64</code>.</p>
+</div>
+<div class="paragraph">
+<p>Not all installation options support the 64-bit ARM architecture. To verify if your installation option is supported on your platform, see <em>Supported installation methods for different platforms</em> in <em>Selecting a cluster installation method and preparing it for users</em>.</p>
 </div>
 <div class="paragraph">
 <p><strong>Value:</strong> String</p>
@@ -3536,16 +3582,34 @@ Supported values are <code>3</code>, or <code>1</code> when deploying single-nod
 </div></div></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  aws:
+    lbType:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Required to set the NLB load balancer type in AWS. Valid values are <code>Classic</code> or <code>NLB</code>. If no value is specified, the installation program defaults to <code>Classic</code>. The installation program sets the value provided here in the ingress cluster configuration object. If you do not specify a load balancer type for other Ingress Controllers, they use the type set in this parameter.</p>
+</div>
+<div class="paragraph">
+<p>If you installed your cluster using the <code>DualStackIPv4Primary</code> or <code>DualStackIPv6Primary</code> values for the <code>platform.aws.ipFamily</code> parameter, any services that have IPv6 addresses must use the NLB load balancer type. The classic load balancer (CLB) does not support IPv6.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>Classic</code> or <code>NLB</code>. If you do not set the <code>platform.aws.ipFamily</code> parameter or set it to <code>IPv4</code>, the default value is <code>Classic</code>. If you set the <code>platform.aws.ipFamily</code> parameter to <code>DualStackIPv4Primary</code> or <code>DualStackIPv6Primary</code>, the default value is <code>NLB</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-middle"><div class="literal"><pre>publish:</pre></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>How to publish or expose the user-facing endpoints of your cluster, such as the Kubernetes API, OpenShift routes.</p>
 </div>
 <div class="paragraph">
 <p><strong>Value:</strong>
-<code>Internal</code> or <code>External</code>. The default value is <code>External</code>.</p>
-</div>
-<div class="paragraph">
-<p>Setting this field to <code>Internal</code> is not supported on non-cloud platforms.</p>
+<code>Internal</code> or <code>External</code>. To deploy a private cluster that cannot be accessed from the internet, set the <code>publish</code> parameter to <code>Internal</code>. The default value is <code>External</code>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3587,6 +3651,2288 @@ Supported values are <code>3</code>, or <code>1</code> when deploying single-nod
 </tr>
 </tbody>
 </table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If your AWS account has service control policies (SCP) enabled, you must configure the <code>credentialsMode</code> parameter to <code>Mint</code>, <code>Passthrough</code>, or <code>Manual</code>.
+If you are installing on Google Cloud into a shared virtual private cloud (VPC), <code>credentialsMode</code> must be set to <code>Passthrough</code> or <code>Manual</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Setting this parameter to <code>Manual</code> enables alternatives to storing administrator-level secrets in the <code>kube-system</code> project, which require additional configuration steps. For more information, see "Alternatives to storing administrator-level secrets in the kube-system project".</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="installation-configuration-parameters-optional-aws_installation-config-parameters-vsphere">Optional AWS configuration parameters</h5>
+<div class="paragraph">
+<p>Optional AWS configuration parameters are described in the following table:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 68. Optional AWS parameters</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Parameter</th>
+<th class="tableblock halign-left valign-middle">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    aws:
+      amiID:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The AWS AMI used to boot compute machines for the cluster. This is required for regions that require a custom RHCOS AMI.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Any published or custom RHCOS AMI that belongs to the set AWS region. See <em>RHCOS AMIs for AWS infrastructure</em> for available AMI IDs.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    aws:
+      iamProfile:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the IAM instance profile that you use for the machine. If you want the installation program to create the IAM instance profile for you, do not use the <code>iamProfile</code> parameter. You can specify either the <code>iamProfile</code> or <code>iamRole</code> parameter, but you cannot specify both.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    aws:
+      iamRole:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the IAM instance role that you use for the machine. When you specify an IAM role, the installation program creates an instance profile. If you want the installation program to create the IAM instance role for you, do not select the <code>iamRole</code> parameter. You can specify either the <code>iamRole</code> or <code>iamProfile</code> parameter, but you cannot specify both.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    aws:
+      rootVolume:
+        iops:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The Input/Output Operations Per Second (IOPS) that is reserved for the root volume.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Integer, for example <code>4000</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    aws:
+      rootVolume:
+        size:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The size in GiB of the root volume.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Integer, for example <code>500</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    aws:
+      rootVolume:
+        type:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The type of the root volume.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Valid <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">AWS EBS volume type</a>, such as <code>io1</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    aws:
+      rootVolume:
+        throughput:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The maximum throughput of the root volume. This throughput can be customized only for the gp3 volume type. The minimum value is 125 MiB/s and the maximum value is 2000 MiB/s.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Integer, for example <code>1000</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    aws:
+      rootVolume:
+        kmsKeyARN:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The Amazon Resource Name (key ARN) of a KMS key. This is required to encrypt operating system volumes of worker nodes with a specific KMS key.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Valid <a href="https://docs.aws.amazon.com/kms/latest/developerguide/find-cmk-id-arn.html">key ID or the key ARN</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    aws:
+      type:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The EC2 instance type for the compute machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Valid AWS instance type, such as <code>m4.2xlarge</code>. See the "Tested instance types for AWS" table on the "Installing a cluster on AWS with customizations" page.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    aws:
+      zones:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The availability zones where the installation program creates machines for the compute machine pool. If you provide your own VPC, you must provide a subnet in that availability zone.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> A list of valid AWS availability zones, such as <code>us-east-1c</code>, in a <a href="https://yaml.org/spec/1.2/spec.html#sequence//">YAML sequence</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    aws:
+      hostPlacement:
+        affinity:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Specifies the affinity setting for placing compute machines on AWS Dedicated Hosts. When set to <code>DedicatedHost</code>, machines are pinned to the specific Dedicated Hosts listed in the <code>dedicatedHost</code> field. If a machine is stopped and restarted, the machine returns to the same physical host. When set to <code>AnyAvailable</code>, machines are not pinned to specific Dedicated Hosts. If a machine is stopped and restarted, AWS can place the machine on any available Dedicated Host that matches the instance type and availability zone.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>AWS Dedicated Host support is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+</div>
+<div class="paragraph">
+<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>DedicatedHost</code> or <code>AnyAvailable</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    aws:
+      hostPlacement:
+        dedicatedHost:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>A list of AWS Dedicated Host entries for compute machines. Required when <code>hostPlacement.affinity</code> is set to <code>DedicatedHost</code>. Must be omitted when <code>hostPlacement.affinity</code> is set to <code>AnyAvailable</code>.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>AWS Dedicated Host support is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+</div>
+<div class="paragraph">
+<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> A list of objects.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    aws:
+      hostPlacement:
+        dedicatedHost:
+        - id:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The ID of the AWS Dedicated Host. The value must start with <code>h-</code> followed by 17 lowercase hexadecimal characters.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>AWS Dedicated Host support is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+</div>
+<div class="paragraph">
+<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String, for example <code>h-015c6d3ffa1d43d38</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    aws:
+      amiID:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The AWS AMI used to boot control plane machines for the cluster. This is required for regions that require a custom RHCOS AMI.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Any published or custom RHCOS AMI that belongs to the set AWS region. See <em>RHCOS AMIs for AWS infrastructure</em> for available AMI IDs.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    aws:
+      iamProfile:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the IAM instance profile that you use for the machine. If you want the installation program to create the IAM instance profile for you, do not use the <code>iamProfile</code> parameter. You can specify either the <code>iamProfile</code> or <code>iamRole</code> parameter, but you cannot specify both.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    aws:
+      iamRole:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the IAM instance role that you use for the machine. When you specify an IAM role, the installation program creates an instance profile. If you want the installation program to create the IAM instance role for you, do not use the <code>iamRole</code> parameter. You can specify either the <code>iamRole</code> or <code>iamProfile</code> parameter, but you cannot specify both.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    aws:
+      rootVolume:
+        iops:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The Input/Output Operations Per Second (IOPS) that is reserved for the root volume on control plane machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Integer, for example <code>4000</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    aws:
+      rootVolume:
+        size:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The size in GiB of the root volume for control plane machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Integer, for example <code>500</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    aws:
+      rootVolume:
+        type:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The type of the root volume for control plane machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Valid <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">AWS EBS volume type</a>, such as <code>io1</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    aws:
+      rootVolume:
+        throughput:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The maximum throughput of the root volume. This throughput can be customized only for the gp3 volume type. The minimum value is 125 MiB/s and the maximum value is 2000 MiB/s.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Integer, for example <code>1000</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    aws:
+      rootVolume:
+        kmsKeyARN:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The Amazon Resource Name (key ARN) of a KMS key. This is required to encrypt operating system volumes of control plane nodes with a specific KMS key.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Valid <a href="https://docs.aws.amazon.com/kms/latest/developerguide/find-cmk-id-arn.html">key ID and the key ARN</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    aws:
+      type:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The EC2 instance type for the control plane machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Valid AWS instance type, such as <code>m6i.xlarge</code>. See the "Tested instance types for AWS" table on the "Installing a cluster on AWS with customizations" page.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    aws:
+      zones:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The availability zones where the installation program creates machines for the control plane machine pool.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> A list of valid AWS availability zones, such as <code>us-east-1c</code>, in a <a href="https://yaml.org/spec/1.2/spec.html#sequence//">YAML sequence</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  aws:
+    amiID:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The AWS AMI used to boot all machines for the cluster. If set, the AMI must belong to the same region as the cluster. This is required for regions that require a custom RHCOS AMI.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Any published or custom RHCOS AMI that belongs to the set AWS region. See <em>RHCOS AMIs for AWS infrastructure</em> for available AMI IDs.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  aws:
+    hostedZone:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>An existing Route 53 private hosted zone for the cluster. You can only use a pre-existing hosted zone when also supplying your own VPC. The hosted zone must already be associated with the user-provided VPC before installation. Also, the domain of the hosted zone must be the cluster domain or a parent of the cluster domain. If undefined, the installation program creates a new hosted zone.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String, for example <code>Z3URY6TWQ91KVV</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  aws:
+    hostedZoneRole:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>An Amazon Resource Name (ARN) for an existing IAM role in the account containing the specified hosted zone. The installation program and cluster operators assume this role when performing operations on the hosted zone. Use this parameter only when you are installing a cluster into a shared VPC.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String, for example <code>arn:aws:iam::1234567890:role/shared-vpc-role</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  aws:
+    userProvisionedDNS:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Enables user-provisioned DNS instead of the default cluster-provisioned DNS solution. If you use this feature, you must provide your own DNS solution that includes records for <code>api.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code> and <code>*.apps.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>Enabled</code> or <code>Disabled</code>. The default value is <code>Disabled</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  aws:
+    region:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The AWS region that the installation program creates all cluster resources in.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Any valid <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html">AWS region</a>, such as <code>us-east-1</code>. You can use the AWS CLI to access the regions available based on your selected instance type by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ aws ec2 describe-instance-type-offerings --filters Name=instance-type,Values=c7g.xlarge</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When running on ARM based AWS instances, ensure that you enter a region where AWS Graviton processors are available. See <a href="https://aws.amazon.com/ec2/graviton/#Global_availability">Global availability</a> map in the AWS documentation. Currently, AWS Graviton3 processors are only available in some regions.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  aws:
+    serviceEndpoints:
+      - name:
+        url:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The AWS service endpoint name and URL. Custom endpoints are only required for cases where alternative AWS endpoints, such as FIPS, must be used. Custom API endpoints can be specified for EC2, S3, IAM, Elastic Load Balancing, Tagging, Route 53, and STS AWS services.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Valid <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html">AWS service endpoint</a> name and valid <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html">AWS service endpoint</a> URL.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  aws:
+    userTags:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>A map of keys and values that the installation program adds as tags to all resources that it creates.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Any valid YAML map, such as key value pairs in the <code>&lt;key&gt;: &lt;value&gt;</code> format. For more information about AWS tags, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2 Resources</a> in the AWS documentation.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can add up to 25 user-defined tags during installation. The remaining 25 tags are reserved for Red&#160;Hat OpenShift Container Platform.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  aws:
+    propagateUserTags:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>A flag that directs in-cluster Operators to include the specified user tags in the tags of the AWS resources that the Operators create.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Boolean values, for example <code>true</code> or <code>false</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  aws:
+    publicIpv4Pool:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The public IPv4 pool ID that is used to allocate Elastic IPs (EIPs) when <code>publish</code> is set to <code>External</code>. You must provision and advertise the pool in the same AWS account and region of the cluster. You must ensure that you have 2n + 1 IPv4 addresses available in the pool where <em>n</em> is the total number of AWS zones used to deploy the Network Load Balancer (NLB) for API, NAT gateways, and bootstrap node. For more information about bring your own IP addresses (BYOIP) in AWS, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-onboard">Onboard your BYOIP</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> A valid <a href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-public-ipv4-pools.html">public IPv4 pool id</a></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can enable BYOIP only for customized installations that do not have any network restrictions.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  aws:
+    bestEffortDeleteIgnition:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>An optional flag that determines whether to ignore errors when deleting Ignition objects from the S3 bucket. By default, the installation program fails if it cannot delete the Ignition objects.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>true</code> or <code>false</code>. The default value is <code>false</code>, which causes the installation program to fail on S3 Ignition deletion errors.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  aws:
+    ipFamily:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The IP address family for networks used by the cluster. Specify <code>IPv4</code> for IPv4-only networking, <code>DualStackIPv4Primary</code> for dual-stack networking with IPv4 as the primary address family, or <code>DualStackIPv6Primary</code> for dual-stack networking with IPv6 as the primary address family. When using dual-stack, the VPC and subnets must be configured with both IPv4 and IPv6 CIDR blocks.</p>
+</div>
+<div class="paragraph">
+<p>Consider the following requirements if you use dual-stack networking:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All API and Ingress load balancers must be Network Load Balancers (NLB). Classic Load Balancers (CLB) do not support IPv6 addressing.</p>
+</li>
+<li>
+<p>All machines in a dual-stack cluster must be Nitro-based and support IPv6 addressing.</p>
+</li>
+<li>
+<p>If you are installing a cluster using existing subnets, all provided subnets must be configured with dual-stack address pools.</p>
+</li>
+<li>
+<p>If you are installing a cluster using Local Zones, you must provide dual-stack subnets. The installation program cannot automatically provision dual-stack subnets in Local Zones.</p>
+</li>
+<li>
+<p>Installing a cluster using dual-stack networking is not supported in Wavelength Zones.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Dual-stack networking on AWS is a Technology Preview feature only. Technology Preview features are not supported with Red Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.
+For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> "IPv4", "DualStackIPv4Primary", or "DualStackIPv6Primary". The default value is "IPv4".</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  aws:
+    vpc:
+      subnets:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>A list of subnets in an existing VPC to be used in place of automatically created subnets. You specify a subnet by providing the subnet ID and an optional list of roles that apply to that subnet. If you specify subnet IDs but do not specify roles for any subnet, the subnets' roles are decided automatically. If you do not specify any roles, you must ensure that any other subnets in your VPC have the <code>kubernetes.io/cluster/.<strong>: .</strong></code> or <code>kubernetes.io/cluster/unmanaged: true</code> tags.</p>
+</div>
+<div class="paragraph">
+<p>The subnets must be part of the same <code>networking.machineNetwork[].cidr</code> ranges that you specify. If you provide dual-stack subnets using this parameter, you must specify IPv6 entries in the <code>networking.machineNetwork[].cidr</code> parameter.</p>
+</div>
+<div class="paragraph">
+<p>For a public cluster, specify a public and a private subnet for each availability zone.</p>
+</div>
+<div class="paragraph">
+<p>For a private cluster, specify a private subnet for each availability zone.</p>
+</div>
+<div class="paragraph">
+<p>For clusters that use AWS Local Zones, you must add AWS Local Zone subnets to this list to ensure edge machine pool creation.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> List of pairs of <code>id</code> and <code>roles</code> parameters.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  aws:
+    vpc:
+      subnets:
+      - id:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The ID of an existing subnet to be used in place of a subnet created by the installation program.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String. The subnet ID must be a unique ID containing only alphanumeric characters, beginning with "subnet-". The ID must be exactly 24 characters long.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  aws:
+    vpc:
+      subnets:
+      - id:
+        roles:
+        - type:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>One or more roles that apply to the subnet specified by <code>platform.aws.vpc.subnets.id</code>. If you specify a role for any subnet, each subnet must have at least one assigned role, and the <code>ClusterNode</code>, <code>IngressControllerLB</code>, <code>ControlPlaneExternalLB</code>, <code>BootstrapNode</code>, and <code>ControlPlaneInternalLB</code> roles must be assigned to at least one subnet. However, if the cluster scope is internal, then the <code>ControlPlaneExternalLB</code> role is not required.</p>
+</div>
+<div class="paragraph">
+<p>You can only assign the <code>EdgeNode</code> role to subnets in AWS Local Zones.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> List of one or more role types. Valid values include <code>ClusterNode</code>, <code>EdgeNode</code>, <code>BootstrapNode</code>, <code>IngressControllerLB</code>, <code>ControlPlaneExternalLB</code>, and <code>ControlPlaneInternalLB</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="installation-configuration-parameters-additional-gcp_installation-config-parameters-vsphere">Additional Google Cloud configuration parameters</h5>
+<div class="paragraph">
+<p>Additional Google Cloud configuration parameters are described in the following table:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 69. Additional Google Cloud parameters</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Parameter</th>
+<th class="tableblock halign-left valign-middle">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      osImage:
+        project:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional. By default, the installation program downloads and installs the Red Hat Enterprise Linux CoreOS (RHCOS) image that is used to boot control plane machines. You can override the default behavior by specifying the location of a custom RHCOS image that the installation program is to use for control plane machines only. Control plane machines do not contribute to licensing costs when using the default image. But, if you apply a Google Cloud Marketplace image for a control plane machine, usage costs do apply.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String. The name of Google Cloud project where the image is located.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      osImage:
+        name:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the custom RHCOS image that the installation program is to use to boot control plane machines. If you use <code>controlPlane.platform.gcp.osImage.project</code>, this field is required.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String. The name of the RHCOS image.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      osImage:
+        project:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional. By default, the installation program downloads and installs the RHCOS image that is used to boot compute machines. You can override the default behavior by specifying the location of a custom RHCOS image that the installation program is to use for compute machines only.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String. The name of Google Cloud project where the image is located.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      osImage:
+        name:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the custom RHCOS image that the installation program is to use to boot compute machines. If you use <code>compute.platform.gcp.osImage.project</code>, this field is required.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String. The name of the RHCOS image.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      serviceAccount:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Specifies the email address of a Google Cloud service account to be used during installations. This service account is used to provision compute machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String. The email address of the service account.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    firewallRulesManagement:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Specifies the firewall management policy for the cluster. <code>Managed</code> indicates that the firewall rules will be created and destroyed by the cluster. <code>Unmanaged</code> indicates that the user should create and destroy the firewall rules. For shared VPC installation, if the credential you provided the installation program doesn&#8217;t have firewall rules management permissions, the <code>firewallRulesManagement</code> parameter can be absent or set to <code>Unmanaged</code>. For non-shared VPC installation, if the credential you provided the installation program doesn&#8217;t have firewall rules management permissions, the <code>firewallRulesManagement</code> parameter must be set to <code>Unmanaged</code>. If you manage your own firewall rules, you must pre-configure the VPC network and the firewall rules before the installation.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String. <code>Managed</code> or <code>Unmanaged</code>. The default value is <code>Managed</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    network:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the existing Virtual Private Cloud (VPC) where you want to deploy your cluster. If you want to deploy your cluster into a shared VPC, you must set <code>platform.gcp.networkProjectID</code> with the name of the Google Cloud project that contains the shared VPC.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    networkProjectID:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional. The name of the Google Cloud project that contains the shared VPC where you want to deploy your cluster.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    projectID:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the Google Cloud project where the installation program installs the cluster.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    dns:
+      privateZone:
+        name:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the private DNS zone. This parameter is only used during shared VPC installations. You can use a private DNS zone in a service project that is distinct from the projects specified by the <code>projectID</code> or <code>networkProjectID</code> parameters.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    dns:
+      privateZone:
+        projectID:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The ID of the project that contains the private zone from the <code>privateZone.name</code> parameter.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    userProvisionedDNS:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Enables user-provisioned DNS instead of the default cluster-provisioned DNS solution. If you use this feature, you must provide your own DNS solution that includes records for <code>api.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code> and <code>*.apps.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>Enabled</code> or <code>Disabled</code>. The default value is <code>Disabled</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    region:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the Google Cloud region that hosts your cluster.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Any valid region name, such as <code>us-central1</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    controlPlaneSubnet:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the existing subnet where you want to deploy your control plane machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The subnet name.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    computeSubnet:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the existing subnet where you want to deploy your compute machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The subnet name.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    defaultMachinePlatform:
+      zones:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The availability zones where the installation program creates machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> A list of valid <a href="https://cloud.google.com/compute/docs/regions-zones#available">Google Cloud availability zones</a>, such as <code>us-central1-a</code>, in a
+<a href="https://yaml.org/spec/1.2/spec.html#sequence//">YAML sequence</a>.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When running your cluster on Google Cloud 64-bit ARM infrastructures, ensure that you use a zone where Ampere Altra Arm CPU&#8217;s are available. You can find which zones are compatible with 64-bit ARM processors in the "Google Cloud availability zones" link.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    defaultMachinePlatform:
+      osDisk:
+        diskSizeGB:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The size of the disk in gigabytes (GB).</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Any size between 16 GB and 65536 GB.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    defaultMachinePlatform:
+      osDisk:
+        diskType:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The <a href="https://cloud.google.com/compute/docs/disks#disk-types">Google Cloud disk type</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The default disk type for all machines. Valid values are <code>pd-balanced</code>, <code>pd-ssd</code>, <code>pd-standard</code>, or <code>hyperdisk-balanced</code>. The default value is <code>pd-ssd</code>. Control plane machines cannot use the <code>pd-standard</code> disk type, so if you specify <code>pd-standard</code> as the default machine platform disk type, you must specify a different disk type using the <code>controlPlane.platform.gcp.osDisk.diskType</code> parameter.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    defaultMachinePlatform:
+      osImage:
+        project:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional. By default, the installation program downloads and installs the RHCOS image that is used to boot control plane and compute machines. You can override the default behavior by specifying the location of a custom RHCOS image that the installation program is to use for both types of machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String. The name of Google Cloud project where the image is located.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    defaultMachinePlatform:
+      osImage:
+        name:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the custom RHCOS image that the installation program is to use to boot control plane and compute machines. If you use <code>platform.gcp.defaultMachinePlatform.osImage.project</code>, this field is required.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String. The name of the RHCOS image.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    defaultMachinePlatform:
+      tags:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional. Additional network tags to add to the control plane and compute machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> One or more strings, for example <code>network-tag1</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    defaultMachinePlatform:
+      type:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The <a href="https://cloud.google.com/compute/docs/machine-types">Google Cloud machine type</a> for control plane and compute machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The Google Cloud machine type, for example <code>n1-standard-4</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    defaultMachinePlatform:
+      osDisk:
+        encryptionKey:
+          kmsKey:
+            name:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the customer managed encryption key to be used for machine disk encryption.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The encryption key name.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    defaultMachinePlatform:
+      osDisk:
+        encryptionKey:
+          kmsKey:
+            keyRing:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the Key Management Service (KMS) key ring to which the KMS key belongs.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The KMS key ring name.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    defaultMachinePlatform:
+      osDisk:
+        encryptionKey:
+          kmsKey:
+            location:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The <a href="https://cloud.google.com/kms/docs/locations">Google Cloud location</a> in which the KMS key ring exists.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The Google Cloud location.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    defaultMachinePlatform:
+      osDisk:
+        encryptionKey:
+          kmsKey:
+            projectID:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The ID of the project in which the KMS key ring exists. This value defaults to the value of the <code>platform.gcp.projectID</code> parameter if it is not set.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The Google Cloud project ID.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    defaultMachinePlatform:
+      osDisk:
+        encryptionKey:
+          kmsKeyServiceAccount:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The Google Cloud service account used for the encryption request for control plane and compute machines. If absent, the Compute Engine default service account is used. For more information about Google Cloud service accounts, see Google&#8217;s documentation on <a href="https://cloud.google.com/compute/docs/access/service-accounts#compute_engine_service_account">service accounts</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The Google Cloud service account email, for example <code>&lt;service_account_name&gt;@&lt;project_id&gt;.iam.gserviceaccount.com</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    defaultMachinePlatform:
+      secureBoot:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Whether to enable Shielded VM secure boot for all machines in the cluster. Shielded VMs have additional security protocols such as secure boot, firmware and integrity monitoring, and rootkit protection. For more information on Shielded VMs, see Google&#8217;s documentation on <a href="https://cloud.google.com/shielded-vm">Shielded VMs</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>Enabled</code> or <code>Disabled</code>. The default value is <code>Disabled</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    defaultMachinePlatform:
+      confidentialCompute:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Whether to use Confidential VMs for all machines in the cluster. Confidential VMs provide encryption for data during processing. For more information on Confidential computing, see Google&#8217;s documentation about <a href="https://cloud.google.com/confidential-computing">Confidential Computing</a>.</p>
+</div>
+<div class="paragraph">
+<p>Supported values are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Enabled</code>, which automatically selects a Confidential Computing platform</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>Enabled</code> value selects Confidential Computing with AMD Secure Encrypted Virtualization (AMD SEV), which is deprecated.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p><code>Disabled</code>, which disables Confidential Computing</p>
+</li>
+<li>
+<p><code>AMDEncryptedVirtualizationNestedPaging</code>, which enables Confidential Computing with AMD Secure Encrypted Virtualization Secure Nested Paging (AMD SEV-SNP)</p>
+</li>
+<li>
+<p><code>AMDEncryptedVirtualization</code>, which enables Confidential Computing with AMD Secure Encrypted Virtualization (AMD SEV)</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The use of Confidential Computing with AMD Secure Encrypted Virtualization (AMD SEV) has been deprecated and will be removed in a future release.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p><code>IntelTrustedDomainExtensions</code>, which enables Confidential Computing with Intel Trusted Domain Extensions (Intel TDX)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you specify any value other than <code>Disabled</code>, you must set <code>platform.gcp.defaultMachinePlatform.onHostMaintenance</code> to <code>Terminate</code>, and you must specify a region and machine type that support Confidential Computing. For more information, see Google&#8217;s documentation about <a href="https://cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-type-cpu-zone">Supported configurations</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>platform:
+  gcp:
+    defaultMachinePlatform:
+      onHostMaintenance:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Specifies the behavior of all VMs during a host maintenance event, such as a software or hardware update. For Confidential VMs, this parameter must be set to <code>Terminate</code>. Confidential VMs do not support live VM migration.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>Terminate</code> or <code>Migrate</code>. The default value is <code>Migrate</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      osDisk:
+        encryptionKey:
+          kmsKey:
+            name:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the customer managed encryption key to be used for control plane machine disk encryption.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The encryption key name.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      osDisk:
+        encryptionKey:
+          kmsKey:
+            keyRing:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>For control plane machines, the name of the KMS key ring to which the KMS key belongs.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The KMS key ring name.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      osDisk:
+        encryptionKey:
+          kmsKey:
+            location:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>For control plane machines, the Google Cloud location in which the key ring exists. For more information about KMS locations, see Google&#8217;s documentation on <a href="https://cloud.google.com/kms/docs/locations">Cloud KMS locations</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The Google Cloud location for the key ring.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      osDisk:
+        encryptionKey:
+          kmsKey:
+            projectID:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>For control plane machines, the ID of the project in which the KMS key ring exists. This value defaults to the VM project ID if not set.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The Google Cloud project ID.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      osDisk:
+        encryptionKey:
+          kmsKeyServiceAccount:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The Google Cloud service account used for the encryption request for control plane machines. If absent, the Compute Engine default service account is used. For more information about Google Cloud service accounts, see Google&#8217;s documentation on <a href="https://cloud.google.com/compute/docs/access/service-accounts#compute_engine_service_account">service accounts</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The Google Cloud service account email, for example <code>&lt;service_account_name&gt;@&lt;project_id&gt;.iam.gserviceaccount.com</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      osDisk:
+        diskSizeGB:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The size of the disk in gigabytes (GB). This value applies to control plane machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Any integer between 16 and 65536.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      osDisk:
+        diskType:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The <a href="https://cloud.google.com/compute/docs/disks#disk-types">Google Cloud disk type</a> for control plane machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Valid values are <code>pd-balanced</code>, <code>pd-ssd</code>, or <code>hyperdisk-balanced</code>. The default value is <code>pd-ssd</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      tags:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional. Additional network tags to add to the control plane machines. If set, this parameter overrides the <code>platform.gcp.defaultMachinePlatform.tags</code> parameter for control plane machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> One or more strings, for example <code>control-plane-tag1</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      type:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The <a href="https://cloud.google.com/compute/docs/machine-types">Google Cloud machine type</a> for control plane machines. If set, this parameter overrides the <code>platform.gcp.defaultMachinePlatform.type</code> parameter.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The Google Cloud machine type, for example <code>n1-standard-4</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      zones:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The availability zones where the installation program creates control plane machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> A list of valid <a href="https://cloud.google.com/compute/docs/regions-zones#available">Google Cloud availability zones</a>, such as <code>us-central1-a</code>, in a
+<a href="https://yaml.org/spec/1.2/spec.html#sequence//">YAML sequence</a>.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When running your cluster on Google Cloud 64-bit ARM infrastructures, ensure that you use a zone where Ampere Altra Arm CPU&#8217;s are available. You can find which zones are compatible with 64-bit ARM processors in the "Google Cloud availability zones" link.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      secureBoot:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Whether to enable Shielded VM secure boot for control plane machines. Shielded VMs have additional security protocols such as secure boot, firmware and integrity monitoring, and rootkit protection. For more information on Shielded VMs, see Google&#8217;s documentation on <a href="https://cloud.google.com/shielded-vm">Shielded VMs</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>Enabled</code> or <code>Disabled</code>. The default value is <code>Disabled</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      confidentialCompute:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Whether to use Confidential VMs for control plane machines. Confidential VMs provide encryption for data during processing. For more information on Confidential computing, see Google&#8217;s documentation about <a href="https://cloud.google.com/confidential-computing">Confidential Computing</a>.</p>
+</div>
+<div class="paragraph">
+<p>Supported values are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Enabled</code>, which automatically selects a Confidential Computing platform</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>Enabled</code> value selects Confidential Computing with AMD Secure Encrypted Virtualization (AMD SEV), which is deprecated.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p><code>Disabled</code>, which disables Confidential Computing</p>
+</li>
+<li>
+<p><code>AMDEncryptedVirtualizationNestedPaging</code>, which enables Confidential Computing with AMD Secure Encrypted Virtualization Secure Nested Paging (AMD SEV-SNP)</p>
+</li>
+<li>
+<p><code>AMDEncryptedVirtualization</code>, which enables Confidential Computing with AMD Secure Encrypted Virtualization (AMD SEV)</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The use of Confidential Computing with AMD Secure Encrypted Virtualization (AMD SEV) has been deprecated and will be removed in a future release.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p><code>IntelTrustedDomainExtensions</code>, which enables Confidential Computing with Intel Trusted Domain Extensions (Intel TDX)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you specify any value other than <code>Disabled</code>, you must set <code>controlPlane.platform.gcp.defaultMachinePlatform.onHostMaintenance</code> to <code>Terminate</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      onHostMaintenance:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Specifies the behavior of control plane VMs during a host maintenance event, such as a software or hardware update. For Confidential VMs, this parameter must be set to <code>Terminate</code>. Confidential VMs do not support live VM migration.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>Terminate</code> or <code>Migrate</code>. The default value is <code>Migrate</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>controlPlane:
+  platform:
+    gcp:
+      serviceAccount:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Specifies the email address of a Google Cloud service account to be used during installations. This service account is used to provision control plane machines.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In the case of shared VPC installations, when the service account is not provided, the installation program service account must have the <code>resourcemanager.projects.getIamPolicy</code> and <code>resourcemanager.projects.setIamPolicy</code> permissions in the host project.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String. The email address of the service account.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      osDisk:
+        encryptionKey:
+          kmsKey:
+            name:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The name of the customer managed encryption key to be used for compute machine disk encryption.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The encryption key name.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      osDisk:
+        encryptionKey:
+          kmsKey:
+            keyRing:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>For compute machines, the name of the KMS key ring to which the KMS key belongs.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The KMS key ring name.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      osDisk:
+        encryptionKey:
+          kmsKey:
+            location:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>For compute machines, the Google Cloud location in which the key ring exists. For more information about KMS locations, see Google&#8217;s documentation on <a href="https://cloud.google.com/kms/docs/locations">Cloud KMS locations</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The Google Cloud location for the key ring.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      osDisk:
+        encryptionKey:
+          kmsKey:
+            projectID:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>For compute machines, the ID of the project in which the KMS key ring exists. This value defaults to the VM project ID if not set.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The Google Cloud project ID.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      osDisk:
+        encryptionKey:
+          kmsKeyServiceAccount:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The Google Cloud service account used for the encryption request for compute machines. If this value is not set, the Compute Engine default service account is used. For more information about Google Cloud service accounts, see Google&#8217;s documentation on <a href="https://cloud.google.com/compute/docs/access/service-accounts#compute_engine_service_account">service accounts</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The Google Cloud service account email, for example <code>&lt;service_account_name&gt;@&lt;project_id&gt;.iam.gserviceaccount.com</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      osDisk:
+        diskSizeGB:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The size of the disk in gigabytes (GB). This value applies to compute machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Any integer between 16 and 65536.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      osDisk:
+        diskType:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The <a href="https://cloud.google.com/compute/docs/disks#disk-types">Google Cloud disk type</a> for compute machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> Valid values are <code>pd-balanced</code>, <code>pd-ssd</code>, <code>pd-standard</code>, or <code>hyperdisk-balanced</code>. The default value is <code>pd-ssd</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      tags:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional. Additional network tags to add to the compute machines. If set, this parameter overrides the <code>platform.gcp.defaultMachinePlatform.tags</code> parameter for compute machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> One or more strings, for example <code>compute-network-tag1</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      type:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The <a href="https://cloud.google.com/compute/docs/machine-types">Google Cloud machine type</a> for compute machines. If set, this parameter overrides the <code>platform.gcp.defaultMachinePlatform.type</code> parameter.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> The Google Cloud machine type, for example <code>n1-standard-4</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      zones:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>The availability zones where the installation program creates compute machines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> A list of valid <a href="https://cloud.google.com/compute/docs/regions-zones#available">Google Cloud availability zones</a>, such as <code>us-central1-a</code>, in a
+<a href="https://yaml.org/spec/1.2/spec.html#sequence//">YAML sequence</a>.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When running your cluster on Google Cloud 64-bit ARM infrastructures, ensure that you use a zone where Ampere Altra Arm CPU&#8217;s are available. You can find which zones are compatible with 64-bit ARM processors in the "Google Cloud availability zones" link.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      secureBoot:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Whether to enable Shielded VM secure boot for compute machines. Shielded VMs have additional security protocols such as secure boot, firmware and integrity monitoring, and rootkit protection. For more information on Shielded VMs, see Google&#8217;s documentation on <a href="https://cloud.google.com/shielded-vm">Shielded VMs</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>Enabled</code> or <code>Disabled</code>. The default value is <code>Disabled</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      confidentialCompute:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Whether to use Confidential VMs for compute machines. Confidential VMs provide encryption for data during processing. For more information on Confidential computing, see Google&#8217;s documentation on <a href="https://cloud.google.com/confidential-computing">Confidential computing</a>.</p>
+</div>
+<div class="paragraph">
+<p>Supported values are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Enabled</code>, which automatically selects a Confidential Computing platform</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>Enabled</code> value selects Confidential Computing with AMD Secure Encrypted Virtualization (AMD SEV), which is deprecated.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p><code>Disabled</code>, which disables Confidential Computing</p>
+</li>
+<li>
+<p><code>AMDEncryptedVirtualizationNestedPaging</code>, which enables Confidential Computing with AMD Secure Encrypted Virtualization Secure Nested Paging (AMD SEV-SNP)</p>
+</li>
+<li>
+<p><code>AMDEncryptedVirtualization</code>, which enables Confidential Computing with AMD Secure Encrypted Virtualization (AMD SEV)</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The use of Confidential Computing with AMD Secure Encrypted Virtualization (AMD SEV) has been deprecated and will be removed in a future release.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p><code>IntelTrustedDomainExtensions</code>, which enables Confidential Computing with Intel Trusted Domain Extensions (Intel TDX)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you specify any value other than <code>Disabled</code>, you must set <code>compute.platform.gcp.onHostMaintenance</code> to <code>Terminate</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> String.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>compute:
+  platform:
+    gcp:
+      onHostMaintenance:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Specifies the behavior of compute VMs during a host maintenance event, such as a software or hardware update. For Confidential VMs, this parameter must be set to <code>Terminate</code>. Confidential VMs do not support live VM migration.</p>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>Terminate</code> or <code>Migrate</code>. The default value is <code>Migrate</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect4">
 <h5 id="installation-configuration-parameters-additional-vsphere_installation-config-parameters-vsphere">Additional VMware vSphere configuration parameters</h5>
@@ -3594,7 +5940,7 @@ Supported values are <code>3</code>, or <code>1</code> when deploying single-nod
 <p>Additional VMware vSphere configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 519. Additional VMware vSphere cluster parameters</caption>
+<caption class="title">Table 70. Additional VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4170,7 +6516,7 @@ If you do not specify a value, the installation program installs the resources i
 <p>The following table lists each deprecated vSphere configuration parameter:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 520. Deprecated VMware vSphere cluster parameters</caption>
+<caption class="title">Table 71. Deprecated VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4417,7 +6763,7 @@ If you do not specify a value, the installation program installs the resources i
 <p>Optional VMware vSphere machine pool configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 521. Optional VMware vSphere machine pool parameters</caption>
+<caption class="title">Table 72. Optional VMware vSphere machine pool parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4600,12 +6946,12 @@ If you do not specify a value, the installation program installs the resources i
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a> | ↑ Up: <a href="_configure.html">Configure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="change-the-installed-file-system-configuration-for-new-nodes-con_change-the-installed-file-system-configuration-for-new-nodes.html">Change the installed file system configuration for new nodes</a> →</p>
+<p>← Previous: <a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 15:58:47 +0100
+Last updated 2026-10-12 13:29:35 +0100
 </div>
 </div>
 <style>

@@ -568,10 +568,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="compare-platform-options-con_compare-platform-options.html">Compare platform options</a>
 </li>
-<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
-</li>
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
@@ -582,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -611,6 +607,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_install.html">Install</a>
 <ul class="sectlevel2">
+<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
+</li>
+<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
+</li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
 <li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
@@ -674,7 +676,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
@@ -846,7 +848,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-registry-allowlists-and-blocks-con_configure-registry-allowlists-and-blocks.html">Configure registry allowlists and blocks</a>
 </li>
-<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">About adding registries that allow image short names</a>
+<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">Configure short-name search registries</a>
 </li>
 <li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
 </li>
@@ -908,8 +910,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
 </li>
-<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
-</li>
 <li><a href="change-the-installed-file-system-configuration-for-new-nodes-con_change-the-installed-file-system-configuration-for-new-nodes.html">Change the installed file system configuration for new nodes</a>
 </li>
 <li><a href="change-the-installed-raid-configuration-for-new-nodes-con_change-the-installed-raid-configuration-for-new-nodes.html">Change the installed RAID configuration for new nodes</a>
@@ -946,7 +946,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1057,11 +1057,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
+</li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1241,19 +1267,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
-</li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
-</li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
-</li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
-</li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
-</li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1485,6 +1499,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
 </li>
+<li><a href="graceful-shutdown-cluster-intro_graceful-cluster-shutdown.html">Shutting down the cluster gracefully</a>
+</li>
+<li><a href="graceful-restart-cluster-intro_graceful-cluster-restart.html">Restarting the cluster gracefully</a>
+</li>
+<li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernating an Red&#160;Hat OpenShift Container Platform cluster</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
@@ -1496,6 +1516,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="recovering-unhealthy-etcd-cluster-for-hosted-control-planes-con_recovering-unhealthy-etcd-cluster-for-hosted-control-planes.html">Recovering an unhealthy etcd cluster for hosted control planes</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-a-hosted-cluster-intro_backup-and-restore-etcd-on-a-hosted-cluster.html">Backing up and restoring etcd on a hosted cluster</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a>
+</li>
+<li><a href="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot.html">Backing up etcd data for hosted control planes by using the etcd snapshot method</a>
+</li>
+<li><a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a>
 </li>
 <li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
 </li>
@@ -1509,8 +1539,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
@@ -1523,15 +1551,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
+<li><a href="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data.html">Backing up and restoring etcd data</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
+<li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replacing an unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
@@ -1627,13 +1655,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html">Restoring an etcd snapshot on a hosted cluster</a>
+<li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-restore_etcd-best-practices-restore-etcd-data.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replacing a healthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1643,7 +1667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1669,7 +1693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#understanding-agent-install_prepare-to-install-with-agent-based-installer">Understand Agent-based Installer</a></li><li class="level-5"><a href="#agent-based-installer-workflow_prepare-to-install-with-agent-based-installer">Agent-based Installer workflow</a></li><li class="level-5"><a href="#agent-based-installer-recommended-resources_prepare-to-install-with-agent-based-installer">Recommended resources for topologies</a></li><li class="level-5"><a href="#agent-based-installer-supported-platforms_prepare-to-install-with-agent-based-installer">Supported platforms</a></li><li class="level-5"><a href="#agent-installer-fips-compliance_prepare-to-install-with-agent-based-installer">About FIPS compliance</a></li><li class="level-5"><a href="#agent-installer-configuring-fips-compliance_prepare-to-install-with-agent-based-installer">Configure FIPS through the Agent-based Installer</a></li><li class="level-5"><a href="#agent-host-config_prepare-to-install-with-agent-based-installer">Host configuration</a></li><li class="level-6"><a href="#agent-host-roles_prepare-to-install-with-agent-based-installer">Host roles</a></li><li class="level-6"><a href="#root-device-hints_prepare-to-install-with-agent-based-installer">About root device hints</a></li><li class="level-5"><a href="#agent-install-networking_prepare-to-install-with-agent-based-installer">About networking</a></li><li class="level-6"><a href="#agent-install-networking-ports_prepare-to-install-with-agent-based-installer">Port requirements for the rendezvous host</a></li><li class="level-6"><a href="#agent-install-networking-DHCP_prepare-to-install-with-agent-based-installer">DHCP</a></li><li class="level-6"><a href="#agent-install-networking-static_prepare-to-install-with-agent-based-installer">Static networking</a></li><li class="level-5"><a href="#installation-requirements-platform-none_prepare-to-install-with-agent-based-installer">Requirements for a cluster using the platform &quot;none&quot; option</a></li><li class="level-6"><a href="#agent-install-dns-none_prepare-to-install-with-agent-based-installer">Platform &quot;none&quot; DNS requirements</a></li><li class="level-6"><a href="#agent-install-load-balancing-none_prepare-to-install-with-agent-based-installer">Platform &quot;none&quot; Load balancing requirements</a></li><li class="level-5"><a href="#installing-ocp-agent-local-arbiter-node_prepare-to-install-with-agent-based-installer">About an arbiter node</a></li><li class="level-5"><a href="#agent-install-sample-config-bonds-vlans_prepare-to-install-with-agent-based-installer">Example: Bonds and VLAN interface node network configuration</a></li><li class="level-5"><a href="#agent-install-sample-config-bond-sriov_prepare-to-install-with-agent-based-installer">Example: Bonds and SR-IOV dual-NIC node network configuration</a></li><li class="level-5"><a href="#installation-bare-metal-agent-installer-config-yaml_prepare-to-install-with-agent-based-installer">Sample install-config.yaml file for bare metal</a></li><li class="level-5"><a href="#validations-before-agent-iso-creation_prepare-to-install-with-agent-based-installer">Validation checks before agent ISO creation</a></li><li class="level-6"><a href="#agent-validations-ztp_prepare-to-install-with-agent-based-installer">Validation checks for ZTP manifests</a></li><li class="level-5"><a href="#installation-configuration-parameters_installation-config-parameters-agent">Available installation configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-required_installation-config-parameters-agent">Required configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-network_installation-config-parameters-agent">Network configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional_installation-config-parameters-agent">Optional configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional-aws_installation-config-parameters-agent">Optional AWS configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-additional-bare_installation-config-parameters-agent">Additional bare metal configuration parameters for the Agent-based Installer</a></li><li class="level-6"><a href="#installation-configuration-parameters-additional-gcp_installation-config-parameters-agent">Additional Google Cloud configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-additional-vsphere_installation-config-parameters-agent">Additional VMware vSphere configuration parameters</a></li><li class="level-6"><a href="#deprecated-parameters-vsphere_installation-config-parameters-agent">Deprecated VMware vSphere configuration parameters</a></li><li class="level-5"><a href="#agent-configuration-parameters_prepare-to-install-with-agent-based-installer">Available Agent configuration parameters</a></li><li class="level-6"><a href="#agent-configuration-parameters-required_prepare-to-install-with-agent-based-installer">Required configuration parameters</a></li><li class="level-6"><a href="#agent-configuration-parameters-optional_prepare-to-install-with-agent-based-installer">Optional configuration parameters</a></li><li class="level-4"><a href="#install-a-cluster-with-agent-based-installer-basic-intro_install-a-cluster-with-agent-based-installer-basic">Install a cluster with Agent-based Installer (basic)</a></li><li class="level-5"><a href="#prerequisites_install-a-cluster-with-agent-based-installer-basic">Prerequisites for installing a cluster with the Agent-based Installer</a></li><li class="level-5"><a href="#installing-ocp-agent-retrieve_install-a-cluster-with-agent-based-installer-basic">Download the Agent-based Installer</a></li><li class="level-5"><a href="#installing-ocp-agent-basic-inputs_install-a-cluster-with-agent-based-installer-basic">Creating the configuration inputs</a></li><li class="level-5"><a href="#installing-ocp-agent-boot_install-a-cluster-with-agent-based-installer-basic">Create and boot the agent image</a></li><li class="level-5"><a href="#installing-ocp-agent-tui_install-a-cluster-with-agent-based-installer-basic">Verifying that the current installation host can pull release images</a></li><li class="level-5"><a href="#installing-ocp-agent-verify_installing-with-agent-basic">Track and verify installation progress</a></li><li class="level-5"><a href="#installing-ocp-agent-gather-log_install-a-cluster-with-agent-based-installer-basic">Gather log data from a failed Agent-based installation</a></li><li class="level-4"><a href="#install-a-cluster-with-agent-based-installer-advanced-intro_install-a-cluster-with-agent-based-installer-advanced">Install a cluster with Agent-based Installer (advanced)</a></li><li class="level-5"><a href="#prerequisites_install-a-cluster-with-agent-based-installer-advanced">Prerequisites for installing a cluster with the Agent-based Installer</a></li><li class="level-5"><a href="#installing-ocp-agent-retrieve_install-a-cluster-with-agent-based-installer-advanced">Download the Agent-based Installer</a></li><li class="level-5"><a href="#agent-install-verifying-architectures_install-a-cluster-with-agent-based-installer-advanced">Verifying the supported architecture for an Agent-based installation</a></li><li class="level-5"><a href="#installing-ocp-agent-inputs_install-a-cluster-with-agent-based-installer-advanced">Create the preferred configuration inputs</a></li><li class="level-5"><a href="#installing-ocp-agent-opt-manifests_install-a-cluster-with-agent-based-installer-advanced">Creating additional manifest files</a></li><li class="level-6"><a href="#installing-ocp-agent-manifest-folder_install-a-cluster-with-agent-based-installer-advanced">Creating a directory to contain additional manifests</a></li><li class="level-6"><a href="#creating-manifest-file-customized-br-ex-bridge_installing-with-agent-based-installer">Creating a manifest object that includes a customized br-ex bridge</a></li><li class="level-6"><a href="#installation-user-infra-machines-advanced-disk_installing-with-agent-based-installer">Creating disk partitions</a></li><li class="level-6"><a href="#installing-ocp-agent-ztp_install-a-cluster-with-agent-based-installer-advanced">Use ZTP manifests</a></li><li class="level-6"><a href="#installing-ocp-agent-encrypt_install-a-cluster-with-agent-based-installer-advanced">Encrypting the disk</a></li><li class="level-6"><a href="#installing-ocp-agent-cluster-network-mtu_install-a-cluster-with-agent-based-installer-advanced">Configuring cluster network MTU at installation time</a></li><li class="level-5"><a href="#installing-ocp-agent-boot_install-a-cluster-with-agent-based-installer-advanced">Create and boot the agent image</a></li><li class="level-5"><a href="#installing-ocp-agent-ibm-z-kvm_install-a-cluster-with-agent-based-installer-advanced">Adding IBM Z agents with RHEL KVM</a></li><li class="level-5"><a href="#installing-ocp-agent-tui_install-a-cluster-with-agent-based-installer-advanced">Verifying that the current installation host can pull release images</a></li><li class="level-5"><a href="#installing-ocp-agent-verify_install-a-cluster-with-agent-based-installer-advanced">Track and verify installation progress</a></li><li class="level-5"><a href="#sample-ztp-custom-resources_install-a-cluster-with-agent-based-installer-advanced">Sample GitOps ZTP custom resources</a></li><li class="level-5"><a href="#installing-ocp-agent-gather-log_install-a-cluster-with-agent-based-installer-advanced">Gather log data from a failed Agent-based installation</a></li><li class="level-4"><a href="#install-an-ove-cluster-with-agent-based-installer-intro_install-an-ove-cluster-with-agent-based-installer">Install an OVE cluster with Agent-based Installer</a></li><li class="level-5"><a href="#virt-installing-ove-advantages_install-an-ove-cluster-with-agent-based-installer">Installation method advantages</a></li><li class="level-5"><a href="#virt-installing-ove-iso_install-an-ove-cluster-with-agent-based-installer">Downloading the installation ISO</a></li><li class="level-5"><a href="#virt-installing-ove-booting_install-an-ove-cluster-with-agent-based-installer">Mounting the ISO and booting the rendezvous node</a></li><li class="level-5"><a href="#virt-installing-ove-console-initial_install-an-ove-cluster-with-agent-based-installer">Configuring cluster details and choosing Operators to install</a></li><li class="level-5"><a href="#virt-installing-ove-hosts_install-an-ove-cluster-with-agent-based-installer">Booting the remaining cluster hosts</a></li><li class="level-5"><a href="#virt-installing-ove-console-final_install-an-ove-cluster-with-agent-based-installer">Completing cluster configuration and initiating the installation</a></li><li class="level-4"><a href="#prepare-pxe-boot-assets-for-agent-based-installation-intro_prepare-pxe-boot-assets-for-agent-based-installation">Prepare PXE boot assets for Agent-based installation</a></li><li class="level-5"><a href="#prerequisites_prepare-pxe-assets-agent">Prerequisites for preparing PXE assets</a></li><li class="level-5"><a href="#installing-ocp-agent-retrieve_prepare-pxe-boot-assets-for-agent-based-installation">Download the Agent-based Installer</a></li><li class="level-5"><a href="#installing-ocp-agent-inputs_prepare-pxe-assets-agent">Create the preferred configuration inputs</a></li><li class="level-5"><a href="#pxe-assets-ocp-agent_prepare-pxe-boot-assets-for-agent-based-installation">Creating the PXE assets</a></li><li class="level-5"><a href="#installing-ocp-agent-ibm-z_prepare-pxe-boot-assets-for-agent-based-installation">Manually adding IBM Z agents</a></li><li class="level-6"><a href="#networking-reqs-ibm-z_prepare-pxe-boot-assets-for-agent-based-installation">Networking requirements for IBM Z</a></li><li class="level-6"><a href="#configuring-network-overrides-ibm_prepare-pxe-boot-assets-for-agent-based-installation">Configuring network overrides in an IBM Z environment</a></li><li class="level-6"><a href="#installing-ocp-agent-ibm-z-zvm_prepare-pxe-boot-assets-for-agent-based-installation">Adding IBM Z agents with z/VM</a></li><li class="level-6"><a href="#installing-ocp-agent-ibm-z-kvm_prepare-pxe-assets-agent">Adding IBM Z agents with RHEL KVM</a></li><li class="level-6"><a href="#adding-ibm-z-lpar-agents_prepare-pxe-boot-assets-for-agent-based-installation">Adding IBM Z agents in a Logical Partition (LPAR)</a></li><li class="level-4"><a href="#install-using-iscsi-with-agent-based-installer-intro_install-using-iscsi-with-agent-based-installer">Install using iSCSI with Agent-based Installer</a></li><li class="level-5"><a href="#iscsi-boot-requirements_install-using-iscsi-with-agent-based-installer">Requirements for iSCSI booting</a></li><li class="level-5"><a href="#prerequisites_install-using-iscsi-with-agent-based-installer">Prerequisites for installing a cluster with the Agent-based Installer</a></li><li class="level-5"><a href="#installing-ocp-agent-retrieve_install-using-iscsi-with-agent-based-installer">Download the Agent-based Installer</a></li><li class="level-5"><a href="#installing-ocp-agent-inputs_installing-using-iscsi">Create the preferred configuration inputs</a></li><li class="level-5"><a href="#installing-ocp-agent-iscsi-files_install-using-iscsi-with-agent-based-installer">Creating the installation files</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#understanding-agent-install_prepare-to-install-with-agent-based-installer">Understand Agent-based Installer</a></li><li class="level-5"><a href="#agent-based-installer-workflow_prepare-to-install-with-agent-based-installer">Agent-based Installer workflow</a></li><li class="level-5"><a href="#agent-based-installer-recommended-resources_prepare-to-install-with-agent-based-installer">Recommended resources for topologies</a></li><li class="level-5"><a href="#agent-based-installer-supported-platforms_prepare-to-install-with-agent-based-installer">Supported platforms</a></li><li class="level-5"><a href="#agent-installer-fips-compliance_prepare-to-install-with-agent-based-installer">About FIPS compliance</a></li><li class="level-5"><a href="#agent-installer-configuring-fips-compliance_prepare-to-install-with-agent-based-installer">Configure FIPS through the Agent-based Installer</a></li><li class="level-5"><a href="#agent-host-config_prepare-to-install-with-agent-based-installer">Host configuration</a></li><li class="level-6"><a href="#agent-host-roles_prepare-to-install-with-agent-based-installer">Host roles</a></li><li class="level-6"><a href="#root-device-hints_prepare-to-install-with-agent-based-installer">About root device hints</a></li><li class="level-5"><a href="#agent-install-networking_prepare-to-install-with-agent-based-installer">About networking</a></li><li class="level-6"><a href="#agent-install-networking-ports_prepare-to-install-with-agent-based-installer">Port requirements for the rendezvous host</a></li><li class="level-6"><a href="#agent-install-networking-DHCP_prepare-to-install-with-agent-based-installer">DHCP</a></li><li class="level-6"><a href="#agent-install-networking-static_prepare-to-install-with-agent-based-installer">Static networking</a></li><li class="level-5"><a href="#installation-requirements-platform-none_prepare-to-install-with-agent-based-installer">Requirements for a cluster using the platform &quot;none&quot; option</a></li><li class="level-6"><a href="#agent-install-dns-none_prepare-to-install-with-agent-based-installer">Platform &quot;none&quot; DNS requirements</a></li><li class="level-6"><a href="#agent-install-load-balancing-none_prepare-to-install-with-agent-based-installer">Platform &quot;none&quot; Load balancing requirements</a></li><li class="level-5"><a href="#installing-ocp-agent-local-arbiter-node_prepare-to-install-with-agent-based-installer">About an arbiter node</a></li><li class="level-5"><a href="#agent-install-sample-config-bonds-vlans_prepare-to-install-with-agent-based-installer">Example: Bonds and VLAN interface node network configuration</a></li><li class="level-5"><a href="#agent-install-sample-config-bond-sriov_prepare-to-install-with-agent-based-installer">Example: Bonds and SR-IOV dual-NIC node network configuration</a></li><li class="level-5"><a href="#installation-bare-metal-agent-installer-config-yaml_prepare-to-install-with-agent-based-installer">Sample install-config.yaml file for bare metal</a></li><li class="level-5"><a href="#validations-before-agent-iso-creation_prepare-to-install-with-agent-based-installer">Validation checks before agent ISO creation</a></li><li class="level-6"><a href="#agent-validations-ztp_prepare-to-install-with-agent-based-installer">Validation checks for ZTP manifests</a></li><li class="level-5"><a href="#installation-configuration-parameters_installation-config-parameters-agent">Available installation configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-required_installation-config-parameters-agent">Required configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-network_installation-config-parameters-agent">Network configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional_installation-config-parameters-agent">Optional configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-optional-aws_installation-config-parameters-agent">Optional AWS configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-additional-bare_installation-config-parameters-agent">Additional bare metal configuration parameters for the Agent-based Installer</a></li><li class="level-6"><a href="#installation-configuration-parameters-additional-gcp_installation-config-parameters-agent">Additional Google Cloud configuration parameters</a></li><li class="level-6"><a href="#installation-configuration-parameters-additional-vsphere_installation-config-parameters-agent">Additional VMware vSphere configuration parameters</a></li><li class="level-6"><a href="#deprecated-parameters-vsphere_installation-config-parameters-agent">Deprecated VMware vSphere configuration parameters</a></li><li class="level-5"><a href="#agent-configuration-parameters_prepare-to-install-with-agent-based-installer">Available Agent configuration parameters</a></li><li class="level-6"><a href="#agent-configuration-parameters-required_prepare-to-install-with-agent-based-installer">Required configuration parameters</a></li><li class="level-6"><a href="#agent-configuration-parameters-optional_prepare-to-install-with-agent-based-installer">Optional configuration parameters</a></li><li class="level-4"><a href="#install-a-cluster-with-agent-based-installer-basic-intro_install-a-cluster-with-agent-based-installer-basic">Install a cluster with Agent-based Installer (basic)</a></li><li class="level-5"><a href="#prerequisites_install-a-cluster-with-agent-based-installer-basic">Prerequisites for installing a cluster with the Agent-based Installer</a></li><li class="level-5"><a href="#installing-ocp-agent-retrieve_install-a-cluster-with-agent-based-installer-basic">Download the Agent-based Installer</a></li><li class="level-5"><a href="#installing-ocp-agent-basic-inputs_install-a-cluster-with-agent-based-installer-basic">Creating the configuration inputs</a></li><li class="level-5"><a href="#installing-ocp-agent-boot_install-a-cluster-with-agent-based-installer-basic">Create and boot the agent image</a></li><li class="level-5"><a href="#installing-ocp-agent-tui_install-a-cluster-with-agent-based-installer-basic">Verifying that the current installation host can pull release images</a></li><li class="level-5"><a href="#installing-ocp-agent-verify_installing-with-agent-basic">Track and verify installation progress</a></li><li class="level-5"><a href="#installing-ocp-agent-gather-log_install-a-cluster-with-agent-based-installer-basic">Gather log data from a failed Agent-based installation</a></li><li class="level-4"><a href="#install-a-cluster-with-agent-based-installer-advanced-intro_install-a-cluster-with-agent-based-installer-advanced">Install a cluster with Agent-based Installer (advanced)</a></li><li class="level-5"><a href="#prerequisites_install-a-cluster-with-agent-based-installer-advanced">Prerequisites for installing a cluster with the Agent-based Installer</a></li><li class="level-5"><a href="#installing-ocp-agent-retrieve_install-a-cluster-with-agent-based-installer-advanced">Download the Agent-based Installer</a></li><li class="level-5"><a href="#agent-install-verifying-architectures_install-a-cluster-with-agent-based-installer-advanced">Verifying the supported architecture for an Agent-based installation</a></li><li class="level-5"><a href="#installing-ocp-agent-inputs_install-a-cluster-with-agent-based-installer-advanced">Create the preferred configuration inputs</a></li><li class="level-5"><a href="#installing-ocp-agent-opt-manifests_install-a-cluster-with-agent-based-installer-advanced">Creating additional manifest files</a></li><li class="level-6"><a href="#installing-ocp-agent-manifest-folder_install-a-cluster-with-agent-based-installer-advanced">Creating a directory to contain additional manifests</a></li><li class="level-6"><a href="#creating-manifest-file-customized-br-ex-bridge_installing-with-agent-based-installer">Creating a manifest object that includes a customized br-ex bridge</a></li><li class="level-6"><a href="#installation-user-infra-machines-advanced-disk_installing-with-agent-based-installer">Creating disk partitions</a></li><li class="level-6"><a href="#installing-ocp-agent-ztp_install-a-cluster-with-agent-based-installer-advanced">Use ZTP manifests</a></li><li class="level-6"><a href="#installing-ocp-agent-encrypt_install-a-cluster-with-agent-based-installer-advanced">Encrypting the disk</a></li><li class="level-6"><a href="#installing-ocp-agent-cluster-network-mtu_install-a-cluster-with-agent-based-installer-advanced">Configuring cluster network MTU at installation time</a></li><li class="level-5"><a href="#installing-ocp-agent-boot_install-a-cluster-with-agent-based-installer-advanced">Create and boot the agent image</a></li><li class="level-5"><a href="#installing-ocp-agent-ibm-z-kvm_install-a-cluster-with-agent-based-installer-advanced">Adding IBM Z agents with RHEL KVM</a></li><li class="level-5"><a href="#installing-ocp-agent-tui_install-a-cluster-with-agent-based-installer-advanced">Verifying that the current installation host can pull release images</a></li><li class="level-5"><a href="#installing-ocp-agent-verify_install-a-cluster-with-agent-based-installer-advanced">Track and verify installation progress</a></li><li class="level-5"><a href="#sample-ztp-custom-resources_install-a-cluster-with-agent-based-installer-advanced">Sample GitOps ZTP custom resources</a></li><li class="level-5"><a href="#installing-ocp-agent-gather-log_install-a-cluster-with-agent-based-installer-advanced">Gather log data from a failed Agent-based installation</a></li><li class="level-4"><a href="#install-an-ove-cluster-with-agent-based-installer-intro_install-an-ove-cluster-with-agent-based-installer">Install an OVE cluster with Agent-based Installer</a></li><li class="level-5"><a href="#virt-installing-ove-advantages_install-an-ove-cluster-with-agent-based-installer">Installation method advantages</a></li><li class="level-5"><a href="#virt-installing-ove-iso_install-an-ove-cluster-with-agent-based-installer">Downloading the installation ISO</a></li><li class="level-5"><a href="#virt-installing-ove-booting_install-an-ove-cluster-with-agent-based-installer">Mounting the ISO and booting the rendezvous node</a></li><li class="level-5"><a href="#virt-installing-ove-console-initial_install-an-ove-cluster-with-agent-based-installer">Configuring cluster details and choosing Operators to install</a></li><li class="level-5"><a href="#virt-installing-ove-hosts_install-an-ove-cluster-with-agent-based-installer">Booting the remaining cluster hosts</a></li><li class="level-5"><a href="#virt-installing-ove-console-final_install-an-ove-cluster-with-agent-based-installer">Completing cluster configuration and initiating the installation</a></li><li class="level-4"><a href="#prepare-pxe-boot-assets-for-agent-based-installation-intro_prepare-pxe-boot-assets-for-agent-based-installation">Prepare PXE boot assets for Agent-based installation</a></li><li class="level-5"><a href="#prerequisites_prepare-pxe-assets-agent">Prerequisites for preparing PXE assets</a></li><li class="level-5"><a href="#installing-ocp-agent-retrieve_prepare-pxe-boot-assets-for-agent-based-installation">Download the Agent-based Installer</a></li><li class="level-5"><a href="#installing-ocp-agent-inputs_prepare-pxe-assets-agent">Create the preferred configuration inputs</a></li><li class="level-5"><a href="#pxe-assets-ocp-agent_prepare-pxe-boot-assets-for-agent-based-installation">Creating the PXE assets</a></li><li class="level-5"><a href="#installing-ocp-agent-ibm-z_prepare-pxe-boot-assets-for-agent-based-installation">Manually adding IBM Z agents</a></li><li class="level-6"><a href="#networking-reqs-ibm-z_prepare-pxe-boot-assets-for-agent-based-installation">Networking requirements for IBM Z</a></li><li class="level-6"><a href="#configuring-network-overrides-ibm_prepare-pxe-boot-assets-for-agent-based-installation">Configuring network overrides in an IBM Z environment</a></li><li class="level-6"><a href="#installing-ocp-agent-ibm-z-zvm_prepare-pxe-boot-assets-for-agent-based-installation">Adding IBM Z agents with z/VM</a></li><li class="level-6"><a href="#installing-ocp-agent-ibm-z-kvm_prepare-pxe-assets-agent">Adding IBM Z agents with RHEL KVM</a></li><li class="level-6"><a href="#adding-ibm-z-lpar-agents_prepare-pxe-boot-assets-for-agent-based-installation">Adding IBM Z agents in a Logical Partition (LPAR)</a></li><li class="level-4"><a href="#install-using-iscsi-with-agent-based-installer-intro_install-using-iscsi-with-agent-based-installer">Install using iSCSI with Agent-based Installer</a></li><li class="level-5"><a href="#iscsi-boot-requirements_install-using-iscsi-with-agent-based-installer">Requirements for iSCSI booting</a></li><li class="level-5"><a href="#prerequisites_install-using-iscsi-with-agent-based-installer">Prerequisites for installing a cluster with the Agent-based Installer</a></li><li class="level-5"><a href="#installing-ocp-agent-retrieve_install-using-iscsi-with-agent-based-installer">Download the Agent-based Installer</a></li><li class="level-5"><a href="#installing-ocp-agent-inputs_installing-using-iscsi">Create the preferred configuration inputs</a></li><li class="level-5"><a href="#installing-ocp-agent-iscsi-files_install-using-iscsi-with-agent-based-installer">Creating the installation files</a></li><li class="level-4"><a href="#prepare-an-agent-based-cluster-for-multicluster-engine-intro_prepare-an-agent-based-cluster-for-multicluster-engine">Prepare an Agent-based cluster for multicluster engine</a></li><li class="level-5"><a href="#prerequisites_prepare-an-agent-based-cluster-for-multicluster-engine">Prerequisites</a></li><li class="level-5"><a href="#preparing-an-initial-cluster-deployment-for-mce-disconnected_prepare-an-agent-based-cluster-for-multicluster-engine">Prepare an Agent-based cluster deployment for the multicluster engine for Kubernetes Operator while disconnected</a></li><li class="level-5"><a href="#preparing-an-initial-cluster-deployment-for-mce-connected_prepare-an-agent-based-cluster-for-multicluster-engine">Preparing an Agent-based cluster deployment for the multicluster engine for Kubernetes Operator while connected</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="install-with-agent-based-installer-intro_install-with-agent-based-installer">Install with Agent-based Installer</h3>
@@ -1760,7 +1784,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="Agent-based installer workflow">
 </div>
-<div class="title">Figure 30. Node installation workflow</div>
+<div class="title">Figure 34. Node installation workflow</div>
 </div>
 <div class="paragraph">
 <p>You can install a disconnected Red&#160;Hat OpenShift Container Platform cluster through the <code>openshift-install agent create image</code> subcommand for the following topologies:</p>
@@ -1788,7 +1812,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The following cluster resources are recommended for each topology:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 135. Recommended cluster resources</caption>
+<caption class="title">Table 149. Recommended cluster resources</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -2144,7 +2168,7 @@ hosts:
 <p>The installation program examines the devices in the order it discovers them, and compares the discovered values with the hint values. The installation program uses the first discovered device that matches the hint value. The configuration can combine multiple hints, but a device must match all hints for the installation program to select it.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 136. Subfields</caption>
+<caption class="title">Table 150. Subfields</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2324,7 +2348,7 @@ Do not set the <code>network.machineNetwork.cidr</code> parameter to include thi
 <p>During the discovery and bootstrap phases of an installation, all the hosts connect to the Assisted Service that runs on the rendezvous host. Configure your firewall to allow the following traffic from each host to the rendezvous host:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 137. Ports required to reach the Assisted Service on the rendezvous host</caption>
+<caption class="title">Table 151. Ports required to reach the Assisted Service on the rendezvous host</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2626,7 +2650,7 @@ spec:
 <p>The following DNS records are required for an Red&#160;Hat OpenShift Container Platform cluster using the platform <code>none</code> option and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 138. Required DNS records</caption>
+<caption class="title">Table 152. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -3066,7 +3090,7 @@ worker1.ocp4.example.com.	IN	A	192.168.1.7
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 139. API load balancer</caption>
+<caption class="title">Table 153. API load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -3171,7 +3195,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 140. Application Ingress load balancer</caption>
+<caption class="title">Table 154. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -4128,7 +4152,7 @@ platform:
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 141. Required parameters</caption>
+<caption class="title">Table 155. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4318,7 +4342,7 @@ The cluster name is set to <code>agent-cluster</code> when you do not provide th
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 142. Network parameters</caption>
+<caption class="title">Table 156. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4588,7 +4612,7 @@ The prefix length for an IPv6 block is between <code>0</code> and <code>128</cod
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 143. Optional parameters</caption>
+<caption class="title">Table 157. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5283,7 +5307,7 @@ If you are installing on Google Cloud into a shared virtual private cloud (VPC),
 <p>Optional AWS configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 144. Optional AWS parameters</caption>
+<caption class="title">Table 158. Optional AWS parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6181,7 +6205,7 @@ Configuring these fields at install time eliminates the need to set them as a Da
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 145. Additional bare metal parameters</caption>
+<caption class="title">Table 159. Additional bare metal parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6483,7 +6507,7 @@ The value should be <code>True</code> when using a self-signed certificate for B
 <p>Additional Google Cloud configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 146. Additional Google Cloud parameters</caption>
+<caption class="title">Table 160. Additional Google Cloud parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7853,7 +7877,7 @@ The value should be <code>True</code> when using a self-signed certificate for B
 <p>Additional VMware vSphere configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 147. Additional VMware vSphere cluster parameters</caption>
+<caption class="title">Table 161. Additional VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8341,7 +8365,7 @@ Red&#160;Hat does not support Storage vMotion, so you must disable Storage vMoti
 <p>The following table lists each deprecated vSphere configuration parameter:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 148. Deprecated VMware vSphere cluster parameters</caption>
+<caption class="title">Table 162. Deprecated VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8529,7 +8553,7 @@ Red&#160;Hat does not support Storage vMotion, so you must disable Storage vMoti
 <p>Required Agent configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 149. Required parameters</caption>
+<caption class="title">Table 163. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8604,7 +8628,7 @@ When you do not provide <code>metadata.name</code> through either the <code>inst
 <p>Optional Agent configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 150. Optional parameters</caption>
+<caption class="title">Table 164. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -13492,6 +13516,552 @@ EOF</code></pre>
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="prepare-an-agent-based-cluster-for-multicluster-engine-intro_prepare-an-agent-based-cluster-for-multicluster-engine">Prepare an Agent-based cluster for multicluster engine</h4>
+<div class="paragraph _abstract">
+<p>You can install the multicluster engine Operator and deploy a hub cluster with the Agent-based Installer.</p>
+</div>
+<div class="sect4">
+<h5 id="prerequisites_prepare-an-agent-based-cluster-for-multicluster-engine">Prerequisites</h5>
+<div class="paragraph _abstract">
+<p>Before installing the multicluster engine Operator and deploying a hub cluster with the Agent-based Installer, you must complete several prerequisites.</p>
+</div>
+<div class="paragraph">
+<p>The following prerequisites must be completed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You have read the following documentation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"Cluster lifecycle with multicluster engine operator overview"</p>
+</li>
+<li>
+<p>"Persistent storage using local volumes"</p>
+</li>
+<li>
+<p>"Using GitOps ZTP to provision clusters at the network far edge"</p>
+</li>
+<li>
+<p>"Preparing to install with the Agent-based Installer"</p>
+</li>
+<li>
+<p>"About disconnected installation mirroring"</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>You have access to the internet to obtain the necessary container images.</p>
+</li>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>If you are installing in a disconnected environment, you must have a configured local mirror registry for disconnected installation mirroring.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="preparing-an-initial-cluster-deployment-for-mce-disconnected_prepare-an-agent-based-cluster-for-multicluster-engine">Prepare an Agent-based cluster deployment for the multicluster engine for Kubernetes Operator while disconnected</h5>
+<div class="paragraph _abstract">
+<p>You can mirror the required Red&#160;Hat OpenShift Container Platform container images, the multicluster engine Operator, and the Local Storage Operator (LSO) into your local mirror registry in a disconnected environment.
+Ensure that you note the local DNS hostname and port of your mirror registry.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To mirror your Red&#160;Hat OpenShift Container Platform image repository to your mirror registry, you can use either the <code>oc adm release image</code> or <code>oc mirror</code> command. In this procedure, the <code>oc mirror</code> command is used as an example.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create an <code>&lt;assets_directory&gt;</code> folder to contain valid <code>install-config.yaml</code> and <code>agent-config.yaml</code> files. This directory is used to store all the assets.</p>
+</li>
+<li>
+<p>To mirror an Red&#160;Hat OpenShift Container Platform image repository, the multicluster engine, and the LSO, create a <code>ImageSetConfiguration.yaml</code> file with the following settings:</p>
+<div class="listingblock">
+<div class="title">Example <code>ImageSetConfiguration.yaml</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  kind: ImageSetConfiguration
+  apiVersion: mirror.openshift.io/v2alpha1
+  archiveSize: 4
+  mirror:
+    platform:
+      architectures:
+        - "amd64"
+      channels:
+        - name: stable-{product-version}
+          type: ocp
+    additionalImages:
+      - name: registry.redhat.io/ubi9/ubi:latest
+    operators:
+      - catalog: registry.redhat.io/redhat/redhat-operator-index:v{product-version}
+        packages:
+          - name: multicluster-engine
+          - name: local-storage-operator</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>archiveSize</code></dt>
+<dd>
+<p>Specifies the maximum size, in GiB, of each file within the image set.</p>
+</dd>
+<dt class="hdlist1"><code>channels.name</code></dt>
+<dd>
+<p>Specifies the channel that contains the Red&#160;Hat OpenShift Container Platform images for the version you are installing.</p>
+</dd>
+<dt class="hdlist1"><code>operators.catalog</code></dt>
+<dd>
+<p>Specifies the Operator catalog that contains the Red&#160;Hat OpenShift Container Platform images that you are installing.</p>
+</dd>
+<dt class="hdlist1"><code>packages</code></dt>
+<dd>
+<p>Specifies only certain Operator packages and channels to include in the image set. Remove this field to retrieve all packages in the catalog.
+In this example, a <code>package.name</code> value of <code>multicluster-engine</code> includes the multicluster engine packages and channels, and <code>local-storage-operator</code> includes the LSO packages and channels.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This file is required by the <code>oc mirror</code> command when mirroring content.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>To mirror a specific Red&#160;Hat OpenShift Container Platform image repository, the multicluster engine, and the LSO, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc mirror --dest-tls-verify=false --config ocp-mce-imageset.yaml docker://&lt;your-local-registry-dns-name&gt;:&lt;your-local-registry-port&gt; --v2</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Update the registry and certificate in the <code>install-config.yaml</code> file:</p>
+<div class="listingblock">
+<div class="title">Example <code>imageDigestSources.yaml</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  imageDigestSources:
+    - source: "quay.io/openshift-release-dev/ocp-release"
+      mirrors:
+        - "&lt;your-local-registry-dns-name&gt;:&lt;your-local-registry-port&gt;/openshift/release-images"
+    - source: "quay.io/openshift-release-dev/ocp-v4.0-art-dev"
+      mirrors:
+        - "&lt;your-local-registry-dns-name&gt;:&lt;your-local-registry-port&gt;/openshift/release"
+    - source: "registry.redhat.io/ubi9"
+      mirrors:
+        - "&lt;your-local-registry-dns-name&gt;:&lt;your-local-registry-port&gt;/ubi9"
+    - source: "registry.redhat.io/multicluster-engine"
+      mirrors:
+        - "&lt;your-local-registry-dns-name&gt;:&lt;your-local-registry-port&gt;/multicluster-engine"
+    - source: "registry.redhat.io/rhel8"
+      mirrors:
+        - "&lt;your-local-registry-dns-name&gt;:&lt;your-local-registry-port&gt;/rhel8"
+    - source: "registry.redhat.io/redhat"
+      mirrors:
+        - "&lt;your-local-registry-dns-name&gt;:&lt;your-local-registry-port&gt;/redhat"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Additionally, ensure your certificate is present in the <code>additionalTrustBundle</code> field of the <code>install-config.yaml</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>install-config.yaml</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">additionalTrustBundle: |
+  -----BEGIN CERTIFICATE-----
+  zzzzzzzzzzz
+  -----END CERTIFICATE-------</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>oc mirror</code> command  creates <code>ImageDigestMirrorSet</code> (IDMS) and <code>ImageTagMirrorSet</code> (ITMS) files under <code>working-dir/cluster-resources</code> folder that identifies all the mirrors you need for Red&#160;Hat OpenShift Container Platform and your selected Operators.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Generate the cluster manifests by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ openshift-install agent create cluster-manifests</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command updates the cluster manifests folder to include a <code>mirror</code> folder that contains your mirror configuration.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="preparing-an-initial-cluster-deployment-for-mce-connected_prepare-an-agent-based-cluster-for-multicluster-engine">Preparing an Agent-based cluster deployment for the multicluster engine for Kubernetes Operator while connected</h5>
+<div class="paragraph _abstract">
+<p>Create the required manifests for the multicluster engine Operator, the Local Storage Operator (LSO), and to deploy an agent-based Red&#160;Hat OpenShift Container Platform cluster as a hub cluster.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a sub-folder named  <code>openshift</code> in the <code>&lt;assets_directory&gt;</code> folder. This sub-folder is used to store the extra manifests that will be applied during the installation to further customize the deployed cluster.
+The <code>&lt;assets_directory&gt;</code> folder contains all the assets including the <code>install-config.yaml</code> and <code>agent-config.yaml</code> files.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The installer does not validate extra manifests.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>For the multicluster engine, create the following manifests and save them in the <code>&lt;assets_directory&gt;/openshift</code> folder:</p>
+<div class="listingblock">
+<div class="title">Example <code>mce_namespace.yaml</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  apiVersion: v1
+  kind: Namespace
+  metadata:
+    labels:
+      openshift.io/cluster-monitoring: "true"
+    name: multicluster-engine</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>mce_operatorgroup.yaml</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  apiVersion: operators.coreos.com/v1
+  kind: OperatorGroup
+  metadata:
+    name: multicluster-engine-operatorgroup
+    namespace: multicluster-engine
+  spec:
+    targetNamespaces:
+    - multicluster-engine</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>mce_subscription.yaml</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  apiVersion: operators.coreos.com/v1alpha1
+  kind: Subscription
+  metadata:
+    name: multicluster-engine
+    namespace: multicluster-engine
+  spec:
+    channel: "stable-2.3"
+    name: multicluster-engine
+    source: redhat-operators
+    sourceNamespace: openshift-marketplace</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can install a distributed unit (DU) at scale with the Red&#160;Hat Advanced Cluster Management (RHACM) using the assisted installer (AI). These distributed units must be enabled in the hub cluster.
+The AI service requires persistent volumes (PVs), which are manually created.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>For the AI service, create the following manifests and save them in the <code>&lt;assets_directory&gt;/openshift</code> folder:</p>
+<div class="listingblock">
+<div class="title">Example <code>lso_namespace.yaml</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  apiVersion: v1
+  kind: Namespace
+  metadata:
+    annotations:
+      openshift.io/cluster-monitoring: "true"
+    name: openshift-local-storage</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>lso_operatorgroup.yaml</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  apiVersion: operators.coreos.com/v1
+  kind: OperatorGroup
+  metadata:
+    name: local-operator-group
+    namespace: openshift-local-storage
+  spec:
+    targetNamespaces:
+      - openshift-local-storage</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>lso_subscription.yaml</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  apiVersion: operators.coreos.com/v1alpha1
+  kind: Subscription
+  metadata:
+    name: local-storage-operator
+    namespace: openshift-local-storage
+  spec:
+    installPlanApproval: Automatic
+    name: local-storage-operator
+    source: redhat-operators
+    sourceNamespace: openshift-marketplace</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>After creating all the manifests, your filesystem must display as follows:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example Filesystem</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">&lt;assets_directory&gt;
+    ├─ install-config.yaml
+    ├─ agent-config.yaml
+    └─ /openshift
+        ├─ mce_namespace.yaml
+        ├─ mce_operatorgroup.yaml
+        ├─ mce_subscription.yaml
+        ├─ lso_namespace.yaml
+        ├─ lso_operatorgroup.yaml
+        └─ lso_subscription.yaml</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Create the agent ISO image by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ openshift-install agent create image --dir &lt;assets_directory&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>When the image is ready, boot the target machine and wait for the installation to complete.</p>
+</li>
+<li>
+<p>To monitor the installation, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ openshift-install agent wait-for install-complete --dir &lt;assets_directory&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To configure a fully functional hub cluster, you must create the following manifests and manually apply them by running the command <code>$ oc apply -f &lt;manifest-name&gt;</code>.
+The order of the manifest creation is important and where required, the waiting condition is displayed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>For the PVs that are required by the AI service, create the following manifests:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  apiVersion: local.storage.openshift.io/v1
+  kind: LocalVolume
+  metadata:
+   name: assisted-service
+   namespace: openshift-local-storage
+  spec:
+   logLevel: Normal
+   managementState: Managed
+   storageClassDevices:
+     - devicePaths:
+         - /dev/vda
+         - /dev/vdb
+       storageClassName: assisted-service
+       volumeMode: Filesystem</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Use the following command to wait for the availability of the PVs, before applying the subsequent manifests:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc wait localvolume -n openshift-local-storage assisted-service --for condition=Available --timeout 10m</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="literalblock">
+<div class="content">
+<pre>The `devicePath` is an example and may vary depending on the actual hardware configuration used.</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Create a manifest for a multicluster engine instance.</p>
+<div class="listingblock">
+<div class="title">Example <code>MultiClusterEngine.yaml</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  apiVersion: multicluster.openshift.io/v1
+  kind: MultiClusterEngine
+  metadata:
+    name: multiclusterengine
+  spec: {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a manifest to enable the AI service.</p>
+<div class="listingblock">
+<div class="title">Example <code>agentserviceconfig.yaml</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  apiVersion: agent-install.openshift.io/v1beta1
+  kind: AgentServiceConfig
+  metadata:
+    name: agent
+    namespace: assisted-installer
+  spec:
+   databaseStorage:
+    storageClassName: assisted-service
+    accessModes:
+    - ReadWriteOnce
+    resources:
+     requests:
+      storage: 10Gi
+   filesystemStorage:
+    storageClassName: assisted-service
+    accessModes:
+    - ReadWriteOnce
+    resources:
+     requests:
+      storage: 10Gi</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a manifest to deploy subsequently spoke clusters.</p>
+<div class="listingblock">
+<div class="title">Example <code>clusterimageset.yaml</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  apiVersion: hive.openshift.io/v1
+  kind: ClusterImageSet
+  metadata:
+    name: "{product-version}"
+  spec:
+    releaseImage: quay.io/openshift-release-dev/ocp-release:{product-version}.0-x86_64</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a manifest to import the agent installed cluster (that hosts the multicluster engine and the Assisted Service) as the hub cluster.</p>
+<div class="listingblock">
+<div class="title">Example <code>autoimport.yaml</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  apiVersion: cluster.open-cluster-management.io/v1
+  kind: ManagedCluster
+  metadata:
+   labels:
+     local-cluster: "true"
+     cloud: auto-detect
+     vendor: auto-detect
+   name: local-cluster
+  spec:
+   hubAcceptsClient: true</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Wait for the managed cluster to be created.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc wait -n multicluster-engine managedclusters local-cluster --for condition=ManagedClusterJoined=True --timeout 10m</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>To confirm that the managed cluster installation is successful, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get managedcluster
+NAME            HUB ACCEPTED   MANAGED CLUSTER URLS             JOINED   AVAILABLE  AGE
+local-cluster   true           https://&lt;your cluster url&gt;:6443   True     True       77m</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div class="paragraph nav-footer">
 <p>← Previous: <a href="install-on-bare-metal-intro_install-on-bare-metal.html">Install on bare metal</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="install-on-vsphere-intro_install-on-vsphere.html">Install on vSphere</a> →</p>
@@ -13499,7 +14069,7 @@ EOF</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 15:58:47 +0100
+Last updated 2026-10-12 13:29:35 +0100
 </div>
 </div>
 <style>

@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state" class="book toc2 toc-left navmap-has-right-toc">
+<body id="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -568,10 +568,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="compare-platform-options-con_compare-platform-options.html">Compare platform options</a>
 </li>
-<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
-</li>
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
@@ -582,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -612,6 +608,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
+<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
+</li>
+<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
+</li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
 <li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
@@ -675,7 +677,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
@@ -847,7 +849,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-registry-allowlists-and-blocks-con_configure-registry-allowlists-and-blocks.html">Configure registry allowlists and blocks</a>
 </li>
-<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">About adding registries that allow image short names</a>
+<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">Configure short-name search registries</a>
 </li>
 <li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
 </li>
@@ -909,8 +911,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
 </li>
-<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
-</li>
 <li><a href="change-the-installed-file-system-configuration-for-new-nodes-con_change-the-installed-file-system-configuration-for-new-nodes.html">Change the installed file system configuration for new nodes</a>
 </li>
 <li><a href="change-the-installed-raid-configuration-for-new-nodes-con_change-the-installed-raid-configuration-for-new-nodes.html">Change the installed RAID configuration for new nodes</a>
@@ -947,7 +947,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1054,15 +1054,40 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_networking.html">Networking</a>
-
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
+</li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html"><span class="toc-current">Network policies and administrative network policies</span></a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1242,19 +1267,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
-</li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
-</li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
-</li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
-</li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
-</li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1474,6 +1487,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_troubleshoot.html">Troubleshoot</a>
+
 <ul class="sectlevel2">
 <li><a href="allow-the-configuration-drift-to-remain-and-return-the-node-to-ready-state-con_allow-the-configuration-drift-to-remain-and-return-the-node-to-ready-state.html">Allow the configuration drift to remain and return the node to ready state</a>
 </li>
@@ -1484,6 +1498,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="remediate-node-configuration-drift-to-return-the-node-to-ready-con_remediate-node-configuration-drift-to-return-the-node-to-ready.html">Remediate node configuration drift to return the node to ready</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
+</li>
+<li><a href="graceful-shutdown-cluster-intro_graceful-cluster-shutdown.html">Shutting down the cluster gracefully</a>
+</li>
+<li><a href="graceful-restart-cluster-intro_graceful-cluster-restart.html">Restarting the cluster gracefully</a>
+</li>
+<li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernating an Red&#160;Hat OpenShift Container Platform cluster</a>
 </li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
@@ -1497,6 +1517,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
 </li>
+<li><a href="recovering-unhealthy-etcd-cluster-for-hosted-control-planes-con_recovering-unhealthy-etcd-cluster-for-hosted-control-planes.html">Recovering an unhealthy etcd cluster for hosted control planes</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-a-hosted-cluster-intro_backup-and-restore-etcd-on-a-hosted-cluster.html">Backing up and restoring etcd on a hosted cluster</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a>
+</li>
+<li><a href="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot.html">Backing up etcd data for hosted control planes by using the etcd snapshot method</a>
+</li>
+<li><a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a>
+</li>
 <li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
 </li>
 <li><a href="hcp-disaster-recovery-aws-con_disaster-recovery-for-hosted-control-planes-on-aws.html">Disaster recovery for a hosted cluster in AWS</a>
@@ -1508,8 +1538,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="hcp-disaster-recovery-oadp-con_disaster-recovery-for-hosted-control-planes-using-oadp.html">Disaster recovery for a hosted cluster by using OADP</a>
 </li>
 <li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
-</li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
 </li>
@@ -1523,15 +1551,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
+<li><a href="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data.html">Backing up and restoring etcd data</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
+<li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replacing an unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
@@ -1627,13 +1655,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html">Restoring an etcd snapshot on a hosted cluster</a>
+<li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-restore_etcd-best-practices-restore-etcd-data.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replacing a healthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1643,7 +1667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state.html"><span class="toc-current">Restoring etcd data by using the etcd snapshot method</span></a>
+<li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1669,54 +1693,382 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state">Identifying an unhealthy etcd member</a></li><li class="level-4"><a href="#restore-determine-state-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state">Determining the state of the unhealthy etcd member</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-anp-differences-networkpolicy_understand-network-policies-and-administrative-network-policies">Key differences between AdminNetworkPolicy and NetworkPolicy custom resources</a></li><li class="level-4"><a href="#nw-networkpolicy-about_understand-network-policies-and-administrative-network-policies">About network policy</a></li><li class="level-5"><a href="#nw-networkpolicy-additive_understand-network-policies-and-administrative-network-policies">Policy additivity</a></li><li class="level-4"><a href="#nw-networkpolicy-optimize-ovn_understand-network-policies-and-administrative-network-policies">Optimizations for network policy with OVN-Kubernetes network plugin</a></li><li class="level-5"><a href="#nw-networkpolicy-external-ip-ovn_understand-network-policies-and-administrative-network-policies">NetworkPolicy CR and external IPs in OVN-Kubernetes</a></li><li class="level-4"><a href="#adminnetworkpolicy_understand-network-policies-and-administrative-network-policies">AdminNetworkPolicy</a></li><li class="level-5"><a href="#adminnetworkpolicy-example_understand-network-policies-and-administrative-network-policies">AdminNetworkPolicy example</a></li><li class="level-5"><a href="#adminnetworkpolicy-actions-for-rules_understand-network-policies-and-administrative-network-policies">AdminNetworkPolicy actions for rules</a></li><li class="level-6"><a href="#adminnetworkpolicy-allow-example_understand-network-policies-and-administrative-network-policies">AdminNetworkPolicy Allow example</a></li><li class="level-6"><a href="#adminnetworkpolicy-deny-example_understand-network-policies-and-administrative-network-policies">AdminNetworkPolicy Deny example</a></li><li class="level-6"><a href="#adminnetworkpolicy-pass-example_understand-network-policies-and-administrative-network-policies">AdminNetworkPolicy Pass example</a></li><li class="level-4"><a href="#BaselineAdminNetworkPolicy_understand-network-policies-and-administrative-network-policies">BaselineAdminNetworkPolicy</a></li><li class="level-5"><a href="#baselineddminnetworkpolicy-example_understand-network-policies-and-administrative-network-policies">BaselineAdminNetworkPolicy example</a></li><li class="level-5"><a href="#BaselineAdminNetworkPolicy-default-deny-example_understand-network-policies-and-administrative-network-policies">BaselineAdminNetworkPolicy Deny example</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state">Restoring etcd data by using the etcd snapshot method</h3>
+<h3 id="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies">Network policies and administrative network policies</h3>
 <div class="paragraph _abstract">
-<p>You can specify a backup to recover from or set a schedule to run the recovery process on.</p>
+<p>Network policy in Red&#160;Hat OpenShift Container Platform is defined through both namespace-scoped and cluster-scoped APIs. Understanding how <code>NetworkPolicy</code>, <code>AdminNetworkPolicy</code>, and <code>BaselineAdminNetworkPolicy</code> differ in scope, precedence, and available actions lets you decide which one enforces a given connectivity requirement.</p>
+</div>
+<div class="sect3">
+<h4 id="nw-anp-differences-networkpolicy_understand-network-policies-and-administrative-network-policies">Key differences between AdminNetworkPolicy and NetworkPolicy custom resources</h4>
+<div class="paragraph _abstract">
+<p>To choose the right network policy API for your cluster or namespace in Red&#160;Hat OpenShift Container Platform, you can compare <code>AdminNetworkPolicy</code> and <code>NetworkPolicy</code> CRs across scope, rule actions, precedence, and peer options.</p>
 </div>
 <div class="paragraph">
-<p>The process to recover a hosted control plane from an etcd snapshot backup involves the OADP <code>hypershift</code> plugin, the Control Plane Operator, and the etcd init container.</p>
+<p>The following reference table highlights differences in who can apply policies, how traffic is allowed or denied, and how OVN-Kubernetes evaluates each API.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Policy elements</th>
+<th class="tableblock halign-left valign-top">AdminNetworkPolicy</th>
+<th class="tableblock halign-left valign-top">NetworkPolicy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Applicable user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster administrator or equivalent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Namespace owners</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scope</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Namespace</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Drop traffic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supported with an explicit <code>Deny</code> action set as a rule.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supported via implicit <code>Deny</code> isolation at policy creation time.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delegate traffic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supported with an <code>Pass</code> action set as a rule.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not applicable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allow traffic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supported with an explicit <code>Allow</code> action set as a rule.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The default action for all rules is to allow.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rule precedence within the policy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Depends on the order in which they appear within an ANP. The higher the rule&#8217;s position the higher the precedence.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rules are additive.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Policy precedence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Among ANPs the <code>priority</code> field sets the order for evaluation. The lower the priority number higher the policy precedence.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">There is no policy ordering between policies.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feature precedence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evaluated first via tier 1 ACL and BANP is evaluated last via tier 3 ACL.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enforced after ANP and before BANP, they are evaluated in tier 2 of the ACL.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Matching pod selection</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Can apply different rules across namespaces.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Can apply different rules across pods in single namespace.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster egress traffic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supported via <code>nodes</code> and <code>networks</code> peers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supported through <code>ipBlock</code> field along with accepted CIDR syntax.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster ingress traffic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not supported.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not supported.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fully qualified domain names (FQDN) peer support</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not supported.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not supported.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Namespace selectors</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supports advanced selection of Namespaces with the use of <code>namespaces.matchLabels</code> field.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supports label based namespace selection with the use of <code>namespaceSelector</code> field.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="nw-networkpolicy-about_understand-network-policies-and-administrative-network-policies">About network policy</h4>
+<div class="paragraph _abstract">
+<p>To control traffic between workloads and improve network isolation, configure <code>NetworkPolicy</code> objects for your projects. Network policies define the allowed ingress and egress connections for selected pods and help secure applications in your cluster.</p>
+</div>
+<div class="paragraph">
+<p>By default, all pods in a project are accessible from other pods and network endpoints. To isolate one or more pods in a project, you can create <code>NetworkPolicy</code> objects in that project to indicate the allowed incoming connections. Project administrators can create and delete <code>NetworkPolicy</code> objects within their own project.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>From Red&#160;Hat OpenShift Container Platform 4.22, Red&#160;Hat OpenShift Container Platform now includes <code>NetworkPolicy</code> objects in some of its own namespaces by default. This inclusion improves overall security and better protects control plane components. Do not modify the <code>NetworkPolicy</code> objects that Red&#160;Hat OpenShift Container Platform includes in its own namespaces by default. To check the namespaces that include the objects by default, you can run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get networkpolicies --all-namespaces</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Red&#160;Hat OpenShift Container Platform 4.22 release does not include these objects in all Red&#160;Hat OpenShift Container Platform namespaces; later Red&#160;Hat OpenShift Container Platform releases might include the objects in additional namespaces.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>By default, all pods in a project are accessible from any network endpoint.</p>
+</div>
+<div class="paragraph">
+<p>If a pod is matched by selectors in one or more <code>NetworkPolicy</code> objects, then the pod accepts only connections that are allowed by at least one of those <code>NetworkPolicy</code> objects. A pod that is not selected by any <code>NetworkPolicy</code> objects remains fully accessible.</p>
+</div>
+<div class="sect4">
+<h5 id="nw-networkpolicy-additive_understand-network-policies-and-administrative-network-policies">Policy additivity</h5>
+<div class="paragraph">
+<p><code>NetworkPolicy</code> objects are additive, which means you can combine multiple <code>NetworkPolicy</code> objects together to satisfy complex network requirements.</p>
+</div>
+<div class="paragraph">
+<p>For example, if you define both an <code>allow-same-namespace</code> policy and an <code>allow-http-and-https</code> policy within the same project, pods with the <code>role=frontend</code> label accept any connection allowed by either policy.</p>
+</div>
+<div class="paragraph">
+<p>This means the pods accept:</p>
 </div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You completed the steps in "Configuring the etcd snapshot method".</p>
+<p>Connections on any port from pods in the same namespace.</p>
 </li>
 <li>
-<p>No running pods or persistent volume claims (PVCs) are in the hosted control plane namespace. If you are restoring on the same management cluster, delete the hosted cluster and node pools first.</p>
-</li>
-<li>
-<p>The status of the Velero backup is <code>status.phase: Completed</code>.</p>
-</li>
-<li>
-<p>The OADP components are running and the <code>DataProtectionApplication</code> (DPA) custom resource (CR) is reconciled.</p>
-</li>
-<li>
-<p>For hosted control planes on AWS, your backup storage location (BSL) credentials are valid and have permission to read the snapshot from S3.</p>
-</li>
-<li>
-<p>For bare metal on the Agent platform, your <code>InfraEnv</code> objects are preserved. Do not delete them.</p>
-</li>
-<li>
-<p>For hosted control planes on Azure, see <a href="../../hosted_control_planes/hcp-deploy/hcp-deploy-azure.html#hcp-azure-etcd-snapshot-restore_hcp-deploy-azure">Restoring a hosted cluster on Azure from an etcd snapshot</a>.</p>
+<p>Connections on ports <code>80</code> and <code>443</code> from pods in any namespace.</p>
 </li>
 </ul>
 </div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>Start the restore process by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ hcp create oadp-restore \
-  --hc-name &lt;my_hosted_cluster&gt; \
-  --hc-namespace &lt;my_hosted_cluster_namespace&gt; \
-  --name &lt;my_restore&gt; \
-  --from-backup &lt;my_backup&gt;</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-from-router
+spec:
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          policy-group.network.openshift.io/ingress: ""
+  podSelector: {}
+  policyTypes:
+  - Ingress</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>policy-group.network.openshift.io/ingress:""</code> label supports OVN-Kubernetes.</p>
+</div>
+<div class="paragraph">
+<p>To reduce the cluster attack surface and ensure predictable network behavior, Red&#160;Hat OpenShift Container Platform enforces least-privilege network policies on critical networking components.</p>
+</div>
+<div class="paragraph">
+<p>The operators that manage cluster DNS and cluster Ingress automatically install and maintain default "deny-all" <code>NetworkPolicy</code> objects in their respective namespaces.</p>
+</div>
+<div class="paragraph">
+<p>Traffic is controlled using targeted "allow" policies in the following namespaces:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>DNS component namespaces (<code>openshift-dns</code> and <code>openshift-dns-operator</code>):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Egress is limited to the API server and required DNS ports.</p>
+</li>
+<li>
+<p>Ingress is restricted to essential DNS traffic and metrics.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Ingress component namespaces (<code>openshift-ingress</code> and <code>openshift-ingress-operator</code>):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Egress is limited to the API server, DNS ports, and route endpoints.</p>
+</li>
+<li>
+<p>Ingress is restricted to HTTP/HTTPS traffic and metrics.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Do not run unmanaged or custom pods in these namespaces. Because these namespaces operate on a deny-by-default model, network traffic for any unmanaged containers running in these namespaces will be blocked.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nw-networkpolicy-optimize-ovn_understand-network-policies-and-administrative-network-policies">Optimizations for network policy with OVN-Kubernetes network plugin</h4>
+<div class="paragraph _abstract">
+<p>Learn how to optimize OVN-Kubernetes network policies to reduce flow count and ensure external IP traffic is allowed when needed.</p>
+</div>
+<div class="paragraph">
+<p>When designing your network policy, refer to the following guidelines:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For network policies with the same <code>spec.podSelector</code> spec, it is more efficient to use one network policy with multiple <code>ingress</code> or <code>egress</code> rules, than multiple network policies with subsets of <code>ingress</code> or <code>egress</code> rules.</p>
+</li>
+<li>
+<p>Every <code>ingress</code> or <code>egress</code> rule based on the <code>podSelector</code> or <code>namespaceSelector</code> spec generates the number of OVS flows proportional to <code>number of pods selected by network policy + number of pods selected by ingress or egress rule</code>. Therefore, it is preferable to use the <code>podSelector</code> or <code>namespaceSelector</code> spec that can select as many pods as you need in one rule, instead of creating individual rules for every pod.</p>
+<div class="paragraph">
+<p>For example, the following policy contains two rules:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: test-network-policy
+spec:
+  podSelector: {}
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          role: frontend
+  - from:
+    - podSelector:
+        matchLabels:
+          role: backend</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following policy expresses those same two rules as one:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: test-network-policy
+spec:
+  podSelector: {}
+  ingress:
+  - from:
+    - podSelector:
+        matchExpressions:
+        - {key: role, operator: In, values: [frontend, backend]}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The same guideline applies to the <code>spec.podSelector</code> spec. If you have the same <code>ingress</code> or <code>egress</code> rules for different network policies, it might be more efficient to create one network policy with a common <code>spec.podSelector</code> spec. For example, the following two policies have different rules:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: policy1
+spec:
+  podSelector:
+    matchLabels:
+      role: db
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          role: frontend
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: policy2
+spec:
+  podSelector:
+    matchLabels:
+      role: client
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          role: frontend</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following network policy expresses those same two rules as one:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: policy3
+spec:
+  podSelector:
+    matchExpressions:
+    - {key: role, operator: In, values: [db, client]}
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          role: frontend</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can apply this optimization when only multiple selectors are expressed as one. In cases where selectors are based on different labels, it may not be possible to apply this optimization. In those cases, consider applying some new labels for network policy optimization specifically.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="nw-networkpolicy-external-ip-ovn_understand-network-policies-and-administrative-network-policies">NetworkPolicy CR and external IPs in OVN-Kubernetes</h5>
+<div class="paragraph">
+<p>In OVN-Kubernetes, the <code>NetworkPolicy</code> custom resource (CR) enforces strict isolation rules. If a service is exposed using an external IP, a network policy can block access from other namespaces unless explicitly configured to allow traffic.</p>
+</div>
+<div class="paragraph">
+<p>To allow access to external IPs across namespaces, create a <code>NetworkPolicy</code> CR that explicitly permits ingress from the required namespaces and ensures traffic is allowed to the designated service ports. Without allowing traffic to the required ports, access might still be restricted.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    annotations:
+    name: &lt;policy_name&gt;
+    namespace: openshift-ingress
+  spec:
+    ingress:
+    - ports:
+      - port: 80
+        protocol: TCP
+    - ports:
+      - port: 443
+        protocol: TCP
+    - from:
+      - namespaceSelector:
+          matchLabels:
+          kubernetes.io/metadata.name: &lt;my_namespace&gt;
+    podSelector: {}
+    policyTypes:
+    - Ingress</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1724,269 +2076,397 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>&lt;my_backup&gt;</code></dt>
+<dt class="hdlist1"><code>&lt;policy_name&gt;</code></dt>
 <dd>
-<p>Specifies the name of the backup to use. If you run the restore process on a schedule, replace the <code>--from-backup</code> flag with the <code>--from-schedule</code> flag and specify the name of the schedule to use.</p>
+<p>Specifies your name for the policy.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;my_namespace&gt;</code></dt>
+<dd>
+<p>Specifies the name of the namespace where the policy is deployed.</p>
 </dd>
 </dl>
 </div>
-</li>
-</ul>
+<div class="paragraph">
+<p>For more details, see "About network policy".</p>
 </div>
-<div class="olist arabic">
-<div class="title">Verification</div>
-<ol class="arabic">
-<li>
-<p>Check that the etcd pods are running and that the cluster is functioning as expected by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n &lt;my_hosted_cluster_namespace&gt;-&lt;my_hosted_cluster&gt; -l app=etcd</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Check the restore conditions by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get hostedcluster &lt;my_hosted_cluster&gt; -n &lt;my_hosted_cluster_namespace&gt; -o jsonpath='{.status.conditions}' | jq '.[] | select(.type | test("Restore|Etcd"))'</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>On AWS deployments, when you restore to a different management cluster, the OIDC provider might need to be updated. Enter the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ hcp fix dr-oidc-iam --hc-name &lt;my_hosted_cluster&gt; --hc-namespace &lt;my_hosted_cluster_namespace&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Confirm that the API server of the hosted cluster is accessible by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig &lt;hosted_cluster_kubeconfig&gt; get nodes</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Confirm that workloads are running by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig &lt;hosted_cluster_kubeconfig&gt; get clusteroperators</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="sect3">
-<h4 id="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state">Identifying an unhealthy etcd member</h4>
-<div class="paragraph _abstract">
-<p>You can identify an unhealthy etcd member by checking the <code>EtcdMembersAvailable</code> status condition to see how many members are available and which member is unhealthy.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
-</li>
-<li>
-<p>You created an etcd backup.</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>Check the status of the <code>EtcdMembersAvailable</code> status condition by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get etcd -o=jsonpath='{range .items[0].status.conditions[?(@.type=="EtcdMembersAvailable")]}{.message}{"\n"}{end}'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">2 of 3 members are available, ip-10-0-131-183.ec2.internal is unhealthy</code></pre>
-</div>
-</div>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="restore-determine-state-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state">Determining the state of the unhealthy etcd member</h4>
+<h4 id="adminnetworkpolicy_understand-network-policies-and-administrative-network-policies">AdminNetworkPolicy</h4>
 <div class="paragraph _abstract">
-<p>Determine whether the unhealthy etcd member has a stopped machine, an unready node, or a crashlooping etcd pod. Knowing the failure state enables you to follow the correct replacement procedure.</p>
+<p>An <code>AdminNetworkPolicy</code> (ANP) is a cluster-scoped custom resource definition (CRD) that you can define to establish ingress and egress rules before namespaces are created. You can use ANPs to ensure tenant <code>NetworkPolicy</code> objects cannot override your administrative controls.</p>
 </div>
 <div class="paragraph">
-<p>Depending on the state of your unhealthy etcd member, use one of the following procedures:</p>
+<p>The key difference between <code>AdminNetworkPolicy</code> and <code>NetworkPolicy</code> objects is that the former is for administrators and is cluster scoped, while the latter is for tenant owners and is namespace scoped.</p>
+</div>
+<div class="paragraph">
+<p>An ANP allows administrators to specify the following:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Machine not running or node not ready. For more information, see "Replacing an unhealthy etcd member whose machine is not running or whose node is not ready".</p>
+<p>A <code>priority</code> value that determines the order of its evaluation. The lower the value the higher the precedence.</p>
 </li>
 <li>
-<p>Bare-metal machine not running or node not ready on installer-provisioned bare metal. For more information, see "Replacing an unhealthy bare metal etcd member whose machine is not running or whose node is not ready".</p>
+<p>A set of pods that consists of a set of namespaces or namespace on which the policy is applied.</p>
 </li>
 <li>
-<p>Crashlooping etcd pod. For more information, see "Replacing an unhealthy etcd member whose etcd pod is crashlooping".</p>
+<p>A list of ingress rules to be applied for all ingress traffic towards the <code>subject</code>.</p>
+</li>
+<li>
+<p>A list of egress rules to be applied for all egress traffic from the <code>subject</code>.</p>
 </li>
 </ul>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If the machine is not running or the node is not ready, you might expect either to recover soon. In that case, you do not need to replace the etcd member. The etcd cluster Operator automatically syncs when the machine or node returns to a healthy state.</p>
+<div class="sect4">
+<h5 id="adminnetworkpolicy-example_understand-network-policies-and-administrative-network-policies">AdminNetworkPolicy example</h5>
+<div class="listingblock">
+<div class="title">Example YAML file for an ANP</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: policy.networking.k8s.io/v1alpha1
+kind: AdminNetworkPolicy
+metadata:
+  name: sample-anp-deny-pass-rules
+spec:
+  priority: 50
+  subject:
+    namespaces:
+      matchLabels:
+          kubernetes.io/metadata.name: example.name
+  ingress:
+  - name: "deny-all-ingress-tenant-1"
+    action: "Deny"
+    from:
+    - pods:
+        namespaceSelector:
+          matchLabels:
+            custom-anp: tenant-1
+        podSelector:
+          matchLabels:
+            custom-anp: tenant-1
+  egress:
+  - name: "pass-all-egress-to-tenant-1"
+    action: "Pass"
+    to:
+    - pods:
+        namespaceSelector:
+          matchLabels:
+            custom-anp: tenant-1
+        podSelector:
+          matchLabels:
+            custom-anp: tenant-1</code></pre>
 </div>
-</td>
-</tr>
-</table>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>metadata.name</code></dt>
+<dd>
+<p>Specifies a name for your ANP.</p>
+</dd>
+<dt class="hdlist1"><code>spec.priority</code></dt>
+<dd>
+<p>Specifies the priority of the ANP. Supports a maximum of 100 ANPs in the range of values <code>0-99</code> in a cluster. The lower the value, the higher the precedence because the range is read in order from the lowest to highest value. Because there is no guarantee which policy takes precedence when ANPs are created at the same priority, set ANPs at different priorities so that precedence is deliberate.</p>
+</dd>
+<dt class="hdlist1"><code>spec.subject.namespaces.matchLabels</code></dt>
+<dd>
+<p>Specifies the namespace to apply the ANP resource.</p>
+</dd>
+<dt class="hdlist1"><code>spec.ingress.name</code></dt>
+<dd>
+<p>Specifies a name for the <code>ingress.name</code>.</p>
+</dd>
+<dt class="hdlist1"><code>spec.ingress.action</code></dt>
+<dd>
+<p>Specifies an ingress rule for the ANP. ANP have both ingress and egress rules. Accepts values of <code>Pass</code>, <code>Deny</code>, and <code>Allow</code>.</p>
+</dd>
+<dt class="hdlist1"><code>spec.ingress.from.pods.namespaceSelector.matchLabels</code></dt>
+<dd>
+<p>Specifies <code>podSelector.matchLabels</code> to select pods within the namespaces selected by <code>namespaceSelector.matchLabels</code> as ingress peers.</p>
+</dd>
+<dt class="hdlist1"><code>spec.egress.action</code></dt>
+<dd>
+<p>Specifies an egress rule for the ANP. Accepts values of <code>Pass</code>, <code>Deny</code>, and <code>Allow</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="adminnetworkpolicy-actions-for-rules_understand-network-policies-and-administrative-network-policies">AdminNetworkPolicy actions for rules</h5>
+<div class="paragraph _abstract">
+<p>You can set the <code>action</code> field to <code>Allow</code>, <code>Deny</code>, or <code>Pass</code> on each <code>AdminNetworkPolicy</code>(ANP) custom resource rule so OVN-Kubernetes tiered ACLs apply administrative decisions before lower-tier networkpolicies can take effect.</p>
+</div>
+<div class="paragraph">
+<p>Because OVN-Kubernetes uses tiered ACLs to evaluate network traffic rules, an ANP CR lets you define strong policy rules that can only be changed by an administrator modifying them, deleting the rule, or overriding them by setting a higher priority rule.</p>
+</div>
+<div class="sect5">
+<h6 id="adminnetworkpolicy-allow-example_understand-network-policies-and-administrative-network-policies">AdminNetworkPolicy Allow example</h6>
+<div class="paragraph">
+<p>The following ANP that is defined at priority 9 ensures all ingress traffic is allowed from the <code>monitoring</code> namespace towards any tenant (all other namespaces) in the cluster.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example YAML file for a strong <code>Allow</code> ANP</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: policy.networking.k8s.io/v1alpha1
+kind: AdminNetworkPolicy
+metadata:
+  name: allow-monitoring
+spec:
+  priority: 9
+  subject:
+    namespaces: {} # Use the empty selector with caution because it also selects OpenShift namespaces as well.
+  ingress:
+  - name: "allow-ingress-from-monitoring"
+    action: "Allow"
+    from:
+    - namespaces:
+        matchLabels:
+          kubernetes.io/metadata.name: monitoring
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is an example of a strong <code>Allow</code> ANP because it is non-overridable by all the parties involved. No tenants can block themselves from being monitored using <code>NetworkPolicy</code> objects and the monitoring tenant also has no say in what it can or cannot monitor.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="adminnetworkpolicy-deny-example_understand-network-policies-and-administrative-network-policies">AdminNetworkPolicy Deny example</h6>
+<div class="paragraph">
+<p>The following ANP that is defined at priority 5 ensures all ingress traffic from the <code>monitoring</code> namespace is blocked towards restricted tenants (namespaces that have labels <code>security: restricted</code>).</p>
+</div>
+<div class="listingblock">
+<div class="title">Example YAML file for a strong <code>Deny</code> ANP</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: policy.networking.k8s.io/v1alpha1
+kind: AdminNetworkPolicy
+metadata:
+  name: block-monitoring
+spec:
+  priority: 5
+  subject:
+    namespaces:
+      matchLabels:
+        security: restricted
+  ingress:
+  - name: "deny-ingress-from-monitoring"
+    action: "Deny"
+    from:
+    - namespaces:
+        matchLabels:
+          kubernetes.io/metadata.name: monitoring
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is a strong <code>Deny</code> ANP that is non-overridable by all the parties involved. The restricted tenant owners cannot authorize themselves to allow monitoring traffic, and the infrastructure’s monitoring service cannot scrape anything from these sensitive namespaces.</p>
+</div>
+<div class="paragraph">
+<p>When combined with the strong <code>Allow</code> example, the <code>block-monitoring</code> ANP has a lower priority value giving it higher precedence, which ensures <code>restricted</code> tenants are never monitored.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="adminnetworkpolicy-pass-example_understand-network-policies-and-administrative-network-policies">AdminNetworkPolicy Pass example</h6>
+<div class="paragraph">
+<p>The following ANP that is defined at priority 7 ensures all ingress traffic from the <code>monitoring</code> namespace towards internal infrastructure tenants (namespaces that have labels <code>security: internal</code>) are passed on to tier 2 of the ACLs and evaluated by the namespaces’ <code>NetworkPolicy</code> objects.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example YAML file for a strong <code>Pass</code> ANP</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: policy.networking.k8s.io/v1alpha1
+kind: AdminNetworkPolicy
+metadata:
+  name: pass-monitoring
+spec:
+  priority: 7
+  subject:
+    namespaces:
+      matchLabels:
+        security: internal
+  ingress:
+  - name: "pass-ingress-from-monitoring"
+    action: "Pass"
+    from:
+    - namespaces:
+        matchLabels:
+          kubernetes.io/metadata.name: monitoring
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This example is a strong <code>Pass</code> action ANP because it delegates the decision to <code>NetworkPolicy</code> objects defined by tenant owners. This <code>pass-monitoring</code> ANP allows all tenant owners grouped at security level <code>internal</code> to choose if their metrics should be scraped by the infrastructures' monitoring service using namespace scoped <code>NetworkPolicy</code> objects.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="BaselineAdminNetworkPolicy_understand-network-policies-and-administrative-network-policies">BaselineAdminNetworkPolicy</h4>
+<div class="paragraph _abstract">
+<p>To enforce <code>Allow</code> or <code>Deny</code> rules for selected namespaces in Red&#160;Hat OpenShift Container Platform, you can create a single cluster-scoped <code>BaselineAdminNetworkPolicy</code> custom resource (CR) named <code>default</code> with ingress and egress subject rules.</p>
+</div>
+<div class="paragraph">
+<p>The <code>BaselineAdminNetworkPolicy</code> (BANP) CR is a cluster singleton object that can be used as a guardrail policy in case a passed traffic policy does not match any <code>NetworkPolicy</code> objects in the cluster. A BANP can also be used as a default security model that provides guardrails that intra-cluster traffic is blocked by default and a user will need to use <code>NetworkPolicy</code> objects to allow known traffic. You must use <code>default</code> as the name when creating a BANP resource.</p>
+</div>
+<div class="paragraph">
+<p>A BANP allows administrators to specify:</p>
 </div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You confirmed access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+<p>A <code>subject</code> that consists of a set of namespaces or namespace.</p>
 </li>
 <li>
-<p>You identified an unhealthy etcd member.</p>
+<p>A list of ingress rules to be applied for all ingress traffic towards the <code>subject</code>.</p>
+</li>
+<li>
+<p>A list of egress rules to be applied for all egress traffic from the <code>subject</code>.</p>
 </li>
 </ul>
 </div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Determine if the machine is not running by running the following command:</p>
+<div class="sect4">
+<h5 id="baselineddminnetworkpolicy-example_understand-network-policies-and-administrative-network-policies">BaselineAdminNetworkPolicy example</h5>
 <div class="listingblock">
+<div class="title">Example YAML file for BANP</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machines -A -ojsonpath='{range .items[*]}{@.status.nodeRef.name}{"\t"}{@.status.providerStatus.instanceState}{"\n"}' | grep -v running</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">ip-10-0-131-183.ec2.internal  stopped</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: policy.networking.k8s.io/v1alpha1
+kind: BaselineAdminNetworkPolicy
+metadata:
+  name: default
+spec:
+  subject:
+    namespaces:
+      matchLabels:
+          kubernetes.io/metadata.name: example.name
+  ingress:
+  - name: "deny-all-ingress-from-tenant-1"
+    action: "Deny"
+    from:
+    - pods:
+        namespaceSelector:
+          matchLabels:
+            custom-banp: tenant-1
+        podSelector:
+          matchLabels:
+            custom-banp: tenant-1
+  egress:
+  - name: "allow-all-egress-to-tenant-1"
+    action: "Allow"
+    to:
+    - pods:
+        namespaceSelector:
+          matchLabels:
+            custom-banp: tenant-1
+        podSelector:
+          matchLabels:
+            custom-banp: tenant-1</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This output lists the node and the status of the machine of the node. If the status is anything other than <code>running</code>, then the machine is not running.</p>
+<p>where:</p>
 </div>
-</li>
-<li>
-<p>Determine if the status of the node is <code>NotReady</code>.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>metadata.name</code></dt>
+<dd>
+<p>Specifies the name of the BANP resource. The policy name must be <code>default</code> because BANP is a singleton object.</p>
+</dd>
+<dt class="hdlist1"><code>spec.subject.namespaces.matchLabels</code></dt>
+<dd>
+<p>Specifies the namespace to apply the BANP to.</p>
+</dd>
+<dt class="hdlist1"><code>spec.ingress.name</code></dt>
+<dd>
+<p>Specifies a name for ingress rules.</p>
+</dd>
+<dt class="hdlist1"><code>spec.ingress.action</code></dt>
+<dd>
+<p>Specifies an ingress rule for the BANP. Accepts values of <code>Deny</code> and <code>Allow</code> for the <code>action</code> field.</p>
+</dd>
+<dt class="hdlist1"><code>spec.ingress.from.pods.namespaceSelector.matchLabels</code></dt>
+<dd>
+<p>Specifies match labels to select pods within the namespaces selected by <code>namespaceSelector.matchLabels</code> as ingress peers.</p>
+</dd>
+<dt class="hdlist1"><code>spec.egress.action</code></dt>
+<dd>
+<p>Specifies an egress rule for the BANP. Accepts values of <code>Deny</code> and <code>Allow</code> for the <code>action</code> field.</p>
+</dd>
+<dt class="hdlist1"><code>spec.egress.to.pods.namespaceSelector.matchLabels</code></dt>
+<dd>
+<p>Specifies match labels to select pods within the namespaces selected by <code>namespaceSelector.matchLabels</code> as egress peers.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="BaselineAdminNetworkPolicy-default-deny-example_understand-network-policies-and-administrative-network-policies">BaselineAdminNetworkPolicy Deny example</h5>
 <div class="paragraph">
-<p>If either of the following scenarios are true, then the node is not ready.</p>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>If the machine is running, then check whether the node has an <code>unreachable</code> taint by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes -o jsonpath='{range .items[*]}{"\n"}{.metadata.name}{"\t"}{range .spec.taints[*]}{.key}{" "}' | grep unreachable</code></pre>
-</div>
+<p>The following BANP singleton ensures that the administrator has set up a default deny policy for all ingress monitoring traffic coming into the tenants at <code>internal</code> security level. When combined with the "AdminNetworkPolicy Pass example", this deny policy acts as a guardrail policy for all ingress traffic that is passed by the ANP <code>pass-monitoring</code> policy.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example output</div>
+<div class="title">Example YAML file for a guardrail <code>Deny</code> rule</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">ip-10-0-131-183.ec2.internal	node-role.kubernetes.io/master node.kubernetes.io/unreachable node.kubernetes.io/unreachable</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If the node is listed with an <code>unreachable</code> taint, then the node is not ready.</p>
-</div>
-</li>
-<li>
-<p>If the node is still reachable, then check whether the node is listed as <code>NotReady</code> by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes -l node-role.kubernetes.io/master | grep "NotReady"</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">ip-10-0-131-183.ec2.internal   NotReady   master   122m   v1.36.3</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If the node is listed as <code>NotReady</code>, then the node is not ready.</p>
-</div>
-<div class="paragraph">
-<p>If the <strong>node is not ready</strong>, then follow the "Replacing an unhealthy etcd member whose machine is not running or whose node is not ready" procedure.</p>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Determine if the etcd pod is crashlooping.</p>
-<div class="paragraph">
-<p>If the machine is running and the node status is <code>Ready</code>, check the status of the etcd pod.</p>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Verify that all control plane nodes are listed as <code>Ready</code> by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes -l node-role.kubernetes.io/master</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                           STATUS   ROLES    AGE     VERSION
-ip-10-0-131-183.ec2.internal   Ready    master   6h13m   v1.36.3
-ip-10-0-164-97.ec2.internal    Ready    master   6h13m   v1.36.3
-ip-10-0-154-204.ec2.internal   Ready    master   6h13m   v1.36.3</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Check whether the status of an etcd pod is either <code>Error</code> or <code>CrashloopBackoff</code> by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-etcd get pods -l k8s-app=etcd</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">etcd-ip-10-0-131-183.ec2.internal                2/3     Error       7          6h9m
-etcd-ip-10-0-164-97.ec2.internal                 3/3     Running     0          6h6m
-etcd-ip-10-0-154-204.ec2.internal                3/3     Running     0          6h6m</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: policy.networking.k8s.io/v1alpha1
+kind: BaselineAdminNetworkPolicy
+metadata:
+  name: default
+spec:
+  subject:
+    namespaces:
+      matchLabels:
+        security: internal
+  ingress:
+  - name: "deny-ingress-from-monitoring"
+    action: "Deny"
+    from:
+    - namespaces:
+        matchLabels:
+          kubernetes.io/metadata.name: monitoring
+# ...</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The etcd pod crashloops because the <code>etcd-ip-10-0-131-183.ec2.internal</code> is <code>Error</code>.</p>
+<p>You can use an <code>AdminNetworkPolicy</code> resource with a <code>Pass</code> value for the <code>action</code> field in conjunction with the <code>BaselineAdminNetworkPolicy</code> resource to create a multi-tenant policy. This multi-tenant policy allows one tenant to collect monitoring data on their application while simultaneously not collecting data from a second tenant.</p>
 </div>
 <div class="paragraph">
-<p>If the <strong>etcd pod is crashlooping</strong>, then follow the steps in "Replacing an unhealthy etcd member whose etcd pod is crashlooping".</p>
+<p>As an administrator, if you apply both the "AdminNetworkPolicy <code>Pass</code> action example" and the "BaselineAdminNetwork Policy <code>Deny</code> example", tenants are then left with the ability to choose to create a <code>NetworkPolicy</code> resource that will be evaluated before the BANP.</p>
 </div>
-</li>
-</ol>
+<div class="paragraph">
+<p>For example, Tenant 1 can set up the following <code>NetworkPolicy</code> resource to monitor ingress traffic:</p>
 </div>
-</li>
-</ol>
+<div class="listingblock">
+<div class="title">Example <code>NetworkPolicy</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-monitoring
+  namespace: tenant 1
+spec:
+  podSelector:
+  policyTypes:
+    - Ingress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: monitoring
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this scenario, Tenant 1&#8217;s policy would be evaluated after the "AdminNetworkPolicy <code>Pass</code> action example" and before the "BaselineAdminNetwork Policy <code>Deny</code> example", which denies all ingress monitoring traffic coming into tenants with <code>security</code> level <code>internal</code>. With Tenant 1&#8217;s <code>NetworkPolicy</code> object in place, they will be able to collect data on their application. Tenant 2, however, who does not have any <code>NetworkPolicy</code> objects in place, will not be able to collect data. As an administrator, you have not by default monitored internal tenants, but instead, you created a BANP that allows tenants to use <code>NetworkPolicy</code> objects to override the default behavior of your BANP.</p>
+</div>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a> →</p>
+<p>← Previous: <a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 15:58:47 +0100
+Last updated 2026-10-12 13:29:35 +0100
 </div>
 </div>
 <style>

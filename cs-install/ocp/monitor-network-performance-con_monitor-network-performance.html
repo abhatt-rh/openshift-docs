@@ -568,10 +568,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="compare-platform-options-con_compare-platform-options.html">Compare platform options</a>
 </li>
-<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
-</li>
 <li><a href="requirements-for-hosted-control-planes-con_requirements-for-hosted-control-planes.html">Requirements for hosted control planes</a>
 </li>
 <li><a href="size-guidance-for-hosted-control-planes-con_size-guidance-for-hosted-control-planes.html">Size guidance for hosted control planes</a>
@@ -582,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -612,6 +608,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
+<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
+</li>
+<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
+</li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
 <li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
@@ -675,7 +677,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
@@ -847,7 +849,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-registry-allowlists-and-blocks-con_configure-registry-allowlists-and-blocks.html">Configure registry allowlists and blocks</a>
 </li>
-<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">About adding registries that allow image short names</a>
+<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">Configure short-name search registries</a>
 </li>
 <li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
 </li>
@@ -909,8 +911,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
 </li>
-<li><a href="installation-special-config-butane_customize-installation-configuration.html">Creating machine configs with Butane</a>
-</li>
 <li><a href="change-the-installed-file-system-configuration-for-new-nodes-con_change-the-installed-file-system-configuration-for-new-nodes.html">Change the installed file system configuration for new nodes</a>
 </li>
 <li><a href="change-the-installed-raid-configuration-for-new-nodes-con_change-the-installed-raid-configuration-for-new-nodes.html">Change the installed RAID configuration for new nodes</a>
@@ -947,7 +947,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1058,11 +1058,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
+</li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1242,19 +1268,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
-</li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
-</li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
-</li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
-</li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
-</li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1485,6 +1499,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
 </li>
+<li><a href="graceful-shutdown-cluster-intro_graceful-cluster-shutdown.html">Shutting down the cluster gracefully</a>
+</li>
+<li><a href="graceful-restart-cluster-intro_graceful-cluster-restart.html">Restarting the cluster gracefully</a>
+</li>
+<li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernating an Red&#160;Hat OpenShift Container Platform cluster</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
@@ -1496,6 +1516,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
+</li>
+<li><a href="recovering-unhealthy-etcd-cluster-for-hosted-control-planes-con_recovering-unhealthy-etcd-cluster-for-hosted-control-planes.html">Recovering an unhealthy etcd cluster for hosted control planes</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-a-hosted-cluster-intro_backup-and-restore-etcd-on-a-hosted-cluster.html">Backing up and restoring etcd on a hosted cluster</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a>
+</li>
+<li><a href="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot.html">Backing up etcd data for hosted control planes by using the etcd snapshot method</a>
+</li>
+<li><a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a>
 </li>
 <li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
 </li>
@@ -1509,8 +1539,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
@@ -1523,15 +1551,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
+<li><a href="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data.html">Backing up and restoring etcd data</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
+<li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replacing an unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
@@ -1627,13 +1655,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html">Restoring an etcd snapshot on a hosted cluster</a>
+<li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-restore_etcd-best-practices-restore-etcd-data.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replacing a healthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1643,7 +1667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1669,7 +1693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#view-networking-dashboards-con_view-networking-dashboards">View networking dashboards</a></li><li class="level-5"><a href="#reviewing-monitoring-dashboards-admin_view-networking-dashboards">Review monitoring dashboards as a cluster administrator</a></li><li class="level-5"><a href="#network-observability-viewing-dashboards_view-networking-dashboards">View network observability metrics dashboards</a></li><li class="level-5"><a href="#network-observability-dashboards_view-networking-dashboards">Network observability metrics dashboards</a></li><li class="level-4"><a href="#view-operator-metrics-con_view-operator-metrics">View operator metrics</a></li><li class="level-5"><a href="#anp-banp-metrics_view-operator-metrics">Metrics for AdminNetworkPolicy</a></li><li class="level-5"><a href="#nw-metallb-metrics_view-operator-metrics">MetalLB metrics for BGP and BFD</a></li><li class="level-5"><a href="#nw-exposing-router-metrics_view-operator-metrics">Expose router metrics</a></li><li class="level-5"><a href="#cnf-network-metrics-daemon_view-operator-metrics">Network Metrics Daemon</a></li><li class="level-6"><a href="#_additional_resources_10">Additional resources</a></li><li class="level-4"><a href="#view-operator-logs-con_view-operator-logs">View operator logs</a></li><li class="level-5"><a href="#nw-cno-logs_view-operator-logs">View Cluster Network Operator logs</a></li><li class="level-5"><a href="#nw-dns-operator-logs_view-operator-logs">View DNS Operator logs</a></li><li class="level-5"><a href="#nw-ingress-operator-logs_view-operator-logs">View Ingress Controller logs</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-logs-cli_view-operator-logs">View the OVN-Kubernetes logs using the CLI</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-logs-console_view-operator-logs">View the OVN-Kubernetes logs using the web console</a></li><li class="level-6"><a href="#nw-ovn-kubernetes-change-log-levels_view-operator-logs">Changing the OVN-Kubernetes log levels</a></li><li class="level-4"><a href="#monitor-cluster-network-operator-status-con_monitor-cluster-network-operator-status">Monitor Cluster Network Operator status</a></li><li class="level-5"><a href="#nw-cluster-network-operator_monitor-cluster-network-operator-status">Cluster Network Operator</a></li><li class="level-5"><a href="#nw-cno-view_monitor-cluster-network-operator-status">View the cluster network configuration</a></li><li class="level-5"><a href="#nw-cno-status_monitor-cluster-network-operator-status">View Cluster Network Operator status</a></li><li class="level-5"><a href="#nw-dns-operator-status_monitor-cluster-network-operator-status">Check DNS Operator status</a></li><li class="level-4"><a href="#network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability">Observe the network traffic from the Overview view</a></li><li class="level-5"><a href="#network-observability-working-with-overview_monitor-network-traffic-with-network-observability">Work with the Overview view</a></li><li class="level-5"><a href="#network-observability-configuring-options-overview_monitor-network-traffic-with-network-observability">Configure advanced options for the Overview view</a></li><li class="level-6"><a href="#network-observability-cao-managing-panels-overview_monitor-network-traffic-with-network-observability">Managing panels and display</a></li><li class="level-5"><a href="#network-observability-trafficflow_monitor-network-traffic-with-network-observability">Observe the network traffic from the Traffic flows view</a></li><li class="level-5"><a href="#network-observability-working-with-trafficflow_monitor-network-traffic-with-network-observability">Work with the Traffic flows view</a></li><li class="level-5"><a href="#network-observability-configuring-options-trafficflow_monitor-network-traffic-with-network-observability">Traffic flow display settings</a></li><li class="level-6"><a href="#display-options_monitor-network-traffic-with-network-observability">Display options</a></li><li class="level-5"><a href="#network-observability-topology_monitor-network-traffic-with-network-observability">Observe the network traffic from the Topology view</a></li><li class="level-5"><a href="#network-observability-working-with-topology_monitor-network-traffic-with-network-observability">Work with the Topology view</a></li><li class="level-5"><a href="#network-observability-configuring-options-topology_monitor-network-traffic-with-network-observability">Configure the advanced options for the Topology view</a></li><li class="level-6"><a href="#network-observability-cao-export-topology_monitor-network-traffic-with-network-observability">Exporting the topology view</a></li><li class="level-5"><a href="#network-observability-quickfilter_monitor-network-traffic-with-network-observability">Filter the network traffic</a></li><li class="level-5"><a href="#network-observability-health-dashboard-overview_monitor-network-observability-operator-health">Health dashboards</a></li><li class="level-6"><a href="#network-observability-health-alert-overview_monitor-network-observability-operator-health">Health alerts</a></li><li class="level-6"><a href="#network-observability-dashboard-view_monitor-network-observability-operator-health">View health information</a></li><li class="level-6"><a href="#network-observability-disable-alerts_monitor-network-observability-operator-health">Disable health alerts</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-rate-limit-alerts_monitor-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-ebpf-agent-alerts_monitor-network-observability-operator-health">Use the eBPF agent alert</a></li><li class="level-6"><a href="#nw-status-configuration-network-observability-operator_monitor-network-observability-operator-health">View Network Observability Operator status and configuration</a></li><li class="level-5"><a href="#detect-and-investigate-network-observability-issues-con_detect-and-investigate-network-observability-issues">Detect and investigate Network Observability issues</a></li><li class="level-6"><a href="#network-observability-must-gather_detect-and-investigate-network-observability-issues">Use the must-gather tool</a></li><li class="level-6"><a href="#configure-network-traffic-console_detect-and-investigate-network-observability-issues">Configure network traffic menu entry in the Red Hat OpenShift Container Platform console</a></li><li class="level-6"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_detect-and-investigate-network-observability-issues">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-6"><a href="#configure-network-traffic-interfaces_detect-and-investigate-network-observability-issues">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-6"><a href="#controller-manager-pod-runs-out-of-memory_detect-and-investigate-network-observability-issues">Network observability controller manager pod runs out of memory</a></li><li class="level-6"><a href="#troubleshooting-query-loki-manually_detect-and-investigate-network-observability-issues">Run custom queries to Loki</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-resource-exhausted_detect-and-investigate-network-observability-issues">Troubleshoot Loki ResourceExhausted error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-empty-ring_detect-and-investigate-network-observability-issues">Loki empty ring error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-tenant-rate-limit_detect-and-investigate-network-observability-issues">LokiStack rate limit errors</a></li><li class="level-6"><a href="#network-observability-troubleshooting-large-query-timeout_detect-and-investigate-network-observability-issues">Running a large query results in Loki errors</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#view-networking-dashboards-con_view-networking-dashboards">View networking dashboards</a></li><li class="level-5"><a href="#reviewing-monitoring-dashboards-admin_view-networking-dashboards">Review monitoring dashboards as a cluster administrator</a></li><li class="level-5"><a href="#network-observability-viewing-dashboards_view-networking-dashboards">View network observability metrics dashboards</a></li><li class="level-5"><a href="#network-observability-dashboards_view-networking-dashboards">Network observability metrics dashboards</a></li><li class="level-4"><a href="#monitor-networking-operator-health-con_monitor-networking-operator-health">Monitor networking operator health</a></li><li class="level-5"><a href="#anp-banp-metrics_monitor-networking-operator-health">Metrics for AdminNetworkPolicy</a></li><li class="level-5"><a href="#nw-metallb-metrics_monitor-networking-operator-health">MetalLB metrics for BGP and BFD</a></li><li class="level-5"><a href="#cnf-associating-secondary-interfaces-metrics-to-network-attachments_monitor-networking-operator-health">Extend secondary network metrics for monitoring</a></li><li class="level-6"><a href="#cnf-metrics-secondary-interfaces-by-name_monitor-networking-operator-health">Metrics with network name</a></li><li class="level-4"><a href="#view-operator-logs-con_view-operator-logs">View operator logs</a></li><li class="level-5"><a href="#nw-cno-logs_view-operator-logs">View Cluster Network Operator logs</a></li><li class="level-5"><a href="#nw-dns-operator-logs_view-operator-logs">View DNS Operator logs</a></li><li class="level-5"><a href="#nw-ingress-operator-logs_view-operator-logs">View Ingress Controller logs</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-logs-cli_view-operator-logs">View the OVN-Kubernetes logs using the CLI</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-logs-console_view-operator-logs">View the OVN-Kubernetes logs using the web console</a></li><li class="level-6"><a href="#nw-ovn-kubernetes-change-log-levels_view-operator-logs">Changing the OVN-Kubernetes log levels</a></li><li class="level-4"><a href="#monitor-cluster-network-operator-status-con_monitor-cluster-network-operator-status">Monitor Cluster Network Operator status</a></li><li class="level-5"><a href="#nw-cluster-network-operator_monitor-cluster-network-operator-status">Cluster Network Operator</a></li><li class="level-5"><a href="#nw-cno-view_monitor-cluster-network-operator-status">View the cluster network configuration</a></li><li class="level-5"><a href="#nw-cno-status_monitor-cluster-network-operator-status">View Cluster Network Operator status</a></li><li class="level-5"><a href="#nw-dns-operator-status_monitor-cluster-network-operator-status">Check DNS Operator status</a></li><li class="level-4"><a href="#network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability">Observe the network traffic from the Overview view</a></li><li class="level-5"><a href="#network-observability-working-with-overview_monitor-network-traffic-with-network-observability">Work with the Overview view</a></li><li class="level-5"><a href="#network-observability-configuring-options-overview_monitor-network-traffic-with-network-observability">Configure advanced options for the Overview view</a></li><li class="level-6"><a href="#network-observability-cao-managing-panels-overview_monitor-network-traffic-with-network-observability">Managing panels and display</a></li><li class="level-5"><a href="#network-observability-trafficflow_monitor-network-traffic-with-network-observability">Observe the network traffic from the Traffic flows view</a></li><li class="level-5"><a href="#network-observability-working-with-trafficflow_monitor-network-traffic-with-network-observability">Work with the Traffic flows view</a></li><li class="level-5"><a href="#network-observability-configuring-options-trafficflow_monitor-network-traffic-with-network-observability">Traffic flow display settings</a></li><li class="level-6"><a href="#display-options_monitor-network-traffic-with-network-observability">Display options</a></li><li class="level-5"><a href="#network-observability-topology_monitor-network-traffic-with-network-observability">Observe the network traffic from the Topology view</a></li><li class="level-5"><a href="#network-observability-working-with-topology_monitor-network-traffic-with-network-observability">Work with the Topology view</a></li><li class="level-5"><a href="#network-observability-configuring-options-topology_monitor-network-traffic-with-network-observability">Configure the advanced options for the Topology view</a></li><li class="level-6"><a href="#network-observability-cao-export-topology_monitor-network-traffic-with-network-observability">Exporting the topology view</a></li><li class="level-5"><a href="#network-observability-quickfilter_monitor-network-traffic-with-network-observability">Filter the network traffic</a></li><li class="level-5"><a href="#network-observability-health-dashboard-overview_monitor-network-observability-operator-health">Health dashboards</a></li><li class="level-6"><a href="#network-observability-health-alert-overview_monitor-network-observability-operator-health">Health alerts</a></li><li class="level-6"><a href="#network-observability-dashboard-view_monitor-network-observability-operator-health">View health information</a></li><li class="level-6"><a href="#network-observability-disable-alerts_monitor-network-observability-operator-health">Disable health alerts</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-rate-limit-alerts_monitor-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-ebpf-agent-alerts_monitor-network-observability-operator-health">Use the eBPF agent alert</a></li><li class="level-6"><a href="#nw-status-configuration-network-observability-operator_monitor-network-observability-operator-health">View Network Observability Operator status and configuration</a></li><li class="level-5"><a href="#detect-and-investigate-network-observability-issues-con_detect-and-investigate-network-observability-issues">Detect and investigate Network Observability issues</a></li><li class="level-6"><a href="#network-observability-must-gather_detect-and-investigate-network-observability-issues">Use the must-gather tool</a></li><li class="level-6"><a href="#configure-network-traffic-console_detect-and-investigate-network-observability-issues">Configure network traffic menu entry in the Red Hat OpenShift Container Platform console</a></li><li class="level-6"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_detect-and-investigate-network-observability-issues">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-6"><a href="#configure-network-traffic-interfaces_detect-and-investigate-network-observability-issues">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-6"><a href="#controller-manager-pod-runs-out-of-memory_detect-and-investigate-network-observability-issues">Network observability controller manager pod runs out of memory</a></li><li class="level-6"><a href="#troubleshooting-query-loki-manually_detect-and-investigate-network-observability-issues">Run custom queries to Loki</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-resource-exhausted_detect-and-investigate-network-observability-issues">Troubleshoot Loki ResourceExhausted error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-empty-ring_detect-and-investigate-network-observability-issues">Loki empty ring error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-tenant-rate-limit_detect-and-investigate-network-observability-issues">LokiStack rate limit errors</a></li><li class="level-6"><a href="#network-observability-troubleshooting-large-query-timeout_detect-and-investigate-network-observability-issues">Running a large query results in Loki errors</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="monitor-network-performance-con_monitor-network-performance">Monitor network performance</h3>
@@ -1836,12 +1860,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="view-operator-metrics-con_view-operator-metrics">View operator metrics</h4>
+<h4 id="monitor-networking-operator-health-con_monitor-networking-operator-health">Monitor networking operator health</h4>
 <div class="paragraph _abstract">
-<p>Networking operators expose Prometheus metrics that report their own health and the state of the resources they manage. Query these metrics to assess operator performance.</p>
+<p>Networking operators expose Prometheus metrics that report their own health and the state of the resources they manage. Query these metrics to assess operator performance and to detect configuration or runtime issues early.</p>
 </div>
 <div class="sect4">
-<h5 id="anp-banp-metrics_view-operator-metrics">Metrics for AdminNetworkPolicy</h5>
+<h5 id="anp-banp-metrics_monitor-networking-operator-health">Metrics for AdminNetworkPolicy</h5>
 <div class="paragraph _abstract">
 <p>You can use OVN-Kubernetes metrics to monitor <code>AdminNetworkPolicy</code> and <code>BaselineAdminNetworkPolicy</code> resources. These metrics report policy and rule counts by direction and action, and northbound database objects that the policies create.</p>
 </div>
@@ -1961,12 +1985,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <div class="sect4">
-<h5 id="nw-metallb-metrics_view-operator-metrics">MetalLB metrics for BGP and BFD</h5>
+<h5 id="nw-metallb-metrics_monitor-networking-operator-health">MetalLB metrics for BGP and BFD</h5>
 <div class="paragraph _abstract">
 <p>To monitor network connectivity and diagnose routing states, refer to the Prometheus metrics for MetalLB. These metrics provide visibility into the status of BGP peers and BFD profiles so that you can ensure stable external communication.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 732. MetalLB BFD metrics</caption>
+<caption class="title">Table 751. MetalLB BFD metrics</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -2013,7 +2037,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 733. MetalLB BGP metrics</caption>
+<caption class="title">Table 752. MetalLB BGP metrics</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -2081,187 +2105,56 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <div class="sect4">
-<h5 id="nw-exposing-router-metrics_view-operator-metrics">Expose router metrics</h5>
+<h5 id="cnf-associating-secondary-interfaces-metrics-to-network-attachments_monitor-networking-operator-health">Extend secondary network metrics for monitoring</h5>
 <div class="paragraph _abstract">
-<p>You can retrieve Prometheus-format HAProxy ingress router metrics from port <code>1936</code> to monitor ingress load and troubleshoot routing behavior. By analyzing these metrics, you can identify capacity bottlenecks and determine when to scale your router deployment.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have cluster administrator access to the cluster.</p>
-</li>
-<li>
-<p>You configured your firewall to allow port <code>1936</code>.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The Prometheus <code>/metrics</code> endpoint and the HAProxy HTML statistics dashboard are mutually exclusive exposition modes because the HAProxy router process serves one mode at a time. The Ingress Operator configures default Ingress Controller pods for Prometheus scraping (<code>/metrics</code> on port <code>1936</code>). Browsing <code>http://&lt;user&gt;:&lt;password&gt;@&lt;pod_IP&gt;:1936/</code> for interactive HTML statistics is not supported concurrently with Prometheus metrics on deployments that the Ingress Operator configures in this manner.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>List the router pods in the ingress namespace by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n openshift-ingress</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                               READY   STATUS    RESTARTS   AGE
-router-default-76bfffb66c-46qwp   1/1     Running   0          11h</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Read the stats user from the router pod under <code>/var/lib/haproxy/conf/metrics-auth/</code> by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc rsh &lt;router_pod_name&gt; cat /var/lib/haproxy/conf/metrics-auth/statsUsername</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Read the stats password from the router pod under <code>/var/lib/haproxy/conf/metrics-auth/</code> by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc rsh &lt;router_pod_name&gt; cat /var/lib/haproxy/conf/metrics-auth/statsPassword</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Get pod details, including the IP address for the pod, by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe pod &lt;router_pod&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Fetch Prometheus text metrics from the default port <code>1936</code> by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ curl -u &lt;user&gt;:&lt;password&gt; http://&lt;router_IP&gt;:1936/metrics</code></pre>
-</div>
+<p>To monitor and manage network traffic effectively, you can extend secondary network metrics with identifying information. By using the <code>pod_network_name_info</code> metric to label interfaces based on their <code>NetworkAttachmentDefinition</code> resource, you can classify interface types to enable precise metric aggregation and alerting.</p>
 </div>
 <div class="paragraph">
-<p>If the stats endpoint serves TLS-protected Prometheus text, retrieve metrics over HTTPS instead by entering the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ curl -u &lt;user&gt;:&lt;password&gt; https://&lt;router_IP&gt;:1936/metrics -k</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">...
-# HELP haproxy_max_connections Hard limit on the number of connections (configured or imposed by ulimit -n).
-# TYPE haproxy_max_connections gauge
-haproxy_max_connections 50000
-...</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Optional: In the Red&#160;Hat OpenShift Container Platform web console, navigate to <strong>Observe</strong> → <strong>Metrics</strong>, or query Prometheus directly, to compare ingress load against the HAProxy allowance.</p>
-<div class="paragraph">
-<p>The <code>haproxy_max_connections</code> gauge reflects each scraped router endpoint&#8217;s HAProxy allowance from <code>spec.tuningOptions.maxConnections</code> on the <code>IngressController</code>, bound by operating system limits such as <code>ulimit -n</code>. Before relying on ratios, confirm the labeled metric for front-end sessions that your HAProxy Prometheus exporter emits. For example, use <code>haproxy_frontend_current_sessions</code> when that series is available for your deployment.</p>
+<p>Secondary devices, or interfaces, are used for different purposes. Metrics from secondary network interfaces need to be classified to allow for effective aggregation and monitoring.</p>
 </div>
 <div class="paragraph">
-<p>Expressions similar to <code>sum(haproxy_frontend_current_sessions) / sum(haproxy_max_connections)</code> can estimate connection load across scrape targets after you verify those series for your deployment.</p>
+<p>Exposed metrics contain the interface but do not specify where the interface originates. This is workable when there are no additional interfaces. However, relying on interface names alone becomes problematic when secondary interfaces are added because it is difficult to identify their purpose and use their metrics effectively..</p>
 </div>
 <div class="paragraph">
-<p>If the ratio approaches <code>1</code>, adjust <code>spec.tuningOptions.maxConnections</code> on the <code>IngressController</code> or scale the router deployment.</p>
+<p>When adding secondary interfaces, their names depend on the order in which they are added. Secondary interfaces can belong to distinct networks that can each serve a different purposes.</p>
 </div>
-</li>
-</ol>
+<div class="paragraph">
+<p>With <code>pod_network_name_info</code> it is possible to extend the current metrics with additional information that identifies the interface type. In this way, it is possible to aggregate the metrics and to add specific alarms to specific interface types.</p>
 </div>
+<div class="paragraph">
+<p>The network type is generated from the name of the <code>NetworkAttachmentDefinition</code> resource, which distinguishes different secondary network classes. For example, different interfaces belonging to different networks or using different CNIs use different network attachment definition names.</p>
 </div>
-<div class="sect4">
-<h5 id="cnf-network-metrics-daemon_view-operator-metrics">Network Metrics Daemon</h5>
+<div class="sect5">
+<h6 id="cnf-metrics-secondary-interfaces-by-name_monitor-networking-operator-health">Metrics with network name</h6>
 <div class="paragraph _abstract">
-<p>The Network Metrics Daemon collects and publishes network-related metrics to support performance management in complex pod environments. This component provides metadata for secondary interfaces, which is required for accurate traffic monitoring across distinct network attachments.</p>
+<p>To simplify the monitoring of secondary networks, you can use the <code>pod_network_name_info</code> metric to correlate network performance data with specific network names. By joining this metric with container network metrics, you can identify traffic patterns and errors across distinct network attachment definitions.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example of <code>pod_network_name_info</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">pod_network_name_info{interface="net0",namespace="namespacename",network_name="nadnamespace/firstNAD",pod="podname"} 0</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>The kubelet is already publishing network related metrics you can observe. These metrics are:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>container_network_receive_bytes_total</code></p>
-</li>
-<li>
-<p><code>container_network_receive_errors_total</code></p>
-</li>
-<li>
-<p><code>container_network_receive_packets_total</code></p>
-</li>
-<li>
-<p><code>container_network_receive_packets_dropped_total</code></p>
-</li>
-<li>
-<p><code>container_network_transmit_bytes_total</code></p>
-</li>
-<li>
-<p><code>container_network_transmit_errors_total</code></p>
-</li>
-<li>
-<p><code>container_network_transmit_packets_total</code></p>
-</li>
-<li>
-<p><code>container_network_transmit_packets_dropped_total</code></p>
-</li>
-</ul>
+<p>The network name label is produced using the annotation added by Multus. It is the concatenation of the namespace the network attachment definition belongs to, plus the name of the network attachment definition. The Network Metrics daemonset publishes a <code>pod_network_name_info</code> gauge metric, with a fixed value of <code>0</code>.</p>
 </div>
 <div class="paragraph">
-<p>The labels in these metrics contain, among others:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Pod name</p>
-</li>
-<li>
-<p>Pod namespace</p>
-</li>
-<li>
-<p>Interface name (such as <code>eth0</code>)</p>
-</li>
-</ul>
+<p>The new metric alone does not provide much value, but combined with the network related <code>container_network_*</code> metrics, it offers better support for monitoring secondary networks.</p>
 </div>
 <div class="paragraph">
-<p>These metrics work well until new interfaces are added to the pod, for example via Multus, as it is not clear what the interface names refer to.</p>
+<p>Using a <code>promql</code> query like the following ones, it is possible to get a new metric containing the value and the network name retrieved from the <code>k8s.v1.cni.cncf.io/network-status</code> annotation:</p>
 </div>
-<div class="paragraph">
-<p>The interface label refers to the interface name, but it is not clear what that interface is meant for. In case of many different interfaces, it would be impossible to understand what network the metrics you are monitoring refer to.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">(container_network_receive_bytes_total) + on(namespace,pod,interface) group_left(network_name) ( pod_network_name_info )
+(container_network_receive_errors_total) + on(namespace,pod,interface) group_left(network_name) ( pod_network_name_info )
+(container_network_receive_packets_total) + on(namespace,pod,interface) group_left(network_name) ( pod_network_name_info )
+(container_network_receive_packets_dropped_total) + on(namespace,pod,interface) group_left(network_name) ( pod_network_name_info )
+(container_network_transmit_bytes_total) + on(namespace,pod,interface) group_left(network_name) ( pod_network_name_info )
+(container_network_transmit_errors_total) + on(namespace,pod,interface) group_left(network_name) ( pod_network_name_info )
+(container_network_transmit_packets_total) + on(namespace,pod,interface) group_left(network_name) ( pod_network_name_info )
+(container_network_transmit_packets_dropped_total) + on(namespace,pod,interface) group_left(network_name)</code></pre>
 </div>
-<div class="paragraph">
-<p>This is addressed by introducing the new <code>pod_network_name_info</code> described in the following section.</p>
-</div>
-<div class="sect5 _additional-resources">
-<h6 id="_additional_resources_10">Additional resources</h6>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/intel/multus-cni">Multus</a></p>
-</li>
-</ul>
 </div>
 </div>
 </div>
@@ -4003,7 +3896,7 @@ spec:
 </dl>
 </div>
 <div class="sect6 _additional-resources">
-<h7 id="_additional_resources_11">Additional resources</h7>
+<h7 id="_additional_resources_10">Additional resources</h7>
 <div class="ulist">
 <ul>
 <li>
@@ -4025,7 +3918,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 15:58:47 +0100
+Last updated 2026-10-12 13:29:35 +0100
 </div>
 </div>
 <style>
