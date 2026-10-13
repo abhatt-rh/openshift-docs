@@ -919,7 +919,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
 </li>
-<li><a href="about-self-service-tsr_prepare-to-update-a-cluster.html">Self-service Technical Supportability Review</a>
+<li><a href="update-assessment-ai_prepare-to-update-a-cluster.html">Analyzing update risk and status using AI</a>
 </li>
 <li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
 </li>
@@ -1271,6 +1271,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_networking.html">Networking</a>
 
 <ul class="sectlevel2">
+<li><a href="understand-ovn-kubernetes-network-plugin-con_understand-ovn-kubernetes-network-plugin.html">Understand the OVN-Kubernetes network plugin</a>
+</li>
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
 <li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
@@ -1931,7 +1933,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="Diagram showing namespaces with multiple secondary UDNs">
 </div>
-<div class="title">Figure 61. Diagram showing namespaces with multiple secondary UDNs</div>
+<div class="title">Figure 63. Diagram showing namespaces with multiple secondary UDNs</div>
 </div>
 <div class="paragraph">
 <p>During cluster installation, Red&#160;Hat OpenShift Container Platform administrators can configure alternative default secondary pod networks by leveraging the Multus CNI plugin. With Multus, you can use multiple CNI plugins such as ipvlan, macvlan, or Network Attachment Definitions together to serve as secondary networks for pods.</p>
@@ -2002,7 +2004,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="A flat layer 2 topology with a virtual switch so that virtual machines in node-1 to node-2 can communicate with each other">
 </div>
-<div class="title">Figure 62. A flat layer 2 topology that uses a virtual switch for component communication</div>
+<div class="title">Figure 64. A flat layer 2 topology that uses a virtual switch for component communication</div>
 </div>
 <div class="paragraph">
 <p>If you decide not to specify a layer 2 subnet, then you must manually configure IP addresses for each pod in your cluster. When you do not specify a layer 2 subnet, port security is limited to preventing Media Access Control (MAC) spoofing only, and does not include IP spoofing. A layer 2 topology creates a single broadcast domain that can be challenging in large network environments, where the topology might cause a broadcast storm that can degrade network performance.</p>
@@ -2027,7 +2029,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="A UDN that uses a layer 2 topology for migrating a VM from node-1 to node-2">
 </div>
-<div class="title">Figure 63. A user-defined network (UDN) that uses a layer 2 topology</div>
+<div class="title">Figure 65. A user-defined network (UDN) that uses a layer 2 topology</div>
 </div>
 <div class="paragraph">
 <p>A layer 3 topology creates a unique layer 2 segment for each node in a cluster. The layer 3 routing mechanism interconnects these segments so that virtual machines and pods that are hosted on different nodes can communicate with each other. A layer 3 topology can effectively manage large broadcast domains by assigning each domain to a specific node, so that broadcast traffic has a reduced scope. To configure a layer 3 topology, you must configure <code>cidr</code> and <code>hostSubnet</code> parameters.</p>
@@ -2181,7 +2183,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The following section highlights the supported features of the <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs when used as either the primary or secondary network. A separate table for the <code>ClusterUserDefinedNetwork</code> CR is also included.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 566. Primary network support matrix for <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs</caption>
+<caption class="title">Table 568. Primary network support matrix for <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -2501,7 +2503,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 567. Secondary network support matrix for <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs</caption>
+<caption class="title">Table 569. Secondary network support matrix for <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2901,7 +2903,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The Localnet topology is unavailable for use with the <code>UserDefinedNetwork</code> CR. It is only supported on secondary networks for <code>NetworkAttachmentDefinition</code> CRs.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 568. Support matrix for <code>ClusterUserDefinedNetwork</code> CRs</caption>
+<caption class="title">Table 570. Support matrix for <code>ClusterUserDefinedNetwork</code> CRs</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3373,7 +3375,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-13 10:50:44 +0100
+Last updated 2026-10-13 19:21:16 +0100
 </div>
 </div>
 <style>

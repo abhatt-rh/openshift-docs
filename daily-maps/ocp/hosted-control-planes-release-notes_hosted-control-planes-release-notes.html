@@ -919,7 +919,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
 </li>
-<li><a href="about-self-service-tsr_prepare-to-update-a-cluster.html">Self-service Technical Supportability Review</a>
+<li><a href="update-assessment-ai_prepare-to-update-a-cluster.html">Analyzing update risk and status using AI</a>
 </li>
 <li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
 </li>
@@ -1271,6 +1271,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_networking.html">Networking</a>
 
 <ul class="sectlevel2">
+<li><a href="understand-ovn-kubernetes-network-plugin-con_understand-ovn-kubernetes-network-plugin.html">Understand the OVN-Kubernetes network plugin</a>
+</li>
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
 <li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
@@ -1917,6 +1919,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph _abstract">
 <p>Review the following notable technical changes introduced in this release.</p>
 </div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Hosted control planes on Microsoft Azure is a General Availability feature</dt>
+<dd>
+<div class="paragraph">
+<p>As of Red&#160;Hat OpenShift Container Platform 5.0, hosted control planes on Azure is supported as a General Availability feature. For more information, see <a href="../hosted_control_planes/hcp-deploy/hcp-deploy-azure.html#hcp-deploy-azure">Deploying hosted control planes on Azure</a>.</p>
+</div>
+</dd>
+</dl>
+</div>
 </div>
 <div class="sect3">
 <h4 id="hcp-release-notes-fixed-issues_hosted-control-planes-release-notes">Fixed issues</h4>
@@ -1990,9 +2002,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Feature</th>
-<th class="tableblock halign-left valign-top">4.20</th>
 <th class="tableblock halign-left valign-top">4.21</th>
 <th class="tableblock halign-left valign-top">4.22</th>
+<th class="tableblock halign-left valign-top">5.0</th>
 </tr>
 </thead>
 <tbody>
@@ -2022,26 +2034,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Hosted control planes for OpenShift Virtualization on IBM Z</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">General Availability</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hosted control planes on IBM Z in a disconnected environment</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">General Availability</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">General Availability</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">General Availability</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Hosted control planes for Red&#160;Hat OpenShift Container Platform on Microsoft Azure</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">General Availability</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Backup and restore with the etcd snapshot method</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
 </tr>
 <tr>
@@ -2169,7 +2175,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-13 10:50:44 +0100
+Last updated 2026-10-13 19:21:16 +0100
 </div>
 </div>
 <style>

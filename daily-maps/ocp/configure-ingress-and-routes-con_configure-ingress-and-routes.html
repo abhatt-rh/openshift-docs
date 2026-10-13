@@ -920,7 +920,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
 </li>
-<li><a href="about-self-service-tsr_prepare-to-update-a-cluster.html">Self-service Technical Supportability Review</a>
+<li><a href="update-assessment-ai_prepare-to-update-a-cluster.html">Analyzing update risk and status using AI</a>
 </li>
 <li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
 </li>
@@ -1271,6 +1271,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_networking.html">Networking</a>
 <ul class="sectlevel2">
+<li><a href="understand-ovn-kubernetes-network-plugin-con_understand-ovn-kubernetes-network-plugin.html">Understand the OVN-Kubernetes network plugin</a>
+</li>
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
 <li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
@@ -2038,7 +2040,7 @@ spec:
 <p>The following table shows example routes and their accessibility:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 620. Route availability</caption>
+<caption class="title">Table 622. Route availability</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3559,7 +3561,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 621. Route annotations</caption>
+<caption class="title">Table 623. Route annotations</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3735,7 +3737,7 @@ The part of the request path that matches the path specified in <code>spec.path<
 <p>The following table provides examples of the path rewriting behavior for various combinations of <code>spec.path</code>, request path, and rewrite target.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 622. rewrite-target examples</caption>
+<caption class="title">Table 624. rewrite-target examples</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3823,7 +3825,7 @@ The part of the request path that matches the path specified in <code>spec.path<
 <p>Certain special characters in <code>haproxy.router.openshift.io/rewrite-target</code> require special handling because they must be escaped properly. Refer to the following table to understand how these characters are handled.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 623. Special character handling</caption>
+<caption class="title">Table 625. Special character handling</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -4217,7 +4219,7 @@ spec:
 <div class="content">
 <img src="data:image/png;base64," alt="Red&#160;Hat OpenShift Container Platform Ingress NodePort endpoint publishing strategy">
 </div>
-<div class="title">Figure 73. Diagram of NodePortService</div>
+<div class="title">Figure 75. Diagram of NodePortService</div>
 </div>
 <div class="paragraph">
 <p>The preceding graphic shows the following concepts pertaining to Red&#160;Hat OpenShift Container Platform Ingress NodePort endpoint publishing strategy:</p>
@@ -5686,7 +5688,7 @@ If you do not, all of your nodes will lose egress connectivity to the internet.<
 <div class="content">
 <img src="data:image/png;base64," alt="Red&#160;Hat OpenShift Container Platform Ingress LoadBalancerService endpoint publishing strategy">
 </div>
-<div class="title">Figure 74. Diagram of LoadBalancer</div>
+<div class="title">Figure 76. Diagram of LoadBalancer</div>
 </div>
 <div class="paragraph">
 <p>The preceding graphic shows the following concepts pertaining to Red&#160;Hat OpenShift Container Platform Ingress LoadBalancerService endpoint publishing strategy:</p>
@@ -7643,7 +7645,7 @@ backend be_secure:openshift-monitoring:alertmanager-main
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 624. Special case header configuration options</caption>
+<caption class="title">Table 626. Special case header configuration options</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9128,7 +9130,7 @@ spec:
 <div class="content">
 <img src="data:image/png;base64," alt="A diagram showing multiple Ingress Controllers with different route selectors serving any route containing a label that matches a given route selector regardless of the namespace a route belongs to">
 </div>
-<div class="title">Figure 75. Ingress sharding by using route labels</div>
+<div class="title">Figure 77. Ingress sharding by using route labels</div>
 </div>
 <div class="paragraph">
 <p>Ingress Controller sharding is useful when balancing incoming traffic load among a set of Ingress Controllers and when isolating traffic to a specific Ingress Controller. For example, company A goes to one Ingress Controller and company B to another.</p>
@@ -9196,7 +9198,7 @@ spec:
 <div class="content">
 <img src="data:image/png;base64," alt="A diagram showing multiple Ingress Controllers with different namespace selectors serving routes that belong to the namespace containing a label that matches a given namespace selector">
 </div>
-<div class="title">Figure 76. Ingress sharding by using namespace labels</div>
+<div class="title">Figure 78. Ingress sharding by using namespace labels</div>
 </div>
 <div class="paragraph">
 <p>Ingress Controller sharding is useful when balancing incoming traffic load among
@@ -9573,7 +9575,7 @@ spec:
 <p>The following table outlines the features that are shared between both resources and how their specific implementations differ:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 625. Shared features and implementation differences</caption>
+<caption class="title">Table 627. Shared features and implementation differences</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -9942,7 +9944,7 @@ Do not set <code>namespaces.from: All</code>; that setting allows routes from ev
 <p>The following table describes common listener conditions and how to resolve them:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 626. Gateway listener status conditions</caption>
+<caption class="title">Table 628. Gateway listener status conditions</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10233,7 +10235,7 @@ spec:
 <p>This configuration is supported on Amazon Web Services (AWS), Microsoft Azure, Google Cloud, Red Hat OpenStack Platform (RHOSP), and IBM Cloud. The following table details the required cloud-specific annotations and their corresponding values.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 627. Internal load balancer annotations by cloud provider</caption>
+<caption class="title">Table 629. Internal load balancer annotations by cloud provider</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -10333,7 +10335,7 @@ spec:
 <p>To verify that your <code>GatewayClass</code> custom resource (CR) is valid and ready to provision gateways, review its <code>status</code> conditions. A healthy <code>GatewayClass</code> CR reports a status of <code>True</code> for core conditions like <code>Accepted</code> and <code>SupportedVersion</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 628. <code>GatewayClass</code> CR status conditions</caption>
+<caption class="title">Table 630. <code>GatewayClass</code> CR status conditions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10447,7 +10449,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 629. Gateway-level status conditions</caption>
+<caption class="title">Table 631. Gateway-level status conditions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10555,7 +10557,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 630. Listener-level status conditions</caption>
+<caption class="title">Table 632. Listener-level status conditions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13085,7 +13087,7 @@ This means that you can update ingress and egress rules dynamically and align ne
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-13 10:50:44 +0100
+Last updated 2026-10-13 19:21:16 +0100
 </div>
 </div>
 <style>

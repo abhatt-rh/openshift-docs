@@ -920,7 +920,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
 </li>
-<li><a href="about-self-service-tsr_prepare-to-update-a-cluster.html">Self-service Technical Supportability Review</a>
+<li><a href="update-assessment-ai_prepare-to-update-a-cluster.html">Analyzing update risk and status using AI</a>
 </li>
 <li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
 </li>
@@ -1272,6 +1272,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_networking.html">Networking</a>
 
 <ul class="sectlevel2">
+<li><a href="understand-ovn-kubernetes-network-plugin-con_understand-ovn-kubernetes-network-plugin.html">Understand the OVN-Kubernetes network plugin</a>
+</li>
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
 <li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
@@ -5886,7 +5888,7 @@ spec:
 <p>The following tables detail supported fields for objects.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 709. <code>AdminPolicyBasedExternalRoute</code> object</caption>
+<caption class="title">Table 711. <code>AdminPolicyBasedExternalRoute</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -5956,7 +5958,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 710. <code>nextHops</code> object</caption>
+<caption class="title">Table 712. <code>nextHops</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -6001,7 +6003,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 711. <code>nextHops.static</code> object</caption>
+<caption class="title">Table 713. <code>nextHops.static</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -6046,7 +6048,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 712. <code>nextHops.dynamic</code> object</caption>
+<caption class="title">Table 714. <code>nextHops.dynamic</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -7701,7 +7703,7 @@ ports               : [5e75f289-8273-4f8a-8798-8c10f7318833, de7e1b71-6184-445d-
 <p>The following table describes the different modes of operation:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 713. IPsec modes of operation</caption>
+<caption class="title">Table 715. IPsec modes of operation</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 60%;">
@@ -7768,7 +7770,7 @@ ports               : [5e75f289-8273-4f8a-8798-8c10f7318833, de7e1b71-6184-445d-
 <p>When IPsec is enabled in Red&#160;Hat OpenShift Container Platform, you must configure the network connectivity between machines to allow cluster components to communicate. Each machine must be able to resolve the hostnames of all other machines in the cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 714. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 716. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -9347,7 +9349,7 @@ spec:
 <p>Your proxy must exclude re-encrypting the following OpenShift URLs:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 715. URLs to exclude from egress traffic re-encryption</caption>
+<caption class="title">Table 717. URLs to exclude from egress traffic re-encryption</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -10229,7 +10231,7 @@ cluster-specific Operator AWS Identity and Access Management (IAM) roles are cre
 <div class="content">
 <img src="data:image/png;base64," alt="Workflow for assuming AWS IAM roles in Red&#160;Hat SRE-owned projects">
 </div>
-<div class="title">Figure 78. Workflow for assuming AWS IAM roles in SRE-owned projects</div>
+<div class="title">Figure 80. Workflow for assuming AWS IAM roles in SRE-owned projects</div>
 </div>
 <div class="paragraph">
 <p>The workflow has the following stages:</p>
@@ -10322,7 +10324,7 @@ pod identity webhook resources are included by default.</p>
 <div class="content">
 <img src="data:image/png;base64," alt="Pod identity webhook workflow">
 </div>
-<div class="title">Figure 79. Pod identity webhook workflow in user-defined projects</div>
+<div class="title">Figure 81. Pod identity webhook workflow in user-defined projects</div>
 </div>
 <div class="paragraph">
 <p>The workflow has the following stages:</p>
@@ -11194,7 +11196,7 @@ Volumes:
 <div class="content">
 <img src="data:image/png;base64," alt="Detailed authentication flow between AWS and the cluster when using AWS STS">
 </div>
-<div class="title">Figure 80. AWS Security Token Service authentication flow</div>
+<div class="title">Figure 82. AWS Security Token Service authentication flow</div>
 </div>
 <div class="paragraph">
 <p>Requests for new and refreshed credentials are automated by using an appropriately configured AWS IAM OpenID Connect (OIDC) identity provider combined with AWS IAM roles. Service account tokens that are trusted by AWS IAM are signed by Red&#160;Hat OpenShift Container Platform and can be projected into a pod and used for authentication.</p>
@@ -11982,7 +11984,7 @@ Volumes:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-13 10:50:44 +0100
+Last updated 2026-10-13 19:21:16 +0100
 </div>
 </div>
 <style>

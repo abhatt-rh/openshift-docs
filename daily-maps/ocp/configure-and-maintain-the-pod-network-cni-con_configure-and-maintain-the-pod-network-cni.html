@@ -920,7 +920,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
 </li>
-<li><a href="about-self-service-tsr_prepare-to-update-a-cluster.html">Self-service Technical Supportability Review</a>
+<li><a href="update-assessment-ai_prepare-to-update-a-cluster.html">Analyzing update risk and status using AI</a>
 </li>
 <li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
 </li>
@@ -1271,6 +1271,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_networking.html">Networking</a>
 <ul class="sectlevel2">
+<li><a href="understand-ovn-kubernetes-network-plugin-con_understand-ovn-kubernetes-network-plugin.html">Understand the OVN-Kubernetes network plugin</a>
+</li>
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html"><span class="toc-current">Configure and maintain the pod network</span></a>
 </li>
 <li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
@@ -2010,7 +2012,7 @@ the Cluster Network Operator reports an available status condition.</p>
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 553. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 555. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2163,7 +2165,7 @@ the Cluster Network Operator reports an available status condition.</p>
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 554. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 556. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -2228,7 +2230,7 @@ the Cluster Network Operator reports an available status condition.</p>
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 555. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 557. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2385,7 +2387,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 556. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 558. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2436,7 +2438,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 557. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 559. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2487,7 +2489,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 558. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 560. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2594,7 +2596,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table id="gatewayConfig-object_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 559. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 561. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2688,7 +2690,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 560. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 562. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2733,7 +2735,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 561. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 563. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2778,7 +2780,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 562. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 564. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -8558,7 +8560,7 @@ spec:
 </ul>
 </div>
 <table id="network-observability-resource-recommendations-table_configure-storage-and-flow-collection-for-network-observability" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 563. Resource recommendations for cluster sizes</caption>
+<caption class="title">Table 565. Resource recommendations for cluster sizes</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 20%;">
@@ -8667,7 +8669,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 564. Total average resource usage</caption>
+<caption class="title">Table 566. Total average resource usage</caption>
 <colgroup>
 <col>
 <col>
@@ -9115,7 +9117,7 @@ spec:
 <p>If you only want to export flows to a Kafka consumer or IPFIX collector, or you only need dashboard metrics, then you do not need to install Loki or provide storage for Loki. The following table compares available features with and without Loki.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 565. Comparison of feature availability with and without Loki</caption>
+<caption class="title">Table 567. Comparison of feature availability with and without Loki</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -9287,12 +9289,12 @@ spec:
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a> →</p>
+<p>← Previous: <a href="understand-ovn-kubernetes-network-plugin-con_understand-ovn-kubernetes-network-plugin.html">Understand the OVN-Kubernetes network plugin</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-13 10:50:44 +0100
+Last updated 2026-10-13 19:21:16 +0100
 </div>
 </div>
 <style>

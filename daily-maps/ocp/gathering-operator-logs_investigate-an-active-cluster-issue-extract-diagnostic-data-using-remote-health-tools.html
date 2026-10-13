@@ -920,7 +920,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
 </li>
-<li><a href="about-self-service-tsr_prepare-to-update-a-cluster.html">Self-service Technical Supportability Review</a>
+<li><a href="update-assessment-ai_prepare-to-update-a-cluster.html">Analyzing update risk and status using AI</a>
 </li>
 <li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
 </li>
@@ -1272,6 +1272,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_networking.html">Networking</a>
 
 <ul class="sectlevel2">
+<li><a href="understand-ovn-kubernetes-network-plugin-con_understand-ovn-kubernetes-network-plugin.html">Understand the OVN-Kubernetes network plugin</a>
+</li>
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
 <li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
@@ -1899,7 +1901,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#olm-installing-operators-from-software-catalog_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">About Operator installation from the software catalog</a></li><li class="level-4"><a href="#olm-installing-operators-from-software-catalog-configure_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">About Operator Catalogs in Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#support-log-gather-overview_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">About Support Log Gather</a></li><li class="level-5"><a href="#support-log-gather-install-console_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Installing Support Log Gather by using the web console</a></li><li class="level-5"><a href="#support-log-gather-install-cli_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Installing Support Log Gather by using the CLI</a></li><li class="level-5"><a href="#support-log-gather-config-cli_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configuring a Support Log Gather instance</a></li><li class="level-5"><a href="#must-gather-operator-size-reduction-examples_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configurations for reducing the must-gather log size</a></li><li class="level-5"><a href="#support-log-gather-config-params_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configuration parameters for MustGather custom resource</a></li><li class="level-5"><a href="#support-log-gather-uninstall-console_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Uninstalling Support Log Gather</a></li><li class="level-5"><a href="#support-log-gather-remove-resources-console_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Removing Support Log Gather resources</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#olm-installing-operators-from-software-catalog_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">About Operator installation from the software catalog</a></li><li class="level-4"><a href="#olm-installing-operators-from-software-catalog-configure_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">About Operator Catalogs in Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#support-log-gather-overview_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">About Support Log Gather</a></li><li class="level-5"><a href="#support-log-gather-install-console_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Installing Support Log Gather by using the web console</a></li><li class="level-5"><a href="#support-log-gather-install-cli_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Installing Support Log Gather by using the CLI</a></li><li class="level-5"><a href="#support-log-gather-config-cli_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configuring a Support Log Gather instance</a></li><li class="level-5"><a href="#support-log-gather-reduce-size_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configurations for reducing the must-gather log size</a></li><li class="level-5"><a href="#support-log-gather-config-params_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configuration parameters for MustGather custom resource</a></li><li class="level-5"><a href="#support-log-gather-uninstall-console_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Uninstalling Support Log Gather</a></li><li class="level-5"><a href="#support-log-gather-remove-resources-console_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Removing Support Log Gather resources</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Gather Operator logs</h3>
@@ -2432,7 +2434,7 @@ support-log-gather-operator.v4.22.0   support log gather     4.22.0             
 <div class="listingblock">
 <div class="title">Example <code>support-log-gather.yaml</code></div>
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1alpha1
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
 kind: MustGather
 metadata:
   name: example-mg
@@ -2535,26 +2537,27 @@ example-mg-gk8m8                                                  2/2     Runnin
 </div>
 </div>
 <div class="sect4">
-<h5 id="must-gather-operator-size-reduction-examples_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configurations for reducing the must-gather log size</h5>
+<h5 id="support-log-gather-reduce-size_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configurations for reducing the must-gather log size</h5>
 <div class="paragraph _abstract">
 <p>Large <code>must-gather</code> logs can take a significant amount of time to upload to support cases and also consume considerable cluster storage. You can optimize the size of the collected diagnostic data by applying specific configurations to your <code>MustGather</code> custom resource (CR).</p>
 </div>
 <div class="paragraph">
 <p>The following examples demonstrate different methods for reducing the must-gather log size:</p>
 </div>
-<div class="paragraph">
-<p><strong>Skipping rotated logs</strong>
-You can exclude older, rotated log files, such as <code>*.gz</code> or <code>*.1</code> files, from the collection by setting the shell variable <code>REDUCE_LOGS=skip_rotated_logs</code> before running the <code>gather</code> script.</p>
-</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Skip rotated logs</dt>
+<dd>
+<p>You can exclude older, rotated log files, such as <code>*.gz</code> or <code>*.1</code> files, from the collection by setting the shell variable <code>REDUCE_LOGS=skip_rotated_logs</code> before running the <code>gather</code> script.</p>
 <div class="listingblock">
 <div class="title">Example <code>MustGather</code> CR configured to skip rotated logs</div>
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1alpha1
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
 kind: MustGather
 metadata:
   name: full-mustgather
 spec:
-  serviceAccountName: must-gather-operator
+  serviceAccountName: must-gather-admin
   gatherSpec:
     command:
       - /bin/sh
@@ -2574,7 +2577,82 @@ spec:
 <dl>
 <dt class="hdlist1"><code>REDUCE_LOGS=skip_rotated_logs gather</code></dt>
 <dd>
-<p>Sets the <code>REDUCE_LOGS</code> shell variable and executes the <code>gather</code> script. As a result, the script excludes the collection of rotated log files.</p>
+<p>Sets the <code>REDUCE_LOGS</code> shell variable and executes the <code>gather</code> script to exclude the collection of rotated log files.</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">Compress all uncompressed logs</dt>
+<dd>
+<p>You can configure the <code>gather</code> script to compress uncompressed diagnostic log files larger than 10 MB. Set the <code>REDUCE_LOGS</code> shell variable to <code>compress_logs</code> when you run the <code>gather</code> script.</p>
+<div class="listingblock">
+<div class="title">Example <code>MustGather</code> CR configured to compress logs</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: MustGather
+metadata:
+  name: full-mustgather
+spec:
+  serviceAccountName: must-gather-admin
+  gatherSpec:
+    command:
+      - /bin/sh
+      - -c
+      - |
+        REDUCE_LOGS=compress_logs gather
+  uploadTarget:
+    type: SFTP
+    sftp:
+      caseID: '02527285'
+      caseManagementAccountSecretRef:
+        name: sftp-access-rh-creds
+      internalUser: true</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>REDUCE_LOGS=compress_logs gather</code></dt>
+<dd>
+<p>Sets the <code>REDUCE_LOGS</code> and executes the <code>gather</code> script to compress the uncompressed diagnostic log files.</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">Compress service logs</dt>
+<dd>
+<p>You can compress all the collected service logs into a <code>.tar.gz</code> archive by setting the <code>REDUCE_LOGS</code> shell variable to <code>compress_service_logs</code> when you run the <code>gather</code> script.</p>
+<div class="listingblock">
+<div class="title">Example <code>MustGather</code> CR configured to compress service logs</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: MustGather
+metadata:
+  name: full-mustgather
+spec:
+  serviceAccountName: must-gather-admin
+  gatherSpec:
+    command:
+      - /bin/sh
+      - -c
+      - |
+        REDUCE_LOGS=compress_service_logs gather
+  uploadTarget:
+    type: SFTP
+    sftp:
+      caseID: '02527285'
+      caseManagementAccountSecretRef:
+        name: sftp-access-rh-creds
+      internalUser: true</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>REDUCE_LOGS=compress_service_logs gather</code></dt>
+<dd>
+<p>Sets the <code>REDUCE_LOGS</code> and executes the <code>gather</code> script to compress the service logs.</p>
+</dd>
+</dl>
+</div>
 </dd>
 </dl>
 </div>
@@ -2928,7 +3006,7 @@ The following table provides an overview of the parameters that you can configur
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-13 10:50:44 +0100
+Last updated 2026-10-13 19:21:16 +0100
 </div>
 </div>
 <style>

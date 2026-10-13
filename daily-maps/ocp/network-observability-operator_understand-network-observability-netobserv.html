@@ -920,7 +920,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
 </li>
-<li><a href="about-self-service-tsr_prepare-to-update-a-cluster.html">Self-service Technical Supportability Review</a>
+<li><a href="update-assessment-ai_prepare-to-update-a-cluster.html">Analyzing update risk and status using AI</a>
 </li>
 <li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
 </li>
@@ -1271,6 +1271,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_networking.html">Networking</a>
 <ul class="sectlevel2">
+<li><a href="understand-ovn-kubernetes-network-plugin-con_understand-ovn-kubernetes-network-plugin.html">Understand the OVN-Kubernetes network plugin</a>
+</li>
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
 <li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
@@ -2314,7 +2316,7 @@ lokistack-query-frontend-85c6db4fbd-jm94f           1/1     Running   0         
 <p>If you only want to export flows to a Kafka consumer or IPFIX collector, or you only need dashboard metrics, then you do not need to install Loki or provide storage for Loki. The following table compares available features with and without Loki.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 643. Comparison of feature availability with and without Loki</caption>
+<caption class="title">Table 645. Comparison of feature availability with and without Loki</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -2654,7 +2656,7 @@ lokistack-query-frontend-85c6db4fbd-jm94f           1/1     Running   0         
 <p>The query language uses the following syntax:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 644. Query language syntax</caption>
+<caption class="title">Table 646. Query language syntax</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2792,7 +2794,7 @@ spec:
 </ul>
 </div>
 <table id="network-observability-resource-recommendations-table_optimize-collection-performance-and-resource-usage" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 645. Resource recommendations for cluster sizes</caption>
+<caption class="title">Table 647. Resource recommendations for cluster sizes</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 20%;">
@@ -2901,7 +2903,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 646. Total average resource usage</caption>
+<caption class="title">Table 648. Total average resource usage</caption>
 <colgroup>
 <col>
 <col>
@@ -2977,7 +2979,7 @@ spec:
 <p>Reference the required and optional parameters for configuring flow filter rules in the <code>FlowCollector</code> resource, including CIDR ranges, filter actions, protocols, and specific port configurations.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 647. Required configuration parameters</caption>
+<caption class="title">Table 649. Required configuration parameters</caption>
 <colgroup>
 <col style="width: 27.2727%;">
 <col style="width: 72.7273%;">
@@ -3071,7 +3073,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 648. Optional configuration parameters</caption>
+<caption class="title">Table 650. Optional configuration parameters</caption>
 <colgroup>
 <col style="width: 27.2727%;">
 <col style="width: 72.7273%;">
@@ -3599,7 +3601,7 @@ spec:
 <p>This reference applies to compression configured in both <code>spec.kafka.compression</code> for flow collection and <code>spec.exporters</code> for flow export.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 649. Kafka compression codec comparison</caption>
+<caption class="title">Table 651. Kafka compression codec comparison</caption>
 <colgroup>
 <col style="width: 14.2857%;">
 <col style="width: 14.2857%;">
@@ -3799,7 +3801,7 @@ spec:
 </ul>
 </div>
 <table id="network-observability-resource-recommendations-table_scale-components-based-on-cluster-size" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 650. Resource recommendations for cluster sizes</caption>
+<caption class="title">Table 652. Resource recommendations for cluster sizes</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 20%;">
@@ -3907,7 +3909,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 651. Total average resource usage</caption>
+<caption class="title">Table 653. Total average resource usage</caption>
 <colgroup>
 <col>
 <col>
@@ -12202,7 +12204,7 @@ spec:
 <p>The query language uses the following syntax:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 652. Query language syntax</caption>
+<caption class="title">Table 654. Query language syntax</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -12296,7 +12298,7 @@ spec:
 <p>Here is a list of all available filter keys:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 653. Filter keys</caption>
+<caption class="title">Table 655. Filter keys</caption>
 <colgroup>
 <col style="width: 9.0909%;">
 <col style="width: 9.0909%;">
@@ -15834,7 +15836,7 @@ spec:
 <p>The optional <code>netobserv_io_network_health</code> annotation is a JSON string that controls how the alert renders on the <strong>Network Health</strong> page.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 654. Fields for the <code>netobserv_io_network_health</code> annotation</caption>
+<caption class="title">Table 656. Fields for the <code>netobserv_io_network_health</code> annotation</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -17586,7 +17588,7 @@ $ podman rm netobserv-cli</code></pre>
 <div class="sect6">
 <h7 id="cli-basic-commands_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Basic commands</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 655. Basic commands</caption>
+<caption class="title">Table 657. Basic commands</caption>
 <colgroup>
 <col style="width: 27.2727%;">
 <col style="width: 72.7273%;">
@@ -19478,7 +19480,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-13 10:50:44 +0100
+Last updated 2026-10-13 19:21:16 +0100
 </div>
 </div>
 <style>
