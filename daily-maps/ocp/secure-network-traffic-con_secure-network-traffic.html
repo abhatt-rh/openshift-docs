@@ -1075,6 +1075,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
+<li><a href="oadp-intro_protect-application-data-with-oadp.html">Protect application data with OADP</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -1371,7 +1373,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="local-storage-overview_local-storage-options.html">Local Storage Operator overview</a>
 </li>
-<li><a href="local-storage-overview_local-storage-with-the-local-storage-operator.html">Local Storage Operator overview</a>
+<li><a href="local-storage-intro_local-storage-with-the-local-storage-operator.html">Local Storage Operator</a>
 </li>
 <li><a href="persistent-storage-hostpath-about_local-storage-with-the-hostpath-provisioner-for-virtualization.html">Overview of hostPath</a>
 </li>
@@ -1917,7 +1919,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#security-network-namespaces_secure-network-traffic">Use network namespaces</a></li><li class="level-4"><a href="#security-network-policies_secure-network-traffic">Isolate pods with network policies</a></li><li class="level-4"><a href="#security-network-multiple-pod_secure-network-traffic">Use multiple pod networks</a></li><li class="level-4"><a href="#security-network-isolating_secure-network-traffic">Isolate applications</a></li><li class="level-4"><a href="#security-network-ingress_secure-network-traffic">Secure ingress traffic</a></li><li class="level-4"><a href="#security-network-egress_secure-network-traffic">Secure egress traffic</a></li><li class="level-4"><a href="#configure-tls-for-ingress-con_configure-tls-for-ingress">Configure TLS for ingress</a></li><li class="level-5"><a href="#nw-ingress-creating-an-edge-route-with-a-custom-certificate_configure-tls-for-ingress">Create an edge route with a custom certificate</a></li><li class="level-5"><a href="#nw-ingress-creating-a-reencrypt-route-with-a-custom-certificate_configure-tls-for-ingress">Create a re-encrypt route with a custom certificate</a></li><li class="level-5"><a href="#nw-ingress-creating-a-passthrough-route_configure-tls-for-ingress">Create a passthrough route</a></li><li class="level-5"><a href="#nw-ingress-route-secret-load-external-cert_configure-tls-for-ingress">Create a route with externally managed certificates</a></li><li class="level-5"><a href="#nw-enabling-hsts_configure-tls-for-ingress">HTTP Strict Transport Security</a></li><li class="level-6"><a href="#nw-enabling-hsts-per-route_configure-tls-for-ingress">Enable HTTP Strict Transport Security per-route</a></li><li class="level-6"><a href="#nw-disabling-hsts_configure-tls-for-ingress">Disable HTTP Strict Transport Security per-route</a></li><li class="level-6"><a href="#nw-enforcing-hsts-per-domain_configure-tls-for-ingress">Enforce HTTP Strict Transport Security per-domain</a></li><li class="level-5"><a href="#understanding-default-ingress_configure-tls-for-ingress">Understand the default ingress certificate</a></li><li class="level-5"><a href="#replacing-default-ingress_configure-tls-for-ingress">Replace the default ingress certificate</a></li><li class="level-5"><a href="#tls-profiles-ingress-configuring_configure-tls-for-ingress">Configure the TLS security profile for the Ingress Controller</a></li><li class="level-5"><a href="#nw-mutual-tls-auth_configure-tls-for-ingress">Configuring mutual TLS authentication</a></li><li class="level-4"><a href="#nw-egress-firewall-about_configure-egress-controls">How an egress firewall works in a project</a></li><li class="level-5"><a href="#limitations-of-an-egress-firewall-ovn-k_configure-egress-controls">Limitations of an egress firewall</a></li><li class="level-5"><a href="#policy-rule-order-ovn-k_configure-egress-controls">Matching order for egress firewall policy rules</a></li><li class="level-5"><a href="#domain-name-server-resolution-ovn-k_configure-egress-controls">How Domain Name Server (DNS) resolution works</a></li><li class="level-5"><a href="#nw-coredns-egress-firewall_configure-egress-controls">Improved DNS resolution and resolving wildcard domain names</a></li><li class="level-5"><a href="#nw-egress-firewall-object_configure-egress-controls">EgressFirewall custom resource (CR)</a></li><li class="level-6"><a href="#egress-firewall-rules_configure-egress-controls">EgressFirewall rules</a></li><li class="level-6"><a href="#egress-firewall-example_configure-egress-controls">Example EgressFirewall CR</a></li><li class="level-6"><a href="#configuring-NodeSelector-egfw-example_configure-egress-controls">Example EgressFirewall CR using nodeSelector</a></li><li class="level-5"><a href="#nw-egress-firewall-policy-create_configure-egress-controls">Create an EgressFirewall custom resource (CR)</a></li><li class="level-5"><a href="#nw-egress-firewall-view_configure-egress-controls">View an EgressFirewall custom resource (CR)</a></li><li class="level-5"><a href="#nw-egress-firewall-edit_configure-egress-controls">Edit an EgressFirewall custom resource (CR)</a></li><li class="level-5"><a href="#nw-egress-firewall-delete_configure-egress-controls">Remove an EgressFirewall CR</a></li><li class="level-5"><a href="#nw-egress-ips-about_configure-egress-controls">Egress IP address architectural design and implementation</a></li><li class="level-6"><a href="#nw-egress-ips-platform-support_configure-egress-controls">Platform support</a></li><li class="level-6"><a href="#nw-egress-ips-public-cloud-platform-considerations_configure-egress-controls">Public cloud platform considerations</a></li><li class="level-6"><a href="#nw-egress-ips-multi-nic-considerations_configure-egress-controls">Considerations for using an egress IP address on additional network interfaces</a></li><li class="level-6"><a href="#nw-egress-ips-node-architecture_configure-egress-controls">Architectural diagram of an egress IP address configuration</a></li><li class="level-5"><a href="#nw-egress-ips-object_configure-egress-controls">EgressIP object</a></li><li class="level-5"><a href="#nw-egress-ips-considerations_configure-egress-controls">Assignment of egress IPs to a namespace, nodes, and pods</a></li><li class="level-5"><a href="#nw-egress-ips-assign_configure-egress-controls">Assign an egress IP address to a namespace</a></li><li class="level-5"><a href="#egressip_failover_concept_configure-egress-controls">Understand EgressIP failover control</a></li><li class="level-6"><a href="#egressip_configure_failover_task_configure-egress-controls">Configure the EgressIP failover time limit</a></li><li class="level-6"><a href="#egressip_failover_reference_configure-egress-controls">EgressIP failover settings</a></li><li class="level-5"><a href="#nw-egress-ips-node_configure-egress-controls">Label a node to host egress IP addresses</a></li><li class="level-5"><a href="#nw-egress-ips-object-dual-stack_configure-egress-controls">Configure dual-stack networking for an EgressIP object</a></li><li class="level-5"><a href="#nw-egress-router-about_using-an-egress-router-ovn">About an egress router pod</a></li><li class="level-6"><a href="#nw-egress-router-about-modes_using-an-egress-router-ovn">Egress router modes</a></li><li class="level-6"><a href="#nw-egress-router-about-router-pod-implementation_using-an-egress-router-ovn">Egress router pod implementation</a></li><li class="level-6"><a href="#nw-egress-router-about-deployments_using-an-egress-router-ovn">Deployment considerations</a></li><li class="level-6"><a href="#nw-egress-router-about-failover_using-an-egress-router-ovn">Failover configuration</a></li><li class="level-5"><a href="#nw-egress-router-ovn-cr_deploying-egress-router-ovn-redirection">Egress router custom resource</a></li><li class="level-5"><a href="#nw-egress-router-redirect-mode-ovn_configure-egress-controls">Deploy an egress router in redirect mode</a></li><li class="level-5"><a href="#nw-egress-service-ovn-cr_configure-egress-controls">Egress service custom resource</a></li><li class="level-5"><a href="#nw-egress-service-ovn_configure-egress-controls">Deploy an egress service</a></li><li class="level-5"><a href="#nw-secondary-ext-gw-about_configure-egress-controls">How Red Hat OpenShift Container Platform determines the external gateway IP address</a></li><li class="level-5"><a href="#nw-secondary-ext-gw-object_configure-egress-controls">AdminPolicyBasedExternalRoute object configuration</a></li><li class="level-5"><a href="#example-secondary-external-gateway-configurations_configure-egress-controls">Example secondary external gateway configurations</a></li><li class="level-5"><a href="#nw-secondary-ext-gw-configure_configure-egress-controls">Configure a secondary external gateway</a></li><li class="level-4"><a href="#adminnetworkpolicy_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy</a></li><li class="level-5"><a href="#adminnetworkpolicy-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy example</a></li><li class="level-5"><a href="#adminnetworkpolicy-actions-for-rules_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy actions for rules</a></li><li class="level-6"><a href="#adminnetworkpolicy-allow-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy Allow example</a></li><li class="level-6"><a href="#adminnetworkpolicy-deny-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy Deny example</a></li><li class="level-6"><a href="#adminnetworkpolicy-pass-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy Pass example</a></li><li class="level-5"><a href="#BaselineAdminNetworkPolicy_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">BaselineAdminNetworkPolicy</a></li><li class="level-6"><a href="#baselineddminnetworkpolicy-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">BaselineAdminNetworkPolicy example</a></li><li class="level-6"><a href="#BaselineAdminNetworkPolicy-default-deny-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">BaselineAdminNetworkPolicy Deny example</a></li><li class="level-5"><a href="#nw-anp-egress_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Northbound traffic controls for AdminNetworkPolicy and BaselineAdminNetworkPolicy</a></li><li class="level-6"><a href="#egress-traffic-control-towards-cluster-nodes_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Using nodes peer to control egress traffic to cluster nodes</a></li><li class="level-6"><a href="#egress-traffic-control-networks-peer-external-destinations_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Using networks peer to control egress traffic towards external destinations</a></li><li class="level-6"><a href="#combined-nodes-peer-networks-peer-anp_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Using nodes peer and networks peer together</a></li><li class="level-5"><a href="#anp-troubleshooting_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Check creation of ANP</a></li><li class="level-5"><a href="#metrics-commands-anp_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Use nbctl commands for ANP and BANP</a></li><li class="level-5"><a href="#anp-banp-metrics_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Metrics for AdminNetworkPolicy</a></li><li class="level-4"><a href="#nw-ovn-ipsec-modes_configure-network-encryption">Modes of operation</a></li><li class="level-5"><a href="#nw-ovn-ipsec-prerequisites_configure-network-encryption">Prerequisites for IPsec encryption for external traffic</a></li><li class="level-5"><a href="#network-connectivity-requirements-ipsec_configure-network-encryption">Network connectivity requirements when IPsec is enabled</a></li><li class="level-5"><a href="#pod-to-pod-ipsec_configure-network-encryption">IPsec encryption for pod-to-pod traffic</a></li><li class="level-6"><a href="#nw-ovn-ipsec-traffic_configure-network-encryption">Types of network traffic flows encrypted by pod-to-pod IPsec</a></li><li class="level-6"><a href="#nw-ovn-ipsec-encryption_configure-network-encryption">Encryption protocol and IPsec mode</a></li><li class="level-6"><a href="#nw-ovn-ipsec-certificates_configure-network-encryption">Security certificate generation and rotation</a></li><li class="level-5"><a href="#nw-ovn-ipsec-external_configure-network-encryption">IPsec encryption for external traffic</a></li><li class="level-6"><a href="#supported-platforms_configure-network-encryption">Supported platforms</a></li><li class="level-6"><a href="#ipsec-external-limitations_configure-network-encryption">Limitations</a></li><li class="level-5"><a href="#nw-ovn-ipsec-enable_configure-network-encryption">Enable IPsec encryption</a></li><li class="level-5"><a href="#nw-ovn-ipsec-north-south-enable_configure-network-encryption">Configure IPsec encryption for external traffic</a></li><li class="level-5"><a href="#nw-ovn-ipsec-north-south-disable_configure-network-encryption">Disable IPsec encryption for an external IPsec endpoint</a></li><li class="level-5"><a href="#nw-ovn-ipsec-disable_configure-network-encryption">Disable IPsec encryption</a></li><li class="level-4"><a href="#secure-network-traffic-establish-tenant-boundaries-and-project-defaults-con_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Establish tenant boundaries and project defaults</a></li><li class="level-5"><a href="#modifying-template-for-new-projects_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Modify the template for new projects</a></li><li class="level-5"><a href="#nw-networkpolicy-project-defaults_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Add network policies to the new project template</a></li><li class="level-5"><a href="#nw-networkpolicy-multitenant-isolation_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Configure multitenant isolation by using network policy</a></li><li class="level-4"><a href="#proxy-cert-purpose_configure-cluster-wide-proxy-certificate-trust">Proxy certificate purpose</a></li><li class="level-5"><a href="#proxy-cert-manage-install_configure-cluster-wide-proxy-certificate-trust">Manage proxy certificates during installation</a></li><li class="level-5"><a href="#proxy-cert-location_configure-cluster-wide-proxy-certificate-trust">Proxy certificate location</a></li><li class="level-5"><a href="#proxy-cert-expiration_configure-cluster-wide-proxy-certificate-trust">Proxy certificate expiration</a></li><li class="level-5"><a href="#proxy-cert-services_configure-cluster-wide-proxy-certificate-trust">Services using proxy certificates</a></li><li class="level-5"><a href="#proxy-cert-customization_configure-cluster-wide-proxy-certificate-trust">Proxy certificate customization</a></li><li class="level-5"><a href="#proxy-cert-renewal_configure-cluster-wide-proxy-certificate-trust">Proxy certificate renewal</a></li><li class="level-5"><a href="#cluster-wide-proxy-prereqs_configure-cluster-wide-proxy-certificate-trust">Prerequisites for configuring a cluster-wide proxy</a></li><li class="level-6"><a href="#cluster-wide-proxy-general-prereqs_configure-cluster-wide-proxy-certificate-trust">General requirements</a></li><li class="level-6"><a href="#cluster-wide-proxy-network-prereqs_configure-cluster-wide-proxy-certificate-trust">Network requirements</a></li><li class="level-5"><a href="#configuring-a-proxy-trust-bundle-responsibilities_configure-cluster-wide-proxy-certificate-trust">Responsibilities for additional trust bundles</a></li><li class="level-5"><a href="#configuring-a-proxy-during-installation_configure-cluster-wide-proxy-certificate-trust">Configure a proxy during installation</a></li><li class="level-6"><a href="#configuring-a-proxy-during-installation-ocm_configure-cluster-wide-proxy-certificate-trust">Configure a proxy during installation using OpenShift Cluster Manager</a></li><li class="level-6"><a href="#configuring-a-proxy-during-installation-cli_configure-cluster-wide-proxy-certificate-trust">Configure a proxy during installation using the CLI</a></li><li class="level-5"><a href="#configuring-a-proxy-after-installation_configure-cluster-wide-proxy-certificate-trust">Configure a proxy after installation</a></li><li class="level-6"><a href="#configuring-a-proxy-after-installation-ocm_configure-cluster-wide-proxy-certificate-trust">Configure a proxy after installation using OpenShift Cluster Manager</a></li><li class="level-6"><a href="#configuring-a-proxy-after-installation-cli_configure-cluster-wide-proxy-certificate-trust">Configure a proxy after installation using the CLI</a></li><li class="level-6"><a href="#removing-cluster-wide-proxy_configure-cluster-wide-proxy-certificate-trust">Remove a cluster-wide proxy</a></li><li class="level-6"><a href="#configmap-removing-ca_configure-cluster-wide-proxy-certificate-trust">Remove certificate authorities on a Red Hat OpenShift Container Platform cluster</a></li><li class="level-5"><a href="#ca-bundle-understanding_configure-cluster-wide-proxy-certificate-trust">Understand the CA Bundle certificate</a></li><li class="level-5"><a href="#ca-bundle-replacing_configure-cluster-wide-proxy-certificate-trust">Replace the CA Bundle certificate</a></li><li class="level-4"><a href="#secure-network-traffic-design-enterprise-baselines-and-recommended-patterns-con_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Design enterprise baselines and recommended patterns</a></li><li class="level-5"><a href="#anp-best-practices_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Design AdminNetworkPolicy</a></li><li class="level-6"><a href="#considerations-using-banp_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Considerations for using BaselineAdminNetworkPolicy</a></li><li class="level-6"><a href="#differences-with-netpol_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Differences to consider between AdminNetworkPolicy and NetworkPolicy</a></li><li class="level-5"><a href="#nw-anp-differences-networkpolicy_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Key differences between AdminNetworkPolicy and NetworkPolicy custom resources</a></li><li class="level-4"><a href="#how-service-accounts-assume-aws-iam-roles-in-sre-owned-projects_configure-iam-roles-for-aws-operators">How service accounts assume AWS IAM roles in SRE-owned projects</a></li><li class="level-5"><a href="#workflow-for-assuming-aws-iam-roles-in-sre-owned-projects_configure-iam-roles-for-aws-operators">Workflow for assuming AWS IAM roles in Red Hat SRE-owned projects</a></li><li class="level-5"><a href="#how-service-accounts-assume-aws-iam-roles-in-user-defined-projects_configure-iam-roles-for-aws-operators">How service accounts assume AWS IAM roles in user-defined projects</a></li><li class="level-6"><a href="#pod-identity-webhook-workflow-in-user-defined-projects_configure-iam-roles-for-aws-operators">Pod identity webhook workflow in user-defined projects</a></li><li class="level-5"><a href="#assuming-an-aws-iam-role-in-your-own-pods_configure-iam-roles-for-aws-operators">About assuming AWS IAM roles in your own pods</a></li><li class="level-6"><a href="#setting-up-an-aws-iam-role-a-service-account_configure-iam-roles-for-aws-operators">Set up an AWS IAM role for a service account</a></li><li class="level-6"><a href="#creating-a-service-account-in-your-project_configure-iam-roles-for-aws-operators">Create a service account in your project</a></li><li class="level-6"><a href="#creating-an-example-aws-sdk-container-image_configure-iam-roles-for-aws-operators">Create an AWS SDK container image</a></li><li class="level-6"><a href="#deploying-a-pod-that-includes-an-aws-sdk_configure-iam-roles-for-aws-operators">Deploy a pod that includes an AWS SDK</a></li><li class="level-6"><a href="#verifying-the-assumed-iam-role-in-your-pod_configure-iam-roles-for-aws-operators">Verify the assumed IAM role in your pod</a></li><li class="level-5"><a href="#cco-short-term-creds-aws-sts_configure-iam-roles-for-aws-operators">About AWS Security Token Service</a></li><li class="level-6"><a href="#cco-short-term-creds-auth-flow-aws_configure-iam-roles-for-aws-operators">AWS Security Token Service authentication process</a></li><li class="level-6"><a href="#cco-short-term-creds-component-permissions-aws_configure-iam-roles-for-aws-operators">AWS component secret permissions requirements</a></li><li class="level-6"><a href="#cco-short-term-creds-aws-olm_configure-iam-roles-for-aws-operators">OLM-managed Operator support for authentication with AWS STS</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#security-network-namespaces_secure-network-traffic">Use network namespaces</a></li><li class="level-4"><a href="#security-network-policies_secure-network-traffic">Isolate pods with network policies</a></li><li class="level-4"><a href="#security-network-multiple-pod_secure-network-traffic">Use multiple pod networks</a></li><li class="level-4"><a href="#security-network-isolating_secure-network-traffic">Isolate applications</a></li><li class="level-4"><a href="#security-network-ingress_secure-network-traffic">Secure ingress traffic</a></li><li class="level-4"><a href="#security-network-egress_secure-network-traffic">Secure egress traffic</a></li><li class="level-4"><a href="#configure-tls-for-ingress-con_configure-tls-for-ingress">Configure TLS for ingress</a></li><li class="level-5"><a href="#nw-ingress-creating-an-edge-route-with-a-custom-certificate_configure-tls-for-ingress">Create an edge route with a custom certificate</a></li><li class="level-5"><a href="#nw-ingress-creating-a-reencrypt-route-with-a-custom-certificate_configure-tls-for-ingress">Create a re-encrypt route with a custom certificate</a></li><li class="level-5"><a href="#nw-ingress-creating-a-passthrough-route_configure-tls-for-ingress">Create a passthrough route</a></li><li class="level-5"><a href="#nw-ingress-route-secret-load-external-cert_configure-tls-for-ingress">Create a route with externally managed certificates</a></li><li class="level-5"><a href="#nw-enabling-hsts_configure-tls-for-ingress">HTTP Strict Transport Security</a></li><li class="level-6"><a href="#nw-enabling-hsts-per-route_configure-tls-for-ingress">Enable HTTP Strict Transport Security per-route</a></li><li class="level-6"><a href="#nw-disabling-hsts_configure-tls-for-ingress">Disable HTTP Strict Transport Security per-route</a></li><li class="level-6"><a href="#nw-enforcing-hsts-per-domain_configure-tls-for-ingress">Enforce HTTP Strict Transport Security per-domain</a></li><li class="level-5"><a href="#understanding-default-ingress_configure-tls-for-ingress">Understand the default ingress certificate</a></li><li class="level-5"><a href="#replacing-default-ingress_configure-tls-for-ingress">Replace the default ingress certificate</a></li><li class="level-5"><a href="#tls-profiles-ingress-configuring_configure-tls-for-ingress">Configure the TLS security profile for the Ingress Controller</a></li><li class="level-5"><a href="#nw-mutual-tls-auth_configure-tls-for-ingress">Configuring mutual TLS authentication</a></li><li class="level-4"><a href="#nw-egress-firewall-about_configure-egress-controls">How an egress firewall works in a project</a></li><li class="level-5"><a href="#limitations-of-an-egress-firewall-ovn-k_configure-egress-controls">Limitations of an egress firewall</a></li><li class="level-5"><a href="#policy-rule-order-ovn-k_configure-egress-controls">Matching order for egress firewall policy rules</a></li><li class="level-5"><a href="#domain-name-server-resolution-ovn-k_configure-egress-controls">How Domain Name Server (DNS) resolution works</a></li><li class="level-5"><a href="#nw-coredns-egress-firewall_configure-egress-controls">Improved DNS resolution and resolving wildcard domain names</a></li><li class="level-5"><a href="#nw-egress-firewall-object_configure-egress-controls">EgressFirewall custom resource (CR)</a></li><li class="level-6"><a href="#egress-firewall-rules_configure-egress-controls">EgressFirewall rules</a></li><li class="level-6"><a href="#egress-firewall-example_configure-egress-controls">Example EgressFirewall CR</a></li><li class="level-6"><a href="#configuring-NodeSelector-egfw-example_configure-egress-controls">Example EgressFirewall CR using nodeSelector</a></li><li class="level-5"><a href="#nw-egress-firewall-policy-create_configure-egress-controls">Create an EgressFirewall custom resource (CR)</a></li><li class="level-5"><a href="#nw-egress-firewall-view_configure-egress-controls">View an EgressFirewall custom resource (CR)</a></li><li class="level-5"><a href="#nw-egress-firewall-edit_configure-egress-controls">Edit an EgressFirewall custom resource (CR)</a></li><li class="level-5"><a href="#nw-egress-firewall-delete_configure-egress-controls">Remove an EgressFirewall CR</a></li><li class="level-5"><a href="#nw-egress-ips-about_configure-egress-controls">Egress IP address architectural design and implementation</a></li><li class="level-6"><a href="#nw-egress-ips-platform-support_configure-egress-controls">Platform support</a></li><li class="level-6"><a href="#nw-egress-ips-public-cloud-platform-considerations_configure-egress-controls">Public cloud platform considerations</a></li><li class="level-6"><a href="#nw-egress-ips-multi-nic-considerations_configure-egress-controls">Considerations for using an egress IP address on additional network interfaces</a></li><li class="level-6"><a href="#nw-egress-ips-node-architecture_configure-egress-controls">Architectural diagram of an egress IP address configuration</a></li><li class="level-5"><a href="#nw-egress-ips-object_configure-egress-controls">EgressIP object</a></li><li class="level-5"><a href="#nw-egress-ips-considerations_configure-egress-controls">Assignment of egress IPs to a namespace, nodes, and pods</a></li><li class="level-5"><a href="#nw-egress-ips-assign_configure-egress-controls">Assign an egress IP address to a namespace</a></li><li class="level-5"><a href="#egressip_failover_concept_configure-egress-controls">Understand EgressIP failover control</a></li><li class="level-6"><a href="#egressip_configure_failover_task_configure-egress-controls">Configure the EgressIP failover time limit</a></li><li class="level-6"><a href="#egressip_failover_reference_configure-egress-controls">EgressIP failover settings</a></li><li class="level-5"><a href="#nw-egress-ips-node_configure-egress-controls">Label a node to host egress IP addresses</a></li><li class="level-5"><a href="#nw-egress-ips-object-dual-stack_configure-egress-controls">Configure dual-stack networking for an EgressIP object</a></li><li class="level-5"><a href="#nw-egress-router-about_using-an-egress-router-ovn">About an egress router pod</a></li><li class="level-6"><a href="#nw-egress-router-about-modes_using-an-egress-router-ovn">Egress router modes</a></li><li class="level-6"><a href="#nw-egress-router-about-router-pod-implementation_using-an-egress-router-ovn">Egress router pod implementation</a></li><li class="level-6"><a href="#nw-egress-router-about-deployments_using-an-egress-router-ovn">Deployment considerations</a></li><li class="level-6"><a href="#nw-egress-router-about-failover_using-an-egress-router-ovn">Failover configuration</a></li><li class="level-5"><a href="#nw-egress-router-ovn-cr_deploying-egress-router-ovn-redirection">Egress router custom resource</a></li><li class="level-5"><a href="#nw-egress-router-redirect-mode-ovn_configure-egress-controls">Deploy an egress router in redirect mode</a></li><li class="level-5"><a href="#nw-egress-service-ovn-cr_configure-egress-controls">Egress service custom resource</a></li><li class="level-5"><a href="#nw-egress-service-ovn_configure-egress-controls">Deploy an egress service</a></li><li class="level-5"><a href="#nw-secondary-ext-gw-about_configure-egress-controls">How Red Hat OpenShift Container Platform determines the external gateway IP address</a></li><li class="level-5"><a href="#nw-secondary-ext-gw-object_configure-egress-controls">AdminPolicyBasedExternalRoute object configuration</a></li><li class="level-5"><a href="#example-secondary-external-gateway-configurations_configure-egress-controls">Example secondary external gateway configurations</a></li><li class="level-5"><a href="#nw-secondary-ext-gw-configure_configure-egress-controls">Configure a secondary external gateway</a></li><li class="level-5"><a href="#nwt-configure-egress-routing-policies_configure-egress-controls">Configuring egress routing policies</a></li><li class="level-4"><a href="#adminnetworkpolicy_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy</a></li><li class="level-5"><a href="#adminnetworkpolicy-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy example</a></li><li class="level-5"><a href="#adminnetworkpolicy-actions-for-rules_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy actions for rules</a></li><li class="level-6"><a href="#adminnetworkpolicy-allow-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy Allow example</a></li><li class="level-6"><a href="#adminnetworkpolicy-deny-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy Deny example</a></li><li class="level-6"><a href="#adminnetworkpolicy-pass-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy Pass example</a></li><li class="level-5"><a href="#BaselineAdminNetworkPolicy_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">BaselineAdminNetworkPolicy</a></li><li class="level-6"><a href="#baselineddminnetworkpolicy-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">BaselineAdminNetworkPolicy example</a></li><li class="level-6"><a href="#BaselineAdminNetworkPolicy-default-deny-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">BaselineAdminNetworkPolicy Deny example</a></li><li class="level-5"><a href="#nw-anp-egress_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Northbound traffic controls for AdminNetworkPolicy and BaselineAdminNetworkPolicy</a></li><li class="level-6"><a href="#egress-traffic-control-towards-cluster-nodes_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Using nodes peer to control egress traffic to cluster nodes</a></li><li class="level-6"><a href="#egress-traffic-control-networks-peer-external-destinations_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Using networks peer to control egress traffic towards external destinations</a></li><li class="level-6"><a href="#combined-nodes-peer-networks-peer-anp_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Using nodes peer and networks peer together</a></li><li class="level-5"><a href="#anp-troubleshooting_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Check creation of ANP</a></li><li class="level-5"><a href="#metrics-commands-anp_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Use nbctl commands for ANP and BANP</a></li><li class="level-5"><a href="#anp-banp-metrics_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Metrics for AdminNetworkPolicy</a></li><li class="level-4"><a href="#nw-ovn-ipsec-modes_configure-network-encryption">Modes of operation</a></li><li class="level-5"><a href="#nw-ovn-ipsec-prerequisites_configure-network-encryption">Prerequisites for IPsec encryption for external traffic</a></li><li class="level-5"><a href="#network-connectivity-requirements-ipsec_configure-network-encryption">Network connectivity requirements when IPsec is enabled</a></li><li class="level-5"><a href="#pod-to-pod-ipsec_configure-network-encryption">IPsec encryption for pod-to-pod traffic</a></li><li class="level-6"><a href="#nw-ovn-ipsec-traffic_configure-network-encryption">Types of network traffic flows encrypted by pod-to-pod IPsec</a></li><li class="level-6"><a href="#nw-ovn-ipsec-encryption_configure-network-encryption">Encryption protocol and IPsec mode</a></li><li class="level-6"><a href="#nw-ovn-ipsec-certificates_configure-network-encryption">Security certificate generation and rotation</a></li><li class="level-5"><a href="#nw-ovn-ipsec-external_configure-network-encryption">IPsec encryption for external traffic</a></li><li class="level-6"><a href="#supported-platforms_configure-network-encryption">Supported platforms</a></li><li class="level-6"><a href="#ipsec-external-limitations_configure-network-encryption">Limitations</a></li><li class="level-5"><a href="#nw-ovn-ipsec-enable_configure-network-encryption">Enable IPsec encryption</a></li><li class="level-5"><a href="#nw-ovn-ipsec-north-south-enable_configure-network-encryption">Configure IPsec encryption for external traffic</a></li><li class="level-5"><a href="#nw-ovn-ipsec-north-south-disable_configure-network-encryption">Disable IPsec encryption for an external IPsec endpoint</a></li><li class="level-5"><a href="#nw-ovn-ipsec-disable_configure-network-encryption">Disable IPsec encryption</a></li><li class="level-4"><a href="#secure-network-traffic-establish-tenant-boundaries-and-project-defaults-con_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Establish tenant boundaries and project defaults</a></li><li class="level-5"><a href="#modifying-template-for-new-projects_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Modify the template for new projects</a></li><li class="level-5"><a href="#nw-networkpolicy-project-defaults_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Add network policies to the new project template</a></li><li class="level-5"><a href="#nw-networkpolicy-multitenant-isolation_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Configure multitenant isolation by using network policy</a></li><li class="level-4"><a href="#configure-cluster-wide-proxy_configure-cluster-wide-proxy">Configure a cluster-wide proxy</a></li><li class="level-5"><a href="#nw-proxy-configure-object_configure-cluster-wide-proxy">Enabling the cluster-wide proxy</a></li><li class="level-5"><a href="#nw-proxy-remove_configure-cluster-wide-proxy">Removing the cluster-wide proxy</a></li><li class="level-5"><a href="#nw-verify-proxy-configuration_configure-cluster-wide-proxy">Verifying the cluster-wide proxy configuration</a></li><li class="level-4"><a href="#proxy-cert-purpose_configure-cluster-wide-proxy-certificate-trust">Proxy certificate purpose</a></li><li class="level-5"><a href="#proxy-cert-manage-install_configure-cluster-wide-proxy-certificate-trust">Manage proxy certificates during installation</a></li><li class="level-5"><a href="#proxy-cert-location_configure-cluster-wide-proxy-certificate-trust">Proxy certificate location</a></li><li class="level-5"><a href="#proxy-cert-expiration_configure-cluster-wide-proxy-certificate-trust">Proxy certificate expiration</a></li><li class="level-5"><a href="#proxy-cert-services_configure-cluster-wide-proxy-certificate-trust">Services using proxy certificates</a></li><li class="level-5"><a href="#proxy-cert-customization_configure-cluster-wide-proxy-certificate-trust">Proxy certificate customization</a></li><li class="level-5"><a href="#proxy-cert-renewal_configure-cluster-wide-proxy-certificate-trust">Proxy certificate renewal</a></li><li class="level-5"><a href="#cluster-wide-proxy-prereqs_configure-cluster-wide-proxy-certificate-trust">Prerequisites for configuring a cluster-wide proxy</a></li><li class="level-6"><a href="#cluster-wide-proxy-general-prereqs_configure-cluster-wide-proxy-certificate-trust">General requirements</a></li><li class="level-6"><a href="#cluster-wide-proxy-network-prereqs_configure-cluster-wide-proxy-certificate-trust">Network requirements</a></li><li class="level-5"><a href="#configuring-a-proxy-trust-bundle-responsibilities_configure-cluster-wide-proxy-certificate-trust">Responsibilities for additional trust bundles</a></li><li class="level-5"><a href="#configuring-a-proxy-during-installation_configure-cluster-wide-proxy-certificate-trust">Configure a proxy during installation</a></li><li class="level-6"><a href="#configuring-a-proxy-during-installation-ocm_configure-cluster-wide-proxy-certificate-trust">Configure a proxy during installation using OpenShift Cluster Manager</a></li><li class="level-6"><a href="#configuring-a-proxy-during-installation-cli_configure-cluster-wide-proxy-certificate-trust">Configure a proxy during installation using the CLI</a></li><li class="level-5"><a href="#configuring-a-proxy-after-installation_configure-cluster-wide-proxy-certificate-trust">Configure a proxy after installation</a></li><li class="level-6"><a href="#configuring-a-proxy-after-installation-ocm_configure-cluster-wide-proxy-certificate-trust">Configure a proxy after installation using OpenShift Cluster Manager</a></li><li class="level-6"><a href="#configuring-a-proxy-after-installation-cli_configure-cluster-wide-proxy-certificate-trust">Configure a proxy after installation using the CLI</a></li><li class="level-6"><a href="#removing-cluster-wide-proxy_configure-cluster-wide-proxy-certificate-trust">Remove a cluster-wide proxy</a></li><li class="level-6"><a href="#configmap-removing-ca_configure-cluster-wide-proxy-certificate-trust">Remove certificate authorities on a Red Hat OpenShift Container Platform cluster</a></li><li class="level-5"><a href="#ca-bundle-understanding_configure-cluster-wide-proxy-certificate-trust">Understand the CA Bundle certificate</a></li><li class="level-5"><a href="#ca-bundle-replacing_configure-cluster-wide-proxy-certificate-trust">Replace the CA Bundle certificate</a></li><li class="level-4"><a href="#secure-network-traffic-design-enterprise-baselines-and-recommended-patterns-con_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Design enterprise baselines and recommended patterns</a></li><li class="level-5"><a href="#anp-best-practices_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Design AdminNetworkPolicy</a></li><li class="level-6"><a href="#considerations-using-banp_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Considerations for using BaselineAdminNetworkPolicy</a></li><li class="level-6"><a href="#differences-with-netpol_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Differences to consider between AdminNetworkPolicy and NetworkPolicy</a></li><li class="level-5"><a href="#nw-anp-differences-networkpolicy_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Key differences between AdminNetworkPolicy and NetworkPolicy custom resources</a></li><li class="level-4"><a href="#how-service-accounts-assume-aws-iam-roles-in-sre-owned-projects_configure-iam-roles-for-aws-operators">How service accounts assume AWS IAM roles in SRE-owned projects</a></li><li class="level-5"><a href="#workflow-for-assuming-aws-iam-roles-in-sre-owned-projects_configure-iam-roles-for-aws-operators">Workflow for assuming AWS IAM roles in Red Hat SRE-owned projects</a></li><li class="level-5"><a href="#how-service-accounts-assume-aws-iam-roles-in-user-defined-projects_configure-iam-roles-for-aws-operators">How service accounts assume AWS IAM roles in user-defined projects</a></li><li class="level-6"><a href="#pod-identity-webhook-workflow-in-user-defined-projects_configure-iam-roles-for-aws-operators">Pod identity webhook workflow in user-defined projects</a></li><li class="level-5"><a href="#assuming-an-aws-iam-role-in-your-own-pods_configure-iam-roles-for-aws-operators">About assuming AWS IAM roles in your own pods</a></li><li class="level-6"><a href="#setting-up-an-aws-iam-role-a-service-account_configure-iam-roles-for-aws-operators">Set up an AWS IAM role for a service account</a></li><li class="level-6"><a href="#creating-a-service-account-in-your-project_configure-iam-roles-for-aws-operators">Create a service account in your project</a></li><li class="level-6"><a href="#creating-an-example-aws-sdk-container-image_configure-iam-roles-for-aws-operators">Create an AWS SDK container image</a></li><li class="level-6"><a href="#deploying-a-pod-that-includes-an-aws-sdk_configure-iam-roles-for-aws-operators">Deploy a pod that includes an AWS SDK</a></li><li class="level-6"><a href="#verifying-the-assumed-iam-role-in-your-pod_configure-iam-roles-for-aws-operators">Verify the assumed IAM role in your pod</a></li><li class="level-5"><a href="#cco-short-term-creds-aws-sts_configure-iam-roles-for-aws-operators">About AWS Security Token Service</a></li><li class="level-6"><a href="#cco-short-term-creds-auth-flow-aws_configure-iam-roles-for-aws-operators">AWS Security Token Service authentication process</a></li><li class="level-6"><a href="#cco-short-term-creds-component-permissions-aws_configure-iam-roles-for-aws-operators">AWS component secret permissions requirements</a></li><li class="level-6"><a href="#cco-short-term-creds-aws-olm_configure-iam-roles-for-aws-operators">OLM-managed Operator support for authentication with AWS STS</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="secure-network-traffic-con_secure-network-traffic">Secure network traffic</h3>
@@ -3145,8 +3147,11 @@ Spec:
 </div>
 <div class="sect4">
 <h5 id="nw-mutual-tls-auth_configure-tls-for-ingress">Configuring mutual TLS authentication</h5>
+<div class="paragraph _abstract">
+<p>You can configure the Ingress Controller to enable mutual TLS (mTLS) authentication by setting a <code>spec.clientTLS</code> value.</p>
+</div>
 <div class="paragraph">
-<p>You can configure the Ingress Controller to enable mutual TLS (mTLS) authentication by setting a <code>spec.clientTLS</code> value. The <code>clientTLS</code> value configures the Ingress Controller to verify client certificates. This configuration includes setting a <code>clientCA</code> value, which is a reference to a config map. The config map contains the PEM-encoded CA certificate bundle that is used to verify a client&#8217;s certificate. Optionally, you can also configure a list of certificate subject filters.</p>
+<p>The <code>clientTLS</code> value configures the Ingress Controller to verify client certificates. This configuration includes setting a <code>clientCA</code> value, which is a reference to a config map. The config map contains the PEM-encoded CA certificate bundle that is used to verify a client&#8217;s certificate. Optionally, you can also configure a list of certificate subject filters.</p>
 </div>
 <div class="paragraph">
 <p>If the <code>clientCA</code> value specifies an X509v3 certificate revocation list (CRL) distribution point, the Ingress Operator downloads and manages a CRL config map based on the HTTP URI X509v3 <code>CRL Distribution Point</code> specified in each provided certificate. The Ingress Controller uses this config map during mTLS/TLS negotiation. Requests that do not provide valid certificates are rejected.</p>
@@ -5904,7 +5909,7 @@ spec:
 <p>The following tables detail supported fields for objects.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 719. <code>AdminPolicyBasedExternalRoute</code> object</caption>
+<caption class="title">Table 791. <code>AdminPolicyBasedExternalRoute</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -5974,7 +5979,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 720. <code>nextHops</code> object</caption>
+<caption class="title">Table 792. <code>nextHops</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -6019,7 +6024,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 721. <code>nextHops.static</code> object</caption>
+<caption class="title">Table 793. <code>nextHops.static</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -6064,7 +6069,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 722. <code>nextHops.dynamic</code> object</caption>
+<caption class="title">Table 794. <code>nextHops.dynamic</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -6293,6 +6298,126 @@ Events:  &lt;none&gt;</code></pre>
 </div>
 </li>
 </ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="nwt-configure-egress-routing-policies_configure-egress-controls">Configuring egress routing policies</h5>
+<div class="paragraph _abstract">
+<p>As a cluster administrator you can configure egress routing policies by using the <code>gatewayConfig</code> specification in the Cluster Network Operator (CNO). You can use the following procedure to set the <code>routingViaHost</code> field to <code>true</code> or  <code>false</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can follow the optional step in the procedure to enable IP forwarding alongside the <code>routingViaHost=true</code> configuration if you need the host network of the node to act as a router for traffic not related to OVN-Kubernetes. For example, possible use cases for combining local gateway with IP forwarding include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Configuring all pod egress traffic to be forwarded via the node&#8217;s IP</p>
+</li>
+<li>
+<p>Integrating OVN-Kubernetes CNI with external network address translation (NAT) devices</p>
+</li>
+<li>
+<p>Configuring OVN-Kubernetes CNI to use a kernel routing table</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You are logged in as a user with administrator privileges.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Back up the existing network configuration by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get network.operator cluster -o yaml &gt; network-config-backup.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Set the <code>routingViaHost</code> parameter to <code>true</code> by entering the following command. Egress traffic then gets routed through a specific gateway according to the routes that you configured on the node.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch networks.operator.openshift.io cluster --type=merge -p '{"spec":{"defaultNetwork":{"ovnKubernetesConfig":{"gatewayConfig":{"routingViaHost": true}}}}}'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify the correct application of the <code>routingViaHost=true</code> configuration by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get networks.operator.openshift.io cluster -o yaml | grep -A 5 "gatewayConfig"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">apiVersion: operator.openshift.io/v1
+kind: Network
+metadata:
+  name: cluster
+# ...
+gatewayConfig:
+        ipv4: {}
+        ipv6: {}
+        routingViaHost: true
+      genevePort: 6081
+      ipsecConfig:
+# ...</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>routingViaHost</code>:: Specifies a value of <code>true</code> means that egress traffic gets routed through a specific local gateway on the node that hosts the pod. A value of <code>false</code> for the parameter means that a group of nodes share a single gateway so traffic does not get routed through a single host.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Optional: Enable IP forwarding globally by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch network.operator cluster --type=merge -p '{"spec":{"defaultNetwork":{"ovnKubernetesConfig":{"gatewayConfig":{"ipForwarding": "Global"}}}}}'</code></pre>
+</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Verify that the <code>ipForwarding</code> spec has been set to <code>Global</code> by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get networks.operator.openshift.io cluster -o yaml | grep -A 5 "gatewayConfig"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">apiVersion: operator.openshift.io/v1
+kind: Network
+metadata:
+  name: cluster
+# ...
+gatewayConfig:
+        ipForwarding: Global
+        ipv4: {}
+        ipv6: {}
+        routingViaHost: true
+      genevePort: 6081
+# ...</code></pre>
+</div>
+</div>
+</li>
+</ol>
 </div>
 </li>
 </ol>
@@ -7719,7 +7844,7 @@ ports               : [5e75f289-8273-4f8a-8798-8c10f7318833, de7e1b71-6184-445d-
 <p>The following table describes the different modes of operation:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 723. IPsec modes of operation</caption>
+<caption class="title">Table 795. IPsec modes of operation</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 60%;">
@@ -7786,7 +7911,7 @@ ports               : [5e75f289-8273-4f8a-8798-8c10f7318833, de7e1b71-6184-445d-
 <p>When IPsec is enabled in Red&#160;Hat OpenShift Container Platform, you must configure the network connectivity between machines to allow cluster components to communicate. Each machine must be able to resolve the hostnames of all other machines in the cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 724. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 796. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -9105,6 +9230,345 @@ Spec:
 </div>
 </div>
 <div class="sect3">
+<h4 id="configure-cluster-wide-proxy_configure-cluster-wide-proxy">Configure a cluster-wide proxy</h4>
+<div class="paragraph _abstract">
+<p>Red&#160;Hat OpenShift Container Platform lets you route egress HTTP and HTTPS traffic through a cluster-wide proxy. You can configure the proxy by creating or updating the cluster <code>Proxy</code> object, verify that the configuration is active, and remove the proxy when it is no longer needed.</p>
+</div>
+<div class="sect4">
+<h5 id="nw-proxy-configure-object_configure-cluster-wide-proxy">Enabling the cluster-wide proxy</h5>
+<div class="paragraph _abstract">
+<p>To enable the cluster-wide egress proxy for your Red&#160;Hat OpenShift Container Platform cluster, you can modify the <code>Proxy</code> object to configure HTTP and HTTPS proxy settings and specify domains that bypass the proxy.</p>
+</div>
+<div class="paragraph">
+<p>When a cluster is installed or upgraded without the proxy configured, a <code>Proxy</code> object is still generated but it has a nil <code>spec</code>. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1
+kind: Proxy
+metadata:
+  name: cluster
+spec:
+  trustedCA:
+    name: ""
+status:</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Only the <code>Proxy</code> object named <code>cluster</code> is supported, and no additional proxies can be created.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A cluster administrator can configure the proxy for Red&#160;Hat OpenShift Container Platform by modifying the <code>cluster</code> <code>Proxy</code> object.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>After you enable the cluster-wide proxy capability for your cluster and you save the <code>Proxy</code> object file, the Machine Config Operator (MCO) reboots all nodes in your cluster so that each node can access connections that exist outside of the cluster. You do not need to manually reboot these nodes.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have cluster administrator permissions.</p>
+</li>
+<li>
+<p>You installed the Red&#160;Hat OpenShift Container Platform <code>oc</code> CLI tool.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a config map that contains any additional CA certificates required for proxying HTTPS connections.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can skip this step if the identity certificate of the proxy is signed by an authority from the Red Hat Enterprise Linux CoreOS (RHCOS) trust bundle.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a file called <code>user-ca-bundle.yaml</code>, and provide the values of your PEM-encoded certificates:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+data:
+  ca-bundle.crt: | <img src="data:image/png;base64," alt="1">
+    &lt;MY_PEM_ENCODED_CERTS&gt; <img src="data:image/png;base64," alt="2">
+kind: ConfigMap
+metadata:
+  name: user-ca-bundle <img src="data:image/png;base64," alt="3">
+  namespace: openshift-config <img src="data:image/png;base64," alt="4"></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>data.ca-bundle.crt</code></dt>
+<dd>
+<p>Specifies the data key that must be named <code>ca-bundle.crt</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;MY_PEM_ENCODED_CERTS&gt;</code></dt>
+<dd>
+<p>Specifies one or more PEM-encoded X.509 certificates used to sign the proxy&#8217;s identity certificate.</p>
+</dd>
+<dt class="hdlist1"><code>user-ca-bundle</code></dt>
+<dd>
+<p>Specifies the config map name that is referenced from the <code>Proxy</code> object.</p>
+</dd>
+<dt class="hdlist1"><code>openshift-config</code></dt>
+<dd>
+<p>Specifies the namespace that the config map must exist in.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Create the config map from the <code>user-ca-bundle.yaml</code> file by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f user-ca-bundle.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Use the <code>oc edit</code> command to modify the <code>Proxy</code> object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit proxy/cluster</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Configure the necessary fields for the proxy:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1
+kind: Proxy
+metadata:
+  name: cluster
+spec:
+  httpProxy: http://&lt;username&gt;:&lt;pswd&gt;@&lt;ip&gt;:&lt;port&gt; <img src="data:image/png;base64," alt="1">
+  httpsProxy: https://&lt;username&gt;:&lt;pswd&gt;@&lt;ip&gt;:&lt;port&gt; <img src="data:image/png;base64," alt="2">
+  noProxy: example.com <img src="data:image/png;base64," alt="3">
+  readinessEndpoints:
+  - http://www.google.com <img src="data:image/png;base64," alt="4">
+  - https://www.google.com
+  trustedCA:
+    name: user-ca-bundle <img src="data:image/png;base64," alt="5"></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>httpProxy</code></dt>
+<dd>
+<p>Specifies the proxy URL to use for creating HTTP connections outside the cluster. The URL scheme must be <code>http</code>.</p>
+</dd>
+<dt class="hdlist1"><code>httpsProxy</code></dt>
+<dd>
+<p>Specifies the proxy URL to use for creating HTTPS connections outside the cluster. The URL scheme must be either <code>http</code> or <code>https</code>. Specify a URL for the proxy that supports the URL scheme. For example, most proxies report an error if they are configured to use <code>https</code> but they only support <code>http</code>. This failure message may not propagate to the logs and can appear to be a network connection failure instead. If using a proxy that listens for <code>https</code> connections from the cluster, you might need to configure the cluster to accept the CAs and certificates that the proxy uses.</p>
+</dd>
+<dt class="hdlist1"><code>noProxy</code></dt>
+<dd>
+<p>Specifies a comma-separated list of destination domain names, domains, IP addresses (or other network CIDRs), and port numbers to exclude proxying. Note that Port numbers are only supported when configuring IPv6 addresses. Port numbers are not supported when configuring IPv4 addresses.</p>
+<div class="paragraph">
+<p>Preface a domain with <code>.</code> to match subdomains only. For example, <code>.y.com</code> matches <code>x.y.com</code>, but not <code>y.com</code>. Use <code>*</code> to bypass proxy for all destinations.</p>
+</div>
+<div class="paragraph">
+<p>If your <code>noproxy</code> field needs to include a domain address, you must explicitly specify that FQDN, or prefix-matched subdomain, in the <code>noproxy</code> field. You cannot use the IP address or CIDR range that encapsulates the domain. This is because the cluster does not wait for DNS to return the IP address before assigning the route connection, and checks explicitly against the request being made.
+For example, if you have a CIDR block value, such as <code>10.0.0.0/24</code>, for the <code>noproxy</code> field and the field attempts to access <code>https://10.0.0.11</code>, the addresses successfully match. However, attempting to access <code>https://exampleserver.externaldomain.com</code>, whose A record entry is <code>10.0.0.11</code>, fails. An additional value of <code>.externaldomain.com</code> for your <code>noproxy</code> field is necessary.</p>
+</div>
+<div class="paragraph">
+<p>If you scale up compute nodes that are not included in the network defined by the <code>networking.machineNetwork[].cidr</code> field from the installation configuration, you must add them to this list to prevent connection issues.</p>
+</div>
+<div class="paragraph">
+<p>This field is ignored if neither the <code>httpProxy</code> or <code>httpsProxy</code> fields are set.</p>
+</div>
+</dd>
+<dt class="hdlist1"><code>readinessEndpoints</code></dt>
+<dd>
+<p>Specifies one or more URLs external to the cluster to use to perform a readiness check before writing the <code>httpProxy</code> and <code>httpsProxy</code> values to status.</p>
+</dd>
+<dt class="hdlist1"><code>trustedCA</code></dt>
+<dd>
+<p>Specifies a reference to the config map in the <code>openshift-config</code> namespace that contains additional CA certificates required for proxying HTTPS connections. Note that the config map must already exist before referencing it here. This field is required unless the proxy&#8217;s identity certificate is signed by an authority from the RHCOS trust bundle.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Save the file to apply the changes.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="nw-proxy-remove_configure-cluster-wide-proxy">Removing the cluster-wide proxy</h5>
+<div class="paragraph _abstract">
+<p>The <code>cluster</code> Proxy object cannot be deleted. To remove the cluster-wide proxy configuration from your Red&#160;Hat OpenShift Container Platform cluster, you can remove all spec fields from the <code>Proxy</code> object by using the <code>oc edit</code> command.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Cluster administrator permissions</p>
+</li>
+<li>
+<p>Red&#160;Hat OpenShift Container Platform <code>oc</code> CLI tool installed</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Use the <code>oc edit</code> command to modify the proxy:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit proxy/cluster</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Remove all <code>spec</code> fields from the Proxy object. For example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1
+kind: Proxy
+metadata:
+  name: cluster
+spec: {}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Save the file to apply the changes.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="nw-verify-proxy-configuration_configure-cluster-wide-proxy">Verifying the cluster-wide proxy configuration</h5>
+<div class="paragraph _abstract">
+<p>To verify that your cluster-wide proxy configuration is working correctly in Red&#160;Hat OpenShift Container Platform, you can check the <code>Proxy</code> object status, review Machine Config Operator logs, and confirm that system components are routing external requests through the proxy.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have cluster administrator permissions.</p>
+</li>
+<li>
+<p>You have the Red&#160;Hat OpenShift Container Platform <code>oc</code> CLI tool installed.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Check the proxy configuration status using the <code>oc</code> command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get proxy/cluster -o yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify the proxy fields in the output to ensure they match your configuration. Specifically, check the <code>spec.httpProxy</code>, <code>spec.httpsProxy</code>, <code>spec.noProxy</code>, and <code>spec.trustedCA</code> fields.</p>
+</li>
+<li>
+<p>Inspect the status of the <code>Proxy</code> object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get proxy/cluster -o jsonpath='{.status}'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">{
+status:
+    httpProxy: http://user:xxx@xxxx:3128
+    httpsProxy: http://user:xxx@xxxx:3128
+    noProxy: .cluster.local,.svc,10.0.0.0/16,10.128.0.0/14,127.0.0.1,169.254.169.254,172.30.0.0/16,localhost,test.no-proxy.com
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Check the logs of the Machine Config Operator (MCO) to ensure that the configuration changes were applied successfully:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n openshift-machine-config-operator $(oc get pods -n openshift-machine-config-operator -l k8s-app=machine-config-operator -o name)</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Look for messages that indicate the proxy settings were applied and the nodes were rebooted if necessary.</p>
+</li>
+<li>
+<p>Verify that system components are using the proxy by checking the logs of a component that makes external requests, such as the Cluster Version Operator (CVO):</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n openshift-cluster-version $(oc get pods -n openshift-cluster-version -l k8s-app=machine-config-operator -o name)</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Look for log entries that show that external requests have been routed through the proxy.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
 <h4 id="proxy-cert-purpose_configure-cluster-wide-proxy-certificate-trust">Proxy certificate purpose</h4>
 <div class="paragraph _abstract">
 <p>Proxy certificates allow platform components to trust custom certificate authorities when making egress connections. Proxy certificates allow users to specify one or more custom certificate authority (CA) certificates used by platform components when making egress connections.</p>
@@ -9365,7 +9829,7 @@ spec:
 <p>Your proxy must exclude re-encrypting the following OpenShift URLs:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 725. URLs to exclude from egress traffic re-encryption</caption>
+<caption class="title">Table 797. URLs to exclude from egress traffic re-encryption</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -10247,7 +10711,7 @@ cluster-specific Operator AWS Identity and Access Management (IAM) roles are cre
 <div class="content">
 <img src="data:image/png;base64," alt="Workflow for assuming AWS IAM roles in Red&#160;Hat SRE-owned projects">
 </div>
-<div class="title">Figure 85. Workflow for assuming AWS IAM roles in SRE-owned projects</div>
+<div class="title">Figure 94. Workflow for assuming AWS IAM roles in SRE-owned projects</div>
 </div>
 <div class="paragraph">
 <p>The workflow has the following stages:</p>
@@ -10340,7 +10804,7 @@ pod identity webhook resources are included by default.</p>
 <div class="content">
 <img src="data:image/png;base64," alt="Pod identity webhook workflow">
 </div>
-<div class="title">Figure 86. Pod identity webhook workflow in user-defined projects</div>
+<div class="title">Figure 95. Pod identity webhook workflow in user-defined projects</div>
 </div>
 <div class="paragraph">
 <p>The workflow has the following stages:</p>
@@ -11212,7 +11676,7 @@ Volumes:
 <div class="content">
 <img src="data:image/png;base64," alt="Detailed authentication flow between AWS and the cluster when using AWS STS">
 </div>
-<div class="title">Figure 87. AWS Security Token Service authentication flow</div>
+<div class="title">Figure 96. AWS Security Token Service authentication flow</div>
 </div>
 <div class="paragraph">
 <p>Requests for new and refreshed credentials are automated by using an appropriately configured AWS IAM OpenID Connect (OIDC) identity provider combined with AWS IAM roles. Service account tokens that are trusted by AWS IAM are signed by Red&#160;Hat OpenShift Container Platform and can be projected into a pod and used for authentication.</p>
@@ -12006,7 +12470,7 @@ Volumes:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-14 16:03:18 +0100
+Last updated 2026-10-14 17:29:43 +0100
 </div>
 </div>
 <style>

@@ -1075,6 +1075,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
+<li><a href="oadp-intro_protect-application-data-with-oadp.html">Protect application data with OADP</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -1370,7 +1372,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="local-storage-overview_local-storage-options.html">Local Storage Operator overview</a>
 </li>
-<li><a href="local-storage-overview_local-storage-with-the-local-storage-operator.html">Local Storage Operator overview</a>
+<li><a href="local-storage-intro_local-storage-with-the-local-storage-operator.html">Local Storage Operator</a>
 </li>
 <li><a href="persistent-storage-hostpath-about_local-storage-with-the-hostpath-provisioner-for-virtualization.html">Overview of hostPath</a>
 </li>
@@ -1917,7 +1919,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#builds-define-build-inputs_create-container-images-for-openshift">Build inputs</a></li><li class="level-4"><a href="#images-create-guidelines_create-container-images-for-openshift">Learn container best practices</a></li><li class="level-5"><a href="#images-create-guide-general_create-container-images-for-openshift">General container image guidelines</a></li><li class="level-6"><a href="#reusing-images_create-container-images-for-openshift">Reuse images</a></li><li class="level-6"><a href="#maintaining-compatibility-within-tags_create-container-images-for-openshift">Maintain compatibility within tags</a></li><li class="level-6"><a href="#avoiding-multiple-processes_create-container-images-for-openshift">Avoid multiple processes</a></li><li class="level-6"><a href="#using-exec-in-wrapper-scripts_create-container-images-for-openshift">Use exec in wrapper scripts</a></li><li class="level-6"><a href="#cleaning-temporary-files_create-container-images-for-openshift">Clean temporary files</a></li><li class="level-6"><a href="#placing-instructions-in-the-proper-order_create-container-images-for-openshift">Place instructions in the proper order</a></li><li class="level-6"><a href="#marking-important-ports_create-container-images-for-openshift">Mark important ports</a></li><li class="level-6"><a href="#setting-environment-variables_create-container-images-for-openshift">Set environment variables</a></li><li class="level-6"><a href="#avoiding-default-passwords_create-container-images-for-openshift">Avoid default passwords</a></li><li class="level-6"><a href="#avoiding-sshd_create-container-images-for-openshift">Avoid sshd</a></li><li class="level-6"><a href="#using-volumes-persistent-data_create-container-images-for-openshift">Use volumes for persistent data</a></li><li class="level-6"><a href="#_additional_resources_5">Additional resources</a></li><li class="level-5"><a href="#images-create-guide-openshift_create-container-images-for-openshift">Red Hat OpenShift Container Platform-specific guidelines</a></li><li class="level-6"><a href="#enable-images-for-source-to-image_create-container-images-for-openshift">Enable images for source-to-image (S2I)</a></li><li class="level-6"><a href="#use-uid_create-container-images-for-openshift">Support arbitrary user ids</a></li><li class="level-6"><a href="#use-services_create-container-images-for-openshift">Use services for inter-image communication</a></li><li class="level-6"><a href="#provide-common-libraries_create-container-images-for-openshift">Provide common libraries</a></li><li class="level-6"><a href="#use-env-vars_create-container-images-for-openshift">Use environment variables for configuration</a></li><li class="level-6"><a href="#set-image-metadata_create-container-images-for-openshift">Set image metadata</a></li><li class="level-6"><a href="#clustering_create-container-images-for-openshift">Clustering</a></li><li class="level-6"><a href="#logging_create-container-images-for-openshift">Logging</a></li><li class="level-6"><a href="#liveness-and-readiness-probes_create-container-images-for-openshift">Liveness and readiness probes</a></li><li class="level-6"><a href="#templates_create-container-images-for-openshift">Templates</a></li><li class="level-4"><a href="#images-create-metadata_create-container-images-for-openshift">Include metadata in images</a></li><li class="level-5"><a href="#defining-image-metadata">Defining image metadata</a></li><li class="level-5"><a href="#_additional_resources_6">Additional resources</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#builds-define-build-inputs_create-container-images-for-openshift">Build inputs</a></li><li class="level-4"><a href="#images-create-guidelines_create-container-images-for-openshift">Learn container best practices</a></li><li class="level-5"><a href="#images-create-guide-general_create-container-images-for-openshift">General container image guidelines</a></li><li class="level-6"><a href="#reusing-images_create-container-images-for-openshift">Reuse images</a></li><li class="level-6"><a href="#maintaining-compatibility-within-tags_create-container-images-for-openshift">Maintain compatibility within tags</a></li><li class="level-6"><a href="#avoiding-multiple-processes_create-container-images-for-openshift">Avoid multiple processes</a></li><li class="level-6"><a href="#using-exec-in-wrapper-scripts_create-container-images-for-openshift">Use exec in wrapper scripts</a></li><li class="level-6"><a href="#cleaning-temporary-files_create-container-images-for-openshift">Clean temporary files</a></li><li class="level-6"><a href="#placing-instructions-in-the-proper-order_create-container-images-for-openshift">Place instructions in the proper order</a></li><li class="level-6"><a href="#marking-important-ports_create-container-images-for-openshift">Mark important ports</a></li><li class="level-6"><a href="#setting-environment-variables_create-container-images-for-openshift">Set environment variables</a></li><li class="level-6"><a href="#avoiding-default-passwords_create-container-images-for-openshift">Avoid default passwords</a></li><li class="level-6"><a href="#avoiding-sshd_create-container-images-for-openshift">Avoid sshd</a></li><li class="level-6"><a href="#using-volumes-persistent-data_create-container-images-for-openshift">Use volumes for persistent data</a></li><li class="level-6"><a href="#_additional_resources_11">Additional resources</a></li><li class="level-5"><a href="#images-create-guide-openshift_create-container-images-for-openshift">Red Hat OpenShift Container Platform-specific guidelines</a></li><li class="level-6"><a href="#enable-images-for-source-to-image_create-container-images-for-openshift">Enable images for source-to-image (S2I)</a></li><li class="level-6"><a href="#use-uid_create-container-images-for-openshift">Support arbitrary user ids</a></li><li class="level-6"><a href="#use-services_create-container-images-for-openshift">Use services for inter-image communication</a></li><li class="level-6"><a href="#provide-common-libraries_create-container-images-for-openshift">Provide common libraries</a></li><li class="level-6"><a href="#use-env-vars_create-container-images-for-openshift">Use environment variables for configuration</a></li><li class="level-6"><a href="#set-image-metadata_create-container-images-for-openshift">Set image metadata</a></li><li class="level-6"><a href="#clustering_create-container-images-for-openshift">Clustering</a></li><li class="level-6"><a href="#logging_create-container-images-for-openshift">Logging</a></li><li class="level-6"><a href="#liveness-and-readiness-probes_create-container-images-for-openshift">Liveness and readiness probes</a></li><li class="level-6"><a href="#templates_create-container-images-for-openshift">Templates</a></li><li class="level-4"><a href="#images-create-metadata_create-container-images-for-openshift">Include metadata in images</a></li><li class="level-5"><a href="#defining-image-metadata">Defining image metadata</a></li><li class="level-5"><a href="#_additional_resources_12">Additional resources</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="create-container-images-for-openshift-con_create-container-images-for-openshift">Create container images for OpenShift</h3>
@@ -2215,7 +2217,7 @@ RUN yum -y install mypackage &amp;&amp; yum clean all -y</code></pre>
 </div>
 </div>
 <div class="sect5 _additional-resources">
-<h6 id="_additional_resources_5">Additional resources</h6>
+<h6 id="_additional_resources_11">Additional resources</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -2411,7 +2413,7 @@ documentation".</p>
 <p>See the "Docker custom metadata" documentation for details about the format.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 525. Supported Metadata</caption>
+<caption class="title">Table 596. Supported Metadata</caption>
 <colgroup>
 <col style="width: 27.2727%;">
 <col style="width: 72.7273%;">
@@ -2563,7 +2565,7 @@ LABEL io.openshift.min-cpu     4</pre>
 </table>
 </div>
 <div class="sect4 _additional-resources">
-<h5 id="_additional_resources_6">Additional resources</h5>
+<h5 id="_additional_resources_12">Additional resources</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2589,7 +2591,7 @@ LABEL io.openshift.min-cpu     4</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-14 16:03:18 +0100
+Last updated 2026-10-14 17:29:43 +0100
 </div>
 </div>
 <style>

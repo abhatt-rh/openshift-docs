@@ -1075,6 +1075,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
+<li><a href="oadp-intro_protect-application-data-with-oadp.html">Protect application data with OADP</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -1370,7 +1372,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="local-storage-overview_local-storage-options.html">Local Storage Operator overview</a>
 </li>
-<li><a href="local-storage-overview_local-storage-with-the-local-storage-operator.html">Local Storage Operator overview</a>
+<li><a href="local-storage-intro_local-storage-with-the-local-storage-operator.html">Local Storage Operator</a>
 </li>
 <li><a href="persistent-storage-hostpath-about_local-storage-with-the-hostpath-provisioner-for-virtualization.html">Overview of hostPath</a>
 </li>
@@ -2106,7 +2108,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="A flat layer 2 topology with a virtual switch so that virtual machines in node-1 to node-2 can communicate with each other">
 </div>
-<div class="title">Figure 71. A flat layer 2 topology that uses a virtual switch for component communication</div>
+<div class="title">Figure 78. A flat layer 2 topology that uses a virtual switch for component communication</div>
 </div>
 <div class="paragraph">
 <p>If you decide not to specify a layer 2 subnet, then you must manually configure IP addresses for each pod in your cluster. When you do not specify a layer 2 subnet, port security is limited to preventing Media Access Control (MAC) spoofing only, and does not include IP spoofing. A layer 2 topology creates a single broadcast domain that can be challenging in large network environments, where the topology might cause a broadcast storm that can degrade network performance.</p>
@@ -2131,7 +2133,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="A UDN that uses a layer 2 topology for migrating a VM from node-1 to node-2">
 </div>
-<div class="title">Figure 72. A user-defined network (UDN) that uses a layer 2 topology</div>
+<div class="title">Figure 79. A user-defined network (UDN) that uses a layer 2 topology</div>
 </div>
 <div class="paragraph">
 <p>A layer 3 topology creates a unique layer 2 segment for each node in a cluster. The layer 3 routing mechanism interconnects these segments so that virtual machines and pods that are hosted on different nodes can communicate with each other. A layer 3 topology can effectively manage large broadcast domains by assigning each domain to a specific node, so that broadcast traffic has a reduced scope. To configure a layer 3 topology, you must configure <code>cidr</code> and <code>hostSubnet</code> parameters.</p>
@@ -2324,7 +2326,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="A flat layer 2 topology with a virtual switch so that virtual machines in node-1 to node-2 can communicate with each other">
 </div>
-<div class="title">Figure 73. A flat layer 2 topology that uses a virtual switch for component communication</div>
+<div class="title">Figure 80. A flat layer 2 topology that uses a virtual switch for component communication</div>
 </div>
 <div class="paragraph">
 <p>If you decide not to specify a layer 2 subnet, then you must manually configure IP addresses for each pod in your cluster. When you do not specify a layer 2 subnet, port security is limited to preventing Media Access Control (MAC) spoofing only, and does not include IP spoofing. A layer 2 topology creates a single broadcast domain that can be challenging in large network environments, where the topology might cause a broadcast storm that can degrade network performance.</p>
@@ -2349,7 +2351,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="A UDN that uses a layer 2 topology for migrating a VM from node-1 to node-2">
 </div>
-<div class="title">Figure 74. A user-defined network (UDN) that uses a layer 2 topology</div>
+<div class="title">Figure 81. A user-defined network (UDN) that uses a layer 2 topology</div>
 </div>
 <div class="paragraph">
 <p>A layer 3 topology creates a unique layer 2 segment for each node in a cluster. The layer 3 routing mechanism interconnects these segments so that virtual machines and pods that are hosted on different nodes can communicate with each other. A layer 3 topology can effectively manage large broadcast domains by assigning each domain to a specific node, so that broadcast traffic has a reduced scope. To configure a layer 3 topology, you must configure <code>cidr</code> and <code>hostSubnet</code> parameters.</p>
@@ -2367,7 +2369,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="The tenant isolation concept in a user-defined network (UDN)">
 </div>
-<div class="title">Figure 75. Tenant isolation using a ClusterUserDefinedNetwork CR</div>
+<div class="title">Figure 82. Tenant isolation using a ClusterUserDefinedNetwork CR</div>
 </div>
 <div class="sect5">
 <h6 id="cudn-transport-considerations_design-and-deploy-user-defined-network-segments">Considerations for ClusterUserDefinedNetwork transport</h6>
@@ -3001,7 +3003,7 @@ status:
 <div class="content">
 <img src="data:image/png;base64," alt="The namespace isolation concept in a user-defined network (UDN)">
 </div>
-<div class="title">Figure 76. Namespace isolation using a UserDefinedNetwork CR</div>
+<div class="title">Figure 83. Namespace isolation using a UserDefinedNetwork CR</div>
 </div>
 <div class="sect5">
 <h6 id="considerations-for-udn_design-and-deploy-user-defined-network-segments">Best practices for UserDefinedNetwork CRs</h6>
@@ -3518,7 +3520,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 <p>To troubleshoot your network deployment in Red&#160;Hat OpenShift Container Platform, evaluate the status condition types returned for <code>ClusterUserDefinedNetwork</code> and <code>UserDefinedNetwork</code> custom resources (CRs). Reviewing these conditions ensures that you can identify and resolve configuration errors.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 579. NetworkCreated condition types (<code>ClusterDefinedNetwork</code> and <code>UserDefinedNetwork</code> CRs)</caption>
+<caption class="title">Table 650. NetworkCreated condition types (<code>ClusterDefinedNetwork</code> and <code>UserDefinedNetwork</code> CRs)</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 15.3846%;">
@@ -3784,7 +3786,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 580. NetworkAllocationSucceeded condition types (<code>UserDefinedNetwork</code> CRs)</caption>
+<caption class="title">Table 651. NetworkAllocationSucceeded condition types (<code>UserDefinedNetwork</code> CRs)</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 15.3846%;">
@@ -3918,7 +3920,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 581. Invalid <code>mtu</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 652. Invalid <code>mtu</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4058,7 +4060,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 582. Invalid <code>PhysicalNetworkName</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 653. Invalid <code>PhysicalNetworkName</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4230,7 +4232,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 583. Invalid <code>role</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 654. Invalid <code>role</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4338,7 +4340,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 584. Invalid <code>subnets</code> and <code>ipam</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 655. Invalid <code>subnets</code> and <code>ipam</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4638,7 +4640,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 585. Invalid <code>vlan</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 656. Invalid <code>vlan</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 16.6666%;">
@@ -4952,7 +4954,7 @@ metadata:
 <p>The following table lists the supported and unsupported features when EVPN is enabled on primary CUDNs.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 586. BGP EVPN with primary CUDNs feature compatibility</caption>
+<caption class="title">Table 657. BGP EVPN with primary CUDNs feature compatibility</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6053,7 +6055,7 @@ spec:
 <p>The configuration for the API is described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 587. <code>NetworkAttachmentDefinition</code> API fields</caption>
+<caption class="title">Table 658. <code>NetworkAttachmentDefinition</code> API fields</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -6243,7 +6245,7 @@ spec:
 <p>The OVN-Kubernetes network plugin JSON configuration object describes the configuration parameters for the OVN-Kubernetes CNI network plugin.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 588. OVN-Kubernetes network plugin JSON configuration table</caption>
+<caption class="title">Table 659. OVN-Kubernetes network plugin JSON configuration table</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6783,7 +6785,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-14 16:03:18 +0100
+Last updated 2026-10-14 17:29:43 +0100
 </div>
 </div>
 <style>

@@ -1075,6 +1075,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
+<li><a href="oadp-intro_protect-application-data-with-oadp.html">Protect application data with OADP</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -1370,7 +1372,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="local-storage-overview_local-storage-options.html">Local Storage Operator overview</a>
 </li>
-<li><a href="local-storage-overview_local-storage-with-the-local-storage-operator.html">Local Storage Operator overview</a>
+<li><a href="local-storage-intro_local-storage-with-the-local-storage-operator.html">Local Storage Operator</a>
 </li>
 <li><a href="persistent-storage-hostpath-about_local-storage-with-the-hostpath-provisioner-for-virtualization.html">Overview of hostPath</a>
 </li>
@@ -2056,7 +2058,7 @@ spec:
 <p>The following table shows example routes and their accessibility:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 630. Route availability</caption>
+<caption class="title">Table 702. Route availability</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3577,7 +3579,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 631. Route annotations</caption>
+<caption class="title">Table 703. Route annotations</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3753,7 +3755,7 @@ The part of the request path that matches the path specified in <code>spec.path<
 <p>The following table provides examples of the path rewriting behavior for various combinations of <code>spec.path</code>, request path, and rewrite target.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 632. rewrite-target examples</caption>
+<caption class="title">Table 704. rewrite-target examples</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3841,7 +3843,7 @@ The part of the request path that matches the path specified in <code>spec.path<
 <p>Certain special characters in <code>haproxy.router.openshift.io/rewrite-target</code> require special handling because they must be escaped properly. Refer to the following table to understand how these characters are handled.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 633. Special character handling</caption>
+<caption class="title">Table 705. Special character handling</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -4235,7 +4237,7 @@ spec:
 <div class="content">
 <img src="data:image/png;base64," alt="Red&#160;Hat OpenShift Container Platform Ingress NodePort endpoint publishing strategy">
 </div>
-<div class="title">Figure 80. Diagram of NodePortService</div>
+<div class="title">Figure 89. Diagram of NodePortService</div>
 </div>
 <div class="paragraph">
 <p>The preceding graphic shows the following concepts pertaining to Red&#160;Hat OpenShift Container Platform Ingress NodePort endpoint publishing strategy:</p>
@@ -5704,7 +5706,7 @@ If you do not, all of your nodes will lose egress connectivity to the internet.<
 <div class="content">
 <img src="data:image/png;base64," alt="Red&#160;Hat OpenShift Container Platform Ingress LoadBalancerService endpoint publishing strategy">
 </div>
-<div class="title">Figure 81. Diagram of LoadBalancer</div>
+<div class="title">Figure 90. Diagram of LoadBalancer</div>
 </div>
 <div class="paragraph">
 <p>The preceding graphic shows the following concepts pertaining to Red&#160;Hat OpenShift Container Platform Ingress LoadBalancerService endpoint publishing strategy:</p>
@@ -7661,7 +7663,7 @@ backend be_secure:openshift-monitoring:alertmanager-main
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 634. Special case header configuration options</caption>
+<caption class="title">Table 706. Special case header configuration options</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9146,7 +9148,7 @@ spec:
 <div class="content">
 <img src="data:image/png;base64," alt="A diagram showing multiple Ingress Controllers with different route selectors serving any route containing a label that matches a given route selector regardless of the namespace a route belongs to">
 </div>
-<div class="title">Figure 82. Ingress sharding by using route labels</div>
+<div class="title">Figure 91. Ingress sharding by using route labels</div>
 </div>
 <div class="paragraph">
 <p>Ingress Controller sharding is useful when balancing incoming traffic load among a set of Ingress Controllers and when isolating traffic to a specific Ingress Controller. For example, company A goes to one Ingress Controller and company B to another.</p>
@@ -9214,7 +9216,7 @@ spec:
 <div class="content">
 <img src="data:image/png;base64," alt="A diagram showing multiple Ingress Controllers with different namespace selectors serving routes that belong to the namespace containing a label that matches a given namespace selector">
 </div>
-<div class="title">Figure 83. Ingress sharding by using namespace labels</div>
+<div class="title">Figure 92. Ingress sharding by using namespace labels</div>
 </div>
 <div class="paragraph">
 <p>Ingress Controller sharding is useful when balancing incoming traffic load among
@@ -9591,7 +9593,7 @@ spec:
 <p>The following table outlines the features that are shared between both resources and how their specific implementations differ:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 635. Shared features and implementation differences</caption>
+<caption class="title">Table 707. Shared features and implementation differences</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -9960,7 +9962,7 @@ Do not set <code>namespaces.from: All</code>; that setting allows routes from ev
 <p>The following table describes common listener conditions and how to resolve them:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 636. Gateway listener status conditions</caption>
+<caption class="title">Table 708. Gateway listener status conditions</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10251,7 +10253,7 @@ spec:
 <p>This configuration is supported on Amazon Web Services (AWS), Microsoft Azure, Google Cloud, Red Hat OpenStack Platform (RHOSP), and IBM Cloud. The following table details the required cloud-specific annotations and their corresponding values.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 637. Internal load balancer annotations by cloud provider</caption>
+<caption class="title">Table 709. Internal load balancer annotations by cloud provider</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -10351,7 +10353,7 @@ spec:
 <p>To verify that your <code>GatewayClass</code> custom resource (CR) is valid and ready to provision gateways, review its <code>status</code> conditions. A healthy <code>GatewayClass</code> CR reports a status of <code>True</code> for core conditions like <code>Accepted</code> and <code>SupportedVersion</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 638. <code>GatewayClass</code> CR status conditions</caption>
+<caption class="title">Table 710. <code>GatewayClass</code> CR status conditions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10465,7 +10467,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 639. Gateway-level status conditions</caption>
+<caption class="title">Table 711. Gateway-level status conditions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10573,7 +10575,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 640. Listener-level status conditions</caption>
+<caption class="title">Table 712. Listener-level status conditions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13544,7 +13546,7 @@ This means that you can update ingress and egress rules dynamically and align ne
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-14 16:03:18 +0100
+Last updated 2026-10-14 17:29:43 +0100
 </div>
 </div>
 <style>

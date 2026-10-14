@@ -1074,6 +1074,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
+<li><a href="oadp-intro_protect-application-data-with-oadp.html">Protect application data with OADP</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -1370,7 +1372,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="local-storage-overview_local-storage-options.html">Local Storage Operator overview</a>
 </li>
-<li><a href="local-storage-overview_local-storage-with-the-local-storage-operator.html">Local Storage Operator overview</a>
+<li><a href="local-storage-intro_local-storage-with-the-local-storage-operator.html">Local Storage Operator</a>
 </li>
 <li><a href="persistent-storage-hostpath-about_local-storage-with-the-hostpath-provisioner-for-virtualization.html">Overview of hostPath</a>
 </li>
@@ -1949,7 +1951,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="Diagram showing namespaces with multiple secondary UDNs">
 </div>
-<div class="title">Figure 68. Diagram showing namespaces with multiple secondary UDNs</div>
+<div class="title">Figure 75. Diagram showing namespaces with multiple secondary UDNs</div>
 </div>
 <div class="paragraph">
 <p>During cluster installation, Red&#160;Hat OpenShift Container Platform administrators can configure alternative default secondary pod networks by leveraging the Multus CNI plugin. With Multus, you can use multiple CNI plugins such as ipvlan, macvlan, or Network Attachment Definitions together to serve as secondary networks for pods.</p>
@@ -2020,7 +2022,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="A flat layer 2 topology with a virtual switch so that virtual machines in node-1 to node-2 can communicate with each other">
 </div>
-<div class="title">Figure 69. A flat layer 2 topology that uses a virtual switch for component communication</div>
+<div class="title">Figure 76. A flat layer 2 topology that uses a virtual switch for component communication</div>
 </div>
 <div class="paragraph">
 <p>If you decide not to specify a layer 2 subnet, then you must manually configure IP addresses for each pod in your cluster. When you do not specify a layer 2 subnet, port security is limited to preventing Media Access Control (MAC) spoofing only, and does not include IP spoofing. A layer 2 topology creates a single broadcast domain that can be challenging in large network environments, where the topology might cause a broadcast storm that can degrade network performance.</p>
@@ -2045,7 +2047,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="data:image/png;base64," alt="A UDN that uses a layer 2 topology for migrating a VM from node-1 to node-2">
 </div>
-<div class="title">Figure 70. A user-defined network (UDN) that uses a layer 2 topology</div>
+<div class="title">Figure 77. A user-defined network (UDN) that uses a layer 2 topology</div>
 </div>
 <div class="paragraph">
 <p>A layer 3 topology creates a unique layer 2 segment for each node in a cluster. The layer 3 routing mechanism interconnects these segments so that virtual machines and pods that are hosted on different nodes can communicate with each other. A layer 3 topology can effectively manage large broadcast domains by assigning each domain to a specific node, so that broadcast traffic has a reduced scope. To configure a layer 3 topology, you must configure <code>cidr</code> and <code>hostSubnet</code> parameters.</p>
@@ -2199,7 +2201,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The following section highlights the supported features of the <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs when used as either the primary or secondary network. A separate table for the <code>ClusterUserDefinedNetwork</code> CR is also included.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 576. Primary network support matrix for <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs</caption>
+<caption class="title">Table 647. Primary network support matrix for <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -2519,7 +2521,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 577. Secondary network support matrix for <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs</caption>
+<caption class="title">Table 648. Secondary network support matrix for <code>UserDefinedNetwork</code> and <code>NetworkAttachmentDefinition</code> CRs</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2919,7 +2921,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The Localnet topology is unavailable for use with the <code>UserDefinedNetwork</code> CR. It is only supported on secondary networks for <code>NetworkAttachmentDefinition</code> CRs.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 578. Support matrix for <code>ClusterUserDefinedNetwork</code> CRs</caption>
+<caption class="title">Table 649. Support matrix for <code>ClusterUserDefinedNetwork</code> CRs</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3397,7 +3399,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-14 16:03:18 +0100
+Last updated 2026-10-14 17:29:43 +0100
 </div>
 </div>
 <style>

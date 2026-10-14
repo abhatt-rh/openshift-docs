@@ -1075,6 +1075,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
+<li><a href="oadp-intro_protect-application-data-with-oadp.html">Protect application data with OADP</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -1371,7 +1373,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="local-storage-overview_local-storage-options.html">Local Storage Operator overview</a>
 </li>
-<li><a href="local-storage-overview_local-storage-with-the-local-storage-operator.html">Local Storage Operator overview</a>
+<li><a href="local-storage-intro_local-storage-with-the-local-storage-operator.html">Local Storage Operator</a>
 </li>
 <li><a href="persistent-storage-hostpath-about_local-storage-with-the-hostpath-provisioner-for-virtualization.html">Overview of hostPath</a>
 </li>
@@ -1917,7 +1919,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#openshift-architecture-common-terms_understand-terminology-and-definitions">Glossary of common terms for Red Hat OpenShift Container Platform architecture</a></li><li class="level-4"><a href="#install-openshift-common-terms_understand-terminology-and-definitions">Glossary of common terms for Red Hat OpenShift Container Platform installing</a></li><li class="level-4"><a href="#nodes-overview-glossary-common-terms_understand-terminology-and-definitions">Glossary of common terms for Red Hat OpenShift Container Platform nodes</a></li><li class="level-4"><a href="#openshift-storage-common-terms_understand-terminology-and-definitions">Glossary of common terms for Red Hat OpenShift Container Platform storage</a></li><li class="level-4"><a href="#openshift-auth-common-terms_understand-terminology-and-definitions">Glossary of common terms for Red Hat OpenShift Container Platform authentication and authorization</a></li><li class="level-4"><a href="#monitoring-common-terms_understand-terminology-and-definitions">Glossary of common terms for Red Hat OpenShift Container Platform monitoring</a></li><li class="level-4"><a href="#openshift-registry-common-terms_understand-terminology-and-definitions">Glossary of common terms for OpenShift image registry</a></li><li class="level-4"><a href="#update-common-terms_understand-terminology-and-definitions">Common terms</a></li><li class="level-4"><a href="#glossary-disconnected_understand-terminology-and-definitions">Glossary of disconnected environment terms</a></li><li class="level-4"><a href="#api-compatibility-common-terminology_understand-terminology-and-definitions">API compatibility common terminology</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-api_understand-terminology-and-definitions">Application Programming Interface (API)</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-aoe_understand-terminology-and-definitions">Application Operating Environment (AOE)</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-virtualized_understand-terminology-and-definitions">Compatibility in a virtualized environment</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-cloud_understand-terminology-and-definitions">Compatibility in a cloud environment</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-releases_understand-terminology-and-definitions">Major, minor, and z-stream releases</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-eus_understand-terminology-and-definitions">Extended user support (EUS)</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-dev-preview_understand-terminology-and-definitions">Developer Preview</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-tech-preview_understand-terminology-and-definitions">Technology Preview</a></li><li class="level-5"><a href="#_additional_resources_11">Additional resources</a></li><li class="level-4"><a href="#virt-networking-glossary_understand-terminology-and-definitions">{VirtProductName} networking glossary</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#openshift-architecture-common-terms_understand-terminology-and-definitions">Glossary of common terms for Red Hat OpenShift Container Platform architecture</a></li><li class="level-4"><a href="#install-openshift-common-terms_understand-terminology-and-definitions">Glossary of common terms for Red Hat OpenShift Container Platform installing</a></li><li class="level-4"><a href="#nodes-overview-glossary-common-terms_understand-terminology-and-definitions">Glossary of common terms for Red Hat OpenShift Container Platform nodes</a></li><li class="level-4"><a href="#openshift-storage-common-terms_understand-terminology-and-definitions">Glossary of common terms for Red Hat OpenShift Container Platform storage</a></li><li class="level-4"><a href="#openshift-auth-common-terms_understand-terminology-and-definitions">Glossary of common terms for Red Hat OpenShift Container Platform authentication and authorization</a></li><li class="level-4"><a href="#monitoring-common-terms_understand-terminology-and-definitions">Glossary of common terms for Red Hat OpenShift Container Platform monitoring</a></li><li class="level-4"><a href="#openshift-registry-common-terms_understand-terminology-and-definitions">Glossary of common terms for OpenShift image registry</a></li><li class="level-4"><a href="#update-common-terms_understand-terminology-and-definitions">Common terms</a></li><li class="level-4"><a href="#glossary-disconnected_understand-terminology-and-definitions">Glossary of disconnected environment terms</a></li><li class="level-4"><a href="#api-compatibility-common-terminology_understand-terminology-and-definitions">API compatibility common terminology</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-api_understand-terminology-and-definitions">Application Programming Interface (API)</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-aoe_understand-terminology-and-definitions">Application Operating Environment (AOE)</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-virtualized_understand-terminology-and-definitions">Compatibility in a virtualized environment</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-cloud_understand-terminology-and-definitions">Compatibility in a cloud environment</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-releases_understand-terminology-and-definitions">Major, minor, and z-stream releases</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-eus_understand-terminology-and-definitions">Extended user support (EUS)</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-dev-preview_understand-terminology-and-definitions">Developer Preview</a></li><li class="level-5"><a href="#api-compatibility-common-terminology-tech-preview_understand-terminology-and-definitions">Technology Preview</a></li><li class="level-5"><a href="#_additional_resources_17">Additional resources</a></li><li class="level-4"><a href="#virt-networking-glossary_understand-terminology-and-definitions">{VirtProductName} networking glossary</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="understand-terminology-and-definitions-con_understand-terminology-and-definitions">Understand terminology and definitions</h3>
@@ -2927,7 +2929,7 @@ You can manage container storage for persistent and non-persistent data in your 
 <p>The following table describes the different terms used to refer to environments without a full internet connection:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 855. Disconnected environment terms</caption>
+<caption class="title">Table 931. Disconnected environment terms</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -3035,7 +3037,7 @@ Regardless of the level of isolation from the external network, a cluster in a d
 </div>
 </div>
 <div class="sect4 _additional-resources">
-<h5 id="_additional_resources_11">Additional resources</h5>
+<h5 id="_additional_resources_17">Additional resources</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3106,7 +3108,7 @@ You update the node network configuration, including adding and removing interfa
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-14 16:03:18 +0100
+Last updated 2026-10-14 17:29:43 +0100
 </div>
 </div>
 <style>

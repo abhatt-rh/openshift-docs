@@ -1075,6 +1075,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
+<li><a href="oadp-intro_protect-application-data-with-oadp.html">Protect application data with OADP</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -1370,7 +1372,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="local-storage-overview_local-storage-options.html">Local Storage Operator overview</a>
 </li>
-<li><a href="local-storage-overview_local-storage-with-the-local-storage-operator.html">Local Storage Operator overview</a>
+<li><a href="local-storage-intro_local-storage-with-the-local-storage-operator.html">Local Storage Operator</a>
 </li>
 <li><a href="persistent-storage-hostpath-about_local-storage-with-the-hostpath-provisioner-for-virtualization.html">Overview of hostPath</a>
 </li>
@@ -1917,7 +1919,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-routeadvertisements-about_configure-route-advertisements">Advertise cluster network routes with Border Gateway Protocol</a></li><li class="level-5"><a href="#supported-platforms_configure-route-advertisements">Supported platforms</a></li><li class="level-5"><a href="#infrastructure-requirements_configure-route-advertisements">Infrastructure requirements</a></li><li class="level-5"><a href="#compatibility-with-other-networking-features_configure-route-advertisements">Compatibility with other networking features</a></li><li class="level-5"><a href="#considerations-for-use-with-the-metallb-operator_configure-route-advertisements">Considerations for use with the MetalLB Operator</a></li><li class="level-5"><a href="#considerations-for-naming-cluster-user-defined-networks_configure-route-advertisements">Considerations for naming cluster user-defined networks (CUDNs)</a></li><li class="level-5"><a href="#bgp-routing-custom-resources_configure-route-advertisements">BGP routing custom resources</a></li><li class="level-5"><a href="#ovn-kubernetes-controller-generation-of-frrconfiguration-objects_configure-route-advertisements">OVN-Kubernetes controller generation of FRRConfiguration objects</a></li><li class="level-5"><a href="#cluster-network-operator_configure-route-advertisements">Cluster Network Operator configuration</a></li><li class="level-4"><a href="#nw-bgp-routeadvertisements-object_configure-route-advertisements">RouteAdvertisements object configuration</a></li><li class="level-4"><a href="#nw-bgp-examples_configure-route-advertisements">Examples advertising pod IP addresses with BGP</a></li><li class="level-5"><a href="#advertising-the-default-cluster-network_configure-route-advertisements">Advertising the default cluster network</a></li><li class="level-5"><a href="#advertising-pod-ips-from-a-user-defined-network-over-bgp_configure-route-advertisements">Advertising pod IPs from a cluster user-defined network over BGP</a></li><li class="level-5"><a href="#advertising-pod-ips-from-a-user-defined-network-over-bgp-with-vpn_configure-route-advertisements">Advertising pod IPs from a cluster user-defined network over BGP with VPN</a></li><li class="level-4"><a href="#nw-route-advertisements-setup_configure-route-advertisements">Sample route advertisements setup</a></li><li class="level-4"><a href="#nw-route-advertisements-enable_configure-route-advertisements">Enabling route advertisements</a></li><li class="level-4"><a href="#nw-route-advertisements-disable_configure-route-advertisements">Disabling route advertisements</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-routeadvertisements-about_configure-route-advertisements">Advertise cluster network routes with Border Gateway Protocol</a></li><li class="level-5"><a href="#supported-platforms_configure-route-advertisements">Supported platforms</a></li><li class="level-5"><a href="#infrastructure-requirements_configure-route-advertisements">Infrastructure requirements</a></li><li class="level-5"><a href="#compatibility-with-other-networking-features_configure-route-advertisements">Compatibility with other networking features</a></li><li class="level-5"><a href="#considerations-for-use-with-the-metallb-operator_configure-route-advertisements">Considerations for use with the MetalLB Operator</a></li><li class="level-5"><a href="#considerations-for-naming-cluster-user-defined-networks_configure-route-advertisements">Considerations for naming cluster user-defined networks (CUDNs)</a></li><li class="level-5"><a href="#bgp-routing-custom-resources_configure-route-advertisements">BGP routing custom resources</a></li><li class="level-5"><a href="#ovn-kubernetes-controller-generation-of-frrconfiguration-objects_configure-route-advertisements">OVN-Kubernetes controller generation of FRRConfiguration objects</a></li><li class="level-5"><a href="#cluster-network-operator_configure-route-advertisements">Cluster Network Operator configuration</a></li><li class="level-4"><a href="#nw-bgp-routeadvertisements-object_configure-route-advertisements">RouteAdvertisements object configuration</a></li><li class="level-4"><a href="#nw-bgp-examples_configure-route-advertisements">Examples advertising pod IP addresses with BGP</a></li><li class="level-5"><a href="#advertising-the-default-cluster-network_configure-route-advertisements">Advertising the default cluster network</a></li><li class="level-5"><a href="#advertising-pod-ips-from-a-user-defined-network-over-bgp_configure-route-advertisements">Advertising pod IPs from a cluster user-defined network over BGP</a></li><li class="level-5"><a href="#advertising-pod-ips-from-a-user-defined-network-over-bgp-with-vpn_configure-route-advertisements">Advertising pod IPs from a cluster user-defined network over BGP with VPN</a></li><li class="level-4"><a href="#nw-route-advertisements-setup_configure-route-advertisements">Sample route advertisements setup</a></li><li class="level-4"><a href="#nw-route-advertisements-enable_configure-route-advertisements">Enabling route advertisements</a></li><li class="level-4"><a href="#nw-route-advertisements-disable_configure-route-advertisements">Disabling route advertisements</a></li><li class="level-4"><a href="#configure-bgp-routing_configure-bgp-routing">Configure BGP routing</a></li><li class="level-5"><a href="#nw-bgp-about_routing_configure-bgp-routing">About Border Gateway Protocol (BGP) routing</a></li><li class="level-6"><a href="#supported-platforms_configure-bgp-routing">Supported platforms</a></li><li class="level-6"><a href="#considerations-for-use-with-the-metallb-operator_configure-bgp-routing">Considerations for use with the MetalLB Operator</a></li><li class="level-6"><a href="#cluster-network-operator_configure-bgp-routing">Cluster Network Operator configuration</a></li><li class="level-6"><a href="#bgp-routing-custom-resources_configure-bgp-routing">BGP routing custom resources</a></li><li class="level-5"><a href="#nw-bgp-routing-config_configure-bgp-routing">Enabling Border Gateway Protocol (BGP) routing</a></li><li class="level-5"><a href="#nw-bgp-routing-config_configure-bgp-routing">Disabling Border Gateway Protocol (BGP) routing</a></li><li class="level-5"><a href="#nw-bgp-frr-k8s-migration_configure-bgp-routing">Migrating FRR-K8s resources</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="configure-route-advertisements-con_configure-route-advertisements">Configure route advertisements</h3>
@@ -2087,7 +2089,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The fields for the <code>RouteAdvertisements</code> custom resource (CR) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 616. <code>RouteAdvertisements</code> object</caption>
+<caption class="title">Table 687. <code>RouteAdvertisements</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3177,6 +3179,270 @@ If you don't see a command prompt, try pressing enter.</code></pre>
 </ul>
 </div>
 </div>
+<div class="sect3">
+<h4 id="configure-bgp-routing_configure-bgp-routing">Configure BGP routing</h4>
+<div class="paragraph _abstract">
+<p>OVN-Kubernetes supports Border Gateway Protocol (BGP) routing, which lets cluster nodes advertise pod and service IP ranges to external BGP routers. You can enable or disable BGP routing for your cluster, and migrate existing FRRouting (FRR) configurations when upgrading from standalone FRR to the FRR-K8s integration.</p>
+</div>
+<div class="sect4">
+<h5 id="nw-bgp-about_routing_configure-bgp-routing">About Border Gateway Protocol (BGP) routing</h5>
+<div class="paragraph _abstract">
+<p>To enable external routing for your cluster, configure Border Gateway Protocol (BGP) using FRRouting (FRR) and the FRR-K8s daemon. You can define routing behavior with the <code>FRRConfiguration</code> custom resource (CR) and ensure compatibility with the MetalLB Operator by using the required namespace and migration approach.</p>
+</div>
+<div class="paragraph">
+<p>Red&#160;Hat OpenShift Container Platform supports BGP routing through FRR, a free, open source internet routing protocol suite for Linux, UNIX, and similar operating systems. FRR-K8s is a Kubernetes-based daemon set that exposes a subset of the FRR API in a Kubernetes-compliant manner. As a cluster administrator, you can use the <code>FRRConfiguration</code> custom resource to access FRR services.</p>
+</div>
+<div class="paragraph">
+<p>The following diagram shows a multi-tenancy environment where two namespaces exist on an Red&#160;Hat OpenShift Container Platform node. When the OVN-Kubernetes gateway router sends traffic from a namespace to an external source, the traffic passes through the default virtual routing and forwarding (VRF) instance. BGP advertisement occurs when the FRR or OVN-Kubernetes router establishes a BGP session with the router of the cloud provider. This session ensures the router of the cloud provider knows that the node is the next-hop IP address for reaching the pod or service networks.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="Image of BGP advertisement without a VPN">
+</div>
+<div class="title">Figure 85. BGP advertisement without a VPN</div>
+</div>
+<div class="paragraph">
+<p>The following diagram shows multiple VRF BGP instances that use VRF lite. This architecture supports only local gateway mode. VRF lite provides network virtualization by using UDNs to isolate pod traffic without incurring the heavy encapsulation typical of Multi-Protocol Label Switching (MPLS) or Ethernet Virtual Private Network (EVPN) protocols. Separate L3 links get mapped to specific VRFs, so independent BGP peering sessions route traffic to the next-hop router. Further, you can deploy this L3 mechanism to multi-cloud deployments to allow specific namespaces to exist over the network.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="Image of multiple VRF BGP instances that use VRF lite">
+</div>
+<div class="title">Figure 86. Multiple VRF BGP instances that use VRF lite</div>
+</div>
+<div class="sect5">
+<h6 id="supported-platforms_configure-bgp-routing">Supported platforms</h6>
+<div class="paragraph">
+<p>BGP routing is supported on the following infrastructure types:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bare metal</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>BGP routing requires that you have properly configured BGP for your network provider. Outages or misconfigurations of your network provider might cause disruptions to your cluster network.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="considerations-for-use-with-the-metallb-operator_configure-bgp-routing">Considerations for use with the MetalLB Operator</h6>
+<div class="paragraph">
+<p>The MetalLB Operator is installed as an add-on to the cluster. Deployment of the MetalLB Operator automatically enables FRR-K8s as an additional routing capability provider and uses the FRR-K8s daemon installed by this feature.</p>
+</div>
+<div class="paragraph">
+<p>Before upgrading to 4.18, any existing <code>FRRConfiguration</code> in the <code>metallb-system</code> namespace not managed by the MetalLB operator (added by a cluster administrator or any other component) needs to be copied to the <code>openshift-frr-k8s</code> namespace manually, creating the namespace if necessary.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you are using the MetalLB Operator and there are existing <code>FRRConfiguration</code> CRs in the <code>metallb-system</code> namespace created by cluster administrators or third-party cluster components other than MetalLB Operator, you must:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ensure that these existing <code>FRRConfiguration</code> CRs are copied to the <code>openshift-frr-k8s</code> namespace.</p>
+</li>
+<li>
+<p>Ensure that the third-party cluster components use the new namespace for the <code>FRRConfiguration</code> CRs that they create.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect5">
+<h6 id="cluster-network-operator_configure-bgp-routing">Cluster Network Operator configuration</h6>
+<div class="paragraph">
+<p>The Cluster Network Operator API exposes the following API field to configure BGP routing:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>spec.additionalRoutingCapabilities</code>: Enables deployment of the FRR-K8s daemon for the cluster, which can be used independently of route advertisements. When enabled, the FRR-K8s daemon is deployed on all nodes.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="bgp-routing-custom-resources_configure-bgp-routing">BGP routing custom resources</h6>
+<div class="paragraph">
+<p>The following custom resources are used to configure BGP routing:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>FRRConfiguration</code></dt>
+<dd>
+<p>This custom resource defines the FRR configuration for the BGP routing. This CR is namespaced.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="nw-bgp-routing-config_configure-bgp-routing">Enabling Border Gateway Protocol (BGP) routing</h5>
+<div class="paragraph _abstract">
+<p>To allow external network integration and route advertisement on supported infrastructure, you can enable Border Gateway Protocol (BGP) routing for your cluster by configuring the cluster network to use an FRR-based dynamic routing provider.</p>
+</div>
+<div class="paragraph">
+<p>As a cluster administrator, you can enable BGP routing support for your cluster on bare-metal infrastructure.</p>
+</div>
+<div class="paragraph">
+<p>If you are using BGP routing in conjunction with the MetalLB Operator, the necessary BGP routing support is enabled automatically. You do not need to manually enable BGP routing support.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>You are logged in to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>The cluster is installed on compatible infrastructure.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>To enable a dynamic routing provider, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch Network.operator.openshift.io/cluster --type=merge -p '{
+  "spec": {
+    "additionalRoutingCapabilities": {
+      "providers": ["FRR"]
+    }
+  }
+}'</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="nw-bgp-routing-config_configure-bgp-routing">Disabling Border Gateway Protocol (BGP) routing</h5>
+<div class="paragraph _abstract">
+<p>Disable Border Gateway Protocol (BGP) routing for your cluster by removing additional routing capabilities from the network configuration.</p>
+</div>
+<div class="paragraph">
+<p>As a cluster administrator, you can disable BGP routing support for your cluster on bare-metal infrastructure.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>You are logged in to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>The cluster is installed on compatible infrastructure.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>To disable dynamic routing, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch Network.operator.openshift.io/cluster --type=merge -p '{
+  "spec": { "additionalRoutingCapabilities": null }
+}'</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="nw-bgp-frr-k8s-migration_configure-bgp-routing">Migrating FRR-K8s resources</h5>
+<div class="paragraph _abstract">
+<p>You can migrate the FRR-K8s <code>FRRConfiguration</code> custom resources from the <code>metallb-system</code> namespace to the <code>openshift-frr-k8s</code> namespace.</p>
+</div>
+<div class="paragraph">
+<p>When upgrading from an earlier version of Red&#160;Hat OpenShift Container Platform with the Metal LB Operator deployed, you must manually migrate your custom <code>FRRConfiguration</code> configurations from the <code>metallb-system</code> namespace to the <code>openshift-frr-k8s</code> namespace.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>You are logged in to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>To create the <code>openshift-frr-k8s</code> namespace, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create namespace openshift-frr-k8s</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To automate the migration, create a shell script named <code>migrate.sh</code> with the following contents:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">#!/bin/bash
+OLD_NAMESPACE="metallb-system"
+NEW_NAMESPACE="openshift-frr-k8s"
+FILTER_OUT="metallb-"
+oc get frrconfigurations.frrk8s.metallb.io -n "${OLD_NAMESPACE}" -o json |\
+  jq -r '.items[] | select(.metadata.name | test("'"${FILTER_OUT}"'") | not)' |\
+  jq -r '.metadata.namespace = "'"${NEW_NAMESPACE}"'"' |\
+  oc create -f -</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To execute the migration, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ bash migrate.sh</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>To confirm that the migration succeeded, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get frrconfigurations.frrk8s.metallb.io -n openshift-frr-k8s</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>After the migration is complete, you can remove the <code>FRRConfiguration</code> custom resources from the <code>metallb-system</code> namespace.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="paragraph nav-footer">
 <p>← Previous: <a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a> →</p>
@@ -3190,7 +3456,7 @@ If you don't see a command prompt, try pressing enter.</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-14 16:03:18 +0100
+Last updated 2026-10-14 17:29:43 +0100
 </div>
 </div>
 <style>

@@ -1075,6 +1075,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
+<li><a href="oadp-intro_protect-application-data-with-oadp.html">Protect application data with OADP</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -1371,7 +1373,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="local-storage-overview_local-storage-options.html">Local Storage Operator overview</a>
 </li>
-<li><a href="local-storage-overview_local-storage-with-the-local-storage-operator.html">Local Storage Operator overview</a>
+<li><a href="local-storage-intro_local-storage-with-the-local-storage-operator.html">Local Storage Operator</a>
 </li>
 <li><a href="persistent-storage-hostpath-about_local-storage-with-the-hostpath-provisioner-for-virtualization.html">Overview of hostPath</a>
 </li>
@@ -2418,9 +2420,11 @@ cluster   	4m</code></pre>
 </div>
 <div class="sect4">
 <h5 id="configuring-clusterqueues_configure-kueue-quotas-and-queues">Configuring a cluster queue</h5>
+<div class="paragraph _abstract">
+<p>A cluster queue is a cluster-scoped resource, represented by a <code>ClusterQueue</code> object, that governs a pool of resources such as CPU, memory, and pods.</p>
+</div>
 <div class="paragraph">
-<p>A cluster queue is a cluster-scoped resource, represented by a <code>ClusterQueue</code> object, that governs a pool of resources such as CPU, memory, and pods.
-Cluster queues can be used to define usage limits, quotas for resource flavors, order of consumption, and fair sharing rules.</p>
+<p>Cluster queues can be used to define usage limits, quotas for resource flavors, order of consumption, and fair sharing rules.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2529,7 +2533,7 @@ spec:
 </div>
 <div class="sect4">
 <h5 id="configuring-resourceflavors_configure-kueue-quotas-and-queues">Configuring a resource flavor</h5>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>After you have configured a <code>ClusterQueue</code> object, you can configure a <code>ResourceFlavor</code> object.</p>
 </div>
 <div class="paragraph">
@@ -2592,7 +2596,7 @@ spec:
 </div>
 <div class="sect4">
 <h5 id="configuring-localqueues_configure-kueue-quotas-and-queues">Configuring a local queue</h5>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>A local queue is a namespaced object, represented by a <code>LocalQueue</code> object, that groups closely related workloads that belong to a single namespace.</p>
 </div>
 <div class="paragraph">
@@ -2646,7 +2650,7 @@ spec:
 </div>
 <div class="sect4">
 <h5 id="configuring-localqueue-defaults_configure-kueue-quotas-and-queues">Configuring a default local queue</h5>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>As a cluster administrator, you can improve quota enforcement in your cluster by managing all jobs in selected namespaces without needing to explicitly label each job. You can do this by creating a default local queue.</p>
 </div>
 <div class="paragraph">
@@ -5813,7 +5817,7 @@ Subjects:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-14 16:03:18 +0100
+Last updated 2026-10-14 17:29:43 +0100
 </div>
 </div>
 <style>

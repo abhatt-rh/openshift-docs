@@ -1075,6 +1075,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
+<li><a href="oadp-intro_protect-application-data-with-oadp.html">Protect application data with OADP</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -1371,7 +1373,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="local-storage-overview_local-storage-options.html">Local Storage Operator overview</a>
 </li>
-<li><a href="local-storage-overview_local-storage-with-the-local-storage-operator.html">Local Storage Operator overview</a>
+<li><a href="local-storage-intro_local-storage-with-the-local-storage-operator.html">Local Storage Operator</a>
 </li>
 <li><a href="persistent-storage-hostpath-about_local-storage-with-the-hostpath-provisioner-for-virtualization.html">Overview of hostPath</a>
 </li>
@@ -1917,7 +1919,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-pod-network-connectivity-implementation_connectivity-troubleshooting">Implementation of connection health checks</a></li><li class="level-4"><a href="#nw-pod-network-connectivity-configuration_connectivity-troubleshooting">Configuring pod connectivity check placement</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-pod-network-connectivity-implementation_connectivity-troubleshooting">Implementation of connection health checks</a></li><li class="level-4"><a href="#nw-pod-network-connectivity-configuration_connectivity-troubleshooting">Configuring pod connectivity check placement</a></li><li class="level-4"><a href="#nw-pod-network-connectivity-check-object_connectivity-troubleshooting">PodNetworkConnectivityCheck object fields</a></li><li class="level-5"><a href="#_connection_log_fields">Connection log fields</a></li><li class="level-4"><a href="#nw-pod-network-connectivity-verify_connectivity-troubleshooting">Verifying network connectivity for an endpoint</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="nw-pod-network-connectivity-checks_connectivity-troubleshooting">Connection health checks that are performed</h3>
@@ -2099,6 +2101,607 @@ network-check-target-z2sfx              1/1     Running   0          9h      10.
 </ul>
 </div>
 </div>
+<div class="sect3">
+<h4 id="nw-pod-network-connectivity-check-object_connectivity-troubleshooting">PodNetworkConnectivityCheck object fields</h4>
+<div class="paragraph">
+<p>The <code>PodNetworkConnectivityCheck</code> object fields are described in the following tables.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 900. PodNetworkConnectivityCheck object fields</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>metadata.name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The name of the object in the following format: <code>&lt;source&gt;-to-&lt;target&gt;</code>. The destination described by <code>&lt;target&gt;</code> includes one of following strings:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>load-balancer-api-external</code></p>
+</li>
+<li>
+<p><code>load-balancer-api-internal</code></p>
+</li>
+<li>
+<p><code>kubernetes-apiserver-endpoint</code></p>
+</li>
+<li>
+<p><code>kubernetes-apiserver-service-cluster</code></p>
+</li>
+<li>
+<p><code>network-check-target</code></p>
+</li>
+<li>
+<p><code>openshift-apiserver-endpoint</code></p>
+</li>
+<li>
+<p><code>openshift-apiserver-service-cluster</code></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>metadata.namespace</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The namespace that the object is associated with. This value is always <code>openshift-network-diagnostics</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.sourcePod</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The name of the pod where the connection check originates, such as <code>network-check-source-596b4c6566-rgh92</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.targetEndpoint</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The target of the connection check, such as <code>api.devcluster.example.com:6443</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.tlsClientCert</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>object</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Configuration for the TLS certificate to use.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.tlsClientCert.name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The name of the TLS certificate used, if any. The default value is an empty string.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>object</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>An object representing the condition of the connection test and logs of recent connection successes and failures.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status.conditions</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The latest status of the connection check and any previous statuses.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status.failures</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Connection test logs from unsuccessful attempts.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status.outages</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Connect test logs covering the time periods of any outages.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status.successes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Connection test logs from successful attempts.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The following table describes the fields for objects in the <code>status.conditions</code> array:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 901. status.conditions</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>lastTransitionTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The time that the condition of the connection transitioned from one status to another.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The details about last transition in a human readable format.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>reason</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The last status of the transition in a machine readable format.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The status of the condition.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type of the condition.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The following table describes the fields for objects in the <code>status.conditions</code> array:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 902. status.outages</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>end</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The timestamp from when the connection failure is resolved.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>endLogs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connection log entries, including the log entry related to the successful end of the outage.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A summary of outage details in a human readable format.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>start</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The timestamp from when the connection failure is first detected.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>startLogs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connection log entries, including the original failure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_connection_log_fields">Connection log fields</h5>
+<div class="paragraph">
+<p>The fields for a connection log entry are described in the following table. The object is used in the following fields:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>status.failures[]</code></p>
+</li>
+<li>
+<p><code>status.successes[]</code></p>
+</li>
+<li>
+<p><code>status.outages[].startLogs[]</code></p>
+</li>
+<li>
+<p><code>status.outages[].endLogs[]</code></p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 903. Connection log object</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 16.6666%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>latency</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Records the duration of the action.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides the status in a human readable format.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>reason</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides the reason for status in a machine readable format. The value is one of <code>TCPConnect</code>, <code>TCPConnectError</code>, <code>DNSResolve</code>, <code>DNSError</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>success</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates if the log entry is a success or failure.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>time</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The start time of connection check.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nw-pod-network-connectivity-verify_connectivity-troubleshooting">Verifying network connectivity for an endpoint</h4>
+<div class="paragraph">
+<p>As a cluster administrator, you can verify the connectivity of an endpoint, such as an API server, load balancer, service, or pod, and verify that network diagnostics is enabled.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Install the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>Access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Confirm that network diagnostics are enable by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get network.config.openshift.io cluster -o yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">  # ...
+  status:
+  # ...
+    conditions:
+    - lastTransitionTime: "2024-05-27T08:28:39Z"
+      message: ""
+      reason: AsExpected
+      status: "True"
+      type: NetworkDiagnosticsAvailable</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>List the current <code>PodNetworkConnectivityCheck</code> objects by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get podnetworkconnectivitycheck -n openshift-network-diagnostics</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                                                                                                                                AGE
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0   75m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-1   73m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-2   75m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-kubernetes-apiserver-service-cluster                               75m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-kubernetes-default-service-cluster                                 75m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-load-balancer-api-external                                         75m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-load-balancer-api-internal                                         75m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-network-check-target-ci-ln-x5sv9rb-f76d1-4rzrp-master-0            75m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-network-check-target-ci-ln-x5sv9rb-f76d1-4rzrp-master-1            75m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-network-check-target-ci-ln-x5sv9rb-f76d1-4rzrp-master-2            75m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-network-check-target-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh      74m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-network-check-target-ci-ln-x5sv9rb-f76d1-4rzrp-worker-c-n8mbf      74m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-network-check-target-ci-ln-x5sv9rb-f76d1-4rzrp-worker-d-4hnrz      74m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-network-check-target-service-cluster                               75m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-openshift-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0    75m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-openshift-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-1    75m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-openshift-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-2    74m
+network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-openshift-apiserver-service-cluster                                75m</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>View the connection test logs:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>From the output of the previous command, identify the endpoint that you want to review the connectivity logs for.</p>
+</li>
+<li>
+<p>View the object by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get podnetworkconnectivitycheck &lt;name&gt; \
+  -n openshift-network-diagnostics -o yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where <code>&lt;name&gt;</code> specifies the name of the <code>PodNetworkConnectivityCheck</code> object.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">apiVersion: controlplane.operator.openshift.io/v1alpha1
+kind: PodNetworkConnectivityCheck
+metadata:
+  name: network-check-source-ci-ln-x5sv9rb-f76d1-4rzrp-worker-b-6xdmh-to-kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0
+  namespace: openshift-network-diagnostics
+  ...
+spec:
+  sourcePod: network-check-source-7c88f6d9f-hmg2f
+  targetEndpoint: 10.0.0.4:6443
+  tlsClientCert:
+    name: ""
+status:
+  conditions:
+  - lastTransitionTime: "2021-01-13T20:11:34Z"
+    message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0: tcp
+      connection to 10.0.0.4:6443 succeeded'
+    reason: TCPConnectSuccess
+    status: "True"
+    type: Reachable
+  failures:
+  - latency: 2.241775ms
+    message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0: failed
+      to establish a TCP connection to 10.0.0.4:6443: dial tcp 10.0.0.4:6443: connect:
+      connection refused'
+    reason: TCPConnectError
+    success: false
+    time: "2021-01-13T20:10:34Z"
+  - latency: 2.582129ms
+    message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0: failed
+      to establish a TCP connection to 10.0.0.4:6443: dial tcp 10.0.0.4:6443: connect:
+      connection refused'
+    reason: TCPConnectError
+    success: false
+    time: "2021-01-13T20:09:34Z"
+  - latency: 3.483578ms
+    message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0: failed
+      to establish a TCP connection to 10.0.0.4:6443: dial tcp 10.0.0.4:6443: connect:
+      connection refused'
+    reason: TCPConnectError
+    success: false
+    time: "2021-01-13T20:08:34Z"
+  outages:
+  - end: "2021-01-13T20:11:34Z"
+    endLogs:
+    - latency: 2.032018ms
+      message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0:
+        tcp connection to 10.0.0.4:6443 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2021-01-13T20:11:34Z"
+    - latency: 2.241775ms
+      message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0:
+        failed to establish a TCP connection to 10.0.0.4:6443: dial tcp 10.0.0.4:6443:
+        connect: connection refused'
+      reason: TCPConnectError
+      success: false
+      time: "2021-01-13T20:10:34Z"
+    - latency: 2.582129ms
+      message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0:
+        failed to establish a TCP connection to 10.0.0.4:6443: dial tcp 10.0.0.4:6443:
+        connect: connection refused'
+      reason: TCPConnectError
+      success: false
+      time: "2021-01-13T20:09:34Z"
+    - latency: 3.483578ms
+      message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0:
+        failed to establish a TCP connection to 10.0.0.4:6443: dial tcp 10.0.0.4:6443:
+        connect: connection refused'
+      reason: TCPConnectError
+      success: false
+      time: "2021-01-13T20:08:34Z"
+    message: Connectivity restored after 2m59.999789186s
+    start: "2021-01-13T20:08:34Z"
+    startLogs:
+    - latency: 3.483578ms
+      message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0:
+        failed to establish a TCP connection to 10.0.0.4:6443: dial tcp 10.0.0.4:6443:
+        connect: connection refused'
+      reason: TCPConnectError
+      success: false
+      time: "2021-01-13T20:08:34Z"
+  successes:
+  - latency: 2.845865ms
+    message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0: tcp
+      connection to 10.0.0.4:6443 succeeded'
+    reason: TCPConnect
+    success: true
+    time: "2021-01-13T21:14:34Z"
+  - latency: 2.926345ms
+    message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0: tcp
+      connection to 10.0.0.4:6443 succeeded'
+    reason: TCPConnect
+    success: true
+    time: "2021-01-13T21:13:34Z"
+  - latency: 2.895796ms
+    message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0: tcp
+      connection to 10.0.0.4:6443 succeeded'
+    reason: TCPConnect
+    success: true
+    time: "2021-01-13T21:12:34Z"
+  - latency: 2.696844ms
+    message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0: tcp
+      connection to 10.0.0.4:6443 succeeded'
+    reason: TCPConnect
+    success: true
+    time: "2021-01-13T21:11:34Z"
+  - latency: 1.502064ms
+    message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0: tcp
+      connection to 10.0.0.4:6443 succeeded'
+    reason: TCPConnect
+    success: true
+    time: "2021-01-13T21:10:34Z"
+  - latency: 1.388857ms
+    message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0: tcp
+      connection to 10.0.0.4:6443 succeeded'
+    reason: TCPConnect
+    success: true
+    time: "2021-01-13T21:09:34Z"
+  - latency: 1.906383ms
+    message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0: tcp
+      connection to 10.0.0.4:6443 succeeded'
+    reason: TCPConnect
+    success: true
+    time: "2021-01-13T21:08:34Z"
+  - latency: 2.089073ms
+    message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0: tcp
+      connection to 10.0.0.4:6443 succeeded'
+    reason: TCPConnect
+    success: true
+    time: "2021-01-13T21:07:34Z"
+  - latency: 2.156994ms
+    message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0: tcp
+      connection to 10.0.0.4:6443 succeeded'
+    reason: TCPConnect
+    success: true
+    time: "2021-01-13T21:06:34Z"
+  - latency: 1.777043ms
+    message: 'kubernetes-apiserver-endpoint-ci-ln-x5sv9rb-f76d1-4rzrp-master-0: tcp
+      connection to 10.0.0.4:6443 succeeded'
+    reason: TCPConnect
+    success: true
+    time: "2021-01-13T21:05:34Z"</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 <div class="paragraph nav-footer">
 <p>← Previous: <a href="post-using-node-tuning-operator_troubleshoot-node-performance-issues.html">Using the Node Tuning Operator</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="nw-network-flows-object_incident-investigation.html">Network object configuration for tracking network flows</a> →</p>
@@ -2112,7 +2715,7 @@ network-check-target-z2sfx              1/1     Running   0          9h      10.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-14 16:03:18 +0100
+Last updated 2026-10-14 17:29:43 +0100
 </div>
 </div>
 <style>

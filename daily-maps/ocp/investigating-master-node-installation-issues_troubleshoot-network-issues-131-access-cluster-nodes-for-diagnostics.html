@@ -1075,6 +1075,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
+<li><a href="oadp-intro_protect-application-data-with-oadp.html">Protect application data with OADP</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -1371,7 +1373,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="local-storage-overview_local-storage-options.html">Local Storage Operator overview</a>
 </li>
-<li><a href="local-storage-overview_local-storage-with-the-local-storage-operator.html">Local Storage Operator overview</a>
+<li><a href="local-storage-intro_local-storage-with-the-local-storage-operator.html">Local Storage Operator</a>
 </li>
 <li><a href="persistent-storage-hostpath-about_local-storage-with-the-hostpath-provisioner-for-virtualization.html">Overview of hostPath</a>
 </li>
@@ -1917,7 +1919,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#accessing-windows-node-using-ssh_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics">Accessing a Windows node using SSH</a></li><li class="level-4"><a href="#nodes-edge-remote-workers-network_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics">Network separation with remote worker nodes</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#accessing-windows-node-using-ssh_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics">Accessing a Windows node using SSH</a></li><li class="level-4"><a href="#nodes-edge-remote-workers-network_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics">Network separation with remote worker nodes</a></li><li class="level-4"><a href="#accessing-hosts-on-aws_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics">Accessing hosts on Amazon Web Services in an installer-provisioned infrastructure cluster</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics">Investigating control plane node installation issues</h3>
@@ -2408,6 +2410,57 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
+<div class="sect3">
+<h4 id="accessing-hosts-on-aws_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics">Accessing hosts on Amazon Web Services in an installer-provisioned infrastructure cluster</h4>
+<div class="paragraph _abstract">
+<p>The Red&#160;Hat OpenShift Container Platform installer does not create any public IP addresses for any of the Amazon Elastic Compute Cloud (Amazon EC2) instances that it provisions for your Red&#160;Hat OpenShift Container Platform cluster. After you provisioned your Amazon EC2 instance, you can use SSH to access your Red&#160;Hat OpenShift Container Platform hosts.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a security group that allows SSH access into the virtual private cloud (VPC) that the <code>openshift-install</code> command-line interface creates.</p>
+</li>
+<li>
+<p>Create an Amazon EC2 instance on one of the public subnets the installation program created.</p>
+</li>
+<li>
+<p>Associate a public IP address with the Amazon EC2 instance that you created.</p>
+<div class="paragraph">
+<p>Unlike with the Red&#160;Hat OpenShift Container Platform installation, associate the Amazon EC2 instance you created with an SSH keypair. The operating system selection is not important for this instance, because the instanace serves as an SSH bastion to bridge the internet into the VPC of your Red&#160;Hat OpenShift Container Platform cluster. The Amazon Machine Image (AMI) you use does matter. With Red Hat Enterprise Linux CoreOS (RHCOS), for example, you can provide keys through Ignition by using a similar method to the installation program.</p>
+</div>
+</li>
+<li>
+<p>After you provisioned your Amazon EC2 instance and can SSH into the instance, add the SSH key that you associated with your Red&#160;Hat OpenShift Container Platform installation. This key can be different from the key for the bastion instance, but this is not a strict requirement.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Use direct SSH access only for disaster recovery. When the Kubernetes API is responsive, run privileged pods instead.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Run <code>oc get nodes</code>, inspect the output, and choose one of the nodes that is a control plane. The hostname looks similar to <code>ip-10-0-1-163.ec2.internal</code>.</p>
+</li>
+<li>
+<p>From the bastion SSH host that you manually deployed into Amazon EC2, SSH into that control plane host by entering the following command. Ensure that you use the same SSH key that you specified during installation:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ssh -i &lt;ssh-key-path&gt; core@&lt;control_plane_hostname&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 <div class="paragraph nav-footer">
 <p>← Previous: <a href="nw-ingress-sharding-route-labels_troubleshoot-network-issues-133-troubleshoot-ingress-and-routes.html">Configure Ingress Controller sharding by using route labels</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a> →</p>
@@ -2421,7 +2474,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-14 16:03:18 +0100
+Last updated 2026-10-14 17:29:43 +0100
 </div>
 </div>
 <style>

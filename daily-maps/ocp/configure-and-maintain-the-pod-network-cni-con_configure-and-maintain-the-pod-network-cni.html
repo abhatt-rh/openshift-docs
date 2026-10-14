@@ -1075,6 +1075,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
+<li><a href="oadp-intro_protect-application-data-with-oadp.html">Protect application data with OADP</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -1370,7 +1372,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="local-storage-overview_local-storage-options.html">Local Storage Operator overview</a>
 </li>
-<li><a href="local-storage-overview_local-storage-with-the-local-storage-operator.html">Local Storage Operator overview</a>
+<li><a href="local-storage-intro_local-storage-with-the-local-storage-operator.html">Local Storage Operator</a>
 </li>
 <li><a href="persistent-storage-hostpath-about_local-storage-with-the-hostpath-provisioner-for-virtualization.html">Overview of hostPath</a>
 </li>
@@ -2028,7 +2030,7 @@ the Cluster Network Operator reports an available status condition.</p>
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 563. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 634. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2181,7 +2183,7 @@ the Cluster Network Operator reports an available status condition.</p>
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 564. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 635. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -2246,7 +2248,7 @@ the Cluster Network Operator reports an available status condition.</p>
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 565. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 636. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2403,7 +2405,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 566. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 637. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2454,7 +2456,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 567. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 638. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2505,7 +2507,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 568. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 639. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2612,7 +2614,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table id="gatewayConfig-object_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 569. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 640. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2706,7 +2708,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 570. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 641. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2751,7 +2753,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 571. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 642. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2796,7 +2798,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 572. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 643. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3063,7 +3065,7 @@ You can expand the range after cluster installation.</p>
 </div>
 <div class="sect3">
 <h4 id="nw-sctp-about_configure-and-maintain-the-pod-network-cni">Support for SCTP on Red&#160;Hat OpenShift Container Platform</h4>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>As a cluster administrator, you can enable SCTP on the hosts in the cluster. On Red Hat Enterprise Linux CoreOS (RHCOS), the SCTP module is disabled by default.</p>
 </div>
 <div class="paragraph">
@@ -3140,7 +3142,7 @@ spec:
 </div>
 <div class="sect4">
 <h5 id="nw-sctp-enabling_configure-and-maintain-the-pod-network-cni">Enabling Stream Control Transmission Protocol (SCTP)</h5>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>As a cluster administrator, you can load and enable the blacklisted SCTP kernel module on worker nodes in your cluster.</p>
 </div>
 <div class="ulist">
@@ -3207,7 +3209,7 @@ spec:
 </div>
 <div class="sect4">
 <h5 id="nw-sctp-verifying_configure-and-maintain-the-pod-network-cni">Verifying Stream Control Transmission Protocol (SCTP) is enabled</h5>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>You can verify that SCTP is working on a cluster by creating a pod with an application that listens for SCTP traffic, associating it with a service, and then connecting to the exposed service.</p>
 </div>
 <div class="ulist">
@@ -7360,6 +7362,165 @@ enable-forwarding-eth1    Available   SuccessfullyConfigured</code></pre>
 </tr>
 </table>
 </div>
+<div class="sect6">
+<h7 id="k8s-nmstate-troubleshooting-dns-disconnected-bind9-dns_ensure-external-communication-by-customizing-ip-dns-and-routing">Configuring the bind9 DNS named server</h7>
+<div class="paragraph _abstract">
+<p>For a cluster configured to query a <code>bind9</code> DNS server, you can add the <code>root-servers.net</code> zone to a configuration file that contains at least one DNS record. For example you can use the <code>/var/named/named.localhost</code> as a zone file that already matches this criteria.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Add the <code>root-servers.net</code> zone at the end of the <code>/etc/named.conf</code> configuration file by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cat &gt;&gt; /etc/named.conf &lt;&lt;EOF
+zone "root-servers.net" IN {
+    	type master;
+    	file "named.localhost";
+};
+EOF</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Restart the <code>named</code> service by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ systemctl restart named</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Confirm that the <code>root-servers.net</code> zone is present by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ journalctl -u named|grep root-servers.net</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">Jul 03 15:16:26 rhel-8-10 bash[xxxx]: zone root-servers.net/IN: loaded serial 0
+Jul 03 15:16:26 rhel-8-10 named[xxxx]: zone root-servers.net/IN: loaded serial 0</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the DNS server can resolve the NS record for the <code>root-servers.net</code> domain by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ host -t NS root-servers.net. 127.0.0.1</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">Using domain server:
+Name: 127.0.0.1
+Address: 127.0.0.53
+Aliases:
+root-servers.net name server root-servers.net.</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect6">
+<h7 id="troubleshooting-dns-disconnected-env-dnsmasq_ensure-external-communication-by-customizing-ip-dns-and-routing">Configuring the dnsmasq DNS server</h7>
+<div class="paragraph _abstract">
+<p>If you are using <code>dnsmasq</code> as the DNS server, you can delegate resolution of the <code>root-servers.net</code> domain to another DNS server, for example, by creating a new configuration file that resolves <code>root-servers.net</code> using a DNS server that you specify.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a configuration file that delegates the domain <code>root-servers.net</code> to another DNS server by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo 'server=/root-servers.net/&lt;DNS_server_IP&gt;'&gt; /etc/dnsmasq.d/delegate-root-servers.net.conf</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Restart the <code>dnsmasq</code> service by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ systemctl restart dnsmasq</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Confirm that the <code>root-servers.net</code> domain is delegated to another DNS server by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ journalctl -u dnsmasq|grep root-servers.net</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">Jul 03 15:31:25 rhel-8-10 dnsmasq[1342]: using nameserver 192.168.1.1#53 for domain root-servers.net</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the DNS server can resolve the NS record for the <code>root-servers.net</code> domain by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ host -t NS root-servers.net. 127.0.0.1</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">Using domain server:
+Name: 127.0.0.1
+Address: 127.0.0.1#53
+Aliases:
+root-servers.net name server root-servers.net.</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect6">
+<h7 id="k8s-nmstate-troubleshooting-dns-disconnected-env-resolv_ensure-external-communication-by-customizing-ip-dns-and-routing">Creating a custom DNS host name to resolve DNS connectivity issues</h7>
+<div class="paragraph _abstract">
+<p>In a disconnected environment where the external DNS server cannot be reached, you can resolve Kubernetes NMState Operator health probe issues by specifying a custom DNS host name in the <code>NMState</code> custom resource definition (CRD).</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Add the DNS host name configuration to the <code>NMState</code> CRD of your cluster:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: nmstate.io/v1
+kind: NMState
+metadata:
+  name: nmstate
+spec:
+  probeConfiguration:
+    dns:
+      host: redhat.com
+# ...</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Apply the DNS host name configuration to your cluster network by running the following command. Ensure that you replace <code>&lt;filename&gt;</code> with the name of your CRD file.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">$ oc apply -f &lt;filename&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 <div class="sect5">
 <h6 id="nw-dns-forward_ensure-external-communication-by-customizing-ip-dns-and-routing">Use DNS forwarding</h6>
@@ -8576,7 +8737,7 @@ spec:
 </ul>
 </div>
 <table id="network-observability-resource-recommendations-table_configure-storage-and-flow-collection-for-network-observability" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 573. Resource recommendations for cluster sizes</caption>
+<caption class="title">Table 644. Resource recommendations for cluster sizes</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 20%;">
@@ -8685,7 +8846,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 574. Total average resource usage</caption>
+<caption class="title">Table 645. Total average resource usage</caption>
 <colgroup>
 <col>
 <col>
@@ -9133,7 +9294,7 @@ spec:
 <p>If you only want to export flows to a Kafka consumer or IPFIX collector, or you only need dashboard metrics, then you do not need to install Loki or provide storage for Loki. The following table compares available features with and without Loki.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 575. Comparison of feature availability with and without Loki</caption>
+<caption class="title">Table 646. Comparison of feature availability with and without Loki</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -9316,7 +9477,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-14 16:03:18 +0100
+Last updated 2026-10-14 17:29:43 +0100
 </div>
 </div>
 <style>

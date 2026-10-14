@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="local-storage-overview_local-storage-with-the-local-storage-operator" class="book toc2 toc-left navmap-has-right-toc">
+<body id="local-storage-intro_local-storage-with-the-local-storage-operator" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -1075,6 +1075,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
+<li><a href="oadp-intro_protect-application-data-with-oadp.html">Protect application data with OADP</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -1370,7 +1372,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="local-storage-overview_local-storage-options.html">Local Storage Operator overview</a>
 </li>
-<li><a href="local-storage-overview_local-storage-with-the-local-storage-operator.html"><span class="toc-current">Local Storage Operator overview</span></a>
+<li><a href="local-storage-intro_local-storage-with-the-local-storage-operator.html"><span class="toc-current">Local Storage Operator</span></a>
 </li>
 <li><a href="persistent-storage-hostpath-about_local-storage-with-the-hostpath-provisioner-for-virtualization.html">Overview of hostPath</a>
 </li>
@@ -1917,10 +1919,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#local-storage-install-overview_local-storage-with-the-local-storage-operator">Installing the Local Storage Operator</a></li><li class="level-4"><a href="#local-storage-install_local-storage-with-the-local-storage-operator">Creating a local project for Local Storage Operator</a></li><li class="level-4"><a href="#local-storage-install-cli_local-storage-with-the-local-storage-operator">Installing the Local Storage Operator by using the CLI</a></li><li class="level-4"><a href="#local-storage-install-console_local-storage-with-the-local-storage-operator">Installing the Local Storage Operator by using the Red Hat OpenShift Container Platform web console</a></li><li class="level-4"><a href="#local-volume-cr_local-storage-with-the-local-storage-operator">Provisioning local volumes by using the Local Storage Operator</a></li><li class="level-4"><a href="#local-create-cr-manual_local-storage-with-the-local-storage-operator">Provisioning local volumes without the Local Storage Operator</a></li><li class="level-4"><a href="#local-storage-symlinks-top-level_local-storage-with-the-local-storage-operator">Local Storage Operator symlinks management</a></li><li class="level-4"><a href="#local-storage-symlinks_local-storage-with-the-local-storage-operator">Local Storage Operator symlinks overview</a></li><li class="level-4"><a href="#local-storage-symlinks-procedure_local-storage-with-the-local-storage-operator">Responding to symlinks alerts for the Local Storage Operator</a></li><li class="level-4"><a href="#local-tolerations_local-storage-with-the-local-storage-operator">Using tolerations with Local Storage Operator pods</a></li><li class="level-4"><a href="#local-storage-metrics_local-storage-with-the-local-storage-operator">Local Storage Operator Metrics</a></li><li class="level-4"><a href="#local-storage-metrics-procedure_local-storage-with-the-local-storage-operator">Enabling Local Storage Operator Metrics</a></li><li class="level-4"><a href="#local-storage-deleting-resources-overview_local-storage-with-the-local-storage-operator">Deleting the Local Storage Operator resources</a></li><li class="level-4"><a href="#local-storage-uninstall_local-storage-with-the-local-storage-operator">Uninstalling the Local Storage Operator</a></li><li class="level-4"><a href="#install-lvms-operator-cli_local-storage-with-the-local-storage-operator">Installing LVM Storage by using the CLI</a></li><li class="level-4"><a href="#lvms-installing-lvms-with-web-console_local-storage-with-the-local-storage-operator">Installing LVM Storage by using the web console</a></li><li class="level-4"><a href="#lvms-installing-lvms-disconnected-env_local-storage-with-the-local-storage-operator">Installing LVM Storage in a disconnected environment</a></li><li class="level-4"><a href="#lvms-installing-odf-logical-volume-manager-operator-using-rhacm_local-storage-with-the-local-storage-operator">Installing LVM Storage by using RHACM</a></li><li class="level-4"><a href="#lvms-provisioning-storage-using-lvms_local-storage-with-the-local-storage-operator">Provisioning storage by using LVM Storage</a></li><li class="level-4"><a href="#lvms-monitoring_local-storage-with-the-local-storage-operator">Monitoring LVM Storage</a></li><li class="level-4"><a href="#lvms-unstalling-lvms-using-cli_local-storage-with-the-local-storage-operator">Uninstalling LVM Storage by using the CLI</a></li><li class="level-4"><a href="#lvms-unstalling-lvms-with-web-console_local-storage-with-the-local-storage-operator">Uninstalling LVM Storage by using the web console</a></li><li class="level-4"><a href="#lvms-uninstalling-lvms-rhacm_local-storage-with-the-local-storage-operator">Uninstalling LVM Storage installed using RHACM</a></li><li class="level-4"><a href="#recovering-from-missing-lvms-or-operator-components_local-storage-with-the-local-storage-operator">Recovering from a missing storage class</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#local-storage-overview_local-storage-with-the-local-storage-operator">Local Storage Operator overview</a></li><li class="level-4"><a href="#local-storage-install-overview_local-storage-with-the-local-storage-operator">Installing the Local Storage Operator</a></li><li class="level-4"><a href="#local-storage-install_local-storage-with-the-local-storage-operator">Creating a local project for Local Storage Operator</a></li><li class="level-4"><a href="#local-storage-install-cli_local-storage-with-the-local-storage-operator">Installing the Local Storage Operator by using the CLI</a></li><li class="level-4"><a href="#local-storage-install-console_local-storage-with-the-local-storage-operator">Installing the Local Storage Operator by using the Red Hat OpenShift Container Platform web console</a></li><li class="level-4"><a href="#local-volume-cr_local-storage-with-the-local-storage-operator">Provisioning local volumes by using the Local Storage Operator</a></li><li class="level-4"><a href="#local-create-cr-manual_local-storage-with-the-local-storage-operator">Provisioning local volumes without the Local Storage Operator</a></li><li class="level-4"><a href="#create-local-pvc_local-storage-with-the-local-storage-operator">Creating the local volume persistent volume claim</a></li><li class="level-4"><a href="#local-pod_local-storage-with-the-local-storage-operator">Attach the local claim</a></li><li class="level-4"><a href="#local-storage-discovery_local-storage-with-the-local-storage-operator">Automating discovery and provisioning for local storage devices</a></li><li class="level-4"><a href="#local-storage-symlinks-top-level_local-storage-with-the-local-storage-operator">Local Storage Operator symlinks management</a></li><li class="level-4"><a href="#local-storage-symlinks_local-storage-with-the-local-storage-operator">Local Storage Operator symlinks overview</a></li><li class="level-4"><a href="#local-storage-symlinks-procedure_local-storage-with-the-local-storage-operator">Responding to symlinks alerts for the Local Storage Operator</a></li><li class="level-4"><a href="#local-tolerations_local-storage-with-the-local-storage-operator">Using tolerations with Local Storage Operator pods</a></li><li class="level-4"><a href="#local-storage-metrics_local-storage-with-the-local-storage-operator">Local Storage Operator Metrics</a></li><li class="level-4"><a href="#local-storage-metrics-procedure_local-storage-with-the-local-storage-operator">Enabling Local Storage Operator Metrics</a></li><li class="level-4"><a href="#local-storage-deleting-resources-overview_local-storage-with-the-local-storage-operator">Deleting the Local Storage Operator resources</a></li><li class="level-4"><a href="#local-storage-uninstall_local-storage-with-the-local-storage-operator">Uninstalling the Local Storage Operator</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="local-storage-overview_local-storage-with-the-local-storage-operator">Local Storage Operator overview</h3>
+<h3 id="local-storage-intro_local-storage-with-the-local-storage-operator">Local Storage Operator</h3>
+<div class="paragraph _abstract">
+<p>Red&#160;Hat OpenShift Container Platform can be provisioned with persistent storage by using local volumes. Local persistent volumes allow you to access local storage devices, such as a disk or partition, by using the standard persistent volume claim interface.</p>
+</div>
+<div class="sect3">
+<h4 id="local-storage-overview_local-storage-with-the-local-storage-operator">Local Storage Operator overview</h4>
 <div class="paragraph _abstract">
 <p>Local volumes can be used without manually scheduling pods to nodes because the system is aware of the volume node constraints. However, local volumes are still subject to the availability of the underlying node and are not suitable for all applications.</p>
 </div>
@@ -1937,6 +1944,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 </tr>
 </table>
+</div>
 </div>
 <div class="sect3">
 <h4 id="local-storage-install-overview_local-storage-with-the-local-storage-operator">Installing the Local Storage Operator</h4>
@@ -2597,6 +2605,378 @@ example-pv3             1Gi        RWO            Delete           Bound       l
 </div>
 </div>
 <div class="sect3">
+<h4 id="create-local-pvc_local-storage-with-the-local-storage-operator">Creating the local volume persistent volume claim</h4>
+<div class="paragraph _abstract">
+<p>Create a persistent volume claim (PVC) to access local volumes in your pod, because local volumes must be statically created and cannot use dynamic provisioning.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Persistent volumes have been created using the local volume provisioner.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create the PVC using the corresponding storage class:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: local-pvc-name
+spec:
+  accessModes:
+  - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 100Gi
+  storageClassName: local-sc</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>metadata.name</code>: Specifies the name of the PVC.</p>
+</li>
+<li>
+<p><code>spec.volumeMode</code>: Specifies the type of the PVC. Defaults to <code>Filesystem</code>.</p>
+</li>
+<li>
+<p><code>spec.resources.requests.storage</code>: Specifies the amount of storage available to the PVC.</p>
+</li>
+<li>
+<p><code>spec.storageClassName</code>: Specifies the name of the storage class required by the claim.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Create the PVC in the Red&#160;Hat OpenShift Container Platform cluster, specifying the file you just created, by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;local-pvc&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="local-pod_local-storage-with-the-local-storage-operator">Attach the local claim</h4>
+<div class="paragraph _abstract">
+<p>After a local volume has been mapped to a persistent volume claim (PVC), attach the claim to a pod by specifying it in the pod specification to make the local storage available to the application.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>A persistent volume claim exists in the same namespace.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Include the defined claim in the resource spec. The following example declares the persistent volume claim inside a pod:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Pod
+spec:
+# ...
+  containers:
+    volumeMounts:
+    - name: local-disks
+      mountPath: /data
+  volumes:
+  - name: local-disks
+    persistentVolumeClaim:
+      claimName: local-pvc-name
+# ...</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>spec&#8230;&#8203;containers.volumeMounts.name</code>: Specifies the name of the volume to mount.</p>
+</li>
+<li>
+<p><code>spec&#8230;&#8203;containers.volumeMounts.mountPath</code>: Specifies the path inside the pod where the volume is mounted. Do not mount to the container root, <code>/</code>, or any path that is the same in the host and the container. This can corrupt your host system if the container is sufficiently privileged, such as the host <code>/dev/pts</code> files. It is safe to mount the host by using <code>/host</code>.</p>
+</li>
+<li>
+<p><code>spec&#8230;&#8203;volumes.persistentVolumeClaim.claimName</code>: Specifies the name of the existing persistent volume claim to use.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Create the resource in the Red&#160;Hat OpenShift Container Platform cluster, specifying the file you just created, by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;local-pod&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="local-storage-discovery_local-storage-with-the-local-storage-operator">Automating discovery and provisioning for local storage devices</h4>
+<div class="paragraph _abstract">
+<p>Automate local storage discovery and provisioning using the Local Storage Operator (LSO) to simplify installation when dynamic provisioning is not available, such as with bare metal, VMware vSphere, or Amazon Web Services (AWS) instances with attached devices.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Automatic discovery and provisioning is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+</div>
+<div class="paragraph">
+<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Automatic discovery and provisioning is fully supported when used to deploy Red Hat OpenShift Data Foundation on-premise or with platform-agnostic deployment.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Use the following procedure to automatically discover local devices, and to automatically provision local volumes for selected devices.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Use the <code>LocalVolumeSet</code> object with caution. When you automatically provision persistent volumes (PVs) from local disks, the local PVs might claim all devices that match. If you are using a <code>LocalVolumeSet</code> object, make sure the LSO is the only entity managing local devices on the node. Creating multiple instances of a <code>LocalVolumeSet</code> that target a node more than once is not supported.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have cluster administrator permissions.</p>
+</li>
+<li>
+<p>You have installed the LSO.</p>
+</li>
+<li>
+<p>You have attached local disks to Red&#160;Hat OpenShift Container Platform nodes.</p>
+</li>
+<li>
+<p>You have access to the Red&#160;Hat OpenShift Container Platform web console and the <code>oc</code> command-line interface (CLI).</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Enable automatic discovery of local devices from the Red&#160;Hat OpenShift Container Platform web console:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Click <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong>.</p>
+</li>
+<li>
+<p>In the <code>openshift-local-storage</code> namespace, click <strong>Local Storage</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Local Volume Discovery</strong> tab.</p>
+</li>
+<li>
+<p>Click <strong>Create Local Volume Discovery</strong> and then select either <strong>Form view</strong> or <strong>YAML view</strong>.</p>
+</li>
+<li>
+<p>Configure the <code>LocalVolumeDiscovery</code> object parameters.</p>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
+<div class="paragraph">
+<p>The LSO creates a local volume discovery instance named <code>auto-discover-devices</code>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Display a continuous list of available devices on a node:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Log in to the Red&#160;Hat OpenShift Container Platform web console.</p>
+</li>
+<li>
+<p>Click <strong>Compute</strong> &#8594; <strong>Nodes</strong>.</p>
+</li>
+<li>
+<p>Click the node name that you want to open. The "Node Details" page is displayed.</p>
+</li>
+<li>
+<p>Click the <strong>Disks</strong> tab to display the list of the selected devices.</p>
+<div class="paragraph">
+<p>The device list updates continuously as local disks are added or removed. You can filter the devices by name, status, type, model, capacity, and mode.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Automatically provision local volumes for the discovered devices from the Red&#160;Hat OpenShift Container Platform web console:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Click <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong> and select <strong>Local Storage</strong> from the list of Operators.</p>
+</li>
+<li>
+<p>Click <strong>Local Volume Set</strong> &#8594; <strong>Create Local Volume Set</strong>.</p>
+</li>
+<li>
+<p>Enter a volume set name and a storage class name.</p>
+</li>
+<li>
+<p>Click <strong>All nodes</strong> or <strong>Select nodes</strong> to apply filters accordingly.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Only worker nodes are available, regardless of whether you filter using <strong>All nodes</strong> or <strong>Select nodes</strong>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Select the disk type, mode, size, and limit that you want to apply to the local volume set, and then click <strong>Create</strong>.</p>
+<div class="paragraph">
+<p>A message is displayed after several minutes, indicating that the "Operator reconciled successfully."</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Alternatively, provision local volumes for the discovered devices from the CLI:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create an object YAML file to define the local volume set, such as <code>local-volume-set.yaml</code>, as shown in the following example:</p>
+<div class="listingblock">
+<div class="title">Example local volume set YAML file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: local.storage.openshift.io/v1alpha1
+kind: LocalVolumeSet
+metadata:
+  name: example-autodetect
+spec:
+  nodeSelector:
+    nodeSelectorTerms:
+      - matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+              - worker-0
+              - worker-1
+  storageClassName: local-sc
+  volumeMode: Filesystem
+  fsType: ext4
+  maxDeviceCount: 10
+  deviceInclusionSpec:
+    deviceTypes:
+      - disk
+      - part
+    deviceMechanicalProperties:
+      - NonRotational
+    minSize: 10G
+    maxSize: 100G
+    models:
+      - SAMSUNG
+      - Crucial_CT525MX3
+    vendors:
+      - ATA
+      - ST2000LM</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>spec.storageClassName</code>: Determines the storage class that is created for persistent volumes that are provisioned from discovered devices. The LSO automatically creates the storage class if it does not exist. Be sure to use a storage class that uniquely identifies this set of local volumes.</p>
+</li>
+<li>
+<p><code>spec.deviceInclusionSpec.deviceTypes</code>: When using the local volume set feature, the LSO does not support the use of logical volume management (LVM) devices.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Create the local volume set object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f local-volume-set.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the local persistent volumes were dynamically provisioned based on the storage class:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pv</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   REASON   AGE
+local-pv-1cec77cf   100Gi      RWO            Delete           Available           local-sc                88m
+local-pv-2ef7cd2a   100Gi      RWO            Delete           Available           local-sc                82m
+local-pv-3fa1c73    100Gi      RWO            Delete           Available           local-sc                48m</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Next steps</div>
+<p>Results are deleted after they are removed from the node. Symlinks must be manually removed.</p>
+</div>
+</div>
+<div class="sect3">
 <h4 id="local-storage-symlinks-top-level_local-storage-with-the-local-storage-operator">Local Storage Operator symlinks management</h4>
 <div class="paragraph _abstract">
 <p>To prevent storage breakage during Red&#160;Hat OpenShift Container Platform upgrades, Red&#160;Hat OpenShift Container Platform provides a mechanism, the <code>LocalVolumeDeviceLink</code> Custom Resource Definition, to detect, alert, and remap broken symlinks without manual node-level intervention.</p>
@@ -2677,7 +3057,7 @@ example-pv3             1Gi        RWO            Delete           Bound       l
 <li>
 <p>In the <strong>Alert Name</strong> filter box, search for the required LSO alerts:</p>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 691. Symlink alerts for LSO</caption>
+<caption class="title">Table 763. Symlink alerts for LSO</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2754,7 +3134,7 @@ openshift-storage   local-pv-7g8h9i-worker-2-block   local-pv-7g8h9i    MISSING 
 <li>
 <p>Go to the <code>localVolumeDeviceLink.status</code> field and view its nested fields that are shown in the following table for a list of valid symlink targets, current link (<code>by-id</code>), and the generated preferred symlink.</p>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 692. <code>localVolumeDeviceLink.status</code> nested fields</caption>
+<caption class="title">Table 764. <code>localVolumeDeviceLink.status</code> nested fields</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3134,1068 +3514,6 @@ openshift-storage   local-pv-7g8h9i-worker-2-block   local-pv-7g8h9i    MISSING 
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="install-lvms-operator-cli_local-storage-with-the-local-storage-operator">Installing LVM Storage by using the CLI</h4>
-<div class="paragraph _abstract">
-<p>You can install LVM Storage by using the OpenShift CLI (<code>oc</code>) to dynamically provision local storage on clusters with limited resources.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The default namespace for the LVM Storage Operator is <code>openshift-lvm-storage</code>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
-</li>
-<li>
-<p>You have logged in to Red&#160;Hat OpenShift Container Platform as a user with <code>cluster-admin</code> and Operator installation permissions.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a YAML file with the configuration for creating a namespace:</p>
-<div class="listingblock">
-<div class="title">Example YAML configuration for creating a namespace</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
-kind: Namespace
-metadata:
-  labels:
-    openshift.io/cluster-monitoring: "true"
-    pod-security.kubernetes.io/enforce: privileged
-    pod-security.kubernetes.io/audit: privileged
-    pod-security.kubernetes.io/warn: privileged
-  name: openshift-lvm-storage</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create the namespace by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;file_name&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create an <code>OperatorGroup</code> CR YAML file:</p>
-<div class="listingblock">
-<div class="title">Example <code>OperatorGroup</code> CR</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1
-kind: OperatorGroup
-metadata:
-  name: openshift-storage-operatorgroup
-  namespace: openshift-lvm-storage
-spec:
-  targetNamespaces:
-  - openshift-storage</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create the <code>OperatorGroup</code> CR by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;file_name&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create a <code>Subscription</code> CR YAML file:</p>
-<div class="listingblock">
-<div class="title">Example <code>Subscription</code> CR</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1alpha1
-kind: Subscription
-metadata:
-  name: lvms
-  namespace: openshift-lvm-storage
-spec:
-  installPlanApproval: Automatic
-  name: lvms-operator
-  source: redhat-operators
-  sourceNamespace: openshift-marketplace</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create the <code>Subscription</code> CR by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;file_name&gt;</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Verification</div>
-<ol class="arabic">
-<li>
-<p>To verify that LVM Storage is installed, run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get csv -n openshift-lvm-storage -o custom-columns=Name:.metadata.name,Phase:.status.phase</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">Name                         Phase
-4.13.0-202301261535          Succeeded</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="lvms-installing-lvms-with-web-console_local-storage-with-the-local-storage-operator">Installing LVM Storage by using the web console</h4>
-<div class="paragraph _abstract">
-<p>Install LVM Storage from the Red&#160;Hat OpenShift Container Platform web console to dynamically provision local storage on clusters with limited resources.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The default namespace for the LVM Storage Operator is <code>openshift-lvm-storage</code>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have access to the cluster.</p>
-</li>
-<li>
-<p>You have access to Red&#160;Hat OpenShift Container Platform with <code>cluster-admin</code> and Operator installation permissions.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Log in to the Red&#160;Hat OpenShift Container Platform web console.</p>
-</li>
-<li>
-<p>Click <strong>Ecosystem</strong> &#8594; <strong>Software Catalog</strong>.</p>
-</li>
-<li>
-<p>Click <strong>LVM Storage</strong> on the software catalog page.</p>
-</li>
-<li>
-<p>Set the following options on the <strong>Operator Installation</strong> page:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p><strong>Update Channel</strong> as <strong>stable-{product-version}</strong>.</p>
-</li>
-<li>
-<p><strong>Installation Mode</strong> as <strong>A specific namespace on the cluster</strong>.</p>
-</li>
-<li>
-<p><strong>Installed Namespace</strong> as <strong>Operator recommended namespace openshift-storage</strong>.
-If the <code>openshift-lvm-storage</code> namespace does not exist, it is created during the operator installation.</p>
-</li>
-<li>
-<p><strong>Update approval</strong> as <strong>Automatic</strong> or <strong>Manual</strong>.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you select <strong>Automatic</strong> updates, the Operator Lifecycle Manager (OLM) automatically updates the running instance of LVM Storage without any intervention.</p>
-</div>
-<div class="paragraph">
-<p>If you select <strong>Manual</strong> updates, the OLM creates an update request.
-As a cluster administrator, you must manually approve the update request to update LVM Storage to a newer version.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Optional: Select the <strong>Enable Operator recommended cluster monitoring on this Namespace</strong> checkbox.</p>
-</li>
-<li>
-<p>Click <strong>Install</strong>.</p>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>Verify that LVM Storage shows a green tick, indicating successful installation.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="lvms-installing-lvms-disconnected-env_local-storage-with-the-local-storage-operator">Installing LVM Storage in a disconnected environment</h4>
-<div class="paragraph _abstract">
-<p>Install LVM Storage in a disconnected environment where your cluster has no internet access, such as air-gapped networks, high-security facilities, or regulated industries requiring network isolation for security and compliance.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You read "About disconnected installation mirroring".</p>
-</li>
-<li>
-<p>You have access to the Red&#160;Hat OpenShift Container Platform image repository.</p>
-</li>
-<li>
-<p>You created a mirror registry (see "Creating a mirror registry with mirror registry for Red Hat OpenShift").</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Follow the steps in the "Creating the image set configuration" procedure. To create an <code>ImageSetConfiguration</code> custom resource (CR) for LVM Storage, you can use the following example <code>ImageSetConfiguration</code> CR configuration:</p>
-<div class="listingblock">
-<div class="title">Example <code>ImageSetConfiguration</code> CR for LVM Storage</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: ImageSetConfiguration
-apiVersion: mirror.openshift.io/v1alpha2
-archiveSize: 4
-storageConfig:
-  registry:
-    imageURL: example.com/mirror/oc-mirror-metadata
-    skipTLS: false
-mirror:
-  platform:
-    channels:
-    - name: stable-{product-version}
-      type: ocp
-    graph: true
-  operators:
-  - catalog: registry.redhat.io/redhat/redhat-operator-index:v{product-version}
-    packages:
-    - name: lvms-operator
-      channels:
-      - name: stable
-  additionalImages:
-  - name: registry.redhat.io/ubi9/ubi:latest
-  helm: {}</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>archiveSize</code>: Specifies the maximum size (in GiB) of each file within the image set.</p>
-</li>
-<li>
-<p><code>storageConfig</code>: Specifies the location in which you want to save the image set. This location can be a registry or a local directory. You must configure the <code>storageConfig</code> field unless you are using the Technology Preview OCI feature.</p>
-</li>
-<li>
-<p><code>storageConfig.registry.imageURL</code>: Specifies the storage URL for the image stream when using a registry. For more information, see "Why use imagestreams".</p>
-</li>
-<li>
-<p><code>mirror.platform.name</code>: Specifies the channel from which you want to retrieve the Red&#160;Hat OpenShift Container Platform images.</p>
-</li>
-<li>
-<p><code>mirror.platform.channels[].name</code>: Set this field to <code>true</code> to generate the OpenShift Update Service (OSUS) graph image. For more information, see "About the OpenShift Update Service".</p>
-</li>
-<li>
-<p><code>mirror.operators.catalog</code>: Specifies the Operator catalog from which you want to retrieve the Red&#160;Hat OpenShift Container Platform images.</p>
-</li>
-<li>
-<p><code>mirror.operators.packages.name</code>: Specifies the Operator packages to include in the image set. If this field is empty, all packages in the catalog are retrieved.</p>
-</li>
-<li>
-<p><code>mirror.operators[].packages[].channels.name</code>: Specifies the channels of the Operator packages to include in the image set. You must include the default channel for the Operator package even if you do not use the bundles in that channel. You can find the default channel by running the following command: <code>$ oc mirror list operators --catalog=&lt;catalog_name&gt; --package=&lt;package_name&gt;</code>.</p>
-</li>
-<li>
-<p><code>mirror.additionalImages.name</code>: Specifies any additional images to include in the image set.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Follow the procedure in "Mirroring an image set to a mirror registry".</p>
-</li>
-<li>
-<p>Follow the procedure in "Configuring image registry repository mirroring".</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="lvms-installing-odf-logical-volume-manager-operator-using-rhacm_local-storage-with-the-local-storage-operator">Installing LVM Storage by using RHACM</h4>
-<div class="paragraph _abstract">
-<p>To install LVM Storage on clusters by using Red&#160;Hat Advanced Cluster Management (RHACM), you must create a <code>Policy</code> custom resource (CR) and configure the criteria to select the target clusters.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>Policy</code> CR that is created to install LVM Storage is also applied to the clusters that are imported or created after creating the <code>Policy</code> CR.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have access to the RHACM cluster using an account with <code>cluster-admin</code> and Operator installation permissions.</p>
-</li>
-<li>
-<p>You have dedicated disks that LVM Storage can use on each cluster.</p>
-</li>
-<li>
-<p>The cluster must be managed by RHACM.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Log in to the RHACM CLI using your Red&#160;Hat OpenShift Container Platform credentials.</p>
-</li>
-<li>
-<p>Create a namespace.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create ns &lt;namespace&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create a <code>Policy</code> CR YAML file:</p>
-<div class="listingblock">
-<div class="title">Example <code>Policy</code> CR to install and configure LVM Storage</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: apps.open-cluster-management.io/v1
-kind: PlacementRule
-metadata:
-  name: placement-install-lvms
-spec:
-  clusterConditions:
-  - status: "True"
-    type: ManagedClusterConditionAvailable
-  clusterSelector:
-    matchExpressions:
-    - key: mykey
-      operator: In
-      values:
-      - myvalue
----
-apiVersion: policy.open-cluster-management.io/v1
-kind: PlacementBinding
-metadata:
-  name: binding-install-lvms
-placementRef:
-  apiGroup: apps.open-cluster-management.io
-  kind: PlacementRule
-  name: placement-install-lvms
-subjects:
-- apiGroup: policy.open-cluster-management.io
-  kind: Policy
-  name: install-lvms
----
-apiVersion: policy.open-cluster-management.io/v1
-kind: Policy
-metadata:
-  annotations:
-    policy.open-cluster-management.io/categories: CM Configuration Management
-    policy.open-cluster-management.io/controls: CM-2 Baseline Configuration
-    policy.open-cluster-management.io/standards: NIST SP 800-53
-  name: install-lvms
-spec:
-  disabled: false
-  remediationAction: enforce
-  policy-templates:
-  - objectDefinition:
-      apiVersion: policy.open-cluster-management.io/v1
-      kind: ConfigurationPolicy
-      metadata:
-        name: install-lvms
-      spec:
-        object-templates:
-        - complianceType: musthave
-          objectDefinition:
-            apiVersion: v1
-            kind: Namespace
-            metadata:
-              labels:
-                openshift.io/cluster-monitoring: "true"
-                pod-security.kubernetes.io/enforce: privileged
-                pod-security.kubernetes.io/audit: privileged
-                pod-security.kubernetes.io/warn: privileged
-              name: openshift-lvm-storage
-        - complianceType: musthave
-          objectDefinition:
-            apiVersion: operators.coreos.com/v1
-            kind: OperatorGroup
-            metadata:
-              name: openshift-storage-operatorgroup
-              namespace: openshift-lvm-storage
-            spec:
-              targetNamespaces:
-              - openshift-lvm-storage
-        - complianceType: musthave
-          objectDefinition:
-            apiVersion: operators.coreos.com/v1alpha1
-            kind: Subscription
-            metadata:
-              name: lvms
-              namespace: openshift-lvm-storage
-            spec:
-              installPlanApproval: Automatic
-              name: lvms-operator
-              source: redhat-operators
-              sourceNamespace: openshift-marketplace
-        remediationAction: enforce
-        severity: low</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>spec.clusterSelector</code>: Set the <code>key</code> field and <code>values</code> field in <code>PlacementRule.spec.clusterSelector</code> to match the labels that are configured in the clusters on which you want to install LVM Storage.</p>
-</li>
-<li>
-<p><code>spec.policy-templates[0].objectDefinition[0].spec.object-templates[0].objectDefinition</code>: Specifies the namespace configuration.</p>
-</li>
-<li>
-<p><code>spec.policy-templates[0].objectDefinition[1].spec.object-templates[1].objectDefinition</code>: Specifies the <code>OperatorGroup</code> CR configuration.</p>
-</li>
-<li>
-<p><code>spec.policy-templates[0].objectDefinition.spec.object-templates[2].objectDefinition</code>:Specifies the <code>Subscription</code> CR configuration.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Create the <code>Policy</code> CR by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;file_name&gt; -n &lt;namespace&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Upon creating the <code>Policy</code> CR, the following custom resources are created on the clusters that match the selection criteria configured in the <code>PlacementRule</code> CR:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>Namespace</code></p>
-</li>
-<li>
-<p><code>OperatorGroup</code></p>
-</li>
-<li>
-<p><code>Subscription</code></p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The default namespace for the LVM Storage Operator is <code>openshift-lvm-storage</code>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="lvms-provisioning-storage-using-lvms_local-storage-with-the-local-storage-operator">Provisioning storage by using LVM Storage</h4>
-<div class="paragraph _abstract">
-<p>After you have created the LVM volume groups by using the <code>LVMCluster</code> custom resource (CR), you can provision storage for your workloads by creating persistent volume claims (PVCs) that dynamically allocate local storage from the volume groups.</p>
-</div>
-<div class="paragraph">
-<p>The following are the minimum storage sizes that you can request for each file system type:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>block</code>: 8 MiB</p>
-</li>
-<li>
-<p><code>xfs</code>: 300 MiB</p>
-</li>
-<li>
-<p><code>ext4</code>: 32 MiB</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>To create a PVC, you must create a <code>PersistentVolumeClaim</code> object.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have created an <code>LVMCluster</code> CR.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Log in to the OpenShift CLI (<code>oc</code>).</p>
-</li>
-<li>
-<p>Create a <code>PersistentVolumeClaim</code> object:</p>
-<div class="listingblock">
-<div class="title">Example <code>PersistentVolumeClaim</code> object</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: lvm-block-1
-  namespace: default
-spec:
-  accessModes:
-    - ReadWriteOnce
-  volumeMode: Filesystem
-  resources:
-    requests:
-      storage: 10Gi
-    limits:
-      storage: 20Gi
-  storageClassName: lvms-vg1</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>metadata.name</code>: Specifies a name for the PVC.</p>
-</li>
-<li>
-<p><code>spec.volumeMode</code>: To create a file PVC, set this field to <code>Filesystem</code>. To create a block PVC, set this field to <code>Block</code>.</p>
-</li>
-<li>
-<p><code>spec.resources.requests.storage</code>: Specifies the storage size. If the value is less than the minimum storage size, the requested storage size is rounded to the minimum storage size. The total storage size you can provision is limited by the size of the Logical Volume Manager (LVM) thin pool and the over-provisioning factor.</p>
-</li>
-<li>
-<p><code>spec.resources.limits.storage</code>: (optional) Specifies the storage limit. Set this field to a value that is greater than or equal to the minimum storage size. Otherwise, PVC creation fails with an error.</p>
-</li>
-<li>
-<p><code>spec.storageClassName</code>: The value of the <code>storageClassName</code> field must be in the format <code>lvms-&lt;device_class_name&gt;</code> where <code>&lt;device_class_name&gt;</code> is the value of the <code>deviceClasses.name</code> field in the <code>LVMCluster</code> CR.</p>
-<div class="paragraph">
-<p>For example, if the <code>deviceClasses.name</code> field is set to <code>vg1</code>, you must set the <code>storageClassName</code> field to <code>lvms-vg1</code>.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>volumeBindingMode</code> field of the storage class is set to <code>WaitForFirstConsumer</code>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Create the PVC by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># oc create -f &lt;file_name&gt; -n &lt;application_namespace&gt;</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The created PVCs remain in <code>Pending</code> state until you deploy the pods that use them.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>To verify that the PVC is created, run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pvc -n &lt;namespace&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME          STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
-lvm-block-1   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi        RWO            lvms-vg1       5s</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="lvms-monitoring_local-storage-with-the-local-storage-operator">Monitoring LVM Storage</h4>
-<div class="paragraph _abstract">
-<p>You can monitor LVM Storage by enabling cluster monitoring with a namespace label, then viewing metrics to track storage usage and receiving alerts when thin pool and volume group capacity reaches critical thresholds to prevent data loss.</p>
-</div>
-<div class="paragraph">
-<p>To enable cluster monitoring, you must add a label in the namespace where you have installed LVM Storage.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>For information about enabling cluster monitoring in RHACM, see "Observability" and "Adding custom metrics".</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>To enable cluster monitoring, add the following label in the namespace where you have installed LVM Storage:</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>openshift.io/cluster-monitoring=true</pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="lvms-unstalling-lvms-using-cli_local-storage-with-the-local-storage-operator">Uninstalling LVM Storage by using the CLI</h4>
-<div class="paragraph _abstract">
-<p>Uninstall LVM Storage when it is no longer needed or before upgrading to a different storage solution by using the OpenShift CLI (<code>oc</code>) after removing all provisioned storage resources.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have logged in to <code>oc</code> as a user with <code>cluster-admin</code> permissions.</p>
-</li>
-<li>
-<p>You deleted the persistent volume claims (PVCs), volume snapshots, and volume clones provisioned by LVM Storage. You have also deleted the applications that are using these resources.</p>
-</li>
-<li>
-<p>You deleted the <code>LVMCluster</code> custom resource (CR).</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Get the <code>currentCSV</code> value for the LVM Storage Operator by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get subscription.operators.coreos.com lvms-operator -n &lt;namespace&gt; -o yaml | grep currentCSV</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">currentCSV: lvms-operator.v4.15.3</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Delete the subscription by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete subscription.operators.coreos.com lvms-operator -n &lt;namespace&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">subscription.operators.coreos.com "lvms-operator" deleted</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Delete the CSV for the LVM Storage Operator in the target namespace by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete clusterserviceversion &lt;currentCSV&gt; -n &lt;namespace&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;currentCSV&gt;</code> with the <code>currentCSV</code> value for the LVM Storage Operator.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">clusterserviceversion.operators.coreos.com "lvms-operator.v4.15.3" deleted</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>To verify that the LVM Storage Operator is uninstalled, run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get csv -n &lt;namespace&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If the LVM Storage Operator was successfully uninstalled, it does not appear in the output of this command.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="lvms-unstalling-lvms-with-web-console_local-storage-with-the-local-storage-operator">Uninstalling LVM Storage by using the web console</h4>
-<div class="paragraph _abstract">
-<p>Uninstall LVM Storage when it is no longer needed or before upgrading to a different storage solution by using the Red&#160;Hat OpenShift Container Platform web console after removing all provisioned storage resources.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have access to Red&#160;Hat OpenShift Container Platform as a user with <code>cluster-admin</code> permissions.</p>
-</li>
-<li>
-<p>You have deleted the persistent volume claims (PVCs), volume snapshots, and volume clones provisioned by LVM Storage. You have also deleted the applications that are using these resources.</p>
-</li>
-<li>
-<p>You have deleted the <code>LVMCluster</code> custom resource (CR).</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Log in to the Red&#160;Hat OpenShift Container Platform web console.</p>
-</li>
-<li>
-<p>Click <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong>.</p>
-</li>
-<li>
-<p>Click <strong>LVM Storage</strong> in the <code>openshift-lvm-storage</code> namespace.</p>
-</li>
-<li>
-<p>Click the <strong>Details</strong> tab.</p>
-</li>
-<li>
-<p>From the <strong>Actions</strong> menu, select <strong>Uninstall Operator</strong>.</p>
-</li>
-<li>
-<p>Optional: When prompted, select the <strong>Delete all operand instances for this operator</strong> checkbox to delete the operand instances for LVM Storage.</p>
-</li>
-<li>
-<p>Click <strong>Uninstall</strong>.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="lvms-uninstalling-lvms-rhacm_local-storage-with-the-local-storage-operator">Uninstalling LVM Storage installed using RHACM</h4>
-<div class="paragraph _abstract">
-<p>To uninstall LVM Storage that you installed by using RHACM when it is no longer needed or before switching to a different storage solution, delete the RHACM <code>Policy</code> custom resource (CR) that you created for installation after removing all provisioned storage resources.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have access to the RHACM cluster as a user with <code>cluster-admin</code> permissions.</p>
-</li>
-<li>
-<p>You have deleted the persistent volume claims (PVCs), volume snapshots, and volume clones provisioned by LVM Storage. You have also deleted the applications that are using these resources.</p>
-</li>
-<li>
-<p>You have deleted the <code>LVMCluster</code> CR that you created using RHACM.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Log in to the OpenShift CLI (<code>oc</code>).</p>
-</li>
-<li>
-<p>Delete the RHACM <code>Policy</code> CR that you created for installing and configuring LVM Storage by using the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete -f &lt;policy&gt; -n &lt;namespace&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;policy&gt;</code> with the name of the <code>Policy</code> CR YAML file.</p>
-</div>
-</li>
-<li>
-<p>Create a <code>Policy</code> CR YAML file with the configuration to uninstall LVM Storage:</p>
-<div class="listingblock">
-<div class="title">Example <code>Policy</code> CR to uninstall LVM Storage</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: apps.open-cluster-management.io/v1
-kind: PlacementRule
-metadata:
-  name: placement-uninstall-lvms
-spec:
-  clusterConditions:
-  - status: "True"
-    type: ManagedClusterConditionAvailable
-  clusterSelector:
-    matchExpressions:
-    - key: mykey
-      operator: In
-      values:
-      - myvalue
----
-apiVersion: policy.open-cluster-management.io/v1
-kind: PlacementBinding
-metadata:
-  name: binding-uninstall-lvms
-placementRef:
-  apiGroup: apps.open-cluster-management.io
-  kind: PlacementRule
-  name: placement-uninstall-lvms
-subjects:
-- apiGroup: policy.open-cluster-management.io
-  kind: Policy
-  name: uninstall-lvms
----
-apiVersion: policy.open-cluster-management.io/v1
-kind: Policy
-metadata:
-  annotations:
-    policy.open-cluster-management.io/categories: CM Configuration Management
-    policy.open-cluster-management.io/controls: CM-2 Baseline Configuration
-    policy.open-cluster-management.io/standards: NIST SP 800-53
-  name: uninstall-lvms
-spec:
-  disabled: false
-  policy-templates:
-  - objectDefinition:
-      apiVersion: policy.open-cluster-management.io/v1
-      kind: ConfigurationPolicy
-      metadata:
-        name: uninstall-lvms
-      spec:
-        object-templates:
-        - complianceType: mustnothave
-          objectDefinition:
-            apiVersion: v1
-            kind: Namespace
-            metadata:
-              name: openshift-lvm-storage
-        - complianceType: mustnothave
-          objectDefinition:
-            apiVersion: operators.coreos.com/v1
-            kind: OperatorGroup
-            metadata:
-              name: openshift-storage-operatorgroup
-              namespace: openshift-lvm-storage
-            spec:
-              targetNamespaces:
-              - openshift-lvm-storage
-        - complianceType: mustnothave
-          objectDefinition:
-            apiVersion: operators.coreos.com/v1alpha1
-            kind: Subscription
-            metadata:
-              name: lvms-operator
-              namespace: openshift-lvm-storage
-        remediationAction: enforce
-        severity: low
-  - objectDefinition:
-      apiVersion: policy.open-cluster-management.io/v1
-      kind: ConfigurationPolicy
-      metadata:
-        name: policy-remove-lvms-crds
-      spec:
-        object-templates:
-        - complianceType: mustnothave
-          objectDefinition:
-            apiVersion: apiextensions.k8s.io/v1
-            kind: CustomResourceDefinition
-            metadata:
-              name: logicalvolumes.topolvm.io
-        - complianceType: mustnothave
-          objectDefinition:
-            apiVersion: apiextensions.k8s.io/v1
-            kind: CustomResourceDefinition
-            metadata:
-              name: lvmclusters.lvm.topolvm.io
-        - complianceType: mustnothave
-          objectDefinition:
-            apiVersion: apiextensions.k8s.io/v1
-            kind: CustomResourceDefinition
-            metadata:
-              name: lvmvolumegroupnodestatuses.lvm.topolvm.io
-        - complianceType: mustnothave
-          objectDefinition:
-            apiVersion: apiextensions.k8s.io/v1
-            kind: CustomResourceDefinition
-            metadata:
-              name: lvmvolumegroups.lvm.topolvm.io
-        remediationAction: enforce
-        severity: high</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create the <code>Policy</code> CR by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;policy&gt; -ns &lt;namespace&gt;</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="recovering-from-missing-lvms-or-operator-components_local-storage-with-the-local-storage-operator">Recovering from a missing storage class</h4>
-<div class="paragraph _abstract">
-<p>Resolve the "storage class not found" error by verifying that the LVMCluster custom resource (CR) exists and all Logical Volume Manager (LVM) Storage pods are running, then reviewing logs to identify configuration issues.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
-</li>
-<li>
-<p>You have logged in to the OpenShift CLI (<code>oc</code>) as a user with <code>cluster-admin</code> permissions.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Verify that the <code>LVMCluster</code> CR is present by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get lvmcluster -n &lt;namespace&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME            AGE
-my-lvmcluster   65m</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>If the <code>LVMCluster</code> CR is not present, create an <code>LVMCluster</code> CR. For more information, see "Ways to create an LVMCluster custom resource".</p>
-</li>
-<li>
-<p>In the namespace where the operator is installed, check that all the LVM Storage pods are in the <code>Running</code> state by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n &lt;namespace&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                                  READY   STATUS    RESTARTS      AGE
-lvms-operator-7b9fb858cb-6nsml        3/3     Running   0             70m
-topolvm-controller-5dd9cf78b5-7wwr2   5/5     Running   0             66m
-topolvm-node-dr26h                    4/4     Running   0             66m
-vg-manager-r6zdv                      1/1     Running   0             66m</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The output of this command must contain a running instance of the following pods:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>lvms-operator</code></p>
-</li>
-<li>
-<p><code>vg-manager</code></p>
-<div class="paragraph">
-<p>If the <code>vg-manager</code> pod is stuck while loading a configuration file, it is due to a failure to locate an available disk for LVM Storage to use. To retrieve the necessary information to troubleshoot this issue, review the logs of the <code>vg-manager</code> pod by running the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -l app.kubernetes.io/component=vg-manager -n &lt;namespace&gt;</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</div>
 </div>
 <div class="paragraph nav-footer">
 <p>← Previous: <a href="local-storage-overview_local-storage-options.html">Local Storage Operator overview</a> | ↑ Up: <a href="_storage.html">Storage</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="persistent-storage-hostpath-about_local-storage-with-the-hostpath-provisioner-for-virtualization.html">Overview of hostPath</a> →</p>
@@ -4209,7 +3527,7 @@ vg-manager-r6zdv                      1/1     Running   0             66m</code>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-14 16:03:18 +0100
+Last updated 2026-10-14 17:29:43 +0100
 </div>
 </div>
 <style>

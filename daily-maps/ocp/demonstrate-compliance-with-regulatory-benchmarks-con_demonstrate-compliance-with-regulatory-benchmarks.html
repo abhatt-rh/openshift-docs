@@ -1075,6 +1075,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
+<li><a href="oadp-intro_protect-application-data-with-oadp.html">Protect application data with OADP</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -1371,7 +1373,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="local-storage-overview_local-storage-options.html">Local Storage Operator overview</a>
 </li>
-<li><a href="local-storage-overview_local-storage-with-the-local-storage-operator.html">Local Storage Operator overview</a>
+<li><a href="local-storage-intro_local-storage-with-the-local-storage-operator.html">Local Storage Operator</a>
 </li>
 <li><a href="persistent-storage-hostpath-about_local-storage-with-the-hostpath-provisioner-for-virtualization.html">Overview of hostPath</a>
 </li>
@@ -3245,7 +3247,7 @@ ocp4-moderate-fips-mode-enabled-on-all-nodes                   FAIL     high</co
 <p>The manual remediation steps are typically stored in the <code>description</code> attribute in the <code>ComplianceCheckResult</code> object.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 730. ComplianceCheckResult Status</caption>
+<caption class="title">Table 802. ComplianceCheckResult Status</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4187,7 +4189,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 731. Attributes for spec variables</caption>
+<caption class="title">Table 803. Attributes for spec variables</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -5280,7 +5282,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 <div class="sect5">
 <h6 id="cis-profiles_understand-compliance">CIS compliance profiles</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 732. Supported CIS compliance profiles</caption>
+<caption class="title">Table 804. Supported CIS compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5366,7 +5368,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 <div class="sect5">
 <h6 id="bsi-profiles_understand-compliance">BSI Profile Support</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 733. Supported BSI compliance profiles</caption>
+<caption class="title">Table 805. Supported BSI compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5456,7 +5458,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 <div class="sect5">
 <h6 id="e8-profiles_understand-compliance">Essential Eight compliance profiles</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 734. Supported Essential Eight compliance profiles</caption>
+<caption class="title">Table 806. Supported Essential Eight compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5512,7 +5514,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 735. Supported FedRAMP High compliance profiles</caption>
+<caption class="title">Table 807. Supported FedRAMP High compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5596,7 +5598,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 <div class="sect5">
 <h6 id="fedramp-moderate-profiles_understand-compliance">FedRAMP Moderate compliance profiles</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 736. Supported FedRAMP Moderate compliance profiles</caption>
+<caption class="title">Table 808. Supported FedRAMP Moderate compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5694,7 +5696,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 <div class="sect5">
 <h6 id="nerc-cip-profiles_understand-compliance">NERC-CIP compliance profiles</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 737. Supported NERC-CIP compliance profiles</caption>
+<caption class="title">Table 809. Supported NERC-CIP compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5751,7 +5753,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 <div class="sect5">
 <h6 id="pci-dss-profiles_understand-compliance">PCI-DSS compliance profiles</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 738. Supported PCI-DSS compliance profiles</caption>
+<caption class="title">Table 810. Supported PCI-DSS compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5866,7 +5868,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 739. Supported STIG compliance profiles</caption>
+<caption class="title">Table 811. Supported STIG compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5965,7 +5967,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 <p>For example, the NIST High-Impact and Moderate-Impact profiles extend the CIS profile to achieve compliance. As a result, extended compliance profiles eliminate the need to run both profiles in a single cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 740. Profile extensions</caption>
+<caption class="title">Table 812. Profile extensions</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6045,7 +6047,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-14 16:03:18 +0100
+Last updated 2026-10-14 17:29:43 +0100
 </div>
 </div>
 <style>
