@@ -536,10 +536,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="_get_started.html">Get Started</a>
+<li><a href="_get_started.html">Get started</a>
 
 <ul class="sectlevel2">
+<li><a href="install-and-use-the-openshift-cli-oc-intro_install-and-use-the-openshift-cli-oc.html">Install and use the OpenShift CLI</a>
+</li>
 <li><a href="web-console-overview_access-the-web-console.html">Understand and access the web console</a>
+</li>
+<li><a href="learn-how-to-use-openshift-through-hands-on-tutorials-intro_learn-how-to-use-openshift-through-hands-on-tutorials.html">Learn how to use Red&#160;Hat OpenShift Container Platform through hands-on tutorials</a>
 </li>
 </ul>
 </li>
@@ -1094,8 +1098,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
 </li>
-<li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
-</li>
 </ul>
 </li>
 <li><a href="_configure.html">Configure</a>
@@ -1399,7 +1401,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="persistent-storage-csi-gcp-pd-overview_gcp-persistent-disk-csi.html">Overview of GCP PD CSI Driver Operator</a>
 </li>
-<li><a href="persistent-storage-csi-olm-operator-install-overview_google-cloud-filestore.html">Installing the Google Cloud Filestore CSI Driver Operator</a>
+<li><a href="persistent-storage-csi-google-cloud-file-intro_google-cloud-filestore.html">Google Cloud Filestore CSI Driver Operator</a>
 </li>
 <li><a href="persistent-storage-csi-ibm-powervs-block-intro_ibm-power-virtual-server-block-storage.html">Introduction to IBM Power&#174; Virtual Server Block CSI Driver Operator</a>
 </li>
@@ -1596,7 +1598,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nodes-overview-about-autoscaling-pods_automatically-scale-clusters-based-on-custom-metrics.html">About autoscaling pods on a node</a>
 </li>
-<li><a href="nodes-scheduler-default-about_optimize-workload-placement.html">Understanding default scheduling</a>
+<li><a href="optimize-workload-placement-intro_optimize-workload-placement.html">Optimize workload placement</a>
 </li>
 <li><a href="etcd-tuning-parameters_optimize-etcd-performance.html">Set tuning parameters for etcd</a>
 </li>
@@ -1650,6 +1652,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
+<li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
+</li>
+<li><a href="deploy-ai-inference-workloads-with-leader-worker-set-operator-intro_deploy-ai-inference-workloads-with-leader-worker-set-operator.html">Deploy AI inference workloads with the Leader Worker Set Operator</a>
+</li>
+<li><a href="manage-large-scale-ai-training-workloads-with-jobset-operator-intro_manage-large-scale-ai-training-workloads-with-jobset-operator.html">Manage large-scale AI training workloads with the JobSet Operator</a>
+</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1678,6 +1686,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
 <li><a href="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog.html">About Operator installation from the software catalog</a>
+</li>
+<li><a href="extend-the-openshift-cli-with-plugins-intro_extend-the-openshift-cli-with-plugins.html">Extend the OpenShift CLI with plugins</a>
 </li>
 <li><a href="cli-manager-about_manage-cli-plugins-with-the-cli-manager.html">About the CLI Manager Operator</a>
 </li>
@@ -1887,12 +1897,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
 </li>
+<li><a href="storage-troubleshooting-intro_troubleshoot-storage.html">Troubleshooting storage</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
 
 <ul class="sectlevel2">
 <li><a href="understand-terminology-and-definitions-con_understand-terminology-and-definitions.html">Understand terminology and definitions</a>
+</li>
+<li><a href="openshift-cli-reference-intro_openshift-cli-reference.html">OpenShift CLI reference</a>
 </li>
 <li><a href="reference-image-registry-configuration-con_reference-image-registry-configuration.html">Reference image registry configuration</a>
 </li>
@@ -2198,7 +2212,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>To monitor network connectivity and diagnose routing states, refer to the Prometheus metrics for MetalLB. These metrics provide visibility into the status of BGP peers and BFD profiles so that you can ensure stable external communication.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 757. MetalLB BFD metrics</caption>
+<caption class="title">Table 765. MetalLB BFD metrics</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -2245,7 +2259,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 758. MetalLB BGP metrics</caption>
+<caption class="title">Table 766. MetalLB BGP metrics</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -2945,9 +2959,15 @@ Events:  &lt;none&gt;</code></pre>
 <p>← Previous: <a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a> | ↑ Up: <a href="_observe.html">Observe</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a> →</p>
 </div>
 </div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="install-and-use-the-openshift-cli-oc-intro_install-and-use-the-openshift-cli-oc.html#_footnoteref_1">1</a>. Where <strong>N</strong> is a number greater than or equal to 1.
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-13 19:21:16 +0100
+Last updated 2026-10-14 14:29:14 +0100
 </div>
 </div>
 <style>

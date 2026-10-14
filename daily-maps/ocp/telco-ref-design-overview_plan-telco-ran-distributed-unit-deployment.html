@@ -536,10 +536,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="_get_started.html">Get Started</a>
+<li><a href="_get_started.html">Get started</a>
 
 <ul class="sectlevel2">
+<li><a href="install-and-use-the-openshift-cli-oc-intro_install-and-use-the-openshift-cli-oc.html">Install and use the OpenShift CLI</a>
+</li>
 <li><a href="web-console-overview_access-the-web-console.html">Understand and access the web console</a>
+</li>
+<li><a href="learn-how-to-use-openshift-through-hands-on-tutorials-intro_learn-how-to-use-openshift-through-hands-on-tutorials.html">Learn how to use Red&#160;Hat OpenShift Container Platform through hands-on tutorials</a>
 </li>
 </ul>
 </li>
@@ -1093,8 +1097,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
 </li>
-<li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
-</li>
 </ul>
 </li>
 <li><a href="_configure.html">Configure</a>
@@ -1398,7 +1400,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="persistent-storage-csi-gcp-pd-overview_gcp-persistent-disk-csi.html">Overview of GCP PD CSI Driver Operator</a>
 </li>
-<li><a href="persistent-storage-csi-olm-operator-install-overview_google-cloud-filestore.html">Installing the Google Cloud Filestore CSI Driver Operator</a>
+<li><a href="persistent-storage-csi-google-cloud-file-intro_google-cloud-filestore.html">Google Cloud Filestore CSI Driver Operator</a>
 </li>
 <li><a href="persistent-storage-csi-ibm-powervs-block-intro_ibm-power-virtual-server-block-storage.html">Introduction to IBM Power&#174; Virtual Server Block CSI Driver Operator</a>
 </li>
@@ -1596,7 +1598,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nodes-overview-about-autoscaling-pods_automatically-scale-clusters-based-on-custom-metrics.html">About autoscaling pods on a node</a>
 </li>
-<li><a href="nodes-scheduler-default-about_optimize-workload-placement.html">Understanding default scheduling</a>
+<li><a href="optimize-workload-placement-intro_optimize-workload-placement.html">Optimize workload placement</a>
 </li>
 <li><a href="etcd-tuning-parameters_optimize-etcd-performance.html">Set tuning parameters for etcd</a>
 </li>
@@ -1650,6 +1652,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
+<li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
+</li>
+<li><a href="deploy-ai-inference-workloads-with-leader-worker-set-operator-intro_deploy-ai-inference-workloads-with-leader-worker-set-operator.html">Deploy AI inference workloads with the Leader Worker Set Operator</a>
+</li>
+<li><a href="manage-large-scale-ai-training-workloads-with-jobset-operator-intro_manage-large-scale-ai-training-workloads-with-jobset-operator.html">Manage large-scale AI training workloads with the JobSet Operator</a>
+</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1678,6 +1686,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
 <li><a href="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog.html">About Operator installation from the software catalog</a>
+</li>
+<li><a href="extend-the-openshift-cli-with-plugins-intro_extend-the-openshift-cli-with-plugins.html">Extend the OpenShift CLI with plugins</a>
 </li>
 <li><a href="cli-manager-about_manage-cli-plugins-with-the-cli-manager.html">About the CLI Manager Operator</a>
 </li>
@@ -1887,12 +1897,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
 </li>
+<li><a href="storage-troubleshooting-intro_troubleshoot-storage.html">Troubleshooting storage</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
 
 <ul class="sectlevel2">
 <li><a href="understand-terminology-and-definitions-con_understand-terminology-and-definitions.html">Understand terminology and definitions</a>
+</li>
+<li><a href="openshift-cli-reference-intro_openshift-cli-reference.html">OpenShift CLI reference</a>
 </li>
 <li><a href="reference-image-registry-configuration-con_reference-image-registry-configuration.html">Reference image registry configuration</a>
 </li>
@@ -1929,12 +1943,12 @@ Red Hat is committed to iterating over the telco core and RAN DU RDS to support 
 <div class="content">
 <img src="data:image/png;base64," alt="A diagram showing two distinctive network far edge deployment processes" width="one showing how the hub cluster uses GitOps ZTP to install managed clusters" height="and the other showing how the hub cluster uses TALM to apply policies to managed clusters">
 </div>
-<div class="title">Figure 13. Telco RAN DU deployment architecture</div>
+<div class="title">Figure 18. Telco RAN DU deployment architecture</div>
 </div>
 <div class="sect3">
 <h4 id="_supported_cpu_architectures_for_ran_du">Supported CPU architectures for RAN DU</h4>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 22. Supported CPU architectures for RAN DU</caption>
+<caption class="title">Table 30. Supported CPU architectures for RAN DU</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 33.3333%;">
@@ -2041,7 +2055,7 @@ For workloads with high service level agreement requirements such as RAN DU the 
 <dt class="hdlist1">Supported cluster topologies for RAN DU</dt>
 <dd>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 23. Supported cluster topologies for RAN DU</caption>
+<caption class="title">Table 31. Supported cluster topologies for RAN DU</caption>
 <colgroup>
 <col style="width: 4.7619%;">
 <col style="width: 9.5238%;">
@@ -2262,7 +2276,7 @@ Use hub-side templating.</p>
 <p>The following table describes resource utilization under reference application load.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 24. Resource utilization under reference application load</caption>
+<caption class="title">Table 32. Resource utilization under reference application load</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 33.3333%;">
@@ -2478,7 +2492,7 @@ This is critical for the supportability of the solution and ensuring alignment a
 <p>The Red Hat telco RAN DU {product-version} solution has been validated using the following Red Hat software products for Red&#160;Hat OpenShift Container Platform managed clusters.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 80%;">
-<caption class="title">Table 25. Telco RAN DU managed cluster validated software components</caption>
+<caption class="title">Table 33. Telco RAN DU managed cluster validated software components</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2547,7 +2561,7 @@ This is critical for the supportability of the solution and ensuring alignment a
 <div class="content">
 <img src="data:image/png;base64," alt="Diagram showing telco RAN DU RDS components">
 </div>
-<div class="title">Figure 14. Telco RAN DU reference design components</div>
+<div class="title">Figure 19. Telco RAN DU reference design components</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3550,7 +3564,7 @@ A sufficient number of cores must be allocated to the reserved set to account fo
 <p>The following table lists the required platform tuning configurations:</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 26. Cluster capabilities configurations</caption>
+<caption class="title">Table 34. Cluster capabilities configurations</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3694,7 +3708,7 @@ All workloads must now be compatible with cgroup v2. For more information, see <
 </dl>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 27. Machine configuration options</caption>
+<caption class="title">Table 35. Machine configuration options</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -3746,9 +3760,15 @@ The reference CRs that enable kdump have an increased memory reservation based o
 <p>← Previous: <a href="telco-hub-architecture-overview_plan-telco-hub-cluster-deployment.html">Hub cluster architecture overview</a> | ↑ Up: <a href="_plan.html">Plan</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="choose-an-installation-method-con_choose-an-installation-method.html">Choose an installation method</a> →</p>
 </div>
 </div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="install-and-use-the-openshift-cli-oc-intro_install-and-use-the-openshift-cli-oc.html#_footnoteref_1">1</a>. Where <strong>N</strong> is a number greater than or equal to 1.
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-13 19:21:16 +0100
+Last updated 2026-10-14 14:29:14 +0100
 </div>
 </div>
 <style>

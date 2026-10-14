@@ -536,10 +536,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="_get_started.html">Get Started</a>
+<li><a href="_get_started.html">Get started</a>
 
 <ul class="sectlevel2">
+<li><a href="install-and-use-the-openshift-cli-oc-intro_install-and-use-the-openshift-cli-oc.html">Install and use the OpenShift CLI</a>
+</li>
 <li><a href="web-console-overview_access-the-web-console.html">Understand and access the web console</a>
+</li>
+<li><a href="learn-how-to-use-openshift-through-hands-on-tutorials-intro_learn-how-to-use-openshift-through-hands-on-tutorials.html">Learn how to use Red&#160;Hat OpenShift Container Platform through hands-on tutorials</a>
 </li>
 </ul>
 </li>
@@ -1093,8 +1097,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
 </li>
-<li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
-</li>
 </ul>
 </li>
 <li><a href="_configure.html">Configure</a>
@@ -1398,7 +1400,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="persistent-storage-csi-gcp-pd-overview_gcp-persistent-disk-csi.html">Overview of GCP PD CSI Driver Operator</a>
 </li>
-<li><a href="persistent-storage-csi-olm-operator-install-overview_google-cloud-filestore.html">Installing the Google Cloud Filestore CSI Driver Operator</a>
+<li><a href="persistent-storage-csi-google-cloud-file-intro_google-cloud-filestore.html">Google Cloud Filestore CSI Driver Operator</a>
 </li>
 <li><a href="persistent-storage-csi-ibm-powervs-block-intro_ibm-power-virtual-server-block-storage.html">Introduction to IBM Power&#174; Virtual Server Block CSI Driver Operator</a>
 </li>
@@ -1596,7 +1598,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nodes-overview-about-autoscaling-pods_automatically-scale-clusters-based-on-custom-metrics.html">About autoscaling pods on a node</a>
 </li>
-<li><a href="nodes-scheduler-default-about_optimize-workload-placement.html">Understanding default scheduling</a>
+<li><a href="optimize-workload-placement-intro_optimize-workload-placement.html">Optimize workload placement</a>
 </li>
 <li><a href="etcd-tuning-parameters_optimize-etcd-performance.html">Set tuning parameters for etcd</a>
 </li>
@@ -1650,6 +1652,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
+<li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
+</li>
+<li><a href="deploy-ai-inference-workloads-with-leader-worker-set-operator-intro_deploy-ai-inference-workloads-with-leader-worker-set-operator.html">Deploy AI inference workloads with the Leader Worker Set Operator</a>
+</li>
+<li><a href="manage-large-scale-ai-training-workloads-with-jobset-operator-intro_manage-large-scale-ai-training-workloads-with-jobset-operator.html">Manage large-scale AI training workloads with the JobSet Operator</a>
+</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1678,6 +1686,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
 <li><a href="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog.html">About Operator installation from the software catalog</a>
+</li>
+<li><a href="extend-the-openshift-cli-with-plugins-intro_extend-the-openshift-cli-with-plugins.html">Extend the OpenShift CLI with plugins</a>
 </li>
 <li><a href="cli-manager-about_manage-cli-plugins-with-the-cli-manager.html">About the CLI Manager Operator</a>
 </li>
@@ -1887,12 +1897,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
 </li>
+<li><a href="storage-troubleshooting-intro_troubleshoot-storage.html">Troubleshooting storage</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
 
 <ul class="sectlevel2">
 <li><a href="understand-terminology-and-definitions-con_understand-terminology-and-definitions.html">Understand terminology and definitions</a>
+</li>
+<li><a href="openshift-cli-reference-intro_openshift-cli-reference.html">OpenShift CLI reference</a>
 </li>
 <li><a href="reference-image-registry-configuration-con_reference-image-registry-configuration.html">Reference image registry configuration</a>
 </li>
@@ -2014,7 +2028,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li>
 <p>Enable the following required API services in the project that hosts your cluster. You can also enable optional API services which are not required for installation. See <a href="https://cloud.google.com/service-usage/docs/enable-disable#enabling">Enabling services</a> in the Google Cloud documentation.</p>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 258. Required API services</caption>
+<caption class="title">Table 266. Required API services</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -2161,7 +2175,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 259. Optional API services</caption>
+<caption class="title">Table 267. Optional API services</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -2332,7 +2346,7 @@ uses the following resources. Note that some resources are required only during
 the bootstrap process and are removed after the cluster deploys.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 260. Google Cloud resources used in a default cluster</caption>
+<caption class="title">Table 268. Google Cloud resources used in a default cluster</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3290,7 +3304,7 @@ See <a href="https://cloud.google.com/iam/docs/creating-managing-service-account
 <p>The following roles are applied to the service accounts that the control plane and compute machines use:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 261. Google Cloud service account roles</caption>
+<caption class="title">Table 269. Google Cloud service account roles</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4864,7 +4878,7 @@ rules:
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 262. Required parameters</caption>
+<caption class="title">Table 270. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5001,7 +5015,7 @@ rules:
 <p>Only IPv4 addresses are supported.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 263. Network parameters</caption>
+<caption class="title">Table 271. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5261,7 +5275,7 @@ rules:
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 264. Optional parameters</caption>
+<caption class="title">Table 272. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5894,7 +5908,7 @@ Supported values are <code>3</code>, or <code>1</code> when deploying single-nod
 <p>Additional Google Cloud configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 265. Additional Google Cloud parameters</caption>
+<caption class="title">Table 273. Additional Google Cloud parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7264,9 +7278,15 @@ Supported values are <code>3</code>, or <code>1</code> when deploying single-nod
 <p>← Previous: <a href="installation-nutanix-infrastructure_prepare-to-install-on-nutanix.html">Nutanix version requirements</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="cluster-entitlements_install-on-gcp-ipi-default.html">Internet access for Red&#160;Hat OpenShift Container Platform</a> →</p>
 </div>
 </div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="install-and-use-the-openshift-cli-oc-intro_install-and-use-the-openshift-cli-oc.html#_footnoteref_1">1</a>. Where <strong>N</strong> is a number greater than or equal to 1.
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-13 19:21:16 +0100
+Last updated 2026-10-14 14:29:14 +0100
 </div>
 </div>
 <style>

@@ -536,10 +536,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="_get_started.html">Get Started</a>
+<li><a href="_get_started.html">Get started</a>
 
 <ul class="sectlevel2">
+<li><a href="install-and-use-the-openshift-cli-oc-intro_install-and-use-the-openshift-cli-oc.html">Install and use the OpenShift CLI</a>
+</li>
 <li><a href="web-console-overview_access-the-web-console.html">Understand and access the web console</a>
+</li>
+<li><a href="learn-how-to-use-openshift-through-hands-on-tutorials-intro_learn-how-to-use-openshift-through-hands-on-tutorials.html">Learn how to use Red&#160;Hat OpenShift Container Platform through hands-on tutorials</a>
 </li>
 </ul>
 </li>
@@ -1094,8 +1098,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
 </li>
-<li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
-</li>
 </ul>
 </li>
 <li><a href="_configure.html">Configure</a>
@@ -1398,7 +1400,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="persistent-storage-csi-gcp-pd-overview_gcp-persistent-disk-csi.html">Overview of GCP PD CSI Driver Operator</a>
 </li>
-<li><a href="persistent-storage-csi-olm-operator-install-overview_google-cloud-filestore.html">Installing the Google Cloud Filestore CSI Driver Operator</a>
+<li><a href="persistent-storage-csi-google-cloud-file-intro_google-cloud-filestore.html">Google Cloud Filestore CSI Driver Operator</a>
 </li>
 <li><a href="persistent-storage-csi-ibm-powervs-block-intro_ibm-power-virtual-server-block-storage.html">Introduction to IBM Power&#174; Virtual Server Block CSI Driver Operator</a>
 </li>
@@ -1596,7 +1598,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nodes-overview-about-autoscaling-pods_automatically-scale-clusters-based-on-custom-metrics.html">About autoscaling pods on a node</a>
 </li>
-<li><a href="nodes-scheduler-default-about_optimize-workload-placement.html">Understanding default scheduling</a>
+<li><a href="optimize-workload-placement-intro_optimize-workload-placement.html">Optimize workload placement</a>
 </li>
 <li><a href="etcd-tuning-parameters_optimize-etcd-performance.html">Set tuning parameters for etcd</a>
 </li>
@@ -1650,6 +1652,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
+<li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
+</li>
+<li><a href="deploy-ai-inference-workloads-with-leader-worker-set-operator-intro_deploy-ai-inference-workloads-with-leader-worker-set-operator.html">Deploy AI inference workloads with the Leader Worker Set Operator</a>
+</li>
+<li><a href="manage-large-scale-ai-training-workloads-with-jobset-operator-intro_manage-large-scale-ai-training-workloads-with-jobset-operator.html">Manage large-scale AI training workloads with the JobSet Operator</a>
+</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1678,6 +1686,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
 <li><a href="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog.html">About Operator installation from the software catalog</a>
+</li>
+<li><a href="extend-the-openshift-cli-with-plugins-intro_extend-the-openshift-cli-with-plugins.html">Extend the OpenShift CLI with plugins</a>
 </li>
 <li><a href="cli-manager-about_manage-cli-plugins-with-the-cli-manager.html">About the CLI Manager Operator</a>
 </li>
@@ -1887,12 +1897,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
 </li>
+<li><a href="storage-troubleshooting-intro_troubleshoot-storage.html">Troubleshooting storage</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
 
 <ul class="sectlevel2">
 <li><a href="understand-terminology-and-definitions-con_understand-terminology-and-definitions.html">Understand terminology and definitions</a>
+</li>
+<li><a href="openshift-cli-reference-intro_openshift-cli-reference.html">OpenShift CLI reference</a>
 </li>
 <li><a href="reference-image-registry-configuration-con_reference-image-registry-configuration.html">Reference image registry configuration</a>
 </li>
@@ -2528,7 +2542,7 @@ spec:
 <p>The cluster status reports the effective policy by using <code>DeviceDiscoveryPolicyStatus</code>, which distinguishes three runtime states:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 685. Effective policy status values</caption>
+<caption class="title">Table 693. Effective policy status values</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -2558,7 +2572,7 @@ spec:
 <p>The following table shows the behavior matrix:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 686. Device discovery behavior by configuration</caption>
+<caption class="title">Table 694. Device discovery behavior by configuration</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2612,7 +2626,7 @@ spec:
 <p>The discovery policy also controls whether the controller re-queues for periodic device scanning:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 687. Requeue behavior by configuration</caption>
+<caption class="title">Table 695. Requeue behavior by configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2672,7 +2686,7 @@ spec:
 <p>The following table shows how the device discovery policy feature interacts with other features:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 688. Device discovery policy feature interactions</caption>
+<caption class="title">Table 696. Device discovery policy feature interactions</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -2884,7 +2898,7 @@ spec:
 <p>The <code>LVMCluster</code> CR fields are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 689. <code>LVMCluster</code> CR fields</caption>
+<caption class="title">Table 697. <code>LVMCluster</code> CR fields</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3354,7 +3368,7 @@ You can modify this field after the LVM cluster has been created.</p>
 <p>The following tables describe the chunk size and volume size limits for static and host configurations:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 690. Tested configuration</caption>
+<caption class="title">Table 698. Tested configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3377,7 +3391,7 @@ You can modify this field after the LVM cluster has been created.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 691. Theoretical size limits for static configuration</caption>
+<caption class="title">Table 699. Theoretical size limits for static configuration</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3404,7 +3418,7 @@ You can modify this field after the LVM cluster has been created.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 692. Theoretical size limits for a host configuration</caption>
+<caption class="title">Table 700. Theoretical size limits for a host configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4995,7 +5009,7 @@ lvm-block-1   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi        RWO
 <p>If you set an empty configuration (storageClassOptions: {}) or omit the field entirely, the Operator uses the following default settings:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 693. StorageClass Options Reference</caption>
+<caption class="title">Table 701. StorageClass Options Reference</caption>
 <colgroup>
 <col style="width: 12.5%;">
 <col style="width: 12.5%;">
@@ -6635,7 +6649,7 @@ lvm-block-1-clone   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi     
 <p>The following table describes the <code>topolvm</code> metrics:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 694. <code>topolvm</code> metrics</caption>
+<caption class="title">Table 702. <code>topolvm</code> metrics</caption>
 <colgroup>
 <col>
 <col>
@@ -6697,7 +6711,7 @@ lvm-block-1-clone   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi     
 <p>LVM Storage sends the following alerts when the usage of the thin pool and volume group exceeds a certain value:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 695. LVM Storage alerts</caption>
+<caption class="title">Table 703. LVM Storage alerts</caption>
 <colgroup>
 <col>
 <col>
@@ -7270,7 +7284,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table describes the volume failure error messages:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 696. Volume failure error messages</caption>
+<caption class="title">Table 704. Volume failure error messages</caption>
 <colgroup>
 <col>
 <col>
@@ -7491,7 +7505,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares the support for storage types and filesystems provided by LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) to provision local storage:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 697. Comparison of the support for storage types and filesystems</caption>
+<caption class="title">Table 705. Comparison of the support for storage types and filesystems</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 23.8095%;">
@@ -7695,7 +7709,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares how LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) support core functionalities for provisioning local storage:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 698. Comparison of the support for core functionalities</caption>
+<caption class="title">Table 706. Comparison of the support for core functionalities</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 23.8095%;">
@@ -8161,7 +8175,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares the performance and isolation capabilities of LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) in provisioning local storage.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 699. Comparison of performance and isolation capabilities</caption>
+<caption class="title">Table 707. Comparison of performance and isolation capabilities</caption>
 <colgroup>
 <col style="width: 21.7391%;">
 <col style="width: 26.0869%;">
@@ -8302,7 +8316,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares the additional features provided by LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) to provision local storage:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 700. Comparison of the support for additional functionalities</caption>
+<caption class="title">Table 708. Comparison of the support for additional functionalities</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 23.8095%;">
@@ -8512,9 +8526,15 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>← Previous: <a href="persistent-storage-hostpath-about_local-storage-with-the-hostpath-provisioner-for-virtualization.html">Overview of hostPath</a> | ↑ Up: <a href="_storage.html">Storage</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="ephemeral-storage-csi-inline-overview_temporary-storage-with-inline-ephemeral-volumes.html">Overview of CSI inline ephemeral volumes</a> →</p>
 </div>
 </div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="install-and-use-the-openshift-cli-oc-intro_install-and-use-the-openshift-cli-oc.html#_footnoteref_1">1</a>. Where <strong>N</strong> is a number greater than or equal to 1.
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-13 19:21:16 +0100
+Last updated 2026-10-14 14:29:14 +0100
 </div>
 </div>
 <style>
