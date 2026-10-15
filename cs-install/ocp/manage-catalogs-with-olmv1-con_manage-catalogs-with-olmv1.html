@@ -477,44 +477,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
 <body id="manage-catalogs-with-olmv1-con_manage-catalogs-with-olmv1" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/ocp-jobs/add-and-remove-catalogs.adoc:5
-    include::modules/olmv1-about-catalogs.adoc[leveloffset=+0]
-    expected: maps/ocp/ocp-jobs/modules/olmv1-about-catalogs.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -1825,15 +1789,20 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-5"><a href="#olmv1-red-hat-catalogs_add-and-remove-catalogs">Red Hat-provided Operator catalogs in OLM v1</a></li><li class="level-5"><a href="#olmv1-adding-a-catalog-to-a-cluster_add-and-remove-catalogs">Add a catalog to a cluster</a></li><li class="level-5"><a href="#olmv1-deleting-catalog_add-and-remove-catalogs">Delete a catalog</a></li><li class="level-5"><a href="#olmv1-disabling-a-default-catalog_add-and-remove-catalogs">Disable a default catalog</a></li><li class="level-5"><a href="#olmv1-about-disconnected_add-and-remove-catalogs">About disconnected support and the oc-mirror plugin in OLM v1</a></li><li class="level-4"><a href="#resolve-catalog-content-con_resolve-catalog-content">Resolve catalog content</a></li><li class="level-5"><a href="#olmv1-catalog-selection-by-name_resolve-catalog-content">Catalog selection by name</a></li><li class="level-5"><a href="#olmv1-catalog-selection-by-labels-or-exp_resolve-catalog-content">Catalog selection by labels or expressions</a></li><li class="level-5"><a href="#olmv1-catalog-exclusion-by-labels-or-expressions_resolve-catalog-content">Catalog exclusion by labels or expressions</a></li><li class="level-5"><a href="#olmv1-catalog-exclusion-by-priority_resolve-catalog-content">Catalog selection by priority</a></li><li class="level-5"><a href="#olmv1-troubleshooting-catalog-selection-errors_resolve-catalog-content">Troubleshoot catalog selection errors</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#olmv1-about-catalogs_add-and-remove-catalogs">About catalogs in OLM v1</a></li><li class="level-5"><a href="#olmv1-red-hat-catalogs_add-and-remove-catalogs">Red Hat-provided Operator catalogs in OLM v1</a></li><li class="level-5"><a href="#olmv1-adding-a-catalog-to-a-cluster_add-and-remove-catalogs">Add a catalog to a cluster</a></li><li class="level-5"><a href="#olmv1-deleting-catalog_add-and-remove-catalogs">Delete a catalog</a></li><li class="level-5"><a href="#olmv1-disabling-a-default-catalog_add-and-remove-catalogs">Disable a default catalog</a></li><li class="level-5"><a href="#olmv1-about-disconnected_add-and-remove-catalogs">About disconnected support and the oc-mirror plugin in OLM v1</a></li><li class="level-4"><a href="#resolve-catalog-content-con_resolve-catalog-content">Resolve catalog content</a></li><li class="level-5"><a href="#olmv1-catalog-selection-by-name_resolve-catalog-content">Catalog selection by name</a></li><li class="level-5"><a href="#olmv1-catalog-selection-by-labels-or-exp_resolve-catalog-content">Catalog selection by labels or expressions</a></li><li class="level-5"><a href="#olmv1-catalog-exclusion-by-labels-or-expressions_resolve-catalog-content">Catalog exclusion by labels or expressions</a></li><li class="level-5"><a href="#olmv1-catalog-exclusion-by-priority_resolve-catalog-content">Catalog selection by priority</a></li><li class="level-5"><a href="#olmv1-troubleshooting-catalog-selection-errors_resolve-catalog-content">Troubleshoot catalog selection errors</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="manage-catalogs-with-olmv1-con_manage-catalogs-with-olmv1">Manage catalogs with OLM v1</h3>
 <div class="paragraph _abstract">
 <p>Cluster administrators can add <em>catalogs</em>, or curated collections of Operators and Kubernetes extensions, to their clusters. Operator authors publish their products to these catalogs.</p>
 </div>
+<div class="sect3">
+<h4 id="olmv1-about-catalogs_add-and-remove-catalogs">About catalogs in OLM v1</h4>
+<div class="paragraph _abstract">
+<p>You can discover installable content by querying a catalog for Kubernetes extensions, such as Operators and controllers, by using the catalogd component.</p>
+</div>
 <div class="paragraph">
-<p>Unresolved directive in ocp-jobs/add-and-remove-catalogs.adoc - include::modules/olmv1-about-catalogs.adoc[leveloffset=+0]</p>
+<p>Catalogd is a Kubernetes extension that unpacks catalog content for on-cluster clients and is part of the Operator Lifecycle Manager (OLM) v1 suite of microservices. Currently, catalogd unpacks catalog content that is packaged and distributed as container images.</p>
 </div>
 <div class="sect4">
 <h5 id="olmv1-red-hat-catalogs_add-and-remove-catalogs">Red Hat-provided Operator catalogs in OLM v1</h5>
@@ -2196,6 +2165,7 @@ openshift-certified-operators                  False     6h54m</code></pre>
 </table>
 </div>
 </div>
+</div>
 <div class="sect3">
 <h4 id="resolve-catalog-content-con_resolve-catalog-content">Resolve catalog content</h4>
 <div class="paragraph _abstract">
@@ -2524,7 +2494,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 21:23:26 +0100
+Last updated 2026-10-15 22:38:41 +0100
 </div>
 </div>
 <style>
