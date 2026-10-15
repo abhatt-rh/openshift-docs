@@ -596,7 +596,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
-<li><a href="installation-overview_understand-openshift-installation-architecture.html">The Red&#160;Hat OpenShift Container Platform installation</a>
+<li><a href="installation-overview_understand-openshift-installation-architecture.html">Red&#160;Hat OpenShift Container Platform installation options</a>
 </li>
 <li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
 </li>
@@ -607,8 +607,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="installation-special-config-butane_customize-installation-configuration.html">Create machine configs with Butane</a>
 </li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
-</li>
-<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
 <li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
 </li>
@@ -642,8 +640,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-single-node-openshift-intro_install-single-node-openshift.html">Install single-node OpenShift</a>
 </li>
-<li><a href="install-sno-about-installing-on-a-single-node_prepare-to-install-single-node-openshift.html">Single-node OpenShift</a>
-</li>
 <li><a href="install-a-two-node-cluster-with-fencing-intro_install-a-two-node-cluster-with-fencing.html">Install a two-node cluster with fencing</a>
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
@@ -651,8 +647,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
-</li>
-<li><a href="understand-disconnected-environment-update-considerations-intro_understand-disconnected-environment-update-considerations.html">Mirror images for disconnected environment updates</a>
 </li>
 </ul>
 </li>
@@ -1914,7 +1908,7 @@ the Cluster Network Operator reports an available status condition.</p>
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 626. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 625. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2067,7 +2061,7 @@ the Cluster Network Operator reports an available status condition.</p>
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 627. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 626. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -2132,7 +2126,7 @@ the Cluster Network Operator reports an available status condition.</p>
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 628. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 627. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2289,7 +2283,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 629. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 628. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2340,7 +2334,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 630. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 629. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2391,7 +2385,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 631. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 630. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2498,7 +2492,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table id="gatewayConfig-object_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 632. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 631. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2592,7 +2586,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 633. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 632. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2637,7 +2631,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 634. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 633. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2682,7 +2676,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 635. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 634. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -8621,7 +8615,7 @@ spec:
 </ul>
 </div>
 <table id="network-observability-resource-recommendations-table_configure-storage-and-flow-collection-for-network-observability" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 636. Resource recommendations for cluster sizes</caption>
+<caption class="title">Table 635. Resource recommendations for cluster sizes</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 20%;">
@@ -8730,7 +8724,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 637. Total average resource usage</caption>
+<caption class="title">Table 636. Total average resource usage</caption>
 <colgroup>
 <col>
 <col>
@@ -9178,7 +9172,7 @@ spec:
 <p>If you only want to export flows to a Kafka consumer or IPFIX collector, or you only need dashboard metrics, then you do not need to install Loki or provide storage for Loki. The following table compares available features with and without Loki.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 638. Comparison of feature availability with and without Loki</caption>
+<caption class="title">Table 637. Comparison of feature availability with and without Loki</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -9361,7 +9355,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 19:59:21 +0100
+Last updated 2026-10-15 20:22:23 +0100
 </div>
 </div>
 <style>

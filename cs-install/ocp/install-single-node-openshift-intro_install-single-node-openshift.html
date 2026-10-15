@@ -595,7 +595,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_install.html">Install</a>
 <ul class="sectlevel2">
-<li><a href="installation-overview_understand-openshift-installation-architecture.html">The Red&#160;Hat OpenShift Container Platform installation</a>
+<li><a href="installation-overview_understand-openshift-installation-architecture.html">Red&#160;Hat OpenShift Container Platform installation options</a>
 </li>
 <li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
 </li>
@@ -606,8 +606,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="installation-special-config-butane_customize-installation-configuration.html">Create machine configs with Butane</a>
 </li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
-</li>
-<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
 <li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
 </li>
@@ -641,8 +639,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-single-node-openshift-intro_install-single-node-openshift.html"><span class="toc-current">Install single-node OpenShift</span></a>
 </li>
-<li><a href="install-sno-about-installing-on-a-single-node_prepare-to-install-single-node-openshift.html">Single-node OpenShift</a>
-</li>
 <li><a href="install-a-two-node-cluster-with-fencing-intro_install-a-two-node-cluster-with-fencing.html">Install a two-node cluster with fencing</a>
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
@@ -650,8 +646,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
-</li>
-<li><a href="understand-disconnected-environment-update-considerations-intro_understand-disconnected-environment-update-considerations.html">Mirror images for disconnected environment updates</a>
 </li>
 </ul>
 </li>
@@ -1803,15 +1797,248 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#installing-sno-assisted-installer_install-single-node-openshift">Installing single-node OpenShift using the Assisted Installer</a></li><li class="level-5"><a href="#install-sno-generating-the-discovery-iso-with-the-assisted-installer_install-single-node-openshift">Generating the discovery ISO with the Assisted Installer</a></li><li class="level-5"><a href="#install-sno-installing-with-the-assisted-installer_install-single-node-openshift">Installing single-node OpenShift with the Assisted Installer</a></li><li class="level-4"><a href="#install-sno-installing-sno-manually_install-single-node-openshift">Installing single-node OpenShift manually</a></li><li class="level-4"><a href="#install-sno-installing-sno-okd-manually_install-single-node-openshift">Installing single-node OKD manually</a></li><li class="level-5"><a href="#generating-the-install-iso-manually_install-single-node-openshift">Generating the installation ISO with coreos-installer</a></li><li class="level-5"><a href="#install-sno-monitoring-the-installation-manually_install-single-node-openshift">Monitoring the cluster installation using openshift-install</a></li><li class="level-4"><a href="#install-sno-installing-sno-with-agent-based-installer_install-single-node-openshift">Installing single-node OpenShift with the Agent-based Installer</a></li><li class="level-5"><a href="#install-sno-installing-with-agent-based-installer_install-single-node-openshift">Installing single-node OpenShift with the Agent-based Installer on ARM architecture</a></li><li class="level-4"><a href="#additional-requirements-for-installing-sno-on-a-cloud-provider_install-single-node-openshift">Additional requirements for installing single-node OpenShift on a cloud provider</a></li><li class="level-4"><a href="#supported-cloud-providers-for-single-node-openshift_install-single-node-openshift">Supported cloud providers for single-node OpenShift</a></li><li class="level-4"><a href="#installing-sno-on-aws_install-single-node-openshift">Installing single-node OpenShift on AWS</a></li><li class="level-4"><a href="#installing-sno-on-azure_install-single-node-openshift">Installing single-node OpenShift on Azure</a></li><li class="level-4"><a href="#installing-sno-on-gcp_install-single-node-openshift">Installing single-node OpenShift on Google Cloud</a></li><li class="level-4"><a href="#installing-with-usb-media_install-single-node-openshift">Creating a bootable ISO image on a USB drive</a></li><li class="level-4"><a href="#install-booting-from-an-iso-over-http-redfish_install-single-node-openshift">Booting from an HTTP-hosted ISO image using the Redfish API</a></li><li class="level-4"><a href="#create-custom-live-rhcos-iso_install-single-node-openshift">Creating a custom live RHCOS ISO for remote server access</a></li><li class="level-4"><a href="#install-sno-with-ibm-z_install-single-node-openshift">Installing single-node OpenShift with IBM Z and IBM LinuxONE</a></li><li class="level-5"><a href="#installing-sno-on-ibm-z_install-single-node-openshift">Installing single-node OpenShift with z/VM on IBM Z and IBM LinuxONE</a></li><li class="level-5"><a href="#installing-sno-on-ibm-z-kvm_install-single-node-openshift">Installing single-node OpenShift with RHEL KVM on IBM Z and IBM LinuxONE</a></li><li class="level-5"><a href="#installing-sno-on-ibm-z-lpar_install-single-node-openshift">Installing single-node OpenShift in an LPAR on IBM Z and IBM LinuxONE</a></li><li class="level-4"><a href="#installing-sno-with-ibmpower_install-single-node-openshift">Installing single-node OpenShift with IBM Power</a></li><li class="level-5"><a href="#setting-up-bastion-for-sno_install-single-node-openshift">Setting up bastion for single-node OpenShift with IBM Power</a></li><li class="level-5"><a href="#installing-sno-on-ibm-power_install-single-node-openshift">Installing single-node OpenShift with IBM Power</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#install-sno-about-installing-on-a-single-node_prepare-to-install-single-node-openshift">Single-node OpenShift</a></li><li class="level-5"><a href="#install-sno-requirements-for-installing-on-a-single-node_prepare-to-install-single-node-openshift">Requirements for installing OpenShift on a single node</a></li><li class="level-4"><a href="#installing-sno-assisted-installer_prepare-to-install-single-node-openshift">Installing single-node OpenShift using the Assisted Installer</a></li><li class="level-5"><a href="#install-sno-generating-the-discovery-iso-with-the-assisted-installer_prepare-to-install-single-node-openshift">Generating the discovery ISO with the Assisted Installer</a></li><li class="level-5"><a href="#install-sno-installing-with-the-assisted-installer_prepare-to-install-single-node-openshift">Installing single-node OpenShift with the Assisted Installer</a></li><li class="level-4"><a href="#install-sno-installing-sno-manually_prepare-to-install-single-node-openshift">Installing single-node OpenShift manually</a></li><li class="level-4"><a href="#install-sno-installing-sno-okd-manually_prepare-to-install-single-node-openshift">Installing single-node OKD manually</a></li><li class="level-5"><a href="#generating-the-install-iso-manually_prepare-to-install-single-node-openshift">Generating the installation ISO with coreos-installer</a></li><li class="level-5"><a href="#install-sno-monitoring-the-installation-manually_prepare-to-install-single-node-openshift">Monitoring the cluster installation using openshift-install</a></li><li class="level-4"><a href="#install-sno-installing-sno-with-agent-based-installer_prepare-to-install-single-node-openshift">Installing single-node OpenShift with the Agent-based Installer</a></li><li class="level-5"><a href="#install-sno-installing-with-agent-based-installer_prepare-to-install-single-node-openshift">Installing single-node OpenShift with the Agent-based Installer on ARM architecture</a></li><li class="level-4"><a href="#additional-requirements-for-installing-sno-on-a-cloud-provider_prepare-to-install-single-node-openshift">Additional requirements for installing single-node OpenShift on a cloud provider</a></li><li class="level-4"><a href="#supported-cloud-providers-for-single-node-openshift_prepare-to-install-single-node-openshift">Supported cloud providers for single-node OpenShift</a></li><li class="level-4"><a href="#installing-sno-on-aws_prepare-to-install-single-node-openshift">Installing single-node OpenShift on AWS</a></li><li class="level-4"><a href="#installing-sno-on-azure_prepare-to-install-single-node-openshift">Installing single-node OpenShift on Azure</a></li><li class="level-4"><a href="#installing-sno-on-gcp_prepare-to-install-single-node-openshift">Installing single-node OpenShift on Google Cloud</a></li><li class="level-4"><a href="#installing-with-usb-media_prepare-to-install-single-node-openshift">Creating a bootable ISO image on a USB drive</a></li><li class="level-4"><a href="#install-booting-from-an-iso-over-http-redfish_prepare-to-install-single-node-openshift">Booting from an HTTP-hosted ISO image using the Redfish API</a></li><li class="level-4"><a href="#create-custom-live-rhcos-iso_prepare-to-install-single-node-openshift">Creating a custom live RHCOS ISO for remote server access</a></li><li class="level-4"><a href="#install-sno-with-ibm-z_prepare-to-install-single-node-openshift">Installing single-node OpenShift with IBM Z and IBM LinuxONE</a></li><li class="level-5"><a href="#installing-sno-on-ibm-z_prepare-to-install-single-node-openshift">Installing single-node OpenShift with z/VM on IBM Z and IBM LinuxONE</a></li><li class="level-5"><a href="#installing-sno-on-ibm-z-kvm_prepare-to-install-single-node-openshift">Installing single-node OpenShift with RHEL KVM on IBM Z and IBM LinuxONE</a></li><li class="level-5"><a href="#installing-sno-on-ibm-z-lpar_prepare-to-install-single-node-openshift">Installing single-node OpenShift in an LPAR on IBM Z and IBM LinuxONE</a></li><li class="level-4"><a href="#installing-sno-with-ibmpower_prepare-to-install-single-node-openshift">Installing single-node OpenShift with IBM Power</a></li><li class="level-5"><a href="#setting-up-bastion-for-sno_prepare-to-install-single-node-openshift">Setting up bastion for single-node OpenShift with IBM Power</a></li><li class="level-5"><a href="#installing-sno-on-ibm-power_prepare-to-install-single-node-openshift">Installing single-node OpenShift with IBM Power</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="install-single-node-openshift-intro_install-single-node-openshift">Install single-node OpenShift</h3>
 <div class="paragraph _abstract">
-<p>You can install single-node OKD using the Assisted Service or you can generate an installation ISO using <code>openshift-installer</code>. endif::openshift-origin[]</p>
+<p>You can install single-node OKD using the Assisted Service or you can generate an installation ISO using <code>openshift-installer</code>.</p>
 </div>
 <div class="sect3">
-<h4 id="installing-sno-assisted-installer_install-single-node-openshift">Installing single-node OpenShift using the Assisted Installer</h4>
+<h4 id="install-sno-about-installing-on-a-single-node_prepare-to-install-single-node-openshift">Single-node OpenShift</h4>
+<div class="paragraph _abstract">
+<p>You can create a single-node cluster with standard installation methods. Red&#160;Hat OpenShift Container Platform on a single node is a specialized installation that requires the creation of a special Ignition configuration file.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>After cluster installation, no configuration option exists to change a single-node cluster to a high availability (HA) cluster or a two-node cluster. The architecture topology you choose at installation time sets the architecture topology for the lifecycle of the cluster.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The primary use case is for edge computing workloads, including intermittent connectivity, portable clouds, and 5G radio access networks (RAN) close to a base station. The major tradeoff with an installation on a single node is the lack of high availability.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The use of OpenShiftSDN with single-node OpenShift is not supported. OVN-Kubernetes is the default network plugin for single-node OpenShift deployments.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="install-sno-requirements-for-installing-on-a-single-node_prepare-to-install-single-node-openshift">Requirements for installing OpenShift on a single node</h5>
+<div class="paragraph _abstract">
+<p>Installing Red&#160;Hat OpenShift Container Platform on a single node alleviates some of the requirements for high availability and large scale clusters. However, you must still address several requirements.</p>
+</div>
+<div class="paragraph">
+<p>The following requirements must be met:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Administration host:</strong> You must have a computer to prepare the ISO, to create the USB boot drive, and to monitor the installation.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For the <code>ppc64le</code> platform, the host should prepare the ISO, but does not need to create the USB boot drive. The ISO can be mounted to PowerVM directly.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>ISO is not required for IBM Z&#174; installations.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p><strong>CPU Architecture:</strong> Installing Red&#160;Hat OpenShift Container Platform on a single node supports <code>x86_64</code>, <code>arm64</code>,<code>ppc64le</code>, and <code>s390x</code> CPU architectures.</p>
+</li>
+<li>
+<p><strong>Supported platforms:</strong>
+Installing Red&#160;Hat OpenShift Container Platform on a single node is supported on bare metal and Certified third-party hypervisors. See "Certified Hypervisors and Guest Operating Systems" for more information. In most cases, you must specify the <code>platform.none: {}</code> parameter in the <code>install-config.yaml</code> configuration file. The following list shows the only exceptions and the corresponding parameter to specify in the <code>install-config.yaml</code> configuration file:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Amazon Web Services (AWS), where you use <code>platform=aws</code></p>
+</li>
+<li>
+<p>Google Cloud, where you use <code>platform=gcp</code></p>
+</li>
+<li>
+<p>Microsoft Azure, where you use <code>platform=azure</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Production-grade server:</strong> Installing Red&#160;Hat OpenShift Container Platform on a single node requires a server with sufficient resources to run Red&#160;Hat OpenShift Container Platform services and a production workload.</p>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 489. Minimum resource requirements</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Profile</th>
+<th class="tableblock halign-left valign-top">Compute</th>
+<th class="tableblock halign-left valign-top">Memory</th>
+<th class="tableblock halign-left valign-top">Storage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4 vCPUs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 GB of RAM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">120 GB</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Running single-node OpenShift on 4 vCPUs leaves very little "headroom" for user applications, and creates a high risk of resource contention and performance degradation.</p>
+</div>
+<div class="paragraph">
+<p>To ensure cluster stability at this threshold, you must take steps to minimize the total resource footprint of the cluster, such as limiting the amount of workloads running on the cluster or limiting cluster capabilities.
+For more information, see "Cluster capabilities".</p>
+</div>
+<div class="paragraph">
+<p>Otherwise, it is recommended to provide more compute resources to the cluster.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>One vCPU generally equals one physical core. However, if you enable simultaneous multithreading (SMT), or Hyper-Threading, each CPU thread counts as a vCPU.</p>
+</div>
+<div class="paragraph">
+<p>Adding Operators during the installation process might increase the minimum resource requirements.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The server must have a Baseboard Management Controller (BMC) when booting with virtual media.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>BMC is not supported on IBM Z&#174; and IBM Power&#174;.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p><strong>Networking:</strong> The server must have access to the internet or access to a local registry if it is not connected to a routable network. The server must have a DHCP reservation or a static IP address for the Kubernetes API, ingress route, and cluster node domain names. You must configure the DNS to resolve the IP address to each of the following fully qualified domain names (FQDN):</p>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 490. Required DNS records</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Usage</th>
+<th class="tableblock halign-left valign-top">FQDN</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kubernetes API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>api.&lt;cluster_name&gt;.&lt;base_domain&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add a DNS A/AAAA or CNAME record. This record must be resolvable by both clients external to the cluster and within the cluster.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>api-int.&lt;cluster_name&gt;.&lt;base_domain&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add a DNS A/AAAA or CNAME record when creating the ISO manually. This record must be resolvable by nodes within the cluster.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ingress route</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>*.apps.&lt;cluster_name&gt;.&lt;base_domain&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add a wildcard DNS A/AAAA or CNAME record that targets the node. This record must be resolvable by both clients external to the cluster and within the cluster.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Without persistent IP addresses, communications between the <code>apiserver</code> and <code>etcd</code> might fail.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="installing-sno-assisted-installer_prepare-to-install-single-node-openshift">Installing single-node OpenShift using the Assisted Installer</h4>
 <div class="paragraph _abstract">
 <p>To install Red&#160;Hat OpenShift Container Platform on a single node, use the web-based Assisted Installer wizard to guide you through the process and manage the installation.</p>
 </div>
@@ -1819,7 +2046,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>See "Installing Red&#160;Hat OpenShift Container Platform with the Assisted Installer" for details and configuration options.</p>
 </div>
 <div class="sect4">
-<h5 id="install-sno-generating-the-discovery-iso-with-the-assisted-installer_install-single-node-openshift">Generating the discovery ISO with the Assisted Installer</h5>
+<h5 id="install-sno-generating-the-discovery-iso-with-the-assisted-installer_prepare-to-install-single-node-openshift">Generating the discovery ISO with the Assisted Installer</h5>
 <div class="paragraph _abstract">
 <p>Installing Red&#160;Hat OpenShift Container Platform on a single node requires a discovery ISO, which the Assisted Installer can generate.</p>
 </div>
@@ -1892,7 +2119,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect4">
-<h5 id="install-sno-installing-with-the-assisted-installer_install-single-node-openshift">Installing single-node OpenShift with the Assisted Installer</h5>
+<h5 id="install-sno-installing-with-the-assisted-installer_prepare-to-install-single-node-openshift">Installing single-node OpenShift with the Assisted Installer</h5>
 <div class="paragraph _abstract">
 <p>Use the Assisted Installer to install the single-node cluster.</p>
 </div>
@@ -1933,18 +2160,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="install-sno-installing-sno-manually_install-single-node-openshift">Installing single-node OpenShift manually</h4>
+<h4 id="install-sno-installing-sno-manually_prepare-to-install-single-node-openshift">Installing single-node OpenShift manually</h4>
 <div class="paragraph _abstract">
 <p>To install Red&#160;Hat OpenShift Container Platform on a single node, first generate the installation ISO, and then boot the server from the ISO. You can monitor the installation using the <code>openshift-install</code> installation program.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="install-sno-installing-sno-okd-manually_install-single-node-openshift">Installing single-node OKD manually</h4>
+<h4 id="install-sno-installing-sno-okd-manually_prepare-to-install-single-node-openshift">Installing single-node OKD manually</h4>
 <div class="paragraph _abstract">
 <p>To install Red&#160;Hat OpenShift Container Platform on a single node, first generate the installation ISO, and then boot the server from the ISO. You can monitor the installation using the <code>openshift-install</code> installation program.</p>
 </div>
 <div class="sect4">
-<h5 id="generating-the-install-iso-manually_install-single-node-openshift">Generating the installation ISO with coreos-installer</h5>
+<h5 id="generating-the-install-iso-manually_prepare-to-install-single-node-openshift">Generating the installation ISO with coreos-installer</h5>
 <div class="paragraph _abstract">
 <p>You can install Red&#160;Hat OpenShift Container Platform on a single node by generating an installation ISO.</p>
 </div>
@@ -2185,7 +2412,7 @@ sshKey: |
 </div>
 </div>
 <div class="sect4">
-<h5 id="install-sno-monitoring-the-installation-manually_install-single-node-openshift">Monitoring the cluster installation using openshift-install</h5>
+<h5 id="install-sno-monitoring-the-installation-manually_prepare-to-install-single-node-openshift">Monitoring the cluster installation using openshift-install</h5>
 <div class="paragraph _abstract">
 <p>Use the <code>openshift-install</code> binary to monitor the progress of the single-node cluster installation.</p>
 </div>
@@ -2250,7 +2477,7 @@ control-plane.example.com    Ready    master,worker   10m     v1.36.3</code></pr
 </div>
 </div>
 <div class="sect3">
-<h4 id="install-sno-installing-sno-with-agent-based-installer_install-single-node-openshift">Installing single-node OpenShift with the Agent-based Installer</h4>
+<h4 id="install-sno-installing-sno-with-agent-based-installer_prepare-to-install-single-node-openshift">Installing single-node OpenShift with the Agent-based Installer</h4>
 <div class="paragraph _abstract">
 <p>You can use the Agent-based Installer to deploy single-node OpenShift on bare-metal servers running ARM (<code>aarch64</code>) architecture. The Agent-based Installer generates a self-contained bootable ISO image by using the Red&#160;Hat OpenShift Container Platform installer for offline and automated deployments.</p>
 </div>
@@ -2258,7 +2485,7 @@ control-plane.example.com    Ready    master,worker   10m     v1.36.3</code></pr
 <p>The following procedure describes how to create the required configuration files, generate the agent ISO image, and boot the target ARM server to install single-node OpenShift.</p>
 </div>
 <div class="sect4">
-<h5 id="install-sno-installing-with-agent-based-installer_install-single-node-openshift">Installing single-node OpenShift with the Agent-based Installer on ARM architecture</h5>
+<h5 id="install-sno-installing-with-agent-based-installer_prepare-to-install-single-node-openshift">Installing single-node OpenShift with the Agent-based Installer on ARM architecture</h5>
 <div class="paragraph _abstract">
 <p>You can use the Agent-based Installer to install single-node OpenShift on an <code>aarch64</code> (ARM) server. The Agent-based Installer generates a bootable ISO image that you use to boot the target machine and deploy the cluster.</p>
 </div>
@@ -2341,7 +2568,7 @@ sshKey: '&lt;ssh_pub_key&gt;'</code></pre>
 <p>The following table describes the required parameters:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 490. Required <code>install-config.yaml</code> parameters</caption>
+<caption class="title">Table 491. Required <code>install-config.yaml</code> parameters</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -2494,7 +2721,7 @@ INFO Access the OpenShift web-console here: https://console-openshift-console.ap
 </div>
 </div>
 <div class="sect3">
-<h4 id="additional-requirements-for-installing-sno-on-a-cloud-provider_install-single-node-openshift">Additional requirements for installing single-node OpenShift on a cloud provider</h4>
+<h4 id="additional-requirements-for-installing-sno-on-a-cloud-provider_prepare-to-install-single-node-openshift">Additional requirements for installing single-node OpenShift on a cloud provider</h4>
 <div class="paragraph _abstract">
 <p>Compared to installing a high-availability cluster, there are additional requirements for installing single-node OpenShift.</p>
 </div>
@@ -2541,7 +2768,7 @@ This makes the control plane node schedulable.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="supported-cloud-providers-for-single-node-openshift_install-single-node-openshift">Supported cloud providers for single-node OpenShift</h4>
+<h4 id="supported-cloud-providers-for-single-node-openshift_prepare-to-install-single-node-openshift">Supported cloud providers for single-node OpenShift</h4>
 <div class="paragraph _abstract">
 <p>You can install a single-node cluster on several supported cloud providers.</p>
 </div>
@@ -2549,7 +2776,7 @@ This makes the control plane node schedulable.</p>
 <p>The following table contains a list of supported cloud providers and CPU architectures.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 491. Supported cloud providers</caption>
+<caption class="title">Table 492. Supported cloud providers</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2577,25 +2804,25 @@ This makes the control plane node schedulable.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="installing-sno-on-aws_install-single-node-openshift">Installing single-node OpenShift on AWS</h4>
+<h4 id="installing-sno-on-aws_prepare-to-install-single-node-openshift">Installing single-node OpenShift on AWS</h4>
 <div class="paragraph _abstract">
 <p>Installing a single-node cluster on AWS requires installer-provisioned installation using the "Installing a cluster on AWS with customizations" procedure.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="installing-sno-on-azure_install-single-node-openshift">Installing single-node OpenShift on Azure</h4>
+<h4 id="installing-sno-on-azure_prepare-to-install-single-node-openshift">Installing single-node OpenShift on Azure</h4>
 <div class="paragraph _abstract">
 <p>Installing a single-node cluster on Azure requires installer-provisioned installation using the "Installing a cluster on Azure with customizations" procedure.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="installing-sno-on-gcp_install-single-node-openshift">Installing single-node OpenShift on Google Cloud</h4>
+<h4 id="installing-sno-on-gcp_prepare-to-install-single-node-openshift">Installing single-node OpenShift on Google Cloud</h4>
 <div class="paragraph _abstract">
 <p>Installing a single-node cluster on Google Cloud requires installer-provisioned installation using the "Installing a cluster on Google Cloud with customizations" procedure.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="installing-with-usb-media_install-single-node-openshift">Creating a bootable ISO image on a USB drive</h4>
+<h4 id="installing-with-usb-media_prepare-to-install-single-node-openshift">Creating a bootable ISO image on a USB drive</h4>
 <div class="paragraph _abstract">
 <p>You can install software using a bootable USB drive that contains an ISO image. Booting the server with the USB drive prepares the server for the software installation.</p>
 </div>
@@ -2639,7 +2866,7 @@ This makes the control plane node schedulable.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="install-booting-from-an-iso-over-http-redfish_install-single-node-openshift">Booting from an HTTP-hosted ISO image using the Redfish API</h4>
+<h4 id="install-booting-from-an-iso-over-http-redfish_prepare-to-install-single-node-openshift">Booting from an HTTP-hosted ISO image using the Redfish API</h4>
 <div class="paragraph _abstract">
 <p>You can provision hosts in your network using ISOs that you install using the Redfish Baseboard Management Controller (BMC) API.</p>
 </div>
@@ -2754,7 +2981,7 @@ This makes the control plane node schedulable.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="create-custom-live-rhcos-iso_install-single-node-openshift">Creating a custom live RHCOS ISO for remote server access</h4>
+<h4 id="create-custom-live-rhcos-iso_prepare-to-install-single-node-openshift">Creating a custom live RHCOS ISO for remote server access</h4>
 <div class="paragraph _abstract">
 <p>In some cases, you cannot attach an external disk drive to a server, however, you need to access the server remotely to provision a node.
 It is recommended to enable SSH access to the server.</p>
@@ -2853,7 +3080,7 @@ passwd:
 </div>
 </div>
 <div class="sect3">
-<h4 id="install-sno-with-ibm-z_install-single-node-openshift">Installing single-node OpenShift with IBM Z and IBM LinuxONE</h4>
+<h4 id="install-sno-with-ibm-z_prepare-to-install-single-node-openshift">Installing single-node OpenShift with IBM Z and IBM LinuxONE</h4>
 <div class="paragraph _abstract">
 <p>You can install a single-node OpenShift cluster with IBM Z and IBM LinuxONE by performing a user-provisioned installation.</p>
 </div>
@@ -2915,7 +3142,7 @@ passwd:
 </table>
 </div>
 <div class="sect4">
-<h5 id="installing-sno-on-ibm-z_install-single-node-openshift">Installing single-node OpenShift with z/VM on IBM Z and IBM LinuxONE</h5>
+<h5 id="installing-sno-on-ibm-z_prepare-to-install-single-node-openshift">Installing single-node OpenShift with z/VM on IBM Z and IBM LinuxONE</h5>
 <div class="paragraph _abstract">
 <p>You can install single-node OpenShift with z/VM on IBM Z and IBM LinuxONE.</p>
 </div>
@@ -3330,7 +3557,7 @@ ip=encbdd0:dhcp::02:00:00:02:34:02 rd.neednet=1'</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="installing-sno-on-ibm-z-kvm_install-single-node-openshift">Installing single-node OpenShift with RHEL KVM on IBM Z and IBM LinuxONE</h5>
+<h5 id="installing-sno-on-ibm-z-kvm_prepare-to-install-single-node-openshift">Installing single-node OpenShift with RHEL KVM on IBM Z and IBM LinuxONE</h5>
 <div class="paragraph _abstract">
 <p>You can install single-node OpenShift with with RHEL KVM on IBM Z and IBM LinuxONE.</p>
 </div>
@@ -3611,7 +3838,7 @@ sshKey: |
 </div>
 </div>
 <div class="sect4">
-<h5 id="installing-sno-on-ibm-z-lpar_install-single-node-openshift">Installing single-node OpenShift in an LPAR on IBM Z and IBM LinuxONE</h5>
+<h5 id="installing-sno-on-ibm-z-lpar_prepare-to-install-single-node-openshift">Installing single-node OpenShift in an LPAR on IBM Z and IBM LinuxONE</h5>
 <div class="paragraph _abstract">
 <p>You can install single-node OpenShift in an LPAR on IBM Z and IBM LinuxONE.</p>
 </div>
@@ -3973,7 +4200,7 @@ zfcp.allow_lun_scan=0</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="installing-sno-with-ibmpower_install-single-node-openshift">Installing single-node OpenShift with IBM Power</h4>
+<h4 id="installing-sno-with-ibmpower_prepare-to-install-single-node-openshift">Installing single-node OpenShift with IBM Power</h4>
 <div class="paragraph _abstract">
 <p>You can install a single-node OpenShift cluster with IBM Power by performing a user-provisioned installation.</p>
 </div>
@@ -4022,7 +4249,7 @@ zfcp.allow_lun_scan=0</code></pre>
 </table>
 </div>
 <div class="sect4">
-<h5 id="setting-up-bastion-for-sno_install-single-node-openshift">Setting up bastion for single-node OpenShift with IBM Power</h5>
+<h5 id="setting-up-bastion-for-sno_prepare-to-install-single-node-openshift">Setting up bastion for single-node OpenShift with IBM Power</h5>
 <div class="paragraph _abstract">
 <p>Before installing single-node OpenShift on IBM Power&#174;, you must set up bastion.</p>
 </div>
@@ -4293,7 +4520,7 @@ sshKey: |
 </div>
 </div>
 <div class="sect4">
-<h5 id="installing-sno-on-ibm-power_install-single-node-openshift">Installing single-node OpenShift with IBM Power</h5>
+<h5 id="installing-sno-on-ibm-power_prepare-to-install-single-node-openshift">Installing single-node OpenShift with IBM Power</h5>
 <div class="paragraph _abstract">
 <p>You can install single-node OpenShift with IBM Power.</p>
 </div>
@@ -4383,7 +4610,7 @@ sshKey: |
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="install-on-any-platform-upi-intro_install-on-any-platform-upi.html">Install on any platform with user-provisioned infrastructure</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="install-sno-about-installing-on-a-single-node_prepare-to-install-single-node-openshift.html">Single-node OpenShift</a> →</p>
+<p>← Previous: <a href="install-on-any-platform-upi-intro_install-on-any-platform-upi.html">Install on any platform with user-provisioned infrastructure</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="install-a-two-node-cluster-with-fencing-intro_install-a-two-node-cluster-with-fencing.html">Install a two-node cluster with fencing</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -4394,7 +4621,7 @@ sshKey: |
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 19:59:21 +0100
+Last updated 2026-10-15 20:22:23 +0100
 </div>
 </div>
 <style>

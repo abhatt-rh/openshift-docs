@@ -596,7 +596,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
-<li><a href="installation-overview_understand-openshift-installation-architecture.html">The Red&#160;Hat OpenShift Container Platform installation</a>
+<li><a href="installation-overview_understand-openshift-installation-architecture.html">Red&#160;Hat OpenShift Container Platform installation options</a>
 </li>
 <li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
 </li>
@@ -607,8 +607,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="installation-special-config-butane_customize-installation-configuration.html">Create machine configs with Butane</a>
 </li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
-</li>
-<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
 <li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
 </li>
@@ -642,8 +640,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-single-node-openshift-intro_install-single-node-openshift.html">Install single-node OpenShift</a>
 </li>
-<li><a href="install-sno-about-installing-on-a-single-node_prepare-to-install-single-node-openshift.html">Single-node OpenShift</a>
-</li>
 <li><a href="install-a-two-node-cluster-with-fencing-intro_install-a-two-node-cluster-with-fencing.html">Install a two-node cluster with fencing</a>
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
@@ -651,8 +647,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
-</li>
-<li><a href="understand-disconnected-environment-update-considerations-intro_understand-disconnected-environment-update-considerations.html">Mirror images for disconnected environment updates</a>
 </li>
 </ul>
 </li>
@@ -2853,7 +2847,7 @@ spec:
 <p>To customize the generation of performance profiles, review the arguments for the Performance Profile Creator.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 859. Required Performance Profile Creator arguments</caption>
+<caption class="title">Table 858. Required Performance Profile Creator arguments</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -2886,7 +2880,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 860. Optional Performance Profile Creator arguments</caption>
+<caption class="title">Table 859. Optional Performance Profile Creator arguments</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -5586,7 +5580,7 @@ On these nodes, use <code>hwlatdetect</code> and <code>oslat</code> for platform
 <p>The tests introduce the following environment variables:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 861. Latency test environment variables</caption>
+<caption class="title">Table 860. Latency test environment variables</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -6703,7 +6697,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 862. PerformanceProfile CR options for single-node OpenShift clusters</caption>
+<caption class="title">Table 861. PerformanceProfile CR options for single-node OpenShift clusters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6849,7 +6843,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 863. <code>Tuned</code> CR options for single-node OpenShift clusters</caption>
+<caption class="title">Table 862. <code>Tuned</code> CR options for single-node OpenShift clusters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7929,7 +7923,7 @@ spec:
 <p>To customize the generation of performance profiles, review the arguments for the Performance Profile Creator.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 864. Required Performance Profile Creator arguments</caption>
+<caption class="title">Table 863. Required Performance Profile Creator arguments</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -7962,7 +7956,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 865. Optional Performance Profile Creator arguments</caption>
+<caption class="title">Table 864. Optional Performance Profile Creator arguments</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -8234,7 +8228,7 @@ spec:
 <p>The following table describes the possible values set for the <code>power-consumption-mode</code> flag associated with the PPC tool and the workload hint that is applied.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 866. Impact of combinations of power consumption and real-time settings on latency</caption>
+<caption class="title">Table 865. Impact of combinations of power consumption and real-time settings on latency</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -9226,7 +9220,7 @@ All CPUs that are not isolated should be reserved.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 19:59:21 +0100
+Last updated 2026-10-15 20:22:23 +0100
 </div>
 </div>
 <style>

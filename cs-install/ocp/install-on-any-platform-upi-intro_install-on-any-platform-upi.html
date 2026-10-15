@@ -595,7 +595,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_install.html">Install</a>
 <ul class="sectlevel2">
-<li><a href="installation-overview_understand-openshift-installation-architecture.html">The Red&#160;Hat OpenShift Container Platform installation</a>
+<li><a href="installation-overview_understand-openshift-installation-architecture.html">Red&#160;Hat OpenShift Container Platform installation options</a>
 </li>
 <li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
 </li>
@@ -606,8 +606,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="installation-special-config-butane_customize-installation-configuration.html">Create machine configs with Butane</a>
 </li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
-</li>
-<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
 <li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
 </li>
@@ -641,8 +639,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-single-node-openshift-intro_install-single-node-openshift.html">Install single-node OpenShift</a>
 </li>
-<li><a href="install-sno-about-installing-on-a-single-node_prepare-to-install-single-node-openshift.html">Single-node OpenShift</a>
-</li>
 <li><a href="install-a-two-node-cluster-with-fencing-intro_install-a-two-node-cluster-with-fencing.html">Install a two-node cluster with fencing</a>
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
@@ -650,8 +646,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
-</li>
-<li><a href="understand-disconnected-environment-update-considerations-intro_understand-disconnected-environment-update-considerations.html">Mirror images for disconnected environment updates</a>
 </li>
 </ul>
 </li>
@@ -1910,7 +1904,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 481. Minimum required hosts</caption>
+<caption class="title">Table 480. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1964,7 +1958,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 482. Minimum resource requirements</caption>
+<caption class="title">Table 481. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -2144,7 +2138,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 483. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 482. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2476,7 +2470,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 484. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 483. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2525,7 +2519,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 485. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 484. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2632,7 +2626,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 486. Required DNS records</caption>
+<caption class="title">Table 485. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -3198,7 +3192,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 487. Application Ingress load balancer</caption>
+<caption class="title">Table 486. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -5980,7 +5974,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the subcommands, options, and arguments you can pass to the <code>coreos-installer</code> command.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 488. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
+<caption class="title">Table 487. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7267,7 +7261,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the RHCOS live installer <code>coreos.inst</code> boot options for ISO and PXE installations.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 489. <code>coreos.inst</code> boot options</caption>
+<caption class="title">Table 488. <code>coreos.inst</code> boot options</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8539,7 +8533,7 @@ openshift-authentication-operator authentication-operator-69d5d8bf84-vh2n8      
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 19:59:21 +0100
+Last updated 2026-10-15 20:22:23 +0100
 </div>
 </div>
 <style>

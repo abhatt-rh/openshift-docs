@@ -596,7 +596,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
-<li><a href="installation-overview_understand-openshift-installation-architecture.html">The Red&#160;Hat OpenShift Container Platform installation</a>
+<li><a href="installation-overview_understand-openshift-installation-architecture.html">Red&#160;Hat OpenShift Container Platform installation options</a>
 </li>
 <li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
 </li>
@@ -607,8 +607,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="installation-special-config-butane_customize-installation-configuration.html">Create machine configs with Butane</a>
 </li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
-</li>
-<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
 <li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
 </li>
@@ -642,8 +640,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-single-node-openshift-intro_install-single-node-openshift.html">Install single-node OpenShift</a>
 </li>
-<li><a href="install-sno-about-installing-on-a-single-node_prepare-to-install-single-node-openshift.html">Single-node OpenShift</a>
-</li>
 <li><a href="install-a-two-node-cluster-with-fencing-intro_install-a-two-node-cluster-with-fencing.html">Install a two-node cluster with fencing</a>
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
@@ -651,8 +647,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
-</li>
-<li><a href="understand-disconnected-environment-update-considerations-intro_understand-disconnected-environment-update-considerations.html">Mirror images for disconnected environment updates</a>
 </li>
 </ul>
 </li>
@@ -8182,7 +8176,7 @@ lvm-block-1-clone   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi     
 <p>The following table describes the <code>topolvm</code> metrics:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 756. <code>topolvm</code> metrics</caption>
+<caption class="title">Table 755. <code>topolvm</code> metrics</caption>
 <colgroup>
 <col>
 <col>
@@ -8244,7 +8238,7 @@ lvm-block-1-clone   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi     
 <p>LVM Storage sends the following alerts when the usage of the thin pool and volume group exceeds a certain value:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 757. LVM Storage alerts</caption>
+<caption class="title">Table 756. LVM Storage alerts</caption>
 <colgroup>
 <col>
 <col>
@@ -8977,7 +8971,7 @@ Red&#160;Hat OpenShift Container Platform supports the following persistent volu
 <p>The following table lists the access modes:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 758. Access modes</caption>
+<caption class="title">Table 757. Access modes</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9014,7 +9008,7 @@ Red&#160;Hat OpenShift Container Platform supports the following persistent volu
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 759. Supported access modes for persistent volumes</caption>
+<caption class="title">Table 758. Supported access modes for persistent volumes</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9226,7 +9220,7 @@ Red&#160;Hat OpenShift Container Platform supports the following persistent volu
 <p>Volumes can be found in one of the following phases:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 760. Volume phases</caption>
+<caption class="title">Table 759. Volume phases</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -9678,7 +9672,7 @@ volumeAttributesClassName: silver</code></pre>
 <p>The following table displays which volume plugins support block volumes.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 761. Block volume support</caption>
+<caption class="title">Table 760. Block volume support</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -9912,7 +9906,7 @@ spec:
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 762. Accepted values for <code>volumeMode</code></caption>
+<caption class="title">Table 761. Accepted values for <code>volumeMode</code></caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -9935,7 +9929,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 763. Binding scenarios for block volumes</caption>
+<caption class="title">Table 762. Binding scenarios for block volumes</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 33.3333%;">
@@ -10024,7 +10018,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 19:59:21 +0100
+Last updated 2026-10-15 20:22:23 +0100
 </div>
 </div>
 <style>

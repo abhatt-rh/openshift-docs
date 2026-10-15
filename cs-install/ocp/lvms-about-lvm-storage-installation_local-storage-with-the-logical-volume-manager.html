@@ -596,7 +596,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_install.html">Install</a>
 
 <ul class="sectlevel2">
-<li><a href="installation-overview_understand-openshift-installation-architecture.html">The Red&#160;Hat OpenShift Container Platform installation</a>
+<li><a href="installation-overview_understand-openshift-installation-architecture.html">Red&#160;Hat OpenShift Container Platform installation options</a>
 </li>
 <li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
 </li>
@@ -607,8 +607,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="installation-special-config-butane_customize-installation-configuration.html">Create machine configs with Butane</a>
 </li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
-</li>
-<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
 <li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
 </li>
@@ -642,8 +640,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-single-node-openshift-intro_install-single-node-openshift.html">Install single-node OpenShift</a>
 </li>
-<li><a href="install-sno-about-installing-on-a-single-node_prepare-to-install-single-node-openshift.html">Single-node OpenShift</a>
-</li>
 <li><a href="install-a-two-node-cluster-with-fencing-intro_install-a-two-node-cluster-with-fencing.html">Install a two-node cluster with fencing</a>
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
@@ -651,8 +647,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
-</li>
-<li><a href="understand-disconnected-environment-update-considerations-intro_understand-disconnected-environment-update-considerations.html">Mirror images for disconnected environment updates</a>
 </li>
 </ul>
 </li>
@@ -2430,7 +2424,7 @@ spec:
 <p>The cluster status reports the effective policy by using <code>DeviceDiscoveryPolicyStatus</code>, which distinguishes three runtime states:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 773. Effective policy status values</caption>
+<caption class="title">Table 772. Effective policy status values</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -2460,7 +2454,7 @@ spec:
 <p>The following table shows the behavior matrix:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 774. Device discovery behavior by configuration</caption>
+<caption class="title">Table 773. Device discovery behavior by configuration</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2514,7 +2508,7 @@ spec:
 <p>The discovery policy also controls whether the controller re-queues for periodic device scanning:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 775. Requeue behavior by configuration</caption>
+<caption class="title">Table 774. Requeue behavior by configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2574,7 +2568,7 @@ spec:
 <p>The following table shows how the device discovery policy feature interacts with other features:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 776. Device discovery policy feature interactions</caption>
+<caption class="title">Table 775. Device discovery policy feature interactions</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -2786,7 +2780,7 @@ spec:
 <p>The <code>LVMCluster</code> CR fields are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 777. <code>LVMCluster</code> CR fields</caption>
+<caption class="title">Table 776. <code>LVMCluster</code> CR fields</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3256,7 +3250,7 @@ You can modify this field after the LVM cluster has been created.</p>
 <p>The following tables describe the chunk size and volume size limits for static and host configurations:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 778. Tested configuration</caption>
+<caption class="title">Table 777. Tested configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3279,7 +3273,7 @@ You can modify this field after the LVM cluster has been created.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 779. Theoretical size limits for static configuration</caption>
+<caption class="title">Table 778. Theoretical size limits for static configuration</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3306,7 +3300,7 @@ You can modify this field after the LVM cluster has been created.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 780. Theoretical size limits for a host configuration</caption>
+<caption class="title">Table 779. Theoretical size limits for a host configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4897,7 +4891,7 @@ lvm-block-1   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi        RWO
 <p>If you set an empty configuration (storageClassOptions: {}) or omit the field entirely, the Operator uses the following default settings:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 781. StorageClass Options Reference</caption>
+<caption class="title">Table 780. StorageClass Options Reference</caption>
 <colgroup>
 <col style="width: 12.5%;">
 <col style="width: 12.5%;">
@@ -6537,7 +6531,7 @@ lvm-block-1-clone   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi     
 <p>The following table describes the <code>topolvm</code> metrics:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 782. <code>topolvm</code> metrics</caption>
+<caption class="title">Table 781. <code>topolvm</code> metrics</caption>
 <colgroup>
 <col>
 <col>
@@ -6599,7 +6593,7 @@ lvm-block-1-clone   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi     
 <p>LVM Storage sends the following alerts when the usage of the thin pool and volume group exceeds a certain value:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 783. LVM Storage alerts</caption>
+<caption class="title">Table 782. LVM Storage alerts</caption>
 <colgroup>
 <col>
 <col>
@@ -7172,7 +7166,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table describes the volume failure error messages:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 784. Volume failure error messages</caption>
+<caption class="title">Table 783. Volume failure error messages</caption>
 <colgroup>
 <col>
 <col>
@@ -7393,7 +7387,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares the support for storage types and filesystems provided by LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) to provision local storage:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 785. Comparison of the support for storage types and filesystems</caption>
+<caption class="title">Table 784. Comparison of the support for storage types and filesystems</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 23.8095%;">
@@ -7597,7 +7591,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares how LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) support core functionalities for provisioning local storage:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 786. Comparison of the support for core functionalities</caption>
+<caption class="title">Table 785. Comparison of the support for core functionalities</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 23.8095%;">
@@ -8063,7 +8057,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares the performance and isolation capabilities of LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) in provisioning local storage.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 787. Comparison of performance and isolation capabilities</caption>
+<caption class="title">Table 786. Comparison of performance and isolation capabilities</caption>
 <colgroup>
 <col style="width: 21.7391%;">
 <col style="width: 26.0869%;">
@@ -8204,7 +8198,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares the additional features provided by LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) to provision local storage:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 788. Comparison of the support for additional functionalities</caption>
+<caption class="title">Table 787. Comparison of the support for additional functionalities</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 23.8095%;">
@@ -8422,7 +8416,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 19:59:21 +0100
+Last updated 2026-10-15 20:22:23 +0100
 </div>
 </div>
 <style>

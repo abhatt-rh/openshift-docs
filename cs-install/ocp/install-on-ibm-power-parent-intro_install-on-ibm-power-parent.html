@@ -595,7 +595,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_install.html">Install</a>
 <ul class="sectlevel2">
-<li><a href="installation-overview_understand-openshift-installation-architecture.html">The Red&#160;Hat OpenShift Container Platform installation</a>
+<li><a href="installation-overview_understand-openshift-installation-architecture.html">Red&#160;Hat OpenShift Container Platform installation options</a>
 </li>
 <li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
 </li>
@@ -606,8 +606,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="installation-special-config-butane_customize-installation-configuration.html">Create machine configs with Butane</a>
 </li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
-</li>
-<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
 <li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
 </li>
@@ -641,8 +639,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-single-node-openshift-intro_install-single-node-openshift.html">Install single-node OpenShift</a>
 </li>
-<li><a href="install-sno-about-installing-on-a-single-node_prepare-to-install-single-node-openshift.html">Single-node OpenShift</a>
-</li>
 <li><a href="install-a-two-node-cluster-with-fencing-intro_install-a-two-node-cluster-with-fencing.html">Install a two-node cluster with fencing</a>
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
@@ -650,8 +646,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
-</li>
-<li><a href="understand-disconnected-environment-update-considerations-intro_understand-disconnected-environment-update-considerations.html">Mirror images for disconnected environment updates</a>
 </li>
 </ul>
 </li>
@@ -1859,7 +1853,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 449. Required parameters</caption>
+<caption class="title">Table 448. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2048,7 +2042,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 450. Network parameters</caption>
+<caption class="title">Table 449. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2311,7 +2305,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 451. Optional parameters</caption>
+<caption class="title">Table 450. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3023,7 +3017,7 @@ Supported values are <code>3</code>, or <code>1</code> when deploying single-nod
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 452. Minimum required hosts</caption>
+<caption class="title">Table 451. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3077,7 +3071,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 453. Minimum resource requirements</caption>
+<caption class="title">Table 452. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -3435,7 +3429,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 454. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 453. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -3767,7 +3761,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 455. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 454. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -3816,7 +3810,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 456. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 455. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -3923,7 +3917,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 457. Required DNS records</caption>
+<caption class="title">Table 456. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -4489,7 +4483,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 458. Application Ingress load balancer</caption>
+<caption class="title">Table 457. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -6008,7 +6002,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 459. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 458. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6161,7 +6155,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 460. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 459. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -6226,7 +6220,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 461. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 460. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6389,7 +6383,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 462. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 461. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6440,7 +6434,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 463. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 462. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6491,7 +6485,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 464. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 463. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6598,7 +6592,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-ibm-power" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 465. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 464. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6692,7 +6686,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-ibm-power" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 466. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 465. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6737,7 +6731,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-ibm-power" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 467. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 466. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6782,7 +6776,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-ibm-power" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 468. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 467. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9330,7 +9324,7 @@ Use "ccoctl [command] --help" for more information about a command.</code></pre>
 <div class="sect5">
 <h6 id="pre-requisite-permissions-ibm-cloud_installing-ibm-cloud-account-power-vs">Prerequisite permissions</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 469. Prerequisite permissions</caption>
+<caption class="title">Table 468. Prerequisite permissions</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -9364,7 +9358,7 @@ Use "ccoctl [command] --help" for more information about a command.</code></pre>
 <div class="sect5">
 <h6 id="cluster-creation-permissions-ibm-cloud_installing-ibm-cloud-account-power-vs">Cluster-creation permissions</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 470. Cluster-creation permissions</caption>
+<caption class="title">Table 469. Cluster-creation permissions</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -9742,7 +9736,7 @@ Use "ccoctl [command] --help" for more information about a command.</code></pre>
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 471. Required parameters</caption>
+<caption class="title">Table 470. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -9951,7 +9945,7 @@ Use "ccoctl [command] --help" for more information about a command.</code></pre>
 <p>Only IPv4 addresses are supported.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 472. Network parameters</caption>
+<caption class="title">Table 471. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -10208,7 +10202,7 @@ The default value is <code>OVNKubernetes</code>.</p>
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 473. Optional parameters</caption>
+<caption class="title">Table 472. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -12431,7 +12425,7 @@ INFO Time elapsed: 36m22s</code></pre>
 <p>DNS records pointing to a <code>LoadBalancer</code> service are required for installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the cluster base domain that you specify when you install the cluster. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 474. Required DNS records</caption>
+<caption class="title">Table 473. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 55.5555%;">
@@ -12551,7 +12545,7 @@ INFO Time elapsed: 36m22s</code></pre>
 <p>To support an Red&#160;Hat OpenShift Container Platform installation, it is recommended that your IBM PowerVC has room for the following resources available:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 475. Recommended resources for a default Red&#160;Hat OpenShift Container Platform cluster on IBM PowerVC</caption>
+<caption class="title">Table 474. Recommended resources for a default Red&#160;Hat OpenShift Container Platform cluster on IBM PowerVC</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -12735,7 +12729,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 476. Application Ingress load balancer</caption>
+<caption class="title">Table 475. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -13779,7 +13773,7 @@ cluster.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 19:59:21 +0100
+Last updated 2026-10-15 20:22:23 +0100
 </div>
 </div>
 <style>
