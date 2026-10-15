@@ -477,8 +477,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
 <body id="install-on-vsphere-intro_install-on-vsphere" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/ocp-jobs/add-and-remove-catalogs.adoc:5
+    include::modules/olmv1-about-catalogs.adoc[leveloffset=+0]
+    expected: maps/ocp/ocp-jobs/modules/olmv1-about-catalogs.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -601,8 +637,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
-<li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
-</li>
 <li><a href="install-on-bare-metal-intro_install-on-bare-metal.html">Install on bare metal</a>
 </li>
 <li><a href="install-with-agent-based-installer-intro_install-with-agent-based-installer.html">Install with Agent-based Installer</a>
@@ -637,7 +671,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
 </li>
-<li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
+<li><a href="rhcos-validate-live-media_validate-boot-artifacts.html">Validating RHCOS live media</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
 </li>
@@ -1491,8 +1525,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_extend.html">Extend</a>
 
 <ul class="sectlevel2">
-<li><a href="olmv1-about-catalogs_add-and-remove-catalogs.html">About catalogs in OLM v1</a>
-</li>
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
 <li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
@@ -1572,6 +1604,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_validate.html">Validate</a>
 
 <ul class="sectlevel2">
+<li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
+</li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
 </li>
 <li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
@@ -1903,7 +1937,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>You can host the VMware vSphere infrastructure on-premise or on a <a href="https://cloud.vmware.com/providers">VMware Cloud Verified provider</a> that meets the requirements outlined in the following tables:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 171. Version requirements for vSphere virtual environments</caption>
+<caption class="title">Table 164. Version requirements for vSphere virtual environments</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1944,7 +1978,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 172. Minimum supported vSphere version for VMware components</caption>
+<caption class="title">Table 165. Minimum supported vSphere version for VMware components</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -2045,7 +2079,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Review the following details about the required network ports.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 173. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 166. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2355,7 +2389,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 174. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 167. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2404,7 +2438,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 175. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 168. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2546,7 +2580,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 176. Roles and privileges required for installation in vSphere API</caption>
+<caption class="title">Table 169. Roles and privileges required for installation in vSphere API</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3045,7 +3079,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 177. Roles and privileges required for installation in vCenter graphical user interface (GUI)</caption>
+<caption class="title">Table 170. Roles and privileges required for installation in vCenter graphical user interface (GUI)</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 37.5%;">
@@ -3550,7 +3584,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>Additionally, the user requires some <code>ReadOnly</code> permissions, and some of the roles require permission to propagate the permissions to child objects. These settings vary depending on whether or not you install the cluster into an existing folder.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 178. Required permissions and propagation settings</caption>
+<caption class="title">Table 171. Required permissions and propagation settings</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3983,7 +4017,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following tables specify how the required vCenter account privileges provided earlier in this document are relevant to different aspects of Red&#160;Hat OpenShift Container Platform architecture.</p>
 </div>
 <table id="installation-vsphere-minimum-permissions-ipi_ipi-vsphere-installation-reqs" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 179. Minimum permissions on installer-provisioned infrastructure</caption>
+<caption class="title">Table 172. Minimum permissions on installer-provisioned infrastructure</caption>
 <colgroup>
 <col style="width: 36.3636%;">
 <col style="width: 36.3636%;">
@@ -4479,7 +4513,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table id="post-installation-vsphere-minimum-permissions_ipi-vsphere-installation-reqs" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 180. Minimum permissions for postinstallation management of components</caption>
+<caption class="title">Table 173. Minimum permissions for postinstallation management of components</caption>
 <colgroup>
 <col style="width: 36.3636%;">
 <col style="width: 36.3636%;">
@@ -4836,7 +4870,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table id="installation-vsphere-minimum-permissions-storage_ipi-vsphere-installation-reqs" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 181. Minimum permissions for the storage components</caption>
+<caption class="title">Table 174. Minimum permissions for the storage components</caption>
 <colgroup>
 <col style="width: 36.3636%;">
 <col style="width: 36.3636%;">
@@ -5123,7 +5157,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table id="post-installation-vsphere-minimum-machine-api_ipi-vsphere-installation-reqs" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 182. Minimum permissions for the Machine API</caption>
+<caption class="title">Table 175. Minimum permissions for the Machine API</caption>
 <colgroup>
 <col style="width: 36.3636%;">
 <col style="width: 36.3636%;">
@@ -5622,7 +5656,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>You must create DNS records for two static IP addresses in the appropriate DNS server for the vCenter instance that hosts your Red&#160;Hat OpenShift Container Platform cluster. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the cluster base domain that you specify when you install the cluster. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 183. Required DNS records</caption>
+<caption class="title">Table 176. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 55.5555%;">
@@ -5818,7 +5852,7 @@ platform:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 184. Minimum required hosts</caption>
+<caption class="title">Table 177. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5872,7 +5906,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 185. Minimum resource requirements</caption>
+<caption class="title">Table 178. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -6102,7 +6136,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 186. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 179. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -6434,7 +6468,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 187. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 180. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -6483,7 +6517,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 188. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 181. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -6581,7 +6615,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 189. Required DNS records</caption>
+<caption class="title">Table 182. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -7147,7 +7181,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 190. Application Ingress load balancer</caption>
+<caption class="title">Table 183. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -7360,7 +7394,7 @@ listen ingress-router-80
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 191. Required parameters</caption>
+<caption class="title">Table 184. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7563,7 +7597,7 @@ listen ingress-router-80
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 192. Network parameters</caption>
+<caption class="title">Table 185. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7839,7 +7873,7 @@ The prefix length for an IPv6 block is between <code>0</code> and <code>128</cod
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 193. Optional parameters</caption>
+<caption class="title">Table 186. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8438,7 +8472,7 @@ If you are installing on Google Cloud into a shared virtual private cloud (VPC),
 <p>Optional AWS configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 194. Optional AWS parameters</caption>
+<caption class="title">Table 187. Optional AWS parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -9321,7 +9355,7 @@ For more information about the support scope of Red Hat Technology Preview featu
 <p>Additional Google Cloud configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 195. Additional Google Cloud parameters</caption>
+<caption class="title">Table 188. Additional Google Cloud parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -10691,7 +10725,7 @@ For more information about the support scope of Red Hat Technology Preview featu
 <p>Additional VMware vSphere configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 196. Additional VMware vSphere cluster parameters</caption>
+<caption class="title">Table 189. Additional VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -11267,7 +11301,7 @@ If you do not specify a value, the installation program installs the resources i
 <p>The following table lists each deprecated vSphere configuration parameter:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 197. Deprecated VMware vSphere cluster parameters</caption>
+<caption class="title">Table 190. Deprecated VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -11514,7 +11548,7 @@ If you do not specify a value, the installation program installs the resources i
 <p>Optional VMware vSphere machine pool configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 198. Optional VMware vSphere machine pool parameters</caption>
+<caption class="title">Table 191. Optional VMware vSphere machine pool parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -14485,7 +14519,7 @@ spec:
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 199. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 192. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14638,7 +14672,7 @@ spec:
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 200. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 193. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -14703,7 +14737,7 @@ spec:
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 201. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 194. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14866,7 +14900,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 202. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 195. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14917,7 +14951,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 203. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 196. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14968,7 +15002,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 204. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 197. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15075,7 +15109,7 @@ spec:
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-vsphere-ipi-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 205. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 198. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15169,7 +15203,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-vsphere-ipi-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 206. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 199. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15214,7 +15248,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-vsphere-ipi-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 207. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 200. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15259,7 +15293,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-vsphere-ipi-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 208. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 201. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21354,7 +21388,7 @@ spec:
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 209. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 202. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21507,7 +21541,7 @@ spec:
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 210. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 203. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -21572,7 +21606,7 @@ spec:
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 211. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 204. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21735,7 +21769,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 212. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 205. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21786,7 +21820,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 213. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 206. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21837,7 +21871,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 214. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 207. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21944,7 +21978,7 @@ spec:
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-vsphere-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 215. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 208. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -22038,7 +22072,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-vsphere-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 216. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 209. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -22083,7 +22117,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-vsphere-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 217. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 210. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -22128,7 +22162,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-vsphere-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 218. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 211. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -30358,7 +30392,7 @@ I0108 08:32:28.480685       1 operator.go:271] CheckNodeProviderID:&lt;host_name
 <p>The following tables identify the configuration checks that the {operator-name} runs. Some checks verify the configuration of the cluster. Other checks verify the configuration of each node in the cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 219. Cluster configuration checks</caption>
+<caption class="title">Table 212. Cluster configuration checks</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -30467,7 +30501,7 @@ I0108 08:32:28.480685       1 operator.go:271] CheckNodeProviderID:&lt;host_name
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 220. Node configuration checks</caption>
+<caption class="title">Table 213. Node configuration checks</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -30581,7 +30615,7 @@ I0108 08:32:28.480685       1 operator.go:271] CheckNodeProviderID:&lt;host_name
 <p>The {operator-name} exposes the following metrics for use by the Red&#160;Hat OpenShift Container Platform monitoring stack.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 221. Metrics exposed by the {operator-name}</caption>
+<caption class="title">Table 214. Metrics exposed by the {operator-name}</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -30764,7 +30798,7 @@ I0108 08:32:28.480685       1 operator.go:271] CheckNodeProviderID:&lt;host_name
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 20:28:25 +0100
+Last updated 2026-10-15 21:04:57 +0100
 </div>
 </div>
 <style>

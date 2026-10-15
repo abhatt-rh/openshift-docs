@@ -477,8 +477,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
 <body id="configure-high-performance-networking-con_configure-high-performance-networking" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/ocp-jobs/add-and-remove-catalogs.adoc:5
+    include::modules/olmv1-about-catalogs.adoc[leveloffset=+0]
+    expected: maps/ocp/ocp-jobs/modules/olmv1-about-catalogs.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -602,8 +638,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
-<li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
-</li>
 <li><a href="install-on-bare-metal-intro_install-on-bare-metal.html">Install on bare metal</a>
 </li>
 <li><a href="install-with-agent-based-installer-intro_install-with-agent-based-installer.html">Install with Agent-based Installer</a>
@@ -638,7 +672,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
 </li>
-<li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
+<li><a href="rhcos-validate-live-media_validate-boot-artifacts.html">Validating RHCOS live media</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
 </li>
@@ -1491,8 +1525,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_extend.html">Extend</a>
 
 <ul class="sectlevel2">
-<li><a href="olmv1-about-catalogs_add-and-remove-catalogs.html">About catalogs in OLM v1</a>
-</li>
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
 <li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
@@ -1572,6 +1604,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_validate.html">Validate</a>
 
 <ul class="sectlevel2">
+<li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
+</li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
 </li>
 <li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
@@ -1846,7 +1880,7 @@ Hardware offloading is not compatible with DPDK applications.</p>
 <p>Hardware offloading is supported on the following network interface controllers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 708. Supported network interface controllers</caption>
+<caption class="title">Table 701. Supported network interface controllers</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -2538,7 +2572,7 @@ metadata:
 <p>The following table describes the currently supported DPU devices.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 709. Supported devices</caption>
+<caption class="title">Table 702. Supported devices</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3708,7 +3742,7 @@ spec:
 <div class="content">
 <img src="data:image/png;base64," alt="DPDK and TAP plugin">
 </div>
-<div class="title">Figure 92. DPDK and TAP example configuration</div>
+<div class="title">Figure 91. DPDK and TAP example configuration</div>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -7303,7 +7337,7 @@ spec:
 <p>The following table describes the configuration for static IP address assignment:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 710. <code>ipam</code> static configuration object</caption>
+<caption class="title">Table 703. <code>ipam</code> static configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7343,7 +7377,7 @@ spec:
 <p>The <code>addresses</code> array requires objects with the following fields:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 711. <code>ipam.addresses[]</code> array</caption>
+<caption class="title">Table 704. <code>ipam.addresses[]</code> array</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7370,7 +7404,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 712. <code>ipam.routes[]</code> array</caption>
+<caption class="title">Table 705. <code>ipam.routes[]</code> array</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7397,7 +7431,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 713. <code>ipam.dns</code> object</caption>
+<caption class="title">Table 706. <code>ipam.dns</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7517,7 +7551,7 @@ spec:
 <p>The following table describes the configuration objects for dynamic IP address assignment with Whereabouts:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 714. <code>ipam</code> whereabouts configuration parameters</caption>
+<caption class="title">Table 707. <code>ipam</code> whereabouts configuration parameters</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10447,7 +10481,7 @@ link/ether 9e:23:69:42:fb:8a brd ff:ff:ff:ff:ff:ff</code></pre>
 <p>The fields for the Ingress Node Firewall configuration object are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 715. Ingress Node Firewall Configuration object</caption>
+<caption class="title">Table 708. Ingress Node Firewall Configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10614,7 +10648,7 @@ EOF</code></pre>
 <p>The fields for the Ingress Node Firewall rules object are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 716. Ingress Node Firewall rules object</caption>
+<caption class="title">Table 709. Ingress Node Firewall rules object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10693,7 +10727,7 @@ EOF</code></pre>
 <p>The values for the <code>ingress</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 717. <code>ingress</code> object</caption>
+<caption class="title">Table 710. <code>ingress</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -11083,7 +11117,7 @@ ingress-node-firewall-daemon-pqx56         3/3    Running        0         5d21h
 <p>The following table describes the currently supported DPU devices.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 718. Supported devices</caption>
+<caption class="title">Table 711. Supported devices</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -12090,7 +12124,7 @@ Hardware offloading is not compatible with DPDK applications.</p>
 <p>Hardware offloading is supported on the following network interface controllers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 719. Supported network interface controllers</caption>
+<caption class="title">Table 712. Supported network interface controllers</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -13051,7 +13085,7 @@ metadata:
 <p>Three nodes form the control plane of the management cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 720. Control plane node requirements</caption>
+<caption class="title">Table 713. Control plane node requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -13096,7 +13130,7 @@ metadata:
 <p>Two physical x86 servers host the NVIDIA BlueField-3 DPUs and act as worker nodes for the management cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 721. Worker node requirements</caption>
+<caption class="title">Table 714. Worker node requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -13151,7 +13185,7 @@ metadata:
 <p>One NVIDIA BlueField-3 DPU is required per worker node.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 722. BlueField-3 DPU requirements</caption>
+<caption class="title">Table 715. BlueField-3 DPU requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -13253,7 +13287,7 @@ metadata:
 <p>A DPF v26.4.1 deployment requires specific versions of Red&#160;Hat OpenShift Container Platform, the OpenShift CLI (<code>oc</code>), hosted control planes, the NVIDIA DPF Operator, and RHCOS BFB, plus <code>cluster-admin</code> privileges on the management cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 723. Software version requirements</caption>
+<caption class="title">Table 716. Software version requirements</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -13300,7 +13334,7 @@ metadata:
 <p>The base BFB is layered with the NVIDIA DOCA stack at provisioning time, and the DOCA services run on the DPUs as separately deployed <code>DPUService</code> resources. The following versions are pinned by this deployment:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 724. NVIDIA DOCA component versions</caption>
+<caption class="title">Table 717. NVIDIA DOCA component versions</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -14519,7 +14553,7 @@ In current multicluster engine Operator versions the component is named <code>hy
 The values of these variables are used in multiple DPF Operator installation and configuration procedures.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 725. DPF Operator environment variables</caption>
+<caption class="title">Table 718. DPF Operator environment variables</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15051,7 +15085,7 @@ The <code>DPUFlavor</code> also supports an optional <code>configFiles</code> fi
 <p>The <code>nvconfig</code> section contains BlueField-3 firmware parameters that the DPU agent applies by using <code>mlxconfig</code> during provisioning. If any parameter differs from the current firmware configuration, the provisioning controller triggers a system-level reset so that the changes take effect. The following parameters are required for DPF operation:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 726. Required BlueField-3 NVConfig parameters</caption>
+<caption class="title">Table 719. Required BlueField-3 NVConfig parameters</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -16580,7 +16614,7 @@ spec:
 These environment variables must be set before you create secrets, the <code>DPUCluster</code> resource, or the <code>DPFHCPProvisioner</code> resource.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 727. Hosted cluster provisioning environment variables</caption>
+<caption class="title">Table 720. Hosted cluster provisioning environment variables</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -18947,7 +18981,7 @@ Grafana is not required for basic metric viewing.</p>
 <p>You should get one series per DPU. Hover over a line to see its labels. Note the <code>source</code> label, which is the DPU node name that identifies each DPU.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 728. DTS <code>PromQL</code> queries</caption>
+<caption class="title">Table 721. DTS <code>PromQL</code> queries</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -19020,7 +19054,7 @@ Adjust the time range by using the <strong>time-range</strong> control on the da
 These dashboards are loaded into Grafana automatically through <code>GrafanaDashboard</code> resources created from <code>ConfigMaps</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 729. DPF framework dashboards</caption>
+<caption class="title">Table 722. DPF framework dashboards</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -20926,7 +20960,7 @@ In the debug shell, run:</p>
 <p>The following table lists the support and hardware offload status of OVN-Kubernetes features in this release.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 730. OVN-Kubernetes feature support and offload status</caption>
+<caption class="title">Table 723. OVN-Kubernetes feature support and offload status</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 25%;">
@@ -21100,7 +21134,7 @@ Access the Prometheus web console and go to <strong>Status</strong> &#8594; <str
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 20:28:25 +0100
+Last updated 2026-10-15 21:04:57 +0100
 </div>
 </div>
 <style>

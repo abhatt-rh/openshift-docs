@@ -477,8 +477,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
 <body id="install-on-ibm-z-intro_install-on-ibm-z" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/ocp-jobs/add-and-remove-catalogs.adoc:5
+    include::modules/olmv1-about-catalogs.adoc[leveloffset=+0]
+    expected: maps/ocp/ocp-jobs/modules/olmv1-about-catalogs.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -601,8 +637,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
-<li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
-</li>
 <li><a href="install-on-bare-metal-intro_install-on-bare-metal.html">Install on bare metal</a>
 </li>
 <li><a href="install-with-agent-based-installer-intro_install-with-agent-based-installer.html">Install with Agent-based Installer</a>
@@ -637,7 +671,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
 </li>
-<li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
+<li><a href="rhcos-validate-live-media_validate-boot-artifacts.html">Validating RHCOS live media</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
 </li>
@@ -1491,8 +1525,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_extend.html">Extend</a>
 
 <ul class="sectlevel2">
-<li><a href="olmv1-about-catalogs_add-and-remove-catalogs.html">About catalogs in OLM v1</a>
-</li>
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
 <li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
@@ -1572,6 +1604,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_validate.html">Validate</a>
 
 <ul class="sectlevel2">
+<li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
+</li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
 </li>
 <li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
@@ -1825,7 +1859,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 401. IBM Z&#174; installation options</caption>
+<caption class="title">Table 394. IBM Z&#174; installation options</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 12.5%;">
@@ -1956,7 +1990,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 402. Minimum required hosts</caption>
+<caption class="title">Table 395. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2009,7 +2043,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 403. Minimum resource requirements</caption>
+<caption class="title">Table 396. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -2115,7 +2149,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To install Red&#160;Hat OpenShift Container Platform on IBM Z&#174; or IBM&#174; LinuxONE, your environment must meet minimum hardware, operating system, network, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 404. Supported IBM&#174; hardware</caption>
+<caption class="title">Table 397. Supported IBM&#174; hardware</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2244,7 +2278,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <div class="sect6">
 <h7 id="ibm-z-operating-system-requirements_prepare-to-install-on-ibm-z">IBM Z operating system requirements</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 405. Operating system requirements</caption>
+<caption class="title">Table 398. Operating system requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2290,7 +2324,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <div class="sect6">
 <h7 id="ibm-z-network-connectivity_prepare-to-install-on-ibm-z">IBM Z network connectivity</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 406. Network connectivity requirements</caption>
+<caption class="title">Table 399. Network connectivity requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2332,7 +2366,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <div class="sect6">
 <h7 id="ibm-z-disk-storage_prepare-to-install-on-ibm-z">Disk storage</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 407. Disk storage requirements</caption>
+<caption class="title">Table 400. Disk storage requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2414,7 +2448,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <div class="sect6">
 <h7 id="preferred-ibm-z-operating-system-requirements_prepare-to-install-on-ibm-z">IBM Z operating system requirements</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 408. Operating system requirements</caption>
+<caption class="title">Table 401. Operating system requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2546,7 +2580,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 409. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 402. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2878,7 +2912,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 410. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 403. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2927,7 +2961,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 411. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 404. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -3034,7 +3068,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 412. Required DNS records</caption>
+<caption class="title">Table 405. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -3600,7 +3634,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 413. Application Ingress load balancer</caption>
+<caption class="title">Table 406. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -4367,7 +4401,7 @@ However, you must have an active subscription to access this page.</p>
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 414. Required parameters</caption>
+<caption class="title">Table 407. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4556,7 +4590,7 @@ However, you must have an active subscription to access this page.</p>
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 415. Network parameters</caption>
+<caption class="title">Table 408. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4819,7 +4853,7 @@ However, you must have an active subscription to access this page.</p>
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 416. Optional parameters</caption>
+<caption class="title">Table 409. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6281,7 +6315,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 417. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 410. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6434,7 +6468,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 418. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 411. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -6499,7 +6533,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 419. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 412. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6662,7 +6696,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 420. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 413. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6713,7 +6747,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 421. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 414. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6764,7 +6798,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 422. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 415. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6871,7 +6905,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-ibm-z-z-vm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 423. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 416. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6965,7 +6999,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-ibm-z-z-vm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 424. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 417. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7010,7 +7044,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-ibm-z-z-vm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 425. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 418. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7055,7 +7089,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-ibm-z-z-vm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 426. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 419. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10050,7 +10084,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 427. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 420. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10203,7 +10237,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 428. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 421. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -10268,7 +10302,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 429. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 422. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10431,7 +10465,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 430. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 423. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10482,7 +10516,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 431. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 424. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10533,7 +10567,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 432. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 425. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10640,7 +10674,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 433. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 426. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10734,7 +10768,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 434. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 427. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10779,7 +10813,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 435. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 428. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10824,7 +10858,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 436. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 429. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13877,7 +13911,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 437. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 430. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14030,7 +14064,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 438. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 431. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -14095,7 +14129,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 439. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 432. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14258,7 +14292,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 440. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 433. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14309,7 +14343,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 441. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 434. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14360,7 +14394,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 442. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 435. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14467,7 +14501,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 443. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 436. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14561,7 +14595,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 444. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 437. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14606,7 +14640,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 445. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 438. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14651,7 +14685,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 446. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 439. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -17314,7 +17348,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 20:28:25 +0100
+Last updated 2026-10-15 21:04:57 +0100
 </div>
 </div>
 <style>

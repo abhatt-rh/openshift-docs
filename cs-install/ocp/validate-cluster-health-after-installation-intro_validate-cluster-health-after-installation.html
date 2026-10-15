@@ -477,8 +477,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
-<body id="validate-an-installation-intro_validate-an-installation" class="book toc2 toc-left navmap-has-right-toc">
+<body id="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/ocp-jobs/add-and-remove-catalogs.adoc:5
+    include::modules/olmv1-about-catalogs.adoc[leveloffset=+0]
+    expected: maps/ocp/ocp-jobs/modules/olmv1-about-catalogs.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -594,14 +630,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_install.html">Install</a>
+
 <ul class="sectlevel2">
 <li><a href="installation-overview_understand-openshift-installation-architecture.html">Red&#160;Hat OpenShift Container Platform installation options</a>
 </li>
 <li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
 </li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
-</li>
-<li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
 </li>
 <li><a href="install-on-bare-metal-intro_install-on-bare-metal.html">Install on bare metal</a>
 </li>
@@ -637,7 +672,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
 </li>
-<li><a href="validate-an-installation-intro_validate-an-installation.html"><span class="toc-current">Validate an installation</span></a>
+<li><a href="rhcos-validate-live-media_validate-boot-artifacts.html">Validating RHCOS live media</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
 </li>
@@ -1491,8 +1526,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_extend.html">Extend</a>
 
 <ul class="sectlevel2">
-<li><a href="olmv1-about-catalogs_add-and-remove-catalogs.html">About catalogs in OLM v1</a>
-</li>
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
 <li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
@@ -1570,8 +1603,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_validate.html">Validate</a>
-
 <ul class="sectlevel2">
+<li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html"><span class="toc-current">Validate cluster health after installation</span></a>
+</li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
 </li>
 <li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
@@ -1791,54 +1825,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#rhcos-validate-live-media_validate-an-installation">Validating RHCOS live media</a></li><li class="level-4"><a href="#reviewing-the-installation-log_validate-an-installation">Reviewing the installation log</a></li><li class="level-4"><a href="#viewing-the-image-pull-source_validate-an-installation">Viewing the image pull source</a></li><li class="level-4"><a href="#getting-cluster-version-and-update-details_validate-an-installation">Getting cluster version, status, and update details</a></li><li class="level-4"><a href="#cco-ccoctl-install-verifying_validate-an-installation">Verifying that a cluster uses short-term credentials</a></li><li class="level-4"><a href="#querying-the-status-of-cluster-nodes-using-the-cli_validate-an-installation">Querying the status of the cluster nodes by using the CLI</a></li><li class="level-4"><a href="#reviewing-cluster-status-from-the-openshift-web-console_validate-an-installation">Reviewing the cluster status from the Red Hat OpenShift Container Platform web console</a></li><li class="level-4"><a href="#reviewing-cluster-status-from-the-openshift-cluster-manager_validate-an-installation">Reviewing the cluster status from Red Hat OpenShift Cluster Manager</a></li><li class="level-4"><a href="#checking-cluster-resource-availability-and-utilization_validate-an-installation">Checking cluster resource availability and utilization</a></li><li class="level-4"><a href="#listing-alerts-that-are-firing_validate-an-installation">Listing alerts that are firing</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#reviewing-the-installation-log_validate-cluster-health-after-installation">Reviewing the installation log</a></li><li class="level-4"><a href="#viewing-the-image-pull-source_validate-cluster-health-after-installation">Viewing the image pull source</a></li><li class="level-4"><a href="#getting-cluster-version-and-update-details_validate-cluster-health-after-installation">Getting cluster version, status, and update details</a></li><li class="level-4"><a href="#cco-ccoctl-install-verifying_validate-cluster-health-after-installation">Verifying that a cluster uses short-term credentials</a></li><li class="level-4"><a href="#querying-the-status-of-cluster-nodes-using-the-cli_validate-cluster-health-after-installation">Querying the status of the cluster nodes by using the CLI</a></li><li class="level-4"><a href="#reviewing-cluster-status-from-the-openshift-web-console_validate-cluster-health-after-installation">Reviewing the cluster status from the Red Hat OpenShift Container Platform web console</a></li><li class="level-4"><a href="#reviewing-cluster-status-from-the-openshift-cluster-manager_validate-cluster-health-after-installation">Reviewing the cluster status from Red Hat OpenShift Cluster Manager</a></li><li class="level-4"><a href="#checking-cluster-resource-availability-and-utilization_validate-cluster-health-after-installation">Checking cluster resource availability and utilization</a></li><li class="level-4"><a href="#listing-alerts-that-are-firing_validate-cluster-health-after-installation">Listing alerts that are firing</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="validate-an-installation-intro_validate-an-installation">Validate an installation</h3>
+<h3 id="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation">Validate cluster health after installation</h3>
 <div class="paragraph _abstract">
-<p>You can check the status of an Red&#160;Hat OpenShift Container Platform cluster after an installation or validate boot artifacts before an installation.</p>
+<p>After you install an Red&#160;Hat OpenShift Container Platform cluster, you can verify that the cluster is operating correctly by reviewing installation logs, checking cluster version and node status, confirming resource availability, and reviewing active alerts.</p>
 </div>
 <div class="sect3">
-<h4 id="rhcos-validate-live-media_validate-an-installation">Validating RHCOS live media</h4>
-<div class="paragraph _abstract">
-<p>For user-provisioned infrastructure installations, you can access information and use the Red&#160;Hat OpenShift Container Platform installer to indirectly validate RHCOS bootimage artifacts using their SHA-256 checksums.</p>
-</div>
-<div class="paragraph">
-<p>The Red&#160;Hat OpenShift Container Platform installation program contains pinned versions of RHCOS bootimages. Fully automated installations use these pinned artifacts by default. The mirror registry where you downloaded the installation program contains a <code>sha256sum</code> encrypted with the Red&#160;Hat product key.</p>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>Run the following command to print the metadata for any bootimage artifact:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ openshift-install coreos print-stream-json | jq &lt;bootimage&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="paragraph">
-<p><code>&lt;bootimage&gt;</code>: Specifies the query for the bootimage you want to obtain information on. For validation purposes, the bootimage artifact must have a generated <code>sha256sum</code>. This can include OVA, VHD, QCOW2, and others. For example, to get information on an <code>x86_64</code> architecture <code>iso</code> file for bare metal platforms, use <code>.architectures.x86_64.artifacts.metal.formats.iso</code>.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">{
-  "disk": {
-    "location": "&lt;url&gt;/art/storage/prod/streams/&lt;release&gt;/builds/rhcos-&lt;release&gt;-live.&lt;architecture&gt;.&lt;artifact&gt;",
-    "sha256": "abc2add9746eb7be82e6919ec13aad8e9eae8cf073d8da6126d7c95ea0dee962"
-  }
-}</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="reviewing-the-installation-log_validate-an-installation">Reviewing the installation log</h4>
+<h4 id="reviewing-the-installation-log_validate-cluster-health-after-installation">Reviewing the installation log</h4>
 <div class="paragraph _abstract">
 <p>The Red&#160;Hat OpenShift Container Platform installation log contains a summary of the installation, including the information required to access the cluster after installation.</p>
 </div>
@@ -1883,7 +1878,7 @@ time="2020-12-03T09:50:47Z" level=info msg="Time elapsed: 37m26s"</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="viewing-the-image-pull-source_validate-an-installation">Viewing the image pull source</h4>
+<h4 id="viewing-the-image-pull-source_validate-cluster-health-after-installation">Viewing the image pull source</h4>
 <div class="paragraph _abstract">
 <p>For clusters with unrestricted network connectivity, you can view the source of your pulled images by using a command on a node, such as <code>crictl images</code>.</p>
 </div>
@@ -1938,7 +1933,7 @@ Trying to access \"li0317gcp2.mirror-registry.qe.gcp.devcluster.openshift.com:50
 </div>
 </div>
 <div class="sect3">
-<h4 id="getting-cluster-version-and-update-details_validate-an-installation">Getting cluster version, status, and update details</h4>
+<h4 id="getting-cluster-version-and-update-details_validate-cluster-health-after-installation">Getting cluster version, status, and update details</h4>
 <div class="paragraph _abstract">
 <p>You can view the cluster version and status by running the <code>oc get clusterversion</code> command. If the status shows that the installation is still progressing, you can review the status of the Operators for more information.</p>
 </div>
@@ -2030,7 +2025,7 @@ VERSION IMAGE
 </div>
 </div>
 <div class="sect3">
-<h4 id="cco-ccoctl-install-verifying_validate-an-installation">Verifying that a cluster uses short-term credentials</h4>
+<h4 id="cco-ccoctl-install-verifying_validate-cluster-health-after-installation">Verifying that a cluster uses short-term credentials</h4>
 <div class="paragraph _abstract">
 <p>You can verify that a cluster uses short-term security credentials for individual components by checking the Cloud Credential Operator (CCO) configuration and other values in the cluster.</p>
 </div>
@@ -2164,7 +2159,7 @@ pod-identity-webhook-548f977b4c-859lz        1/1     Running   1          70m</c
 </div>
 </div>
 <div class="sect3">
-<h4 id="querying-the-status-of-cluster-nodes-using-the-cli_validate-an-installation">Querying the status of the cluster nodes by using the CLI</h4>
+<h4 id="querying-the-status-of-cluster-nodes-using-the-cli_validate-cluster-health-after-installation">Querying the status of the cluster nodes by using the CLI</h4>
 <div class="paragraph _abstract">
 <p>You can verify the status of the cluster nodes after an installation.</p>
 </div>
@@ -2229,7 +2224,7 @@ control-plane-3.example.com   942m         26%    4100Mi          27%</code></pr
 </div>
 </div>
 <div class="sect3">
-<h4 id="reviewing-cluster-status-from-the-openshift-web-console_validate-an-installation">Reviewing the cluster status from the Red&#160;Hat OpenShift Container Platform web console</h4>
+<h4 id="reviewing-cluster-status-from-the-openshift-web-console_validate-cluster-health-after-installation">Reviewing the cluster status from the Red&#160;Hat OpenShift Container Platform web console</h4>
 <div class="paragraph _abstract">
 <p>You can view specific information in the <strong>Overview</strong> page in the Red&#160;Hat OpenShift Container Platform web console.</p>
 </div>
@@ -2282,7 +2277,7 @@ control-plane-3.example.com   942m         26%    4100Mi          27%</code></pr
 </div>
 </div>
 <div class="sect3">
-<h4 id="reviewing-cluster-status-from-the-openshift-cluster-manager_validate-an-installation">Reviewing the cluster status from Red Hat OpenShift Cluster Manager</h4>
+<h4 id="reviewing-cluster-status-from-the-openshift-cluster-manager_validate-cluster-health-after-installation">Reviewing the cluster status from Red Hat OpenShift Cluster Manager</h4>
 <div class="paragraph _abstract">
 <p>From the Red&#160;Hat OpenShift Container Platform web console, you can review detailed information about the status of your cluster on OpenShift Cluster Manager.</p>
 </div>
@@ -2381,7 +2376,7 @@ control-plane-3.example.com   942m         26%    4100Mi          27%</code></pr
 </div>
 </div>
 <div class="sect3">
-<h4 id="checking-cluster-resource-availability-and-utilization_validate-an-installation">Checking cluster resource availability and utilization</h4>
+<h4 id="checking-cluster-resource-availability-and-utilization_validate-cluster-health-after-installation">Checking cluster resource availability and utilization</h4>
 <div class="paragraph _abstract">
 <p>Red&#160;Hat OpenShift Container Platform provides a comprehensive set of monitoring dashboards that you can analyze to better understand the state of cluster components.</p>
 </div>
@@ -2411,7 +2406,7 @@ control-plane-3.example.com   942m         26%    4100Mi          27%</code></pr
 <div class="content">
 <img src="data:image/png;base64," alt="Screenshot of the Red&#160;Hat OpenShift Container Platform monitoring dashboard showing compute resources including CPU usage" width="memory consumption" height="and pod metrics with time-series graphs">
 </div>
-<div class="title">Figure 54. Example compute resources dashboard</div>
+<div class="title">Figure 112. Example compute resources dashboard</div>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -2463,7 +2458,7 @@ control-plane-3.example.com   942m         26%    4100Mi          27%</code></pr
 </div>
 </div>
 <div class="sect3">
-<h4 id="listing-alerts-that-are-firing_validate-an-installation">Listing alerts that are firing</h4>
+<h4 id="listing-alerts-that-are-firing_validate-cluster-health-after-installation">Listing alerts that are firing</h4>
 <div class="paragraph _abstract">
 <p>Alerts provide notifications when a set of defined conditions are true in an Red&#160;Hat OpenShift Container Platform cluster. The Alerting UI in the Red&#160;Hat OpenShift Container Platform web console displays alerts that are firing and provides detailed information about each alert.</p>
 </div>
@@ -2495,7 +2490,7 @@ control-plane-3.example.com   942m         26%    4100Mi          27%</code></pr
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a> →</p>
+<p>↑ Up: <a href="_validate.html">Validate</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2506,7 +2501,7 @@ control-plane-3.example.com   942m         26%    4100Mi          27%</code></pr
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 20:28:25 +0100
+Last updated 2026-10-15 21:04:57 +0100
 </div>
 </div>
 <style>

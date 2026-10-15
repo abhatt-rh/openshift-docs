@@ -477,8 +477,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
 <body id="network-observability-operator_understand-network-observability-netobserv" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/ocp-jobs/add-and-remove-catalogs.adoc:5
+    include::modules/olmv1-about-catalogs.adoc[leveloffset=+0]
+    expected: maps/ocp/ocp-jobs/modules/olmv1-about-catalogs.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -602,8 +638,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
-<li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
-</li>
 <li><a href="install-on-bare-metal-intro_install-on-bare-metal.html">Install on bare metal</a>
 </li>
 <li><a href="install-with-agent-based-installer-intro_install-with-agent-based-installer.html">Install with Agent-based Installer</a>
@@ -638,7 +672,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
 </li>
-<li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
+<li><a href="rhcos-validate-live-media_validate-boot-artifacts.html">Validating RHCOS live media</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
 </li>
@@ -1491,8 +1525,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_extend.html">Extend</a>
 
 <ul class="sectlevel2">
-<li><a href="olmv1-about-catalogs_add-and-remove-catalogs.html">About catalogs in OLM v1</a>
-</li>
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
 <li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
@@ -1572,6 +1604,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_validate.html">Validate</a>
 
 <ul class="sectlevel2">
+<li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
+</li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
 </li>
 <li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
@@ -2206,7 +2240,7 @@ lokistack-query-frontend-85c6db4fbd-jm94f           1/1     Running   0         
 <p>If you only want to export flows to a Kafka consumer or IPFIX collector, or you only need dashboard metrics, then you do not need to install Loki or provide storage for Loki. The following table compares available features with and without Loki.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 731. Comparison of feature availability with and without Loki</caption>
+<caption class="title">Table 724. Comparison of feature availability with and without Loki</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -2546,7 +2580,7 @@ lokistack-query-frontend-85c6db4fbd-jm94f           1/1     Running   0         
 <p>The query language uses the following syntax:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 732. Query language syntax</caption>
+<caption class="title">Table 725. Query language syntax</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2684,7 +2718,7 @@ spec:
 </ul>
 </div>
 <table id="network-observability-resource-recommendations-table_optimize-collection-performance-and-resource-usage" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 733. Resource recommendations for cluster sizes</caption>
+<caption class="title">Table 726. Resource recommendations for cluster sizes</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 20%;">
@@ -2793,7 +2827,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 734. Total average resource usage</caption>
+<caption class="title">Table 727. Total average resource usage</caption>
 <colgroup>
 <col>
 <col>
@@ -2869,7 +2903,7 @@ spec:
 <p>Reference the required and optional parameters for configuring flow filter rules in the <code>FlowCollector</code> resource, including CIDR ranges, filter actions, protocols, and specific port configurations.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 735. Required configuration parameters</caption>
+<caption class="title">Table 728. Required configuration parameters</caption>
 <colgroup>
 <col style="width: 27.2727%;">
 <col style="width: 72.7273%;">
@@ -2963,7 +2997,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 736. Optional configuration parameters</caption>
+<caption class="title">Table 729. Optional configuration parameters</caption>
 <colgroup>
 <col style="width: 27.2727%;">
 <col style="width: 72.7273%;">
@@ -3491,7 +3525,7 @@ spec:
 <p>This reference applies to compression configured in both <code>spec.kafka.compression</code> for flow collection and <code>spec.exporters</code> for flow export.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 737. Kafka compression codec comparison</caption>
+<caption class="title">Table 730. Kafka compression codec comparison</caption>
 <colgroup>
 <col style="width: 14.2857%;">
 <col style="width: 14.2857%;">
@@ -3691,7 +3725,7 @@ spec:
 </ul>
 </div>
 <table id="network-observability-resource-recommendations-table_scale-components-based-on-cluster-size" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 738. Resource recommendations for cluster sizes</caption>
+<caption class="title">Table 731. Resource recommendations for cluster sizes</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 20%;">
@@ -3799,7 +3833,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 739. Total average resource usage</caption>
+<caption class="title">Table 732. Total average resource usage</caption>
 <colgroup>
 <col>
 <col>
@@ -12097,7 +12131,7 @@ spec:
 <p>The query language uses the following syntax:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 740. Query language syntax</caption>
+<caption class="title">Table 733. Query language syntax</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -12191,7 +12225,7 @@ spec:
 <p>Here is a list of all available filter keys:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 741. Filter keys</caption>
+<caption class="title">Table 734. Filter keys</caption>
 <colgroup>
 <col style="width: 9.0909%;">
 <col style="width: 9.0909%;">
@@ -15729,7 +15763,7 @@ spec:
 <p>The optional <code>netobserv_io_network_health</code> annotation is a JSON string that controls how the alert renders on the <strong>Network Health</strong> page.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 742. Fields for the <code>netobserv_io_network_health</code> annotation</caption>
+<caption class="title">Table 735. Fields for the <code>netobserv_io_network_health</code> annotation</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -17481,7 +17515,7 @@ $ podman rm netobserv-cli</code></pre>
 <div class="sect6">
 <h7 id="cli-basic-commands_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Basic commands</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 743. Basic commands</caption>
+<caption class="title">Table 736. Basic commands</caption>
 <colgroup>
 <col style="width: 27.2727%;">
 <col style="width: 72.7273%;">
@@ -19379,7 +19413,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 20:28:25 +0100
+Last updated 2026-10-15 21:04:57 +0100
 </div>
 </div>
 <style>

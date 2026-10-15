@@ -477,8 +477,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
 <body id="install-on-bare-metal-intro_install-on-bare-metal" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/ocp-jobs/add-and-remove-catalogs.adoc:5
+    include::modules/olmv1-about-catalogs.adoc[leveloffset=+0]
+    expected: maps/ocp/ocp-jobs/modules/olmv1-about-catalogs.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -601,8 +637,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
-<li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
-</li>
 <li><a href="install-on-bare-metal-intro_install-on-bare-metal.html"><span class="toc-current">Install on bare metal</span></a>
 </li>
 <li><a href="install-with-agent-based-installer-intro_install-with-agent-based-installer.html">Install with Agent-based Installer</a>
@@ -637,7 +671,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
 </li>
-<li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
+<li><a href="rhcos-validate-live-media_validate-boot-artifacts.html">Validating RHCOS live media</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
 </li>
@@ -1491,8 +1525,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_extend.html">Extend</a>
 
 <ul class="sectlevel2">
-<li><a href="olmv1-about-catalogs_add-and-remove-catalogs.html">About catalogs in OLM v1</a>
-</li>
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
 <li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
@@ -1572,6 +1604,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_validate.html">Validate</a>
 
 <ul class="sectlevel2">
+<li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
+</li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
 </li>
 <li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
@@ -1976,7 +2010,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 93. Required parameters</caption>
+<caption class="title">Table 86. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2165,7 +2199,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 94. Network parameters</caption>
+<caption class="title">Table 87. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2435,7 +2469,7 @@ The prefix length for an IPv6 block is between <code>0</code> and <code>128</cod
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 95. Optional parameters</caption>
+<caption class="title">Table 88. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3096,7 +3130,7 @@ If you are installing on Google Cloud into a shared virtual private cloud (VPC),
 <p>Optional AWS configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 96. Optional AWS parameters</caption>
+<caption class="title">Table 89. Optional AWS parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3979,7 +4013,7 @@ For more information about the support scope of Red Hat Technology Preview featu
 <p>Additional Google Cloud configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 97. Additional Google Cloud parameters</caption>
+<caption class="title">Table 90. Additional Google Cloud parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5470,7 +5504,7 @@ CPU architecture.</p>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 98. Minimum resource requirements</caption>
+<caption class="title">Table 91. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -5659,7 +5693,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 99. Firmware compatibility for HP hardware with Redfish virtual media</caption>
+<caption class="title">Table 92. Firmware compatibility for HP hardware with Redfish virtual media</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -5691,7 +5725,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 100. Firmware compatibility for Dell hardware with Redfish virtual media</caption>
+<caption class="title">Table 93. Firmware compatibility for Dell hardware with Redfish virtual media</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -5728,7 +5762,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 101. Firmware compatibility for Cisco UCS hardware with Redfish virtual media</caption>
+<caption class="title">Table 94. Firmware compatibility for Cisco UCS hardware with Redfish virtual media</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -5783,7 +5817,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 <p>NC-SI enables the BMC to share a system NIC with the host, requiring the <code>DisablePowerOff</code> feature to prevent loss of BMC connectivity during power-offs.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 102. Server compatibility for NC-SI</caption>
+<caption class="title">Table 95. Server compatibility for NC-SI</caption>
 <colgroup>
 <col style="width: 14.2857%;">
 <col style="width: 14.2857%;">
@@ -5844,7 +5878,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 103. Compatible Network Interface Cards (NICs) for NC-SI</caption>
+<caption class="title">Table 96. Compatible Network Interface Cards (NICs) for NC-SI</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -5958,7 +5992,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 <p>Certain ports must be open between cluster nodes for installer-provisioned installations to complete successfully. In certain situations, such as using separate subnets for far edge worker nodes, you must ensure that the nodes in these subnets can communicate with nodes in the other subnets on the following required ports.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 104. Required ports</caption>
+<caption class="title">Table 97. Required ports</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6111,7 +6145,7 @@ Setting these fields to <code>HighlyAvailable</code> offers component redundancy
 <p>Installer-provisioned installation includes functionality that uses cluster membership information to generate A/AAAA records. This resolves the node names to their IP addresses. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 105. Required DNS records</caption>
+<caption class="title">Table 98. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -9476,7 +9510,7 @@ done</code></pre>
 <p>Some parameters, such as the cluster domain name, are required in the <code>install-config.yaml</code> file when installing a cluster on bare metal. Others, such as the provisioning network CIDR, are optional.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 106. Required parameters</caption>
+<caption class="title">Table 99. Required parameters</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 10%;">
@@ -9779,7 +9813,7 @@ done</code></pre>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 107. Optional Parameters</caption>
+<caption class="title">Table 100. Optional Parameters</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9898,7 +9932,7 @@ done</code></pre>
 <p>The <code>hosts</code> parameter is a list of separate bare metal assets used to build the cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 108. Hosts</caption>
+<caption class="title">Table 101. Hosts</caption>
 <colgroup>
 <col style="width: 44.4444%;">
 <col style="width: 11.1111%;">
@@ -10884,7 +10918,7 @@ See "Understanding virtualized control planes" for more information.</p>
 <p>The installer examines the devices in the order it discovers them, and compares the discovered values with the hint values. The installer uses the first discovered device that matches the hint value. The configuration can combine multiple hints, but a device must match all hints for the installer to select it.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 109. Subfields</caption>
+<caption class="title">Table 102. Subfields</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -12381,7 +12415,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 110. Hardware RAID support by vendor</caption>
+<caption class="title">Table 103. Hardware RAID support by vendor</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -13231,7 +13265,7 @@ done</code></pre>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 111. Minimum required hosts</caption>
+<caption class="title">Table 104. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -13299,7 +13333,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 112. Minimum resource requirements</caption>
+<caption class="title">Table 105. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -13452,7 +13486,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 113. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 106. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -13784,7 +13818,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 114. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 107. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -13833,7 +13867,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 115. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 108. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -13931,7 +13965,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 116. Required DNS records</caption>
+<caption class="title">Table 109. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -14594,7 +14628,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 117. Application Ingress load balancer</caption>
+<caption class="title">Table 110. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -19031,7 +19065,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the subcommands, options, and arguments you can pass to the <code>coreos-installer</code> command.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 118. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
+<caption class="title">Table 111. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -20318,7 +20352,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the RHCOS live installer <code>coreos.inst</code> boot options for ISO and PXE installations.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 119. <code>coreos.inst</code> boot options</caption>
+<caption class="title">Table 112. <code>coreos.inst</code> boot options</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -22102,7 +22136,7 @@ openshift-authentication-operator authentication-operator-69d5d8bf84-vh2n8      
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 120. Minimum required hosts</caption>
+<caption class="title">Table 113. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -22170,7 +22204,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 121. Minimum resource requirements</caption>
+<caption class="title">Table 114. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -22323,7 +22357,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 122. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 115. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -22655,7 +22689,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 123. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 116. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -22704,7 +22738,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 124. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 117. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -22802,7 +22836,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 125. Required DNS records</caption>
+<caption class="title">Table 118. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -23465,7 +23499,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 126. Application Ingress load balancer</caption>
+<caption class="title">Table 119. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -25387,7 +25421,7 @@ spec:
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 127. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 120. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25540,7 +25574,7 @@ spec:
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 128. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 121. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -25605,7 +25639,7 @@ spec:
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 129. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 122. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25768,7 +25802,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 130. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 123. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25819,7 +25853,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 131. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 124. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25870,7 +25904,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 132. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 125. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25977,7 +26011,7 @@ spec:
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-bare-metal-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 133. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 126. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -26071,7 +26105,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-bare-metal-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 134. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 127. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -26116,7 +26150,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-bare-metal-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 135. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 128. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -26161,7 +26195,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-bare-metal-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 136. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 129. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -28206,7 +28240,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the subcommands, options, and arguments you can pass to the <code>coreos-installer</code> command.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 137. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
+<caption class="title">Table 130. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -29493,7 +29527,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the RHCOS live installer <code>coreos.inst</code> boot options for ISO and PXE installations.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 138. <code>coreos.inst</code> boot options</caption>
+<caption class="title">Table 131. <code>coreos.inst</code> boot options</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -31107,7 +31141,7 @@ you cannot access the required image stream tags.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 139. Minimum required hosts</caption>
+<caption class="title">Table 132. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -31175,7 +31209,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 140. Minimum resource requirements</caption>
+<caption class="title">Table 133. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -31313,7 +31347,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>This section provides details about the ports that are required.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 141. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 134. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -31645,7 +31679,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 142. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 135. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -31694,7 +31728,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 143. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 136. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -31792,7 +31826,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 144. Required DNS records</caption>
+<caption class="title">Table 137. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -32455,7 +32489,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 145. Application Ingress load balancer</caption>
+<caption class="title">Table 138. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -36409,7 +36443,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the subcommands, options, and arguments you can pass to the <code>coreos-installer</code> command.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 146. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
+<caption class="title">Table 139. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -37696,7 +37730,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the RHCOS live installer <code>coreos.inst</code> boot options for ISO and PXE installations.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 147. <code>coreos.inst</code> boot options</caption>
+<caption class="title">Table 140. <code>coreos.inst</code> boot options</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -39656,7 +39690,7 @@ openshift-authentication-operator authentication-operator-69d5d8bf84-vh2n8      
 <li>
 <p>Add the identity provider configuration to the <code>spec.identityProviders</code> list:</p>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 148. Identity provider configuration examples</caption>
+<caption class="title">Table 141. Identity provider configuration examples</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -44158,7 +44192,7 @@ Several autocomplete suggestions should appear, such as the following examples:<
 <p>The <code>spec</code> section of the <code>BareMetalHost</code> resource defines the desired state of the host.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 149. BareMetalHost spec</caption>
+<caption class="title">Table 142. BareMetalHost spec</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -44529,7 +44563,7 @@ Several autocomplete suggestions should appear, such as the following examples:<
 <p>The <code>BareMetalHost</code> status represents the host&#8217;s current state, and includes tested credentials, current hardware details, and other information.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 150. BareMetalHost status</caption>
+<caption class="title">Table 143. BareMetalHost status</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -45512,7 +45546,7 @@ spec:
 <p>The <code>status</code> represents the current state of the host&#8217;s BIOS.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 151. HostFirmwareSettings</caption>
+<caption class="title">Table 144. HostFirmwareSettings</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -46007,7 +46041,7 @@ spec:
 <p>The <code>FirmwareSchema</code> resource contains valid types and limits for BIOS settings on each host model, enabling you to identify valid values when configuring the <code>HostFirmwareSettings</code> resource.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 152. FirmwareSchema specification</caption>
+<caption class="title">Table 145. FirmwareSchema specification</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -46165,7 +46199,7 @@ spec:
 <p>The <code>spec</code> section of the <code>HostFirmwareComponents</code> resource defines the desired state of the BIOS and BMC versions of the host, and the NIC firmware components of the host if the information is available by using Redfish.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 153. HostFirmwareComponents spec</caption>
+<caption class="title">Table 146. HostFirmwareComponents spec</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -46222,7 +46256,7 @@ spec:
 <p>The <code>status</code> section of the <code>HostFirmwareComponents</code> resource returns the current status of the BIOS and BMC versions of the host, and the NIC firmware components of the host if the information is available by using Redfish.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 154. HostFirmwareComponents status</caption>
+<caption class="title">Table 147. HostFirmwareComponents status</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -47041,7 +47075,7 @@ spec:
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="install-with-agent-based-installer-intro_install-with-agent-based-installer.html">Install with Agent-based Installer</a> →</p>
+<p>← Previous: <a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="install-with-agent-based-installer-intro_install-with-agent-based-installer.html">Install with Agent-based Installer</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -47052,7 +47086,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 20:28:25 +0100
+Last updated 2026-10-15 21:04:57 +0100
 </div>
 </div>
 <style>

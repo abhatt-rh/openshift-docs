@@ -437,48 +437,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
-<!-- navmap-right-toc-start -->
+<!-- navmap-preview-warning-start -->
 <style>
-  body.navmap-has-right-toc { padding-right: 18em; }
-  #navmap-right-toc {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 16em;
-    height: 100%;
-    overflow: auto;
-    padding: 1.25em 1em;
-    background: #f8f8f7;
-    border-left: 1px solid #e7e7e9;
-    z-index: 1000;
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
     font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    font-size: .9em;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
   }
-  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
-  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
-  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
-  #navmap-right-toc li.level-3 { padding-left: 1em; }
-  #navmap-right-toc li.level-4 { padding-left: 2em; }
-  #navmap-right-toc li.level-5,
-  #navmap-right-toc li.level-6 { padding-left: 3em; }
-  #navmap-right-toc a { text-decoration: none; }
-  @media screen and (max-width: 1023px) {
-    body.navmap-has-right-toc { padding-right: 0; }
-    #navmap-right-toc {
-      position: static;
-      width: auto;
-      height: auto;
-      margin: 1em;
-      border: 1px solid #e7e7e9;
-      border-radius: 4px;
-    }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
   }
-
-
 </style>
-<!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-end -->
 </head>
-<body id="olmv1-about-catalogs_add-and-remove-catalogs" class="book toc2 toc-left navmap-has-right-toc">
+<body id="rhcos-validate-live-media_validate-boot-artifacts" class="book toc2 toc-left">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/ocp-jobs/add-and-remove-catalogs.adoc:5
+    include::modules/olmv1-about-catalogs.adoc[leveloffset=+0]
+    expected: maps/ocp/ocp-jobs/modules/olmv1-about-catalogs.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -594,15 +590,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_install.html">Install</a>
-
 <ul class="sectlevel2">
 <li><a href="installation-overview_understand-openshift-installation-architecture.html">Red&#160;Hat OpenShift Container Platform installation options</a>
 </li>
 <li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
 </li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
-</li>
-<li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
 </li>
 <li><a href="install-on-bare-metal-intro_install-on-bare-metal.html">Install on bare metal</a>
 </li>
@@ -638,7 +631,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
 </li>
-<li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
+<li><a href="rhcos-validate-live-media_validate-boot-artifacts.html"><span class="toc-current">Validating RHCOS live media</span></a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
 </li>
@@ -1490,9 +1483,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
+
 <ul class="sectlevel2">
-<li><a href="olmv1-about-catalogs_add-and-remove-catalogs.html"><span class="toc-current">About catalogs in OLM v1</span></a>
-</li>
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
 <li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
@@ -1572,6 +1564,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_validate.html">Validate</a>
 
 <ul class="sectlevel2">
+<li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
+</li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
 </li>
 <li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
@@ -1791,380 +1785,48 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="manage-catalogs-with-olmv1-con_manage-catalogs-with-olmv1.html#olmv1-red-hat-catalogs_add-and-remove-catalogs">Red Hat-provided Operator catalogs in OLM v1</a></li><li class="level-4"><a href="manage-catalogs-with-olmv1-con_manage-catalogs-with-olmv1.html#olmv1-adding-a-catalog-to-a-cluster_add-and-remove-catalogs">Add a catalog to a cluster</a></li><li class="level-4"><a href="manage-catalogs-with-olmv1-con_manage-catalogs-with-olmv1.html#olmv1-deleting-catalog_add-and-remove-catalogs">Delete a catalog</a></li><li class="level-4"><a href="manage-catalogs-with-olmv1-con_manage-catalogs-with-olmv1.html#olmv1-disabling-a-default-catalog_add-and-remove-catalogs">Disable a default catalog</a></li><li class="level-4"><a href="manage-catalogs-with-olmv1-con_manage-catalogs-with-olmv1.html#olmv1-about-disconnected_add-and-remove-catalogs">About disconnected support and the oc-mirror plugin in OLM v1</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="olmv1-about-catalogs_add-and-remove-catalogs">About catalogs in OLM v1</h3>
+<h3 id="rhcos-validate-live-media_validate-boot-artifacts">Validating RHCOS live media</h3>
 <div class="paragraph _abstract">
-<p>You can discover installable content by querying a catalog for Kubernetes extensions, such as Operators and controllers, by using the catalogd component.</p>
+<p>For user-provisioned infrastructure installations, you can access information and use the Red&#160;Hat OpenShift Container Platform installer to indirectly validate RHCOS bootimage artifacts using their SHA-256 checksums.</p>
 </div>
 <div class="paragraph">
-<p>Catalogd is a Kubernetes extension that unpacks catalog content for on-cluster clients and is part of the Operator Lifecycle Manager (OLM) v1 suite of microservices. Currently, catalogd unpacks catalog content that is packaged and distributed as container images.</p>
+<p>The Red&#160;Hat OpenShift Container Platform installation program contains pinned versions of RHCOS bootimages. Fully automated installations use these pinned artifacts by default. The mirror registry where you downloaded the installation program contains a <code>sha256sum</code> encrypted with the Red&#160;Hat product key.</p>
 </div>
-<div class="sect3">
-<h4 id="olmv1-red-hat-catalogs_add-and-remove-catalogs">Red Hat-provided Operator catalogs in OLM v1</h4>
-<div class="paragraph _abstract">
-<p>Operator Lifecycle Manager (OLM) v1 includes several Red&#160;Hat-provided Operator catalogs on the cluster by default. If you want to add a catalog to your cluster, create a custom resource (CR) for the catalog and apply it to the cluster.</p>
-</div>
-<div class="paragraph">
-<p>The following custom resource (CR) examples show the default catalogs installed on the cluster:</p>
-</div>
-<div class="listingblock">
-<div class="title">Red&#160;Hat Operators catalog</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterCatalog
-metadata:
-  name: openshift-redhat-operators
-spec:
-  priority: -100
-  source:
-    image:
-      pollIntervalMinutes: &lt;poll_interval_duration&gt;
-      ref: registry.redhat.io/redhat/redhat-operator-index:v{product-version}
-    type: Image</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;poll_interval_duration&gt;</code> with the interval in minutes for polling the remote registry for newer image digests. To disable polling, do not set the field.</p>
-</div>
-<div class="listingblock">
-<div class="title">Certified Operators catalog</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterCatalog
-metadata:
-  name: openshift-certified-operators
-spec:
-priority: -200
-  source:
-    type: image
-    image:
-      pollIntervalMinutes: 10
-      ref: registry.redhat.io/redhat/certified-operator-index:v{product-version}
-    type: Image</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Red&#160;Hat Marketplace catalog</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterCatalog
-metadata:
-  name: openshift-redhat-marketplace
-spec:
-  priority: -300
-  source:
-    image:
-      pollIntervalMinutes: 10
-      ref: registry.redhat.io/redhat/redhat-marketplace-index:v{product-version}
-    type: Image</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Community Operators catalog</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterCatalog
-metadata:
-  name: openshift-community-operators
-spec:
-  priority: -400
-  source:
-    image:
-      pollIntervalMinutes: 10
-      ref: registry.redhat.io/redhat/community-operator-index:v{product-version}
-    type: Image</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The following command adds a catalog to your cluster:</p>
-</div>
-<div class="listingblock">
-<div class="title">Command syntax</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f &lt;catalog_name&gt;.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;catalog_name&gt;.yaml</code> with the catalog CR, such as <code>my-catalog.yaml</code>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="olmv1-adding-a-catalog-to-a-cluster_add-and-remove-catalogs">Add a catalog to a cluster</h4>
-<div class="paragraph _abstract">
-<p>To add a catalog to a cluster for Operator Lifecycle Manager (OLM) v1 usage, create a <code>ClusterCatalog</code> custom resource (CR) and apply it to the cluster.</p>
-</div>
-<div class="olist arabic">
+<div class="ulist">
 <div class="title">Procedure</div>
-<ol class="arabic">
+<ul>
 <li>
-<p>Create a catalog custom resource (CR), similar to the following example:</p>
+<p>Run the following command to print the metadata for any bootimage artifact:</p>
 <div class="listingblock">
-<div class="title">Example <code>my-redhat-operators.yaml</code> file</div>
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterCatalog
-metadata:
-  name: my-redhat-operators
-spec:
-  priority: 1000
-  source:
-    image:
-      pollIntervalMinutes: 10
-      ref: registry.redhat.io/redhat/community-operator-index:v{product-version}
-    type: Image</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ openshift-install coreos print-stream-json | jq &lt;bootimage&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>where:</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>metadata.name</code></dt>
-<dd>
-<p>The catalog is automatically labeled with the value of the <code>metadata.name</code> field when it is applied to the cluster. For more information about labels and catalog selection, see "Catalog content resolution".</p>
-</dd>
-<dt class="hdlist1"><code>spec.priority</code></dt>
-<dd>
-<p>Optional: Specifies the priority of the catalog in relation to the other catalogs on the cluster. For more information, see "Catalog selection by priority".</p>
-</dd>
-<dt class="hdlist1"><code>spec.source.image.pollIntervalMinutes</code></dt>
-<dd>
-<p>Specifies the interval in minutes for polling the remote registry for newer image digests. To disable polling, do not set the field.</p>
-</dd>
-<dt class="hdlist1"><code>spec.source.image.ref</code></dt>
-<dd>
-<p>Specifies the catalog image in the <code>spec.source.image.ref</code> field.</p>
-</dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Add the catalog to your cluster by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f my-redhat-operators.yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">clustercatalog.olm.operatorframework.io/my-redhat-operators created</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>Run the following commands to verify the status of your catalog:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Check if your catalog is available by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clustercatalog</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NAME                            LASTUNPACKED   SERVING   AGE
-my-redhat-operators             55s            True      64s
-openshift-certified-operators   83m            True      84m
-openshift-community-operators   43m            True      84m
-openshift-redhat-marketplace    83m            True      84m
-openshift-redhat-operators      54m            True      84m</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Check the status of your catalog by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe clustercatalog my-redhat-operators</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">Name:         my-redhat-operators
-Namespace:
-Labels:       olm.operatorframework.io/metadata.name=my-redhat-operators
-Annotations:  &lt;none&gt;
-API Version:  olm.operatorframework.io/v1
-Kind:         ClusterCatalog
-Metadata:
-  Creation Timestamp:  2025-02-18T20:28:50Z
-  Finalizers:
-    olm.operatorframework.io/delete-server-cache
-  Generation:        1
-  Resource Version:  50248
-  UID:               86adf94f-d2a8-4e70-895b-31139f2eeab7
-Spec:
-  Availability Mode:  Available
-  Priority:           1000
-  Source:
-    Image:
-      Poll Interval Minutes:  10
-      Ref:                    registry.redhat.io/redhat/community-operator-index:v{product-version}
-    Type:                     Image
-Status:
-  Conditions:
-    Last Transition Time:  2025-02-18T20:29:00Z
-    Message:               Successfully unpacked and stored content from resolved source
-    Observed Generation:   1
-    Reason:                Succeeded
-    Status:                True
-    Type:                  Progressing
-    Last Transition Time:  2025-02-18T20:29:00Z
-    Message:               Serving desired content from resolved source
-    Observed Generation:   1
-    Reason:                Available
-    Status:                True
-    Type:                  Serving
-  Last Unpacked:           2025-02-18T20:28:59Z
-  Resolved Source:
-    Image:
-      Ref:  registry.redhat.io/redhat/community-operator-index@sha256:11627ea6fdd06b8092df815076e03cae9b7cede8b353c0b461328842d02896c5
-    Type:   Image
-  Urls:
-    Base:  https://catalogd-service.openshift-catalogd.svc/catalogs/my-redhat-operators
-Events:    &lt;none&gt;</code></pre>
-</div>
-</div>
 <div class="paragraph">
-<p>In the output, the <code>Status</code> section describes the status of the catalog. In the <code>Status</code> section, the <code>Reason</code> field displays the reason the catalog is in the current state. In the <code>Resolved Source</code> section, the <code>Ref</code> field displays the image reference of the catalog.</p>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="olmv1-deleting-catalog_add-and-remove-catalogs">Delete a catalog</h4>
-<div class="paragraph _abstract">
-<p>You can delete a catalog by deleting its custom resource (CR).</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have a catalog installed.</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>Delete a catalog by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete clustercatalog &lt;catalog_name&gt;</code></pre>
-</div>
+<p><code>&lt;bootimage&gt;</code>: Specifies the query for the bootimage you want to obtain information on. For validation purposes, the bootimage artifact must have a generated <code>sha256sum</code>. This can include OVA, VHD, QCOW2, and others. For example, to get information on an <code>x86_64</code> architecture <code>iso</code> file for bare metal platforms, use <code>.architectures.x86_64.artifacts.metal.formats.iso</code>.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example output</div>
 <div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">clustercatalog.olm.operatorframework.io "my-redhat-operators" deleted</code></pre>
+<pre class="highlight"><code class="language-text" data-lang="text">{
+  "disk": {
+    "location": "&lt;url&gt;/art/storage/prod/streams/&lt;release&gt;/builds/rhcos-&lt;release&gt;-live.&lt;architecture&gt;.&lt;artifact&gt;",
+    "sha256": "abc2add9746eb7be82e6919ec13aad8e9eae8cf073d8da6126d7c95ea0dee962"
+  }
+}</code></pre>
 </div>
 </div>
 </li>
 </ul>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>Verify the catalog is deleted by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clustercatalog</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="olmv1-disabling-a-default-catalog_add-and-remove-catalogs">Disable a default catalog</h4>
-<div class="paragraph _abstract">
-<p>You can disable the Red&#160;Hat-provided catalogs that are included with Red&#160;Hat OpenShift Container Platform by default.</p>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>Disable a default catalog by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch clustercatalog openshift-certified-operators -p \
-  '{"spec": {"availabilityMode": "Unavailable"}}' --type=merge</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">clustercatalog.olm.operatorframework.io/openshift-certified-operators patched</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>Verify the catalog is disabled by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clustercatalog openshift-certified-operators</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NAME                            LASTUNPACKED   SERVING   AGE
-openshift-certified-operators                  False     6h54m</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="olmv1-about-disconnected_add-and-remove-catalogs">About disconnected support and the oc-mirror plugin in OLM v1</h4>
-<div class="paragraph _abstract">
-<p>After you use the oc-mirror plugin for the OpenShift CLI (<code>oc</code>) to mirror images to a mirror registry, OLM v1 relies on specific resource sets to function.</p>
-</div>
-<div class="paragraph">
-<p>oc-mirror plugin v2 automatically generates <code>ImageDigestMirrorSet</code>, <code>ImageTagMirrorSet</code>, and <code>ClusterCatalog</code> resources.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The oc-mirror plugin v2 is the recommended version for mirroring.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>↑ Up: <a href="_extend.html">Extend</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a> →</p>
+<p>← Previous: <a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2175,7 +1837,7 @@ openshift-certified-operators                  False     6h54m</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 20:28:25 +0100
+Last updated 2026-10-15 21:04:57 +0100
 </div>
 </div>
 <style>

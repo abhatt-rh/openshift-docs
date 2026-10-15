@@ -477,8 +477,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
 <body id="configure-ingress-and-routes-con_configure-ingress-and-routes" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/ocp-jobs/add-and-remove-catalogs.adoc:5
+    include::modules/olmv1-about-catalogs.adoc[leveloffset=+0]
+    expected: maps/ocp/ocp-jobs/modules/olmv1-about-catalogs.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -602,8 +638,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
-<li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
-</li>
 <li><a href="install-on-bare-metal-intro_install-on-bare-metal.html">Install on bare metal</a>
 </li>
 <li><a href="install-with-agent-based-installer-intro_install-with-agent-based-installer.html">Install with Agent-based Installer</a>
@@ -638,7 +672,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
 </li>
-<li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
+<li><a href="rhcos-validate-live-media_validate-boot-artifacts.html">Validating RHCOS live media</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
 </li>
@@ -1491,8 +1525,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_extend.html">Extend</a>
 
 <ul class="sectlevel2">
-<li><a href="olmv1-about-catalogs_add-and-remove-catalogs.html">About catalogs in OLM v1</a>
-</li>
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
 <li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
@@ -1572,6 +1604,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_validate.html">Validate</a>
 
 <ul class="sectlevel2">
+<li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
+</li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
 </li>
 <li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
@@ -1930,7 +1964,7 @@ spec:
 <p>The following table shows example routes and their accessibility:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 697. Route availability</caption>
+<caption class="title">Table 690. Route availability</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3451,7 +3485,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 698. Route annotations</caption>
+<caption class="title">Table 691. Route annotations</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3627,7 +3661,7 @@ The part of the request path that matches the path specified in <code>spec.path<
 <p>The following table provides examples of the path rewriting behavior for various combinations of <code>spec.path</code>, request path, and rewrite target.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 699. rewrite-target examples</caption>
+<caption class="title">Table 692. rewrite-target examples</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3715,7 +3749,7 @@ The part of the request path that matches the path specified in <code>spec.path<
 <p>Certain special characters in <code>haproxy.router.openshift.io/rewrite-target</code> require special handling because they must be escaped properly. Refer to the following table to understand how these characters are handled.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 700. Special character handling</caption>
+<caption class="title">Table 693. Special character handling</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -4168,7 +4202,7 @@ spec:
 <div class="content">
 <img src="data:image/png;base64," alt="Red&#160;Hat OpenShift Container Platform Ingress NodePort endpoint publishing strategy">
 </div>
-<div class="title">Figure 88. Diagram of NodePortService</div>
+<div class="title">Figure 87. Diagram of NodePortService</div>
 </div>
 <div class="paragraph">
 <p>The preceding graphic shows the following concepts pertaining to Red&#160;Hat OpenShift Container Platform Ingress NodePort endpoint publishing strategy:</p>
@@ -5637,7 +5671,7 @@ If you do not, all of your nodes will lose egress connectivity to the internet.<
 <div class="content">
 <img src="data:image/png;base64," alt="Red&#160;Hat OpenShift Container Platform Ingress LoadBalancerService endpoint publishing strategy">
 </div>
-<div class="title">Figure 89. Diagram of LoadBalancer</div>
+<div class="title">Figure 88. Diagram of LoadBalancer</div>
 </div>
 <div class="paragraph">
 <p>The preceding graphic shows the following concepts pertaining to Red&#160;Hat OpenShift Container Platform Ingress LoadBalancerService endpoint publishing strategy:</p>
@@ -7594,7 +7628,7 @@ backend be_secure:openshift-monitoring:alertmanager-main
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 701. Special case header configuration options</caption>
+<caption class="title">Table 694. Special case header configuration options</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9079,7 +9113,7 @@ spec:
 <div class="content">
 <img src="data:image/png;base64," alt="A diagram showing multiple Ingress Controllers with different route selectors serving any route containing a label that matches a given route selector regardless of the namespace a route belongs to">
 </div>
-<div class="title">Figure 90. Ingress sharding by using route labels</div>
+<div class="title">Figure 89. Ingress sharding by using route labels</div>
 </div>
 <div class="paragraph">
 <p>Ingress Controller sharding is useful when balancing incoming traffic load among a set of Ingress Controllers and when isolating traffic to a specific Ingress Controller. For example, company A goes to one Ingress Controller and company B to another.</p>
@@ -9147,7 +9181,7 @@ spec:
 <div class="content">
 <img src="data:image/png;base64," alt="A diagram showing multiple Ingress Controllers with different namespace selectors serving routes that belong to the namespace containing a label that matches a given namespace selector">
 </div>
-<div class="title">Figure 91. Ingress sharding by using namespace labels</div>
+<div class="title">Figure 90. Ingress sharding by using namespace labels</div>
 </div>
 <div class="paragraph">
 <p>Ingress Controller sharding is useful when balancing incoming traffic load among
@@ -9524,7 +9558,7 @@ spec:
 <p>The following table outlines the features that are shared between both resources and how their specific implementations differ:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 702. Shared features and implementation differences</caption>
+<caption class="title">Table 695. Shared features and implementation differences</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -9893,7 +9927,7 @@ Do not set <code>namespaces.from: All</code>; that setting allows routes from ev
 <p>The following table describes common listener conditions and how to resolve them:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 703. Gateway listener status conditions</caption>
+<caption class="title">Table 696. Gateway listener status conditions</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10184,7 +10218,7 @@ spec:
 <p>This configuration is supported on Amazon Web Services (AWS), Microsoft Azure, Google Cloud, Red Hat OpenStack Platform (RHOSP), and IBM Cloud. The following table details the required cloud-specific annotations and their corresponding values.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 704. Internal load balancer annotations by cloud provider</caption>
+<caption class="title">Table 697. Internal load balancer annotations by cloud provider</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -10284,7 +10318,7 @@ spec:
 <p>To verify that your <code>GatewayClass</code> custom resource (CR) is valid and ready to provision gateways, review its <code>status</code> conditions. A healthy <code>GatewayClass</code> CR reports a status of <code>True</code> for core conditions like <code>Accepted</code> and <code>SupportedVersion</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 705. <code>GatewayClass</code> CR status conditions</caption>
+<caption class="title">Table 698. <code>GatewayClass</code> CR status conditions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10398,7 +10432,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 706. Gateway-level status conditions</caption>
+<caption class="title">Table 699. Gateway-level status conditions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10506,7 +10540,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 707. Listener-level status conditions</caption>
+<caption class="title">Table 700. Listener-level status conditions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13477,7 +13511,7 @@ This means that you can update ingress and egress rules dynamically and align ne
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 20:28:25 +0100
+Last updated 2026-10-15 21:04:57 +0100
 </div>
 </div>
 <style>
