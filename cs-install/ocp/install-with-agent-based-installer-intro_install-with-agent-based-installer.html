@@ -599,12 +599,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
 </li>
-<li><a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a>
-</li>
-<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
-</li>
-<li><a href="installation-special-config-butane_customize-installation-configuration.html">Create machine configs with Butane</a>
-</li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
 <li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
@@ -1916,7 +1910,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The following cluster resources are recommended for each topology:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 156. Recommended cluster resources</caption>
+<caption class="title">Table 155. Recommended cluster resources</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -2272,7 +2266,7 @@ hosts:
 <p>The installation program examines the devices in the order it discovers them, and compares the discovered values with the hint values. The installation program uses the first discovered device that matches the hint value. The configuration can combine multiple hints, but a device must match all hints for the installation program to select it.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 157. Subfields</caption>
+<caption class="title">Table 156. Subfields</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2452,7 +2446,7 @@ Do not set the <code>network.machineNetwork.cidr</code> parameter to include thi
 <p>During the discovery and bootstrap phases of an installation, all the hosts connect to the Assisted Service that runs on the rendezvous host. Configure your firewall to allow the following traffic from each host to the rendezvous host:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 158. Ports required to reach the Assisted Service on the rendezvous host</caption>
+<caption class="title">Table 157. Ports required to reach the Assisted Service on the rendezvous host</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2754,7 +2748,7 @@ spec:
 <p>The following DNS records are required for an Red&#160;Hat OpenShift Container Platform cluster using the platform <code>none</code> option and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 159. Required DNS records</caption>
+<caption class="title">Table 158. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -3194,7 +3188,7 @@ worker1.ocp4.example.com.	IN	A	192.168.1.7
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 160. API load balancer</caption>
+<caption class="title">Table 159. API load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -3299,7 +3293,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 161. Application Ingress load balancer</caption>
+<caption class="title">Table 160. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -4270,7 +4264,7 @@ platform:
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 162. Required parameters</caption>
+<caption class="title">Table 161. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4460,7 +4454,7 @@ The cluster name is set to <code>agent-cluster</code> when you do not provide th
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 163. Network parameters</caption>
+<caption class="title">Table 162. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4730,7 +4724,7 @@ The prefix length for an IPv6 block is between <code>0</code> and <code>128</cod
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 164. Optional parameters</caption>
+<caption class="title">Table 163. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5425,7 +5419,7 @@ If you are installing on Google Cloud into a shared virtual private cloud (VPC),
 <p>Optional AWS configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 165. Optional AWS parameters</caption>
+<caption class="title">Table 164. Optional AWS parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6323,7 +6317,7 @@ Configuring these fields at install time eliminates the need to set them as a Da
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 166. Additional bare metal parameters</caption>
+<caption class="title">Table 165. Additional bare metal parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6625,7 +6619,7 @@ The value should be <code>True</code> when using a self-signed certificate for B
 <p>Additional Google Cloud configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 167. Additional Google Cloud parameters</caption>
+<caption class="title">Table 166. Additional Google Cloud parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7995,7 +7989,7 @@ The value should be <code>True</code> when using a self-signed certificate for B
 <p>Additional VMware vSphere configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 168. Additional VMware vSphere cluster parameters</caption>
+<caption class="title">Table 167. Additional VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8483,7 +8477,7 @@ Red&#160;Hat does not support Storage vMotion, so you must disable Storage vMoti
 <p>The following table lists each deprecated vSphere configuration parameter:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 169. Deprecated VMware vSphere cluster parameters</caption>
+<caption class="title">Table 168. Deprecated VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8671,7 +8665,7 @@ Red&#160;Hat does not support Storage vMotion, so you must disable Storage vMoti
 <p>Required Agent configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 170. Required parameters</caption>
+<caption class="title">Table 169. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8746,7 +8740,7 @@ When you do not provide <code>metadata.name</code> through either the <code>inst
 <p>Optional Agent configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 171. Optional parameters</caption>
+<caption class="title">Table 170. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -14184,7 +14178,7 @@ local-cluster   true           https://&lt;your cluster url&gt;:6443   True     
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 20:22:23 +0100
+Last updated 2026-10-15 20:28:25 +0100
 </div>
 </div>
 <style>

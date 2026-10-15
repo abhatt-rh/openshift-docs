@@ -599,12 +599,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
 </li>
-<li><a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a>
-</li>
-<li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
-</li>
-<li><a href="installation-special-config-butane_customize-installation-configuration.html">Create machine configs with Butane</a>
-</li>
 <li><a href="configure-firewall-rules-for-installation-intro_configure-firewall-rules-for-installation.html">Configure firewall rules for installation</a>
 </li>
 <li><a href="install-in-a-disconnected-environment-intro_install-in-a-disconnected-environment.html">Install in a disconnected environment</a>
@@ -2391,7 +2385,7 @@ However, you must have an active subscription to access this page.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 223. Minimum required hosts</caption>
+<caption class="title">Table 222. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2444,7 +2438,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 224. Minimum resource requirements</caption>
+<caption class="title">Table 223. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -2741,7 +2735,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p>You must provide a suitable VPC and subnets that allow communication to your machines.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 225. Required VPC components</caption>
+<caption class="title">Table 224. Required VPC components</caption>
 <colgroup>
 <col style="width: 13.3333%;">
 <col style="width: 46.6666%;">
@@ -3092,7 +3086,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p>The cluster also requires load balancers and listeners for port 6443, which the Kubernetes API and its extensions require, and port 22623, which the Ignition config files for new machines require. The targets are the control plane nodes. Port 6443 must be accessible to both clients external to the cluster and nodes within the cluster. Port 22623 must be accessible to nodes within the cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 226. Required DNS and load balancing components</caption>
+<caption class="title">Table 225. Required DNS and load balancing components</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -3464,7 +3458,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p>The control plane and worker machines require access to the following ports:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 227. Security groups</caption>
+<caption class="title">Table 226. Security groups</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3722,7 +3716,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p>The control plane machines require the following Ingress groups. Each Ingress group is an <code>AWS::EC2::SecurityGroupIngress</code> resource.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 228. Control plane Ingress</caption>
+<caption class="title">Table 227. Control plane Ingress</caption>
 <colgroup>
 <col style="width: 18.1818%;">
 <col style="width: 45.4545%;">
@@ -4626,7 +4620,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p>The worker machines require the following Ingress groups. Each Ingress group is an <code>AWS::EC2::SecurityGroupIngress</code> resource.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 229. Worker Ingress</caption>
+<caption class="title">Table 228. Worker Ingress</caption>
 <colgroup>
 <col style="width: 18.1818%;">
 <col style="width: 45.4545%;">
@@ -5488,7 +5482,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p>You must grant the machines permissions in AWS. The provided CloudFormation templates grant the machines <code>Allow</code> permissions for the following <code>AWS::IAM::Role</code> objects and provide an <code>AWS::IAM::InstanceProfile</code> for each set of roles. If you do not use the templates, you can grant the machines the following broad permissions or the following individual permissions.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 230. Roles and instance profiles</caption>
+<caption class="title">Table 229. Roles and instance profiles</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -6734,7 +6728,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 231. Required parameters</caption>
+<caption class="title">Table 230. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6923,7 +6917,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 232. Network parameters</caption>
+<caption class="title">Table 231. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7199,7 +7193,7 @@ The prefix length for an IPv6 block is between <code>0</code> and <code>128</cod
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 233. Optional parameters</caption>
+<caption class="title">Table 232. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7860,7 +7854,7 @@ If you are installing on Google Cloud into a shared virtual private cloud (VPC),
 <p>Optional AWS configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 234. Optional AWS parameters</caption>
+<caption class="title">Table 233. Optional AWS parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8743,7 +8737,7 @@ For more information about the support scope of Red Hat Technology Preview featu
 <p>Additional Google Cloud configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 235. Additional Google Cloud parameters</caption>
+<caption class="title">Table 234. Additional Google Cloud parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -13052,7 +13046,7 @@ it to install multiple clusters.</p>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 236. Minimum resource requirements</caption>
+<caption class="title">Table 235. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -14501,7 +14495,7 @@ credentialsMode: Manual
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 237. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 236. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14654,7 +14648,7 @@ credentialsMode: Manual
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 238. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 237. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -14719,7 +14713,7 @@ credentialsMode: Manual
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 239. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 238. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14882,7 +14876,7 @@ credentialsMode: Manual
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 240. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 239. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14933,7 +14927,7 @@ credentialsMode: Manual
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 241. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 240. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14984,7 +14978,7 @@ credentialsMode: Manual
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 242. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 241. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15091,7 +15085,7 @@ credentialsMode: Manual
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-aws-with-customizations-ipi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 243. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 242. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15185,7 +15179,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-aws-with-customizations-ipi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 244. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 243. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15230,7 +15224,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-aws-with-customizations-ipi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 245. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 244. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15275,7 +15269,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-aws-with-customizations-ipi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 246. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 245. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -16265,7 +16259,7 @@ You can use a private hosted zone from another account by sharing it with the ac
 machines.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 247. Required VPC components</caption>
+<caption class="title">Table 246. Required VPC components</caption>
 <colgroup>
 <col style="width: 13.3333%;">
 <col style="width: 46.6666%;">
@@ -16946,7 +16940,7 @@ it to install multiple clusters.</p>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 248. Minimum resource requirements</caption>
+<caption class="title">Table 247. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -19323,7 +19317,7 @@ You can use a private hosted zone from another account by sharing it with the ac
 machines.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 249. Required VPC components</caption>
+<caption class="title">Table 248. Required VPC components</caption>
 <colgroup>
 <col style="width: 13.3333%;">
 <col style="width: 46.6666%;">
@@ -19886,7 +19880,7 @@ cluster.</p>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 250. Minimum resource requirements</caption>
+<caption class="title">Table 249. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -22051,7 +22045,7 @@ You can use a private hosted zone from another account by sharing it with the ac
 machines.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 251. Required VPC components</caption>
+<caption class="title">Table 250. Required VPC components</caption>
 <colgroup>
 <col style="width: 13.3333%;">
 <col style="width: 46.6666%;">
@@ -22706,7 +22700,7 @@ it to install multiple clusters.</p>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 252. Minimum resource requirements</caption>
+<caption class="title">Table 251. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -25946,7 +25940,7 @@ AMI for an AWS region, such as <code>us-west-1</code>:</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 253. x86_64 RHCOS AMIs</caption>
+<caption class="title">Table 252. x86_64 RHCOS AMIs</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -27051,7 +27045,7 @@ AMI for an AWS region, such as <code>us-west-1</code>:</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 254. aarch64 RHCOS AMIs</caption>
+<caption class="title">Table 253. aarch64 RHCOS AMIs</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -31988,7 +31982,7 @@ AMI for an AWS region, such as <code>us-west-1</code>:</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 255. x86_64 RHCOS AMIs</caption>
+<caption class="title">Table 254. x86_64 RHCOS AMIs</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -33093,7 +33087,7 @@ AMI for an AWS region, such as <code>us-west-1</code>:</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 256. aarch64 RHCOS AMIs</caption>
+<caption class="title">Table 255. aarch64 RHCOS AMIs</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -36510,7 +36504,7 @@ pullSecret: '{"auths": ...}'</code></pre>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 257. Minimum resource requirements</caption>
+<caption class="title">Table 256. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -38800,7 +38794,7 @@ pullSecret: '{"auths": ...}'</code></pre>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 258. Minimum resource requirements</caption>
+<caption class="title">Table 257. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -42922,7 +42916,7 @@ You can use a private hosted zone from another account by sharing it with the ac
 machines.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 259. Required VPC components</caption>
+<caption class="title">Table 258. Required VPC components</caption>
 <colgroup>
 <col style="width: 13.3333%;">
 <col style="width: 46.6666%;">
@@ -43748,7 +43742,7 @@ platform:
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 260. Minimum resource requirements</caption>
+<caption class="title">Table 259. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -46014,7 +46008,7 @@ cluster.</p>
 <p>The following table summarizes the migration process by segmenting between the user-initiated steps in the process and the actions that the migration performs in response.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 261. Live migration of the cluster MTU</caption>
+<caption class="title">Table 260. Live migration of the cluster MTU</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -47769,7 +47763,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 20:22:23 +0100
+Last updated 2026-10-15 20:28:25 +0100
 </div>
 </div>
 <style>
