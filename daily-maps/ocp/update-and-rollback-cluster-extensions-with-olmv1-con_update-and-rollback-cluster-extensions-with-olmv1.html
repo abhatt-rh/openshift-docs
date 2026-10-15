@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="resolve-catalog-content-con_resolve-catalog-content" class="book toc2 toc-left navmap-has-right-toc">
+<body id="update-and-rollback-cluster-extensions-with-olmv1-con_update-and-rollback-cluster-extensions-with-olmv1" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -519,6 +519,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="oke_similarities_and_differences_evaluate-openshift-kubernetes-engine.html">OpenShift Kubernetes Engine and Red&#160;Hat OpenShift Container Platform comparison</a>
 </li>
 <li><a href="hosted-control-planes-overview_compare-openshift-deployment-models.html">Introduction to hosted control planes</a>
+</li>
+<li><a href="review-cluster-operators-con_review-cluster-operators.html">Review cluster Operators</a>
 </li>
 </ul>
 </li>
@@ -593,8 +595,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="installation-overview_understand-openshift-installation-architecture.html">The Red&#160;Hat OpenShift Container Platform installation</a>
 </li>
 <li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
 <li><a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a>
 </li>
@@ -894,8 +894,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_upgrade.html">Upgrade</a>
 
 <ul class="sectlevel2">
-<li><a href="update-and-rollback-cluster-extensions-con_update-and-rollback-cluster-extensions.html">Update and roll back cluster extensions</a>
-</li>
 <li><a href="about-updates_update-clusters-overview.html">Cluster update overview</a>
 </li>
 <li><a href="update-cluster-version-object_understand-openshift-updates.html">The ClusterVersion object</a>
@@ -1442,8 +1440,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_secure.html">Secure</a>
 
 <ul class="sectlevel2">
-<li><a href="control-user-access-to-extensions-con_control-user-access-to-extensions.html">Control user access to extensions</a>
-</li>
 <li><a href="manage-user-authentication-and-identity-providers-con_manage-user-authentication-and-identity-providers.html">Manage user authentication and identity providers</a>
 </li>
 <li><a href="secure-network-traffic-con_secure-network-traffic.html">Secure network traffic</a>
@@ -1701,8 +1697,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_extend.html">Extend</a>
 <ul class="sectlevel2">
-<li><a href="olmv1-about-catalogs_add-and-remove-catalogs.html">About catalogs in OLM v1</a>
-</li>
 <li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
 </li>
 <li><a href="nodes-containers-port-forwarding-about_configure-port-forwarding-to-pods.html">Understand port forwarding</a>
@@ -1725,15 +1719,55 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
-<li><a href="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog.html">About Operator installation from the software catalog</a>
-</li>
 <li><a href="extend-the-openshift-cli-with-plugins-intro_extend-the-openshift-cli-with-plugins.html">Extend the OpenShift CLI with plugins</a>
 </li>
 <li><a href="cli-manager-about_manage-cli-plugins-with-the-cli-manager.html">About the CLI Manager Operator</a>
 </li>
 <li><a href="nodes-pods-plugins-about_manage-kernel-modules-across-cluster-nodes-deploy-device-plugins-alongside-kernel-modules.html">Understand device plugins</a>
 </li>
-<li><a href="resolve-catalog-content-con_resolve-catalog-content.html"><span class="toc-current">Resolve catalog content</span></a>
+<li><a href="explore-cluster-extension-capabilities-con_explore-cluster-extension-capabilities.html">Understand cluster extensions with OLM v1</a>
+</li>
+<li><a href="check-cluster-extension-support-con_check-cluster-extension-support.html">Review supported cluster extensions with OLM v1</a>
+</li>
+<li><a href="install-cluster-extensions-with-olmv1-con_install-cluster-extensions-with-olmv1.html">Install cluster extensions with OLM v1</a>
+</li>
+<li><a href="configure-cluster-extensions-con_configure-cluster-extensions.html">Configure cluster extensions with OLM v1</a>
+</li>
+<li><a href="update-and-rollback-cluster-extensions-with-olmv1-con_update-and-rollback-cluster-extensions-with-olmv1.html"><span class="toc-current">Update and roll back cluster extensions with OLM v1</span></a>
+</li>
+<li><a href="remove-cluster-extensions-with-olmv1-con_remove-cluster-extensions-with-olmv1.html">Remove cluster extensions with OLM v1</a>
+</li>
+<li><a href="control-access-to-cluster-extension-resources-with-olmv1-con_control-access-to-cluster-extension-resources-with-olmv1.html">Control access to cluster extension resources with OLM v1</a>
+</li>
+<li><a href="monitor-cluster-extensions-with-olmv1-con_monitor-cluster-extensions-with-olmv1.html">Monitor cluster extensions with OLM v1</a>
+</li>
+<li><a href="troubleshoot-cluster-extensions-with-olmv1-con_troubleshoot-cluster-extensions-with-olmv1.html">Troubleshoot cluster extensions with OLM v1</a>
+</li>
+<li><a href="understand-olmv0-resources-con_understand-operator-lifecycle-manager-concepts-and-resources.html">Understand Operator lifecycle management with OLM (Classic)</a>
+</li>
+<li><a href="install-operators-with-olmv0-con_install-operators-with-olmv0.html">Install Operators with OLM (Classic)</a>
+</li>
+<li><a href="update-installed-operators-con_update-installed-operators.html">Update installed Operators with OLM (Classic)</a>
+</li>
+<li><a href="ocp-map-delete-operators-from-a-cluster-intro_delete-operators-from-a-cluster.html">Delete Operators with OLM (Classic)</a>
+</li>
+<li><a href="ocp-map-create-applications-from-installed-operators-intro_create-applications-from-installed-operators.html">Create applications from Operators installed with OLM (Classic)</a>
+</li>
+<li><a href="ocp-map-configure-operator-lifecycle-manager-features-intro_configure-operator-lifecycle-manager-features.html">Configure OLM (Classic) features</a>
+</li>
+<li><a href="ocp-map-configure-operator-lifecycle-manager-proxy-support-intro_configure-operator-lifecycle-manager-proxy-support.html">Configure Operator proxy support with OLM (Classic)</a>
+</li>
+<li><a href="ocp-map-view-operator-status-intro_view-operator-status.html">Monitor Operators with OLM (Classic)</a>
+</li>
+<li><a href="ocp-map-troubleshoot-operator-issues-intro_troubleshoot-operator-issues.html">Troubleshoot Operators with OLM (Classic)</a>
+</li>
+<li><a href="prepare-catalogs-con_prepare-catalogs.html">Prepare catalogs</a>
+</li>
+<li><a href="manage-catalogs-with-olmv1-con_manage-catalogs-with-olmv1.html">Manage catalogs with OLM v1</a>
+</li>
+<li><a href="manage-catalogs-with-olmv0-con_manage-catalogs-with-olmv0.html">Manage catalogs with OLM (Classic)</a>
+</li>
+<li><a href="extend-the-kubernetes-api-with-custom-resource-definitions-con_crd-extending-api-with-crds.html">Extend the Kubernetes API with custom resource definitions</a>
 </li>
 </ul>
 </li>
@@ -1957,133 +1991,968 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#olmv1-catalog-selection-by-name_resolve-catalog-content">Catalog selection by name</a></li><li class="level-4"><a href="#olmv1-catalog-selection-by-labels-or-exp_resolve-catalog-content">Catalog selection by labels or expressions</a></li><li class="level-4"><a href="#olmv1-catalog-exclusion-by-labels-or-expressions_resolve-catalog-content">Catalog exclusion by labels or expressions</a></li><li class="level-4"><a href="#olmv1-catalog-exclusion-by-priority_resolve-catalog-content">Catalog selection by priority</a></li><li class="level-4"><a href="#olmv1-troubleshooting-catalog-selection-errors_resolve-catalog-content">Troubleshoot catalog selection errors</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#olmv1-version-range-support_update-and-rollback-cluster-extensions-with-olmv1">Support for version ranges</a></li><li class="level-4"><a href="#olmv1-version-range-comparisons_update-and-rollback-cluster-extensions-with-olmv1">Version comparison strings</a></li><li class="level-4"><a href="#olmv1-about-target-versions_update-and-rollback-cluster-extensions-with-olmv1">Example custom resources (CRs) that specify a target version</a></li><li class="level-4"><a href="#olmv1-forcing-an-update-or-rollback_update-and-rollback-cluster-extensions-with-olmv1">Forcing an update or rollback</a></li><li class="level-5"><a href="#olmv1-blocked-cluster-updates_update-and-rollback-cluster-extensions-with-olmv1">Cluster updates blocked by olm cluster Operator</a></li><li class="level-4"><a href="#olmv1-updating-an-operator_update-and-rollback-cluster-extensions-with-olmv1">Updating a cluster extension</a></li><li class="level-4"><a href="#manage-crd-upgrade-safety-con_manage-crd-upgrade-safety">Manage custom resource definition upgrade safety</a></li><li class="level-5"><a href="#prohibited-crd-upgrades_manage-crd-upgrade-safety">Prohibited CRD upgrade changes</a></li><li class="level-5"><a href="#allowed-crd-changes_manage-crd-upgrade-safety">Allowed CRD upgrade changes</a></li><li class="level-5"><a href="#disabling-crd-preflight_manage-crd-upgrade-safety">Disabling the CRD upgrade safety preflight check</a></li><li class="level-5"><a href="#examples-unsafe_manage-crd-upgrade-safety">Examples of unsafe CRD changes</a></li><li class="level-6"><a href="#scope-change_manage-crd-upgrade-safety">Scope change</a></li><li class="level-6"><a href="#stored-version-removal_manage-crd-upgrade-safety">Removal of a stored version</a></li><li class="level-6"><a href="#removal-existing-field_manage-crd-upgrade-safety">Removal of an existing field</a></li><li class="level-6"><a href="#addition-required-field_manage-crd-upgrade-safety">Addition of a required field</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="resolve-catalog-content-con_resolve-catalog-content">Resolve catalog content</h3>
+<h3 id="update-and-rollback-cluster-extensions-with-olmv1-con_update-and-rollback-cluster-extensions-with-olmv1">Update and roll back cluster extensions with OLM v1</h3>
 <div class="paragraph _abstract">
-<p>Operator Lifecycle Manager (OLM) v1 uses catalog selection to resolve which content to install for a cluster extension. You can select catalogs by name or label, exclude catalogs with match expressions, and set priority when more than one catalog provides the requested package.</p>
+<p>Operator Lifecycle Manager (OLM) v1 updates a cluster extension when a new version satisfying the <code>ClusterExtension</code> version range becomes available. You can pin a version, adjust the range, or force an update or rollback.</p>
 </div>
 <div class="sect3">
-<h4 id="olmv1-catalog-selection-by-name_resolve-catalog-content">Catalog selection by name</h4>
+<h4 id="olmv1-version-range-support_update-and-rollback-cluster-extensions-with-olmv1">Support for version ranges</h4>
 <div class="paragraph _abstract">
-<p>When a catalog is added to a cluster, a label is created by using the value of the <code>metadata.name</code> field of the catalog custom resource (CR). In the CR of an extension, you can specify the catalog name by using the <code>spec.source.catalog.selector.matchLabels</code> field.</p>
+<p>In Operator Lifecycle Manager (OLM) v1, you can specify a version range in an Operator or extension&#8217;s custom resource (CR). OLM v1 installs or updates to the latest version that can be resolved within the specified range.</p>
 </div>
 <div class="paragraph">
-<p>The value of the <code>matchLabels</code> field uses the following format:</p>
+<p>The resolved version workflow includes the following steps:</p>
 </div>
-<div class="listingblock">
-<div class="title">Example label derived from the <code>metadata.name</code> field</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterExtension
-metadata:
-  name: &lt;example_extension&gt;
-  labels:
-    olm.operatorframework.io/metadata.name: &lt;example_extension&gt;
-...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>&lt;example_extension&gt;</code> value is the label derived from the <code>metadata.name</code> field and automatically added when the catalog is applied.</p>
-</div>
-<div class="paragraph">
-<p>The following example resolves the <code>&lt;example_extension&gt;-operator</code> package from a catalog with the <code>openshift-redhat-operators</code> label:</p>
-</div>
-<div class="listingblock">
-<div class="title">Example extension CR</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterExtension
-metadata:
-  name: &lt;example_extension&gt;
-spec:
-  namespace: &lt;example_namespace&gt;
-  serviceAccount:
-    name: &lt;example_extension&gt;-installer
-  source:
-    sourceType: Catalog
-    catalog:
-      packageName: &lt;example_extension&gt;-operator
-      selector:
-        matchLabels:
-          olm.operatorframework.io/metadata.name: openshift-redhat-operators</code></pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The resolved version is the latest version of the Operator that satisfies the constraints of the Operator and the environment.</p>
+</li>
+<li>
+<p>An Operator update within the specified range is automatically installed if it is resolved successfully.</p>
+</li>
+<li>
+<p>An update is not installed if it is outside of the specified range or if it cannot be resolved successfully.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="olmv1-catalog-selection-by-labels-or-exp_resolve-catalog-content">Catalog selection by labels or expressions</h4>
+<h4 id="olmv1-version-range-comparisons_update-and-rollback-cluster-extensions-with-olmv1">Version comparison strings</h4>
 <div class="paragraph _abstract">
-<p>You can add metadata to a catalog by using labels in the custom resource (CR) of a cluster catalog. You can then filter catalog selection by specifying the assigned labels or using expressions in the CR of the cluster extension.</p>
+<p>To define a version range for a cluster extension, add a comparison string to the custom resource (CR) of the extension.</p>
 </div>
 <div class="paragraph">
-<p>The following cluster catalog CR adds the <code>example.com/support</code> label with the value of <code>true</code> to the <code>catalog-a</code> cluster catalog:</p>
+<p>A comparison string is a list of space- or comma-separated values and one or more comparison operators enclosed in double quotation marks (<code>"</code>). You can add another comparison string by including an <code>OR</code>, or double vertical bar (<code>||</code>), comparison operator between the strings.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 906. Basic comparisons</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Comparison operator</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>=</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equal to</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>!=</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not equal to</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Greater than</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Less than</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Greater than or equal to</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;=</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Less than or equal to</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>You can specify a version range in an Operator or extension&#8217;s CR by using a range comparison similar to the following example:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example cluster catalog CR with labels</div>
+<div class="title">Example version range comparison</div>
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterCatalog
-metadata:
-  name: catalog-a
-  labels:
-    example.com/support: "true"
-spec:
-  source:
-    type: Image
-    image:
-      ref: quay.io/example/content-management-a:latest</code></pre>
+  kind: ClusterExtension
+  metadata:
+    name: &lt;clusterextension_name&gt;
+  spec:
+    namespace: &lt;installed_namespace&gt;
+    serviceAccount:
+      name: &lt;service_account_installer_name&gt;
+    source:
+      sourceType: Catalog
+      catalog:
+        packageName: &lt;package_name&gt;
+        version: "&gt;=1.11, &lt;1.13"</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The following cluster extension CR uses the <code>matchLabels</code> selector to select catalogs with the <code>example.com/support</code> label and the value of <code>true</code>:</p>
+<p>You can use wildcard characters in all types of comparison strings. OLM v1 accepts <code>x</code>, <code>X</code>, and asterisks (<code>*</code>) as wildcard characters. When you use a wildcard character with the equal sign (<code>=</code>) comparison operator, you define a comparison at the patch or minor version level.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 907. Example wildcard characters in comparison strings</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Wildcard comparison</th>
+<th class="tableblock halign-left valign-top">Matching string</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1.11.x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=1.11.0, &lt;1.12.0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=1.12.X</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=1.12.0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;=2.x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;3</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>*</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=0.0.0</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>You can make patch release comparisons by using the tilde (<code>~</code>) comparison operator. Patch release comparisons specify a minor version up to the next major version.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 908. Example patch release comparisons</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Patch release comparison</th>
+<th class="tableblock halign-left valign-top">Matching string</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>~1.11.0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=1.11.0, &lt;1.12.0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>~1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=1, &lt;2</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>~1.12</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=1.12, &lt;1.13</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>~1.12.x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=1.12.0, &lt;1.13.0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>~1.x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=1, &lt;2</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>You can use the caret (<code>^</code>) comparison operator to make a comparison for a major release. If you make a major release comparison before the first stable release is published, the minor versions define the API&#8217;s level of stability. In the semantic versioning (semver) specification, the first stable release is published as the <code>1.0.0</code> version.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 909. Example major release comparisons</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Major release comparison</th>
+<th class="tableblock halign-left valign-top">Matching string</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>^0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=0.0.0, &lt;1.0.0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>^0.0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=0.0.0, &lt;0.1.0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>^0.0.3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=0.0.3, &lt;0.0.4</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>^0.2</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=0.2.0, &lt;0.3.0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>^0.2.3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=0.2.3, &lt;0.3.0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>^1.2.x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;= 1.2.0, &lt; 2.0.0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>^1.2.3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;= 1.2.3, &lt; 2.0.0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>^2.x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;= 2.0.0, &lt; 3</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>^2.3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;= 2.3, &lt; 3</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="olmv1-about-target-versions_update-and-rollback-cluster-extensions-with-olmv1">Example custom resources (CRs) that specify a target version</h4>
+<div class="paragraph _abstract">
+<p>In Operator Lifecycle Manager (OLM) v1, cluster administrators can declaratively set the target version of an Operator or extension in the custom resource (CR).</p>
+</div>
+<div class="paragraph">
+<p>You can define a target version by specifying any of the following fields:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Channel</p>
+</li>
+<li>
+<p>Version number</p>
+</li>
+<li>
+<p>Version range</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you specify a channel in the CR, OLM v1 installs the latest version of the Operator or extension that can be resolved within the specified channel. When updates are published to the specified channel, OLM v1 automatically updates to the latest release that can be resolved from the channel.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example cluster extension CR with <code>matchLabels</code> selector</div>
+<div class="title">Example CR with a specified channel</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
+  kind: ClusterExtension
+  metadata:
+    name: &lt;clusterextension_name&gt;
+  spec:
+    namespace: &lt;installed_namespace&gt;
+    serviceAccount:
+      name: &lt;service_account_installer_name&gt;
+    source:
+      sourceType: Catalog
+      catalog:
+        packageName: &lt;package_name&gt;
+        channels:
+          - latest</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Installs the latest release that can be resolved from the specified channel. Updates to the channel are automatically installed. Specify the value of the <code>channels</code> parameter as an array. This field is optional</p>
+</div>
+<div class="paragraph">
+<p>If you specify the Operator or extension&#8217;s target version in the CR, OLM v1 installs the specified version. When the target version is specified in the CR, OLM v1 does not change the target version when updates are published to the catalog.</p>
+</div>
+<div class="paragraph">
+<p>If you want to update the version of the Operator that is installed on the cluster, you must manually edit the Operator&#8217;s CR. Specifying an Operator&#8217;s target version pins the Operator&#8217;s version to the specified release.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example CR with the target version specified</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
+  kind: ClusterExtension
+  metadata:
+    name: &lt;clusterextension_name&gt;
+  spec:
+    namespace: &lt;installed_namespace&gt;
+    serviceAccount:
+      name: &lt;service_account_installer_name&gt;
+    source:
+      sourceType: Catalog
+      catalog:
+        packageName: &lt;package_name&gt;
+        version: "1.11.1"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Specifies the target version. If you want to update the version of the Operator or extension that is installed, you must manually update this field the CR to the desired target version. This field is optional.</p>
+</div>
+<div class="paragraph">
+<p>If you want to define a range of acceptable versions for an Operator or extension, you can specify a version range by using a comparison string. When you specify a version range, OLM v1 installs the latest version of an Operator or extension that can be resolved by the Operator Controller.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example CR with a version range specified</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
+  kind: ClusterExtension
+  metadata:
+    name: &lt;clusterextension_name&gt;
+  spec:
+    namespace: &lt;installed_namespace&gt;
+    serviceAccount:
+      name: &lt;service_account_installer_name&gt;
+    source:
+      sourceType: Catalog
+      catalog:
+        packageName: &lt;package_name&gt;
+        version: "&gt;1.11.1"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Specifies that the desired version range is greater than version <code>1.11.1</code>. This field is optional.</p>
+</div>
+<div class="paragraph">
+<p>After you create or update a CR, apply the configuration file by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="title">Command syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f &lt;extension_name&gt;.yaml</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="olmv1-forcing-an-update-or-rollback_update-and-rollback-cluster-extensions-with-olmv1">Forcing an update or rollback</h4>
+<div class="paragraph _abstract">
+<p>OLM v1 does not support automatic updates to the next major version or rollbacks to an earlier version. If you want to perform a major version update or rollback, you must verify and force the update manually.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You must verify the consequences of forcing a manual update or rollback. Failure to verify a forced update or rollback might have catastrophic consequences such as data loss.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have a catalog installed.</p>
+</li>
+<li>
+<p>You have an Operator or extension installed.</p>
+</li>
+<li>
+<p>You have created a service account and assigned enough role-based access controls (RBAC) to install, update, and manage the extension you want to install. For more information, see <em>Creating a service account</em>.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Edit the custom resource (CR) of your Operator or extension as shown in the following example:</p>
+<div class="listingblock">
+<div class="title">Example CR</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
+  kind: ClusterExtension
+  metadata:
+    name: &lt;clusterextension_name&gt;
+  spec:
+    namespace: &lt;installed_namespace&gt;
+    serviceAccount:
+      name: &lt;service_account_installer_name&gt;
+    source:
+      sourceType: Catalog
+      catalog:
+        packageName: &lt;package_name&gt;
+        channels:
+          - &lt;channel_name&gt;
+        version: &lt;version_or_version_range&gt;
+        upgradeConstraintPolicy: SelfCertified</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.namespace</code></dt>
+<dd>
+<p>Specifies the namespace where you want the bundle installed, such as <code>pipelines</code> or <code>my-extension</code>. Extensions are still cluster-scoped and might contain resources that are installed in different namespaces.</p>
+</dd>
+<dt class="hdlist1"><code>spec.serviceAccount.name</code></dt>
+<dd>
+<p>Specifies the name of the service account you created to install, update, and manage your extension.</p>
+</dd>
+<dt class="hdlist1"><code>spec.source.catalog.channels</code></dt>
+<dd>
+<p>Specifies channel names as an array, such as <code>pipelines-1.14</code> or <code>latest</code>. This field is optional.</p>
+</dd>
+<dt class="hdlist1"><code>spec.source.catalog.version</code></dt>
+<dd>
+<p>Specifies the version or version range, such as <code>1.14.0</code>, <code>1.14.x</code>, or <code>&gt;=1.16</code>, of the package you want to install or update. This field is optional.</p>
+</dd>
+<dt class="hdlist1"><code>spec.source.catalog.upgradeConstraintPolicy</code></dt>
+<dd>
+<p>Specifies the upgrade constraint policy. To force an update or rollback, set the field to <code>SelfCertified</code>. If unspecified, the default setting is <code>CatalogProvided</code>. The <code>CatalogProvided</code> setting only updates if the new version satisfies the upgrade constraints set by the package author. This field is optional.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Apply the changes to your Operator or extensions CR by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f &lt;extension_name&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="sect4">
+<h5 id="olmv1-blocked-cluster-updates_update-and-rollback-cluster-extensions-with-olmv1">Cluster updates blocked by olm cluster Operator</h5>
+<div class="paragraph _abstract">
+<p>If an installed Operator&#8217;s <code>olm.maxOpenShiftVersion</code> field is set and a cluster administrator attempts to update their cluster to a version that the Operator does not provide a valid update path for, the cluster update fails and the <code>Upgradeable</code> status for the <code>olm</code> cluster Operator is set to <code>False</code>.</p>
+</div>
+<div class="paragraph">
+<p>To resolve the issue, the cluster administrator must either update the installed Operator to a version with a valid update path, if one is available, or they must uninstall the Operator. Then, they can attempt the cluster update again.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="olmv1-updating-an-operator_update-and-rollback-cluster-extensions-with-olmv1">Updating a cluster extension</h4>
+<div class="paragraph _abstract">
+<p>You can update your cluster extension or Operator by manually editing the custom resource (CR) and applying the changes.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have an Operator or extension installed.</p>
+</li>
+<li>
+<p>You have installed the <code>jq</code> CLI tool.</p>
+</li>
+<li>
+<p>You have installed the <code>opm</code> CLI tool.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Inspect a package for channel and version information from a local copy of your catalog file by completing the following steps:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Get a list of channels from a selected package by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm render &lt;catalog_registry_url&gt;:&lt;tag&gt; \
+  | jq -s '.[] | select( .schema == "olm.channel" ) \
+  | select( .package == "openshift-pipelines-operator-rh") | .name'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example command</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm render registry.redhat.io/redhat/redhat-operator-index:v{product-version} \
+  | jq -s '.[] | select( .schema == "olm.channel" ) \
+  | select( .package == "openshift-pipelines-operator-rh") | .name'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">"latest"
+"pipelines-1.14"
+"pipelines-1.15"
+"pipelines-1.16"
+"pipelines-1.17"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Get a list of the versions published in a channel by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm render &lt;catalog_registry_url&gt;:&lt;tag&gt; \
+  | jq -s '.[] | select( .package == "&lt;package_name&gt;" ) \
+  | select( .schema == "olm.channel" ) \
+  | select( .name == "&lt;channel_name&gt;" ) | .entries \
+  | .[] | .name'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example command</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm render registry.redhat.io/redhat/redhat-operator-index:v{product-version} \
+  | jq -s '.[] | select( .package == "openshift-pipelines-operator-rh" ) \
+  | select( .schema == "olm.channel" ) | select( .name == "latest" ) \
+  | .entries | .[] | .name'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">"openshift-pipelines-operator-rh.v1.15.0"
+"openshift-pipelines-operator-rh.v1.16.0"
+"openshift-pipelines-operator-rh.v1.17.0"
+"openshift-pipelines-operator-rh.v1.17.1"</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Find out what version or channel is specified in your Operator or extension&#8217;s CR by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusterextension &lt;operator_name&gt; -o yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example command</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusterextension pipelines-operator -o yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">apiVersion: v1
+items:
+- apiVersion: olm.operatorframework.io/v1
+  kind: ClusterExtension
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"olm.operatorframework.io/v1","kind":"ClusterExtension","metadata":{"annotations":{},"name":"pipes"},"spec":{"namespace":"pipelines","serviceAccount":{"name":"pipelines-installer"},"source":{"catalog":{"packageName":"openshift-pipelines-operator-rh","version":"1.14.x"},"sourceType":"Catalog"}}}
+    creationTimestamp: "2025-02-18T21:48:13Z"
+    finalizers:
+    - olm.operatorframework.io/cleanup-unpack-cache
+    - olm.operatorframework.io/cleanup-contentmanager-cache
+    generation: 1
+    name: pipelines-operator
+    resourceVersion: "72725"
+    uid: e18b13fb-a96d-436f-be75-a9a0f2b07993
+  spec:
+    namespace: pipelines
+    serviceAccount:
+      name: pipelines-installer
+    source:
+      catalog:
+        packageName: openshift-pipelines-operator-rh
+        upgradeConstraintPolicy: CatalogProvided
+        version: 1.14.x
+      sourceType: Catalog
+  status:
+    conditions:
+    - lastTransitionTime: "2025-02-18T21:48:13Z"
+      message: ""
+      observedGeneration: 1
+      reason: Deprecated
+      status: "False"
+      type: Deprecated
+    - lastTransitionTime: "2025-02-18T21:48:13Z"
+      message: ""
+      observedGeneration: 1
+      reason: Deprecated
+      status: "False"
+      type: PackageDeprecated
+    - lastTransitionTime: "2025-02-18T21:48:13Z"
+      message: ""
+      observedGeneration: 1
+      reason: Deprecated
+      status: "False"
+      type: ChannelDeprecated
+    - lastTransitionTime: "2025-02-18T21:48:13Z"
+      message: ""
+      observedGeneration: 1
+      reason: Deprecated
+      status: "False"
+      type: BundleDeprecated
+    - lastTransitionTime: "2025-02-18T21:48:16Z"
+      message: Installed bundle registry.redhat.io/openshift-pipelines/pipelines-operator-bundle@sha256:f7b19ce26be742c4aaa458d37bc5ad373b5b29b20aaa7d308349687d3cbd8838
+        successfully
+      observedGeneration: 1
+      reason: Succeeded
+      status: "True"
+      type: Installed
+    - lastTransitionTime: "2025-02-18T21:48:16Z"
+      message: desired state reached
+      observedGeneration: 1
+      reason: Succeeded
+      status: "True"
+      type: Progressing
+    install:
+      bundle:
+        name: openshift-pipelines-operator-rh.v1.14.5
+        version: 1.14.5
+kind: List
+metadata:
+  resourceVersion: ""</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Edit your CR by using one of the following methods:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If you want to pin your Operator or extension to specific version, such as <code>1.15.0</code>, edit your CR similar to the following example:</p>
+<div class="listingblock">
+<div class="title">Example <code>pipelines-operator.yaml</code> CR</div>
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
 kind: ClusterExtension
 metadata:
-  name: &lt;example_extension&gt;
+  name: pipelines-operator
 spec:
-  namespace: &lt;example_namespace&gt;
+  namespace: pipelines
   serviceAccount:
-    name: &lt;example_extension&gt;-installer
+    name: pipelines-installer
   source:
     sourceType: Catalog
     catalog:
-      packageName: &lt;example_extension&gt;-operator
-      selector:
-        matchLabels:
-          example.com/support: "true"</code></pre>
+      packageName: openshift-pipelines-operator-rh
+      version: "1.15.0"</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>You can use the <code>matchExpressions</code> field to perform more complex filtering for labels. The following cluster extension CR selects catalogs with the <code>example.com/support</code> label and a value of <code>production</code> or <code>supported</code>:</p>
+<p>This example updates the version from <code>1.14.x</code> to <code>1.15.0</code>.</p>
 </div>
+</li>
+<li>
+<p>If you want to define a range of acceptable update versions, edit your CR similar to the following example:</p>
 <div class="listingblock">
-<div class="title">Example cluster extension CR with <code>matchExpression</code> selector</div>
+<div class="title">Example CR with a version range specified</div>
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
 kind: ClusterExtension
 metadata:
-  name: &lt;example_extension&gt;
+  name: pipelines-operator
 spec:
-  namespace: &lt;example_namespace&gt;
+  namespace: pipelines
   serviceAccount:
-    name: &lt;example_extension&gt;-installer
+    name: pipelines-installer
   source:
     sourceType: Catalog
     catalog:
-      packageName: &lt;example_extension&gt;-operator
-      selector:
-        matchExpressions:
-          - key: example.com/support
-            operator: In
-            values:
-              - "production"
-              - "supported"</code></pre>
+      packageName: openshift-pipelines-operator-rh
+      version: "&gt;1.15, &lt;1.17"</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>The <code>spec.source.catalog.version</code> value specifies that the desired version range is greater than version <code>1.15</code> and less than <code>1.17</code>.</p>
+</div>
+</li>
+<li>
+<p>If you want to update to the latest version that can be resolved from a channel, edit your CR similar to the following example:</p>
+<div class="listingblock">
+<div class="title">Example CR with a specified channel</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
+kind: ClusterExtension
+metadata:
+  name: pipelines-operator
+spec:
+  namespace: pipelines
+  serviceAccount:
+    name: pipelines-installer
+  source:
+    sourceType: Catalog
+    catalog:
+      packageName: openshift-pipelines-operator-rh
+      channels:
+        - latest</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>spec.source.catalog.channels</code> value installs the latest release that can be resolved from the specified channel. Updates to the channel are automatically installed. Enter values as an array.</p>
+</div>
+</li>
+<li>
+<p>If you want to specify a channel and version or version range, edit your CR similar to the following example:</p>
+<div class="listingblock">
+<div class="title">Example CR with a specified channel and version range</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
+kind: ClusterExtension
+metadata:
+  name: pipelines-operator
+spec:
+  namespace: pipelines
+  serviceAccount:
+    name: pipelines-installer
+  source:
+    sourceType: Catalog
+    catalog:
+      packageName: openshift-pipelines-operator-rh
+      channels:
+        - latest
+      version: "&lt;1.16"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For more information, see "Example custom resources (CRs) that specify a target version".</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Apply the update to the cluster by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f pipelines-operator.yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">clusterextension.olm.operatorframework.io/pipelines-operator configured</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Verify that the channel and version updates have been applied by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusterextension pipelines-operator -o yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
+kind: ClusterExtension
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"olm.operatorframework.io/v1","kind":"ClusterExtension","metadata":{"annotations":{},"name":"pipes"},"spec":{"namespace":"pipelines","serviceAccount":{"name":"pipelines-installer"},"source":{"catalog":{"packageName":"openshift-pipelines-operator-rh","version":"\u003c1.16"},"sourceType":"Catalog"}}}
+  creationTimestamp: "2025-02-18T21:48:13Z"
+  finalizers:
+  - olm.operatorframework.io/cleanup-unpack-cache
+  - olm.operatorframework.io/cleanup-contentmanager-cache
+  generation: 2
+  name: pipes
+  resourceVersion: "90693"
+  uid: e18b13fb-a96d-436f-be75-a9a0f2b07993
+spec:
+  namespace: pipelines
+  serviceAccount:
+    name: pipelines-installer
+  source:
+    catalog:
+      packageName: openshift-pipelines-operator-rh
+      upgradeConstraintPolicy: CatalogProvided
+      version: &lt;1.16
+    sourceType: Catalog
+status:
+  conditions:
+  - lastTransitionTime: "2025-02-18T21:48:13Z"
+    message: ""
+    observedGeneration: 2
+    reason: Deprecated
+    status: "False"
+    type: Deprecated
+  - lastTransitionTime: "2025-02-18T21:48:13Z"
+    message: ""
+    observedGeneration: 2
+    reason: Deprecated
+    status: "False"
+    type: PackageDeprecated
+  - lastTransitionTime: "2025-02-18T21:48:13Z"
+    message: ""
+    observedGeneration: 2
+    reason: Deprecated
+    status: "False"
+    type: ChannelDeprecated
+  - lastTransitionTime: "2025-02-18T21:48:13Z"
+    message: ""
+    observedGeneration: 2
+    reason: Deprecated
+    status: "False"
+    type: BundleDeprecated
+  - lastTransitionTime: "2025-02-18T21:48:16Z"
+    message: Installed bundle registry.redhat.io/openshift-pipelines/pipelines-operator-bundle@sha256:8a593c1144709c9aeffbeb68d0b4b08368f528e7bb6f595884b2474bcfbcafcd
+      successfully
+    observedGeneration: 2
+    reason: Succeeded
+    status: "True"
+    type: Installed
+  - lastTransitionTime: "2025-02-18T21:48:16Z"
+    message: desired state reached
+    observedGeneration: 2
+    reason: Succeeded
+    status: "True"
+    type: Progressing
+  install:
+    bundle:
+      name: openshift-pipelines-operator-rh.v1.15.2
+      version: 1.15.2</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Troubleshooting</div>
+<ul>
+<li>
+<p>If you specify a target version or channel that is deprecated or does not exist, you can run the following command to check the status of your extension:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusterextension &lt;operator_name&gt; -o yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output for a version that does not exist</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">apiVersion: olm.operatorframework.io/v1
+kind: ClusterExtension
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"olm.operatorframework.io/v1","kind":"ClusterExtension","metadata":{"annotations":{},"name":"pipes"},"spec":{"namespace":"pipelines","serviceAccount":{"name":"pipelines-installer"},"source":{"catalog":{"packageName":"openshift-pipelines-operator-rh","version":"9.x"},"sourceType":"Catalog"}}}
+  creationTimestamp: "2025-02-18T21:48:13Z"
+  finalizers:
+  - olm.operatorframework.io/cleanup-unpack-cache
+  - olm.operatorframework.io/cleanup-contentmanager-cache
+  generation: 3
+  name: pipes
+  resourceVersion: "93334"
+  uid: e18b13fb-a96d-436f-be75-a9a0f2b07993
+spec:
+  namespace: pipelines
+  serviceAccount:
+    name: pipelines-installer
+  source:
+    catalog:
+      packageName: openshift-pipelines-operator-rh
+      upgradeConstraintPolicy: CatalogProvided
+      version: 9.x
+    sourceType: Catalog
+status:
+  conditions:
+  - lastTransitionTime: "2025-02-18T21:48:13Z"
+    message: ""
+    observedGeneration: 2
+    reason: Deprecated
+    status: "False"
+    type: Deprecated
+  - lastTransitionTime: "2025-02-18T21:48:13Z"
+    message: ""
+    observedGeneration: 2
+    reason: Deprecated
+    status: "False"
+    type: PackageDeprecated
+  - lastTransitionTime: "2025-02-18T21:48:13Z"
+    message: ""
+    observedGeneration: 2
+    reason: Deprecated
+    status: "False"
+    type: ChannelDeprecated
+  - lastTransitionTime: "2025-02-18T21:48:13Z"
+    message: ""
+    observedGeneration: 2
+    reason: Deprecated
+    status: "False"
+    type: BundleDeprecated
+  - lastTransitionTime: "2025-02-18T21:48:16Z"
+    message: Installed bundle registry.redhat.io/openshift-pipelines/pipelines-operator-bundle@sha256:8a593c1144709c9aeffbeb68d0b4b08368f528e7bb6f595884b2474bcfbcafcd
+      successfully
+    observedGeneration: 3
+    reason: Succeeded
+    status: "True"
+    type: Installed
+  - lastTransitionTime: "2025-02-18T21:48:16Z"
+    message: 'error upgrading from currently installed version "1.15.2": no bundles
+      found for package "openshift-pipelines-operator-rh" matching version "9.x"'
+    observedGeneration: 3
+    reason: Retrying
+    status: "True"
+    type: Progressing
+  install:
+    bundle:
+      name: openshift-pipelines-operator-rh.v1.15.2
+      version: 1.15.2</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="manage-crd-upgrade-safety-con_manage-crd-upgrade-safety">Manage custom resource definition upgrade safety</h4>
+<div class="paragraph _abstract">
+<p>When you update a custom resource definition (CRD) provided by a cluster extension, Operator Lifecycle Manager (OLM) v1 runs a CRD upgrade safety preflight check to ensure compatibility with earlier versions.</p>
+</div>
+<div class="paragraph">
+<p>The CRD update must pass the validation checks before the change can progress on a cluster.</p>
+</div>
+<div class="sect4">
+<h5 id="prohibited-crd-upgrades_manage-crd-upgrade-safety">Prohibited CRD upgrade changes</h5>
+<div class="paragraph _abstract">
+<p>To avoid making a modification that does not validate, review the custom resource definiton (CRD) changes that are blocked by the upgrade safety preflight check.</p>
+</div>
+<div class="paragraph">
+<p>The CRD upgrade safety preflight check blocks an upgrade if it detects any of the following changes to an existing CRD:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Adding a new required field to an existing version</p>
+</li>
+<li>
+<p>Removing an existing field from an existing version</p>
+</li>
+<li>
+<p>Changing an existing field type in an existing version</p>
+</li>
+<li>
+<p>Adding a default value to a field that did not previously have one</p>
+</li>
+<li>
+<p>Changing the default value of an existing field</p>
+</li>
+<li>
+<p>Removing the default value of an existing field</p>
+</li>
+<li>
+<p>Adding enum restrictions to a field that did not previously have them</p>
+</li>
+<li>
+<p>Removing existing enum values from an existing field</p>
+</li>
+<li>
+<p>Increasing the minimum value of an existing field in an existing version</p>
+</li>
+<li>
+<p>Decreasing the maximum value of an existing field in an existing version</p>
+</li>
+<li>
+<p>Adding minimum or maximum constraints to a field that did not previously have them</p>
+</li>
+</ul>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2093,108 +2962,92 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If you use both the <code>matchLabels</code> and <code>matchExpressions</code> fields, the selected catalog must satisfy all specified criteria.</p>
+<p>Rules for minimum and maximum values apply to the <code>minimum</code>, <code>minLength</code>, <code>minProperties</code>, <code>minItems</code>, <code>maximum</code>, <code>maxLength</code>, <code>maxProperties</code>, and <code>maxItems</code> constraints.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The preflight check also blocks an upgrade for the following structural changes, which are handled by the Kubernetes API server:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Changing the CRD scope between <code>Cluster</code> and <code>Namespace</code></p>
+</li>
+<li>
+<p>Removing an existing stored version of the CRD</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the CRD upgrade safety preflight check detects any prohibited change, it logs an error for each violation.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Tip">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If a CRD change is neither explicitly allowed nor categorized as a known prohibited change, the preflight check blocks the upgrade and logs an "unknown change" error.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="olmv1-catalog-exclusion-by-labels-or-expressions_resolve-catalog-content">Catalog exclusion by labels or expressions</h4>
+<div class="sect4">
+<h5 id="allowed-crd-changes_manage-crd-upgrade-safety">Allowed CRD upgrade changes</h5>
 <div class="paragraph _abstract">
-<p>You can exclude catalogs by using match expressions on metadata with the <code>NotIn</code> or <code>DoesNotExist</code> operators.</p>
+<p>Reference which custom resource definition (CRD) changes are compatible with earlier versions to avoid unexpected halts during the upgrade safety preflight check.</p>
 </div>
 <div class="paragraph">
-<p>The following custom resources (CRs) add an <code>example.com/testing</code> label to the <code>unwanted-catalog-1</code> and <code>unwanted-catalog-2</code> cluster catalogs:</p>
+<p>The following CRD changes are compatible with earlier versions and pass the upgrade safety preflight check:</p>
 </div>
-<div class="listingblock">
-<div class="title">Example cluster catalog CR</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterCatalog
-metadata:
-  name: unwanted-catalog-1
-  labels:
-    example.com/testing: "true"
-spec:
-  source:
-    type: Image
-    image:
-      ref: quay.io/example/content-management-a:latest</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example cluster catalog CR</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterCatalog
-metadata:
-  name: unwanted-catalog-2
-  labels:
-    example.com/testing: "true"
-spec:
-  source:
-    type: Image
-    image:
-      ref: quay.io/example/content-management-b:latest</code></pre>
+<div class="ulist">
+<ul>
+<li>
+<p>Adding new values to an existing enum field</p>
+</li>
+<li>
+<p>Changing an existing required field to optional in an existing version</p>
+</li>
+<li>
+<p>Decreasing the minimum value of an existing field in an existing version</p>
+</li>
+<li>
+<p>Increasing the maximum value of an existing field in an existing version</p>
+</li>
+<li>
+<p>Adding a new version of the CRD without modifying existing versions</p>
+</li>
+</ul>
 </div>
 </div>
-<div class="paragraph">
-<p>The following cluster extension CR excludes selection from the <code>unwanted-catalog-1</code> catalog:</p>
-</div>
-<div class="listingblock">
-<div class="title">Example cluster extension CR that excludes a specific catalog</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterExtension
-metadata:
-  name: &lt;example_extension&gt;
-spec:
-  namespace: &lt;example_namespace&gt;
-  serviceAccount:
-    name: &lt;example_extension&gt;-installer
-  source:
-    sourceType: Catalog
-    catalog:
-      packageName: &lt;example_extension&gt;-operator
-      selector:
-        matchExpressions:
-          - key: olm.operatorframework.io/metadata.name
-            operator: NotIn
-            values:
-              - unwanted-catalog-1</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The following cluster extension CR selects from catalogs that do not have the <code>example.com/testing</code> label. As a result, both <code>unwanted-catalog-1</code> and <code>unwanted-catalog-2</code> are excluded from catalog selection.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example cluster extension CR that excludes catalogs with a specific label</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterExtension
-metadata:
-  name: &lt;example_extension&gt;
-spec:
-  namespace: &lt;example_namespace&gt;
-  serviceAccount:
-    name: &lt;example_extension&gt;-installer
-  source:
-    sourceType: Catalog
-    catalog:
-      packageName: &lt;example_extension&gt;-operator
-      selector:
-        matchExpressions:
-          - key: example.com/testing
-            operator: DoesNotExist</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="olmv1-catalog-exclusion-by-priority_resolve-catalog-content">Catalog selection by priority</h4>
+<div class="sect4">
+<h5 id="disabling-crd-preflight_manage-crd-upgrade-safety">Disabling the CRD upgrade safety preflight check</h5>
 <div class="paragraph _abstract">
-<p>When multiple catalogs provide the same package, you can resolve ambiguities by specifying the priority in the custom resource (CR) of each catalog. If unspecified, catalogs have a default priority value of <code>0</code>. The priority can be any positive or negative 32-bit integer.</p>
+<p>You can disable the custom resource definition (CRD) upgrade safety preflight check. In the <code>ClusterExtension</code> object that provides the CRD, set the <code>install.preflight.crdUpgradeSafety.enforcement</code> field with the value of <code>None</code>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Disabling the CRD upgrade safety preflight check could break backwards compatibility with stored versions of the CRD and cause other unintended consequences on the cluster.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You cannot disable individual field validators. If you disable the CRD upgrade safety preflight check, you disable all field validators.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2203,16 +3056,16 @@ spec:
 <img src="data:image/png;base64," alt="Note">
 </td>
 <td class="content">
+<div class="paragraph">
+<p>If you disable the CRD upgrade safety preflight check in Operator Lifecycle Manager (OLM) v1, the Kubernetes API server still prevents the following operations:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>During bundle resolution, catalogs with higher priority values are selected over catalogs with lower priority values.</p>
+<p>Changing scope from <code>Cluster</code> to <code>Namespace</code> or from <code>Namespace</code> to <code>Cluster</code></p>
 </li>
 <li>
-<p>Bundles that are not deprecated are prioritized over bundles that are deprecated.</p>
-</li>
-<li>
-<p>If multiple bundles exist in catalogs with the same priority and the catalog selection is ambiguous, an error is printed.</p>
+<p>Removing an existing stored version of the CRD</p>
 </li>
 </ul>
 </div>
@@ -2220,62 +3073,239 @@ spec:
 </tr>
 </table>
 </div>
-<div class="listingblock">
-<div class="title">Example cluster catalog CR with a higher priority</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterCatalog
-metadata:
-  name: high-priority-catalog
-spec:
-  priority: 1000
-  source:
-    type: Image
-    image:
-      ref: quay.io/example/higher-priority-catalog:latest</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example cluster catalog CR with a lower priority</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterCatalog
-metadata:
-  name: lower-priority-catalog
-spec:
-  priority: 10
-  source:
-    type: Image
-    image:
-      ref: quay.io/example/lower-priority-catalog:latest</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="olmv1-troubleshooting-catalog-selection-errors_resolve-catalog-content">Troubleshoot catalog selection errors</h4>
-<div class="paragraph _abstract">
-<p>If bundle resolution fails because of ambiguity or because no catalog is selected, an error message is printed in the <code>status.conditions</code> field of the cluster extension.</p>
-</div>
-<div class="paragraph">
-<p>Perform the following actions to troubleshoot catalog selection errors:</p>
-</div>
 <div class="ulist">
+<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>Refine your selection criteria using labels or expressions.</p>
-</li>
-<li>
-<p>Adjust your catalog priorities.</p>
-</li>
-<li>
-<p>Ensure that only one bundle matches your package name and version requirements.</p>
+<p>You have a cluster extension installed.</p>
 </li>
 </ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Edit the <code>ClusterExtension</code> object of the CRD:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit clusterextension &lt;clusterextension_name&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Set the <code>install.preflight.crdUpgradeSafety.enforcement</code> field to <code>None</code>:</p>
+<div class="listingblock">
+<div class="title">Example <code>ClusterExtension</code> object</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
+kind: ClusterExtension
+metadata:
+  name: clusterextension-sample
+spec:
+  namespace: default
+  serviceAccount:
+    name: sa-example
+  source:
+    sourceType: "Catalog"
+    catalog:
+      packageName: argocd-operator
+      version: 0.6.0
+  install:
+    preflight:
+      crdUpgradeSafety:
+        enforcement: None</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="examples-unsafe_manage-crd-upgrade-safety">Examples of unsafe CRD changes</h5>
+<div class="paragraph _abstract">
+<p>Review the example unsafe custom resource definition (CRD) changes to recognize modifications that trigger the CRD upgrade safety preflight check.</p>
+</div>
+<div class="paragraph">
+<p>The following examples use this baseline <code>CustomResourceDefinition</code> object:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example CRD object</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.13.0
+  name: example.test.example.com
+spec:
+  group: test.example.com
+  names:
+    kind: Sample
+    listKind: SampleList
+    plural: samples
+    singular: sample
+  scope: Namespaced
+  versions:
+  - name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        properties:
+          apiVersion:
+            type: string
+          kind:
+            type: string
+          metadata:
+            type: object
+          spec:
+            type: object
+          status:
+            type: object
+          pollInterval:
+            type: string
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}</code></pre>
+</div>
+</div>
+<div class="sect5">
+<h6 id="scope-change_manage-crd-upgrade-safety">Scope change</h6>
+<div class="paragraph">
+<p>The following example changes the <code>spec.scope</code> field from <code>Namespaced</code> to <code>Cluster</code>:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example scope change in a CRD</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">spec:
+  group: test.example.com
+  names:
+    kind: Sample
+    listKind: SampleList
+    plural: samples
+    singular: sample
+  scope: Cluster
+  versions:
+  - name: v1alpha1</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example error output</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">validating upgrade for CRD "test.example.com" failed: CustomResourceDefinition test.example.com failed upgrade safety validation. "NoScopeChange" validation failed: scope changed from "Namespaced" to "Cluster"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="stored-version-removal_manage-crd-upgrade-safety">Removal of a stored version</h6>
+<div class="paragraph">
+<p>The following example removes the existing stored version, <code>v1alpha1</code>:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example removal of a stored version in a CRD</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">versions:
+- name: v1alpha2
+  schema:
+    openAPIV3Schema:
+      properties:
+        apiVersion:
+          type: string
+        kind:
+          type: string
+        metadata:
+          type: object
+        spec:
+          type: object
+        status:
+          type: object
+        pollInterval:
+          type: string
+      type: object</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example error output</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">validating upgrade for CRD "test.example.com" failed: CustomResourceDefinition test.example.com failed upgrade safety validation. "NoStoredVersionRemoved" validation failed: stored version "v1alpha1" removed</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="removal-existing-field_manage-crd-upgrade-safety">Removal of an existing field</h6>
+<div class="paragraph">
+<p>The following example removes the <code>pollInterval</code> property field from the <code>v1alpha1</code> schema:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example removal of an existing field in a CRD</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">versions:
+- name: v1alpha1
+  schema:
+    openAPIV3Schema:
+      properties:
+        apiVersion:
+          type: string
+        kind:
+          type: string
+        metadata:
+          type: object
+        spec:
+          type: object
+        status:
+          type: object
+      type: object</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example error output</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">validating upgrade for CRD "test.example.com" failed: CustomResourceDefinition test.example.com failed upgrade safety validation. "NoExistingFieldRemoved" validation failed: crd/test.example.com version/v1alpha1 field/^.spec.pollInterval may not be removed</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="addition-required-field_manage-crd-upgrade-safety">Addition of a required field</h6>
+<div class="paragraph">
+<p>The following example changes the <code>pollInterval</code> property to a required field:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example addition of a required field in a CRD</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">versions:
+- name: v1alpha2
+  schema:
+    openAPIV3Schema:
+      properties:
+        apiVersion:
+          type: string
+        kind:
+          type: string
+        metadata:
+          type: object
+        spec:
+          type: object
+        status:
+          type: object
+        pollInterval:
+          type: string
+      type: object
+      required:
+      - pollInterval</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example error output</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">validating upgrade for CRD "test.example.com" failed: CustomResourceDefinition test.example.com failed upgrade safety validation. "ChangeValidator" validation failed: version "v1alpha1", field "^": new required fields added: [pollInterval]</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="nodes-pods-plugins-about_manage-kernel-modules-across-cluster-nodes-deploy-device-plugins-alongside-kernel-modules.html">Understand device plugins</a> | ↑ Up: <a href="_extend.html">Extend</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="_validate.html">Validate</a> →</p>
+<p>← Previous: <a href="configure-cluster-extensions-con_configure-cluster-extensions.html">Configure cluster extensions with OLM v1</a> | ↑ Up: <a href="_extend.html">Extend</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="remove-cluster-extensions-with-olmv1-con_remove-cluster-extensions-with-olmv1.html">Remove cluster extensions with OLM v1</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2286,7 +3316,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 17:13:02 +0100
+Last updated 2026-10-15 18:05:30 +0100
 </div>
 </div>
 <style>

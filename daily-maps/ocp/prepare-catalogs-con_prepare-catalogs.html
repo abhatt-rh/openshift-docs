@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions" class="book toc2 toc-left navmap-has-right-toc">
+<body id="prepare-catalogs-con_prepare-catalogs" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -519,6 +519,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="oke_similarities_and_differences_evaluate-openshift-kubernetes-engine.html">OpenShift Kubernetes Engine and Red&#160;Hat OpenShift Container Platform comparison</a>
 </li>
 <li><a href="hosted-control-planes-overview_compare-openshift-deployment-models.html">Introduction to hosted control planes</a>
+</li>
+<li><a href="review-cluster-operators-con_review-cluster-operators.html">Review cluster Operators</a>
 </li>
 </ul>
 </li>
@@ -588,12 +590,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_install.html">Install</a>
+
 <ul class="sectlevel2">
 <li><a href="installation-overview_understand-openshift-installation-architecture.html">The Red&#160;Hat OpenShift Container Platform installation</a>
 </li>
 <li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html"><span class="toc-current">Install and delete cluster extensions</span></a>
 </li>
 <li><a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a>
 </li>
@@ -893,8 +894,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_upgrade.html">Upgrade</a>
 
 <ul class="sectlevel2">
-<li><a href="update-and-rollback-cluster-extensions-con_update-and-rollback-cluster-extensions.html">Update and roll back cluster extensions</a>
-</li>
 <li><a href="about-updates_update-clusters-overview.html">Cluster update overview</a>
 </li>
 <li><a href="update-cluster-version-object_understand-openshift-updates.html">The ClusterVersion object</a>
@@ -1441,8 +1440,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_secure.html">Secure</a>
 
 <ul class="sectlevel2">
-<li><a href="control-user-access-to-extensions-con_control-user-access-to-extensions.html">Control user access to extensions</a>
-</li>
 <li><a href="manage-user-authentication-and-identity-providers-con_manage-user-authentication-and-identity-providers.html">Manage user authentication and identity providers</a>
 </li>
 <li><a href="secure-network-traffic-con_secure-network-traffic.html">Secure network traffic</a>
@@ -1699,10 +1696,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
-
 <ul class="sectlevel2">
-<li><a href="olmv1-about-catalogs_add-and-remove-catalogs.html">About catalogs in OLM v1</a>
-</li>
 <li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
 </li>
 <li><a href="nodes-containers-port-forwarding-about_configure-port-forwarding-to-pods.html">Understand port forwarding</a>
@@ -1725,15 +1719,55 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
-<li><a href="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog.html">About Operator installation from the software catalog</a>
-</li>
 <li><a href="extend-the-openshift-cli-with-plugins-intro_extend-the-openshift-cli-with-plugins.html">Extend the OpenShift CLI with plugins</a>
 </li>
 <li><a href="cli-manager-about_manage-cli-plugins-with-the-cli-manager.html">About the CLI Manager Operator</a>
 </li>
 <li><a href="nodes-pods-plugins-about_manage-kernel-modules-across-cluster-nodes-deploy-device-plugins-alongside-kernel-modules.html">Understand device plugins</a>
 </li>
-<li><a href="resolve-catalog-content-con_resolve-catalog-content.html">Resolve catalog content</a>
+<li><a href="explore-cluster-extension-capabilities-con_explore-cluster-extension-capabilities.html">Understand cluster extensions with OLM v1</a>
+</li>
+<li><a href="check-cluster-extension-support-con_check-cluster-extension-support.html">Review supported cluster extensions with OLM v1</a>
+</li>
+<li><a href="install-cluster-extensions-with-olmv1-con_install-cluster-extensions-with-olmv1.html">Install cluster extensions with OLM v1</a>
+</li>
+<li><a href="configure-cluster-extensions-con_configure-cluster-extensions.html">Configure cluster extensions with OLM v1</a>
+</li>
+<li><a href="update-and-rollback-cluster-extensions-with-olmv1-con_update-and-rollback-cluster-extensions-with-olmv1.html">Update and roll back cluster extensions with OLM v1</a>
+</li>
+<li><a href="remove-cluster-extensions-with-olmv1-con_remove-cluster-extensions-with-olmv1.html">Remove cluster extensions with OLM v1</a>
+</li>
+<li><a href="control-access-to-cluster-extension-resources-with-olmv1-con_control-access-to-cluster-extension-resources-with-olmv1.html">Control access to cluster extension resources with OLM v1</a>
+</li>
+<li><a href="monitor-cluster-extensions-with-olmv1-con_monitor-cluster-extensions-with-olmv1.html">Monitor cluster extensions with OLM v1</a>
+</li>
+<li><a href="troubleshoot-cluster-extensions-with-olmv1-con_troubleshoot-cluster-extensions-with-olmv1.html">Troubleshoot cluster extensions with OLM v1</a>
+</li>
+<li><a href="understand-olmv0-resources-con_understand-operator-lifecycle-manager-concepts-and-resources.html">Understand Operator lifecycle management with OLM (Classic)</a>
+</li>
+<li><a href="install-operators-with-olmv0-con_install-operators-with-olmv0.html">Install Operators with OLM (Classic)</a>
+</li>
+<li><a href="update-installed-operators-con_update-installed-operators.html">Update installed Operators with OLM (Classic)</a>
+</li>
+<li><a href="ocp-map-delete-operators-from-a-cluster-intro_delete-operators-from-a-cluster.html">Delete Operators with OLM (Classic)</a>
+</li>
+<li><a href="ocp-map-create-applications-from-installed-operators-intro_create-applications-from-installed-operators.html">Create applications from Operators installed with OLM (Classic)</a>
+</li>
+<li><a href="ocp-map-configure-operator-lifecycle-manager-features-intro_configure-operator-lifecycle-manager-features.html">Configure OLM (Classic) features</a>
+</li>
+<li><a href="ocp-map-configure-operator-lifecycle-manager-proxy-support-intro_configure-operator-lifecycle-manager-proxy-support.html">Configure Operator proxy support with OLM (Classic)</a>
+</li>
+<li><a href="ocp-map-view-operator-status-intro_view-operator-status.html">Monitor Operators with OLM (Classic)</a>
+</li>
+<li><a href="ocp-map-troubleshoot-operator-issues-intro_troubleshoot-operator-issues.html">Troubleshoot Operators with OLM (Classic)</a>
+</li>
+<li><a href="prepare-catalogs-con_prepare-catalogs.html"><span class="toc-current">Prepare catalogs</span></a>
+</li>
+<li><a href="manage-catalogs-with-olmv1-con_manage-catalogs-with-olmv1.html">Manage catalogs with OLM v1</a>
+</li>
+<li><a href="manage-catalogs-with-olmv0-con_manage-catalogs-with-olmv0.html">Manage catalogs with OLM (Classic)</a>
+</li>
+<li><a href="extend-the-kubernetes-api-with-custom-resource-definitions-con_crd-extending-api-with-crds.html">Extend the Kubernetes API with custom resource definitions</a>
 </li>
 </ul>
 </li>
@@ -1957,745 +1991,54 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#olmv1-finding-operators-to-install_install-and-delete-cluster-extensions">Find Operators to install from a catalog</a></li><li class="level-4"><a href="#olmv1-cluster-extension-permissions_install-and-delete-cluster-extensions">Cluster extension permissions</a></li><li class="level-5"><a href="#olmv1-creating-a-namespace_install-and-delete-cluster-extensions">Creating a namespace</a></li><li class="level-5"><a href="#olmv1-creating-a-service-account_install-and-delete-cluster-extensions">Creating a service account for an extension</a></li><li class="level-5"><a href="#olmv1-creating-a-cluster-role_install-and-delete-cluster-extensions">Creating a cluster role for an extension</a></li><li class="level-5"><a href="#olmv1-creating-a-cluster-rol-binding_install-and-delete-cluster-extensions">Creating a cluster role binding for an extension</a></li><li class="level-4"><a href="#olmv1-installing-an-operator_install-and-delete-cluster-extensions">Install a cluster extension in all namespaces</a></li><li class="level-4"><a href="#olmv1-deploying-a-ce-in-a-specific-namespace_install-and-delete-cluster-extensions">Configure a watch namespace for a cluster extension (Technology Preview)</a></li><li class="level-4"><a href="#olmv1-deleting-an-operator_install-and-delete-cluster-extensions">Deleting an Operator</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#understand-file-based-catalogs_understand-file-based-catalogs">Understand file-based catalogs</a></li><li class="level-5"><a href="#olm-file-based-catalogs_understand-file-based-catalogs">Introduction to file-based catalogs</a></li><li class="level-5"><a href="#olm-fb-catalogs-structure_understand-file-based-catalogs">Directory structure</a></li><li class="level-5"><a href="#olm-fb-catalogs-schemas_understand-file-based-catalogs">Schemas</a></li><li class="level-6"><a href="#olm-package-schema_understand-file-based-catalogs">olm.package schema</a></li><li class="level-6"><a href="#olm-channel-schema_understand-file-based-catalogs">olm.channel schema</a></li><li class="level-6"><a href="#olm-bundle-schema_understand-file-based-catalogs">olm.bundle schema</a></li><li class="level-6"><a href="#olm-deprecations-schema_understand-file-based-catalogs">olm.deprecations schema</a></li><li class="level-5"><a href="#olm-fb-catalogs-prop_understand-file-based-catalogs">Properties</a></li><li class="level-6"><a href="#olm-fb-catalogs-package-prop_understand-file-based-catalogs">olm.package property</a></li><li class="level-6"><a href="#olm-fb-catalogs-gvk-prop_understand-file-based-catalogs">olm.gvk property</a></li><li class="level-6"><a href="#olm-fb-catalogs-package-reqd-prop_understand-file-based-catalogs">olm.package.required</a></li><li class="level-6"><a href="#olm-fb-catalogs-gvk-reqd-prop_understand-file-based-catalogs">olm.gvk.required</a></li><li class="level-5"><a href="#olm-fb-catalogs-example_understand-file-based-catalogs">Example catalog</a></li><li class="level-5"><a href="#olm-fb-catalogs-guidelines_understand-file-based-catalogs">Guidelines</a></li><li class="level-6"><a href="#olm-fb-catalogs-immutable_understand-file-based-catalogs">Immutable bundles</a></li><li class="level-6"><a href="#olm-fb-catalogs-source-control_understand-file-based-catalogs">Source control</a></li><li class="level-5"><a href="#olm-fbc-cli_understand-file-based-catalogs">CLI usage</a></li><li class="level-5"><a href="#olm-fb-catalogs-automation_understand-file-based-catalogs">Automation</a></li><li class="level-4"><a href="#olm-packaging-format_understand-operator-framework-packaging-format">Understand the Operator Framework packaging format</a></li><li class="level-5"><a href="#olm-bundle-format_understand-operator-framework-packaging-format">Bundle format</a></li><li class="level-5"><a href="#olm-bundle-format-manifests_understand-operator-framework-packaging-format">Manifests</a></li><li class="level-6"><a href="#olm-bundle-format-manifests-optional_understand-operator-framework-packaging-format">Additional supported Kubernetes objects</a></li><li class="level-5"><a href="#olm-bundle-format-annotations_understand-operator-framework-packaging-format">Annotations</a></li><li class="level-4"><a href="#install-the-opm-cli-con_install-the-opm-cli">Install the opm CLI</a></li><li class="level-5"><a href="#olm-about-opm_install-the-opm-cli">About the opm CLI</a></li><li class="level-5"><a href="#olm-installing-opm_install-the-opm-cli">Installing the opm CLI</a></li><li class="level-4"><a href="#opm-cli-reference_use-the-opm-cli">Use the opm CLI</a></li><li class="level-5"><a href="#opm-cli-ref-generate_use-the-opm-cli">generate</a></li><li class="level-6"><a href="#opm-cli-ref-generate-dockerfile_use-the-opm-cli">dockerfile</a></li><li class="level-5"><a href="#opm-cli-ref-index_use-the-opm-cli">index</a></li><li class="level-6"><a href="#opm-cli-ref-index-add_use-the-opm-cli">add</a></li><li class="level-6"><a href="#opm-cli-ref-index-prune_use-the-opm-cli">prune</a></li><li class="level-6"><a href="#opm-cli-ref-index-prune-stranded_use-the-opm-cli">prune-stranded</a></li><li class="level-6"><a href="#opm-cli-ref-index-rm_use-the-opm-cli">rm</a></li><li class="level-5"><a href="#opm-cli-ref-init_use-the-opm-cli">init</a></li><li class="level-5"><a href="#opm-cli-ref-migrate_use-the-opm-cli">migrate</a></li><li class="level-5"><a href="#opm-cli-ref-render_use-the-opm-cli">render</a></li><li class="level-5"><a href="#opm-cli-ref-server_use-the-opm-cli">serve</a></li><li class="level-5"><a href="#opm-cli-ref-validate_use-the-opm-cli">validate</a></li><li class="level-4"><a href="#create-file-based-catalogs_create-file-based-catalogs">Create file-based catalogs</a></li><li class="level-5"><a href="#olm-creating-fb-catalog-image_create-file-based-catalogs">Creating a file-based catalog image</a></li><li class="level-5"><a href="#olm-filtering-fbc_create-file-based-catalogs">Updating or filtering a file-based catalog image</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions">Install and delete cluster extensions</h3>
+<h3 id="prepare-catalogs-con_prepare-catalogs">Prepare catalogs</h3>
 <div class="paragraph _abstract">
-<p>With Operator Lifecycle Manager (OLM) v1, you install a cluster extension by creating a <code>ClusterExtension</code> resource that references a package in a catalog, along with the service account and RBAC the extension needs. You delete the extension by removing that resource.</p>
+<p>File-based catalogs are the latest plain text (JSON or YAML) catalog format for Operator Lifecycle Manager (OLM). This format enables catalog editing, composability, and extensibility while remaining compatible with earlier SQLite-based catalogs.</p>
 </div>
 <div class="sect3">
-<h4 id="olmv1-finding-operators-to-install_install-and-delete-cluster-extensions">Find Operators to install from a catalog</h4>
+<h4 id="understand-file-based-catalogs_understand-file-based-catalogs">Understand file-based catalogs</h4>
 <div class="paragraph _abstract">
-<p>After you add a catalog to your cluster, you can query the catalog to find Operators and extensions to install.</p>
+<p>File-based catalogs are the latest plain text (JSON or YAML) catalog format for Operator Lifecycle Manager (OLM). This format enables catalog editing, composability, and extensibility while remaining compatible with earlier SQLite-based catalogs.</p>
 </div>
-<div class="paragraph">
-<p>Currently in Operator Lifecycle Manager (OLM) v1, you cannot query on-cluster catalogs managed by catalogd. In OLM v1, you must use the <code>opm</code> and <code>jq</code> CLI tools to query the catalog registry.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have added a catalog to your cluster.</p>
-</li>
-<li>
-<p>You have installed the <code>jq</code> CLI tool.</p>
-</li>
-<li>
-<p>You have installed the <code>opm</code> CLI tool.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>To return a list of extensions that support the <code>AllNamespaces</code> install mode and do not use webhooks, enter the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm render &lt;catalog_registry_url&gt;:&lt;tag&gt; \
-  | jq -cs '[.[] | select(.schema == "olm.bundle" \
-  and (.properties[] | select(.type == "olm.csv.metadata").value.installModes[] \
-  | select(.type == "AllNamespaces" and .supported == true)) \
-  and .spec.webhookdefinitions == null) | .package] | unique[]'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
+<div class="sect4">
+<h5 id="olm-file-based-catalogs_understand-file-based-catalogs">Introduction to file-based catalogs</h5>
+<div class="paragraph _abstract">
+<p>File-based catalogs are the latest plain text (JSON or YAML) catalog format for Operator Lifecycle Manager (OLM). This format enables catalog editing, composability, and extensibility while remaining compatible with earlier SQLite-based catalogs.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>catalog_registry_url</code></dt>
+<dt class="hdlist1">Editing</dt>
 <dd>
-<p>Specifies the URL of the catalog registry, such as <code>registry.redhat.io/redhat/redhat-operator-index</code>.</p>
-</dd>
-<dt class="hdlist1"><code>tag</code></dt>
-<dd>
-<p>Specifies the tag or version of the catalog, such as <code>v{product-version}</code> or <code>latest</code>.</p>
-<div class="listingblock">
-<div class="title">Example command</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm render \
-  registry.redhat.io/redhat/redhat-operator-index:v{product-version} \
-  | jq -cs '[.[] | select(.schema == "olm.bundle" \
-  and (.properties[] | select(.type == "olm.csv.metadata").value.installModes[] \
-  | select(.type == "AllNamespaces" and .supported == true)) \
-  and .spec.webhookdefinitions == null) | .package] | unique[]'</code></pre>
+<p>With file-based catalogs, users interacting with the contents of a catalog are able to make direct changes to the format and verify that their changes are valid. Because this format is plain text JSON or YAML, catalog maintainers can easily manipulate catalog metadata by hand or with widely known and supported JSON or YAML tooling, such as the <code>jq</code> CLI.</p>
+<div class="paragraph">
+<p>This editability enables the following features and user-defined extensions:</p>
 </div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
+<div class="openblock">
 <div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">"3scale-operator"
-"amq-broker-rhel8"
-"amq-online"
-"amq-streams"
-"amq-streams-console"
-"ansible-automation-platform-operator"
-"ansible-cloud-addons-operator"
-"apicast-operator"
-"authorino-operator"
-"aws-load-balancer-operator"
-"bamoe-kogito-operator"
-"cephcsi-operator"
-"cincinnati-operator"
-"cluster-logging"
-"cluster-observability-operator"
-"compliance-operator"
-"container-security-operator"
-"cryostat-operator"
-"datagrid"
-"devspaces"
-...</code></pre>
+<div class="ulist">
+<ul>
+<li>
+<p>Promoting an existing bundle to a new channel</p>
+</li>
+<li>
+<p>Changing the default channel of a package</p>
+</li>
+<li>
+<p>Custom algorithms for adding, updating, and removing upgrade paths</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Inspect the contents of an extension&#8217;s metadata by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm render &lt;catalog_registry_url&gt;:&lt;tag&gt; \
-  | jq -s '.[] | select( .schema == "olm.package") \
-  | select( .name == "&lt;package_name&gt;")'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example command</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm render \
-  registry.redhat.io/redhat/redhat-operator-index:v{product-version} \
-  | jq -s '.[] | select( .schema == "olm.package") \
-  | select( .name == "openshift-pipelines-operator-rh")'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">{
-  "schema": "olm.package",
-  "name": "openshift-pipelines-operator-rh",
-  "defaultChannel": "latest",
-  "icon": {
-    "base64data": "iVBORw0KGgoAAAANSUhE...",
-    "mediatype": "image/png"
-  }
-}</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="olmv1-cluster-extension-permissions_install-and-delete-cluster-extensions">Cluster extension permissions</h4>
-<div class="paragraph _abstract">
-<p>In Operator Lifecycle Manager (OLM) Classic, a single service account with cluster administrator privileges manages all cluster extensions.</p>
-</div>
+<dt class="hdlist1">Composability</dt>
+<dd>
+<p>File-based catalogs are stored in an arbitrary directory hierarchy, which enables catalog composition. For example, consider two separate file-based catalog directories: <code>catalogA</code> and <code>catalogB</code>. A catalog maintainer can create a new combined catalog by making a new directory <code>catalogC</code> and copying <code>catalogA</code> and <code>catalogB</code> into it.</p>
 <div class="paragraph">
-<p>OLM v1 is designed to be more secure than OLM (Classic) by default. OLM v1 manages a cluster extension by using the service account specified in an extension&#8217;s custom resource (CR). Cluster administrators can create a service account for each cluster extension. As a result, administrators can follow the principle of least privilege and assign only the role-based access controls (RBAC) to install and manage that extension.</p>
-</div>
-<div class="paragraph">
-<p>You must add each permission to either a cluster role or role. Then you must bind the cluster role or role to the service account with a cluster role binding or role binding.</p>
-</div>
-<div class="paragraph">
-<p>You can scope the RBAC to either the cluster or to a namespace. Use cluster roles and cluster role bindings to scope permissions to the cluster. Use roles and role bindings to scope permissions to a namespace. Whether you scope the permissions to the cluster or to a namespace depends on the design of the extension you want to install and manage.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>To simply the following procedure and improve readability, the following example manifest uses permissions that are scoped to the cluster. You can further restrict some of the permissions by scoping them to the namespace of the extension instead of the cluster.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>If a new version of an installed extension requires additional permissions, OLM v1 halts the update process until a cluster administrator grants those permissions.</p>
-</div>
-<div class="sect4">
-<h5 id="olmv1-creating-a-namespace_install-and-delete-cluster-extensions">Creating a namespace</h5>
-<div class="paragraph _abstract">
-<p>Before you create a service account to install and manage your cluster extension, you must create a namespace.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>Access to an Red&#160;Hat OpenShift Container Platform cluster using an account with <code>cluster-admin</code> permissions.</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>Create a new namespace for the service account of the extension that you want to install by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm new-project &lt;new_namespace&gt;</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="olmv1-creating-a-service-account_install-and-delete-cluster-extensions">Creating a service account for an extension</h5>
-<div class="paragraph _abstract">
-<p>You must create a service account to install, manage, and update a cluster extension.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>Access to an Red&#160;Hat OpenShift Container Platform cluster using an account with <code>cluster-admin</code> permissions.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a service account, similar to the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: &lt;extension&gt;-installer
-  namespace: &lt;namespace&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example <code>extension-service-account.yaml</code> file</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: pipelines-installer
-  namespace: pipelines</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Apply the service account by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f extension-service-account.yaml</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="olmv1-creating-a-cluster-role_install-and-delete-cluster-extensions">Creating a cluster role for an extension</h5>
-<div class="paragraph _abstract">
-<p>To set up access controls for an extension, review the <code>install.spec.clusterpermissions</code> section of the cluster service version (CSV) and the extension manifests. Then, create a cluster role by copying the required role-based access control (RBAC) rules from the CSV into a new manifest.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Tip">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you want to test the process for installing and updating an extension in OLM v1, you can use the following cluster role to grant cluster administrator permissions. This manifest is for testing purposes only. It should not be used in production clusters.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: &lt;extension&gt;-installer-clusterrole
-rules:
-- apiGroups: ["*"]
-  resources: ["*"]
-  verbs: ["*"]</code></pre>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The following procedure uses the <code>openshift-pipelines-operator-rh.clusterserviceversion.yaml</code> file of the Red Hat OpenShift Pipelines Operator as an example. The examples include excerpts of the RBAC required to install and manage the OpenShift Pipelines Operator. For a complete manifest, see "Example cluster role for the Red Hat OpenShift Pipelines Operator".</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>To simply the following procedure and improve readability, the following example manifest uses permissions that are scoped to the cluster. You can further restrict some of the permissions by scoping them to the namespace of the extension instead of the cluster.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>Access to an Red&#160;Hat OpenShift Container Platform cluster using an account with <code>cluster-admin</code> permissions.</p>
-</li>
-<li>
-<p>You have downloaded the manifests in the image reference of the extension that you want to install.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a new cluster role manifest, similar to the following example:</p>
-<div class="listingblock">
-<div class="title">Example <code>&lt;extension&gt;-cluster-role.yaml</code> file</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: &lt;extension&gt;-installer-clusterrole</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Edit your cluster role manifest to include permission to update finalizers on the extension, similar to the following example:</p>
-<div class="listingblock">
-<div class="title">Example &lt;extension&gt;-cluster-role.yaml</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: pipelines-installer-clusterrole
-rules:
-- apiGroups:
-  - olm.operatorframework.io
-  resources:
-  - clusterextensions/finalizers
-  verbs:
-  - update
-  # Scoped to the name of the ClusterExtension
-  resourceNames:
-  - &lt;metadata_name&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;metadata_name&gt;</code> with the value of the metadata.name field from the custom resource (CR) of the extension.</p>
-</div>
-</li>
-<li>
-<p>Search for the <code>clusterrole</code> and <code>clusterrolebindings</code> values in the <code>rules.resources</code> field in the extension&#8217;s CSV file.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Copy the API groups, resources, verbs, and resource names to your manifest, similar to the following example:</p>
-<div class="listingblock">
-<div class="title">Example cluster role manifest</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: pipelines-installer-clusterrole
-rules:
-# ...
-# ClusterRoles and ClusterRoleBindings for the controllers of the extension
-- apiGroups:
-  - rbac.authorization.k8s.io
-  resources:
-  - clusterroles
-  verbs:
-  - create
-  - list
-  - watch
-- apiGroups:
-  - rbac.authorization.k8s.io
-  resources:
-  - clusterroles
-  verbs:
-  - get
-  - update
-  - patch
-  - delete
-  resourceNames:
-  - "*"
-- apiGroups:
-  - rbac.authorization.k8s.io
-  resources:
-  - clusterrolebindings
-  verbs:
-  - create
-  - list
-  - watch
-- apiGroups:
-  - rbac.authorization.k8s.io
-  resources:
-  - clusterrolebindings
-  verbs:
-  - get
-  - update
-  - patch
-  - delete
-  resourceNames:
-  - "*"
-# ...</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You cannot scope the <code>create</code>, <code>list</code>, and <code>watch</code> verbs to specific resource names (the <code>resourceNames</code> field). You must scope these permissions to their resources (the <code>resources</code> field).</p>
-</li>
-<li>
-<p>The resource names in the <code>resourceNames</code> field for the <code>get</code>, <code>update</code>, <code>patch</code>, and <code>delete</code> verbs are generated by using the following format: <code>&lt;package_name&gt;.&lt;hash&gt;</code>. After you install the extension, look up the resource names for the cluster roles and cluster role bindings for the controller of the extension. Replace the wildcard characters in this example with the generated names and follow the principle of least privilege.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Search for the <code>customresourcedefinitions</code> value in the <code>rules.resources</code> field in the extension&#8217;s CSV file.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Copy the API groups, resources, verbs, and resource names to your manifest, similar to the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: pipelines-installer-clusterrole
-rules:
-# ...
-# Custom resource definitions of the extension
-- apiGroups:
-  - apiextensions.k8s.io
-  resources:
-  - customresourcedefinitions
-  verbs:
-  - create
-  - list
-  - watch
-- apiGroups:
-  - apiextensions.k8s.io
-  resources:
-  - customresourcedefinitions
-  verbs:
-  - get
-  - update
-  - patch
-  - delete
-  resourceNames:
-  - manualapprovalgates.operator.tekton.dev
-  - openshiftpipelinesascodes.operator.tekton.dev
-  - tektonaddons.operator.tekton.dev
-  - tektonchains.operator.tekton.dev
-  - tektonconfigs.operator.tekton.dev
-  - tektonhubs.operator.tekton.dev
-  - tektoninstallersets.operator.tekton.dev
-  - tektonpipelines.operator.tekton.dev
-  - tektonresults.operator.tekton.dev
-  - tektontriggers.operator.tekton.dev
-# ...</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Search the CSV file for stanzas with the <code>permissions</code> and <code>clusterPermissions</code> values in the <code>rules.resources</code> spec.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Copy the API groups, resources, verbs, and resource names to your manifest, similar to the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: pipelines-installer-clusterrole
-rules:
-# ...
-# Excerpt from install.spec.clusterPermissions
-- apiGroups:
-  - ''
-  resources:
-  - nodes
-  - pods
-  - services
-  - endpoints
-  - persistentvolumeclaims
-  - events
-  - configmaps
-  - secrets
-  - pods/log
-  - limitranges
-  verbs:
-  - create
-  - list
-  - watch
-  - delete
-  - deletecollection
-  - patch
-  - get
-  - update
-- apiGroups:
-  - extensions
-  - apps
-  resources:
-  - ingresses
-  - ingresses/status
-  verbs:
-  - create
-  - list
-  - watch
-  - delete
-  - patch
-  - get
-  - update
- # ...</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Search the CSV file for resources under the <code>install.spec.deployments</code> stanza.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Copy the API groups, resources, verbs, and resource names to your manifest, similar to the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: pipelines-installer-clusterrole
-rules:
-# ...
-# Excerpt from install.spec.deployments
-- apiGroups:
-  - apps
-  resources:
-  - deployments
-  verbs:
-  - create
-  - list
-  - watch
-- apiGroups:
-  - apps
-  resources:
-  - deployments
-  verbs:
-  - get
-  - update
-  - patch
-  - delete
-  # scoped to the extension controller deployment name
-  resourceNames:
-  - openshift-pipelines-operator
-  - tekton-operator-webhook
-# ...</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Search for the <code>services</code> and <code>configmaps</code> values in the <code>rules.resources</code> field in the extension&#8217;s CSV file.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Copy the API groups, resources, verbs, and resource names to your manifest, similar to the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: pipelines-installer-clusterrole
-rules:
-# ...
-# Services
-- apiGroups:
-  - ""
-  resources:
-  - services
-  verbs:
-  - create
-- apiGroups:
-  - ""
-  resources:
-  - services
-  verbs:
-  - get
-  - list
-  - watch
-  - update
-  - patch
-  - delete
-  # scoped to the service name
-  resourceNames:
-  - openshift-pipelines-operator-monitor
-  - tekton-operator
-  - tekton-operator-webhook
-# configmaps
-- apiGroups:
-  - ""
-  resources:
-  - configmaps
-  verbs:
-  - create
-- apiGroups:
-  - ""
-  resources:
-  - configmaps
-  verbs:
-  - get
-  - list
-  - watch
-  - update
-  - patch
-  - delete
-  # scoped to the configmap name
-  resourceNames:
-  - config-logging
-  - tekton-config-defaults
-  - tekton-config-observability
-  - tekton-operator-controller-config-leader-election
-  - tekton-operator-info
-  - tekton-operator-webhook-config-leader-election
-- apiGroups:
-  - operator.tekton.dev
-  resources:
-  - tekton-config-read-role
-  - tekton-result-read-role
-  verbs:
-  - get
-  - watch
-  - list</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Add the cluster role manifest to the cluster by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f &lt;extension&gt;-installer-clusterrole.yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example command</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f pipelines-installer-clusterrole.yaml</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="olmv1-creating-a-cluster-rol-binding_install-and-delete-cluster-extensions">Creating a cluster role binding for an extension</h5>
-<div class="paragraph _abstract">
-<p>After you have created a service account and cluster role, you must bind the cluster role to the service account with a cluster role binding manifest.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>Access to an Red&#160;Hat OpenShift Container Platform cluster using an account with <code>cluster-admin</code> permissions.</p>
-</li>
-<li>
-<p>You have created and applied the following resources for the extension you want to install:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Namespace</p>
-</li>
-<li>
-<p>Service account</p>
-</li>
-<li>
-<p>Cluster role</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a cluster role binding to bind the cluster role to the service account, similar to the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: &lt;extension&gt;-installer-binding
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: &lt;extension&gt;-installer-clusterrole
-subjects:
-- kind: ServiceAccount
-  name: &lt;extension&gt;-installer
-  namespace: &lt;namespace&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example <code>pipelines-cluster-role-binding.yaml</code> file</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: pipelines-installer-binding
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: pipelines-installer-clusterrole
-subjects:
-- kind: ServiceAccount
-  name: pipelines-installer
-  namespace: pipelines</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Apply the cluster role binding by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f pipelines-cluster-role-binding.yaml</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="olmv1-installing-an-operator_install-and-delete-cluster-extensions">Install a cluster extension in all namespaces</h4>
-<div class="paragraph _abstract">
-<p>You can install an extension from a catalog by creating a custom resource (CR) and applying it to the cluster. Operator Lifecycle Manager (OLM) v1 supports installing cluster extensions, including OLM (Classic) Operators in the <code>registry+v1</code> bundle format, that are scoped to the cluster.</p>
+<p>This composability enables decentralized catalogs. The format permits Operator authors to maintain Operator-specific catalogs, and it permits maintainers to trivially build a catalog composed of individual Operator catalogs. File-based catalogs can be composed by combining multiple other catalogs, by extracting subsets of one catalog, or a combination of both of these.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2705,256 +2048,27 @@ subjects:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>For Red&#160;Hat OpenShift Container Platform {product-version}, documented procedures for OLM v1 are CLI-based only. Alternatively, administrators can create and view related objects in the web console by using normal methods, such as the <strong>Import YAML</strong> and <strong>Search</strong> pages. However, the existing <strong>Software Catalog</strong> and <strong>Installed Operators</strong> pages do not yet display OLM v1 components.</p>
+<p>Duplicate packages and duplicate bundles within a package are not permitted. The <code>opm validate</code> command returns an error if any duplicates are found.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have created a service account and assigned enough role-based access controls (RBAC) to install, update, and manage the extension that you want to install. For more information, see "Cluster extension permissions".</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Because Operator authors are most familiar with their Operator, its dependencies, and its upgrade compatibility, they are able to maintain their own Operator-specific catalog and have direct control over its contents. With file-based catalogs, Operator authors own the task of building and maintaining their packages in a catalog. Composite catalog maintainers, however, only own the task of curating the packages in their catalog and publishing the catalog to users.</p>
 </div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a CR, similar to the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-  kind: ClusterExtension
-  metadata:
-    name: &lt;clusterextension_name&gt;
-  spec:
-    namespace: &lt;installed_namespace&gt;
-    serviceAccount:
-      name: &lt;service_account_installer_name&gt;
-    source:
-      sourceType: Catalog
-      catalog:
-        packageName: &lt;package_name&gt;
-        channels:
-          - &lt;channel_name&gt;
-        version: &lt;version_or_version_range&gt;
-        upgradeConstraintPolicy: CatalogProvided</code></pre>
-</div>
+</dd>
+<dt class="hdlist1">Extensibility</dt>
+<dd>
+<p>The file-based catalog specification is a low-level representation of a catalog. While it can be maintained directly in its low-level form, catalog maintainers can build interesting extensions on top that can be used by their own custom tooling to make any number of mutations.</p>
+<div class="paragraph">
+<p>For example, a tool could translate a high-level API, such as <code>(mode=semver)</code>, down to the low-level, file-based catalog format for upgrade paths. Or a catalog maintainer might need to customize all of the bundle metadata by adding a new property to bundles that meet a certain criteria.</p>
 </div>
 <div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.namespace</code></dt>
-<dd>
-<p>Specifies the namespace where you want the bundle installed, such as <code>pipelines</code> or <code>my-extension</code>. Extensions are still cluster-scoped and might contain resources that are installed in different namespaces.</p>
-</dd>
-<dt class="hdlist1"><code>spec.serviceAccount.name</code></dt>
-<dd>
-<p>Specifies the name of the service account you created to install, update, and manage your extension.</p>
-</dd>
-<dt class="hdlist1"><code>spec.source.catalog.channels</code></dt>
-<dd>
-<p>Specifies channel names as an array, such as <code>pipelines-1.14</code> or <code>latest</code>. This field is optional.</p>
-</dd>
-<dt class="hdlist1"><code>spec.source.catalog.version</code></dt>
-<dd>
-<p>Specifies the version or version range, such as <code>1.14.0</code>, <code>1.14.x</code>, or <code>&gt;=1.16</code>, of the package you want to install or update. This field is optional.</p>
-</dd>
-<dt class="hdlist1"><code>spec.source.catalog.upgradeConstraintPolicy</code></dt>
-<dd>
-<p>Specifies the upgrade constraint policy. If unspecified, the default setting is <code>CatalogProvided</code>. The <code>CatalogProvided</code> setting only updates if the new version satisfies the upgrade constraints set by the package author. To force an update or rollback, set the field to <code>SelfCertified</code>. This field is optional.</p>
-<div class="listingblock">
-<div class="title">Example <code>pipelines-operator.yaml</code> CR</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterExtension
-metadata:
-  name: pipelines-operator
-spec:
-  namespace: pipelines
-  serviceAccount:
-    name: pipelines-installer
-  source:
-    sourceType: Catalog
-    catalog:
-      packageName: openshift-pipelines-operator-rh
-      version: "1.14.x"</code></pre>
-</div>
+<p>While this extensibility allows for additional official tooling to be developed on top of the low-level APIs for future Red&#160;Hat OpenShift Container Platform releases, the major benefit is that catalog maintainers have this capability as well.</p>
 </div>
 </dd>
 </dl>
-</div>
-</li>
-<li>
-<p>Apply the CR to the cluster by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f pipeline-operator.yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">clusterextension.olm.operatorframework.io/pipelines-operator created</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Verification</div>
-<ol class="arabic">
-<li>
-<p>View the Operator or extension&#8217;s CR in the YAML format by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusterextension pipelines-operator -o yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">apiVersion: v1
-items:
-- apiVersion: olm.operatorframework.io/v1
-  kind: ClusterExtension
-  metadata:
-    annotations:
-      kubectl.kubernetes.io/last-applied-configuration: |
-        {"apiVersion":"olm.operatorframework.io/v1","kind":"ClusterExtension","metadata":{"annotations":{},"name":"pipes"},"spec":{"namespace":"pipelines","serviceAccount":{"name":"pipelines-installer"},"source":{"catalog":{"packageName":"openshift-pipelines-operator-rh","version":"1.14.x"},"sourceType":"Catalog"}}}
-    creationTimestamp: "2025-02-18T21:48:13Z"
-    finalizers:
-    - olm.operatorframework.io/cleanup-unpack-cache
-    - olm.operatorframework.io/cleanup-contentmanager-cache
-    generation: 1
-    name: pipelines-operator
-    resourceVersion: "72725"
-    uid: e18b13fb-a96d-436f-be75-a9a0f2b07993
-  spec:
-    namespace: pipelines
-    serviceAccount:
-      name: pipelines-installer
-    source:
-      catalog:
-        packageName: openshift-pipelines-operator-rh
-        upgradeConstraintPolicy: CatalogProvided
-        version: 1.14.x
-      sourceType: Catalog
-  status:
-    conditions:
-    - lastTransitionTime: "2025-02-18T21:48:13Z"
-      message: ""
-      observedGeneration: 1
-      reason: Deprecated
-      status: "False"
-      type: Deprecated
-    - lastTransitionTime: "2025-02-18T21:48:13Z"
-      message: ""
-      observedGeneration: 1
-      reason: Deprecated
-      status: "False"
-      type: PackageDeprecated
-    - lastTransitionTime: "2025-02-18T21:48:13Z"
-      message: ""
-      observedGeneration: 1
-      reason: Deprecated
-      status: "False"
-      type: ChannelDeprecated
-    - lastTransitionTime: "2025-02-18T21:48:13Z"
-      message: ""
-      observedGeneration: 1
-      reason: Deprecated
-      status: "False"
-      type: BundleDeprecated
-    - lastTransitionTime: "2025-02-18T21:48:16Z"
-      message: Installed bundle registry.redhat.io/openshift-pipelines/pipelines-operator-bundle@sha256:f7b19ce26be742c4aaa458d37bc5ad373b5b29b20aaa7d308349687d3cbd8838
-        successfully
-      observedGeneration: 1
-      reason: Succeeded
-      status: "True"
-      type: Installed
-    - lastTransitionTime: "2025-02-18T21:48:16Z"
-      message: desired state reached
-      observedGeneration: 1
-      reason: Succeeded
-      status: "True"
-      type: Progressing
-    install:
-      bundle:
-        name: openshift-pipelines-operator-rh.v1.14.5
-        version: 1.14.5
-kind: List
-metadata:
-  resourceVersion: ""</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.channel</code></dt>
-<dd>
-<p>Displays the channel defined in the CR of the extension.</p>
-</dd>
-<dt class="hdlist1"><code>spec.version</code></dt>
-<dd>
-<p>Displays the version or version range defined in the CR of the extension.</p>
-</dd>
-<dt class="hdlist1"><code>status.conditions</code></dt>
-<dd>
-<p>Displays information about the status and health of the extension.</p>
-</dd>
-<dt class="hdlist1"><code>type: Deprecated</code></dt>
-<dd>
-<p>Displays whether one or more of following are deprecated:</p>
-<div class="openblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>type: PackageDeprecated</code></dt>
-<dd>
-<p>Displays whether the resolved package is deprecated.</p>
-</dd>
-<dt class="hdlist1"><code>type: ChannelDeprecated</code></dt>
-<dd>
-<p>Displays whether the resolved channel is deprecated.</p>
-</dd>
-<dt class="hdlist1"><code>type: BundleDeprecated</code></dt>
-<dd>
-<p>Displays whether the resolved bundle is deprecated.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>The value of <code>False</code> in the <code>status</code> field indicates that the <code>reason: Deprecated</code> condition is not deprecated. The value of <code>True</code> in the <code>status</code> field indicates that the <code>reason: Deprecated</code> condition is deprecated.</p>
-</div>
-</dd>
-<dt class="hdlist1"><code>installedBundle.name</code></dt>
-<dd>
-<p>Displays the name of the bundle installed.</p>
-</dd>
-<dt class="hdlist1"><code>installedBundle.version</code></dt>
-<dd>
-<p>Displays the version of the bundle installed.</p>
-</dd>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="olmv1-deploying-a-ce-in-a-specific-namespace_install-and-delete-cluster-extensions">Configure a watch namespace for a cluster extension (Technology Preview)</h4>
-<div class="paragraph _abstract">
-<p>You can configure the watch namespace for extensions that support namespace-scoped resource watching.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -2964,61 +2078,776 @@ metadata:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Configuring watch namespace for a cluster extension is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+<p>As of Red&#160;Hat OpenShift Container Platform 4.11, the default Red Hat-provided Operator catalog releases in the file-based catalog format. The default Red Hat-provided Operator catalogs for Red&#160;Hat OpenShift Container Platform 4.6 through 4.10 released in the deprecated SQLite database format.</p>
 </div>
 <div class="paragraph">
-<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
+<p>The <code>opm</code> subcommands, flags, and functionality related to the SQLite database format are also deprecated and will be removed in a future release. The features are still supported and must be used for catalogs that use the deprecated SQLite database format.</p>
+</div>
+<div class="paragraph">
+<p>Many of the <code>opm</code> subcommands and flags for working with the SQLite database format, such as <code>opm index prune</code>, do not work with the file-based catalog format.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
+</div>
+<div class="sect4">
+<h5 id="olm-fb-catalogs-structure_understand-file-based-catalogs">Directory structure</h5>
+<div class="paragraph _abstract">
+<p>File-based catalogs can be stored and loaded from directory-based file systems. The <code>opm</code> CLI loads the catalog by walking the root directory and recursing into subdirectories. The CLI attempts to load every file it finds and fails if any errors occur.</p>
+</div>
+<div class="paragraph">
+<p>Non-catalog files can be ignored using <code>.indexignore</code> files, which have the same rules for patterns and precedence as <code>.gitignore</code> files.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>.indexignore</code> file</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># Ignore everything except non-object .json and .yaml files
+**/*
+!*.json
+!*.yaml
+**/objects/*.json
+**/objects/*.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Catalog maintainers have the flexibility to choose their layout, but it is recommended to store each package&#8217;s file-based catalog blobs in separate subdirectories. Each individual file can be either JSON or YAML; it is not necessary for every file in a catalog to use the same format.</p>
+</div>
+<div class="listingblock">
+<div class="title">Basic recommended structure</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">catalog
+├── packageA
+│   └── index.yaml
+├── packageB
+│   ├── .indexignore
+│   ├── index.yaml
+│   └── objects
+│       └── packageB.v0.1.0.clusterserviceversion.yaml
+└── packageC
+    └── index.json
+    └── deprecations.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This recommended structure has the property that each subdirectory in the directory hierarchy is a self-contained catalog, which makes catalog composition, discovery, and navigation trivial file system operations. The catalog can also be included in a parent catalog by copying it into the parent catalog&#8217;s root directory.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-fb-catalogs-schemas_understand-file-based-catalogs">Schemas</h5>
+<div class="paragraph _abstract">
+<p>File-based catalogs on Red&#160;Hat OpenShift Container Platform use a CUE-based format with schemas that define catalog structure for Operator Lifecycle Manager (OLM). Each Operator package requires one <code>olm.package</code> blob, at least one <code>olm.channel</code> blob, and one or more <code>olm.bundle</code> blobs.</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>_Meta</code> schema</div>
+<div class="content">
+<pre class="highlight"><code class="language-go" data-lang="go">_Meta: {
+  // schema is required and must be a non-empty string
+  schema: string &amp; !=""
+
+  // package is optional, but if it's defined, it must be a non-empty string
+  package?: string &amp; !=""
+
+  // properties is optional, but if it's defined, it must be a list of 0 or more properties
+  properties?: [... #Property]
+}
+
+#Property: {
+  // type is required
+  type: string &amp; !=""
+
+  // value is required, and it must not be null
+  value: !=null
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>No CUE schemas listed in this specification should be considered exhaustive. The <code>opm validate</code> command has additional validations that are difficult or impossible to express concisely in CUE.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>All <code>olm.*</code> schemas are reserved for OLM-defined schemas. Custom schemas must use a unique prefix, such as a domain that you own.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect5">
+<h6 id="olm-package-schema_understand-file-based-catalogs">olm.package schema</h6>
+<div class="paragraph _abstract">
+<p>The <code>olm.package</code> schema specifies package-level metadata for Operators in file-based catalogs, including name, default channel, and icon. Use this schema reference when you build or validate Operator package definitions for Operator Lifecycle Manager (OLM).</p>
+</div>
+<details>
+<summary class="title"><code>olm.package</code> schema</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-go" data-lang="go">#Package: {
+  schema: "olm.package"
+
+  // Package name
+  name: string &amp; !=""
+
+  // A description of the package
+  description?: string
+
+  // The package's default channel
+  defaultChannel: string &amp; !=""
+
+  // An optional icon
+  icon?: {
+    base64data: string
+    mediatype:  string
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</details>
+</div>
+<div class="sect5">
+<h6 id="olm-channel-schema_understand-file-based-catalogs">olm.channel schema</h6>
+<div class="paragraph _abstract">
+<p>The <code>olm.channel</code> schema defines a channel within a package, the bundle entries that are members of the channel, and the upgrade paths for those bundles.</p>
+</div>
+<div class="paragraph">
+<p>If a bundle entry represents an edge in multiple <code>olm.channel</code> blobs, it can only appear once per channel.</p>
+</div>
+<div class="paragraph">
+<p>It is valid for an entry&#8217;s <code>replaces</code> value to reference another bundle name that cannot be found in this catalog or another catalog. However, all other channel invariants must hold true, such as a channel not having multiple heads.</p>
+</div>
+<details>
+<summary class="title"><code>olm.channel</code> schema</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-go" data-lang="go">#Channel: {
+  schema: "olm.channel"
+  package: string &amp; !=""
+  name: string &amp; !=""
+  entries: [...#ChannelEntry]
+}
+
+#ChannelEntry: {
+  // name is required. It is the name of an `olm.bundle` that
+  // is present in the channel.
+  name: string &amp; !=""
+
+  // replaces is optional. It is the name of bundle that is replaced
+  // by this entry. It does not have to be present in the entry list.
+  replaces?: string &amp; !=""
+
+  // skips is optional. It is a list of bundle names that are skipped by
+  // this entry. The skipped bundles do not have to be present in the
+  // entry list.
+  skips?: [...string &amp; !=""]
+
+  // skipRange is optional. It is the semver range of bundle versions
+  // that are skipped by this entry.
+  skipRange?: string &amp; !=""
+}</code></pre>
+</div>
+</div>
+</div>
+</details>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When using the <code>skipRange</code> field, the skipped Operator versions are pruned from the update graph and are longer installable by users with the <code>spec.startingCSV</code> property of <code>Subscription</code> objects.</p>
+</div>
+<div class="paragraph">
+<p>You can update an Operator incrementally while keeping previously installed versions available to users for future installation by using both the <code>skipRange</code> and <code>replaces</code> field. Ensure that the <code>replaces</code> field points to the immediate previous version of the Operator version in question.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect5">
+<h6 id="olm-bundle-schema_understand-file-based-catalogs">olm.bundle schema</h6>
+<div class="paragraph _abstract">
+<p>The <code>olm.bundle</code> schema defines the structure of bundle entries stored in an Operator catalog index. It specifies required fields such as package name, bundle name, image reference, and optional properties and related images.</p>
+</div>
+<details>
+<summary class="title"><code>olm.bundle</code> schema</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-go" data-lang="go">#Bundle: {
+  schema: "olm.bundle"
+  package: string &amp; !=""
+  name: string &amp; !=""
+  image: string &amp; !=""
+  properties: [...#Property]
+  relatedImages?: [...#RelatedImage]
+}
+
+#Property: {
+  // type is required
+  type: string &amp; !=""
+
+  // value is required, and it must not be null
+  value: !=null
+}
+
+#RelatedImage: {
+  // image is the image reference
+  image: string &amp; !=""
+
+  // name is an optional descriptive name for an image that
+  // helps identify its purpose in the context of the bundle
+  name?: string &amp; !=""
+}</code></pre>
+</div>
+</div>
+</div>
+</details>
+</div>
+<div class="sect5">
+<h6 id="olm-deprecations-schema_understand-file-based-catalogs">olm.deprecations schema</h6>
+<div class="paragraph _abstract">
+<p>The optional <code>olm.deprecations</code> schema defines deprecation information for packages, bundles, and channels in an Operator catalog. When you define this schema, the web console displays warning badges and deprecation messages in the software catalog.</p>
+</div>
+<div class="paragraph">
+<p>An <code>olm.deprecations</code> schema entry contains one or more of the following <code>reference</code> types, which indicates the deprecation scope. After the Operator is installed, any specified messages can be viewed as status conditions on the related <code>Subscription</code> object.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 918. Deprecation <code>reference</code> types</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 50%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Scope</th>
+<th class="tableblock halign-left valign-top">Status condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>olm.package</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents the entire package</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PackageDeprecated</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>olm.channel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents one channel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ChannelDeprecated</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>olm.bundle</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents one bundle version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BundleDeprecated</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Each <code>reference</code> type has their own requirements, as detailed in the following example.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>olm.deprecations</code> schema with each <code>reference</code> type</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">schema: olm.deprecations
+package: my-operator
+entries:
+  - reference:
+      schema: olm.package
+    message: |
+    The 'my-operator' package is end of life. Please use the
+    'my-operator-new' package for support.
+  - reference:
+      schema: olm.channel
+      name: alpha
+    message: |
+    The 'alpha' channel is no longer supported. Please switch to the
+    'stable' channel.
+  - reference:
+      schema: olm.bundle
+      name: my-operator.v1.68.0
+    message: |
+    my-operator.v1.68.0 is deprecated. Uninstall my-operator.v1.68.0 and
+    install my-operator.v1.72.0 for support.</code></pre>
+</div>
+</div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have access to an Red&#160;Hat OpenShift Container Platform cluster using an account with <code>cluster-admin</code> permissions.</p>
+<p>Each deprecation schema must have a <code>package</code> value, and that package reference must be unique across the catalog. There must not be an associated <code>name</code> field.</p>
 </li>
 <li>
-<p>You have enabled the <code>TechPreviewNoUpgrade</code> feature set on the cluster.</p>
+<p>The <code>olm.package</code> schema must not include a <code>name</code> field, because it is determined by the <code>package</code> field defined earlier in the schema.</p>
 </li>
 <li>
-<p>You have created a service account and assigned enough role-based access controls (RBAC) to install, update, and manage the extension. For more information, see "Cluster extension permissions".</p>
+<p>All <code>message</code> fields, for any <code>reference</code> type, must be a non-zero length and represented as an opaque text blob.</p>
 </li>
 <li>
-<p>You have verified the supported install modes for the extension and determined the required <code>watchNamespace</code> configuration.</p>
+<p>The <code>name</code> field for the <code>olm.channel</code> schema is required.</p>
+</li>
+<li>
+<p>The <code>name</code> field for the <code>olm.bundle</code> schema is required.</p>
 </li>
 </ul>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The deprecation feature does not consider overlapping deprecation, for example package versus channel versus bundle.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Operator authors can save <code>olm.deprecations</code> schema entries as a <code>deprecations.yaml</code> file in the same directory as the package&#8217;s <code>index.yaml</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example directory structure for a catalog with deprecations</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">my-catalog
+└── my-operator
+    ├── index.yaml
+    └── deprecations.yaml</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-fb-catalogs-prop_understand-file-based-catalogs">Properties</h5>
+<div class="paragraph _abstract">
+<p>Properties are arbitrary pieces of metadata that can be attached to file-based catalog schemas. The <code>type</code> field is a string that effectively specifies the semantic and syntactic meaning of the <code>value</code> field. The value can be any arbitrary JSON or YAML.</p>
+</div>
+<div class="paragraph">
+<p>OLM defines a handful of property types, again using the reserved <code>olm.*</code> prefix.</p>
+</div>
+<div class="sect5">
+<h6 id="olm-fb-catalogs-package-prop_understand-file-based-catalogs">olm.package property</h6>
+<div class="paragraph">
+<p>The <code>olm.package</code> property defines the package name and version. This is a required property on bundles, and there must be exactly one of these properties. The <code>packageName</code> field must match the bundle&#8217;s first-class <code>package</code> field, and the <code>version</code> field must be a valid semantic version.</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>olm.package</code> property</div>
+<div class="content">
+<pre class="highlight"><code class="language-go" data-lang="go">#PropertyPackage: {
+  type: "olm.package"
+  value: {
+    packageName: string &amp; !=""
+    version: string &amp; !=""
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="olm-fb-catalogs-gvk-prop_understand-file-based-catalogs">olm.gvk property</h6>
+<div class="paragraph">
+<p>The <code>olm.gvk</code> property defines the group/version/kind (GVK) of a Kubernetes API that is provided by this bundle. This property is used by OLM to resolve a bundle with this property as a dependency for other bundles that list the same GVK as a required API. The GVK must adhere to Kubernetes GVK validations.</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>olm.gvk</code> property</div>
+<div class="content">
+<pre class="highlight"><code class="language-go" data-lang="go">#PropertyGVK: {
+  type: "olm.gvk"
+  value: {
+    group: string &amp; !=""
+    version: string &amp; !=""
+    kind: string &amp; !=""
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="olm-fb-catalogs-package-reqd-prop_understand-file-based-catalogs">olm.package.required</h6>
+<div class="paragraph">
+<p>The <code>olm.package.required</code> property defines the package name and version range of another package that this bundle requires. For every required package property a bundle lists, OLM ensures there is an Operator installed on the cluster for the listed package and in the required version range. The <code>versionRange</code> field must be a valid semantic version (semver) range.</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>olm.package.required</code> property</div>
+<div class="content">
+<pre class="highlight"><code class="language-go" data-lang="go">#PropertyPackageRequired: {
+  type: "olm.package.required"
+  value: {
+    packageName: string &amp; !=""
+    versionRange: string &amp; !=""
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="olm-fb-catalogs-gvk-reqd-prop_understand-file-based-catalogs">olm.gvk.required</h6>
+<div class="paragraph">
+<p>The <code>olm.gvk.required</code> property defines the group/version/kind (GVK) of a Kubernetes API that this bundle requires. For every required GVK property a bundle lists, OLM ensures there is an Operator installed on the cluster that provides it. The GVK must adhere to Kubernetes GVK validations.</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>olm.gvk.required</code> property</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">#PropertyGVKRequired: {
+  type: "olm.gvk.required"
+  value: {
+    group: string &amp; !=""
+    version: string &amp; !=""
+    kind: string &amp; !=""
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-fb-catalogs-example_understand-file-based-catalogs">Example catalog</h5>
+<div class="paragraph _abstract">
+<p>With file-based catalogs, catalog maintainers can focus on Operator curation and compatibility.</p>
+</div>
+<div class="paragraph">
+<p>Because Operator authors have already produced Operator-specific catalogs for their Operators, catalog maintainers can build their catalog by rendering each Operator catalog into a subdirectory of the catalog&#8217;s root directory.</p>
+</div>
+<div class="paragraph">
+<p>There are many possible ways to build a file-based catalog; the following steps outline a simple approach:</p>
+</div>
 <div class="olist arabic">
-<div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Create a custom resource (CR) based on where you want the extension to watch for resources:</p>
+<p>Maintain a single configuration file for the catalog, containing image references for each Operator in the catalog:</p>
+<div class="listingblock">
+<div class="title">Example catalog configuration file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">name: community-operators
+repo: quay.io/community-operators/catalog
+tag: latest
+references:
+- name: etcd-operator
+  image: quay.io/etcd-operator/index@sha256:5891b5b522d5df086d0ff0b110fbd9d21bb4fc7163af34d08286a2e846f6be03
+- name: prometheus-operator
+  image: quay.io/prometheus-operator/index@sha256:e258d248fda94c63753607f7c4494ee0fcbe92f1a76bfdac795c9d84101eb317</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Run a script that parses the configuration file and creates a new catalog from its references:</p>
+<div class="listingblock">
+<div class="title">Example script</div>
+<div class="content">
+<pre class="highlight"><code class="language-sh" data-lang="sh">name=$(yq eval '.name' catalog.yaml)
+mkdir "$name"
+yq eval '.name + "/" + .references[].name' catalog.yaml | xargs mkdir
+for l in $(yq e '.name as $catalog | .references[] | .image + "|" + $catalog + "/" + .name + "/index.yaml"' catalog.yaml); do
+  image=$(echo $l | cut -d'|' -f1)
+  file=$(echo $l | cut -d'|' -f2)
+  opm render "$image" &gt; "$file"
+done
+opm generate dockerfile "$name"
+indexImage=$(yq eval '.repo + ":" + .tag' catalog.yaml)
+docker build -t "$indexImage" -f "$name.Dockerfile" .
+docker push "$indexImage"</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-fb-catalogs-guidelines_understand-file-based-catalogs">Guidelines</h5>
+<div class="paragraph _abstract">
+<p>Follow the guidelines to maintain file-based Operator catalogs. Treat bundle images and metadata as immutable. Store catalog metadata in source control as the source of truth.</p>
+</div>
+<div class="sect5">
+<h6 id="olm-fb-catalogs-immutable_understand-file-based-catalogs">Immutable bundles</h6>
+<div class="paragraph">
+<p>The general advice with Operator Lifecycle Manager (OLM) is that bundle images and their metadata should be treated as immutable.</p>
+</div>
+<div class="paragraph">
+<p>If a broken bundle has been pushed to a catalog, you must assume that at least one of your users has upgraded to that bundle. Based on that assumption, you must release another bundle with an upgrade path from the broken bundle to ensure users with the broken bundle installed receive an upgrade. OLM will not reinstall an installed bundle if the contents of that bundle are updated in the catalog.</p>
+</div>
+<div class="paragraph">
+<p>However, there are some cases where a change in the catalog metadata is preferred:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>To configure the extension to watch its own installation namespace:</p>
+<p>Channel promotion: If you already released a bundle and later decide that you want to add it to another channel, you can add an entry for your bundle in another <code>olm.channel</code> blob.</p>
+</li>
+<li>
+<p>New upgrade paths: If you release a new <code>1.2.z</code> bundle version, for example <code>1.2.4</code>, but <code>1.3.0</code> is already released, you can update the catalog metadata for <code>1.3.0</code> to skip <code>1.2.4</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="olm-fb-catalogs-source-control_understand-file-based-catalogs">Source control</h6>
+<div class="paragraph">
+<p>Catalog metadata should be stored in source control and treated as the source of truth. Updates to catalog images should include the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Update the source-controlled catalog directory with a new commit.</p>
+</li>
+<li>
+<p>Build and push the catalog image. Use a consistent tagging taxonomy, such as <code>:latest</code> or <code>:&lt;target_cluster_version&gt;</code>, so that users can receive updates to a catalog as they become available.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For more information about creating file-based catalogs by using the <code>opm</code> CLI, see "Creating a file-based catalog image".</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-fbc-cli_understand-file-based-catalogs">CLI usage</h5>
+<div class="paragraph _abstract">
+<p>To create and manage file-based catalogs, you can use the <code>opm</code> command-line interface (CLI).</p>
+</div>
+<div class="paragraph">
+<p>For instructions about creating file-based catalogs by using the <code>opm</code> CLI, see "Creating a file-based catalog image".</p>
+</div>
+<div class="paragraph">
+<p>For reference documentation about the <code>opm</code> CLI commands related to managing file-based catalogs, see "opm CLI reference".</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-fb-catalogs-automation_understand-file-based-catalogs">Automation</h5>
+<div class="paragraph _abstract">
+<p>Operator authors and catalog maintainers can automate file-based catalog maintenance with CI/CD workflows.</p>
+</div>
+<div class="paragraph">
+<p>Catalog maintainers can use GitOps automation to accomplish the following example tasks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Check that pull request (PR) authors are permitted to make the requested changes, for example by updating their package&#8217;s image reference.</p>
+</li>
+<li>
+<p>Check that the catalog updates pass the <code>opm validate</code> command.</p>
+</li>
+<li>
+<p>Check that the updated bundle or catalog image references exist, the catalog images run successfully in a cluster, and Operators from that package can be successfully installed.</p>
+</li>
+<li>
+<p>Automatically merge PRs that pass the previous checks.</p>
+</li>
+<li>
+<p>Automatically rebuild and republish the catalog image.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="olm-packaging-format_understand-operator-framework-packaging-format">Understand the Operator Framework packaging format</h4>
+<div class="paragraph _abstract">
+<p>You can use the Operator Framework packaging format to bundle and publish Operator metadata for Operator Lifecycle Manager (OLM) in Red&#160;Hat OpenShift Container Platform. The format covers bundle images, dependencies, and file-based catalog schemas.</p>
+</div>
+<div class="sect4">
+<h5 id="olm-bundle-format_understand-operator-framework-packaging-format">Bundle format</h5>
+<div class="paragraph _abstract">
+<p>The bundle format is an Operator Framework packaging format that simplifies distributing Operator metadata to catalogs. An Operator bundle is a single Operator version shipped as a non-runnable container image that stores Kubernetes manifests and metadata.</p>
+</div>
+<div class="paragraph">
+<p>Storage and distribution of the bundle image is managed using existing container tools like <code>podman</code> and <code>docker</code> and container registries such as Quay.</p>
+</div>
+<div class="paragraph">
+<p>Operator metadata can include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Information that identifies the Operator, for example its name and version.</p>
+</li>
+<li>
+<p>Additional information that drives the UI, for example its icon and some example custom resources (CRs).</p>
+</li>
+<li>
+<p>Required and provided APIs.</p>
+</li>
+<li>
+<p>Related images.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When loading manifests into the Operator Registry database, the following requirements are validated:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The bundle must have at least one channel defined in the annotations.</p>
+</li>
+<li>
+<p>Every bundle has exactly one cluster service version (CSV).</p>
+</li>
+<li>
+<p>If a CSV owns a custom resource definition (CRD), that CRD must exist in the bundle.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-bundle-format-manifests_understand-operator-framework-packaging-format">Manifests</h5>
+<div class="paragraph _abstract">
+<p>Bundle manifests are Kubernetes objects in an Operator bundle that define the deployment and role based access control (RBAC) model for an Operator. A bundle includes one cluster service version (CSV) and typically the custom resource definitions (CRDs) for APIs owned by that CSV in its <code>/manifests</code> directory.</p>
+</div>
 <div class="listingblock">
+<div class="title">Example bundle format layout</div>
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterExtension
-metadata:
-  name: &lt;extension_name&gt;
-spec:
-  namespace: &lt;installation_namespace&gt;
-  config:
-    configType: Inline
-    inline:
-      watchNamespace: &lt;installation_namespace&gt;
-  serviceAccount:
-    name: &lt;service_account&gt;
-  source:
-    sourceType: Catalog
-    catalog:
-      packageName: &lt;package_name&gt;
-      version: &lt;version&gt;
-      upgradeConstraintPolicy: CatalogProvided</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">etcd
+├── manifests
+│   ├── etcdcluster.crd.yaml
+│   └── etcdoperator.clusterserviceversion.yaml
+│   └── secret.yaml
+│   └── configmap.yaml
+└── metadata
+    └── annotations.yaml
+    └── dependencies.yaml</code></pre>
+</div>
+</div>
+<div class="sect5">
+<h6 id="olm-bundle-format-manifests-optional_understand-operator-framework-packaging-format">Additional supported Kubernetes objects</h6>
+<div class="paragraph _abstract">
+<p>Operator bundles can optionally include additional Kubernetes object types in the <code>/manifests</code> directory for deployment with a cluster service version (CSV). When included, Operator Lifecycle Manager (OLM) creates and manages the lifecycle of these objects alongside the CSV.</p>
+</div>
+<div class="paragraph">
+<p>The following optional object types are supported:</p>
+</div>
+<div class="ulist small">
+<ul>
+<li>
+<p><code>ClusterRole</code></p>
+</li>
+<li>
+<p><code>ClusterRoleBinding</code></p>
+</li>
+<li>
+<p><code>ConfigMap</code></p>
+</li>
+<li>
+<p><code>ConsoleCLIDownload</code></p>
+</li>
+<li>
+<p><code>ConsoleLink</code></p>
+</li>
+<li>
+<p><code>ConsoleQuickStart</code></p>
+</li>
+<li>
+<p><code>ConsoleYamlSample</code></p>
+</li>
+<li>
+<p><code>PodDisruptionBudget</code></p>
+</li>
+<li>
+<p><code>PriorityClass</code></p>
+</li>
+<li>
+<p><code>PrometheusRule</code></p>
+</li>
+<li>
+<p><code>Role</code></p>
+</li>
+<li>
+<p><code>RoleBinding</code></p>
+</li>
+<li>
+<p><code>Secret</code></p>
+</li>
+<li>
+<p><code>Service</code></p>
+</li>
+<li>
+<p><code>ServiceAccount</code></p>
+</li>
+<li>
+<p><code>ServiceMonitor</code></p>
+</li>
+<li>
+<p><code>VerticalPodAutoscaler</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>OLM manages the lifecycle of these optional objects as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>When the CSV is deleted, OLM deletes the optional object.</p>
+</li>
+<li>
+<p>When the CSV is upgraded:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If the name of the optional object is the same, OLM updates it in place.</p>
+</li>
+<li>
+<p>If the name of the optional object has changed between versions, OLM deletes and recreates it.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-bundle-format-annotations_understand-operator-framework-packaging-format">Annotations</h5>
+<div class="paragraph _abstract">
+<p>Operator bundle annotations in the <code>metadata/annotations.yaml</code> file define aggregate metadata that describes how a bundle is indexed. These annotations specify media type, manifest paths, package name, channels, and the default channel for catalog registration.</p>
+</div>
+<div class="paragraph">
+<p>A bundle includes an <code>annotations.yaml</code> file in its <code>/metadata</code> directory:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>annotations.yaml</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">annotations:
+  operators.operatorframework.io.bundle.mediatype.v1: "registry+v1"
+  operators.operatorframework.io.bundle.manifests.v1: "manifests/"
+  operators.operatorframework.io.bundle.metadata.v1: "metadata/"
+  operators.operatorframework.io.bundle.package.v1: "test-operator"
+  operators.operatorframework.io.bundle.channels.v1: "beta,stable"
+  operators.operatorframework.io.bundle.channel.default.v1: "stable"</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3026,46 +2855,163 @@ spec:
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>config.inline.watchNamespace</code></dt>
+<dt class="hdlist1"><code>annotations.operators.operatorframework.io.bundle.mediatype.v1</code></dt>
 <dd>
-<p>Specifies the namespace to watch for resources. For requirements and valid values, see "Extension configuration".</p>
+<p>Specifies the media type or format of the Operator bundle. The <code>registry+v1</code> format means it contains a CSV and its associated Kubernetes objects.</p>
+</dd>
+<dt class="hdlist1"><code>annotations.operators.operatorframework.io.bundle.manifests.v1</code></dt>
+<dd>
+<p>Specifies the path in the image to the directory that contains the Operator manifests. This label is reserved for future use and currently defaults to <code>manifests/</code>. The value <code>manifests.v1</code> implies that the bundle contains Operator manifests.</p>
+</dd>
+<dt class="hdlist1"><code>annotations.operators.operatorframework.io.bundle.metadata.v1</code></dt>
+<dd>
+<p>Specifies the path in the image to the directory that contains metadata files about the bundle. This label is reserved for future use and currently defaults to <code>metadata/</code>. The value <code>metadata.v1</code> implies that this bundle has Operator metadata.</p>
+</dd>
+<dt class="hdlist1"><code>annotations.operators.operatorframework.io.bundle.package.v1</code></dt>
+<dd>
+<p>Specifies the package name of the bundle.</p>
+</dd>
+<dt class="hdlist1"><code>annotations.operators.operatorframework.io.bundle.channels.v1</code></dt>
+<dd>
+<p>Specifies the list of channels the bundle is subscribing to when added into an Operator Registry.</p>
+</dd>
+<dt class="hdlist1"><code>annotations.operators.operatorframework.io.bundle.channel.default.v1</code></dt>
+<dd>
+<p>Specifies the default channel an Operator should be subscribed to when installed from a registry.</p>
 </dd>
 </dl>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In case of a mismatch, the <code>annotations.yaml</code> file is authoritative because the on-cluster Operator Registry that relies on these annotations only has access to this file.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="install-the-opm-cli-con_install-the-opm-cli">Install the opm CLI</h4>
+<div class="paragraph _abstract">
+<p>You can install the <code>opm</code> CLI tool on your Linux, macOS, or Windows workstation.</p>
+</div>
+<div class="sect4">
+<h5 id="olm-about-opm_install-the-opm-cli">About the opm CLI</h5>
+<div class="paragraph _abstract">
+<p>The <code>opm</code> CLI is an Operator Framework tool for creating and maintaining Operator catalogs from bundle images in Red&#160;Hat OpenShift Container Platform. You can use it to build catalog container images that Operator Lifecycle Manager (OLM) references through catalog sources.</p>
+</div>
+<div class="paragraph">
+<p>A catalog contains a database of pointers to Operator manifest content that can be queried through an included API that is served when the container image is run. On Red&#160;Hat OpenShift Container Platform, Operator Lifecycle Manager (OLM) can reference the image in a catalog source, defined by a <code>CatalogSource</code> object, which polls the image at regular intervals to enable frequent updates to installed Operators on the cluster.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-installing-opm_install-the-opm-cli">Installing the opm CLI</h5>
+<div class="paragraph">
+<p>You can install the <code>opm</code> CLI tool on your Linux, macOS, or Windows workstation.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>For Red&#160;Hat Enterprise Linux (RHEL) 9.0 and later, you must provide the following packages:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>podman</code> version 1.9.3+ (version 2.0+ recommended)</p>
 </li>
 <li>
-<p>To configure the extension to watch a different namespace:</p>
+<p><code>glibc</code> version 2.28+</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Navigate to the <a href="https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/latest-{product-version}/">OpenShift mirror site</a> and download the latest version of the tarball that matches your operating system.</p>
+</li>
+<li>
+<p>Unpack the archive.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For Linux or macOS:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterExtension
-metadata:
-  name: &lt;extension_name&gt;
-spec:
-  namespace: &lt;installation_namespace&gt;
-  config:
-    configType: Inline
-    inline:
-      watchNamespace: &lt;watched_namespace&gt;
-  serviceAccount:
-    name: &lt;service_account&gt;
-  source:
-    sourceType: Catalog
-    catalog:
-      packageName: &lt;package_name&gt;
-      version: &lt;version&gt;
-      upgradeConstraintPolicy: CatalogProvided</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ tar xvf &lt;file&gt;</code></pre>
 </div>
 </div>
+</li>
+<li>
+<p>For Windows, unzip the archive with a ZIP program.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Apply the CR to the cluster by running the following command:</p>
+<p>Place the file anywhere in your <code>PATH</code>.</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>For Linux or macOS:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Check your <code>PATH</code>:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f &lt;cluster_extension_cr&gt;.yaml</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo $PATH</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Move the file. For example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo mv ./opm /usr/local/bin/</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>For Windows:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Check your <code>PATH</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">C:\&gt; path</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Move the file:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">C:\&gt; move opm.exe &lt;directory&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </li>
@@ -3075,115 +3021,1210 @@ spec:
 <div class="title">Verification</div>
 <ul>
 <li>
-<p>Verify that the extension installed successfully by running the following command:</p>
+<p>After you install the <code>opm</code> CLI, verify that it is available:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusterextension &lt;extension_name&gt; -o yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterExtension
-metadata:
-  name: &lt;extension_name&gt;
-spec:
-  namespace: &lt;installation_namespace&gt;
-  config:
-    configType: Inline
-    inline:
-      watchNamespace: &lt;installation_namespace&gt;
-status:
-  conditions:
-  - type: Installed
-    status: "True"
-    reason: Succeeded</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm version</code></pre>
 </div>
 </div>
 </li>
 </ul>
 </div>
 </div>
+</div>
 <div class="sect3">
-<h4 id="olmv1-deleting-an-operator_install-and-delete-cluster-extensions">Deleting an Operator</h4>
+<h4 id="opm-cli-reference_use-the-opm-cli">Use the opm CLI</h4>
 <div class="paragraph _abstract">
-<p>You can delete an Operator and its custom resource definitions (CRDs) by deleting the <code>ClusterExtension</code> custom resource (CR).</p>
+<p>The <code>opm</code> command-line interface (CLI) is a tool for creating and maintaining Operator catalogs.</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>opm</code> CLI syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm &lt;command&gt; [&lt;subcommand&gt;] [&lt;argument&gt;] [&lt;flags&gt;]</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>opm</code> CLI is not compatible with later versions. The version of the <code>opm</code> CLI used to generate catalog content must be earlier than or equal to the version used to serve the content on a cluster.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 919. Global flags</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flag</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-skip-tls-verify</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skip TLS certificate verification for container image registries while pulling bundles or indexes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--use-http</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When you pull bundles, use plain HTTP for container image registries.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The SQLite-based catalog format, including the related CLI commands, is a deprecated feature. Deprecated functionality is still included in Red&#160;Hat OpenShift Container Platform and continues to be supported; however, it will be removed in a future release of this product and is not recommended for new deployments.</p>
+</div>
+<div class="paragraph">
+<p>For the most recent list of major functionality that has been deprecated or removed within Red&#160;Hat OpenShift Container Platform, refer to the <em>Deprecated and removed features</em> section of the Red&#160;Hat OpenShift Container Platform release notes.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="opm-cli-ref-generate_use-the-opm-cli">generate</h5>
+<div class="paragraph">
+<p>Generate various artifacts for declarative config indexes.</p>
+</div>
+<div class="listingblock">
+<div class="title">Command syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm generate &lt;subcommand&gt; [&lt;flags&gt;]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 920. <code>generate</code> subcommands</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Subcommand</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dockerfile</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generate a Dockerfile for a declarative config index.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 921. <code>generate</code> flags</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flags</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-h</code>, <code>--help</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Help for generate.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect5">
+<h6 id="opm-cli-ref-generate-dockerfile_use-the-opm-cli">dockerfile</h6>
+<div class="paragraph">
+<p>Generate a Dockerfile for a declarative config index.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This command creates a Dockerfile in the same directory as the <code>&lt;dcRootDir&gt;</code> (named <code>&lt;dcDirName&gt;.Dockerfile</code>) that is used to build the index. If a Dockerfile with the same name already exists, this command fails.</p>
+</div>
+<div class="paragraph">
+<p>When specifying extra labels, if duplicate keys exist, only the last value of each duplicate key gets added to the generated Dockerfile.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Command syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm generate dockerfile &lt;dcRootDir&gt; [&lt;flags&gt;]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 922. <code>generate dockerfile</code> flags</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flag</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-i,</code> <code>--binary-image</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Image in which to build catalog. The default value is <code>quay.io/operator-framework/opm:latest</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-l</code>, <code>--extra-labels</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extra labels to include in the generated Dockerfile. Labels have the form <code>key=value</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-h</code>, <code>--help</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Help for Dockerfile.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To build with the official Red Hat image, use the <code>registry.redhat.io/openshift4/ose-operator-registry-rhel9:v{product-version}</code> value with the <code>-i</code> flag.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="opm-cli-ref-index_use-the-opm-cli">index</h5>
+<div class="paragraph">
+<p>Generate Operator index for SQLite database format container images from pre-existing Operator bundles.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As of Red&#160;Hat OpenShift Container Platform 4.11, the default Red Hat-provided Operator catalog releases in the file-based catalog format. The default Red Hat-provided Operator catalogs for Red&#160;Hat OpenShift Container Platform 4.6 through 4.10 released in the deprecated SQLite database format.</p>
+</div>
+<div class="paragraph">
+<p>The <code>opm</code> subcommands, flags, and functionality related to the SQLite database format are also deprecated and will be removed in a future release. The features are still supported and must be used for catalogs that use the deprecated SQLite database format.</p>
+</div>
+<div class="paragraph">
+<p>Many of the <code>opm</code> subcommands and flags for working with the SQLite database format, such as <code>opm index prune</code>, do not work with the file-based catalog format.</p>
+</div>
+<div class="paragraph">
+<p>For more information about working with file-based catalogs, see "Additional resources".</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Command syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm index &lt;subcommand&gt; [&lt;flags&gt;]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 923. <code>index</code> subcommands</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Subcommand</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add Operator bundles to an index.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>prune</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prune an index of all but specified packages.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>prune-stranded</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prune an index of stranded bundles, which are bundles that are not associated with a particular image.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete an entire Operator from an index.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect5">
+<h6 id="opm-cli-ref-index-add_use-the-opm-cli">add</h6>
+<div class="paragraph">
+<p>Add Operator bundles to an index.</p>
+</div>
+<div class="listingblock">
+<div class="title">Command syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm index add [&lt;flags&gt;]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 924. <code>index add</code> flags</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flag</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-i</code>, <code>--binary-image</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Container image for on-image <code>opm</code> command</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-u</code>, <code>--build-tool</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool to build container images: <code>podman</code> (the default value) or <code>docker</code>. Overrides part of the <code>--container-tool</code> flag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-b</code>, <code>--bundles</code> (strings)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated list of bundles to add.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-c</code>, <code>--container-tool</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool to interact with container images, such as for saving and building: <code>docker</code> or <code>podman</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-f</code>, <code>--from-index</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Previous index to add to.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--generate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If enabled, only creates the Dockerfile and saves it to local disk.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--mode</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Graph update mode that defines how channel graphs are updated: <code>replaces</code> (the default value), <code>semver</code>, or <code>semver-skippatch</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-d</code>, <code>--out-dockerfile</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional: If generating the Dockerfile, specify a file name.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--permissive</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allow registry load errors.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-p</code>, <code>--pull-tool</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool to pull container images: <code>none</code> (the default value), <code>docker</code>, or <code>podman</code>. Overrides part of the <code>--container-tool</code> flag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-t</code>, <code>--tag</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom tag for container image being built.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="opm-cli-ref-index-prune_use-the-opm-cli">prune</h6>
+<div class="paragraph">
+<p>Prune an index of all but specified packages.</p>
+</div>
+<div class="listingblock">
+<div class="title">Command syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm index prune [&lt;flags&gt;]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 925. <code>index prune</code> flags</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flag</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-i</code>, <code>--binary-image</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Container image for on-image <code>opm</code> command</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-c</code>, <code>--container-tool</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool to interact with container images, such as for saving and building: <code>docker</code> or <code>podman</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-f</code>, <code>--from-index</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Index to prune.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--generate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If enabled, only creates the Dockerfile and saves it to local disk.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-d</code>, <code>--out-dockerfile</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional: If generating the Dockerfile, specify a file name.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-p</code>, <code>--packages</code> (strings)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated list of packages to keep.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--permissive</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allow registry load errors.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-t</code>, <code>--tag</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom tag for container image being built.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="opm-cli-ref-index-prune-stranded_use-the-opm-cli">prune-stranded</h6>
+<div class="paragraph">
+<p>Prune an index of stranded bundles, which are bundles that are not associated with a particular image.</p>
+</div>
+<div class="listingblock">
+<div class="title">Command syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm index prune-stranded [&lt;flags&gt;]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 926. <code>index prune-stranded</code> flags</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flag</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-i</code>, <code>--binary-image</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Container image for on-image <code>opm</code> command</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-c</code>, <code>--container-tool</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool to interact with container images, such as for saving and building: <code>docker</code> or <code>podman</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-f</code>, <code>--from-index</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Index to prune.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--generate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If enabled, only creates the Dockerfile and saves it to local disk.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-d</code>, <code>--out-dockerfile</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional: If generating the Dockerfile, specify a file name.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-p</code>, <code>--packages</code> (strings)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated list of packages to keep.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--permissive</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allow registry load errors.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-t</code>, <code>--tag</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom tag for container image being built.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="opm-cli-ref-index-rm_use-the-opm-cli">rm</h6>
+<div class="paragraph">
+<p>Delete an entire Operator from an index.</p>
+</div>
+<div class="listingblock">
+<div class="title">Command syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm index rm [&lt;flags&gt;]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 927. <code>index rm</code> flags</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flag</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-i</code>, <code>--binary-image</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Container image for on-image <code>opm</code> command</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-u</code>, <code>--build-tool</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool to build container images: <code>podman</code> (the default value) or <code>docker</code>. Overrides part of the <code>--container-tool</code> flag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-c</code>, <code>--container-tool</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool to interact with container images, such as for saving and building: <code>docker</code> or <code>podman</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-f</code>, <code>--from-index</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Previous index to delete from.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--generate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If enabled, only creates the Dockerfile and saves it to local disk.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-o</code>, <code>--operators</code> (strings)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated list of Operators to delete.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-d</code>, <code>--out-dockerfile</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional: If generating the Dockerfile, specify a file name.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-p</code>, <code>--packages</code> (strings)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-separated list of packages to keep.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--permissive</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allow registry load errors.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-p</code>, <code>--pull-tool</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool to pull container images: <code>none</code> (the default value), <code>docker</code>, or <code>podman</code>. Overrides part of the <code>--container-tool</code> flag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-t</code>, <code>--tag</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom tag for container image being built.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="opm-cli-ref-init_use-the-opm-cli">init</h5>
+<div class="paragraph">
+<p>Generate an <code>olm.package</code> declarative config blob.</p>
+</div>
+<div class="listingblock">
+<div class="title">Command syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm init &lt;package_name&gt; [&lt;flags&gt;]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 928. <code>init</code> flags</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flag</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-c</code>, <code>--default-channel</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The channel that subscriptions will default to if unspecified.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-d</code>, <code>--description</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path to the Operator&#8217;s <code>README.md</code> or other documentation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-i</code>, <code>--icon</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path to package&#8217;s icon.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-o</code>, <code>--output</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output format: <code>json</code> (the default value) or <code>yaml</code>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="opm-cli-ref-migrate_use-the-opm-cli">migrate</h5>
+<div class="paragraph">
+<p>Migrate a SQLite database format index image or database file to a file-based catalog.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The SQLite-based catalog format, including the related CLI commands, is a deprecated feature. Deprecated functionality is still included in Red&#160;Hat OpenShift Container Platform and continues to be supported; however, it will be removed in a future release of this product and is not recommended for new deployments.</p>
+</div>
+<div class="paragraph">
+<p>For the most recent list of major functionality that has been deprecated or removed within Red&#160;Hat OpenShift Container Platform, refer to the <em>Deprecated and removed features</em> section of the Red&#160;Hat OpenShift Container Platform release notes.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Command syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm migrate &lt;index_ref&gt; &lt;output_dir&gt; [&lt;flags&gt;]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 929. <code>migrate</code> flags</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flag</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-o</code>, <code>--output</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output format: <code>json</code> (the default value) or <code>yaml</code>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="opm-cli-ref-render_use-the-opm-cli">render</h5>
+<div class="paragraph">
+<p>Generate a declarative config blob from the provided index images, bundle images, and SQLite database files.</p>
+</div>
+<div class="listingblock">
+<div class="title">Command syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm render &lt;index_image | bundle_image | sqlite_file&gt; [&lt;flags&gt;]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 930. <code>render</code> flags</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flag</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-o</code>, <code>--output</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output format: <code>json</code> (the default value) or <code>yaml</code>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="opm-cli-ref-server_use-the-opm-cli">serve</h5>
+<div class="paragraph">
+<p>Serve declarative configs via a GRPC server.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The declarative config directory is loaded by the <code>serve</code> command at startup. Changes made to the declarative config after this command starts are not reflected in the served content.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Command syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm serve &lt;source_path&gt; [&lt;flags&gt;]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 931. <code>serve</code> flags</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flag</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--cache-dir</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If this flag is set, it syncs and persists the server cache directory.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--cache-enforce-integrity</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exits with an error if the cache is not present or is invalidated. The default value is <code>true</code> when the <code>--cache-dir</code> flag is set and the <code>--cache-only</code> flag is <code>false</code>. Otherwise, the default is <code>false</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--cache-only</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Syncs the serve cache and exits without serving.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--debug</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables debug logging.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>h</code>, <code>--help</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Help for serve.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-p</code>, <code>--port</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The port number for the service. The default value is <code>50051</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--pprof-addr</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The address of the startup profiling endpoint. The format is <code>Addr:Port</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-t</code>, <code>--termination-log</code> (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The path to a container termination log file. The default value is <code>/dev/termination-log</code>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="opm-cli-ref-validate_use-the-opm-cli">validate</h5>
+<div class="paragraph">
+<p>Validate the declarative config JSON file(s) in a given directory.</p>
+</div>
+<div class="listingblock">
+<div class="title">Command syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm validate &lt;directory&gt; [&lt;flags&gt;]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="create-file-based-catalogs_create-file-based-catalogs">Create file-based catalogs</h4>
+<div class="paragraph _abstract">
+<p>You can use the <code>opm</code> CLI to create a catalog image that uses the plain text <em>file-based catalog</em> format (JSON or YAML), which replaces the deprecated SQLite database format.</p>
+</div>
+<div class="sect4">
+<h5 id="olm-creating-fb-catalog-image_create-file-based-catalogs">Creating a file-based catalog image</h5>
+<div class="paragraph _abstract">
+<p>You can use the <code>opm</code> CLI to create a catalog image that uses the plain text <em>file-based catalog</em> format (JSON or YAML), which replaces the deprecated SQLite database format.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have a catalog installed.</p>
+<p>You have installed the <code>opm</code> CLI.</p>
 </li>
 <li>
-<p>You have an Operator installed.</p>
+<p>You have <code>podman</code> version 1.9.3+.</p>
+</li>
+<li>
+<p>A bundle image is built and pushed to a registry that supports <a href="https://docs.docker.com/registry/spec/manifest-v2-2/">Docker v2-2</a>.</p>
 </li>
 </ul>
 </div>
-<div class="ulist">
+<div class="olist arabic">
 <div class="title">Procedure</div>
-<ul>
+<ol class="arabic">
 <li>
-<p>Delete an Operator and its CRDs by running the following command:</p>
+<p>Initialize the catalog:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a directory for the catalog by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete clusterextension &lt;operator_name&gt;</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ mkdir &lt;catalog_dir&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Generate a Dockerfile that can build a catalog image by running the <code>opm generate dockerfile</code> command:</p>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm generate dockerfile &lt;catalog_dir&gt; \
+    -i registry.redhat.io/openshift4/ose-operator-registry-rhel9:v{product-version}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>+
+Specify the official Red Hat base image by using the <code>-i</code> flag, otherwise the Dockerfile uses the default upstream image.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The Dockerfile must be in the same parent directory as the catalog directory that you created in the previous step:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example directory structure</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">.
+├── &lt;catalog_dir&gt;
+└── &lt;catalog_dir&gt;.Dockerfile</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>.</code></dt>
+<dd>
+<p>Specifies the parent directory.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;catalog_dir&gt;</code></dt>
+<dd>
+<p>Specifies the catalog directory.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;catalog_dir&gt;.Dockerfile</code></dt>
+<dd>
+<p>Specifies the Dockerfile generated by the <code>opm generate dockerfile</code> command.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Populate the catalog with the package definition for your Operator by running the <code>opm init</code> command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm init &lt;operator_name&gt; \
+    --default-channel=preview \
+    --description=./README.md \
+    --icon=./operator-icon.svg \
+    --output yaml \
+    &gt; &lt;catalog_dir&gt;/index.yaml</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Replace the <code>&lt;operator_name&gt;</code> variable with the Operator or package, name.</p>
+</li>
+<li>
+<p>The <code>--default-channel</code> flag specifies the channel that subscriptions default to if unspecified.</p>
+</li>
+<li>
+<p>The <code>--description</code> flag specifies the path to the Operator&#8217;s <code>README.md</code> or other documentation.</p>
+</li>
+<li>
+<p>The <code>--icon</code> flag specifies the path to the Operator&#8217;s icon.</p>
+</li>
+<li>
+<p>The <code>--output</code> flag specifies the output format. <code>JSON</code> or <code>YAML</code> are valid values.</p>
+</li>
+<li>
+<p>Replace the <code>&lt;catalog_dir&gt;</code> variable with the path for creating the catalog configuration file.</p>
+<div class="paragraph">
+<p>This command generates an <code>olm.package</code> declarative config blob in the specified catalog configuration file.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Add a bundle to the catalog by running the <code>opm render</code> command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm render &lt;registry&gt;/&lt;namespace&gt;/&lt;bundle_image_name&gt;:&lt;tag&gt; \
+    --output=yaml \
+    &gt;&gt; &lt;catalog_dir&gt;/index.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">&lt;registry&gt;/&lt;namespace&gt;/&lt;bundle_image_name&gt;:&lt;tag&gt; </dt>
+<dd>
+<p>Specifies the pull spec for the bundle image.</p>
+</dd>
+<dt class="hdlist1">&lt;catalog_dir&gt;/index.yaml </dt>
+<dd>
+<p>Specifies the path to the catalog configuration file.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Channels must contain at least one bundle.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Add a channel entry for the bundle. For example, modify the following example to your specifications, and add it to your <code>&lt;catalog_dir&gt;/index.yaml</code> file:</p>
+<div class="listingblock">
+<div class="title">Example channel entry</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">---
+schema: olm.channel
+package: &lt;operator_name&gt;
+name: preview
+entries:
+  - name: &lt;operator_name&gt;.v0.1.0</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ensure that you include the period (<code>.</code>) after the <code>&lt;operator_name&gt;`variable but before the `v</code> in the version. Otherwise, the entry fails to pass the <code>opm validate</code> command.</p>
+</div>
+</li>
+<li>
+<p>Validate the file-based catalog:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Run the <code>opm validate</code> command against the catalog directory:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm validate &lt;catalog_dir&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Check that the error code is <code>0</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo $?</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Example output</div>
 <div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">clusterextension.olm.operatorframework.io "&lt;operator_name&gt;" deleted</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">0</code></pre>
 </div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Build the catalog image by running the <code>podman build</code> command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman build . \
+    -f &lt;catalog_dir&gt;.Dockerfile \
+    -t &lt;registry&gt;/&lt;namespace&gt;/&lt;catalog_image_name&gt;:&lt;tag&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Push the catalog image to a registry:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If required, authenticate with your target registry by running the <code>podman login</code> command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman login &lt;registry&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Push the catalog image by running the <code>podman push</code> command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman push &lt;registry&gt;/&lt;namespace&gt;/&lt;catalog_image_name&gt;:&lt;tag&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-filtering-fbc_create-file-based-catalogs">Updating or filtering a file-based catalog image</h5>
+<div class="paragraph _abstract">
+<p>To keep your catalog accurate and ensure users can safely upgrade installed Operators, you can use the <code>opm</code> CLI to extract, edit, and rebuild a file-based catalog image. You can also specify deprecation messages for packages, channels, and bundles.</p>
+</div>
+<div class="paragraph">
+<p>After you complete the changes, you can rebuild the image as an updated version of the catalog.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Alternatively, if you already have a catalog image on a mirror registry, you can use the oc-mirror CLI plugin to automatically prune any removed images from an updated source version of that catalog image while mirroring it to the target registry.</p>
+</div>
+<div class="paragraph">
+<p>For more information about the oc-mirror plugin and this use case, see "Mirroring images for a disconnected installation using the oc-mirror plugin v2".</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have the following on your workstation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>opm</code> CLI.</p>
+</li>
+<li>
+<p><code>podman</code> version 1.9.3+.</p>
+</li>
+<li>
+<p>A file-based catalog image.</p>
+</li>
+<li>
+<p>A catalog directory structure recently initialized on your workstation related to this catalog.</p>
+<div class="paragraph">
+<p>If you do not have an initialized catalog directory, create the directory and generate the Dockerfile. For more information, see the "Initialize the catalog" step from the "Creating a file-based catalog image" procedure.</p>
 </div>
 </li>
 </ul>
 </div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Extract the contents of the catalog image in YAML format to an <code>index.yaml</code> file in your catalog directory:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm render &lt;registry&gt;/&lt;namespace&gt;/&lt;catalog_image_name&gt;:&lt;tag&gt; \
+    -o yaml &gt; &lt;catalog_dir&gt;/index.yaml</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Alternatively, you can use the <code>-o json</code> flag to output in JSON format.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Modify the contents of the resulting <code>index.yaml</code> file to your specifications:</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>After a bundle has been published in a catalog, assume that one of your users has installed it. Ensure that all previously published bundles in a catalog have an update path to the current or newer channel head to avoid stranding users that have that version installed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="openblock">
+<div class="content">
 <div class="ulist">
+<ul>
+<li>
+<p>To add an Operator, follow the steps for creating package, bundle, and channel entries in the "Creating a file-based catalog image" procedure.</p>
+</li>
+<li>
+<p>To remove an Operator, delete the set of <code>olm.package</code>, <code>olm.channel</code>, and <code>olm.bundle</code> blobs that relate to the package. The following example shows a set that must be deleted to remove the <code>example-operator</code> package from the catalog:</p>
+<div class="listingblock">
+<div class="title">Example removed entries</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">---
+defaultChannel: release-2.7
+icon:
+  base64data: &lt;base64_string&gt;
+  mediatype: image/svg+xml
+name: example-operator
+schema: olm.package
+---
+entries:
+- name: example-operator.v2.7.0
+  skipRange: '&gt;=2.6.0 &lt;2.7.0'
+- name: example-operator.v2.7.1
+  replaces: example-operator.v2.7.0
+  skipRange: '&gt;=2.6.0 &lt;2.7.1'
+- name: example-operator.v2.7.2
+  replaces: example-operator.v2.7.1
+  skipRange: '&gt;=2.6.0 &lt;2.7.2'
+- name: example-operator.v2.7.3
+  replaces: example-operator.v2.7.2
+  skipRange: '&gt;=2.6.0 &lt;2.7.3'
+- name: example-operator.v2.7.4
+  replaces: example-operator.v2.7.3
+  skipRange: '&gt;=2.6.0 &lt;2.7.4'
+name: release-2.7
+package: example-operator
+schema: olm.channel
+---
+image: example.com/example-inc/example-operator-bundle@sha256:&lt;digest&gt;
+name: example-operator.v2.7.0
+package: example-operator
+properties:
+- type: olm.gvk
+  value:
+    group: example-group.example.io
+    kind: MyObject
+    version: v1alpha1
+- type: olm.gvk
+  value:
+    group: example-group.example.io
+    kind: MyOtherObject
+    version: v1beta1
+- type: olm.package
+  value:
+    packageName: example-operator
+    version: 2.7.0
+- type: olm.bundle.object
+  value:
+    data: &lt;base64_string&gt;
+- type: olm.bundle.object
+  value:
+    data: &lt;base64_string&gt;
+relatedImages:
+- image: example.com/example-inc/example-related-image@sha256:&lt;digest&gt;
+  name: example-related-image
+schema: olm.bundle
+---</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To add or update deprecation messages for an Operator, ensure there is a <code>deprecations.yaml</code> file in the same directory as the package&#8217;s <code>index.yaml</code> file. For information on the <code>deprecations.yaml</code> file format, see "olm.deprecations schema".</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Save your changes.</p>
+</li>
+<li>
+<p>Validate the catalog:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm validate &lt;catalog_dir&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Rebuild the catalog:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman build . \
+    -f &lt;catalog_dir&gt;.Dockerfile \
+    -t &lt;registry&gt;/&lt;namespace&gt;/&lt;catalog_image_name&gt;:&lt;tag&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Push the updated catalog image to a registry:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman push &lt;registry&gt;/&lt;namespace&gt;/&lt;catalog_image_name&gt;:&lt;tag&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
 <div class="title">Verification</div>
-<ul>
+<ol class="arabic">
 <li>
-<p>Run the following commands to verify that your Operator and its resources were deleted:</p>
-<div class="ulist">
-<ul>
+<p>In the web console, navigate to the OperatorHub configuration resource in the <strong>Administration</strong> &#8594; <strong>Cluster Settings</strong> &#8594; <strong>Configuration</strong> page.</p>
+</li>
 <li>
-<p>Verify the Operator is deleted by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusterextensions</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">No resources found</code></pre>
-</div>
+<p>Add the catalog source or update the existing catalog source to use the pull spec for your updated catalog image.</p>
+<div class="paragraph">
+<p>For more information, see "Adding a catalog source to a cluster".</p>
 </div>
 </li>
 <li>
-<p>Verify that the Operator&#8217;s system namespace is deleted by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get ns &lt;operator_name&gt;-system</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">Error from server (NotFound): namespaces "&lt;operator_name&gt;-system" not found</code></pre>
-</div>
-</div>
+<p>After the catalog source is in a <strong>READY</strong> state, navigate to the <strong>Ecosystem</strong> &#8594; <strong>Software Catalog</strong> page. Select <strong>Operators</strong> under the <strong>Type</strong> heading and check that the changes you made are reflected in the list of Operators.</p>
 </li>
-</ul>
+</ol>
 </div>
-</li>
-</ul>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a> →</p>
+<p>← Previous: <a href="ocp-map-troubleshoot-operator-issues-intro_troubleshoot-operator-issues.html">Troubleshoot Operators with OLM (Classic)</a> | ↑ Up: <a href="_extend.html">Extend</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="manage-catalogs-with-olmv1-con_manage-catalogs-with-olmv1.html">Manage catalogs with OLM v1</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -3194,7 +4235,7 @@ status:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 17:13:02 +0100
+Last updated 2026-10-15 18:05:30 +0100
 </div>
 </div>
 <style>

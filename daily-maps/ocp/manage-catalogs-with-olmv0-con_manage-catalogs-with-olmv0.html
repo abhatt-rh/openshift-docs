@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog" class="book toc2 toc-left navmap-has-right-toc">
+<body id="manage-catalogs-with-olmv0-con_manage-catalogs-with-olmv0" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -519,6 +519,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="oke_similarities_and_differences_evaluate-openshift-kubernetes-engine.html">OpenShift Kubernetes Engine and Red&#160;Hat OpenShift Container Platform comparison</a>
 </li>
 <li><a href="hosted-control-planes-overview_compare-openshift-deployment-models.html">Introduction to hosted control planes</a>
+</li>
+<li><a href="review-cluster-operators-con_review-cluster-operators.html">Review cluster Operators</a>
 </li>
 </ul>
 </li>
@@ -593,8 +595,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="installation-overview_understand-openshift-installation-architecture.html">The Red&#160;Hat OpenShift Container Platform installation</a>
 </li>
 <li><a href="enable-fips-cryptography-for-installation-con_enable-fips-cryptography-for-installation.html">Enable FIPS cryptography for installation</a>
-</li>
-<li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
 <li><a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a>
 </li>
@@ -894,8 +894,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_upgrade.html">Upgrade</a>
 
 <ul class="sectlevel2">
-<li><a href="update-and-rollback-cluster-extensions-con_update-and-rollback-cluster-extensions.html">Update and roll back cluster extensions</a>
-</li>
 <li><a href="about-updates_update-clusters-overview.html">Cluster update overview</a>
 </li>
 <li><a href="update-cluster-version-object_understand-openshift-updates.html">The ClusterVersion object</a>
@@ -1442,8 +1440,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_secure.html">Secure</a>
 
 <ul class="sectlevel2">
-<li><a href="control-user-access-to-extensions-con_control-user-access-to-extensions.html">Control user access to extensions</a>
-</li>
 <li><a href="manage-user-authentication-and-identity-providers-con_manage-user-authentication-and-identity-providers.html">Manage user authentication and identity providers</a>
 </li>
 <li><a href="secure-network-traffic-con_secure-network-traffic.html">Secure network traffic</a>
@@ -1701,8 +1697,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_extend.html">Extend</a>
 <ul class="sectlevel2">
-<li><a href="olmv1-about-catalogs_add-and-remove-catalogs.html">About catalogs in OLM v1</a>
-</li>
 <li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
 </li>
 <li><a href="nodes-containers-port-forwarding-about_configure-port-forwarding-to-pods.html">Understand port forwarding</a>
@@ -1725,15 +1719,55 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
-<li><a href="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog.html"><span class="toc-current">About Operator installation from the software catalog</span></a>
-</li>
 <li><a href="extend-the-openshift-cli-with-plugins-intro_extend-the-openshift-cli-with-plugins.html">Extend the OpenShift CLI with plugins</a>
 </li>
 <li><a href="cli-manager-about_manage-cli-plugins-with-the-cli-manager.html">About the CLI Manager Operator</a>
 </li>
 <li><a href="nodes-pods-plugins-about_manage-kernel-modules-across-cluster-nodes-deploy-device-plugins-alongside-kernel-modules.html">Understand device plugins</a>
 </li>
-<li><a href="resolve-catalog-content-con_resolve-catalog-content.html">Resolve catalog content</a>
+<li><a href="explore-cluster-extension-capabilities-con_explore-cluster-extension-capabilities.html">Understand cluster extensions with OLM v1</a>
+</li>
+<li><a href="check-cluster-extension-support-con_check-cluster-extension-support.html">Review supported cluster extensions with OLM v1</a>
+</li>
+<li><a href="install-cluster-extensions-with-olmv1-con_install-cluster-extensions-with-olmv1.html">Install cluster extensions with OLM v1</a>
+</li>
+<li><a href="configure-cluster-extensions-con_configure-cluster-extensions.html">Configure cluster extensions with OLM v1</a>
+</li>
+<li><a href="update-and-rollback-cluster-extensions-with-olmv1-con_update-and-rollback-cluster-extensions-with-olmv1.html">Update and roll back cluster extensions with OLM v1</a>
+</li>
+<li><a href="remove-cluster-extensions-with-olmv1-con_remove-cluster-extensions-with-olmv1.html">Remove cluster extensions with OLM v1</a>
+</li>
+<li><a href="control-access-to-cluster-extension-resources-with-olmv1-con_control-access-to-cluster-extension-resources-with-olmv1.html">Control access to cluster extension resources with OLM v1</a>
+</li>
+<li><a href="monitor-cluster-extensions-with-olmv1-con_monitor-cluster-extensions-with-olmv1.html">Monitor cluster extensions with OLM v1</a>
+</li>
+<li><a href="troubleshoot-cluster-extensions-with-olmv1-con_troubleshoot-cluster-extensions-with-olmv1.html">Troubleshoot cluster extensions with OLM v1</a>
+</li>
+<li><a href="understand-olmv0-resources-con_understand-operator-lifecycle-manager-concepts-and-resources.html">Understand Operator lifecycle management with OLM (Classic)</a>
+</li>
+<li><a href="install-operators-with-olmv0-con_install-operators-with-olmv0.html">Install Operators with OLM (Classic)</a>
+</li>
+<li><a href="update-installed-operators-con_update-installed-operators.html">Update installed Operators with OLM (Classic)</a>
+</li>
+<li><a href="ocp-map-delete-operators-from-a-cluster-intro_delete-operators-from-a-cluster.html">Delete Operators with OLM (Classic)</a>
+</li>
+<li><a href="ocp-map-create-applications-from-installed-operators-intro_create-applications-from-installed-operators.html">Create applications from Operators installed with OLM (Classic)</a>
+</li>
+<li><a href="ocp-map-configure-operator-lifecycle-manager-features-intro_configure-operator-lifecycle-manager-features.html">Configure OLM (Classic) features</a>
+</li>
+<li><a href="ocp-map-configure-operator-lifecycle-manager-proxy-support-intro_configure-operator-lifecycle-manager-proxy-support.html">Configure Operator proxy support with OLM (Classic)</a>
+</li>
+<li><a href="ocp-map-view-operator-status-intro_view-operator-status.html">Monitor Operators with OLM (Classic)</a>
+</li>
+<li><a href="ocp-map-troubleshoot-operator-issues-intro_troubleshoot-operator-issues.html">Troubleshoot Operators with OLM (Classic)</a>
+</li>
+<li><a href="prepare-catalogs-con_prepare-catalogs.html">Prepare catalogs</a>
+</li>
+<li><a href="manage-catalogs-with-olmv1-con_manage-catalogs-with-olmv1.html">Manage catalogs with OLM v1</a>
+</li>
+<li><a href="manage-catalogs-with-olmv0-con_manage-catalogs-with-olmv0.html"><span class="toc-current">Manage catalogs with OLM (Classic)</span></a>
+</li>
+<li><a href="extend-the-kubernetes-api-with-custom-resource-definitions-con_crd-extending-api-with-crds.html">Extend the Kubernetes API with custom resource definitions</a>
 </li>
 </ul>
 </li>
@@ -1957,149 +1991,335 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#olm-installing-from-software-catalog-using-web-console_olm-adding-operators-to-a-cluster">Install from the software catalog by using the web console</a></li><li class="level-4"><a href="#olm-installing-operator-from-software-catalog-using-cli_install-operators-from-the-software-catalog">Install from the software catalog by using the CLI</a></li><li class="level-4"><a href="#olm-installing-global-namespaces_install-operators-from-the-software-catalog">Install global Operators in custom namespaces</a></li><li class="level-4"><a href="#olmv1-finding-operators-to-install_install-operators-from-the-software-catalog">Find Operators to install from a catalog</a></li><li class="level-4"><a href="#olmv1-installing-an-operator_install-operators-from-the-software-catalog">Install a cluster extension in all namespaces</a></li><li class="level-4"><a href="#olmv1-deploying-a-ce-in-a-specific-namespace_install-operators-from-the-software-catalog">Configure a watch namespace for a cluster extension (Technology Preview)</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#olm-rh-catalogs_add-and-remove-catalogs">About Red Hat-provided Operator catalogs</a></li><li class="level-4"><a href="#olm-catalogsource_understand-operator-lifecycle-manager-concepts-and-resources">Catalog source</a></li><li class="level-5"><a href="#olm-catalogsource-image-template_understand-operator-lifecycle-manager-concepts-and-resources">Image template for custom catalog sources</a></li><li class="level-5"><a href="#olm-cs-health_understand-operator-lifecycle-manager-concepts-and-resources">Catalog health requirements</a></li><li class="level-4"><a href="#understand-the-software-catalog_understand-the-software-catalog">Understand the software catalog</a></li><li class="level-5"><a href="#olm-software-catalog-overview_understand-the-software-catalog">About the software catalog</a></li><li class="level-5"><a href="#olm-software-catalog-arch_understand-the-software-catalog">Software catalog architecture</a></li><li class="level-6"><a href="#olm-software-catalog-arch-operatorhub-crd_understand-the-software-catalog">OperatorHub custom resource</a></li><li class="level-5"><a href="#olm-about-catalogs_understand-the-software-catalog">About Operator catalogs</a></li><li class="level-4"><a href="#manage-custom-catalogs_manage-custom-catalogs">Manage custom catalogs</a></li><li class="level-5"><a href="#olm-managing-custom-catalogs-sqlite_manage-custom-catalogs">SQLite-based catalogs</a></li><li class="level-6"><a href="#olm-creating-index-image_manage-custom-catalogs">Creating a SQLite-based index image</a></li><li class="level-6"><a href="#olm-updating-index-image_manage-custom-catalogs">Updating a SQLite-based index image</a></li><li class="level-6"><a href="#olm-pruning-index-image_olm-managing-custom-catalogs">Filtering a SQLite-based index image</a></li><li class="level-5"><a href="#olm-catalog-sources-and-psa_manage-custom-catalogs">Catalog sources and pod security admission</a></li><li class="level-6"><a href="#olm-migrating-sqlite-catalog-to-fbc_manage-custom-catalogs">Migrating SQLite database catalogs to the file-based catalog format</a></li><li class="level-6"><a href="#olm-updating-sqlite-catalog-to-a-new-opm-version_manage-custom-catalogs">Rebuilding SQLite database catalog images</a></li><li class="level-6"><a href="#olm-sqlite-catalog-elevated-privileges_manage-custom-catalogs">Configuring catalogs to run with elevated permissions</a></li><li class="level-5"><a href="#olm-accessing-images-private-registries_olm-managing-custom-catalogs">Accessing images for Operators from private registries</a></li><li class="level-5"><a href="#olm-removing-catalogs_manage-custom-catalogs">Removing custom catalogs</a></li><li class="level-4"><a href="#catalog-source-pod-scheduling_configure-catalog-source-pod-scheduling">Configure catalog source pod scheduling</a></li><li class="level-5"><a href="#disabling-catalogsource-objects_configure-catalog-source-pod-scheduling">Disabling default CatalogSource objects at a local level</a></li><li class="level-5"><a href="#olm-node-selector_configure-catalog-source-pod-scheduling">Overriding the node selector for catalog source pods</a></li><li class="level-5"><a href="#olm-priority-class-name_configure-catalog-source-pod-scheduling">Overriding the priority class name for catalog source pods</a></li><li class="level-5"><a href="#olm-tolerations_configure-catalog-source-pod-scheduling">Overriding tolerations for catalog source pods</a></li><li class="level-4"><a href="#troubleshoot-catalog-sources_troubleshoot-catalog-sources">Troubleshoot catalog sources</a></li><li class="level-5"><a href="#olm-cs-status-cli_troubleshoot-catalog-sources">View Operator catalog source status by using the CLI</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog">About Operator installation from the software catalog</h3>
+<h3 id="manage-catalogs-with-olmv0-con_manage-catalogs-with-olmv0">Manage catalogs with OLM (Classic)</h3>
 <div class="paragraph _abstract">
-<p>The software catalog in Red&#160;Hat OpenShift Container Platform is the interface for discovering Operators that Operator Lifecycle Manager (OLM) installs and manages on your cluster. You can choose installation settings such as install mode, namespace, and approval strategy during subscription.</p>
+<p>Cluster administrators
+and Operator catalog maintainers can create and manage custom catalogs packaged using the bundle format on Operator Lifecycle Manager (OLM) in Red&#160;Hat OpenShift Container Platform.</p>
+</div>
+<div class="sect3">
+<h4 id="olm-rh-catalogs_add-and-remove-catalogs">About Red&#160;Hat-provided Operator catalogs</h4>
+<div class="paragraph _abstract">
+<p>The Red&#160;Hat-provided catalog sources are installed by default in the <code>openshift-marketplace</code> namespace, which makes the catalogs available cluster-wide in all namespaces.</p>
 </div>
 <div class="paragraph">
-<p>As a cluster administrator, you can install an Operator from the software catalog by using the Red&#160;Hat OpenShift Container Platform
-web console or CLI. Subscribing an Operator to one or more namespaces makes the Operator available to developers on your cluster.</p>
+<p>The following Operator catalogs are distributed by Red&#160;Hat:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 55%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Catalog</th>
+<th class="tableblock halign-left valign-top">Index image</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>redhat-operators</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>registry.redhat.io/redhat/redhat-operator-index:v{product-version}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat products packaged and shipped by Red&#160;Hat. Supported by Red&#160;Hat.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>certified-operators</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>registry.redhat.io/redhat/certified-operator-index:v{product-version}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Products from leading independent software vendors (ISVs). Red&#160;Hat partners with ISVs to package and ship. Supported by the ISV.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>community-operators</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>registry.redhat.io/redhat/community-operator-index:v{product-version}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Software maintained by relevant representatives in the community Operators GitHub repository. No official support.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>During a cluster upgrade, the index image tag for the default Red&#160;Hat-provided catalog sources are updated automatically by the Cluster Version Operator (CVO) so that Operator Lifecycle Manager (OLM) pulls the updated version of the catalog. For example, during an upgrade from Red&#160;Hat OpenShift Container Platform 4.8 to 4.9, the <code>spec.image</code> field in the <code>CatalogSource</code> object for the <code>redhat-operators</code> catalog is updated from:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">registry.redhat.io/redhat/redhat-operator-index:v4.8</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>During installation, you must determine the following initial settings for the Operator:</p>
+<p>to:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">registry.redhat.io/redhat/redhat-operator-index:v4.9</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="olm-catalogsource_understand-operator-lifecycle-manager-concepts-and-resources">Catalog source</h4>
+<div class="paragraph _abstract">
+<p>A <em>catalog source</em> represents a store of metadata, typically by referencing an <em>index image</em> stored in a container registry. Operator Lifecycle Manager (OLM) queries catalog sources to discover and install Operators and their dependencies. The software catalog in the Red&#160;Hat OpenShift Container Platform web console also displays the Operators provided by catalog sources.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Tip">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Cluster administrators can view the full list of Operators provided by an enabled catalog source on a cluster by using the <strong>Administration</strong> &#8594; <strong>Cluster Settings</strong> &#8594; <strong>Configuration</strong> &#8594; <strong>OperatorHub</strong> page in the web console.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <code>spec</code> of a <code>CatalogSource</code> object indicates how to construct a pod or how to communicate with a service that serves the Operator Registry gRPC API.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>CatalogSource</code> object</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">﻿apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  generation: 1
+  name: example-catalog
+  namespace: openshift-marketplace
+  annotations:
+    olm.catalogImageTemplate:
+      "quay.io/example-org/example-catalog:v{kube_major_version}.{kube_minor_version}.{kube_patch_version}"
+spec:
+  displayName: Example Catalog
+  image: quay.io/example-org/example-catalog:v1
+  priority: -400
+  publisher: Example Org
+  sourceType: grpc
+  grpcPodConfig:
+    securityContextConfig: &lt;security_mode&gt;
+    nodeSelector:
+      custom_label: &lt;label&gt;
+    priorityClassName: system-cluster-critical
+    tolerations:
+      - key: "key1"
+        operator: "Equal"
+        value: "value1"
+        effect: "NoSchedule"
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+status:
+  connectionState:
+    address: example-catalog.openshift-marketplace.svc:50051
+    lastConnect: 2021-08-26T18:14:31Z
+    lastObservedState: READY
+  latestImageRegistryPoll: 2021-08-26T18:46:25Z
+  registryService:
+    createdAt: 2021-08-26T16:16:37Z
+    port: 50051
+    protocol: grpc
+    serviceName: example-catalog
+    serviceNamespace: openshift-marketplace</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Installation Mode</dt>
+<dt class="hdlist1"><code>metadata.name</code></dt>
 <dd>
-<p>Choose <strong>All namespaces on the cluster (default)</strong> to have the Operator installed on all namespaces or choose individual namespaces, if available, to only install the Operator on selected namespaces. This example chooses <strong>All namespaces&#8230;&#8203;</strong> to make the Operator available to all users and projects.</p>
+<p>Specifies the name for the <code>CatalogSource</code> object. This value is also used as part of the name for the related pod that is created in the requested namespace.</p>
 </dd>
-<dt class="hdlist1">Update Channel</dt>
+<dt class="hdlist1"><code>metadata.namespace</code></dt>
 <dd>
-<p>If an Operator is available through multiple channels, you can choose which channel you want to subscribe to. For example, to deploy from the <strong>stable</strong> channel, if available, select it from the list.</p>
+<p>Specifies the namespace to create the catalog in. To make the catalog available cluster-wide in all namespaces, set this value to <code>openshift-marketplace</code>. The default Red Hat-provided catalog sources also use the <code>openshift-marketplace</code> namespace. Otherwise, set the value to a specific namespace to make the Operator only available in that namespace.</p>
 </dd>
-<dt class="hdlist1">Approval Strategy</dt>
+<dt class="hdlist1"><code>metadata.annotations.olm.catalogImageTemplate</code></dt>
 <dd>
-<p>You can choose automatic or manual updates.</p>
+<p>To avoid cluster upgrades potentially leaving Operator installations in an unsupported state or without a continued update path, you can enable automatically changing your Operator catalog&#8217;s index image version as part of cluster upgrades. This field is optional.</p>
 <div class="paragraph">
-<p>If you choose automatic updates for an installed Operator, when a new version of that Operator is available in the selected channel, Operator Lifecycle Manager (OLM) automatically upgrades the running instance of your Operator without human intervention.</p>
-</div>
-<div class="paragraph">
-<p>If you select manual updates, when a newer version of an Operator is available, OLM creates an update request. As a
-cluster administrator,
-you must then manually approve that update request to have the Operator updated to the new version.</p>
+<p>Set the <code>olm.catalogImageTemplate</code> annotation to your index image name and use one or more of the Kubernetes cluster version variables as shown when constructing the template for the image tag. The annotation overwrites the <code>spec.image</code> field at run time. See the "Image template for custom catalog sources" section for more details.</p>
 </div>
 </dd>
-</dl>
-</div>
-<div class="sect3">
-<h4 id="olm-installing-from-software-catalog-using-web-console_olm-adding-operators-to-a-cluster">Install from the software catalog by using the web console</h4>
-<div class="paragraph _abstract">
-<p>To install and subscribe to an Operator from the software catalog, you can use the Red&#160;Hat OpenShift Container Platform web console. The console guides you through selecting an install mode, namespace, and approval strategy.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>Access to an Red&#160;Hat OpenShift Container Platform cluster using an account with
-<code>cluster-admin</code> permissions.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate in the web console to the <strong>Ecosystem</strong> &#8594; <strong>Software Catalog</strong> page.</p>
-</li>
-<li>
-<p>Scroll or type a keyword into the <strong>Filter by keyword</strong> box to find the Operator you want. For example, type <code>advanced</code> to find the Advanced Cluster Management for Kubernetes Operator.</p>
-<div class="paragraph">
-<p>You can also filter options by <strong>Infrastructure Features</strong>. For example, select <strong>Disconnected</strong> if you want to see Operators that work in disconnected environments, also known as restricted network environments.</p>
-</div>
-</li>
-<li>
-<p>Select the Operator to display additional information.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Choosing a Community Operator warns that Red Hat does not certify Community Operators; you must acknowledge the warning before continuing.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Read the information about the Operator and click <strong>Install</strong>.</p>
-</li>
-<li>
-<p>On the <strong>Install Operator</strong> page, configure your Operator installation:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>If you want to install a specific version of an Operator, select an <strong>Update channel</strong> and <strong>Version</strong> from the lists. You can browse the various versions of an Operator across any channels it might have, view the metadata for that channel and version, and select the exact version you want to install.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The version selection defaults to the latest version for the channel selected. If the latest version for the channel is selected, the <strong>Automatic</strong> approval strategy is enabled by default. Otherwise, <strong>Manual</strong> approval is required when not installing the latest version for the selected channel.</p>
-</div>
-<div class="paragraph">
-<p>Installing an Operator with <strong>Manual</strong> approval causes all Operators installed within the namespace to function with the <strong>Manual</strong> approval strategy and all Operators are updated together. If you want to update Operators independently, install Operators into separate namespaces.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Confirm the installation mode for the Operator:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>All namespaces on the cluster (default)</strong> installs the Operator in the default <code>openshift-operators</code> namespace to watch and be made available to all namespaces in the cluster. This option is not always available.</p>
-</li>
-<li>
-<p><strong>A specific namespace on the cluster</strong> allows you to choose a specific, single namespace in which to install the Operator. The Operator will only watch and be made available for use in this single namespace.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>For clusters on cloud providers with token authentication enabled:</p>
+<dt class="hdlist1"><code>spec.displayName</code></dt>
+<dd>
+<p>Specifies the display name for the catalog in the web console and CLI.</p>
+</dd>
+<dt class="hdlist1"><code>spec.image</code></dt>
+<dd>
+<p>Specifies the index image for the catalog. Optionally, this spec can be omitted when using the <code>olm.catalogImageTemplate</code> annotation, which sets the pull spec at run time.</p>
+</dd>
+<dt class="hdlist1"><code>spec.priority</code></dt>
+<dd>
+<p>Specifies the weight for the catalog source. OLM uses the weight for prioritization during dependency resolution. A higher weight indicates the catalog is preferred over lower-weighted catalogs.</p>
+</dd>
+<dt class="hdlist1"><code>spec.sourceType</code></dt>
+<dd>
+<p>Specifies one of the following source types:</p>
 <div class="openblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>If the cluster uses AWS Security Token Service (<strong>STS Mode</strong> in the web console), enter the Amazon Resource Name (ARN) of the AWS IAM role of your service account in the <strong>role ARN</strong> field. To create the role&#8217;s ARN, follow the procedure described in <a href="https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html/tutorials/cloud-experts-deploy-api-data-protection#prepare-aws-account_cloud-experts-deploy-api-data-protection">Preparing AWS account</a>.</p>
+<p><code>grpc</code> with an <code>image</code> reference: OLM pulls the image and runs the pod, which is expected to serve a compliant API.</p>
 </li>
 <li>
-<p>If the cluster uses Microsoft Entra Workload ID (<strong>Workload Identity / Federated Identity Mode</strong> in the web console), add the client ID, tenant ID, and subscription ID in the appropriate fields.</p>
+<p><code>grpc</code> with an <code>address</code> field: OLM attempts to contact the gRPC API at the given address. This should not be used in most cases.</p>
 </li>
 <li>
-<p>If the cluster uses Google Cloud Platform Workload Identity (<strong>GCP Workload Identity / Federated Identity Mode</strong> in the web console), add the project number, pool ID, provider ID, and service account email in the appropriate fields.</p>
+<p><code>configmap</code>: OLM parses config map data and runs a pod that can serve the gRPC API over it.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
+</dd>
+<dt class="hdlist1"><code>spec.grpcPodConfig.securityContextConfig</code></dt>
+<dd>
+<p>Specifies the pod security admissions (PSA) policy for the catalog source pod. It accepts the values of <code>legacy</code> or <code>restricted</code>. If the field is not set, the default value is <code>legacy</code>. In a future Red&#160;Hat OpenShift Container Platform release, it is planned that the default value will be <code>restricted</code>.</p>
+<div class="openblock">
+<div class="content">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If your catalog cannot run with <code>restricted</code> permissions, it is recommended that you manually set this field to <code>legacy</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>spec.grpcPodConfig.nodeSelector</code></dt>
+<dd>
+<p>Overrides the default node selector for the pod serving the content in <code>spec.image</code> for <code>grpc</code> type catalog sources. This field is optional.</p>
+</dd>
+<dt class="hdlist1"><code>spec.grpcPodConfig.priorityClassName</code></dt>
+<dd>
+<p>Overrides the default priority class name for the pod serving the content in <code>spec.image</code> for <code>grpc</code> type catalog sources. Kubernetes provides <code>system-cluster-critical</code> and <code>system-node-critical</code> priority classes by default. Setting the field to empty (<code>""</code>) assigns the pod the default priority. Other priority classes can be defined manually. This field is optional.</p>
+</dd>
+<dt class="hdlist1"><code>spec.grpcPodConfig.tolerations</code></dt>
+<dd>
+<p>Overrides the default tolerations for the pod serving the content in <code>spec.image</code> for <code>grpc</code> type catalog sources. This field is optional.</p>
+</dd>
+<dt class="hdlist1"><code>spec.updateStrategy.registryPoll</code></dt>
+<dd>
+<p>Specifies how often OLM polls the container registry for updates.</p>
+</dd>
+<dt class="hdlist1"><code>status.connectionState.lastObservedState</code></dt>
+<dd>
+<p>Displays the last observed state of the catalog connection. For example:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>READY</code>: A connection is successfully established.</p>
 </li>
 <li>
-<p>For <strong>Update approval</strong>, select either the <strong>Automatic</strong> or <strong>Manual</strong> approval strategy.</p>
+<p><code>CONNECTING</code>: A connection is attempting to establish.</p>
+</li>
+<li>
+<p><code>TRANSIENT_FAILURE</code>: A temporary problem has occurred while attempting to establish a connection, such as a timeout. The state will eventually switch back to <code>CONNECTING</code> and try again.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>status.latestImageRegistryPoll</code></dt>
+<dd>
+<p>Displays the last time OLM polled the container registry for catalog image updates.</p>
+</dd>
+<dt class="hdlist1"><code>status.registryService</code></dt>
+<dd>
+<p>Displays status information for the catalog&#8217;s Operator Registry service.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Referencing the <code>name</code> of a <code>CatalogSource</code> object in a subscription instructs OLM where to search to find a requested Operator:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>Subscription</code> object referencing a catalog source</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: example-operator
+  namespace: example-namespace
+spec:
+  channel: stable
+  name: example-operator
+  source: example-catalog
+  sourceNamespace: openshift-marketplace</code></pre>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-catalogsource-image-template_understand-operator-lifecycle-manager-concepts-and-resources">Image template for custom catalog sources</h5>
+<div class="paragraph _abstract">
+<p>Operator compatibility with the underlying cluster can be expressed by a catalog source in various ways. One way, which is used for the default Red Hat-provided catalog sources, is to identify image tags for index images that are specifically created for a particular platform release, for example
+Red&#160;Hat OpenShift Container Platform {product-version}.</p>
+</div>
+<div class="paragraph">
+<p>During a cluster upgrade, the index image tag for the default Red Hat-provided catalog sources are updated automatically by the Cluster Version Operator (CVO) so that Operator Lifecycle Manager (OLM) pulls the updated version of the catalog. For example during an upgrade from Red&#160;Hat OpenShift Container Platform 4.22 to {product-version} {product-version}, the <code>spec.image</code> field in the <code>CatalogSource</code> object for the <code>redhat-operators</code> catalog is updated from:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">registry.redhat.io/redhat/redhat-operator-index:v4.22</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">registry.redhat.io/redhat/redhat-operator-index:v{product-version}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>However, the CVO does not automatically update image tags for custom catalogs. To ensure users are left with a compatible and supported Operator installation after a cluster upgrade, custom catalogs should also be kept updated to reference an updated index image.</p>
+</div>
+<div class="paragraph">
+<p>Starting in Red&#160;Hat OpenShift Container Platform 4.9, cluster administrators can add the <code>olm.catalogImageTemplate</code> annotation in the <code>CatalogSource</code> object for custom catalogs to an image reference that includes a template. The following Kubernetes version variables are supported for use in the template:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>kube_major_version</code></p>
+</li>
+<li>
+<p><code>kube_minor_version</code></p>
+</li>
+<li>
+<p><code>kube_patch_version</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You must specify the Kubernetes cluster version and not the Red&#160;Hat OpenShift Container Platform cluster version, as the latter is not currently available for templating.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Provided that you have created and pushed an index image with a tag specifying the updated Kubernetes version, setting this annotation enables the index image versions in custom catalogs to be automatically changed after a cluster upgrade. The annotation value is used to set or update the image reference in the <code>spec.image</code> field of the <code>CatalogSource</code> object. This helps avoid cluster upgrades leaving Operator installations in unsupported states or without a continued update path.</p>
+</div>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -2108,42 +2328,35 @@ you must then manually approve that update request to have the Operator updated 
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If the web console shows that the cluster uses AWS STS, Microsoft Entra Workload ID, or GCP Workload Identity, you must set <strong>Update approval</strong> to <strong>Manual</strong>.</p>
-</div>
-<div class="paragraph">
-<p>Subscriptions with automatic approvals for updates are not recommended because there might be permission changes to make before updating. Subscriptions with manual approvals for updates ensure that administrators have the opportunity to verify the permissions of the later version, take any necessary steps, and then update.</p>
+<p>You must ensure that the index image with the updated tag, in whichever registry it is stored in, is accessible by the cluster at the time of the cluster upgrade.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-</li>
-</ol>
+<details>
+<summary class="title">Example catalog source with an image template</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  generation: 1
+  name: example-catalog
+  namespace: openshift-marketplace
+  annotations:
+    olm.catalogImageTemplate:
+      "quay.io/example-org/example-catalog:v{kube_major_version}.{kube_minor_version}"
+spec:
+  displayName: Example Catalog
+  image: quay.io/example-org/example-catalog:v1.36
+  priority: -400
+  publisher: Example Org</code></pre>
 </div>
-</li>
-<li>
-<p>Click <strong>Install</strong> to make the Operator available to the selected namespaces on this Red&#160;Hat OpenShift Container Platform cluster:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>If you selected a <strong>Manual</strong> approval strategy, the upgrade status of the subscription remains <strong>Upgrading</strong> until you review and approve the install plan.</p>
-<div class="paragraph">
-<p>After approving on the <strong>Install Plan</strong> page, the subscription upgrade status moves to <strong>Up to date</strong>.</p>
 </div>
-</li>
-<li>
-<p>If you selected an <strong>Automatic</strong> approval strategy, the upgrade status should resolve to <strong>Up to date</strong> without intervention.</p>
-</li>
-</ol>
 </div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>After the upgrade status of the subscription is <strong>Up to date</strong>, select <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong> to verify that the cluster service version (CSV) of the installed Operator eventually shows up. The <strong>Status</strong> should eventually resolve to <strong>Succeeded</strong> in the relevant namespace.</p>
+</details>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2152,60 +2365,817 @@ you must then manually approve that update request to have the Operator updated 
 </td>
 <td class="content">
 <div class="paragraph">
-<p>For the <strong>All namespaces&#8230;&#8203;</strong> installation mode, the status resolves to <strong>Succeeded</strong> in the <code>openshift-operators</code> namespace, but the status is <strong>Copied</strong> if you check in other namespaces.</p>
+<p>If the <code>spec.image</code> field and the <code>olm.catalogImageTemplate</code> annotation are both set, the <code>spec.image</code> field is overwritten by the resolved value from the annotation. If the annotation does not resolve to a usable pull spec, the catalog source falls back to the set <code>spec.image</code> value.</p>
+</div>
+<div class="paragraph">
+<p>If the <code>spec.image</code> field is not set and the annotation does not resolve to a usable pull spec, OLM stops reconciliation of the catalog source and sets it into a human-readable error condition.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>If it does not:</p>
+<p>For
+an Red&#160;Hat OpenShift Container Platform {product-version}
+cluster, which uses Kubernetes 1.36, the <code>olm.catalogImageTemplate</code> annotation in the preceding example resolves to the following image reference:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Check the logs in any pods in the <code>openshift-operators</code> project (or other relevant namespace if <strong>A specific namespace&#8230;&#8203;</strong> installation mode was selected) on the <strong>Workloads</strong> &#8594; <strong>Pods</strong> page that are reporting issues to troubleshoot further.</p>
-</li>
-</ul>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">quay.io/example-org/example-catalog:v1.36</code></pre>
 </div>
-</li>
-<li>
-<p>When the Operator is installed, the metadata indicates which channel and version are installed.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
+</div>
 <div class="paragraph">
-<p>The <strong>Channel</strong> and <strong>Version</strong> dropdown menus are still available for viewing other version metadata in this catalog context.</p>
+<p>For future releases of Red&#160;Hat OpenShift Container Platform, you can create updated index images for your custom catalogs that target the later Kubernetes version that is used by the later Red&#160;Hat OpenShift Container Platform version. With the <code>olm.catalogImageTemplate</code> annotation set before the upgrade, upgrading the cluster to the later Red&#160;Hat OpenShift Container Platform version would then automatically update the catalog&#8217;s index image as well.</p>
 </div>
-</td>
-</tr>
-</table>
 </div>
-</li>
-</ul>
+<div class="sect4">
+<h5 id="olm-cs-health_understand-operator-lifecycle-manager-concepts-and-resources">Catalog health requirements</h5>
+<div class="paragraph _abstract">
+<p>Operator Lifecycle Manager (OLM) requires that all Operator catalogs in a shared global namespace are healthy. When a catalog is unhealthy, Operator installation and update operations in that namespace fail with a <code>CatalogSourcesUnhealthy</code> condition.</p>
+</div>
+<div class="paragraph">
+<p>Operator catalogs on a cluster are interchangeable from the perspective of installation resolution; a <code>Subscription</code> object might reference a specific catalog, but dependencies are resolved using all catalogs on the cluster.</p>
+</div>
+<div class="paragraph">
+<p>For example, if Catalog A is unhealthy, a subscription referencing Catalog A could resolve a dependency in Catalog B, which the cluster administrator might not have been expecting, because B normally had a lower catalog priority than A.</p>
+</div>
+<div class="paragraph">
+<p>As a cluster administrator, if you observe an unhealthy catalog and want to consider the catalog as invalid and resume Operator installations, see the "Removing custom catalogs" or "Disabling the default software catalog sources" sections for information about removing the unhealthy catalog.</p>
+</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="olm-installing-operator-from-software-catalog-using-cli_install-operators-from-the-software-catalog">Install from the software catalog by using the CLI</h4>
+<h4 id="understand-the-software-catalog_understand-the-software-catalog">Understand the software catalog</h4>
 <div class="paragraph _abstract">
-<p>To install an Operator from the software catalog without using the web console, you can create or update a <code>Subscription</code> object by using the <code>oc</code> command in Red&#160;Hat OpenShift Container Platform.</p>
+<p>The software catalog in Red&#160;Hat OpenShift Container Platform provides a web console interface for discovering, installing, and managing Operators through Operator Lifecycle Manager (OLM).</p>
+</div>
+<div class="sect4">
+<h5 id="olm-software-catalog-overview_understand-the-software-catalog">About the software catalog</h5>
+<div class="paragraph _abstract">
+<p>The <em>software catalog</em> is the web console interface in Red&#160;Hat OpenShift Container Platform that cluster administrators use to discover and install Operators. With one click, an Operator can be pulled from its off-cluster source, installed and subscribed on the cluster, and made ready for engineering teams to self-service manage the product across deployment environments using Operator Lifecycle Manager (OLM).</p>
 </div>
 <div class="paragraph">
-<p>For <code>SingleNamespace</code> install mode, you must also ensure an appropriate Operator group exists in the related namespace. An Operator group, defined by an <code>OperatorGroup</code> object, selects target namespaces in which to generate required RBAC access for all Operators in the same namespace as the Operator group.</p>
+<p>Cluster administrators can choose from catalogs grouped into the following categories:</p>
 </div>
-<div class="admonitionblock tip">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Category</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Red Hat Operators</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Red Hat products packaged and shipped by Red Hat. Supported by Red Hat.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Certified Operators</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Products from leading independent software vendors (ISVs). Red Hat partners with ISVs to package and ship. Supported by the ISV.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Community Operators</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Optionally-visible software maintained by relevant representatives in the community Operators GitHub repository. No official support.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Custom Operators</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Operators you add to the cluster yourself. If you have not added any custom Operators, the <strong>Custom</strong> category does not appear in the web console software catalog.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Operators in the software catalog are packaged to run on OLM. This includes a YAML file called a cluster service version (CSV) containing all of the CRDs, RBAC rules, deployments, and container images required to install and securely run the Operator. It also contains user-visible information like a description of its features and supported Kubernetes versions.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-software-catalog-arch_understand-the-software-catalog">Software catalog architecture</h5>
+<div class="paragraph _abstract">
+<p>The software catalog UI component is driven by the Marketplace Operator by default on Red&#160;Hat OpenShift Container Platform in the <code>openshift-marketplace</code> namespace.</p>
+</div>
+<div class="sect5">
+<h6 id="olm-software-catalog-arch-operatorhub-crd_understand-the-software-catalog">OperatorHub custom resource</h6>
+<div class="paragraph">
+<p>The Marketplace Operator manages an <code>OperatorHub</code> custom resource (CR) named <code>cluster</code> that manages the default <code>CatalogSource</code> objects provided with the software catalog.
+You can modify this resource to enable or disable the default catalogs, which is useful when configuring Red&#160;Hat OpenShift Container Platform in restricted network environments.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>OperatorHub</code> custom resource</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1
+kind: OperatorHub
+metadata:
+  name: cluster
+spec:
+  disableAllDefaultSources: true <img src="data:image/png;base64," alt="1">
+  sources: [ <img src="data:image/png;base64," alt="2">
+    {
+      name: "community-operators",
+      disabled: false
+    }
+  ]</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><img src="data:image/png;base64," alt="1"></td>
+<td><code>disableAllDefaultSources</code> is an override that controls availability of all default catalogs that are configured by default during an Red&#160;Hat OpenShift Container Platform installation.</td>
+</tr>
+<tr>
+<td><img src="data:image/png;base64," alt="2"></td>
+<td>Disable default catalogs individually by changing the <code>disabled</code> parameter value per source.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-about-catalogs_understand-the-software-catalog">About Operator catalogs</h5>
+<div class="paragraph _abstract">
+<p>An Operator catalog is a repository of metadata that Operator Lifecycle Manager (OLM) can query to discover and install Operators and their dependencies on a cluster. OLM always installs Operators from the latest version of a catalog.</p>
+</div>
+<div class="paragraph">
+<p>An index image, based on the Operator bundle format, is a containerized snapshot of a catalog. It is an immutable artifact that contains the database of pointers to a set of Operator manifest content. A catalog can reference an index image to source its content for OLM on the cluster.</p>
+</div>
+<div class="paragraph">
+<p>As catalogs are updated, the latest versions of Operators change, and older versions may be removed or altered. In addition, when OLM runs on
+an Red&#160;Hat OpenShift Container Platform
+cluster in a restricted network environment, it is unable to access the catalogs directly from the internet to pull the latest content.</p>
+</div>
+<div class="paragraph">
+<p>As a cluster administrator, you can create your own custom index image, either based on a Red Hat-provided catalog or from scratch, which can be used to source the catalog content on the cluster. Creating and updating your own index image provides a method for customizing the set of Operators available on the cluster, while also avoiding the aforementioned restricted network environment issues.</p>
+</div>
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<img src="data:image/png;base64," alt="Tip">
+<img src="data:image/png;base64," alt="Important">
 </td>
 <td class="content">
 <div class="paragraph">
-<p>In most cases, the web console method of this procedure is preferred because it automates tasks in the background, such as handling the creation of <code>OperatorGroup</code> and <code>Subscription</code> objects automatically when choosing <code>SingleNamespace</code> mode.</p>
+<p>Kubernetes periodically deprecates certain APIs that are removed in subsequent releases. As a result, Operators are unable to use removed APIs starting with the version of Red&#160;Hat OpenShift Container Platform that uses the Kubernetes version that removed the API.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Support for the legacy <em>package manifest format</em> for Operators, including custom catalogs that were using the legacy format, is removed in Red&#160;Hat OpenShift Container Platform 4.8 and later.</p>
+</div>
+<div class="paragraph">
+<p>When creating custom catalog images, previous versions of Red&#160;Hat OpenShift Container Platform 4 required using the <code>oc adm catalog build</code> command, which was deprecated for several releases and is now removed. With the availability of Red Hat-provided index images starting in Red&#160;Hat OpenShift Container Platform 4.6, catalog builders must use the <code>opm index</code> command to manage index images.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="manage-custom-catalogs_manage-custom-catalogs">Manage custom catalogs</h4>
+<div class="paragraph _abstract">
+<p>Cluster administrators
+and Operator catalog maintainers can create and manage custom catalogs packaged using the bundle format on Operator Lifecycle Manager (OLM) in Red&#160;Hat OpenShift Container Platform.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Kubernetes periodically deprecates certain APIs and removes them in later releases. As a result, Operators are unable to use removed APIs starting with the version of Red&#160;Hat OpenShift Container Platform that uses the Kubernetes version that removed the API.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="olm-managing-custom-catalogs-sqlite_manage-custom-catalogs">SQLite-based catalogs</h5>
+<div class="paragraph _abstract">
+<p>SQLite-based Operator catalogs in Red&#160;Hat OpenShift Container Platform use index images that you create, update, and prune with the <code>opm</code> CLI.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The SQLite database format for Operator catalogs is a deprecated feature. Deprecated functionality is still included in Red&#160;Hat OpenShift Container Platform and continues to be supported; however, it will be removed in a future release of this product and is not recommended for new deployments.</p>
+</div>
+<div class="paragraph">
+<p>For the most recent list of major functionality that has been deprecated or removed within Red&#160;Hat OpenShift Container Platform, refer to the <em>Deprecated and removed features</em> section of the Red&#160;Hat OpenShift Container Platform release notes.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect5">
+<h6 id="olm-creating-index-image_manage-custom-catalogs">Creating a SQLite-based index image</h6>
+<div class="paragraph _abstract">
+<p>You can create an index image based on the SQLite database format by using the <code>opm</code> CLI.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have installed the <code>opm</code> CLI.</p>
+</li>
+<li>
+<p>You have <code>podman</code> version 1.9.3+.</p>
+</li>
+<li>
+<p>A bundle image is built and pushed to a registry that supports <a href="https://docs.docker.com/registry/spec/manifest-v2-2/">Docker v2-2</a>.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Start a new index:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm index add \
+    --bundles &lt;registry&gt;/&lt;namespace&gt;/&lt;bundle_image_name&gt;:&lt;tag&gt; \<img src="data:image/png;base64," alt="1">
+    --tag &lt;registry&gt;/&lt;namespace&gt;/&lt;index_image_name&gt;:&lt;tag&gt; \<img src="data:image/png;base64," alt="2">
+    [--binary-image &lt;registry_base_image&gt;] <img src="data:image/png;base64," alt="3"></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><img src="data:image/png;base64," alt="1"></td>
+<td>Comma-separated list of bundle images to add to the index.</td>
+</tr>
+<tr>
+<td><img src="data:image/png;base64," alt="2"></td>
+<td>The image tag that you want the index image to have.</td>
+</tr>
+<tr>
+<td><img src="data:image/png;base64," alt="3"></td>
+<td>Optional: An alternative registry base image to use for serving the catalog.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Push the index image to a registry.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If required, authenticate with your target registry:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman login &lt;registry&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Push the index image:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman push &lt;registry&gt;/&lt;namespace&gt;/&lt;index_image_name&gt;:&lt;tag&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect5">
+<h6 id="olm-updating-index-image_manage-custom-catalogs">Updating a SQLite-based index image</h6>
+<div class="paragraph _abstract">
+<p>After configuring the software catalog to use a catalog source that references a custom index image,
+cluster administrators
+can keep the available Operators on their cluster up-to-date by adding bundle images to the index image.</p>
+</div>
+<div class="paragraph">
+<p>You can update an existing index image using the <code>opm index add</code> command.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have installed the <code>opm</code> CLI.</p>
+</li>
+<li>
+<p>You have <code>podman</code> version 1.9.3+.</p>
+</li>
+<li>
+<p>An index image is built and pushed to a registry.</p>
+</li>
+<li>
+<p>You have an existing catalog source referencing the index image.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Update the existing index by adding bundle images:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm index add \
+    --bundles &lt;registry&gt;/&lt;namespace&gt;/&lt;new_bundle_image&gt;@sha256:&lt;digest&gt; \<img src="data:image/png;base64," alt="1">
+    --from-index &lt;registry&gt;/&lt;namespace&gt;/&lt;existing_index_image&gt;:&lt;existing_tag&gt; \<img src="data:image/png;base64," alt="2">
+    --tag &lt;registry&gt;/&lt;namespace&gt;/&lt;existing_index_image&gt;:&lt;updated_tag&gt; \<img src="data:image/png;base64," alt="3">
+    --pull-tool podman <img src="data:image/png;base64," alt="4"></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><img src="data:image/png;base64," alt="1"></td>
+<td>The <code>--bundles</code> flag specifies a comma-separated list of additional bundle images to add to the index.</td>
+</tr>
+<tr>
+<td><img src="data:image/png;base64," alt="2"></td>
+<td>The <code>--from-index</code> flag specifies the previously pushed index.</td>
+</tr>
+<tr>
+<td><img src="data:image/png;base64," alt="3"></td>
+<td>The <code>--tag</code> flag specifies the image tag to apply to the updated index image.</td>
+</tr>
+<tr>
+<td><img src="data:image/png;base64," alt="4"></td>
+<td>The <code>--pull-tool</code> flag specifies the tool used to pull container images.
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;registry&gt;</code></dt>
+<dd>
+<p>Specifies the hostname of the registry, such as <code>quay.io</code> or <code>mirror.example.com</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;namespace&gt;</code></dt>
+<dd>
+<p>Specifies the namespace of the registry, such as <code>ocs-dev</code> or <code>abc</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;new_bundle_image&gt;</code></dt>
+<dd>
+<p>Specifies the new bundle image to add to the registry, such as <code>ocs-operator</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;digest&gt;</code></dt>
+<dd>
+<p>Specifies the SHA image ID, or digest, of the bundle image, such as <code>c7f11097a628f092d8bad148406aa0e0951094a03445fd4bc0775431ef683a41</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;existing_index_image&gt;</code></dt>
+<dd>
+<p>Specifies the previously pushed image, such as <code>abc-redhat-operator-index</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;existing_tag&gt;</code></dt>
+<dd>
+<p>Specifies a previously pushed image tag, such as <code>{product-version}</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;updated_tag&gt;</code></dt>
+<dd>
+<p>Specifies the image tag to apply to the updated index image, such as <code>{product-version}.1</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example command</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm index add \
+    --bundles quay.io/ocs-dev/ocs-operator@sha256:c7f11097a628f092d8bad148406aa0e0951094a03445fd4bc0775431ef683a41 \
+    --from-index mirror.example.com/abc/abc-redhat-operator-index:{product-version} \
+    --tag mirror.example.com/abc/abc-redhat-operator-index:{product-version}.1 \
+    --pull-tool podman</code></pre>
+</div>
+</div></td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Push the updated index image:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman push &lt;registry&gt;/&lt;namespace&gt;/&lt;existing_index_image&gt;:&lt;updated_tag&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>After Operator Lifecycle Manager (OLM) automatically polls the index image referenced in the catalog source at its regular interval, verify that the new packages are successfully added:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get packagemanifests -n openshift-marketplace</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect5">
+<h6 id="olm-pruning-index-image_olm-managing-custom-catalogs">Filtering a SQLite-based index image</h6>
+<div class="paragraph _abstract">
+<p>An index image, based on the Operator bundle format, is a containerized snapshot of an Operator catalog. You can filter, or <em>prune</em>, an index of all but a specified list of packages, which creates a copy of the source index containing only the Operators that you want.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have <code>podman</code> version 1.9.3+.</p>
+</li>
+<li>
+<p>You have <a href="https://github.com/fullstorydev/grpcurl"><code>grpcurl</code></a> (third-party command-line tool).</p>
+</li>
+<li>
+<p>You have installed the <code>opm</code> CLI.</p>
+</li>
+<li>
+<p>You have access to a registry that supports
+<a href="https://docs.docker.com/registry/spec/manifest-v2-2/">Docker v2-2</a>.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Authenticate with your target registry:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman login &lt;target_registry&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Determine the list of packages you want to include in your pruned index.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Run the source index image that you want to prune in a container. For example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman run -p50051:50051 \
+    -it registry.redhat.io/redhat/redhat-operator-index:v{product-version}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">Trying to pull registry.redhat.io/redhat/redhat-operator-index:v{product-version}...
+Getting image source signatures
+Copying blob ae8a0c23f5b1 done
+...
+INFO[0000] serving registry                              database=/database/index.db port=50051</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>In a separate terminal session, use the <code>grpcurl</code> command to get a list of the packages provided by the index:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ grpcurl -plaintext localhost:50051 api.Registry/ListPackages &gt; packages.out</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Inspect the <code>packages.out</code> file and identify which package names from this list you want to keep in your pruned index. For example:</p>
+<div class="listingblock">
+<div class="title">Example snippets of packages list</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">...
+{
+  "name": "advanced-cluster-management"
+}
+...
+{
+  "name": "jaeger-product"
+}
+...
+{
+{
+  "name": "quay-operator"
+}
+...</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>In the terminal session where you executed the <code>podman run</code> command, press <kbd>Ctrl</kbd> and <kbd>C</kbd> to stop the container process.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Run the following command to prune the source index of all but the specified packages:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">$ opm index prune \
+    -f registry.redhat.io/redhat/redhat-operator-index:v{product-version} \<img src="data:image/png;base64," alt="1">
+    -p advanced-cluster-management,jaeger-product,quay-operator \<img src="data:image/png;base64," alt="2">
+    [-i registry.redhat.io/openshift4/ose-operator-registry-rhel9:v{product-version}] \<img src="data:image/png;base64," alt="3">
+    -t &lt;target_registry&gt;:&lt;port&gt;/&lt;namespace&gt;/redhat-operator-index:v{product-version} <img src="data:image/png;base64," alt="4"></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><img src="data:image/png;base64," alt="1"></td>
+<td>Index to prune.</td>
+</tr>
+<tr>
+<td><img src="data:image/png;base64," alt="2"></td>
+<td>Comma-separated list of packages to keep.</td>
+</tr>
+<tr>
+<td><img src="data:image/png;base64," alt="3"></td>
+<td>Required only for IBM Power&#174; and IBM Z&#174; images: Operator Registry base image with the tag that matches the target Red&#160;Hat OpenShift Container Platform cluster major and minor version.</td>
+</tr>
+<tr>
+<td><img src="data:image/png;base64," alt="4"></td>
+<td>Custom tag for new index image being built.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Run the following command to push the new index image to your target registry:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">$ podman push &lt;target_registry&gt;:&lt;port&gt;/&lt;namespace&gt;/redhat-operator-index:v{product-version}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where <code>&lt;namespace&gt;</code> is any existing namespace on the registry.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-catalog-sources-and-psa_manage-custom-catalogs">Catalog sources and pod security admission</h5>
+<div class="paragraph _abstract">
+<p><em>Pod security admission</em> was introduced in Red&#160;Hat OpenShift Container Platform 4.11 to ensure pod security standards. Catalog sources built using the SQLite-based catalog format and a version of the <code>opm</code> CLI tool released before Red&#160;Hat OpenShift Container Platform 4.11 cannot run under restricted pod security enforcement.</p>
+</div>
+<div class="paragraph">
+<p>In Red&#160;Hat OpenShift Container Platform {product-version},
+namespaces do not have restricted pod security enforcement by default and the default catalog source security mode is set to <code>legacy</code>.</p>
+</div>
+<div class="paragraph">
+<p>Default restricted enforcement for all namespaces is planned for inclusion in a future Red&#160;Hat OpenShift Container Platform release. When restricted enforcement occurs, the security context of the pod specification for catalog source pods must match the restricted pod security standard. If your catalog source image requires a different pod security standard, the pod security admissions label for the namespace must be explicitly set.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you do not want to run your SQLite-based catalog source pods as restricted, you do not need to update your catalog source in
+Red&#160;Hat OpenShift Container Platform {product-version}.</p>
+</div>
+<div class="paragraph">
+<p>However, it is recommended that you take action now to ensure your catalog sources run under restricted pod security enforcement. If you do not take action to ensure your catalog sources run under restricted pod security enforcement, your catalog sources might not run in future Red&#160;Hat OpenShift Container Platform releases.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>As a catalog author, you can enable compatibility with restricted pod security enforcement by completing either of the following actions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Migrate your catalog to the file-based catalog format.</p>
+</li>
+<li>
+<p>Update your catalog image with a version of the <code>opm</code> CLI tool released with Red&#160;Hat OpenShift Container Platform 4.11 or later.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The SQLite database catalog format is deprecated, but still supported by Red Hat. In a future release, the SQLite database format will not be supported, and catalogs will need to migrate to the file-based catalog format. As of Red&#160;Hat OpenShift Container Platform 4.11, the default Red Hat-provided Operator catalog is released in the file-based catalog format. File-based catalogs are compatible with restricted pod security enforcement.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you do not want to update your SQLite database catalog image or migrate your catalog to the file-based catalog format, you can configure your catalog to run with elevated permissions.</p>
+</div>
+<div class="sect5">
+<h6 id="olm-migrating-sqlite-catalog-to-fbc_manage-custom-catalogs">Migrating SQLite database catalogs to the file-based catalog format</h6>
+<div class="paragraph _abstract">
+<p>You can update your deprecated SQLite database format catalogs to the file-based catalog format by using the <code>opm migrate</code> command.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have a SQLite database catalog source.</p>
+</li>
+<li>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>You have the latest version of the <code>opm</code> CLI tool released with Red&#160;Hat OpenShift Container Platform
+{product-version}
+on your workstation.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Migrate your SQLite database catalog to a file-based catalog by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm migrate &lt;registry_image&gt; &lt;fbc_directory&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Generate a Dockerfile for your file-based catalog by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm generate dockerfile &lt;fbc_directory&gt; \
+  --binary-image \
+  registry.redhat.io/openshift4/ose-operator-registry-rhel9:v{product-version}</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Next steps</div>
+<ul>
+<li>
+<p>The generated Dockerfile can be built, tagged, and pushed to your registry.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="olm-updating-sqlite-catalog-to-a-new-opm-version_manage-custom-catalogs">Rebuilding SQLite database catalog images</h6>
+<div class="paragraph _abstract">
+<p>You can rebuild your SQLite database catalog image with the latest version of the <code>opm</code> CLI tool that is released with your version of Red&#160;Hat OpenShift Container Platform.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have a SQLite database catalog source.</p>
+</li>
+<li>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>You have the latest version of the <code>opm</code> CLI tool released with Red&#160;Hat OpenShift Container Platform
+{product-version}
+on your workstation.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Run the following command to rebuild your catalog with a more recent version of the <code>opm</code> CLI tool:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm index add --binary-image \
+  registry.redhat.io/openshift4/ose-operator-registry-rhel9:v{product-version} \
+  --from-index &lt;your_registry_image&gt; \
+  --bundles "" -t \&lt;your_registry_image&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="olm-sqlite-catalog-elevated-privileges_manage-custom-catalogs">Configuring catalogs to run with elevated permissions</h6>
+<div class="paragraph _abstract">
+<p>If you do not want to update your SQLite database catalog image or migrate your catalog to the file-based catalog format, you can set the catalog security mode to legacy and label the catalog source namespace for baseline or privileged pod security enforcement.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Manually setting the catalog security mode to legacy in your catalog source definition ensures your catalog runs with legacy permissions even if the default catalog security mode changes to restricted.</p>
+</li>
+<li>
+<p>Labeling the catalog source namespace for baseline or privileged pod security enforcement ensures your catalog runs with the elevated pod security admission standard.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The SQLite database catalog format is deprecated, but still supported by Red Hat. In a future release, the SQLite database format will not be supported, and catalogs will need to migrate to the file-based catalog format. File-based catalogs are compatible with restricted pod security enforcement.</p>
 </div>
 </td>
 </tr>
@@ -2215,11 +3185,13 @@ you must then manually approve that update request to have the Operator updated 
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>Access to your Red&#160;Hat OpenShift Container Platform cluster using an account with
-<code>cluster-admin</code> permissions.</p>
+<p>You have a SQLite database catalog source.</p>
 </li>
 <li>
-<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>You have a target namespace that supports running pods with the elevated pod security admission standard of <code>baseline</code> or <code>privileged</code>.</p>
 </li>
 </ul>
 </div>
@@ -2227,75 +3199,21 @@ you must then manually approve that update request to have the Operator updated 
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>View the list of Operators available to the cluster from the software catalog:</p>
+<p>Edit the <code>CatalogSource</code> definition by setting the <code>spec.grpcPodConfig.securityContextConfig</code> label to <code>legacy</code>, as shown in the following example:</p>
 <div class="listingblock">
+<div class="title">Example <code>CatalogSource</code> definition</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get packagemanifests -n openshift-marketplace</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: my-catsrc
+  namespace: my-ns
+spec:
+  sourceType: grpc
+  grpcPodConfig:
+    securityContextConfig: legacy
+  image: my-image:latest</code></pre>
 </div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                               CATALOG               AGE
-3scale-operator                    Red Hat Operators     91m
-advanced-cluster-management        Red Hat Operators     91m
-amq7-cert-manager                  Red Hat Operators     91m
-# ...
-couchbase-enterprise-certified     Certified Operators   91m
-crunchy-postgres-operator          Certified Operators   91m
-mongodb-enterprise                 Certified Operators   91m
-# ...
-etcd                               Community Operators   91m
-jaeger                             Community Operators   91m
-kubefed                            Community Operators   91m
-# ...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Note the catalog for your desired Operator.</p>
-</div>
-</li>
-<li>
-<p>Inspect your desired Operator to verify its supported install modes and available channels:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe packagemanifests &lt;operator_name&gt; -n openshift-marketplace</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># ...
-Kind:         PackageManifest
-# ...
-      Install Modes:
-        Supported:  true
-        Type:       OwnNamespace
-        Supported:  true
-        Type:       SingleNamespace
-        Supported:  false
-        Type:       MultiNamespace
-        Supported:  true
-        Type:       AllNamespaces
-# ...
-    Entries:
-      Name:       example-operator.v3.7.11
-      Version:    3.7.11
-      Name:       example-operator.v3.7.10
-      Version:    3.7.10
-    Name:         stable-3.7
-# ...
-   Entries:
-      Name:         example-operator.v3.8.5
-      Version:      3.8.5
-      Name:         example-operator.v3.8.4
-      Version:      3.8.4
-    Name:           stable-3.8
-  Default Channel:  stable-3.8</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In the example output, <code>Install Modes</code> indicates which install modes are supported; <code>Name</code> shows example channel names; and <code>Default Channel</code> is the channel selected by default if one is not specified.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -2305,12 +3223,9 @@ Kind:         PackageManifest
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You can print an Operator&#8217;s version and channel information in YAML format by running the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get packagemanifests &lt;operator_name&gt; -n &lt;catalog_namespace&gt; -o yaml</code></pre>
-</div>
+<p>In Red&#160;Hat OpenShift Container Platform
+{product-version},
+the <code>spec.grpcPodConfig.securityContextConfig</code> field is set to <code>legacy</code> by default. In a future release of Red&#160;Hat OpenShift Container Platform, it is planned that the default setting will change to <code>restricted</code>. If your catalog cannot run under restricted enforcement, it is recommended that you manually set this field to <code>legacy</code>.</p>
 </div>
 </td>
 </tr>
@@ -2318,97 +3233,109 @@ Kind:         PackageManifest
 </div>
 </li>
 <li>
-<p>If more than one catalog is installed in a namespace, run the following command to look up the available versions and channels of an Operator from a specific catalog:</p>
+<p>Edit your <code>&lt;namespace&gt;.yaml</code> file to add elevated pod security admission standards to your catalog source namespace, as shown in the following example:</p>
 <div class="listingblock">
+<div class="title">Example <code>&lt;namespace&gt;.yaml</code> file</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get packagemanifest \
-   --selector=catalog=&lt;catalogsource_name&gt; \
-   --field-selector metadata.name=&lt;operator_name&gt; \
-   -n &lt;catalog_namespace&gt; -o yaml</code></pre>
-</div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you do not specify the Operator&#8217;s catalog, running the <code>oc get packagemanifest</code> and <code>oc describe packagemanifest</code> commands might return a package from an unexpected catalog if the following conditions are met:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Multiple catalogs are installed in the same namespace.</p>
-</li>
-<li>
-<p>The catalogs contain the same Operators or Operators with the same name.</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>If the Operator you intend to install supports the <code>AllNamespaces</code> install mode, and you choose to use this mode, skip this step, because the <code>openshift-operators</code> namespace already has an appropriate Operator group in place by default, called <code>global-operators</code>.</p>
-<div class="paragraph">
-<p>If the Operator you intend to install supports the <code>SingleNamespace</code> install mode, and you choose to use this mode, you must ensure an appropriate Operator group exists in the related namespace. If one does not exist, you can create create one by following these steps:</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You can only have one Operator group per namespace. For more information, see "Operator groups".</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Create an <code>OperatorGroup</code> object YAML file, for example <code>operatorgroup.yaml</code>, for <code>SingleNamespace</code> install mode:</p>
-<div class="listingblock">
-<div class="title">Example <code>OperatorGroup</code> object for <code>SingleNamespace</code> install mode</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1
-kind: OperatorGroup
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Namespace
 metadata:
-  name: &lt;operatorgroup_name&gt;
-  namespace: &lt;namespace&gt;
-spec:
-  targetNamespaces:
-  - &lt;namespace&gt;</code></pre>
+...
+  labels:
+    security.openshift.io/scc.podSecurityLabelSync: "false" <img src="data:image/png;base64," alt="1">
+    openshift.io/cluster-monitoring: "true"
+    pod-security.kubernetes.io/enforce: baseline <img src="data:image/png;base64," alt="2">
+  name: "&lt;namespace_name&gt;"</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>For <code>SingleNamespace</code> install mode, use the same <code>&lt;namespace&gt;</code> value for both the <code>metadata.namespace</code> and <code>spec.targetNamespaces</code> fields.</p>
-</div>
-</li>
-<li>
-<p>Create the <code>OperatorGroup</code> object:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f operatorgroup.yaml</code></pre>
-</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><img src="data:image/png;base64," alt="1"></td>
+<td>Turn off pod security label synchronization by adding the <code>security.openshift.io/scc.podSecurityLabelSync=false</code> label to the namespace.</td>
+</tr>
+<tr>
+<td><img src="data:image/png;base64," alt="2"></td>
+<td>Apply the pod security admission <code>pod-security.kubernetes.io/enforce</code> label. Set the label to <code>baseline</code> or <code>privileged</code>. Use the <code>baseline</code> pod security profile unless other workloads in the namespace require a <code>privileged</code> profile.</td>
+</tr>
+</table>
 </div>
 </li>
 </ol>
 </div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-accessing-images-private-registries_olm-managing-custom-catalogs">Accessing images for Operators from private registries</h5>
+<div class="paragraph _abstract">
+<p>To install Operators from private registries by using Operator Lifecycle Manager (OLM) in Red&#160;Hat OpenShift Container Platform, you can create pull secrets and reference them from catalog sources.</p>
+</div>
+<div class="paragraph">
+<p>If certain images relevant to Operators managed by Operator Lifecycle Manager (OLM) are hosted in an authenticated container image registry, also known as a private registry, OLM and the software catalog are unable to pull the images by default. To enable access, you can create a pull secret that contains the authentication credentials for the registry. By referencing one or more pull secrets in a catalog source, OLM can handle placing the secrets in the Operator and catalog namespace to allow installation.</p>
+</div>
+<div class="paragraph">
+<p>Other images required by an Operator or its Operands might require access to private registries as well. OLM does not handle placing the secrets in target tenant namespaces for this scenario, but authentication credentials can be added to the global cluster pull secret or individual namespace service accounts to enable the required access.</p>
+</div>
+<div class="paragraph">
+<p>The following types of images should be considered when determining whether Operators managed by OLM have appropriate pull access:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Index images</dt>
+<dd>
+<p>A <code>CatalogSource</code> object can reference an index image, which use the Operator bundle format and are catalog sources packaged as container images hosted in images registries. If an index image is hosted in a private registry, a secret can be used to enable pull access.</p>
+</dd>
+<dt class="hdlist1">Bundle images</dt>
+<dd>
+<p>Operator bundle images are metadata and manifests packaged as container images that represent a unique version of an Operator. If any bundle images referenced in a catalog source are hosted in one or more private registries, a secret can be used to enable pull access.</p>
+</dd>
+<dt class="hdlist1">Operator and Operand images</dt>
+<dd>
+<p>If an Operator installed from a catalog source uses a private image, either for the Operator image itself or one of the Operand images it watches, the Operator will fail to install because the deployment will not have access to the required registry authentication. Referencing secrets in a catalog source does not enable OLM to place the secrets in target tenant namespaces in which Operands are installed.</p>
+<div class="paragraph">
+<p>Instead, the authentication details can be added to the global cluster pull secret in the <code>openshift-config</code> namespace, which provides access to all namespaces on the cluster. Alternatively, if providing access to the entire cluster is not permissible, the pull secret can be added to the <code>default</code> service accounts of the target tenant namespaces.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have at least one of the following hosted in a private registry:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>An index image or catalog image.</p>
 </li>
 <li>
-<p>Create a <code>Subscription</code> object to subscribe a namespace to an Operator:</p>
+<p>An Operator bundle image.</p>
+</li>
+<li>
+<p>An Operator or Operand image.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a secret for each required private registry.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Create a YAML file for the <code>Subscription</code> object, for example <code>subscription.yaml</code>:</p>
+<p>Log in to the private registry to create or update your registry credentials file:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman login &lt;registry&gt;:&lt;port&gt;</code></pre>
+</div>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2417,251 +3344,285 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If you want to subscribe to a specific version of an Operator, set the <code>startingCSV</code> field to the desired version and set the <code>installPlanApproval</code> field to <code>Manual</code> to prevent the Operator from automatically upgrading if a later version exists in the catalog. For details, see the following "Example <code>Subscription</code> object with a specific starting Operator version".</p>
+<p>The file path of your registry credentials can be different depending on the container tool used to log in to the registry. For the <code>podman</code> CLI, the default location is <code>${XDG_RUNTIME_DIR}/containers/auth.json</code>. For the <code>docker</code> CLI, the default location is <code>/root/.docker/config.json</code>.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="listingblock">
-<div class="title">Example <code>Subscription</code> object</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1alpha1
-kind: Subscription
-metadata:
-  name: &lt;subscription_name&gt;
-  namespace: &lt;namespace_per_install_mode&gt;
-spec:
-  channel: &lt;channel_name&gt;
-  name: &lt;operator_name&gt;
-  source: &lt;catalog_name&gt;
-  sourceNamespace: &lt;catalog_source_namespace&gt;
-  config:
-    env:
-    - name: ARGS
-      value: "-v=10"
-    envFrom:
-    - secretRef:
-        name: license-secret
-    volumes:
-    - name: &lt;volume_name&gt;
-      configMap:
-        name: &lt;configmap_name&gt;
-    volumeMounts:
-    - mountPath: &lt;directory_name&gt;
-      name: &lt;volume_name&gt;
-    tolerations:
-    - operator: "Exists"
-    resources:
-      requests:
-        memory: "64Mi"
-        cpu: "250m"
-      limits:
-        memory: "128Mi"
-        cpu: "500m"
-    nodeSelector:
-      foo: bar</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;namespace_per_install_mode&gt;</code></dt>
-<dd>
-<p>Specifies the namespace for your chosen install mode. For default <code>AllNamespaces</code> install mode usage, specify the <code>openshift-operators</code> namespace. Alternatively, you can specify a custom global namespace, if you have created one. For <code>SingleNamespace</code> install mode usage, specify the relevant single namespace.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;channel_name&gt;</code></dt>
-<dd>
-<p>Specifies the name of the channel to subscribe to.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;operator_name&gt;</code></dt>
-<dd>
-<p>Specifies the name of the Operator to subscribe to.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;catalog_name&gt;</code></dt>
-<dd>
-<p>Specifies the name of the catalog source that provides the Operator.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;catalog_source_namespace&gt;</code></dt>
-<dd>
-<p>Specifies the namespace of the catalog source. Use <code>openshift-marketplace</code> for the default software catalog sources.</p>
-</dd>
-<dt class="hdlist1"><code>config.env</code></dt>
-<dd>
-<p>Specifies a list of environment variables that must exist in all containers in the pod created by OLM.</p>
-</dd>
-<dt class="hdlist1"><code>config.envFrom</code></dt>
-<dd>
-<p>Specifies a list of sources to populate environment variables in the container.</p>
-</dd>
-<dt class="hdlist1"><code>config.volumes</code></dt>
-<dd>
-<p>Specifies a list of volumes that must exist on the pod created by OLM.</p>
-</dd>
-<dt class="hdlist1"><code>config.volumeMounts</code></dt>
-<dd>
-<p>Specifies a list of volume mounts that must exist in all containers in the pod created by OLM. If a <code>volumeMount</code> references a <code>volume</code> that does not exist, OLM fails to deploy the Operator.</p>
-</dd>
-<dt class="hdlist1"><code>config.tolerations</code></dt>
-<dd>
-<p>Specifies a list of tolerations for the pod created by OLM.</p>
-</dd>
-<dt class="hdlist1"><code>config.resources</code></dt>
-<dd>
-<p>Specifies resource constraints for all the containers in the pod created by OLM.</p>
-</dd>
-<dt class="hdlist1"><code>config.nodeSelector</code></dt>
-<dd>
-<p>Specifies a <code>NodeSelector</code> for the pod created by OLM.</p>
-<div class="listingblock">
-<div class="title">Example <code>Subscription</code> object with a specific starting Operator version</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1alpha1
-kind: Subscription
-metadata:
-  name: example-operator
-  namespace: example-operator
-spec:
-  channel: stable-3.7
-  installPlanApproval: Manual
-  name: example-operator
-  source: custom-operators
-  sourceNamespace: openshift-marketplace
-  startingCSV: example-operator.v3.7.10</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-</dd>
-<dt class="hdlist1"><code>installPlanApproval</code></dt>
-<dd>
-<p>Specifies the approval strategy. Set to <code>Manual</code> in case your specified version is superseded by a later version in the catalog. This plan prevents an automatic upgrade to a later version and requires manual approval before the starting CSV can complete the installation.</p>
-</dd>
-<dt class="hdlist1"><code>startingCSV</code></dt>
-<dd>
-<p>Specifies a specific version of an Operator CSV.</p>
-</dd>
-</dl>
-</div>
 </li>
 <li>
-<p>For clusters on cloud providers with token authentication enabled, such as Amazon Web Services (AWS) Security Token Service (STS), Microsoft Entra Workload ID, or Google Cloud Platform Workload Identity, configure your <code>Subscription</code> object by following these steps:</p>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
-<p>Ensure the <code>Subscription</code> object is set to manual update approvals:</p>
+<p>It is recommended to include credentials for only one registry per secret, and manage credentials for multiple registries in separate secrets. Multiple secrets can be included in a <code>CatalogSource</code> object in later steps, and Red&#160;Hat OpenShift Container Platform will merge the secrets into a single virtual credentials file for use during an image pull.</p>
+<div class="paragraph">
+<p>A registry credentials file can, by default, store details for more than one registry or for multiple repositories in one registry. Verify the current contents of your file. For example:</p>
+</div>
 <div class="listingblock">
-<div class="title">Example <code>Subscription</code> object with manual update approvals</div>
+<div class="title">File storing credentials for multiple registries</div>
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: Subscription
-# ...
-spec:
-  installPlanApproval: Manual</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">{
+    "auths": {
+        "registry.redhat.io": {
+            "auth": "FrNHNydQXdzclNqdg=="
+        },
+        "quay.io": {
+            "auth": "fegdsRib21iMQ=="
+        },
+        "https://quay.io/my-namespace/my-user/my-image": {
+            "auth": "eWfjwsDdfsa221=="
+        },
+        "https://quay.io/my-namespace/my-user": {
+            "auth": "feFweDdscw34rR=="
+        },
+        "https://quay.io/my-namespace": {
+            "auth": "frwEews4fescyq=="
+        }
+    }
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Set the <code>spec.installPlanApproval</code> parameter to <code>Manual</code>. Subscriptions with manual approvals for updates ensure that administrators have the opportunity to verify the permissions of the later version, take any necessary steps, and then update. Subscriptions with automatic approvals for updates are not recommended because there might be permission changes to make before updating.</p>
+<p>Because this file is used to create secrets in later steps, ensure that you are storing details for only one registry per file. This can be accomplished by using either of the following methods:</p>
 </div>
-</li>
-<li>
-<p>Include the relevant cloud provider-specific fields in the <code>Subscription</code> object&#8217;s <code>config</code> section:</p>
-<div class="paragraph">
-<p>If the cluster is in AWS STS mode, include the following fields:</p>
-</div>
-<div class="listingblock">
-<div class="title">Example <code>Subscription</code> object with AWS STS variables</div>
+<div class="openblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: Subscription
-# ...
-spec:
-  config:
-    env:
-    - name: ROLEARN
-      value: "&lt;role_arn&gt;"</code></pre>
-</div>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>ROLEARN</code> is the Amazon Resource Name (ARN) of the role that the Operator assumes.</p>
-<div class="paragraph">
-<p>If the cluster is in Workload ID mode, include the following fields:</p>
+<p>Use the <code>podman logout &lt;registry&gt;</code> command to remove credentials for additional registries until only the one registry you want remains.</p>
+</li>
+<li>
+<p>Edit your registry credentials file and separate the registry details to be stored in multiple files. For example:</p>
+<div class="listingblock">
+<div class="title">File storing credentials for one registry</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+        "auths": {
+                "registry.redhat.io": {
+                        "auth": "FrNHNydQXdzclNqdg=="
+                }
+        }
+}</code></pre>
+</div>
 </div>
 <div class="listingblock">
-<div class="title">Example <code>Subscription</code> object with Workload ID variables</div>
+<div class="title">File storing credentials for another registry</div>
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: Subscription
-# ...
+<pre class="highlight"><code class="language-json" data-lang="json">{
+        "auths": {
+                "quay.io": {
+                        "auth": "Xd2lhdsbnRib21iMQ=="
+                }
+        }
+}</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Create a secret in the <code>openshift-marketplace</code> namespace that contains the authentication credentials for a private registry:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create secret generic &lt;secret_name&gt; \
+    -n openshift-marketplace \
+    --from-file=.dockerconfigjson=&lt;path/to/registry/credentials&gt; \
+    --type=kubernetes.io/dockerconfigjson</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Repeat this step to create additional secrets for any other required private registries, updating the <code>--from-file</code> flag to specify another registry credentials file path.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create or update an existing <code>CatalogSource</code> object to reference one or more secrets:</p>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: my-operator-catalog
+  namespace: openshift-marketplace
 spec:
- config:
-   env:
-   - name: CLIENTID
-     value: "&lt;client_id&gt;"
-   - name: TENANTID
-     value: "&lt;tenant_id&gt;"
-   - name: SUBSCRIPTIONID
-     value: "&lt;subscription_id&gt;"</code></pre>
+  sourceType: grpc
+  secrets: <img src="data:image/png;base64," alt="1">
+  - "&lt;secret_name_1&gt;"
+  - "&lt;secret_name_2&gt;"
+  grpcPodConfig:
+    securityContextConfig: &lt;security_mode&gt; <img src="data:image/png;base64," alt="2">
+  image: &lt;registry&gt;:&lt;port&gt;/&lt;namespace&gt;/&lt;image&gt;:&lt;tag&gt;
+  displayName: My Operator Catalog
+  publisher: &lt;publisher_name&gt;
+  updateStrategy:
+    registryPoll:
+      interval: 30m</code></pre>
 </div>
 </div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><img src="data:image/png;base64," alt="1"></td>
+<td>Add a <code>spec.secrets</code> section and specify any required secrets.</td>
+</tr>
+<tr>
+<td><img src="data:image/png;base64," alt="2"></td>
+<td>Specify the value of <code>legacy</code> or <code>restricted</code>. If the field is not set, the default value is <code>legacy</code>. In a future Red&#160;Hat OpenShift Container Platform release, it is planned that the default value will be <code>restricted</code>.
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>where:</p>
+<p>If your catalog cannot run with <code>restricted</code> permissions, it is recommended that you manually set this field to <code>legacy</code>.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;client_id&gt;</code></dt>
-<dd>
-<p>Specifies the client ID.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;tenant_id&gt;</code></dt>
-<dd>
-<p>Specifies the tenant ID.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;subscription_id&gt;</code></dt>
-<dd>
-<p>Specifies the subscription ID.</p>
+</td>
+</tr>
+</table>
+</div></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>If any Operator or Operand images that are referenced by a subscribed Operator require access to a private registry, you can either provide access to all namespaces in the cluster, or individual target tenant namespaces.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>To provide access to all namespaces in the cluster, add authentication details to the global cluster pull secret in the <code>openshift-config</code> namespace.</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>If the cluster is in GCP Workload Identity mode, include the following fields:</p>
+<p>Cluster resources must adjust to the new global pull secret, which can temporarily limit the usability of the cluster.</p>
 </div>
-<div class="listingblock">
-<div class="title">Example <code>Subscription</code> object with GCP Workload Identity variables</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: Subscription
-# ...
-spec:
- config:
-   env:
-   - name: AUDIENCE
-     value: "&lt;audience_url&gt;"
-   - name: SERVICE_ACCOUNT_EMAIL
-     value: "&lt;service_account_email&gt;"</code></pre>
+</td>
+</tr>
+</table>
 </div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-</dd>
-<dt class="hdlist1"><code>&lt;audience_url&gt;</code></dt>
-<dd>
-<p>Created in Google Cloud by the administrator when they set up GCP Workload Identity, the <code>AUDIENCE</code> value must be a preformatted URL in the following format:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Extract the <code>.dockerconfigjson</code> file from the global pull secret:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">//iam.googleapis.com/projects/&lt;project_number&gt;/locations/global/workloadIdentityPools/&lt;pool_id&gt;/providers/&lt;provider_id&gt;</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc extract secret/pull-secret -n openshift-config --confirm</code></pre>
 </div>
 </div>
-</dd>
-<dt class="hdlist1"><code>&lt;service_account_email&gt;</code></dt>
-<dd>
-<p>Specifies a Google Cloud service account email that is impersonated during Operator operation, for example:</p>
+</li>
+<li>
+<p>Update the <code>.dockerconfigjson</code> file with your authentication credentials for the required private registry or registries and save it as a new file:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">&lt;service_account_name&gt;@&lt;project_id&gt;.iam.gserviceaccount.com</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cat .dockerconfigjson | \
+    jq --compact-output '.auths["&lt;registry&gt;:&lt;port&gt;/&lt;namespace&gt;/"] |= . + {"auth":"&lt;token&gt;"}' \<img src="data:image/png;base64," alt="1">
+    &gt; new_dockerconfigjson</code></pre>
 </div>
 </div>
-</dd>
-</dl>
+<div class="colist arabic">
+<table>
+<tr>
+<td><img src="data:image/png;base64," alt="1"></td>
+<td>Replace <code>&lt;registry&gt;:&lt;port&gt;/&lt;namespace&gt;</code> with the private registry details and <code>&lt;token&gt;</code> with your authentication credentials.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Update the global pull secret with the new file:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc set data secret/pull-secret -n openshift-config \
+    --from-file=.dockerconfigjson=new_dockerconfigjson</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To update an individual namespace, add a pull secret to the service account for the Operator that requires access in the target tenant namespace.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Recreate the secret that you created for the <code>openshift-marketplace</code> in the tenant namespace:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create secret generic &lt;secret_name&gt; \
+    -n &lt;tenant_namespace&gt; \
+    --from-file=.dockerconfigjson=&lt;path/to/registry/credentials&gt; \
+    --type=kubernetes.io/dockerconfigjson</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify the name of the service account for the Operator by searching the tenant namespace:</p>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get sa -n &lt;tenant_namespace&gt; <img src="data:image/png;base64," alt="1"></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><img src="data:image/png;base64," alt="1"></td>
+<td>If the Operator was installed in an individual namespace, search that namespace. If the Operator was installed for all namespaces, search the <code>openshift-operators</code> namespace.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME            SECRETS   AGE
+builder         2         6m1s
+default         2         6m1s
+deployer        2         6m1s
+etcd-operator   2         5m18s <img src="data:image/png;base64," alt="1"></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><img src="data:image/png;base64," alt="1"></td>
+<td>Service account for an installed etcd Operator.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Link the secret to the service account for the Operator:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc secrets link &lt;operator_sa&gt; \
+    -n &lt;tenant_namespace&gt; \
+     &lt;secret_name&gt; \
+    --for=pull</code></pre>
+</div>
+</div>
+</li>
+</ol>
 </div>
 </li>
 </ul>
@@ -2669,55 +3630,11 @@ spec:
 </li>
 </ol>
 </div>
-</li>
-<li>
-<p>Create the <code>Subscription</code> object by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f subscription.yaml</code></pre>
 </div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>If you set the <code>installPlanApproval</code> field to <code>Manual</code>, manually approve the pending install plan to complete the Operator installation. For more information, see "Manually approving a pending Operator update".</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<div class="title">Verification</div>
-<p>At this point, OLM is now aware of the selected Operator. A cluster service version (CSV) for the Operator should appear in the target namespace, and APIs provided by the Operator should be available for creation.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Check the status of the <code>Subscription</code> object for your installed Operator by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe subscription &lt;subscription_name&gt; -n &lt;namespace&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>If you created an Operator group for <code>SingleNamespace</code> install mode, check the status of the <code>OperatorGroup</code> object by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe operatorgroup &lt;operatorgroup_name&gt; -n &lt;namespace&gt;</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="olm-installing-global-namespaces_install-operators-from-the-software-catalog">Install global Operators in custom namespaces</h4>
+<div class="sect4">
+<h5 id="olm-removing-catalogs_manage-custom-catalogs">Removing custom catalogs</h5>
 <div class="paragraph _abstract">
-<p>To avoid installing global Operators in the default <code>openshift-operators</code> namespace, you can create a custom global namespace in Red&#160;Hat OpenShift Container Platform and install Operators there instead.</p>
-</div>
-<div class="paragraph">
-<p>When installing Operators with the Red&#160;Hat OpenShift Container Platform web console, the default behavior installs Operators that support the <strong>All namespaces</strong> install mode into the default <code>openshift-operators</code> global namespace. This can cause issues related to shared install plans and update policies between all Operators in the namespace. For more details on these limitations, see "Multitenancy and Operator colocation".</p>
+<p>As a cluster administrator, you can remove custom Operator catalogs that have been previously added to your cluster by deleting the related catalog source.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -2731,485 +3648,44 @@ spec:
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Before installing the Operator, create a namespace for the installation of your desired Operator. This installation namespace will become the custom global namespace:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Define a <code>Namespace</code> resource and save the YAML file, for example, <code>global-operators.yaml</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
-kind: Namespace
-metadata:
-  name: global-operators</code></pre>
-</div>
-</div>
+<p>In the <strong>Administrator</strong> perspective of the web console, navigate to <strong>Administration</strong> &#8594; <strong>Cluster Settings</strong>.</p>
 </li>
 <li>
-<p>Create the namespace by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f global-operators.yaml</code></pre>
-</div>
-</div>
+<p>Click the <strong>Configuration</strong> tab, and then click <strong>OperatorHub</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Sources</strong> tab.</p>
+</li>
+<li>
+<p>Select the Options menu <span class="image"><img src="data:image/png;base64," alt="kebab" title="Options menu"></span> for the catalog that you want to remove, and then click <strong>Delete CatalogSource</strong>.</p>
 </li>
 </ol>
 </div>
-</li>
-<li>
-<p>Create a custom <em>global Operator group</em>, which is an Operator group that watches all namespaces:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Define an <code>OperatorGroup</code> resource and save the YAML file, for example, <code>global-operatorgroup.yaml</code>. Omit both the <code>spec.selector</code> and <code>spec.targetNamespaces</code> fields to make it a <em>global Operator group</em>, which selects all namespaces:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1
-kind: OperatorGroup
-metadata:
-  name: global-operatorgroup
-  namespace: global-operators</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>status.namespaces</code> of a created global Operator group contains the empty string (<code>""</code>), which signals to a consuming Operator that it should watch all namespaces.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Create the Operator group by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f global-operatorgroup.yaml</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Next steps</div>
-<ul>
-<li>
-<p>Install the desired Operator in your custom global namespace. Because the web console does not populate the <strong>Installed Namespace</strong> menu during Operator installation with custom global namespaces, the install task can only be performed with the OpenShift CLI (<code>oc</code>). For a detailed installation procedure, see "Installing from software catalog by using the CLI".</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>When you initiate the Operator installation, if the Operator has dependencies, the dependencies are also automatically installed in the custom global namespace. As a result, it is then valid for the dependency Operators to have the same update policy and shared install plans.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="olmv1-finding-operators-to-install_install-operators-from-the-software-catalog">Find Operators to install from a catalog</h4>
+<h4 id="catalog-source-pod-scheduling_configure-catalog-source-pod-scheduling">Configure catalog source pod scheduling</h4>
 <div class="paragraph _abstract">
-<p>After you add a catalog to your cluster, you can query the catalog to find Operators and extensions to install.</p>
+<p>When a <code>grpc</code> type catalog source defines the <code>spec.image</code> field, the Catalog Operator creates a pod to serve that image.</p>
 </div>
 <div class="paragraph">
-<p>Currently in Operator Lifecycle Manager (OLM) v1, you cannot query on-cluster catalogs managed by catalogd. In OLM v1, you must use the <code>opm</code> and <code>jq</code> CLI tools to query the catalog registry.</p>
+<p>By default, the pod specification configures the following default settings:</p>
 </div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have added a catalog to your cluster.</p>
+<p>Node selector: <code>kubernetes.io/os=linux</code></p>
 </li>
 <li>
-<p>You have installed the <code>jq</code> CLI tool.</p>
+<p>Priority class name: <code>system-cluster-critical</code></p>
 </li>
 <li>
-<p>You have installed the <code>opm</code> CLI tool.</p>
+<p>Tolerations: None</p>
 </li>
 </ul>
 </div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>To return a list of extensions that support the <code>AllNamespaces</code> install mode and do not use webhooks, enter the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm render &lt;catalog_registry_url&gt;:&lt;tag&gt; \
-  | jq -cs '[.[] | select(.schema == "olm.bundle" \
-  and (.properties[] | select(.type == "olm.csv.metadata").value.installModes[] \
-  | select(.type == "AllNamespaces" and .supported == true)) \
-  and .spec.webhookdefinitions == null) | .package] | unique[]'</code></pre>
-</div>
-</div>
 <div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>catalog_registry_url</code></dt>
-<dd>
-<p>Specifies the URL of the catalog registry, such as <code>registry.redhat.io/redhat/redhat-operator-index</code>.</p>
-</dd>
-<dt class="hdlist1"><code>tag</code></dt>
-<dd>
-<p>Specifies the tag or version of the catalog, such as <code>v{product-version}</code> or <code>latest</code>.</p>
-<div class="listingblock">
-<div class="title">Example command</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm render \
-  registry.redhat.io/redhat/redhat-operator-index:v{product-version} \
-  | jq -cs '[.[] | select(.schema == "olm.bundle" \
-  and (.properties[] | select(.type == "olm.csv.metadata").value.installModes[] \
-  | select(.type == "AllNamespaces" and .supported == true)) \
-  and .spec.webhookdefinitions == null) | .package] | unique[]'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">"3scale-operator"
-"amq-broker-rhel8"
-"amq-online"
-"amq-streams"
-"amq-streams-console"
-"ansible-automation-platform-operator"
-"ansible-cloud-addons-operator"
-"apicast-operator"
-"authorino-operator"
-"aws-load-balancer-operator"
-"bamoe-kogito-operator"
-"cephcsi-operator"
-"cincinnati-operator"
-"cluster-logging"
-"cluster-observability-operator"
-"compliance-operator"
-"container-security-operator"
-"cryostat-operator"
-"datagrid"
-"devspaces"
-...</code></pre>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Inspect the contents of an extension&#8217;s metadata by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm render &lt;catalog_registry_url&gt;:&lt;tag&gt; \
-  | jq -s '.[] | select( .schema == "olm.package") \
-  | select( .name == "&lt;package_name&gt;")'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example command</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ opm render \
-  registry.redhat.io/redhat/redhat-operator-index:v{product-version} \
-  | jq -s '.[] | select( .schema == "olm.package") \
-  | select( .name == "openshift-pipelines-operator-rh")'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">{
-  "schema": "olm.package",
-  "name": "openshift-pipelines-operator-rh",
-  "defaultChannel": "latest",
-  "icon": {
-    "base64data": "iVBORw0KGgoAAAANSUhE...",
-    "mediatype": "image/png"
-  }
-}</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="olmv1-installing-an-operator_install-operators-from-the-software-catalog">Install a cluster extension in all namespaces</h4>
-<div class="paragraph _abstract">
-<p>You can install an extension from a catalog by creating a custom resource (CR) and applying it to the cluster. Operator Lifecycle Manager (OLM) v1 supports installing cluster extensions, including OLM (Classic) Operators in the <code>registry+v1</code> bundle format, that are scoped to the cluster.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>For Red&#160;Hat OpenShift Container Platform {product-version}, documented procedures for OLM v1 are CLI-based only. Alternatively, administrators can create and view related objects in the web console by using normal methods, such as the <strong>Import YAML</strong> and <strong>Search</strong> pages. However, the existing <strong>Software Catalog</strong> and <strong>Installed Operators</strong> pages do not yet display OLM v1 components.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have created a service account and assigned enough role-based access controls (RBAC) to install, update, and manage the extension that you want to install. For more information, see "Cluster extension permissions".</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a CR, similar to the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-  kind: ClusterExtension
-  metadata:
-    name: &lt;clusterextension_name&gt;
-  spec:
-    namespace: &lt;installed_namespace&gt;
-    serviceAccount:
-      name: &lt;service_account_installer_name&gt;
-    source:
-      sourceType: Catalog
-      catalog:
-        packageName: &lt;package_name&gt;
-        channels:
-          - &lt;channel_name&gt;
-        version: &lt;version_or_version_range&gt;
-        upgradeConstraintPolicy: CatalogProvided</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.namespace</code></dt>
-<dd>
-<p>Specifies the namespace where you want the bundle installed, such as <code>pipelines</code> or <code>my-extension</code>. Extensions are still cluster-scoped and might contain resources that are installed in different namespaces.</p>
-</dd>
-<dt class="hdlist1"><code>spec.serviceAccount.name</code></dt>
-<dd>
-<p>Specifies the name of the service account you created to install, update, and manage your extension.</p>
-</dd>
-<dt class="hdlist1"><code>spec.source.catalog.channels</code></dt>
-<dd>
-<p>Specifies channel names as an array, such as <code>pipelines-1.14</code> or <code>latest</code>. This field is optional.</p>
-</dd>
-<dt class="hdlist1"><code>spec.source.catalog.version</code></dt>
-<dd>
-<p>Specifies the version or version range, such as <code>1.14.0</code>, <code>1.14.x</code>, or <code>&gt;=1.16</code>, of the package you want to install or update. This field is optional.</p>
-</dd>
-<dt class="hdlist1"><code>spec.source.catalog.upgradeConstraintPolicy</code></dt>
-<dd>
-<p>Specifies the upgrade constraint policy. If unspecified, the default setting is <code>CatalogProvided</code>. The <code>CatalogProvided</code> setting only updates if the new version satisfies the upgrade constraints set by the package author. To force an update or rollback, set the field to <code>SelfCertified</code>. This field is optional.</p>
-<div class="listingblock">
-<div class="title">Example <code>pipelines-operator.yaml</code> CR</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterExtension
-metadata:
-  name: pipelines-operator
-spec:
-  namespace: pipelines
-  serviceAccount:
-    name: pipelines-installer
-  source:
-    sourceType: Catalog
-    catalog:
-      packageName: openshift-pipelines-operator-rh
-      version: "1.14.x"</code></pre>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Apply the CR to the cluster by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f pipeline-operator.yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">clusterextension.olm.operatorframework.io/pipelines-operator created</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Verification</div>
-<ol class="arabic">
-<li>
-<p>View the Operator or extension&#8217;s CR in the YAML format by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusterextension pipelines-operator -o yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">apiVersion: v1
-items:
-- apiVersion: olm.operatorframework.io/v1
-  kind: ClusterExtension
-  metadata:
-    annotations:
-      kubectl.kubernetes.io/last-applied-configuration: |
-        {"apiVersion":"olm.operatorframework.io/v1","kind":"ClusterExtension","metadata":{"annotations":{},"name":"pipes"},"spec":{"namespace":"pipelines","serviceAccount":{"name":"pipelines-installer"},"source":{"catalog":{"packageName":"openshift-pipelines-operator-rh","version":"1.14.x"},"sourceType":"Catalog"}}}
-    creationTimestamp: "2025-02-18T21:48:13Z"
-    finalizers:
-    - olm.operatorframework.io/cleanup-unpack-cache
-    - olm.operatorframework.io/cleanup-contentmanager-cache
-    generation: 1
-    name: pipelines-operator
-    resourceVersion: "72725"
-    uid: e18b13fb-a96d-436f-be75-a9a0f2b07993
-  spec:
-    namespace: pipelines
-    serviceAccount:
-      name: pipelines-installer
-    source:
-      catalog:
-        packageName: openshift-pipelines-operator-rh
-        upgradeConstraintPolicy: CatalogProvided
-        version: 1.14.x
-      sourceType: Catalog
-  status:
-    conditions:
-    - lastTransitionTime: "2025-02-18T21:48:13Z"
-      message: ""
-      observedGeneration: 1
-      reason: Deprecated
-      status: "False"
-      type: Deprecated
-    - lastTransitionTime: "2025-02-18T21:48:13Z"
-      message: ""
-      observedGeneration: 1
-      reason: Deprecated
-      status: "False"
-      type: PackageDeprecated
-    - lastTransitionTime: "2025-02-18T21:48:13Z"
-      message: ""
-      observedGeneration: 1
-      reason: Deprecated
-      status: "False"
-      type: ChannelDeprecated
-    - lastTransitionTime: "2025-02-18T21:48:13Z"
-      message: ""
-      observedGeneration: 1
-      reason: Deprecated
-      status: "False"
-      type: BundleDeprecated
-    - lastTransitionTime: "2025-02-18T21:48:16Z"
-      message: Installed bundle registry.redhat.io/openshift-pipelines/pipelines-operator-bundle@sha256:f7b19ce26be742c4aaa458d37bc5ad373b5b29b20aaa7d308349687d3cbd8838
-        successfully
-      observedGeneration: 1
-      reason: Succeeded
-      status: "True"
-      type: Installed
-    - lastTransitionTime: "2025-02-18T21:48:16Z"
-      message: desired state reached
-      observedGeneration: 1
-      reason: Succeeded
-      status: "True"
-      type: Progressing
-    install:
-      bundle:
-        name: openshift-pipelines-operator-rh.v1.14.5
-        version: 1.14.5
-kind: List
-metadata:
-  resourceVersion: ""</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.channel</code></dt>
-<dd>
-<p>Displays the channel defined in the CR of the extension.</p>
-</dd>
-<dt class="hdlist1"><code>spec.version</code></dt>
-<dd>
-<p>Displays the version or version range defined in the CR of the extension.</p>
-</dd>
-<dt class="hdlist1"><code>status.conditions</code></dt>
-<dd>
-<p>Displays information about the status and health of the extension.</p>
-</dd>
-<dt class="hdlist1"><code>type: Deprecated</code></dt>
-<dd>
-<p>Displays whether one or more of following are deprecated:</p>
-<div class="openblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>type: PackageDeprecated</code></dt>
-<dd>
-<p>Displays whether the resolved package is deprecated.</p>
-</dd>
-<dt class="hdlist1"><code>type: ChannelDeprecated</code></dt>
-<dd>
-<p>Displays whether the resolved channel is deprecated.</p>
-</dd>
-<dt class="hdlist1"><code>type: BundleDeprecated</code></dt>
-<dd>
-<p>Displays whether the resolved bundle is deprecated.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>The value of <code>False</code> in the <code>status</code> field indicates that the <code>reason: Deprecated</code> condition is not deprecated. The value of <code>True</code> in the <code>status</code> field indicates that the <code>reason: Deprecated</code> condition is deprecated.</p>
-</div>
-</dd>
-<dt class="hdlist1"><code>installedBundle.name</code></dt>
-<dd>
-<p>Displays the name of the bundle installed.</p>
-</dd>
-<dt class="hdlist1"><code>installedBundle.version</code></dt>
-<dd>
-<p>Displays the version of the bundle installed.</p>
-</dd>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="olmv1-deploying-a-ce-in-a-specific-namespace_install-operators-from-the-software-catalog">Configure a watch namespace for a cluster extension (Technology Preview)</h4>
-<div class="paragraph _abstract">
-<p>You can configure the watch namespace for extensions that support namespace-scoped resource watching.</p>
+<p>As an administrator, you can override these defaults by configuring fields in the optional <code>spec.grpcPodConfig</code> section of the <code>CatalogSource</code> object.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -3219,61 +3695,108 @@ metadata:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Configuring watch namespace for a cluster extension is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+<p>The Marketplace Operator, <code>openshift-marketplace</code>, manages the default <code>OperatorHub</code> custom resource (CR). This CR manages <code>CatalogSource</code> objects. If you change fields in the <code>CatalogSource</code> object&#8217;s <code>spec.grpcPodConfig</code> section, the Marketplace Operator automatically reverts these changes.</p>
 </div>
 <div class="paragraph">
-<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
+<p>To apply persistent changes to a <code>CatalogSource</code> object, you must first disable a default <code>CatalogSource</code> object.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
+<div class="sect4">
+<h5 id="disabling-catalogsource-objects_configure-catalog-source-pod-scheduling">Disabling default CatalogSource objects at a local level</h5>
+<div class="paragraph _abstract">
+<p>You can make persistent local changes to a <code>CatalogSource</code> object by disabling the default <code>CatalogSource</code> object. Otherwise, the Marketplace Operator automatically reverts any manual modifications to fields in the <code>spec.grpcPodConfig</code> section.</p>
+</div>
+<div class="paragraph">
+<p>The Marketplace Operator, <code>openshift-marketplace</code>, manages the default custom resources (CRs) of the <code>OperatorHub</code>. The <code>OperatorHub</code> manages <code>CatalogSource</code> objects.</p>
+</div>
+<div class="paragraph">
+<p>To apply persistent changes to <code>CatalogSource</code> object, you must first disable a default <code>CatalogSource</code> object.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>To disable all the default <code>CatalogSource</code> objects at a local level, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch operatorhub cluster -p '{"spec": {"disableAllDefaultSources": true}}' --type=merge</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can also configure the default <code>OperatorHub</code> CR to either disable all <code>CatalogSource</code> objects or disable a specific object.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-node-selector_configure-catalog-source-pod-scheduling">Overriding the node selector for catalog source pods</h5>
+<div class="paragraph _abstract">
+<p>To control which nodes run catalog source pods, you can override the default node selector in the <code>spec.grpcPodConfig</code> section of the <code>CatalogSource</code> object.</p>
+</div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have access to an Red&#160;Hat OpenShift Container Platform cluster using an account with <code>cluster-admin</code> permissions.</p>
-</li>
-<li>
-<p>You have enabled the <code>TechPreviewNoUpgrade</code> feature set on the cluster.</p>
-</li>
-<li>
-<p>You have created a service account and assigned enough role-based access controls (RBAC) to install, update, and manage the extension. For more information, see "Cluster extension permissions".</p>
-</li>
-<li>
-<p>You have verified the supported install modes for the extension and determined the required <code>watchNamespace</code> configuration.</p>
+<p>A <code>CatalogSource</code> object of source type <code>grpc</code> with <code>spec.image</code> is defined.</p>
 </li>
 </ul>
 </div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a custom resource (CR) based on where you want the extension to watch for resources:</p>
 <div class="ulist">
+<div class="title">Procedure</div>
 <ul>
 <li>
-<p>To configure the extension to watch its own installation namespace:</p>
+<p>Edit the <code>CatalogSource</code> object and add or modify the <code>spec.grpcPodConfig</code> section to include the following:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterExtension
-metadata:
-  name: &lt;extension_name&gt;
-spec:
-  namespace: &lt;installation_namespace&gt;
-  config:
-    configType: Inline
-    inline:
-      watchNamespace: &lt;installation_namespace&gt;
-  serviceAccount:
-    name: &lt;service_account&gt;
-  source:
-    sourceType: Catalog
-    catalog:
-      packageName: &lt;package_name&gt;
-      version: &lt;version&gt;
-      upgradeConstraintPolicy: CatalogProvided</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  grpcPodConfig:
+    nodeSelector:
+      custom_label: &lt;label&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where <code>&lt;label&gt;</code> is the label for the node selector that you want catalog source pods to use for scheduling.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-priority-class-name_configure-catalog-source-pod-scheduling">Overriding the priority class name for catalog source pods</h5>
+<div class="paragraph _abstract">
+<p>To control the scheduling priority of catalog source pods, you can override the default priority class name in the <code>spec.grpcPodConfig</code> section of the <code>CatalogSource</code> object.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>A <code>CatalogSource</code> object of source type <code>grpc</code> with a defined <code>spec.image</code>.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Edit the <code>CatalogSource</code> object and configure the <code>spec.grpcPodConfig</code> section, similar to the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  grpcPodConfig:
+    priorityClassName: &lt;priority_class&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3281,88 +3804,232 @@ spec:
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>config.inline.watchNamespace</code></dt>
+<dt class="hdlist1"><code>&lt;priority_class&gt;</code></dt>
 <dd>
-<p>Specifies the namespace to watch for resources. For requirements and valid values, see "Extension configuration".</p>
+<p>Specifies one of the following priority classes:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>A default Kubernetes priority class, such as <code>system-cluster-critical</code> or <code>system-node-critical</code></p>
+</li>
+<li>
+<p>An empty string (<code>""</code>) to assign the default priority</p>
+</li>
+<li>
+<p>A custom, pre-existing priority class name</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Previously, the only pod scheduling parameter that could be overriden was <code>priorityClassName</code>. This was done by adding the <code>operatorframework.io/priorityclass</code> annotation to the <code>CatalogSource</code> object. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: example-catalog
+  namespace: openshift-marketplace
+  annotations:
+    operatorframework.io/priorityclass: system-cluster-critical</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If a <code>CatalogSource</code> object defines both the annotation and <code>spec.grpcPodConfig.priorityClassName</code>, the annotation takes precedence over the configuration parameter.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </dd>
 </dl>
 </div>
 </li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="olm-tolerations_configure-catalog-source-pod-scheduling">Overriding tolerations for catalog source pods</h5>
+<div class="paragraph _abstract">
+<p>To allow catalog source pods to schedule onto nodes with matching taints, you can override the default tolerations in the <code>spec.grpcPodConfig</code> section of the <code>CatalogSource</code> object.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
 <li>
-<p>To configure the extension to watch a different namespace:</p>
+<p>A <code>CatalogSource</code> object of source type <code>grpc</code> with <code>spec.image</code> is defined.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Edit the <code>CatalogSource</code> object and add or modify the <code>spec.grpcPodConfig</code> section to include the following:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterExtension
-metadata:
-  name: &lt;extension_name&gt;
-spec:
-  namespace: &lt;installation_namespace&gt;
-  config:
-    configType: Inline
-    inline:
-      watchNamespace: &lt;watched_namespace&gt;
-  serviceAccount:
-    name: &lt;service_account&gt;
-  source:
-    sourceType: Catalog
-    catalog:
-      packageName: &lt;package_name&gt;
-      version: &lt;version&gt;
-      upgradeConstraintPolicy: CatalogProvided</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">  grpcPodConfig:
+    tolerations:
+      - key: "&lt;key_name&gt;"
+        operator: "&lt;operator_type&gt;"
+        value: "&lt;value&gt;"
+        effect: "&lt;effect&gt;"</code></pre>
 </div>
 </div>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>Apply the CR to the cluster by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f &lt;cluster_extension_cr&gt;.yaml</code></pre>
 </div>
 </div>
-</li>
-</ol>
+<div class="sect3">
+<h4 id="troubleshoot-catalog-sources_troubleshoot-catalog-sources">Troubleshoot catalog sources</h4>
+<div class="paragraph _abstract">
+<p>You can view the status of installed Operators in Red&#160;Hat OpenShift Container Platform through Operator Lifecycle Manager (OLM). OLM reports subscription and catalog source conditions to help you assess Operator health.</p>
+</div>
+<div class="sect4">
+<h5 id="olm-cs-status-cli_troubleshoot-catalog-sources">View Operator catalog source status by using the CLI</h5>
+<div class="paragraph _abstract">
+<p>You can view the status of an Operator catalog source by using the CLI.</p>
 </div>
 <div class="ulist">
-<div class="title">Verification</div>
+<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>Verify that the extension installed successfully by running the following command:</p>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>List the catalog sources in a namespace. For example, you can check the <code>openshift-marketplace</code> namespace, which is used for cluster-wide catalog sources:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusterextension &lt;extension_name&gt; -o yaml</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get catalogsources -n openshift-marketplace</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Example output</div>
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-kind: ClusterExtension
-metadata:
-  name: &lt;extension_name&gt;
-spec:
-  namespace: &lt;installation_namespace&gt;
-  config:
-    configType: Inline
-    inline:
-      watchNamespace: &lt;installation_namespace&gt;
-status:
-  conditions:
-  - type: Installed
-    status: "True"
-    reason: Succeeded</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                  DISPLAY               TYPE   PUBLISHER   AGE
+certified-operators   Certified Operators   grpc   Red Hat     55m
+community-operators   Community Operators   grpc   Red Hat     55m
+example-catalog       Example Catalog       grpc   Example Org 2m25s
+redhat-operators      Red Hat Operators     grpc   Red Hat     55m</code></pre>
 </div>
 </div>
 </li>
-</ul>
+<li>
+<p>Use the <code>oc describe</code> command to get more details and status about a catalog source:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe catalogsource example-catalog -n openshift-marketplace</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">Name:         example-catalog
+Namespace:    openshift-marketplace
+Labels:       &lt;none&gt;
+Annotations:  operatorframework.io/managed-by: marketplace-operator
+              target.workload.openshift.io/management: {"effect": "PreferredDuringScheduling"}
+API Version:  operators.coreos.com/v1alpha1
+Kind:         CatalogSource
+# ...
+Status:
+  Connection State:
+    Address:              example-catalog.openshift-marketplace.svc:50051
+    Last Connect:         2021-09-09T17:07:35Z
+    Last Observed State:  TRANSIENT_FAILURE
+  Registry Service:
+    Created At:         2021-09-09T17:05:45Z
+    Port:               50051
+    Protocol:           grpc
+    Service Name:       example-catalog
+    Service Namespace:  openshift-marketplace
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the preceding example output, the last observed state is <code>TRANSIENT_FAILURE</code>. This state indicates that there is a problem establishing a connection for the catalog source.</p>
+</div>
+</li>
+<li>
+<p>List the pods in the namespace where your catalog source was created:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n openshift-marketplace</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                                    READY   STATUS             RESTARTS   AGE
+certified-operators-cv9nn               1/1     Running            0          36m
+community-operators-6v8lp               1/1     Running            0          36m
+marketplace-operator-86bfc75f9b-jkgbc   1/1     Running            0          42m
+example-catalog-bwt8z                   0/1     ImagePullBackOff   0          3m55s
+redhat-operators-smxx8                  1/1     Running            0          36m</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When a catalog source is created in a namespace, a pod for the catalog source is created in that namespace. In the preceding example output, the status for the <code>example-catalog-bwt8z</code> pod is <code>ImagePullBackOff</code>. This status indicates that there is an issue pulling the catalog source&#8217;s index image.</p>
+</div>
+</li>
+<li>
+<p>Use the <code>oc describe</code> command to inspect a pod for more detailed information:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe pod example-catalog-bwt8z -n openshift-marketplace</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">Name:         example-catalog-bwt8z
+Namespace:    openshift-marketplace
+Priority:     0
+Node:         ci-ln-jyryyg2-f76d1-ggdbq-worker-b-vsxjd/10.0.128.2
+...
+Events:
+  Type     Reason          Age                From               Message
+  ----     ------          ----               ----               -------
+  Normal   Scheduled       48s                default-scheduler  Successfully assigned openshift-marketplace/example-catalog-bwt8z to ci-ln-jyryyf2-f76d1-fgdbq-worker-b-vsxjd
+  Normal   AddedInterface  47s                multus             Add eth0 [10.131.0.40/23] from openshift-sdn
+  Normal   BackOff         20s (x2 over 46s)  kubelet            Back-off pulling image "quay.io/example-org/example-catalog:v1"
+  Warning  Failed          20s (x2 over 46s)  kubelet            Error: ImagePullBackOff
+  Normal   Pulling         8s (x3 over 47s)   kubelet            Pulling image "quay.io/example-org/example-catalog:v1"
+  Warning  Failed          8s (x3 over 47s)   kubelet            Failed to pull image "quay.io/example-org/example-catalog:v1": rpc error: code = Unknown desc = reading manifest v1 in quay.io/example-org/example-catalog: unauthorized: access to the requested resource is not authorized
+  Warning  Failed          8s (x3 over 47s)   kubelet            Error: ErrImagePull</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the preceding example output, the error messages indicate that the catalog source&#8217;s index image is failing to pull successfully because of an authorization issue. For example, the index image might be stored in a registry that requires login credentials.</p>
+</div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a> | ↑ Up: <a href="_extend.html">Extend</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="extend-the-openshift-cli-with-plugins-intro_extend-the-openshift-cli-with-plugins.html">Extend the OpenShift CLI with plugins</a> →</p>
+<p>← Previous: <a href="manage-catalogs-with-olmv1-con_manage-catalogs-with-olmv1.html">Manage catalogs with OLM v1</a> | ↑ Up: <a href="_extend.html">Extend</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="extend-the-kubernetes-api-with-custom-resource-definitions-con_crd-extending-api-with-crds.html">Extend the Kubernetes API with custom resource definitions</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -3373,7 +4040,7 @@ status:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-15 17:13:02 +0100
+Last updated 2026-10-15 18:05:30 +0100
 </div>
 </div>
 <style>
