@@ -723,6 +723,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
+<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
+</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -1394,7 +1396,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="infrastructure-components_create-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_make-changes-to-the-kubelet-settings-on-my-nodes.html">Create a KubeletConfig CR to edit kubelet parameters</a>
+<li><a href="nodes-nodes-managing-about_make-changes-to-the-kubelet-settings-on-my-nodes.html">Modifying nodes</a>
 </li>
 <li><a href="nodes-nodes-working-evacuating_evacuate-pods-on-a-node.html">Evacuate pods on nodes</a>
 </li>
@@ -1789,7 +1791,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#mco-update-boot-images-configuring_understand-how-openshift-manages-boot-images-on-my-nodes">Enable boot image management</a></li><li class="level-4"><a href="#mco-update-boot-images-disable_understand-how-openshift-manages-boot-images-on-my-nodes">Disable boot image management</a></li><li class="level-4"><a href="#mco-update-boot-skew-mgmt-about_understand-how-openshift-manages-boot-images-on-my-nodes">About boot image skew enforcement</a></li><li class="level-4"><a href="#mco-update-boot-skew-mgmt-about-modes_understand-how-openshift-manages-boot-images-on-my-nodes">About boot image skew enforcement modes</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#mco-update-boot-images-configuring_understand-how-openshift-manages-boot-images-on-my-nodes">Enable boot image management</a></li><li class="level-4"><a href="#mco-update-boot-images-disable_understand-how-openshift-manages-boot-images-on-my-nodes">Disable boot image management</a></li><li class="level-4"><a href="#mco-update-boot-skew-mgmt-about_understand-how-openshift-manages-boot-images-on-my-nodes">About boot image skew enforcement</a></li><li class="level-4"><a href="#mco-update-boot-skew-mgmt-about-modes_understand-how-openshift-manages-boot-images-on-my-nodes">About boot image skew enforcement modes</a></li><li class="level-4"><a href="#mco-update-boot-skew-mgmt-configuring_understand-how-openshift-manages-boot-images-on-my-nodes">Configuring boot image skew enforcement</a></li><li class="level-4"><a href="#mco-update-boot-skew-mgmt-updating.adoc_understand-how-openshift-manages-boot-images-on-my-nodes">Updating the boot image skew enforcement version</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="mco-update-boot-images_understand-how-openshift-manages-boot-images-on-my-nodes">About boot image management</h3>
@@ -2781,6 +2783,209 @@ status:
 </dl>
 </div>
 </div>
+<div class="sect3">
+<h4 id="mco-update-boot-skew-mgmt-configuring_understand-how-openshift-manages-boot-images-on-my-nodes">Configuring boot image skew enforcement</h4>
+<div class="paragraph _abstract">
+<p>You can configure the current boot image skew enforcement mode that the Machine Config Operator (MCO) uses. By configuring the boot image skew enforcement mode, you can determine if the boot image version in the <code>MachineConfiguration</code> object is updated automatically or manually.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can disable boot image skew enforcement by setting the <code>mode</code> to <code>None</code>. When disabled, the MCO does not monitor for boot image skew, and older boot images could be used, possibly introducing issues when scaling new nodes.</p>
+</div>
+<div class="paragraph">
+<p>In Red&#160;Hat OpenShift Container Platform 4.22, the automatic mode is available only for AWS, Google Cloud, Azure, and vSphere clusters and is the default for these platforms. If you modify a cluster from the automatic mode to the manual or none mode, you can revert a cluster back to automatic mode only by removing the <code>bootImageSkewEnforcement</code> stanza from the <code>MachineConfiguration</code> object.</p>
+</div>
+<div class="paragraph">
+<p>All other platforms default to manual mode with the Red&#160;Hat OpenShift Container Platform version set as the boot image version in the <code>MachineConfiguration</code> object. In manual mode, you are expected to manually update the <code>MachineConfiguration</code> object with new boot image version whenever you update the boot image.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>For manual mode, you can obtain the current boot image on a node by using the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;new-node&gt; -- chroot /host cat /sysroot/.coreos-aleph-version.json</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># ...
+    "ref": "docker://ostree-image-signed:oci-archive:/rhcos-9.6.20251023-0-ostree.x86_64.ociarchive",
+    "version": "9.6.20251023-0"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You should use the newest node on the cluster, because the boot image might have been updated after the older nodes were created. Ideally, test the newest node from each machine set and use the oldest boot image among them.</p>
+</div>
+</li>
+<li>
+<p>Specify the boot image skew enforcement mode and set the boot image version as needed:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: MachineConfiguration
+metadata:
+  name: cluster
+spec:
+# ...
+  bootImageSkewEnforcement:
+    mode: Manual
+    manual:
+      mode: RHCOSVersion
+      rhcosVersion: 9.6.20251023-0
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.bootImageSkewEnforcement.mode</code></dt>
+<dd>
+<p>Specifies the boot image enforcement mode, one of the following values:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>Manual</code>. Specifies that boot image skew management is in manual mode. You must specify the <code>spec.bootImageSkewEnforcement.manual</code> parameters.</p>
+</li>
+<li>
+<p><code>None</code>. Specifies that boot image skew management is disabled. You do not need to specify the <code>spec.bootImageSkewEnforcement.manual</code> parameters.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>spec.bootImageSkewEnforcement.manual.mode</code></dt>
+<dd>
+<p>Specifies the version you want to represent the current boot image, either <code>OCPVersion</code> or <code>RHCOSVersion</code>. You must include one of the following parameters:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>For <code>RHCOSVersion</code>, use <code>spec.bootImageSkewEnforcement.manual.rhcosVersion</code> to specify the RHCOS version that is being used as a boot image in the <code>[major].[minor].[datestamp(YYYYMMDD)]-[buildnumber]</code> or <code>[major].[minor].[timestamp(YYYYMMDDHHmm)]-[buildnumber]</code> format. This field must be between 14 and 21 characters.</p>
+</li>
+<li>
+<p>For <code>OCPVersion</code>, use <code>spec.bootImageSkewEnforcement.manual.ocpVersion</code> to specify the Red&#160;Hat OpenShift Container Platform version associated with the boot image that is being used in the <code>x.y.z</code> format. This field must be between 5 and 10 characters.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="mco-update-boot-skew-mgmt-updating.adoc_understand-how-openshift-manages-boot-images-on-my-nodes">Updating the boot image skew enforcement version</h4>
+<div class="paragraph _abstract">
+<p>If you are running boot image skew enforcement in the manual mode, you must manually update the boot image version in the <code>MachineConfiguration</code> object each time you update the boot image in your cluster. With the boot image updated in the <code>MachineConfiguration</code> object, the Machine Config Operator (MCO) can properly perform boot image skew enforcement to ensure that your nodes are up-to-date.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>If necessary, obtain the RHCOS or Red&#160;Hat OpenShift Container Platform version of the current boot image on an updated node by using one of the following commands:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Obtain the RHCOS version by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;new-node&gt; -- chroot /host cat /sysroot/.coreos-aleph-version.json</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># ...
+    "ref": "docker://ostree-image-signed:oci-archive:/rhcos-9.6.20251023-0-ostree.x86_64.ociarchive",
+    "version": "9.6.20251023-0"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Obtain the Red&#160;Hat OpenShift Container Platform version by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ openshift-install version</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ensure that you use the same <code>openshift-install</code> binary that you used when updating the boot image.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">openshift-install 4.22.0</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Specify the boot image version in the <code>MachineConfiguration</code> object with either the RHCOS or Red&#160;Hat OpenShift Container Platform version:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Update the <code>MachineConfiguration</code> object with the RHCOS version:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: MachineConfiguration
+metadata:
+  name: cluster
+# ...
+spec:
+  bootImageSkewEnforcement:
+    mode: Manual
+    manual:
+      mode: RHCOSVersion
+      rhcosVersion: 9.2.20251023-0
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the <code>spec.bootImageSkewEnforcement.manual.mode</code> is <code>RHCOSVersion</code>, specify the RHCOS version of the boot image with the <code>rhcosVersion</code> parameter, as shown in the example.</p>
+</div>
+</li>
+<li>
+<p>Update the <code>MachineConfiguration</code> object with the Red&#160;Hat OpenShift Container Platform version</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: MachineConfiguration
+metadata:
+  name: cluster
+# ...
+spec:
+  bootImageSkewEnforcement:
+    mode: Manual
+    manual:
+      mode: OCPVersion
+      ocpVersion: 4.22.0
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the <code>spec.bootImageSkewEnforcement.manual.mode</code> is <code>OCPVersion</code>, specify the Red&#160;Hat OpenShift Container Platform version of the boot image with the <code>ocpVersion</code> parameter, as shown in the example.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 <div class="paragraph nav-footer">
 <p>← Previous: <a href="about-machine-config-operator_when-to-use-machine-configs-for-node-changes.html">About the Machine Config Operator</a> | ↑ Up: <a href="_configure.html">Configure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="installation-special-config-butane_change-the-configuration-files-on-my-nodes.html">Create machine configs with Butane</a> →</p>
@@ -2794,7 +2999,7 @@ status:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-16 12:26:09 +0100
+Last updated 2026-10-16 16:01:29 +0100
 </div>
 </div>
 <style>

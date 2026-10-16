@@ -722,6 +722,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
+<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
+</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -1394,7 +1396,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="infrastructure-components_create-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_make-changes-to-the-kubelet-settings-on-my-nodes.html">Create a KubeletConfig CR to edit kubelet parameters</a>
+<li><a href="nodes-nodes-managing-about_make-changes-to-the-kubelet-settings-on-my-nodes.html">Modifying nodes</a>
 </li>
 <li><a href="nodes-nodes-working-evacuating_evacuate-pods-on-a-node.html">Evacuate pods on nodes</a>
 </li>
@@ -1789,7 +1791,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nodes-cluster-enabling-features-cli_enable-features-with-feature-gates">Enabling feature sets using the CLI</a></li><li class="level-4"><a href="#nodes-cluster-enabling-features-console_enable-features-with-feature-gates">Enabling feature sets using the web console</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nodes-cluster-enabling-features-install_enable-features-with-feature-gates">Enabling feature sets at installation</a></li><li class="level-4"><a href="#nodes-cluster-enabling-features-cli_enable-features-with-feature-gates">Enabling feature sets using the CLI</a></li><li class="level-4"><a href="#nodes-cluster-enabling-features-console_enable-features-with-feature-gates">Enabling feature sets using the web console</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="nodes-cluster-enabling-features-about_enable-features-with-feature-gates">Understanding feature gates</h3>
@@ -2129,6 +2131,126 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="sect3">
+<h4 id="nodes-cluster-enabling-features-install_enable-features-with-feature-gates">Enabling feature sets at installation</h4>
+<div class="paragraph _abstract">
+<p>You can enable feature sets for all nodes in the cluster by editing the <code>install-config.yaml</code> file before you deploy the cluster. This allows you to use non-default features in your cluster.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have an <code>install-config.yaml</code> file.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Use the <code>featureSet</code> parameter to specify the name of the feature set you want to enable, such as <code>TechPreviewNoUpgrade</code>:</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Enabling the <code>TechPreviewNoUpgrade</code> feature set on your cluster cannot be undone and prevents minor version updates. You should not enable this feature set on production clusters.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Sample <code>install-config.yaml</code> file with an enabled feature set</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">compute:
+- hyperthreading: Enabled
+  name: worker
+  platform:
+    aws:
+      rootVolume:
+        iops: 2000
+        size: 500
+        type: io1
+      metadataService:
+        authentication: Optional
+      type: c5.4xlarge
+      zones:
+      - us-west-2c
+  replicas: 3
+featureSet: TechPreviewNoUpgrade</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Save the file and reference it when using the installation program to deploy the cluster.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Verification</div>
+<p>You can verify that the feature gates are enabled by looking at the <code>kubelet.conf</code> file on a node after the nodes return to the ready state.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the <strong>Administrator</strong> perspective in the web console, navigate to <strong>Compute</strong> &#8594; <strong>Nodes</strong>.</p>
+</li>
+<li>
+<p>Select a node.</p>
+</li>
+<li>
+<p>In the <strong>Node details</strong> page, click <strong>Terminal</strong>.</p>
+</li>
+<li>
+<p>In the terminal window, change your root directory to <code>/host</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.2# chroot /host</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>View the <code>kubelet.conf</code> file:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.2# cat /etc/kubernetes/kubelet.conf</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># ...
+featureGates:
+  InsightsOperatorPullingSCA: true,
+  LegacyNodeRoleBehavior: false
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The features that are listed as <code>true</code> are enabled on your cluster.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The features listed vary depending upon the Red&#160;Hat OpenShift Container Platform version.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
 <h4 id="nodes-cluster-enabling-features-cli_enable-features-with-feature-gates">Enabling feature sets using the CLI</h4>
 <div class="paragraph _abstract">
 <p>You can use the OpenShift CLI (<code>oc</code>) to enable feature sets for all of the nodes in a cluster by editing the <code>FeatureGate</code> custom resource (CR). Completing this task enables non-default features in your cluster.</p>
@@ -2424,7 +2546,7 @@ featureGates:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-16 12:26:09 +0100
+Last updated 2026-10-16 16:01:29 +0100
 </div>
 </div>
 <style>

@@ -722,6 +722,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
+<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
+</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -1394,7 +1396,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="infrastructure-components_create-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_make-changes-to-the-kubelet-settings-on-my-nodes.html">Create a KubeletConfig CR to edit kubelet parameters</a>
+<li><a href="nodes-nodes-managing-about_make-changes-to-the-kubelet-settings-on-my-nodes.html">Modifying nodes</a>
 </li>
 <li><a href="nodes-nodes-working-evacuating_evacuate-pods-on-a-node.html">Evacuate pods on nodes</a>
 </li>
@@ -1789,7 +1791,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#openshift-architecture-common-terms_understand-platform-architecture">Glossary of common terms for Red Hat OpenShift Container Platform architecture</a></li><li class="level-4"><a href="#about-installation-and-updates_understand-platform-architecture">About installation and updates</a></li><li class="level-4"><a href="#about-admission-plug-ins_understand-platform-architecture">About admission plugins</a></li><li class="level-4"><a href="#architecture-about-cgroup-v2_understand-platform-architecture">About Linux cgroup version 2</a></li><li class="level-4"><a href="#architecture-platform-introduction_understand-platform-fundamentals">Introduction to Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#architecture-kubernetes-introduction_understand-platform-fundamentals">About Kubernetes</a></li><li class="level-5"><a href="#architecture-container-application-benefits_understand-platform-fundamentals">The benefits of containerized applications</a></li><li class="level-5"><a href="#architecture-platform-benefits_understand-platform-fundamentals">Red Hat OpenShift Container Platform overview</a></li><li class="level-6"><a href="#cluster-entitlements_understand-platform-fundamentals">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#review-control-plane-and-node-functionality-con_review-control-plane-and-node-functionality">Review control plane and node functionality</a></li><li class="level-5"><a href="#architecture-machine-config-pools_review-control-plane-and-node-functionality">Node configuration management with machine config pools</a></li><li class="level-5"><a href="#architecture-machine-roles_review-control-plane-and-node-functionality">Machine roles in Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#operators-overview_review-control-plane-and-node-functionality">Operators in Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#cluster-operators_review-control-plane-and-node-functionality">Cluster Operators</a></li><li class="level-5"><a href="#olm-operators_review-control-plane-and-node-functionality">Add-on Operators</a></li><li class="level-5"><a href="#etcd-overview_review-control-plane-and-node-functionality">etcd key-value store</a></li><li class="level-5"><a href="#cpmso-feat-auto-update_review-control-plane-and-node-functionality">Automatic updates to the control plane configuration</a></li><li class="level-5"><a href="#cpmso-control-plane-recovery_review-control-plane-and-node-functionality">Recovery of failed control plane machines</a></li><li class="level-5"><a href="#rhcos-key-features_review-control-plane-and-node-functionality">Key RHCOS features</a></li><li class="level-5"><a href="#rhcos-configured_review-control-plane-and-node-functionality">How to configure RHCOS</a></li><li class="level-5"><a href="#rhcos-deployed_review-control-plane-and-node-functionality">How to deploy RHCOS</a></li><li class="level-5"><a href="#rhcos-about-ignition_review-control-plane-and-node-functionality">Ignition</a></li><li class="level-5"><a href="#ignition-config-viewing_review-control-plane-and-node-functionality">View Ignition configuration files</a></li><li class="level-5"><a href="#digging-into-machine-config_review-control-plane-and-node-functionality">Change Ignition configs after installation</a></li><li class="level-4"><a href="#compare-architectural-deployment-models-con_compare-architectural-deployment-models">Compare architectural deployment models</a></li><li class="level-5"><a href="#hosted-control-planes-overview_compare-architectural-deployment-models">Introduction to hosted control planes</a></li><li class="level-6"><a href="#hosted-control-planes-architecture_compare-architectural-deployment-models">Architecture of hosted control planes</a></li><li class="level-6"><a href="#hosted-control-planes-benefits_compare-architectural-deployment-models">Benefits of hosted control planes</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#openshift-architecture-common-terms_understand-platform-architecture">Glossary of common terms for Red Hat OpenShift Container Platform architecture</a></li><li class="level-4"><a href="#about-installation-and-updates_understand-platform-architecture">About installation and updates</a></li><li class="level-4"><a href="#about-admission-plug-ins_understand-platform-architecture">About admission plugins</a></li><li class="level-4"><a href="#architecture-about-cgroup-v2_understand-platform-architecture">About Linux cgroup version 2</a></li><li class="level-4"><a href="#architecture-platform-introduction_understand-platform-fundamentals">Introduction to Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#architecture-kubernetes-introduction_understand-platform-fundamentals">About Kubernetes</a></li><li class="level-5"><a href="#architecture-container-application-benefits_understand-platform-fundamentals">The benefits of containerized applications</a></li><li class="level-5"><a href="#architecture-platform-benefits_understand-platform-fundamentals">Red Hat OpenShift Container Platform overview</a></li><li class="level-6"><a href="#cluster-entitlements_understand-platform-fundamentals">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#review-control-plane-and-node-functionality-con_review-control-plane-and-node-functionality">Review control plane and node functionality</a></li><li class="level-4"><a href="#about-control-planes_review-control-plane-and-node-functionality">About the control plane</a></li><li class="level-5"><a href="#architecture-machine-config-pools_review-control-plane-and-node-functionality">Node configuration management with machine config pools</a></li><li class="level-5"><a href="#architecture-machine-roles_review-control-plane-and-node-functionality">Machine roles in Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#operators-overview_review-control-plane-and-node-functionality">Operators in Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#cluster-operators_review-control-plane-and-node-functionality">Cluster Operators</a></li><li class="level-5"><a href="#olm-operators_review-control-plane-and-node-functionality">Add-on Operators</a></li><li class="level-5"><a href="#etcd-overview_review-control-plane-and-node-functionality">etcd key-value store</a></li><li class="level-5"><a href="#cpmso-feat-auto-update_review-control-plane-and-node-functionality">Automatic updates to the control plane configuration</a></li><li class="level-5"><a href="#cpmso-control-plane-recovery_review-control-plane-and-node-functionality">Recovery of failed control plane machines</a></li><li class="level-5"><a href="#coreos-and-ignition_review-control-plane-and-node-functionality">About Red Hat Enterprise Linux CoreOS (RHCOS) and Ignition</a></li><li class="level-5"><a href="#rhcos-key-features_review-control-plane-and-node-functionality">Key RHCOS features</a></li><li class="level-5"><a href="#rhcos-configured_review-control-plane-and-node-functionality">How to configure RHCOS</a></li><li class="level-5"><a href="#rhcos-deployed_review-control-plane-and-node-functionality">How to deploy RHCOS</a></li><li class="level-5"><a href="#rhcos-about-ignition_review-control-plane-and-node-functionality">Ignition</a></li><li class="level-5"><a href="#ignition-config-viewing_review-control-plane-and-node-functionality">View Ignition configuration files</a></li><li class="level-5"><a href="#digging-into-machine-config_review-control-plane-and-node-functionality">Change Ignition configs after installation</a></li><li class="level-4"><a href="#compare-architectural-deployment-models-con_compare-architectural-deployment-models">Compare architectural deployment models</a></li><li class="level-5"><a href="#hosted-control-planes-overview_compare-architectural-deployment-models">Introduction to hosted control planes</a></li><li class="level-6"><a href="#hosted-control-planes-architecture_compare-architectural-deployment-models">Architecture of hosted control planes</a></li><li class="level-6"><a href="#hosted-control-planes-benefits_compare-architectural-deployment-models">Benefits of hosted control planes</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="understand-platform-architecture-con_understand-platform-architecture">Understand platform architecture</h3>
@@ -2412,6 +2414,37 @@ custom OpenShift CLI (<code>oc</code>) interface.</p>
 <div class="paragraph">
 <p>The control plane machines manage workloads on the compute machines, which run Red Hat Enterprise Linux CoreOS (RHCOS), a container-optimized operating system that the cluster configures and updates for you.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="about-control-planes_review-control-plane-and-node-functionality">About the control plane</h4>
+<div class="paragraph _abstract">
+<p>The control plane manages compute nodes and pods in Red&#160;Hat OpenShift Container Platform clusters, with configurable machine config pools for different workload types.</p>
+</div>
+<div class="paragraph">
+<p>The control plane manages the compute nodes and the pods in your cluster. You can configure nodes with the use of machine config pools (MCPs).
+MCPs are groups of machines, such as control plane components or user workloads, that are based on the resources that they handle.
+Red&#160;Hat OpenShift Container Platform assigns different roles to hosts. These roles define the function of a machine in a cluster.
+The cluster contains definitions for the standard control plane and compute role types.</p>
+</div>
+<div class="paragraph">
+<p>You can use Operators to package, deploy, and manage services on the control plane. Operators are important components in Red&#160;Hat OpenShift Container Platform because they provide the following services:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Perform health checks</p>
+</li>
+<li>
+<p>Provide ways to watch applications</p>
+</li>
+<li>
+<p>Manage over-the-air updates</p>
+</li>
+<li>
+<p>Ensure applications stay in the specified state</p>
+</li>
+</ul>
+</div>
 <div class="sect4">
 <h5 id="architecture-machine-config-pools_review-control-plane-and-node-functionality">Node configuration management with machine config pools</h5>
 <div class="paragraph _abstract">
@@ -2950,6 +2983,46 @@ The replacement machine then joins the control plane.</p>
 </td>
 </tr>
 </table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="coreos-and-ignition_review-control-plane-and-node-functionality">About Red Hat Enterprise Linux CoreOS (RHCOS) and Ignition</h5>
+<div class="paragraph _abstract">
+<p>Red Hat Enterprise Linux CoreOS (RHCOS) is a single-purpose container operating system that uses Ignition for initial configuration during cluster deployment.</p>
+</div>
+<div class="paragraph">
+<p>As a cluster administrator, you can perform the following Red Hat Enterprise Linux CoreOS (RHCOS) tasks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Learn about the next generation of single-purpose container operating system technology.</p>
+</li>
+<li>
+<p>Choose how to configure Red Hat Enterprise Linux CoreOS (RHCOS)</p>
+</li>
+<li>
+<p>Choose how to deploy Red Hat Enterprise Linux CoreOS (RHCOS):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Installer-provisioned deployment</p>
+</li>
+<li>
+<p>User-provisioned deployment</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Red&#160;Hat OpenShift Container Platform installation program creates the Ignition configuration files that you need to deploy your cluster.
+Red Hat Enterprise Linux CoreOS (RHCOS) uses Ignition during the initial configuration to perform common disk tasks, such as partitioning, formatting, writing files, and configuring users.
+During the first boot, Ignition reads its configuration from the installation media or the location that you specify and applies the configuration to the machines.</p>
+</div>
+<div class="paragraph">
+<p>You can learn how Ignition works, the process for a Red Hat Enterprise Linux CoreOS (RHCOS) machine in an Red&#160;Hat OpenShift Container Platform cluster, view Ignition configuration files, and change Ignition configuration after an installation.</p>
 </div>
 </div>
 <div class="sect4">
@@ -3498,7 +3571,7 @@ You can then apply the new machine config to the cluster.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-16 12:26:09 +0100
+Last updated 2026-10-16 16:01:29 +0100
 </div>
 </div>
 <style>

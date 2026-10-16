@@ -722,6 +722,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
+<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
+</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -1394,7 +1396,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="infrastructure-components_create-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_make-changes-to-the-kubelet-settings-on-my-nodes.html">Create a KubeletConfig CR to edit kubelet parameters</a>
+<li><a href="nodes-nodes-managing-about_make-changes-to-the-kubelet-settings-on-my-nodes.html">Modifying nodes</a>
 </li>
 <li><a href="nodes-nodes-working-evacuating_evacuate-pods-on-a-node.html">Evacuate pods on nodes</a>
 </li>
@@ -1789,7 +1791,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#machineset-delete-policy_delete-nodes-from-a-cluster">The compute machine set deletion policy</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#machineset-delete-policy_delete-nodes-from-a-cluster">The compute machine set deletion policy</a></li><li class="level-4"><a href="#nodes-nodes-working-deleting-bare-metal_delete-nodes-from-a-cluster">Deleting nodes from a bare metal cluster</a></li><li class="level-4"><a href="#nodes-nodes-working-deleting_delete-nodes-from-a-cluster">Deleting nodes from a cluster</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="machineset-manually-scaling_delete-nodes-from-a-cluster">Scale a compute machine set manually</h3>
@@ -1963,6 +1965,165 @@ spec:
 </table>
 </div>
 </div>
+<div class="sect3">
+<h4 id="nodes-nodes-working-deleting-bare-metal_delete-nodes-from-a-cluster">Deleting nodes from a bare metal cluster</h4>
+<div class="paragraph _abstract">
+<p>You can delete a node from a Red&#160;Hat OpenShift Container Platform cluster that does not use machine sets by using the <code>oc delete node</code> command and decommissioning the node.</p>
+</div>
+<div class="paragraph">
+<p>When you delete a node using the CLI, the node object is deleted in Kubernetes,
+but the pods that exist on the node are not deleted. Any bare pods not backed by
+a replication controller become inaccessible to Red&#160;Hat OpenShift Container Platform. Pods backed by
+replication controllers are rescheduled to other available nodes. You must
+delete local manifest pods.</p>
+</div>
+<div class="paragraph">
+<p>The following procedure deletes a node from an Red&#160;Hat OpenShift Container Platform cluster running on bare metal.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Mark the node as unschedulable:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm cordon &lt;node_name&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Drain all pods on the node:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm drain &lt;node_name&gt; --force=true</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This step might fail if the node is offline or unresponsive. Even if the node does not respond, the node might still be running a workload that writes to shared storage. To avoid data corruption, power down the physical hardware before you proceed.</p>
+</div>
+</li>
+<li>
+<p>Delete the node from the cluster:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete node &lt;node_name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Although the node object is now deleted from the cluster, it can still rejoin
+the cluster after reboot or if the kubelet service is restarted. To permanently
+delete the node and all its data, you must
+<a href="https://access.redhat.com/solutions/84663">decommission the node</a>.</p>
+</div>
+</li>
+<li>
+<p>If you powered down the physical hardware, turn it back on so that the node can rejoin the cluster.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nodes-nodes-working-deleting_delete-nodes-from-a-cluster">Deleting nodes from a cluster</h4>
+<div class="paragraph _abstract">
+<p>You can delete a node from a Red&#160;Hat OpenShift Container Platform cluster by scaling down the appropriate <code>MachineSet</code> object.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When a cluster is integrated with a cloud provider, you must delete the corresponding machine to delete a node. Do not try to use the <code>oc delete node</code> command for this task.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When you delete a node by using the CLI, the node object is deleted in Kubernetes, but the pods that exist on the node are not deleted. Any bare pods that are not backed by a replication controller become inaccessible to Red&#160;Hat OpenShift Container Platform. Pods backed by replication controllers are rescheduled to other available nodes. You must delete local manifest pods.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you are running cluster on bare metal, you cannot delete a node by editing <code>MachineSet</code> objects. Compute machine sets are only available when a cluster is integrated with a cloud provider. Instead you must unschedule and drain the node before manually deleting it.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>View the compute machine sets that are in the cluster by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machinesets -n openshift-machine-api</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The compute machine sets are listed in the form of <code>&lt;cluster-id&gt;-worker-&lt;aws-region-az&gt;</code>.</p>
+</div>
+</li>
+<li>
+<p>Scale down the compute machine set by using one of the following methods:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Specify the number of replicas to scale down to by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc scale --replicas=2 machineset &lt;machine-set-name&gt; -n openshift-machine-api</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Edit the compute machine set custom resource by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit machineset &lt;machine-set-name&gt; -n openshift-machine-api</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata:
+  # ...
+  name: &lt;machine-set-name&gt;
+  namespace: openshift-machine-api
+  # ...
+spec:
+  replicas: 2
+  # ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.replicas</code></dt>
+<dd>
+<p>Specifies the number of replicas to scale down to.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 <div class="paragraph nav-footer">
 <p>← Previous: <a href="delete-a-hosted-cluster-con_delete-a-hosted-cluster.html">Delete a hosted cluster</a> | ↑ Up: <a href="_administer.html">Administer</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="machine-health-checks-about_deploy-machine-health-checks.html">About machine health checks</a> →</p>
@@ -1976,7 +2137,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-16 12:26:09 +0100
+Last updated 2026-10-16 16:01:29 +0100
 </div>
 </div>
 <style>
