@@ -477,8 +477,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
-<body id="installation-special-config-kmod_build-and-deploy-a-simple-kernel-module-driver" class="book toc2 toc-left navmap-has-right-toc">
+<body id="container-limits_configure-compute-resource-limits" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/configure.adoc:70
+    include::ocp-jobs/build-and-deploy-a-simple-kernel-module-driver.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/build-and-deploy-a-simple-kernel-module-driver.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -901,6 +937,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_configure.html">Configure</a>
+
 <ul class="sectlevel2">
 <li><a href="change-the-installed-disk-partition-schema-for-new-nodes-con_change-the-installed-disk-partition-schema-for-new-nodes.html">Change the installed disk-partition schema for new nodes</a>
 </li>
@@ -963,8 +1000,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="override-resource-util-hosted-cluster-con_override-resource-util-hosted-cluster.html">Overriding resource utilization measurements</a>
 </li>
 <li><a href="about-driver-toolkit_build-driver-containers-for-specialized-hardware.html">About the Driver Toolkit</a>
-</li>
-<li><a href="installation-special-config-kmod_build-and-deploy-a-simple-kernel-module-driver.html"><span class="toc-current">The addition of kernel modules to nodes</span></a>
 </li>
 <li><a href="discover-and-label-hardware-features-on-nodes-con_discover-and-label-hardware-features-on-nodes.html">Discover and label hardware features on nodes</a>
 </li>
@@ -1362,6 +1397,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="enable-pressure-stall-information-monitoring-con_enable-pressure-stall-information-monitoring.html">Enable Pressure Stall Information monitoring</a>
 </li>
+<li><a href="install-node-observability-operator_install-the-node-observability-operator.html">Installing the Node Observability Operator</a>
+</li>
+<li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
+</li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
@@ -1386,7 +1425,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_optimize.html">Optimize</a>
-
 <ul class="sectlevel2">
 <li><a href="about-node-tuning-operator_node-tuning-operator.html">Node Tuning Operator</a>
 </li>
@@ -1417,6 +1455,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="about-machine-config-operator_configure-node-changes-on-a-cluster.html">About the Machine Config Operator</a>
 </li>
 <li><a href="nodes-cluster-limit-ranges-about_restrict-resource-consumption-with-limit-ranges.html">About limit ranges</a>
+</li>
+<li><a href="admin-quota-overview_set-resource-quotas-for-a-project.html">Resources managed by quota</a>
+</li>
+<li><a href="container-limits_configure-compute-resource-limits.html"><span class="toc-current">Container limits</span></a>
 </li>
 <li><a href="optimizing-storage-azure_optimize-infrastructure-for-specific-platforms.html">Optimizing storage performance for Microsoft Azure</a>
 </li>
@@ -1779,462 +1821,295 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#building-testing-kernel-module-container_build-and-deploy-a-simple-kernel-module-driver">Building and testing the kernel module container</a></li><li class="level-4"><a href="#provisioning-kernel-module-to-ocp_build-and-deploy-a-simple-kernel-module-driver">Provisioning a kernel module to Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#provision-kernel-modules-via-machineconfig_build-and-deploy-a-simple-kernel-module-driver">Provisioning kernel modules by using a MachineConfig object</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#pod-limits_configure-compute-resource-limits">Pod limits</a></li><li class="level-4"><a href="#image-limits_configure-compute-resource-limits">Image limits</a></li><li class="level-4"><a href="#image-stream-limits_configure-compute-resource-limits">Image stream limits</a></li><li class="level-4"><a href="#persistent-volume-claim-limits_configure-compute-resource-limits">PersistentVolumeClaim limits</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="installation-special-config-kmod_build-and-deploy-a-simple-kernel-module-driver">The addition of kernel modules to nodes</h3>
+<h3 id="container-limits_configure-compute-resource-limits">Container limits</h3>
 <div class="paragraph _abstract">
-<p>For most common hardware, the Linux kernel includes the device driver modules needed to use that hardware when the computer starts up. For some hardware, however, modules are not available in Linux. You must find a way to provide those modules to each host computer.</p>
+<p>After you create the <code>LimitRange</code> object, you can specify the exact amount of resources that a container can consume.</p>
 </div>
 <div class="paragraph">
-<p>A subsequent procedure describes how to provide modules for nodes in an Red&#160;Hat OpenShift Container Platform cluster.</p>
-</div>
-<div class="paragraph">
-<p>When a kernel module is first deployed by following these instructions, the module is made available for the current kernel. If a new kernel is installed, the <code>kmods-via-containers</code> software rebuilds and deploys the module so a compatible version of that module is available with the new kernel.</p>
-</div>
-<div class="paragraph">
-<p>The way that this feature is able to keep the module up to date on each node is by:</p>
+<p>The following list shows resources that a container can consume:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Adding a systemd service to each node that starts at boot time to detect if a new kernel has been installed and</p>
+<p>CPU</p>
 </li>
 <li>
-<p>If a new kernel is detected, the service rebuilds the module and installs it to the kernel</p>
+<p>Memory</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>For information on the software needed for this procedure, see "kmods-via-containers".</p>
+<p>The following table shows the supported constraints for a container. If specified, the constraints must hold true for each container.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 868. Supported constraints</caption>
+<colgroup>
+<col style="width: 27.2727%;">
+<col style="width: 72.7273%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Constraint</th>
+<th class="tableblock halign-left valign-top">Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>Min</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>Min[&lt;resource&gt;]</code> less than or equal to <code>container.resources.requests[&lt;resource&gt;]</code> (required) less than or equal to <code>container/resources.limits[&lt;resource&gt;]</code> (optional)</p>
 </div>
 <div class="paragraph">
-<p>The following list details some important items before you start the procedure:</p>
+<p>If the configuration defines a <code>min</code> CPU, the request value must be greater than the CPU value. If you do not set a <code>min</code> value or you set <code>min</code> to <code>0</code>, the result is no limit and the pod can consume more of the resource than the <code>max</code> value.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>Max</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>container.resources.limits[&lt;resource&gt;]</code> (required) less than or equal to <code>Max[&lt;resource&gt;]</code></p>
+</div>
+<div class="paragraph">
+<p>If the configuration defines a <code>max</code> CPU, you do not need to define a CPU request value. However, you must set a limit that satisfies the maximum CPU constraint that is specified in the limit range.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>MaxLimitRequestRatio</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>MaxLimitRequestRatio[&lt;resource&gt;]</code> less than or equal to (<code>container.resources.limits[&lt;resource&gt;]</code> / <code>container.resources.requests[&lt;resource&gt;]</code>)</p>
+</div>
+<div class="paragraph">
+<p>If the limit range defines a <code>maxLimitRequestRatio</code> constraint, any new containers must have both a <code>request</code> and a <code>limit</code> value. Additionally, Red&#160;Hat OpenShift Container Platform calculates a limit-to-request ratio by dividing the <code>limit</code> by the <code>request</code>. The result should be an integer greater than 1.</p>
+</div>
+<div class="paragraph">
+<p>For example, if a container has <code>cpu: 500</code> in the <code>limit</code> value, and <code>cpu: 100</code> in the <code>request</code> value, the limit-to-request ratio for <code>cpu</code> is <code>5</code>. This ratio must be less than or equal to the <code>maxLimitRequestRatio</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The following list shows default resources that a container can consume:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Software tools and examples are not yet available in official RPM form and can only be obtained for now from unofficial <code>github.com</code> sites noted in the procedure.</p>
+<p><code>Default[&lt;resource&gt;]</code>: Defaults <code>container.resources.limit[&lt;resource&gt;]</code> to specified value if none.</p>
 </li>
 <li>
-<p>Third-party kernel modules you might add through these procedures are not supported by Red Hat.</p>
-</li>
-<li>
-<p>The software needed to build your kernel modules is deployed in a RHEL 8 container. Remember that modules are rebuilt automatically on each node when that node gets a new kernel. For that reason, each node needs access to a <code>yum</code> repository that contains the kernel and related packages needed to rebuild the module. That content is best provided with a valid RHEL subscription.</p>
+<p><code>Default Requests[&lt;resource&gt;]</code>: Defaults <code>container.resources.requests[&lt;resource&gt;]</code> to specified value if none.</p>
 </li>
 </ul>
 </div>
 <div class="sect3">
-<h4 id="building-testing-kernel-module-container_build-and-deploy-a-simple-kernel-module-driver">Building and testing the kernel module container</h4>
+<h4 id="pod-limits_configure-compute-resource-limits">Pod limits</h4>
 <div class="paragraph _abstract">
-<p>Before deploying kernel modules to your Red&#160;Hat OpenShift Container Platform cluster, you can test the process on a separate RHEL system.</p>
+<p>After you create the <code>LimitRange</code> object, you can specify the exact amount of resources that a pod can consume.</p>
 </div>
 <div class="paragraph">
-<p>Before testing the process, gather the source code for the kernal module, the KVC framework, and the <code>kmod-via-containers</code> software. You can then build and test a module on a RHEL system.</p>
+<p>A pod can consume the following resources:</p>
 </div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Register a RHEL 8 system:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># subscription-manager register</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Attach a subscription to the RHEL 8 system:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># subscription-manager attach --auto</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Install software that is required to build the software and container:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># yum install podman make git -y</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Clone the <code>kmod-via-containers</code> repository.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Create a folder for the repository:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ mkdir kmods; cd kmods</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Clone the repository:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ git clone https://github.com/kmods-via-containers/kmods-via-containers</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Install a KVC framework instance on your RHEL 8 build host to test the module. This adds a <code>kmods-via-container</code> systemd service and loads it:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Change to the <code>kmod-via-containers</code> directory:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cd kmods-via-containers/</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Install the KVC framework instance:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo make install</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Reload the systemd manager configuration:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo systemctl daemon-reload</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Get the kernel module source code. The source code might be used to build a third-party module that you do not have control over, but is supplied by others. You will need content similar to the content shown in the <code>kvc-simple-kmod</code> example that can be cloned to your system as follows:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cd .. ; git clone https://github.com/kmods-via-containers/kvc-simple-kmod</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Edit the configuration file, <code>simple-kmod.conf</code> file, in this example, and
-change the name of the Dockerfile to <code>Dockerfile.rhel</code>:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Change to the <code>kvc-simple-kmod</code> directory:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cd kvc-simple-kmod</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Rename the Dockerfile:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cat simple-kmod.conf</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example Dockerfile</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">KMOD_CONTAINER_BUILD_CONTEXT="https://github.com/kmods-via-containers/kvc-simple-kmod.git"
-KMOD_CONTAINER_BUILD_FILE=Dockerfile.rhel
-KMOD_SOFTWARE_VERSION=dd1a7d4
-KMOD_NAMES="simple-kmod simple-procfs-kmod"</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Create an instance of <code>kmods-via-containers@.service</code> for your kernel module,
-<code>simple-kmod</code> in this example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo make install</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Enable the <code>kmods-via-containers@.service</code> instance:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo kmods-via-containers build simple-kmod $(uname -r)</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Enable and start the systemd service:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo systemctl enable kmods-via-containers@simple-kmod.service --now</code></pre>
-</div>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Review the service status:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo systemctl status kmods-via-containers@simple-kmod.service</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">● kmods-via-containers@simple-kmod.service - Kmods Via Containers - simple-kmod
-   Loaded: loaded (/etc/systemd/system/kmods-via-containers@.service;
-          enabled; vendor preset: disabled)
-   Active: active (exited) since Sun 2020-01-12 23:49:49 EST; 5s ago...</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>To confirm that the kernel modules are loaded, use the <code>lsmod</code> command to list the modules:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ lsmod | grep simple_</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">simple_procfs_kmod     16384  0
-simple_kmod            16384  0</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Optional. Use other methods to check that the <code>simple-kmod</code> example is working.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Look for a "Hello world" message in the kernel ring buffer with <code>dmesg</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ dmesg | grep 'Hello world'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">[ 6420.761332] Hello world from simple_kmod.</code></pre>
-</div>
-</div>
+<p>CPU</p>
 </li>
 <li>
-<p>Check the value of <code>simple-procfs-kmod</code> in <code>/proc</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo cat /proc/simple-procfs-kmod</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">simple-procfs-kmod number = 0</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Run the <code>spkut</code> command to get more information from the module:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo spkut 44</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">KVC: wrapper simple-kmod for 4.22.0-147.3.1.el8_1.x86_64
-Running userspace wrapper using the kernel module container...
-+ podman run -i --rm --privileged
-   simple-kmod-dd1a7d4:4.22.0-147.3.1.el8_1.x86_64 spkut 44
-simple-procfs-kmod number = 0
-simple-procfs-kmod number = 44</code></pre>
-</div>
-</div>
+<p>Memory</p>
 </li>
 </ul>
 </div>
-</li>
-</ol>
-</div>
 <div class="paragraph">
-<div class="title">Results</div>
-<p>After the system boots, the service checks if a new kernel is running. If there is a new kernel, the service builds a new version of the kernel module and then loads it. If the module is already built, it will just load it.</p>
+<p>The following table shows the supported constraints for a pod. Across all pods, the following behavior must hold true:</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 27.2727%;">
+<col style="width: 72.7273%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Constraint</th>
+<th class="tableblock halign-left valign-top">Enforced behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>Min</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>Min[&lt;resource&gt;]</code> less than or equal to <code>container.resources.requests[&lt;resource&gt;]</code> (required) less than or equal to <code>container.resources.limits[&lt;resource&gt;]</code>. If you do not set a <code>min</code> value or you set <code>min</code> to <code>0</code>, the result is no limit and the pod can consume more of the resource than the <code>max</code> value.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>Max</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>container.resources.limits[&lt;resource&gt;]</code> (required) less than or equal to <code>Max[&lt;resource&gt;]</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>MaxLimitRequestRatio</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>MaxLimitRequestRatio[&lt;resource&gt;]</code> less than or equal to (<code>container.resources.limits[&lt;resource&gt;]</code> / <code>container.resources.requests[&lt;resource&gt;]</code>).</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
-<h4 id="provisioning-kernel-module-to-ocp_build-and-deploy-a-simple-kernel-module-driver">Provisioning a kernel module to Red&#160;Hat OpenShift Container Platform</h4>
+<h4 id="image-limits_configure-compute-resource-limits">Image limits</h4>
 <div class="paragraph _abstract">
-<p>Depending on whether or not you must have the kernel module in place when Red&#160;Hat OpenShift Container Platform cluster first boots, you can set up the
-kernel modules to be deployed in one of two ways.</p>
+<p>After you create the <code>LimitRange</code> object, you can specify the exact amount of resources that an image can consume.</p>
 </div>
 <div class="paragraph">
-<p>These two ways are listed as follows:</p>
+<p>An image can consume the following resources:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Provision kernel modules at cluster install time (day-1): You can create the content as a <code>MachineConfig</code> object and provide it to <code>openshift-install</code> by including it with a set of manifest files.</p>
+<p>Storage</p>
 </li>
 <li>
-<p>Provision kernel modules via Machine Config Operator (day-2): Deploy the kernel module software by using the Machine Config Operator (MCO) after the cluster is running.</p>
+<p><code>openshift.io/Image</code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Regardless of the provisioning method, each node must be able to obtain the kernel packages and related software packages when a new kernel is detected. You can configure each node to obtain this content in one of the following ways:</p>
+<p>The following table shows the supported constraints for an image. If specified, the constraints must hold true for each image.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 869. Image limits</caption>
+<colgroup>
+<col style="width: 27.2727%;">
+<col style="width: 72.7273%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Constraint</th>
+<th class="tableblock halign-left valign-top">Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>Max</code></p>
 </div>
 <div class="ulist">
 <ul>
-<li>
-<p>Provide RHEL entitlements to each node.</p>
-</li>
-<li>
-<p>Copy RHEL entitlements from the <code>/etc/pki/entitlement</code> directory on an existing RHEL host to the same location as the other files. These other files were provided when you built your Ignition config.
-when you build your Ignition config.</p>
-</li>
-<li>
-<p>Add pointers to a <code>yum</code> repository containing the kernel and other packages in the Docker file. The pointer must include new kernel packages as they are needed to match newly installed kernels.</p>
-</li>
 </ul>
 </div>
-<div class="sect4">
-<h5 id="provision-kernel-modules-via-machineconfig_build-and-deploy-a-simple-kernel-module-driver">Provisioning kernel modules by using a MachineConfig object</h5>
-<div class="paragraph _abstract">
-<p>Package kernel module software with a <code>MachineConfig</code> object to deliver that software to compute or control plane nodes at installation time or through the Machine Config Operator (MCO).</p>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>image.dockerimagemetadata.size</code> less than or equal to <code>Max[&lt;resource&gt;]</code></p>
 </div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Register a RHEL 8 system:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># subscription-manager register</code></pre>
+<div class="ulist">
+<ul>
+</ul>
 </div>
-</div>
-</li>
-<li>
-<p>Attach a subscription to the RHEL 8 system:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># subscription-manager attach --auto</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Install software needed to build the software:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># yum install podman make git -y</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create a directory to host the kernel module and tooling:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ mkdir kmods; cd kmods</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Get the <code>kmods-via-containers</code> software:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Clone the <code>kmods-via-containers</code> repository:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ git clone https://github.com/kmods-via-containers/kmods-via-containers</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Clone the <code>kvc-simple-kmod</code> repository:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ git clone https://github.com/kmods-via-containers/kvc-simple-kmod</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Get your module software. In this example, <code>kvc-simple-kmod</code> is used.</p>
-</li>
-<li>
-<p>Create a fakeroot directory and populate it with files that you want to deliver through Ignition, using the repositories cloned earlier:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Create the directory:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ FAKEROOT=$(mktemp -d)</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Change to the <code>kmod-via-containers</code> directory:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cd kmods-via-containers</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Install the KVC framework instance:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ make install DESTDIR=${FAKEROOT}/usr/local CONFDIR=${FAKEROOT}/etc/</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Change to the <code>kvc-simple-kmod</code> directory:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cd ../kvc-simple-kmod</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create the instance:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ make install DESTDIR=${FAKEROOT}/usr/local CONFDIR=${FAKEROOT}/etc/</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Clone the fakeroot directory, replacing any symbolic links with copies of their targets, by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cd .. &amp;&amp; rm -rf kmod-tree &amp;&amp; cp -Lpr ${FAKEROOT} kmod-tree</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create a Butane config file, <code>99-simple-kmod.bu</code>, that embeds the kernel module tree and enables the systemd service.</p>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2243,89 +2118,239 @@ when you build your Ignition config.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>See "Creating machine configs with Butane" for information about Butane.</p>
+<p>To prevent blobs that exceed the limit from being uploaded to the registry, you must configure the registry to enforce quota. The <code>REGISTRY_MIDDLEWARE_REPOSITORY_OPENSHIFT_ENFORCEQUOTA</code> environment variable must be set to <code>true</code>. By default, the environment variable is set to <code>true</code> for new deployments.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">variant: openshift
-version: {product-version}.0
-metadata:
-  name: 99-simple-kmod
-  labels:
-    machineconfiguration.openshift.io/role: worker
-storage:
-  trees:
-    - local: kmod-tree
-systemd:
-  units:
-    - name: kmods-via-containers@simple-kmod.service
-      enabled: true</code></pre>
 </div>
+<div class="sect3">
+<h4 id="image-stream-limits_configure-compute-resource-limits">Image stream limits</h4>
+<div class="paragraph _abstract">
+<p>After you create the <code>LimitRange</code> object, you can specify the exact amount of resources that an image stream can consume.</p>
 </div>
 <div class="paragraph">
-<p><code>metadata.labels.machineconfiguration.openshift.io/role</code>: Specifies the node role. To deploy on control plane nodes, change <code>worker</code> to <code>master</code>. To deploy on both control plane and compute nodes, perform the remainder of these instructions once for each node type.</p>
+<p>An image stream can consume the following resources:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>openshift.io/image-tags</code></p>
 </li>
 <li>
-<p>Use Butane to generate a machine config YAML file, <code>99-simple-kmod.yaml</code>, containing the files and configuration to be delivered:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ butane 99-simple-kmod.bu --files-dir . -o 99-simple-kmod.yaml</code></pre>
-</div>
-</div>
+<p><code>openshift.io/images</code></p>
 </li>
 <li>
-<p>If the cluster is not up yet, generate manifest files and add this file to the
-<code>openshift</code> directory. If the cluster is already running, apply the file as follows:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f 99-simple-kmod.yaml</code></pre>
-</div>
+<p><code>openshift.io/ImageStream</code></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Your nodes will start the <code>kmods-via-containers@simple-kmod.service</code> service and the kernel modules will be loaded.</p>
+<p>The <code>openshift.io/image-tags</code> limit bounds unique references derived from tag definitions in the <code>imagestream.spec.tags</code> resource. A reference can be an <code>ImageStreamTag</code>, an <code>ImageStreamImage</code>, or a <code>DockerImage</code>. You can use the <code>oc tag</code> and <code>oc import-image</code> commands to create tags. Internal and external references are not distinguished, and each unique reference in the spec is counted once. Updates that would exceed the limit are rejected, including updates from pushes to the internal registry that add or change tag definitions.</p>
 </div>
-</li>
-<li>
-<p>To confirm that the kernel modules are loaded, list the modules by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ lsmod | grep simple_</code></pre>
+<div class="paragraph">
+<p>The <code>openshift.io/images</code> limit bounds unique image identities recorded in <code>imagestream.status.tags</code>. The name is equivalent to the digest for the image. It limits how many distinct images the stream can reference in status, including from registry pushes. Internal and external references are not distinguished.</p>
 </div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">simple_procfs_kmod     16384  0
-simple_kmod            16384  0</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<img src="data:image/png;base64," alt="Note">
+<img src="data:image/png;base64," alt="Important">
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You can log in to a node running the <code>oc debug node/&lt;openshift-node&gt;`command and then the `chroot /host</code> command.</p>
+<p>Do not read <code>openshift.io/image-tags</code> and <code>openshift.io/images</code> as "tag names versus images per tag." The first limit is computed from the <code>ImageStream</code> <code>spec.tags</code> resource. The second is computed from the <code>imagestream.status.tags</code> resource. Both limits can cause image stream updates to fail when a push or other operation would exceed them.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-</li>
-</ol>
+<div class="paragraph">
+<p>The following table shows the supported constraints for an image stream. If specified, the constraints must hold true for each image stream.</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 27.2727%;">
+<col style="width: 72.7273%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Constraint</th>
+<th class="tableblock halign-left valign-top">Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>Max[openshift.io/image-tags]</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>length( uniqueimagetags( imagestream.spec.tags ) )</code> less than or equal to <code>Max[openshift.io/image-tags]</code></p>
+</div>
+<div class="paragraph">
+<p><code>uniqueimagetags</code> returns unique references to images of given spec tags.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>Max[openshift.io/images]</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>length( uniqueimages( imagestream.status.tags ) )</code> less than or equal to <code>Max[openshift.io/images]</code></p>
+</div>
+<div class="paragraph">
+<p><code>uniqueimages</code> returns unique image names found in status tags. The name is equal to the digest for the image.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="persistent-volume-claim-limits_configure-compute-resource-limits">PersistentVolumeClaim limits</h4>
+<div class="paragraph _abstract">
+<p>After you create the <code>LimitRange</code> object, you can specify the exact amount of resources that a <code>PersistentVolumeClaim</code> resource can consume.</p>
+</div>
+<div class="paragraph">
+<p>A <code>PersistentVolumeClaim</code> resource can consume storage resources.</p>
+</div>
+<div class="paragraph">
+<p>The following table shows the supported constraints for a persistent volume claim. If specified, the constraints must hold true for each persistent volume claim.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 870. <code>PersistentVolumeClaim</code> resource limits</caption>
+<colgroup>
+<col style="width: 27.2727%;">
+<col style="width: 72.7273%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Constraint</th>
+<th class="tableblock halign-left valign-top">Enforced behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>Min</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Min[&lt;resource&gt;] &lt;= claim.spec.resources.requests[&lt;resource&gt;] (required)</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>Max</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>claim.spec.resources.requests[&lt;resource&gt;] (required) &lt;= Max[&lt;resource&gt;]</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="title">Limit range object definition example</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "apiVersion": "v1",
+  "kind": "LimitRange",
+  "metadata": {
+    "name": "pvcs"
+  },
+  "spec": {
+    "limits": [{
+        "type": "PersistentVolumeClaim",
+        "min": {
+          "storage": "2Gi"
+        },
+        "max": {
+          "storage": "50Gi"
+        }
+      }
+    ]
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>metadata.name</code></dt>
+<dd>
+<p>Specifies the name of the limit range object.</p>
+</dd>
+<dt class="hdlist1"><code>limits.min.storage</code></dt>
+<dd>
+<p>Specifies the minimum amount of storage that can be requested in a persistent volume claim.</p>
+</dd>
+<dt class="hdlist1"><code>limits.max.storage</code></dt>
+<dd>
+<p>Specifies the maximum amount of storage that can be requested in a persistent volume claim.</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="about-driver-toolkit_build-driver-containers-for-specialized-hardware.html">About the Driver Toolkit</a> | ↑ Up: <a href="_configure.html">Configure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="discover-and-label-hardware-features-on-nodes-con_discover-and-label-hardware-features-on-nodes.html">Discover and label hardware features on nodes</a> →</p>
+<p>← Previous: <a href="admin-quota-overview_set-resource-quotas-for-a-project.html">Resources managed by quota</a> | ↑ Up: <a href="_optimize.html">Optimize</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="optimizing-storage-azure_optimize-infrastructure-for-specific-platforms.html">Optimizing storage performance for Microsoft Azure</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2336,7 +2361,7 @@ simple_kmod            16384  0</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-16 17:18:05 +0100
+Last updated 2026-10-19 15:47:12 +0100
 </div>
 </div>
 <style>
