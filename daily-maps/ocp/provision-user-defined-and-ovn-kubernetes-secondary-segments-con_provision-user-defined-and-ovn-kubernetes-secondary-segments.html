@@ -1366,8 +1366,6 @@ How to fix these errors:
 <li><a href="_observe.html">Observe</a>
 
 <ul class="sectlevel2">
-<li><a href="dependency-discovery-61-map-which-services-communicate-with-each-other-con_dependency-discovery-61-map-which-services-communicate-with-each-other.html">Map which services communicate with each other</a>
-</li>
 <li><a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a>
 </li>
 <li><a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a>
@@ -1375,18 +1373,6 @@ How to fix these errors:
 <li><a href="size-monitoring-infrastructure-con_size-monitoring-infrastructure.html">Size monitoring infrastructure</a>
 </li>
 <li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
-</li>
-<li><a href="performance-investigation-con_performance-investigation.html">Performance investigation</a>
-</li>
-<li><a href="traffic-analysis-con_traffic-analysis.html">Traffic analysis</a>
-</li>
-<li><a href="anomaly-detection-con_anomaly-detection.html">Anomaly detection</a>
-</li>
-<li><a href="network-observability-dns-overview_analyze-dns-resolution-patterns-and-errors.html">DNS tracking</a>
-</li>
-<li><a href="east-west-traffic-monitoring-con_east-west-traffic-monitoring.html">East-west traffic monitoring</a>
-</li>
-<li><a href="egress-monitoring-con_egress-monitoring.html">Egress monitoring</a>
 </li>
 <li><a href="monitor-control-plane-nodes-con_monitor-control-plane-nodes.html">Monitor control plane nodes</a>
 </li>
@@ -3422,7 +3408,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 <p>To troubleshoot your network deployment in Red&#160;Hat OpenShift Container Platform, evaluate the status condition types returned for <code>ClusterUserDefinedNetwork</code> and <code>UserDefinedNetwork</code> custom resources (CRs). Reviewing these conditions ensures that you can identify and resolve configuration errors.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 638. NetworkCreated condition types (<code>ClusterDefinedNetwork</code> and <code>UserDefinedNetwork</code> CRs)</caption>
+<caption class="title">Table 641. NetworkCreated condition types (<code>ClusterDefinedNetwork</code> and <code>UserDefinedNetwork</code> CRs)</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 15.3846%;">
@@ -3688,7 +3674,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 639. NetworkAllocationSucceeded condition types (<code>UserDefinedNetwork</code> CRs)</caption>
+<caption class="title">Table 642. NetworkAllocationSucceeded condition types (<code>UserDefinedNetwork</code> CRs)</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 15.3846%;">
@@ -3822,7 +3808,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 640. Invalid <code>mtu</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 643. Invalid <code>mtu</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3962,7 +3948,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 641. Invalid <code>PhysicalNetworkName</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 644. Invalid <code>PhysicalNetworkName</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4134,7 +4120,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 642. Invalid <code>role</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 645. Invalid <code>role</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4242,7 +4228,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 643. Invalid <code>subnets</code> and <code>ipam</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 646. Invalid <code>subnets</code> and <code>ipam</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4542,7 +4528,7 @@ When omitted, all IP addresses in the <code>subnets</code> field are available f
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 644. Invalid <code>vlan</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
+<caption class="title">Table 647. Invalid <code>vlan</code> scenarios types for the <code>ClusterUserDefinedNetwork</code> CR</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 16.6666%;">
@@ -4859,7 +4845,7 @@ metadata:
 <p>The following table lists the supported and unsupported features when EVPN is enabled on primary CUDNs.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 645. BGP EVPN with primary CUDNs feature compatibility</caption>
+<caption class="title">Table 648. BGP EVPN with primary CUDNs feature compatibility</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5963,7 +5949,7 @@ spec:
 <p>The configuration for the API is described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 646. <code>NetworkAttachmentDefinition</code> API fields</caption>
+<caption class="title">Table 649. <code>NetworkAttachmentDefinition</code> API fields</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -6153,7 +6139,7 @@ spec:
 <p>The OVN-Kubernetes network plugin JSON configuration object describes the configuration parameters for the OVN-Kubernetes CNI network plugin.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 647. OVN-Kubernetes network plugin JSON configuration table</caption>
+<caption class="title">Table 650. OVN-Kubernetes network plugin JSON configuration table</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6693,7 +6679,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 15:47:12 +0100
+Last updated 2026-10-19 18:10:19 +0100
 </div>
 </div>
 <style>

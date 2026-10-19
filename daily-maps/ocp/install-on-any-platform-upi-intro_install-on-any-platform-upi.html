@@ -1366,8 +1366,6 @@ How to fix these errors:
 <li><a href="_observe.html">Observe</a>
 
 <ul class="sectlevel2">
-<li><a href="dependency-discovery-61-map-which-services-communicate-with-each-other-con_dependency-discovery-61-map-which-services-communicate-with-each-other.html">Map which services communicate with each other</a>
-</li>
 <li><a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a>
 </li>
 <li><a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a>
@@ -1375,18 +1373,6 @@ How to fix these errors:
 <li><a href="size-monitoring-infrastructure-con_size-monitoring-infrastructure.html">Size monitoring infrastructure</a>
 </li>
 <li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
-</li>
-<li><a href="performance-investigation-con_performance-investigation.html">Performance investigation</a>
-</li>
-<li><a href="traffic-analysis-con_traffic-analysis.html">Traffic analysis</a>
-</li>
-<li><a href="anomaly-detection-con_anomaly-detection.html">Anomaly detection</a>
-</li>
-<li><a href="network-observability-dns-overview_analyze-dns-resolution-patterns-and-errors.html">DNS tracking</a>
-</li>
-<li><a href="east-west-traffic-monitoring-con_east-west-traffic-monitoring.html">East-west traffic monitoring</a>
-</li>
-<li><a href="egress-monitoring-con_egress-monitoring.html">Egress monitoring</a>
 </li>
 <li><a href="monitor-control-plane-nodes-con_monitor-control-plane-nodes.html">Monitor control plane nodes</a>
 </li>
@@ -1928,7 +1914,7 @@ How to fix these errors:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 472. Minimum required hosts</caption>
+<caption class="title">Table 475. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1982,7 +1968,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 473. Minimum resource requirements</caption>
+<caption class="title">Table 476. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -2162,7 +2148,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 474. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 477. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2494,7 +2480,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 475. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 478. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2543,7 +2529,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 476. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 479. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2650,7 +2636,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 477. Required DNS records</caption>
+<caption class="title">Table 480. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -3216,7 +3202,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 478. Application Ingress load balancer</caption>
+<caption class="title">Table 481. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -5998,7 +5984,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the subcommands, options, and arguments you can pass to the <code>coreos-installer</code> command.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 479. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
+<caption class="title">Table 482. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7285,7 +7271,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the RHCOS live installer <code>coreos.inst</code> boot options for ISO and PXE installations.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 480. <code>coreos.inst</code> boot options</caption>
+<caption class="title">Table 483. <code>coreos.inst</code> boot options</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8557,7 +8543,7 @@ openshift-authentication-operator authentication-operator-69d5d8bf84-vh2n8      
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 15:47:12 +0100
+Last updated 2026-10-19 18:10:19 +0100
 </div>
 </div>
 <style>

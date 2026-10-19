@@ -1366,8 +1366,6 @@ How to fix these errors:
 <li><a href="_observe.html">Observe</a>
 
 <ul class="sectlevel2">
-<li><a href="dependency-discovery-61-map-which-services-communicate-with-each-other-con_dependency-discovery-61-map-which-services-communicate-with-each-other.html">Map which services communicate with each other</a>
-</li>
 <li><a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a>
 </li>
 <li><a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a>
@@ -1375,18 +1373,6 @@ How to fix these errors:
 <li><a href="size-monitoring-infrastructure-con_size-monitoring-infrastructure.html">Size monitoring infrastructure</a>
 </li>
 <li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
-</li>
-<li><a href="performance-investigation-con_performance-investigation.html">Performance investigation</a>
-</li>
-<li><a href="traffic-analysis-con_traffic-analysis.html">Traffic analysis</a>
-</li>
-<li><a href="anomaly-detection-con_anomaly-detection.html">Anomaly detection</a>
-</li>
-<li><a href="network-observability-dns-overview_analyze-dns-resolution-patterns-and-errors.html">DNS tracking</a>
-</li>
-<li><a href="east-west-traffic-monitoring-con_east-west-traffic-monitoring.html">East-west traffic monitoring</a>
-</li>
-<li><a href="egress-monitoring-con_egress-monitoring.html">Egress monitoring</a>
 </li>
 <li><a href="monitor-control-plane-nodes-con_monitor-control-plane-nodes.html">Monitor control plane nodes</a>
 </li>
@@ -1863,6 +1849,9 @@ How to fix these errors:
 <p><code>AdditionalStorageConfig</code></p>
 </li>
 <li>
+<p><code>AuthenticationComponentProxy</code></p>
+</li>
+<li>
 <p><code>AutomatedEtcdBackup</code></p>
 </li>
 <li>
@@ -1950,9 +1939,6 @@ How to fix these errors:
 <p><code>ConfigurablePKI</code></p>
 </li>
 <li>
-<p><code>ConsolePluginContentSecurityPolicy</code></p>
-</li>
-<li>
 <p><code>CRDCompatibilityRequirementOperator</code></p>
 </li>
 <li>
@@ -1960,9 +1946,6 @@ How to fix these errors:
 </li>
 <li>
 <p><code>DNSNameResolver</code></p>
-</li>
-<li>
-<p><code>DRAPartitionableDevices</code></p>
 </li>
 <li>
 <p><code>DualReplica</code></p>
@@ -1977,10 +1960,16 @@ How to fix these errors:
 <p><code>EventTTL</code></p>
 </li>
 <li>
+<p><code>EVPN</code></p>
+</li>
+<li>
 <p><code>Example</code></p>
 </li>
 <li>
 <p><code>ExternalOIDC</code></p>
+</li>
+<li>
+<p><code>ExternalOIDCExternalClaimsSourcing</code></p>
 </li>
 <li>
 <p><code>ExternalOIDCWithUIDAndExtraClaimMappings</code></p>
@@ -1989,7 +1978,13 @@ How to fix these errors:
 <p><code>ExternalOIDCWithUpstreamParity</code></p>
 </li>
 <li>
+<p><code>ExternalSnapshotMetadata</code></p>
+</li>
+<li>
 <p><code>GatewayAPIWithoutOLM</code></p>
+</li>
+<li>
+<p><code>GatewayAPIManagementMode</code></p>
 </li>
 <li>
 <p><code>GCPCustomAPIEndpoints</code></p>
@@ -2001,6 +1996,9 @@ How to fix these errors:
 <p><code>GCPDualStackInstall</code></p>
 </li>
 <li>
+<p><code>GCPSovereignCloudInstall</code></p>
+</li>
+<li>
 <p><code>HyperShiftOnlyDynamicResourceAllocation</code></p>
 </li>
 <li>
@@ -2010,7 +2008,13 @@ How to fix these errors:
 <p><code>ImageStreamImportMode</code></p>
 </li>
 <li>
+<p><code>IngressComponentRouteLabels</code></p>
+</li>
+<li>
 <p><code>IngressControllerDynamicConfigurationManager</code></p>
+</li>
+<li>
+<p><code>IngressControllerMultipleHAProxyVersions</code></p>
 </li>
 <li>
 <p><code>InsightsConfig</code></p>
@@ -2046,19 +2050,16 @@ How to fix these errors:
 <p><code>MetricsCollectionProfiles</code></p>
 </li>
 <li>
-<p><code>MinimumKubeletVersion</code></p>
-</li>
-<li>
-<p><code>MixedCPUsAllocation</code></p>
-</li>
-<li>
-<p><code>MultiDiskSetup</code></p>
+<p>`MinimumKubeletVersion`GCPSovereignCloudInstall</p>
 </li>
 <li>
 <p><code>MutableCSINodeAllocatableCount</code></p>
 </li>
 <li>
 <p><code>MutatingAdmissionPolicy</code></p>
+</li>
+<li>
+<p><code>NetworkObservabilityInstall</code></p>
 </li>
 <li>
 <p><code>NewOLM</code></p>
@@ -2076,9 +2077,6 @@ How to fix these errors:
 <p><code>NewOLMOwnSingleNamespace</code></p>
 </li>
 <li>
-<p><code>NewOLMPreflightPermissionChecks</code></p>
-</li>
-<li>
 <p><code>NewOLMWebhookProviderOpenshiftServiceCA</code></p>
 </li>
 <li>
@@ -2089,6 +2087,9 @@ How to fix these errors:
 </li>
 <li>
 <p><code>NutanixMultiSubnets</code></p>
+</li>
+<li>
+<p><code>OLMLifecycleAndCompatibility</code></p>
 </li>
 <li>
 <p><code>OnPremDNSRecords</code></p>
@@ -2103,10 +2104,10 @@ How to fix these errors:
 <p><code>OVNObservability</code></p>
 </li>
 <li>
-<p><code>RouteExternalCertificate</code></p>
+<p><code>SELinuxMount</code></p>
 </li>
 <li>
-<p><code>SELinuxMount</code></p>
+<p><code>SELinuxMountGAReadiness</code></p>
 </li>
 <li>
 <p><code>ServiceAccountTokenNodeBinding</code></p>
@@ -2127,13 +2128,10 @@ How to fix these errors:
 <p><code>TLSAdherence</code></p>
 </li>
 <li>
+<p><code>TLSGroupPreferences</code></p>
+</li>
+<li>
 <p><code>UpgradeStatus</code></p>
-</li>
-<li>
-<p><code>UserNamespacesPodSecurityStandards</code></p>
-</li>
-<li>
-<p><code>UserNamespacesSupport</code></p>
 </li>
 <li>
 <p><code>VolumeGroupSnapshot</code></p>
@@ -2152,6 +2150,9 @@ How to fix these errors:
 </li>
 <li>
 <p><code>VSphereMultiNetworks</code></p>
+</li>
+<li>
+<p><code>VSphereMultiVCenterDay2</code></p>
 </li>
 </ul>
 </div>
@@ -2576,7 +2577,7 @@ featureGates:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 15:47:12 +0100
+Last updated 2026-10-19 18:10:19 +0100
 </div>
 </div>
 <style>

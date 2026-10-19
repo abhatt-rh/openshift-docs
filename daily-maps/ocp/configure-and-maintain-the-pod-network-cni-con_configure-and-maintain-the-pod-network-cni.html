@@ -1366,8 +1366,6 @@ How to fix these errors:
 <li><a href="_observe.html">Observe</a>
 
 <ul class="sectlevel2">
-<li><a href="dependency-discovery-61-map-which-services-communicate-with-each-other-con_dependency-discovery-61-map-which-services-communicate-with-each-other.html">Map which services communicate with each other</a>
-</li>
 <li><a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a>
 </li>
 <li><a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a>
@@ -1375,18 +1373,6 @@ How to fix these errors:
 <li><a href="size-monitoring-infrastructure-con_size-monitoring-infrastructure.html">Size monitoring infrastructure</a>
 </li>
 <li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
-</li>
-<li><a href="performance-investigation-con_performance-investigation.html">Performance investigation</a>
-</li>
-<li><a href="traffic-analysis-con_traffic-analysis.html">Traffic analysis</a>
-</li>
-<li><a href="anomaly-detection-con_anomaly-detection.html">Anomaly detection</a>
-</li>
-<li><a href="network-observability-dns-overview_analyze-dns-resolution-patterns-and-errors.html">DNS tracking</a>
-</li>
-<li><a href="east-west-traffic-monitoring-con_east-west-traffic-monitoring.html">East-west traffic monitoring</a>
-</li>
-<li><a href="egress-monitoring-con_egress-monitoring.html">Egress monitoring</a>
 </li>
 <li><a href="monitor-control-plane-nodes-con_monitor-control-plane-nodes.html">Monitor control plane nodes</a>
 </li>
@@ -1932,7 +1918,7 @@ the Cluster Network Operator reports an available status condition.</p>
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 617. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 620. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2085,7 +2071,7 @@ the Cluster Network Operator reports an available status condition.</p>
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 618. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 621. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -2150,7 +2136,7 @@ the Cluster Network Operator reports an available status condition.</p>
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 619. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 622. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2307,7 +2293,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 620. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 623. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2358,7 +2344,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 621. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 624. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2409,7 +2395,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 622. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 625. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2516,7 +2502,7 @@ the Cluster Network Operator reports an available status condition.</p>
 </tbody>
 </table>
 <table id="gatewayConfig-object_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 623. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 626. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2610,7 +2596,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 624. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 627. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2655,7 +2641,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 625. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 628. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2700,7 +2686,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_cluster-network-operator" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 626. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 629. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -8639,7 +8625,7 @@ spec:
 </ul>
 </div>
 <table id="network-observability-resource-recommendations-table_configure-storage-and-flow-collection-for-network-observability" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 627. Resource recommendations for cluster sizes</caption>
+<caption class="title">Table 630. Resource recommendations for cluster sizes</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 20%;">
@@ -8748,7 +8734,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 628. Total average resource usage</caption>
+<caption class="title">Table 631. Total average resource usage</caption>
 <colgroup>
 <col>
 <col>
@@ -9196,7 +9182,7 @@ spec:
 <p>If you only want to export flows to a Kafka consumer or IPFIX collector, or you only need dashboard metrics, then you do not need to install Loki or provide storage for Loki. The following table compares available features with and without Loki.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 629. Comparison of feature availability with and without Loki</caption>
+<caption class="title">Table 632. Comparison of feature availability with and without Loki</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -9379,7 +9365,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 15:47:12 +0100
+Last updated 2026-10-19 18:10:19 +0100
 </div>
 </div>
 <style>

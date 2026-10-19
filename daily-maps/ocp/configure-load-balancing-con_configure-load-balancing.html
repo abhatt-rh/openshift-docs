@@ -1366,8 +1366,6 @@ How to fix these errors:
 <li><a href="_observe.html">Observe</a>
 
 <ul class="sectlevel2">
-<li><a href="dependency-discovery-61-map-which-services-communicate-with-each-other-con_dependency-discovery-61-map-which-services-communicate-with-each-other.html">Map which services communicate with each other</a>
-</li>
 <li><a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a>
 </li>
 <li><a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a>
@@ -1375,18 +1373,6 @@ How to fix these errors:
 <li><a href="size-monitoring-infrastructure-con_size-monitoring-infrastructure.html">Size monitoring infrastructure</a>
 </li>
 <li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
-</li>
-<li><a href="performance-investigation-con_performance-investigation.html">Performance investigation</a>
-</li>
-<li><a href="traffic-analysis-con_traffic-analysis.html">Traffic analysis</a>
-</li>
-<li><a href="anomaly-detection-con_anomaly-detection.html">Anomaly detection</a>
-</li>
-<li><a href="network-observability-dns-overview_analyze-dns-resolution-patterns-and-errors.html">DNS tracking</a>
-</li>
-<li><a href="east-west-traffic-monitoring-con_east-west-traffic-monitoring.html">East-west traffic monitoring</a>
-</li>
-<li><a href="egress-monitoring-con_egress-monitoring.html">Egress monitoring</a>
 </li>
 <li><a href="monitor-control-plane-nodes-con_monitor-control-plane-nodes.html">Monitor control plane nodes</a>
 </li>
@@ -2170,7 +2156,7 @@ install-tsz2g   metallb-operator.v{product-version}.0-202503102139   Manual     
 <p>MetalLB exposes status information for several key components, providing a comprehensive view of its configuration and operation.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 676. MetalLB status resources</caption>
+<caption class="title">Table 679. MetalLB status resources</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -3291,7 +3277,7 @@ frr-k8s-statuscleaner-59cf6f5d44-9wkfr   1/1     Running   0          4h</code><
 <p>To monitor network connectivity and diagnose routing states, refer to the Prometheus metrics for MetalLB. These metrics provide visibility into the status of BGP peers and BFD profiles so that you can ensure stable external communication.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 677. MetalLB BFD metrics</caption>
+<caption class="title">Table 680. MetalLB BFD metrics</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -3338,7 +3324,7 @@ frr-k8s-statuscleaner-59cf6f5d44-9wkfr   1/1     Running   0          4h</code><
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 678. MetalLB BGP metrics</caption>
+<caption class="title">Table 681. MetalLB BGP metrics</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -5559,7 +5545,7 @@ spec:
 <p>The IP failover environment variables reference lists all variables you can use to configure IP failover in Red&#160;Hat OpenShift Container Platform, including VIP addresses, monitoring ports, and network interfaces.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 679. IP failover environment variables</caption>
+<caption class="title">Table 682. IP failover environment variables</caption>
 <colgroup>
 <col style="width: 37.5%;">
 <col style="width: 12.5%;">
@@ -7026,7 +7012,7 @@ The old node can continue to forward traffic for outdated clients until their ca
 <p>The following table details the parameters for the <code>IPAddressPool</code> CR:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 680. MetalLB IPAddressPool pool custom resource</caption>
+<caption class="title">Table 683. MetalLB IPAddressPool pool custom resource</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7145,7 +7131,7 @@ Specify <code>false</code> if you want to explicitly request an IP address from 
 <p>You can assign IP addresses from an <code>IPAddressPool</code> to services and namespaces by configuring the <code>spec.serviceAllocation</code> specification.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 681. MetalLB IPAddressPool custom resource spec.serviceAllocation subfields</caption>
+<caption class="title">Table 684. MetalLB IPAddressPool custom resource spec.serviceAllocation subfields</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7578,7 +7564,7 @@ spec:
 <p>The following table details parameters for the <code>l2Advertisements</code> CR:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 682. L2 advertisements configuration</caption>
+<caption class="title">Table 685. L2 advertisements configuration</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -8854,7 +8840,7 @@ If you specify a value for this field, you must specify the same value for all o
 <p>The following table describes the parameters for the <code>BGPAdvertisements</code> CR:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 683. BGPAdvertisements configuration</caption>
+<caption class="title">Table 686. BGPAdvertisements configuration</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9548,7 +9534,7 @@ spec:
 <p>The following table describes the parameters for the BGP peer CR:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 684. MetalLB BGP peer custom resource</caption>
+<caption class="title">Table 687. MetalLB BGP peer custom resource</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10447,7 +10433,7 @@ Each interface is limited to one BGP connection.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 685. MetalLB community custom resource</caption>
+<caption class="title">Table 688. MetalLB community custom resource</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10507,7 +10493,7 @@ Specify the same namespace that the MetalLB Operator uses.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 686. CommunityAlias</caption>
+<caption class="title">Table 689. CommunityAlias</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10707,7 +10693,7 @@ spec:
 <p>The following table describes parameters for the BFD profile CR:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 687. BFD profile custom resource</caption>
+<caption class="title">Table 690. BFD profile custom resource</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -11301,7 +11287,7 @@ spec:
 <p>The parameters for the <code>FRRConfiguration</code> custom resource are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 688. MetalLB FRRConfiguration custom resource</caption>
+<caption class="title">Table 691. MetalLB FRRConfiguration custom resource</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13102,7 +13088,7 @@ You can determine the node name for the FRR-K8s pod with a command such as <code
 <p>The following values define the severity of recorded events, so that you can use them to filter output based on operational requirements:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 689. Log levels</caption>
+<caption class="title">Table 692. Log levels</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -13954,7 +13940,7 @@ These settings are now applied appropriately to the controller.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 15:47:12 +0100
+Last updated 2026-10-19 18:10:19 +0100
 </div>
 </div>
 <style>
