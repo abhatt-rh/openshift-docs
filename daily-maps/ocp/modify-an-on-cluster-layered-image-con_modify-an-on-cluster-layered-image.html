@@ -1826,24 +1826,7 @@ How to fix these errors:
 <p>If you modify and apply the <code>MachineOSConfig</code> object YAML or create a new YAML file, the YAML overwrites any changes you made directly to the <code>MachineOSConfig</code> object itself.</p>
 </div>
 <div class="paragraph">
-<p>Making certain changes to a <code>MachineOSConfig</code> object triggers an automatic rebuild of the associated custom layered image. You can mitigate the effects of the rebuild by pausing the machine config pool where the custom layered image is applied as described in "Pausing the machine config pools". While the pools are paused, the MCO does not roll out the newly built image to the nodes after the build is complete. However, the build runs regardless of whether the pool is paused or not. For example, if you want to remove and replace a <code>MachineOSCOnfig</code> object, pausing the machine config pools before making the change prevents the MCO from reverting the associated nodes to the base image, reducing the number of reboots needed.</p>
-</div>
-<div class="paragraph">
-<p>When a machine config pool is paused, the <code>oc get machineconfigpools</code> reports the following status:</p>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME      CONFIG                                              UPDATED   UPDATING   DEGRADED   MACHINECOUNT   READYMACHINECOUNT   UPDATEDMACHINECOUNT   DEGRADEDMACHINECOUNT   AGE
-master    rendered-master-a0b404d061a6183cc36d302363422aba    True      False      False      3              3                   3                     0                      4h14m
-worker    rendered-worker-221507009cbcdec0eec8ab3ccd789d18    False     False      False      2              2                   2                     0                      4h14m</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>worker</code> machine config pool is paused, as indicated by the three <code>False</code> statuses and the <code>READYMACHINECOUNT</code> at <code>0</code>.</p>
-</div>
-<div class="paragraph">
-<p>After the changes have been rolled out, you can unpause the machine config pool.</p>
+<p>Making certain changes to a <code>MachineOSConfig</code> object triggers an automatic rebuild of the associated custom layered image. You can mitigate the effects of the rebuild by pausing the machine config pool where the custom layered image is to be applied before you make the change, as described in "Pausing the machine config pools". If the pool is paused, the MCO builds the image, but does not update the nodes until you unpause the pool, allowing you to confirm that the build succeeds before any node uses the image.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -1920,7 +1903,7 @@ spec:
 </div>
 </div>
 <div class="paragraph">
-<p>When you save the changes, the MCO drains, cordons, and reboots the nodes. After the reboot, the node uses the cluster base Red Hat Enterprise Linux CoreOS (RHCOS) image. If your changes modify a secret only, no new build is triggered and no reboot is performed.</p>
+<p>If the machine config pool is not paused, the MCO drains, cordons, and reboots the nodes when you save the changes. After the reboot, the node uses the cluster base Red Hat Enterprise Linux CoreOS (RHCOS) image. If the pool is paused, the MCO builds the image, but does not update the nodes until you unpause the pool. If your changes modify a secret only, no new build is triggered and no reboot is performed.</p>
 </div>
 </li>
 </ol>
@@ -2033,7 +2016,7 @@ worker    rendered-worker-221507009cbcdec0eec8ab3ccd789d18    False     True    
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 18:10:19 +0100
+Last updated 2026-10-19 18:44:35 +0100
 </div>
 </div>
 <style>
