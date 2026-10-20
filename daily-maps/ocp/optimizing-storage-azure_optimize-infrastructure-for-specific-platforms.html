@@ -477,44 +477,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
 <body id="optimizing-storage-azure_optimize-infrastructure-for-specific-platforms" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/configure.adoc:70
-    include::ocp-jobs/build-and-deploy-a-simple-kernel-module-driver.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/build-and-deploy-a-simple-kernel-module-driver.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -1086,6 +1050,14 @@ How to fix these errors:
 <li><a href="create-multi-architecture-compute-clusters-on-google-cloud-con_create-multi-architecture-compute-clusters-on-google-cloud.html">Create multi-architecture compute clusters on Google Cloud</a>
 </li>
 <li><a href="create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z-con_create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z.html">Create multi-architecture compute clusters on bare metal, IBM Power, or IBM Z</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-intro_creating-multi-arch-compute-nodes-ibm-z.html">Create a cluster with multi-architecture compute machines on IBM Z and IBM LinuxONE with z/VM</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-lpar-intro_creating-multi-arch-compute-nodes-ibm-z-lpar.html">Create a cluster with multi-architecture compute machines on IBM Z and IBM LinuxONE in an LPAR</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-kvm-intro_creating-multi-arch-compute-nodes-ibm-z-kvm.html">Create a cluster with multi-architecture compute machines on IBM Z and IBM LinuxONE with RHEL KVM</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-kvm-intro_creating-multi-arch-compute-nodes-ibm-power.html">Create a cluster with multi-architecture compute machines on IBM Power</a>
 </li>
 <li><a href="enable-64k-pages-on-rhcos-kernel-con_enable-64k-pages-on-rhcos-kernel.html">Enable 64k pages on the RHCOS kernel</a>
 </li>
@@ -1807,7 +1779,7 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cpms-changing-aws-instance-type_optimize-infrastructure-for-specific-platforms">Change the Amazon Web Services instance type by using a control plane machine set</a></li><li class="level-4"><a href="#aws-console-changing-aws-instance-type_optimize-infrastructure-for-specific-platforms">Change the Amazon Web Services instance type by using the AWS console</a></li><li class="level-4"><a href="#hosted-clusters-openstack-performance_optimize-infrastructure-for-specific-platforms">Node tuning for hosted clusters on RHOSP</a></li><li class="level-5"><a href="#hosted-clusters-openstack-performance-tuning_optimize-infrastructure-for-specific-platforms">Tune performance for hosted cluster nodes</a></li><li class="level-5"><a href="#hosted-clusters-openstack-performance-enabling_optimize-infrastructure-for-specific-platforms">Enable the SR-IOV Network Operator in a hosted cluster</a></li><li class="level-5"><a href="#recommended-ibm-power-system-requirements_optimize-infrastructure-for-specific-platforms">Recommended IBM Power system requirements</a></li><li class="level-6"><a href="#_hardware_requirements_3">Hardware requirements</a></li><li class="level-6"><a href="#_operating_system_requirements_3">Operating system requirements</a></li><li class="level-6"><a href="#_disk_storage_for_the_ibm_power_guest_virtual_machines_3">Disk storage for the IBM Power guest virtual machines</a></li><li class="level-6"><a href="#_network_for_the_powervm_guest_virtual_machines_3">Network for the PowerVM guest virtual machines</a></li><li class="level-6"><a href="#_storage_main_memory_3">Storage / main memory</a></li><li class="level-4"><a href="#ibm-z-managing-cpu-overcommitment_ibm-z-and-linuxone-optimizations">Manage CPU overcommitment</a></li><li class="level-5"><a href="#ibm-z-disable-thp_ibm-z-and-linuxone-optimizations">Disable Transparent Huge Pages</a></li><li class="level-5"><a href="#ibm-z-boost-networking-performance-with-rfs_ibm-z-and-linuxone-optimizations">Boost networking performance with RFS</a></li><li class="level-5"><a href="#ibm-z-choose-networking-setup_ibm-z-and-linuxone-optimizations">Choose your networking setup</a></li><li class="level-5"><a href="#ibm-z-ensure-high-disk-performance-hyperpav_ibm-z-and-linuxone-optimizations">Ensure high disk performance with HyperPAV on z/VM</a></li><li class="level-5"><a href="#ibm-z-rhel-kvm-host-recommendations_ibm-z-and-linuxone-optimizations">RHEL KVM on IBM Z host recommendations</a></li><li class="level-6"><a href="#use-io-threads-for-your-virtual-block-devices_ibm-z-and-linuxone-optimizations">Use I/O threads for your virtual block devices</a></li><li class="level-6"><a href="#avoid-virtual-scsi-devices_ibm-z-and-linuxone-optimizations">Avoid virtual SCSI devices</a></li><li class="level-6"><a href="#configure-guest-caching-for-disk_ibm-z-and-linuxone-optimizations">Configure guest caching for disk</a></li><li class="level-6"><a href="#exclude-the-memory-balloon-device_ibm-z-and-linuxone-optimizations">Exclude the memory balloon device</a></li><li class="level-6"><a href="#tune-the-cpu-migration-algorithm-of-the-host-scheduler_ibm-z-and-linuxone-optimizations">Tune the CPU migration algorithm of the host scheduler</a></li><li class="level-6"><a href="#disabling-the-cpuset-cgroup-controller_ibm-z-and-linuxone-optimizations">Disable the cpuset cgroup controller</a></li><li class="level-6"><a href="#tune-the-polling-period-for-idle-virtual-cpus_ibm-z-and-linuxone-optimizations">Tune the polling period for idle virtual CPUs</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cpms-changing-aws-instance-type_optimize-infrastructure-for-specific-platforms">Change the Amazon Web Services instance type by using a control plane machine set</a></li><li class="level-4"><a href="#aws-console-changing-aws-instance-type_optimize-infrastructure-for-specific-platforms">Change the Amazon Web Services instance type by using the AWS console</a></li><li class="level-4"><a href="#hosted-clusters-openstack-performance_optimize-infrastructure-for-specific-platforms">Node tuning for hosted clusters on RHOSP</a></li><li class="level-5"><a href="#hosted-clusters-openstack-performance-tuning_optimize-infrastructure-for-specific-platforms">Tune performance for hosted cluster nodes</a></li><li class="level-5"><a href="#hosted-clusters-openstack-performance-enabling_optimize-infrastructure-for-specific-platforms">Enable the SR-IOV Network Operator in a hosted cluster</a></li><li class="level-5"><a href="#recommended-ibm-power-system-requirements_optimize-infrastructure-for-specific-platforms">Recommended IBM Power system requirements</a></li><li class="level-6"><a href="#_hardware_requirements_5">Hardware requirements</a></li><li class="level-6"><a href="#_operating_system_requirements_5">Operating system requirements</a></li><li class="level-6"><a href="#_disk_storage_for_the_ibm_power_guest_virtual_machines_5">Disk storage for the IBM Power guest virtual machines</a></li><li class="level-6"><a href="#_network_for_the_powervm_guest_virtual_machines_5">Network for the PowerVM guest virtual machines</a></li><li class="level-6"><a href="#_storage_main_memory_5">Storage / main memory</a></li><li class="level-4"><a href="#ibm-z-managing-cpu-overcommitment_ibm-z-and-linuxone-optimizations">Manage CPU overcommitment</a></li><li class="level-5"><a href="#ibm-z-disable-thp_ibm-z-and-linuxone-optimizations">Disable Transparent Huge Pages</a></li><li class="level-5"><a href="#ibm-z-boost-networking-performance-with-rfs_ibm-z-and-linuxone-optimizations">Boost networking performance with RFS</a></li><li class="level-5"><a href="#ibm-z-choose-networking-setup_ibm-z-and-linuxone-optimizations">Choose your networking setup</a></li><li class="level-5"><a href="#ibm-z-ensure-high-disk-performance-hyperpav_ibm-z-and-linuxone-optimizations">Ensure high disk performance with HyperPAV on z/VM</a></li><li class="level-5"><a href="#ibm-z-rhel-kvm-host-recommendations_ibm-z-and-linuxone-optimizations">RHEL KVM on IBM Z host recommendations</a></li><li class="level-6"><a href="#use-io-threads-for-your-virtual-block-devices_ibm-z-and-linuxone-optimizations">Use I/O threads for your virtual block devices</a></li><li class="level-6"><a href="#avoid-virtual-scsi-devices_ibm-z-and-linuxone-optimizations">Avoid virtual SCSI devices</a></li><li class="level-6"><a href="#configure-guest-caching-for-disk_ibm-z-and-linuxone-optimizations">Configure guest caching for disk</a></li><li class="level-6"><a href="#exclude-the-memory-balloon-device_ibm-z-and-linuxone-optimizations">Exclude the memory balloon device</a></li><li class="level-6"><a href="#tune-the-cpu-migration-algorithm-of-the-host-scheduler_ibm-z-and-linuxone-optimizations">Tune the CPU migration algorithm of the host scheduler</a></li><li class="level-6"><a href="#disabling-the-cpuset-cgroup-controller_ibm-z-and-linuxone-optimizations">Disable the cpuset cgroup controller</a></li><li class="level-6"><a href="#tune-the-polling-period-for-idle-virtual-cpus_ibm-z-and-linuxone-optimizations">Tune the polling period for idle virtual CPUs</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="optimizing-storage-azure_optimize-infrastructure-for-specific-platforms">Optimizing storage performance for Microsoft Azure</h3>
@@ -2208,7 +2180,7 @@ data:
 <p>Red&#160;Hat OpenShift Container Platform on IBM Power&#174; requires a minimum of six LPARs across multiple PowerVM servers, with specific hardware, storage, and network configuration for each node type.</p>
 </div>
 <div class="sect5">
-<h6 id="_hardware_requirements_3">Hardware requirements</h6>
+<h6 id="_hardware_requirements_5">Hardware requirements</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -2218,7 +2190,7 @@ data:
 </div>
 </div>
 <div class="sect5">
-<h6 id="_operating_system_requirements_3">Operating system requirements</h6>
+<h6 id="_operating_system_requirements_5">Operating system requirements</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -2247,7 +2219,7 @@ data:
 </div>
 </div>
 <div class="sect5">
-<h6 id="_disk_storage_for_the_ibm_power_guest_virtual_machines_3">Disk storage for the IBM Power guest virtual machines</h6>
+<h6 id="_disk_storage_for_the_ibm_power_guest_virtual_machines_5">Disk storage for the IBM Power guest virtual machines</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -2257,7 +2229,7 @@ data:
 </div>
 </div>
 <div class="sect5">
-<h6 id="_network_for_the_powervm_guest_virtual_machines_3">Network for the PowerVM guest virtual machines</h6>
+<h6 id="_network_for_the_powervm_guest_virtual_machines_5">Network for the PowerVM guest virtual machines</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -2273,7 +2245,7 @@ data:
 </div>
 </div>
 <div class="sect5">
-<h6 id="_storage_main_memory_3">Storage / main memory</h6>
+<h6 id="_storage_main_memory_5">Storage / main memory</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -2805,7 +2777,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 18:44:35 +0100
+Last updated 2026-10-20 10:39:05 +0100
 </div>
 </div>
 <style>

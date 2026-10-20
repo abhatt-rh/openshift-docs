@@ -477,44 +477,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
 <body id="install-on-any-platform-upi-intro_install-on-any-platform-upi" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/configure.adoc:70
-    include::ocp-jobs/build-and-deploy-a-simple-kernel-module-driver.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/build-and-deploy-a-simple-kernel-module-driver.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -1085,6 +1049,14 @@ How to fix these errors:
 <li><a href="create-multi-architecture-compute-clusters-on-google-cloud-con_create-multi-architecture-compute-clusters-on-google-cloud.html">Create multi-architecture compute clusters on Google Cloud</a>
 </li>
 <li><a href="create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z-con_create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z.html">Create multi-architecture compute clusters on bare metal, IBM Power, or IBM Z</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-intro_creating-multi-arch-compute-nodes-ibm-z.html">Create a cluster with multi-architecture compute machines on IBM Z and IBM LinuxONE with z/VM</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-lpar-intro_creating-multi-arch-compute-nodes-ibm-z-lpar.html">Create a cluster with multi-architecture compute machines on IBM Z and IBM LinuxONE in an LPAR</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-kvm-intro_creating-multi-arch-compute-nodes-ibm-z-kvm.html">Create a cluster with multi-architecture compute machines on IBM Z and IBM LinuxONE with RHEL KVM</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-kvm-intro_creating-multi-arch-compute-nodes-ibm-power.html">Create a cluster with multi-architecture compute machines on IBM Power</a>
 </li>
 <li><a href="enable-64k-pages-on-rhcos-kernel-con_enable-64k-pages-on-rhcos-kernel.html">Enable 64k pages on the RHCOS kernel</a>
 </li>
@@ -1807,7 +1779,7 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#prerequisites_install-on-any-platform-upi">Prerequisites for installing a cluster on any platform</a></li><li class="level-5"><a href="#cluster-entitlements_install-on-any-platform-upi">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#installation-requirements-user-infra_install-on-any-platform-upi">Requirements for a cluster with user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-machine-requirements_install-on-any-platform-upi">Required machines for cluster installation</a></li><li class="level-5"><a href="#installation-minimum-resource-requirements_install-on-any-platform-upi">Minimum resource requirements for cluster installation</a></li><li class="level-5"><a href="#csr-management_install-on-any-platform-upi">Certificate signing requests management</a></li><li class="level-5"><a href="#installation-network-user-infra_install-on-any-platform-upi">Networking requirements for user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-host-names-dhcp-user-infra_install-on-any-platform-upi">Setting the cluster node hostnames through DHCP</a></li><li class="level-6"><a href="#installation-network-connectivity-user-infra_install-on-any-platform-upi">Network connectivity requirements</a></li><li class="level-6"><a href="#_ntp_configuration_for_user_provisioned_infrastructure_3">NTP configuration for user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-dns-user-infra_install-on-any-platform-upi">User-provisioned DNS requirements</a></li><li class="level-6"><a href="#installation-dns-user-infra-example_install-on-any-platform-upi">Example DNS configuration for user-provisioned clusters</a></li><li class="level-5"><a href="#installation-load-balancing-user-infra_install-on-any-platform-upi">Load balancing requirements for user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra-example_install-on-any-platform-upi">Example load balancer configuration for user-provisioned clusters</a></li><li class="level-4"><a href="#installation-infrastructure-user-infra_install-on-any-platform-upi">Preparing the user-provisioned infrastructure</a></li><li class="level-4"><a href="#installation-user-provisioned-validating-dns_install-on-any-platform-upi">Validating DNS resolution for user-provisioned infrastructure</a></li><li class="level-4"><a href="#ssh-agent-using_installing-platform-agnostic">Generating a key pair for cluster node SSH access</a></li><li class="level-4"><a href="#installation-obtaining-installer_install-on-any-platform-upi">Obtaining the installation program</a></li><li class="level-4"><a href="#cli-installing-cli-linux_install-on-any-platform-upi">Install the OpenShift CLI on Linux</a></li><li class="level-4"><a href="#cli-installing-cli-windows_install-on-any-platform-upi">Install the OpenShift CLI on Windows</a></li><li class="level-4"><a href="#cli-installing-cli-macos_install-on-any-platform-upi">Install the OpenShift CLI on macOS</a></li><li class="level-4"><a href="#installation-initializing-manual_install-on-any-platform-upi">Manually creating the installation configuration file</a></li><li class="level-5"><a href="#installation-bare-metal-config-yaml_installing-platform-agnostic">Sample install-config.yaml file for other platforms</a></li><li class="level-5"><a href="#installation-configure-proxy_install-on-any-platform-upi">Configuring the cluster-wide proxy during installation</a></li><li class="level-5"><a href="#installation-three-node-cluster_install-on-any-platform-upi">Configuring a three-node cluster</a></li><li class="level-4"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-platform-agnostic">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-4"><a href="#creating-machines-bare-metal_install-on-any-platform-upi">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-5"><a href="#installation-user-infra-machines-iso_install-on-any-platform-upi">Installing RHCOS by using an ISO image</a></li><li class="level-5"><a href="#installation-user-infra-machines-pxe_install-on-any-platform-upi">Installing RHCOS by using PXE or iPXE booting</a></li><li class="level-5"><a href="#installation-user-infra-machines-advanced_install-on-any-platform-upi">Advanced RHCOS installation configuration</a></li><li class="level-5"><a href="#installation-user-infra-machines-routing-bonding_install-on-any-platform-upi">Networking and bonding options for ISO installations</a></li><li class="level-6"><a href="#configuring-dhcp-or-static-ip-addresses_install-on-any-platform-upi">Configuring DHCP or static IP addresses</a></li><li class="level-6"><a href="#configuring-ip-address-without-static-hostname_install-on-any-platform-upi">Configuring an IP address without a static hostname</a></li><li class="level-6"><a href="#specifying-multiple-network-interfaces_install-on-any-platform-upi">Specifying multiple network interfaces and DNS servers</a></li><li class="level-6"><a href="#configuring-default-gateway-route_install-on-any-platform-upi">Configuring default gateway and route</a></li><li class="level-6"><a href="#configuring-vlans-individual-interfaces_install-on-any-platform-upi">Configuring VLANs on individual interfaces</a></li><li class="level-6"><a href="#bonding-multiple-network-interfaces-to-single-interface_install-on-any-platform-upi">Bonding multiple network interfaces to a single interface</a></li><li class="level-6"><a href="#bonding-multiple-sriov-network-interfaces-to-dual-port_install-on-any-platform-upi">Bonding multiple SR-IOV network interfaces to a dual port NIC interface</a></li><li class="level-6"><a href="#installation-user-infra-machines-coreos-installer-options_install-on-any-platform-upi">coreos-installer and boot options for ISO and PXE installations</a></li><li class="level-4"><a href="#installation-installing-bare-metal_install-on-any-platform-upi">Waiting for the bootstrap process to complete</a></li><li class="level-4"><a href="#cli-logging-in-kubeadmin_install-on-any-platform-upi">Logging in to the cluster by using the CLI</a></li><li class="level-4"><a href="#installation-approve-csrs_install-on-any-platform-upi">Approve the certificate signing requests for your machines</a></li><li class="level-4"><a href="#installation-operators-config_install-on-any-platform-upi">Initial Operator configuration</a></li><li class="level-5"><a href="#olm-restricted-networks-operatorhub_install-on-any-platform-upi">Disabling the default software catalog sources</a></li><li class="level-5"><a href="#registry-removed_install-on-any-platform-upi">Image registry removed during installation</a></li><li class="level-5"><a href="#installation-registry-storage-config_install-on-any-platform-upi">Image registry storage configuration</a></li><li class="level-6"><a href="#registry-configuring-storage-baremetal_install-on-any-platform-upi">Configure registry storage for bare metal and other manual installations</a></li><li class="level-6"><a href="#installation-registry-storage-non-production_install-on-any-platform-upi">Configure storage for the image registry in non-production clusters</a></li><li class="level-6"><a href="#installation-registry-storage-block-recreate-rollout-bare-metal_install-on-any-platform-upi">Configure block registry storage for bare metal</a></li><li class="level-4"><a href="#installation-complete-user-infra_install-on-any-platform-upi">Completing installation on user-provisioned infrastructure</a></li><li class="level-4"><a href="#cluster-telemetry_install-on-any-platform-upi">Telemetry access for Red Hat OpenShift Container Platform</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#prerequisites_install-on-any-platform-upi">Prerequisites for installing a cluster on any platform</a></li><li class="level-5"><a href="#cluster-entitlements_install-on-any-platform-upi">Internet access for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#installation-requirements-user-infra_install-on-any-platform-upi">Requirements for a cluster with user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-machine-requirements_install-on-any-platform-upi">Required machines for cluster installation</a></li><li class="level-5"><a href="#installation-minimum-resource-requirements_install-on-any-platform-upi">Minimum resource requirements for cluster installation</a></li><li class="level-5"><a href="#csr-management_install-on-any-platform-upi">Certificate signing requests management</a></li><li class="level-5"><a href="#installation-network-user-infra_install-on-any-platform-upi">Networking requirements for user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-host-names-dhcp-user-infra_install-on-any-platform-upi">Setting the cluster node hostnames through DHCP</a></li><li class="level-6"><a href="#installation-network-connectivity-user-infra_install-on-any-platform-upi">Network connectivity requirements</a></li><li class="level-6"><a href="#_ntp_configuration_for_user_provisioned_infrastructure_4">NTP configuration for user-provisioned infrastructure</a></li><li class="level-5"><a href="#installation-dns-user-infra_install-on-any-platform-upi">User-provisioned DNS requirements</a></li><li class="level-6"><a href="#installation-dns-user-infra-example_install-on-any-platform-upi">Example DNS configuration for user-provisioned clusters</a></li><li class="level-5"><a href="#installation-load-balancing-user-infra_install-on-any-platform-upi">Load balancing requirements for user-provisioned infrastructure</a></li><li class="level-6"><a href="#installation-load-balancing-user-infra-example_install-on-any-platform-upi">Example load balancer configuration for user-provisioned clusters</a></li><li class="level-4"><a href="#installation-infrastructure-user-infra_install-on-any-platform-upi">Preparing the user-provisioned infrastructure</a></li><li class="level-4"><a href="#installation-user-provisioned-validating-dns_install-on-any-platform-upi">Validating DNS resolution for user-provisioned infrastructure</a></li><li class="level-4"><a href="#ssh-agent-using_installing-platform-agnostic">Generating a key pair for cluster node SSH access</a></li><li class="level-4"><a href="#installation-obtaining-installer_install-on-any-platform-upi">Obtaining the installation program</a></li><li class="level-4"><a href="#cli-installing-cli-linux_install-on-any-platform-upi">Install the OpenShift CLI on Linux</a></li><li class="level-4"><a href="#cli-installing-cli-windows_install-on-any-platform-upi">Install the OpenShift CLI on Windows</a></li><li class="level-4"><a href="#cli-installing-cli-macos_install-on-any-platform-upi">Install the OpenShift CLI on macOS</a></li><li class="level-4"><a href="#installation-initializing-manual_install-on-any-platform-upi">Manually creating the installation configuration file</a></li><li class="level-5"><a href="#installation-bare-metal-config-yaml_installing-platform-agnostic">Sample install-config.yaml file for other platforms</a></li><li class="level-5"><a href="#installation-configure-proxy_install-on-any-platform-upi">Configuring the cluster-wide proxy during installation</a></li><li class="level-5"><a href="#installation-three-node-cluster_install-on-any-platform-upi">Configuring a three-node cluster</a></li><li class="level-4"><a href="#installation-user-infra-generate-k8s-manifest-ignition_installing-platform-agnostic">Creating the Kubernetes manifest and Ignition config files</a></li><li class="level-4"><a href="#creating-machines-bare-metal_install-on-any-platform-upi">Installing RHCOS and starting the Red Hat OpenShift Container Platform bootstrap process</a></li><li class="level-5"><a href="#installation-user-infra-machines-iso_install-on-any-platform-upi">Installing RHCOS by using an ISO image</a></li><li class="level-5"><a href="#installation-user-infra-machines-pxe_install-on-any-platform-upi">Installing RHCOS by using PXE or iPXE booting</a></li><li class="level-5"><a href="#installation-user-infra-machines-advanced_install-on-any-platform-upi">Advanced RHCOS installation configuration</a></li><li class="level-5"><a href="#installation-user-infra-machines-routing-bonding_install-on-any-platform-upi">Networking and bonding options for ISO installations</a></li><li class="level-6"><a href="#configuring-dhcp-or-static-ip-addresses_install-on-any-platform-upi">Configuring DHCP or static IP addresses</a></li><li class="level-6"><a href="#configuring-ip-address-without-static-hostname_install-on-any-platform-upi">Configuring an IP address without a static hostname</a></li><li class="level-6"><a href="#specifying-multiple-network-interfaces_install-on-any-platform-upi">Specifying multiple network interfaces and DNS servers</a></li><li class="level-6"><a href="#configuring-default-gateway-route_install-on-any-platform-upi">Configuring default gateway and route</a></li><li class="level-6"><a href="#configuring-vlans-individual-interfaces_install-on-any-platform-upi">Configuring VLANs on individual interfaces</a></li><li class="level-6"><a href="#bonding-multiple-network-interfaces-to-single-interface_install-on-any-platform-upi">Bonding multiple network interfaces to a single interface</a></li><li class="level-6"><a href="#bonding-multiple-sriov-network-interfaces-to-dual-port_install-on-any-platform-upi">Bonding multiple SR-IOV network interfaces to a dual port NIC interface</a></li><li class="level-6"><a href="#installation-user-infra-machines-coreos-installer-options_install-on-any-platform-upi">coreos-installer and boot options for ISO and PXE installations</a></li><li class="level-4"><a href="#installation-installing-bare-metal_install-on-any-platform-upi">Waiting for the bootstrap process to complete</a></li><li class="level-4"><a href="#cli-logging-in-kubeadmin_install-on-any-platform-upi">Logging in to the cluster by using the CLI</a></li><li class="level-4"><a href="#installation-approve-csrs_install-on-any-platform-upi">Approve the certificate signing requests for your machines</a></li><li class="level-4"><a href="#installation-operators-config_install-on-any-platform-upi">Initial Operator configuration</a></li><li class="level-5"><a href="#olm-restricted-networks-operatorhub_install-on-any-platform-upi">Disabling the default software catalog sources</a></li><li class="level-5"><a href="#registry-removed_install-on-any-platform-upi">Image registry removed during installation</a></li><li class="level-5"><a href="#installation-registry-storage-config_install-on-any-platform-upi">Image registry storage configuration</a></li><li class="level-6"><a href="#registry-configuring-storage-baremetal_install-on-any-platform-upi">Configure registry storage for bare metal and other manual installations</a></li><li class="level-6"><a href="#installation-registry-storage-non-production_install-on-any-platform-upi">Configure storage for the image registry in non-production clusters</a></li><li class="level-6"><a href="#installation-registry-storage-block-recreate-rollout-bare-metal_install-on-any-platform-upi">Configure block registry storage for bare metal</a></li><li class="level-4"><a href="#installation-complete-user-infra_install-on-any-platform-upi">Completing installation on user-provisioned infrastructure</a></li><li class="level-4"><a href="#cluster-telemetry_install-on-any-platform-upi">Telemetry access for Red Hat OpenShift Container Platform</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="install-on-any-platform-upi-intro_install-on-any-platform-upi">Install on any platform with user-provisioned infrastructure</h3>
@@ -1914,7 +1886,7 @@ How to fix these errors:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 475. Minimum required hosts</caption>
+<caption class="title">Table 530. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1968,7 +1940,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 476. Minimum resource requirements</caption>
+<caption class="title">Table 531. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -2148,7 +2120,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 477. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 532. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2480,7 +2452,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 478. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 533. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2529,7 +2501,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 479. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 534. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2579,7 +2551,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_ntp_configuration_for_user_provisioned_infrastructure_3">NTP configuration for user-provisioned infrastructure</h6>
+<h6 id="_ntp_configuration_for_user_provisioned_infrastructure_4">NTP configuration for user-provisioned infrastructure</h6>
 <div class="paragraph">
 <p>Red&#160;Hat OpenShift Container Platform clusters are configured to use a public Network Time Protocol (NTP) server by default. If you want to use a local enterprise NTP server, or if your cluster is being deployed in a disconnected network, you can configure the cluster to use a specific time server. For more information, see the documentation for <em>Configuring chrony time service</em>.</p>
 </div>
@@ -2636,7 +2608,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 480. Required DNS records</caption>
+<caption class="title">Table 535. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -3202,7 +3174,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 481. Application Ingress load balancer</caption>
+<caption class="title">Table 536. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -5984,7 +5956,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the subcommands, options, and arguments you can pass to the <code>coreos-installer</code> command.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 482. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
+<caption class="title">Table 537. <code>coreos-installer</code> subcommands, command-line options, and arguments</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7271,7 +7243,7 @@ ip=team0:dhcp</code></pre>
 <p>The following table shows the RHCOS live installer <code>coreos.inst</code> boot options for ISO and PXE installations.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 483. <code>coreos.inst</code> boot options</caption>
+<caption class="title">Table 538. <code>coreos.inst</code> boot options</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8543,7 +8515,7 @@ openshift-authentication-operator authentication-operator-69d5d8bf84-vh2n8      
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 18:44:35 +0100
+Last updated 2026-10-20 10:39:05 +0100
 </div>
 </div>
 <style>

@@ -477,44 +477,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
 <body id="oadp-intro_protect-application-data-with-oadp" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/configure.adoc:70
-    include::ocp-jobs/build-and-deploy-a-simple-kernel-module-driver.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/build-and-deploy-a-simple-kernel-module-driver.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -1085,6 +1049,14 @@ How to fix these errors:
 <li><a href="create-multi-architecture-compute-clusters-on-google-cloud-con_create-multi-architecture-compute-clusters-on-google-cloud.html">Create multi-architecture compute clusters on Google Cloud</a>
 </li>
 <li><a href="create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z-con_create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z.html">Create multi-architecture compute clusters on bare metal, IBM Power, or IBM Z</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-intro_creating-multi-arch-compute-nodes-ibm-z.html">Create a cluster with multi-architecture compute machines on IBM Z and IBM LinuxONE with z/VM</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-lpar-intro_creating-multi-arch-compute-nodes-ibm-z-lpar.html">Create a cluster with multi-architecture compute machines on IBM Z and IBM LinuxONE in an LPAR</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-kvm-intro_creating-multi-arch-compute-nodes-ibm-z-kvm.html">Create a cluster with multi-architecture compute machines on IBM Z and IBM LinuxONE with RHEL KVM</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-kvm-intro_creating-multi-arch-compute-nodes-ibm-power.html">Create a cluster with multi-architecture compute machines on IBM Power</a>
 </li>
 <li><a href="enable-64k-pages-on-rhcos-kernel-con_enable-64k-pages-on-rhcos-kernel.html">Enable 64k pages on the RHCOS kernel</a>
 </li>
@@ -1885,7 +1857,7 @@ How to fix these errors:
 <p>OADP also provides plugins for Red&#160;Hat OpenShift Container Platform resource backups, OpenShift Virtualization resource backups, and Container Storage Interface (CSI) snapshots.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 514. OADP plugins</caption>
+<caption class="title">Table 569. OADP plugins</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -2104,7 +2076,7 @@ How to fix these errors:
 <p>Review the OADP support matrix for version compatibility with Red&#160;Hat OpenShift Container Platform releases and lifecycle policy information, including Extended Update Support (EUS) options.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 515. Supported versions of OADP</caption>
+<caption class="title">Table 570. Supported versions of OADP</caption>
 <colgroup>
 <col style="width: 10%;">
 <col style="width: 12%;">
@@ -2328,7 +2300,7 @@ How to fix these errors:
 <div class="sect5">
 <h6 id="oadp-operator-unsupported_learn-about-oadp-capabilities">Unsupported versions of the OADP Operator</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 516. Previous versions of the OADP Operator which are no longer supported</caption>
+<caption class="title">Table 571. Previous versions of the OADP Operator which are no longer supported</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -9144,7 +9116,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 517. Flags for the <code>oc oadp completion install</code> command</caption>
+<caption class="title">Table 572. Flags for the <code>oc oadp completion install</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9230,7 +9202,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 518. Flags for the <code>oc oadp backup create</code> command</caption>
+<caption class="title">Table 573. Flags for the <code>oc oadp backup create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9329,7 +9301,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 519. Flags for the <code>oc oadp backup get</code> command</caption>
+<caption class="title">Table 574. Flags for the <code>oc oadp backup get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9359,7 +9331,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 520. Flags for the <code>oc oadp backup describe</code> command</caption>
+<caption class="title">Table 575. Flags for the <code>oc oadp backup describe</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9411,7 +9383,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 521. Flags for the <code>oc oadp backup delete</code> command</caption>
+<caption class="title">Table 576. Flags for the <code>oc oadp backup delete</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9461,7 +9433,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 522. Flags for the <code>oc oadp restore create</code> command</caption>
+<caption class="title">Table 577. Flags for the <code>oc oadp restore create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9547,7 +9519,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 523. Flags for the <code>oc oadp restore get</code> command</caption>
+<caption class="title">Table 578. Flags for the <code>oc oadp restore get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9577,7 +9549,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 524. Flags for the <code>oc oadp restore describe</code> command</caption>
+<caption class="title">Table 579. Flags for the <code>oc oadp restore describe</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9618,7 +9590,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 525. Flags for the <code>oc oadp restore delete</code> command</caption>
+<caption class="title">Table 580. Flags for the <code>oc oadp restore delete</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9665,7 +9637,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 526. Flags for the <code>oc oadp schedule create</code> command</caption>
+<caption class="title">Table 581. Flags for the <code>oc oadp schedule create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9756,7 +9728,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 527. Flags for the <code>oc oadp schedule get</code> command</caption>
+<caption class="title">Table 582. Flags for the <code>oc oadp schedule get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9797,7 +9769,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 528. Flags for the <code>oc oadp schedule delete</code> command</caption>
+<caption class="title">Table 583. Flags for the <code>oc oadp schedule delete</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9844,7 +9816,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 529. Flags for the <code>oc oadp backup-location create</code> command</caption>
+<caption class="title">Table 584. Flags for the <code>oc oadp backup-location create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9908,7 +9880,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 530. Flags for the <code>oc oadp backup-location get</code> command</caption>
+<caption class="title">Table 585. Flags for the <code>oc oadp backup-location get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9949,7 +9921,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 531. Flags for the <code>oc oadp backup-location delete</code> command</caption>
+<caption class="title">Table 586. Flags for the <code>oc oadp backup-location delete</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9996,7 +9968,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 532. Flags for the <code>oc oadp snapshot-location create</code> command</caption>
+<caption class="title">Table 587. Flags for the <code>oc oadp snapshot-location create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10042,7 +10014,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 533. Flags for the <code>oc oadp snapshot-location get</code> command</caption>
+<caption class="title">Table 588. Flags for the <code>oc oadp snapshot-location get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10083,7 +10055,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 534. Flags for the <code>oc oadp snapshot-location delete</code> command</caption>
+<caption class="title">Table 589. Flags for the <code>oc oadp snapshot-location delete</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10133,7 +10105,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 535. Flags for the <code>oc oadp nabsl-request get</code> command</caption>
+<caption class="title">Table 590. Flags for the <code>oc oadp nabsl-request get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10180,7 +10152,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 536. Flags for the <code>oc oadp nabsl-request approve</code> command</caption>
+<caption class="title">Table 591. Flags for the <code>oc oadp nabsl-request approve</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10219,7 +10191,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 537. Flags for the <code>oc oadp nabsl-request reject</code> command</caption>
+<caption class="title">Table 592. Flags for the <code>oc oadp nabsl-request reject</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10278,7 +10250,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 538. Flags for the <code>oc oadp must-gather</code> command</caption>
+<caption class="title">Table 593. Flags for the <code>oc oadp must-gather</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10432,7 +10404,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 539. Flags for the <code>oc oadp nonadmin backup create</code> command</caption>
+<caption class="title">Table 594. Flags for the <code>oc oadp nonadmin backup create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10532,7 +10504,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 540. Flags for the <code>oc oadp nonadmin backup get</code> command</caption>
+<caption class="title">Table 595. Flags for the <code>oc oadp nonadmin backup get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10562,7 +10534,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 541. Flags for the <code>oc oadp nonadmin backup describe</code> command</caption>
+<caption class="title">Table 596. Flags for the <code>oc oadp nonadmin backup describe</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10596,7 +10568,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 542. Flags for the <code>oc oadp nonadmin backup logs</code> command</caption>
+<caption class="title">Table 597. Flags for the <code>oc oadp nonadmin backup logs</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10640,7 +10612,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 543. Flags for the <code>oc oadp nonadmin backup delete</code> command</caption>
+<caption class="title">Table 598. Flags for the <code>oc oadp nonadmin backup delete</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10717,7 +10689,7 @@ spec:
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 544. Flags for the <code>oc oadp nonadmin restore create</code> command</caption>
+<caption class="title">Table 599. Flags for the <code>oc oadp nonadmin restore create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10787,7 +10759,7 @@ spec:
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 545. Flags for the <code>oc oadp nonadmin restore get</code> command</caption>
+<caption class="title">Table 600. Flags for the <code>oc oadp nonadmin restore get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10828,7 +10800,7 @@ spec:
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 546. Flags for the <code>oc oadp nonadmin restore describe</code> command</caption>
+<caption class="title">Table 601. Flags for the <code>oc oadp nonadmin restore describe</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10873,7 +10845,7 @@ spec:
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 547. Flags for the <code>oc oadp nonadmin restore logs</code> command</caption>
+<caption class="title">Table 602. Flags for the <code>oc oadp nonadmin restore logs</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10928,7 +10900,7 @@ spec:
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 548. Flags for the <code>oc oadp nonadmin restore delete</code> command</caption>
+<caption class="title">Table 603. Flags for the <code>oc oadp nonadmin restore delete</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11019,7 +10991,7 @@ spec:
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 549. Flags for the <code>oc oadp nonadmin bsl create</code> command</caption>
+<caption class="title">Table 604. Flags for the <code>oc oadp nonadmin bsl create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11124,7 +11096,7 @@ spec:
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 550. Flags for the <code>oc oadp nonadmin bsl get</code> command</caption>
+<caption class="title">Table 605. Flags for the <code>oc oadp nonadmin bsl get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -15866,7 +15838,7 @@ spec:
 <p>OADP supports incremental backups of <code>block</code> and <code>Filesystem</code> persistent volumes for both containerized, and OpenShift Virtualization workloads. The following table summarizes the support for File System Backup (FSB), Container Storage Interface (CSI), and CSI Data Mover:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 551. OADP backup support matrix for containerized workloads</caption>
+<caption class="title">Table 606. OADP backup support matrix for containerized workloads</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15901,7 +15873,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 552. OADP backup support matrix for OpenShift Virtualization workloads</caption>
+<caption class="title">Table 607. OADP backup support matrix for OpenShift Virtualization workloads</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -17209,7 +17181,7 @@ spec:
 <p>The OADP VMFR feature uses the following custom resources (CRs) to perform file-level restore operations:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 553. Custom resources</caption>
+<caption class="title">Table 608. Custom resources</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -17238,7 +17210,7 @@ spec:
 <p>Review the status phases of <code>VirtualMachineBackupsDiscovery</code> (VMBD) and <code>VirtualMachineFileRestore</code> (VMFR) custom resources (CRs) to track the progress of file-level restore operations. This helps you monitor and troubleshoot VMFR requests.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 554. VirtualMachineBackupsDiscovery phases</caption>
+<caption class="title">Table 609. VirtualMachineBackupsDiscovery phases</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -17273,7 +17245,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 555. VirtualMachineFileRestore phases</caption>
+<caption class="title">Table 610. VirtualMachineFileRestore phases</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -17312,7 +17284,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 556. PVC restore state values</caption>
+<caption class="title">Table 611. PVC restore state values</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -19136,7 +19108,7 @@ spec:
 <div class="sect5">
 <h6 id="_environment_variables">Environment variables</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 557. Credential environment variables</caption>
+<caption class="title">Table 612. Credential environment variables</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -19167,7 +19139,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 558. Configuration environment variables</caption>
+<caption class="title">Table 613. Configuration environment variables</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -19199,7 +19171,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 559. Behavior environment variables</caption>
+<caption class="title">Table 614. Behavior environment variables</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -19236,7 +19208,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 560. Logging environment variables</caption>
+<caption class="title">Table 615. Logging environment variables</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -19271,7 +19243,7 @@ spec:
 <div class="sect5">
 <h6 id="_file_locations">File locations</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 561. Default file locations</caption>
+<caption class="title">Table 616. Default file locations</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -19304,7 +19276,7 @@ spec:
 <p>VMDP is based on Kopia and uses the same repository format. Repositories are fully compatible between the two tools.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 562. Command mapping between VMDP and Kopia</caption>
+<caption class="title">Table 617. Command mapping between VMDP and Kopia</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -19347,7 +19319,7 @@ spec:
 <div class="sect5">
 <h6 id="_s3_compatible_storage">S3-compatible storage</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 563. S3 storage options</caption>
+<caption class="title">Table 618. S3 storage options</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -19436,7 +19408,7 @@ spec:
 <div class="sect5">
 <h6 id="_filesystem_storage">Filesystem storage</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 564. Filesystem storage options</caption>
+<caption class="title">Table 619. Filesystem storage options</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -19488,7 +19460,7 @@ spec:
 <p>VMDP is built for <a href="https://access.redhat.com/articles/4234591">OpenShift Virtualization certified guest operating systems</a> on the following platforms:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 565. Supported guest operating systems</caption>
+<caption class="title">Table 620. Supported guest operating systems</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -19816,7 +19788,7 @@ Flags:
 <p>Review the available commands for managing backup storage locations (BSL) with the virtual machine data protection (VMDP) command-line interface (CLI). This helps you to connect, disconnect, and manage your BSL connections.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 566. BSL management commands</caption>
+<caption class="title">Table 621. BSL management commands</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -20222,7 +20194,7 @@ Flags:
 <p>The OADP Self-Service feature has the following new custom resources (CRs) to perform the backup and restore operations for a namespace admin user:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 567. Custom resources</caption>
+<caption class="title">Table 622. Custom resources</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -20366,7 +20338,7 @@ Flags:
 <p>The phase of the CRs only progress forward. Once a phase transitions to the next phase, it cannot revert to a previous phase.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 568. Phases</caption>
+<caption class="title">Table 623. Phases</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -21807,7 +21779,7 @@ status:
 <p>You can download the following NADR resources:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 569. NADR resources</caption>
+<caption class="title">Table 624. NADR resources</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -23178,7 +23150,7 @@ spec:
 <p>Review the following table for a list of <code>Velero</code> metrics provided by OADP together with their <a href="https://prometheus.io/docs/concepts/metric_types/">Types</a>:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 570. Velero metrics</caption>
+<caption class="title">Table 625. Velero metrics</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -23679,7 +23651,7 @@ status:
 <p>Review the specification fields available in the <code>DataProtectionTest</code> (DPT) custom resource (CR) to configure backup location, upload speed tests, CSI volume snapshot tests, and other options. This helps you customize the DPT CR to validate your specific OADP configuration requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 571. DPT CR spec fields</caption>
+<caption class="title">Table 626. DPT CR spec fields</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -23732,7 +23704,7 @@ status:
 <p>Review the status fields in the <code>DataProtectionTest</code> (DPT) custom resource (CR) to monitor test progress, upload speed results, bucket metadata, and snapshot test outcomes. This helps you interpret the DPT CR results and identify any issues with your OADP configuration.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 572. DPT CR status fields</caption>
+<caption class="title">Table 627. DPT CR status fields</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -24093,7 +24065,7 @@ spec:
 <p>Troubleshoot common <code>DataProtectionTest</code> (DPT) custom resource (CR) issues, such as stuck progress states, upload test failures, and snapshot test failures. This helps you identify and resolve problems with your DPT configuration.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 573. DPT CR troubleshooting</caption>
+<caption class="title">Table 628. DPT CR troubleshooting</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -24143,7 +24115,7 @@ spec:
 <p>The following are <code>DataProtectionApplicationSpec</code> OADP APIs:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 574. DataProtectionApplicationSpec</caption>
+<caption class="title">Table 629. DataProtectionApplicationSpec</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -24218,7 +24190,7 @@ spec:
 <p>The following are <code>BackupLocation</code> OADP APIs:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 575. BackupLocation</caption>
+<caption class="title">Table 630. BackupLocation</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -24276,7 +24248,7 @@ spec:
 <p>The following are <code>SnapshotLocation</code> OADP APIs:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 576. SnapshotLocation</caption>
+<caption class="title">Table 631. SnapshotLocation</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -24312,7 +24284,7 @@ spec:
 <p>The following are <code>ApplicationConfig</code> OADP APIs:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 577. ApplicationConfig</caption>
+<caption class="title">Table 632. ApplicationConfig</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -24353,7 +24325,7 @@ spec:
 <p>The following are <code>VeleroConfig</code> OADP APIs:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 578. VeleroConfig</caption>
+<caption class="title">Table 633. VeleroConfig</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -24419,7 +24391,7 @@ spec:
 <p>The following are <code>ResticConfig</code> OADP APIs:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 579. ResticConfig</caption>
+<caption class="title">Table 634. ResticConfig</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -24470,7 +24442,7 @@ spec:
 <p>The following are <code>PodConfig</code> OADP APIs:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 580. PodConfig</caption>
+<caption class="title">Table 635. PodConfig</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -24513,7 +24485,7 @@ spec:
 <p>The following are <code>Features</code> OADP APIs:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 581. Features</caption>
+<caption class="title">Table 636. Features</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -24549,7 +24521,7 @@ spec:
 <p>The following are <code>DataMover</code> OADP APIs:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 582. DataMover</caption>
+<caption class="title">Table 637. DataMover</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -24587,7 +24559,7 @@ spec:
 <p>The following are <code>CustomPlugin</code> OADP APIs:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 583. CustomPlugin</caption>
+<caption class="title">Table 638. CustomPlugin</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -24967,7 +24939,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 584. Flags for the <code>oc oadp must-gather</code> command</caption>
+<caption class="title">Table 639. Flags for the <code>oc oadp must-gather</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -26242,7 +26214,7 @@ runtime error: index out of range with length 1, stack trace: goroutine 94…</c
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 18:44:35 +0100
+Last updated 2026-10-20 10:39:05 +0100
 </div>
 </div>
 <style>

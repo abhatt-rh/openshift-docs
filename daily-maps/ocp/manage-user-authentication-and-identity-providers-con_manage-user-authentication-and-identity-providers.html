@@ -477,44 +477,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
 <body id="manage-user-authentication-and-identity-providers-con_manage-user-authentication-and-identity-providers" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/configure.adoc:70
-    include::ocp-jobs/build-and-deploy-a-simple-kernel-module-driver.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/build-and-deploy-a-simple-kernel-module-driver.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -1086,6 +1050,14 @@ How to fix these errors:
 <li><a href="create-multi-architecture-compute-clusters-on-google-cloud-con_create-multi-architecture-compute-clusters-on-google-cloud.html">Create multi-architecture compute clusters on Google Cloud</a>
 </li>
 <li><a href="create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z-con_create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z.html">Create multi-architecture compute clusters on bare metal, IBM Power, or IBM Z</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-intro_creating-multi-arch-compute-nodes-ibm-z.html">Create a cluster with multi-architecture compute machines on IBM Z and IBM LinuxONE with z/VM</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-lpar-intro_creating-multi-arch-compute-nodes-ibm-z-lpar.html">Create a cluster with multi-architecture compute machines on IBM Z and IBM LinuxONE in an LPAR</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-kvm-intro_creating-multi-arch-compute-nodes-ibm-z-kvm.html">Create a cluster with multi-architecture compute machines on IBM Z and IBM LinuxONE with RHEL KVM</a>
+</li>
+<li><a href="creating-multi-arch-compute-nodes-ibm-z-kvm-intro_creating-multi-arch-compute-nodes-ibm-power.html">Create a cluster with multi-architecture compute machines on IBM Power</a>
 </li>
 <li><a href="enable-64k-pages-on-rhcos-kernel-con_enable-64k-pages-on-rhcos-kernel.html">Enable 64k pages on the RHCOS kernel</a>
 </li>
@@ -1807,7 +1779,7 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#openshift-auth-common-terms_manage-user-authentication-and-identity-providers">Glossary of common terms for Red Hat OpenShift Container Platform authentication and authorization</a></li><li class="level-4"><a href="#authentication-overview_manage-user-authentication-and-identity-providers">About authentication in Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#authorization-overview_manage-user-authentication-and-identity-providers">About authorization in Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#identity-provider-overview_configure-an-identity-provider-to-authenticate-users">Identity providers in Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#supported-identity-providers_configure-an-identity-provider-to-authenticate-users">Supported identity providers</a></li><li class="level-5"><a href="#removing-kubeadmin_configure-an-identity-provider-to-authenticate-users">Remove the kubeadmin user</a></li><li class="level-5"><a href="#identity-provider-parameters_configure-an-identity-provider-to-authenticate-users">Identity provider parameters</a></li><li class="level-5"><a href="#identity-provider-default-CR_configure-an-identity-provider-to-authenticate-users">Sample identity provider CR</a></li><li class="level-5"><a href="#identity-provider-provisioning-user-lookup-mapping_configure-an-identity-provider-to-authenticate-users">Manually provisioning a user when using the lookup mapping method</a></li><li class="level-5"><a href="#identity-provider-htpasswd-about_configure-an-identity-provider-to-authenticate-users">About htpasswd authentication</a></li><li class="level-5"><a href="#identity-provider-creating-htpasswd-file_configure-an-identity-provider-to-authenticate-users">Create the htpasswd file</a></li><li class="level-6"><a href="#identity-provider-creating-htpasswd-file-linux_configure-an-identity-provider-to-authenticate-users">Create an htpasswd file using Linux</a></li><li class="level-6"><a href="#identity-provider-creating-htpasswd-file-windows_configure-an-identity-provider-to-authenticate-users">Create an htpasswd file using Windows</a></li><li class="level-5"><a href="#identity-provider-creating-htpasswd-secret_configure-an-identity-provider-to-authenticate-users">Create the htpasswd secret</a></li><li class="level-5"><a href="#identity-provider-htpasswd-CR_configure-an-identity-provider-to-authenticate-users">Sample htpasswd CR</a></li><li class="level-5"><a href="#add-identity-provider_configure-an-identity-provider-to-authenticate-users">Add an identity provider to your cluster</a></li><li class="level-5"><a href="#identity-provider-htpasswd-update-users_configure-an-identity-provider-to-authenticate-users">Update users for an htpasswd identity provider</a></li><li class="level-5"><a href="#identity-provider-configuring-using-the-web-console_configure-an-identity-provider-to-authenticate-users">Configure identity providers using the web console</a></li><li class="level-5"><a href="#identity-provider-about-ldap_configure-an-identity-provider-to-authenticate-users">About LDAP authentication</a></li><li class="level-5"><a href="#identity-provider-creating-ldap-secret_configure-an-identity-provider-to-authenticate-users">Create the LDAP secret</a></li><li class="level-5"><a href="#identity-provider-creating-configmap_configure-an-identity-provider-to-authenticate-users">Create a ConfigMap</a></li><li class="level-5"><a href="#identity-provider-ldap-CR_configure-an-identity-provider-to-authenticate-users">Sample LDAP custom resource</a></li><li class="level-5"><a href="#identity-provider-oidc-about_configure-an-identity-provider-to-authenticate-users">About OpenID Connect authentication</a></li><li class="level-5"><a href="#identity-provider-oidc-supported_configure-an-identity-provider-to-authenticate-users">Supported OpenID Connect providers</a></li><li class="level-5"><a href="#identity-provider-creating-secret_configure-an-identity-provider-to-authenticate-users">Create the secret</a></li><li class="level-5"><a href="#identity-provider-oidc-CR_configure-an-identity-provider-to-authenticate-users">Sample OpenID Connect CRs</a></li><li class="level-6"><a href="#standard-oidc-cr_configure-an-identity-provider-to-authenticate-users">Standard OIDC CR</a></li><li class="level-6"><a href="#full-openid-cr_configure-an-identity-provider-to-authenticate-users">Full OpenID CR</a></li><li class="level-5"><a href="#identity-provider-github-about_configure-an-identity-provider-to-authenticate-users">About GitHub authentication</a></li><li class="level-5"><a href="#identity-provider-registering-github_configure-an-identity-provider-to-authenticate-users">Register a GitHub application</a></li><li class="level-5"><a href="#identity-provider-github-CR_configure-an-identity-provider-to-authenticate-users">Sample GitHub CR</a></li><li class="level-5"><a href="#identity-provider-gitlab-about_configure-an-identity-provider-to-authenticate-users">About GitLab authentication</a></li><li class="level-5"><a href="#identity-provider-gitlab-CR_configure-an-identity-provider-to-authenticate-users">Sample GitLab custom resource</a></li><li class="level-5"><a href="#identity-provider-google-about_configure-an-identity-provider-to-authenticate-users">Google authentication</a></li><li class="level-5"><a href="#identity-provider-google-CR_configure-an-identity-provider-to-authenticate-users">Sample Google custom resource</a></li><li class="level-5"><a href="#identity-provider-keystone-about_configure-an-identity-provider-to-authenticate-users">About Keystone authentication</a></li><li class="level-5"><a href="#identity-provider-creating-secret-tls_configure-an-identity-provider-to-authenticate-users">Create the secret</a></li><li class="level-5"><a href="#identity-provider-keystone-CR_configure-an-identity-provider-to-authenticate-users">Sample Keystone custom resource</a></li><li class="level-5"><a href="#identity-provider-about-basic-authentication_configure-an-identity-provider-to-authenticate-users">About basic authentication</a></li><li class="level-5"><a href="#identity-provider-basic-authentication-CR_configure-an-identity-provider-to-authenticate-users">Sample basic authentication custom resource</a></li><li class="level-5"><a href="#example-apache-httpd-configuration_configure-an-identity-provider-to-authenticate-users">Example Apache HTTPD configuration for basic identity providers</a></li><li class="level-6"><a href="#_file_requirements">File requirements</a></li><li class="level-5"><a href="#identity-provider-basic-authentication-troubleshooting_configure-an-identity-provider-to-authenticate-users">Troubleshoot basic authentication</a></li><li class="level-5"><a href="#identity-provider-about-request-header_configure-an-identity-provider-to-authenticate-users">About request header authentication</a></li><li class="level-6"><a href="#sspi-windows_configure-an-identity-provider-to-authenticate-users">Security Support Provider Interface connection support on Microsoft Windows</a></li><li class="level-5"><a href="#identity-provider-request-header-CR_configure-an-identity-provider-to-authenticate-users">Sample request header custom resource</a></li><li class="level-5"><a href="#example-apache-auth-config-using-request-header_configure-an-identity-provider-to-authenticate-users">Example Apache authentication configuration using request header</a></li><li class="level-5"><a href="#identity-provider-proxy-custom-configuration_configure-an-identity-provider-to-authenticate-users">Custom proxy configuration</a></li><li class="level-5"><a href="#identity-provider-configuring-apache-request-header_configure-an-identity-provider-to-authenticate-users">Configure Apache authentication using the request header</a></li><li class="level-5"><a href="#ldap-syncing-about_configure-an-identity-provider-to-authenticate-users">About configuring LDAP sync</a></li><li class="level-6"><a href="#ldap-client-configuration_configure-an-identity-provider-to-authenticate-users">LDAP client configuration</a></li><li class="level-6"><a href="#ldap-query-definition_configure-an-identity-provider-to-authenticate-users">LDAP query definition</a></li><li class="level-6"><a href="#user-defined-name-mapping_configure-an-identity-provider-to-authenticate-users">User-defined name mapping</a></li><li class="level-6"><a href="#ldap-syncing-config-rfc2307_configure-an-identity-provider-to-authenticate-users">About the RFC 2307 configuration file</a></li><li class="level-6"><a href="#ldap-syncing-config-activedir_configure-an-identity-provider-to-authenticate-users">About the Active Directory configuration file</a></li><li class="level-6"><a href="#ldap-syncing-config-augmented-activedir_configure-an-identity-provider-to-authenticate-users">About the augmented Active Directory configuration file</a></li><li class="level-5"><a href="#ldap-syncing-running_configure-an-identity-provider-to-authenticate-users">Run LDAP sync</a></li><li class="level-6"><a href="#ldap-syncing-running-all-ldap_configure-an-identity-provider-to-authenticate-users">Sync the LDAP server with Red Hat OpenShift Container Platform</a></li><li class="level-6"><a href="#ldap-syncing-running-openshift_configure-an-identity-provider-to-authenticate-users">Sync Red Hat OpenShift Container Platform groups with the LDAP server</a></li><li class="level-6"><a href="#ldap-syncing-running-subset_configure-an-identity-provider-to-authenticate-users">Sync subgroups from the LDAP server with Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#ldap-syncing-pruning_configure-an-identity-provider-to-authenticate-users">Run a group pruning job</a></li><li class="level-5"><a href="#ldap-auto-syncing_configure-an-identity-provider-to-authenticate-users">Automatically syncing LDAP groups</a></li><li class="level-5"><a href="#ldap-syncing-examples_configure-an-identity-provider-to-authenticate-users">LDAP group sync examples</a></li><li class="level-6"><a href="#ldap-syncing-rfc2307_configure-an-identity-provider-to-authenticate-users">Sync groups using the RFC 2307 schema</a></li><li class="level-6"><a href="#ldap-syncing-rfc2307-user-defined_configure-an-identity-provider-to-authenticate-users">Sync groups by using the RFC 2307 schema with user-defined name mappings</a></li><li class="level-6"><a href="#ldap-syncing-rfc2307-user-defined-error_configure-an-identity-provider-to-authenticate-users">Sync groups by using RFC 2307 with user-defined error tolerances</a></li><li class="level-6"><a href="#ldap-syncing-activedir_configure-an-identity-provider-to-authenticate-users">Sync groups using the Active Directory schema</a></li><li class="level-6"><a href="#ldap-syncing-augmented-activedir_configure-an-identity-provider-to-authenticate-users">Sync groups using the augmented Active Directory schema</a></li><li class="level-6"><a href="#ldap-syncing-nesting-about_configure-an-identity-provider-to-authenticate-users">LDAP nested membership sync</a></li><li class="level-6"><a href="#ldap-syncing-nesting_configure-an-identity-provider-to-authenticate-users">LDAP nested membership sync example</a></li><li class="level-5"><a href="#ldap-syncing-spec_configure-an-identity-provider-to-authenticate-users">LDAP sync configuration specification</a></li><li class="level-6"><a href="#sync-ldap-v1-ldapsyncconfig_configure-an-identity-provider-to-authenticate-users">v1.LDAPSyncConfig</a></li><li class="level-6"><a href="#sync-ldap-v1-stringsource_configure-an-identity-provider-to-authenticate-users">v1.StringSource</a></li><li class="level-6"><a href="#sync-ldap-v1-ldapquery_configure-an-identity-provider-to-authenticate-users">v1.LDAPQuery</a></li><li class="level-6"><a href="#sync-ldap-v1-rfc2307config_configure-an-identity-provider-to-authenticate-users">v1.RFC2307Config</a></li><li class="level-6"><a href="#sync-ldap-v1-activedirectoryconfig_configure-an-identity-provider-to-authenticate-users">v1.ActiveDirectoryConfig</a></li><li class="level-6"><a href="#sync-ldap-v1-augmentedactivedirectoryconfig_configure-an-identity-provider-to-authenticate-users">v1.AugmentedActiveDirectoryConfig</a></li><li class="level-4"><a href="#understand-authentication-in-openshift-container-platform-con_understand-authentication-in-openshift-container-platform">Understand authentication in Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#rbac-users_understand-authentication-in-openshift-container-platform">Users</a></li><li class="level-5"><a href="#rbac-groups_understand-authentication-in-openshift-container-platform">Groups</a></li><li class="level-5"><a href="#rbac-api-authentication_understand-authentication-in-openshift-container-platform">API authentication</a></li><li class="level-6"><a href="#oauth-server-overview_understand-authentication-in-openshift-container-platform">Red Hat OpenShift Container Platform OAuth server</a></li><li class="level-6"><a href="#oauth-token-requests_understand-authentication-in-openshift-container-platform">OAuth token requests</a></li><li class="level-4"><a href="#external-auth-about_bypass-the-internal-authentication-server-for-direct-authentication">About direct authentication with an external OIDC identity provider</a></li><li class="level-5"><a href="#external-auth-disabled-resources_bypass-the-internal-authentication-server-for-direct-authentication">Disabled OAuth resources</a></li><li class="level-6"><a href="#external-auth-providers_bypass-the-internal-authentication-server-for-direct-authentication">Direct authentication identity providers</a></li><li class="level-5"><a href="#external-auth-configuring_bypass-the-internal-authentication-server-for-direct-authentication">Configure an external OIDC identity provider for direct authentication</a></li><li class="level-6"><a href="#external-auth-fields_bypass-the-internal-authentication-server-for-direct-authentication">OIDC provider configuration parameters</a></li><li class="level-6"><a href="#external-auth-cli_bypass-the-internal-authentication-server-for-direct-authentication">Example OIDC provider configuration for CLI clients only</a></li><li class="level-5"><a href="#external-auth-disabling_bypass-the-internal-authentication-server-for-direct-authentication">Disable direct authentication</a></li><li class="level-5"><a href="#structured-auth-config-about_bypass-the-internal-authentication-server-for-direct-authentication">About advanced direct authentication fields</a></li><li class="level-5"><a href="#structured-auth-config-discovery-url_bypass-the-internal-authentication-server-for-direct-authentication">Configure a custom OIDC discovery URL</a></li><li class="level-5"><a href="#structured-auth-config-cel-claim-mapping_bypass-the-internal-authentication-server-for-direct-authentication">Configure CEL expressions for username and groups claim mapping</a></li><li class="level-5"><a href="#structured-auth-config-claim-validation_bypass-the-internal-authentication-server-for-direct-authentication">Configure claim validation rules</a></li><li class="level-5"><a href="#structured-auth-config-user-validation_bypass-the-internal-authentication-server-for-direct-authentication">Configure user validation rules</a></li><li class="level-5"><a href="#structured-auth-config-fields-reference_bypass-the-internal-authentication-server-for-direct-authentication">Advanced authentication field reference</a></li><li class="level-4"><a href="#understanding-kubeadmin_remove-the-default-administrator-account">The kubeadmin user</a></li><li class="level-5"><a href="#removing-kubeadmin_remove-the-default-administrator-account">Remove the kubeadmin user</a></li><li class="level-4"><a href="#oauth-default-clients_register-and-configure-additional-authentication-clients">Default OAuth clients</a></li><li class="level-5"><a href="#oauth-register-additional-client_register-and-configure-additional-authentication-clients">Register an additional OAuth client</a></li><li class="level-5"><a href="#oauth-token-inactivity-timeout_register-and-configure-additional-authentication-clients">Configure token inactivity timeout for an OAuth client</a></li><li class="level-5"><a href="#service-accounts-as-oauth-clients_register-and-configure-additional-authentication-clients">About service accounts as OAuth clients</a></li><li class="level-4"><a href="#manage-and-revoke-active-user-login-tokens-con_manage-and-revoke-active-user-login-tokens">Manage and revoke active user login tokens</a></li><li class="level-5"><a href="#oauth-list-tokens_manage-and-revoke-active-user-login-tokens">List user-owned OAuth access tokens</a></li><li class="level-5"><a href="#oauth-view-details-tokens_manage-and-revoke-active-user-login-tokens">View the details of a user-owned OAuth access token</a></li><li class="level-5"><a href="#oauth-delete-tokens_manage-and-revoke-active-user-login-tokens">Delete user-owned OAuth access tokens</a></li><li class="level-5"><a href="#unauthenticated-users-cluster-role-bindings_manage-and-revoke-active-user-login-tokens">Add unauthenticated groups to cluster roles</a></li><li class="level-5"><a href="#tokens-scoping-about_manage-and-revoke-active-user-login-tokens">About scoping tokens</a></li><li class="level-6"><a href="#scoping-tokens-user-scopes_manage-and-revoke-active-user-login-tokens">User scopes</a></li><li class="level-6"><a href="#scoping-tokens-role-scope_manage-and-revoke-active-user-login-tokens">Role scope</a></li><li class="level-4"><a href="#manage-internal-authentication-server-session-properties-con_manage-internal-authentication-server-session-properties">Manage internal authentication server session properties</a></li><li class="level-5"><a href="#oauth-server-overview_manage-internal-authentication-server-session-properties">Red Hat OpenShift Container Platform OAuth server</a></li><li class="level-5"><a href="#oauth-token-request-flows_manage-internal-authentication-server-session-properties">OAuth token request flows and responses</a></li><li class="level-5"><a href="#oauth-internal-options_manage-internal-authentication-server-session-properties">Options for the internal OAuth server</a></li><li class="level-6"><a href="#oauth-token-duration_manage-internal-authentication-server-session-properties">OAuth token duration options</a></li><li class="level-6"><a href="#oauth-grant-options_manage-internal-authentication-server-session-properties">OAuth grant options</a></li><li class="level-5"><a href="#oauth-configuring-internal-oauth_manage-internal-authentication-server-session-properties">Configure the internal OAuth server’s token duration</a></li><li class="level-5"><a href="#oauth-token-inactivity-timeout_manage-internal-authentication-server-session-properties">Configure token inactivity timeout for the internal OAuth server</a></li><li class="level-5"><a href="#customizing-the-oauth-server-url_manage-internal-authentication-server-session-properties">Customize the internal OAuth server URL</a></li><li class="level-5"><a href="#oauth-server-metadata_manage-internal-authentication-server-session-properties">OAuth server metadata</a></li><li class="level-5"><a href="#oauth-troubleshooting-api-events_manage-internal-authentication-server-session-properties">Troubleshoot OAuth API events</a></li><li class="level-4"><a href="#configure-browser-based-access-to-the-api-server-con_configure-browser-based-access-to-the-api-server">Configure browser-based access to the API server</a></li><li class="level-5"><a href="#auth-allowing-javascript-access-api-server_configure-browser-based-access-to-the-api-server">Allow JavaScript-based access to the API server from additional hosts</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#openshift-auth-common-terms_manage-user-authentication-and-identity-providers">Glossary of common terms for Red Hat OpenShift Container Platform authentication and authorization</a></li><li class="level-4"><a href="#authentication-overview_manage-user-authentication-and-identity-providers">About authentication in Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#authorization-overview_manage-user-authentication-and-identity-providers">About authorization in Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#identity-provider-overview_configure-an-identity-provider-to-authenticate-users">Identity providers in Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#supported-identity-providers_configure-an-identity-provider-to-authenticate-users">Supported identity providers</a></li><li class="level-5"><a href="#removing-kubeadmin_configure-an-identity-provider-to-authenticate-users">Remove the kubeadmin user</a></li><li class="level-5"><a href="#identity-provider-parameters_configure-an-identity-provider-to-authenticate-users">Identity provider parameters</a></li><li class="level-5"><a href="#identity-provider-default-CR_configure-an-identity-provider-to-authenticate-users">Sample identity provider CR</a></li><li class="level-5"><a href="#identity-provider-provisioning-user-lookup-mapping_configure-an-identity-provider-to-authenticate-users">Manually provisioning a user when using the lookup mapping method</a></li><li class="level-5"><a href="#identity-provider-htpasswd-about_configure-an-identity-provider-to-authenticate-users">About htpasswd authentication</a></li><li class="level-5"><a href="#identity-provider-creating-htpasswd-file_configure-an-identity-provider-to-authenticate-users">Create the htpasswd file</a></li><li class="level-6"><a href="#identity-provider-creating-htpasswd-file-linux_configure-an-identity-provider-to-authenticate-users">Create an htpasswd file using Linux</a></li><li class="level-6"><a href="#identity-provider-creating-htpasswd-file-windows_configure-an-identity-provider-to-authenticate-users">Create an htpasswd file using Windows</a></li><li class="level-5"><a href="#identity-provider-creating-htpasswd-secret_configure-an-identity-provider-to-authenticate-users">Create the htpasswd secret</a></li><li class="level-5"><a href="#identity-provider-htpasswd-CR_configure-an-identity-provider-to-authenticate-users">Sample htpasswd CR</a></li><li class="level-5"><a href="#add-identity-provider_configure-an-identity-provider-to-authenticate-users">Add an identity provider to your cluster</a></li><li class="level-5"><a href="#identity-provider-htpasswd-update-users_configure-an-identity-provider-to-authenticate-users">Update users for an htpasswd identity provider</a></li><li class="level-5"><a href="#identity-provider-configuring-using-the-web-console_configure-an-identity-provider-to-authenticate-users">Configure identity providers using the web console</a></li><li class="level-5"><a href="#identity-provider-about-ldap_configure-an-identity-provider-to-authenticate-users">About LDAP authentication</a></li><li class="level-5"><a href="#identity-provider-creating-ldap-secret_configure-an-identity-provider-to-authenticate-users">Create the LDAP secret</a></li><li class="level-5"><a href="#identity-provider-creating-configmap_configure-an-identity-provider-to-authenticate-users">Create a ConfigMap</a></li><li class="level-5"><a href="#identity-provider-ldap-CR_configure-an-identity-provider-to-authenticate-users">Sample LDAP custom resource</a></li><li class="level-5"><a href="#identity-provider-oidc-about_configure-an-identity-provider-to-authenticate-users">About OpenID Connect authentication</a></li><li class="level-5"><a href="#identity-provider-oidc-supported_configure-an-identity-provider-to-authenticate-users">Supported OpenID Connect providers</a></li><li class="level-5"><a href="#identity-provider-creating-secret_configure-an-identity-provider-to-authenticate-users">Create the secret</a></li><li class="level-5"><a href="#identity-provider-oidc-CR_configure-an-identity-provider-to-authenticate-users">Sample OpenID Connect CRs</a></li><li class="level-6"><a href="#standard-oidc-cr_configure-an-identity-provider-to-authenticate-users">Standard OIDC CR</a></li><li class="level-6"><a href="#full-openid-cr_configure-an-identity-provider-to-authenticate-users">Full OpenID CR</a></li><li class="level-5"><a href="#identity-provider-github-about_configure-an-identity-provider-to-authenticate-users">About GitHub authentication</a></li><li class="level-5"><a href="#identity-provider-registering-github_configure-an-identity-provider-to-authenticate-users">Register a GitHub application</a></li><li class="level-5"><a href="#identity-provider-github-CR_configure-an-identity-provider-to-authenticate-users">Sample GitHub CR</a></li><li class="level-5"><a href="#identity-provider-gitlab-about_configure-an-identity-provider-to-authenticate-users">About GitLab authentication</a></li><li class="level-5"><a href="#identity-provider-gitlab-CR_configure-an-identity-provider-to-authenticate-users">Sample GitLab custom resource</a></li><li class="level-5"><a href="#identity-provider-google-about_configure-an-identity-provider-to-authenticate-users">Google authentication</a></li><li class="level-5"><a href="#identity-provider-google-CR_configure-an-identity-provider-to-authenticate-users">Sample Google custom resource</a></li><li class="level-5"><a href="#identity-provider-keystone-about_configure-an-identity-provider-to-authenticate-users">About Keystone authentication</a></li><li class="level-5"><a href="#identity-provider-creating-secret-tls_configure-an-identity-provider-to-authenticate-users">Create the secret</a></li><li class="level-5"><a href="#identity-provider-keystone-CR_configure-an-identity-provider-to-authenticate-users">Sample Keystone custom resource</a></li><li class="level-5"><a href="#identity-provider-about-basic-authentication_configure-an-identity-provider-to-authenticate-users">About basic authentication</a></li><li class="level-5"><a href="#identity-provider-basic-authentication-CR_configure-an-identity-provider-to-authenticate-users">Sample basic authentication custom resource</a></li><li class="level-5"><a href="#example-apache-httpd-configuration_configure-an-identity-provider-to-authenticate-users">Example Apache HTTPD configuration for basic identity providers</a></li><li class="level-6"><a href="#_file_requirements">File requirements</a></li><li class="level-5"><a href="#identity-provider-basic-authentication-troubleshooting_configure-an-identity-provider-to-authenticate-users">Troubleshoot basic authentication</a></li><li class="level-5"><a href="#identity-provider-about-request-header_configure-an-identity-provider-to-authenticate-users">About request header authentication</a></li><li class="level-6"><a href="#sspi-windows_configure-an-identity-provider-to-authenticate-users">Security Support Provider Interface connection support on Microsoft Windows</a></li><li class="level-5"><a href="#identity-provider-request-header-CR_configure-an-identity-provider-to-authenticate-users">Sample request header custom resource</a></li><li class="level-5"><a href="#example-apache-auth-config-using-request-header_configure-an-identity-provider-to-authenticate-users">Example Apache authentication configuration using request header</a></li><li class="level-5"><a href="#identity-provider-proxy-custom-configuration_configure-an-identity-provider-to-authenticate-users">Custom proxy configuration</a></li><li class="level-5"><a href="#identity-provider-configuring-apache-request-header_configure-an-identity-provider-to-authenticate-users">Configure Apache authentication using the request header</a></li><li class="level-5"><a href="#ldap-syncing-about_configure-an-identity-provider-to-authenticate-users">About configuring LDAP sync</a></li><li class="level-6"><a href="#ldap-client-configuration_configure-an-identity-provider-to-authenticate-users">LDAP client configuration</a></li><li class="level-6"><a href="#ldap-query-definition_configure-an-identity-provider-to-authenticate-users">LDAP query definition</a></li><li class="level-6"><a href="#user-defined-name-mapping_configure-an-identity-provider-to-authenticate-users">User-defined name mapping</a></li><li class="level-6"><a href="#ldap-syncing-config-rfc2307_configure-an-identity-provider-to-authenticate-users">About the RFC 2307 configuration file</a></li><li class="level-6"><a href="#ldap-syncing-config-activedir_configure-an-identity-provider-to-authenticate-users">About the Active Directory configuration file</a></li><li class="level-6"><a href="#ldap-syncing-config-augmented-activedir_configure-an-identity-provider-to-authenticate-users">About the augmented Active Directory configuration file</a></li><li class="level-5"><a href="#ldap-syncing-running_configure-an-identity-provider-to-authenticate-users">Run LDAP sync</a></li><li class="level-6"><a href="#ldap-syncing-running-all-ldap_configure-an-identity-provider-to-authenticate-users">Sync the LDAP server with Red Hat OpenShift Container Platform</a></li><li class="level-6"><a href="#ldap-syncing-running-openshift_configure-an-identity-provider-to-authenticate-users">Sync Red Hat OpenShift Container Platform groups with the LDAP server</a></li><li class="level-6"><a href="#ldap-syncing-running-subset_configure-an-identity-provider-to-authenticate-users">Sync subgroups from the LDAP server with Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#ldap-syncing-pruning_configure-an-identity-provider-to-authenticate-users">Run a group pruning job</a></li><li class="level-5"><a href="#ldap-auto-syncing_configure-an-identity-provider-to-authenticate-users">Automatically syncing LDAP groups</a></li><li class="level-5"><a href="#ldap-syncing-examples_configure-an-identity-provider-to-authenticate-users">LDAP group sync examples</a></li><li class="level-6"><a href="#ldap-syncing-rfc2307_configure-an-identity-provider-to-authenticate-users">Sync groups using the RFC 2307 schema</a></li><li class="level-6"><a href="#ldap-syncing-rfc2307-user-defined_configure-an-identity-provider-to-authenticate-users">Sync groups by using the RFC 2307 schema with user-defined name mappings</a></li><li class="level-6"><a href="#ldap-syncing-rfc2307-user-defined-error_configure-an-identity-provider-to-authenticate-users">Sync groups by using RFC 2307 with user-defined error tolerances</a></li><li class="level-6"><a href="#ldap-syncing-activedir_configure-an-identity-provider-to-authenticate-users">Sync groups using the Active Directory schema</a></li><li class="level-6"><a href="#ldap-syncing-augmented-activedir_configure-an-identity-provider-to-authenticate-users">Sync groups using the augmented Active Directory schema</a></li><li class="level-6"><a href="#ldap-syncing-nesting-about_configure-an-identity-provider-to-authenticate-users">LDAP nested membership sync</a></li><li class="level-6"><a href="#ldap-syncing-nesting_configure-an-identity-provider-to-authenticate-users">LDAP nested membership sync example</a></li><li class="level-5"><a href="#ldap-syncing-spec_configure-an-identity-provider-to-authenticate-users">LDAP sync configuration specification</a></li><li class="level-6"><a href="#sync-ldap-v1-ldapsyncconfig_configure-an-identity-provider-to-authenticate-users">v1.LDAPSyncConfig</a></li><li class="level-6"><a href="#sync-ldap-v1-stringsource_configure-an-identity-provider-to-authenticate-users">v1.StringSource</a></li><li class="level-6"><a href="#sync-ldap-v1-ldapquery_configure-an-identity-provider-to-authenticate-users">v1.LDAPQuery</a></li><li class="level-6"><a href="#sync-ldap-v1-rfc2307config_configure-an-identity-provider-to-authenticate-users">v1.RFC2307Config</a></li><li class="level-6"><a href="#sync-ldap-v1-activedirectoryconfig_configure-an-identity-provider-to-authenticate-users">v1.ActiveDirectoryConfig</a></li><li class="level-6"><a href="#sync-ldap-v1-augmentedactivedirectoryconfig_configure-an-identity-provider-to-authenticate-users">v1.AugmentedActiveDirectoryConfig</a></li><li class="level-4"><a href="#understand-authentication-in-openshift-container-platform-con_understand-authentication-in-openshift-container-platform">Understand authentication in Red Hat OpenShift Container Platform</a></li><li class="level-5"><a href="#rbac-users_understand-authentication-in-openshift-container-platform">Users</a></li><li class="level-5"><a href="#rbac-groups_understand-authentication-in-openshift-container-platform">Groups</a></li><li class="level-5"><a href="#rbac-api-authentication_understand-authentication-in-openshift-container-platform">API authentication</a></li><li class="level-6"><a href="#oauth-server-overview_understand-authentication-in-openshift-container-platform">Red Hat OpenShift Container Platform OAuth server</a></li><li class="level-6"><a href="#oauth-token-requests_understand-authentication-in-openshift-container-platform">OAuth token requests</a></li><li class="level-4"><a href="#configure-a-component-scoped-proxy-for-authentication-con_configure-a-component-scoped-proxy-for-authentication">Component-scoped proxy for authentication</a></li><li class="level-5"><a href="#auth-component-proxy-about_configure-a-component-scoped-proxy-for-authentication">Component-scoped proxy for authentication</a></li><li class="level-6"><a href="#when-to-use-component-scoped-proxy_configure-a-component-scoped-proxy-for-authentication">When to use a component-scoped proxy</a></li><li class="level-6"><a href="#proxy-precedence_configure-a-component-scoped-proxy-for-authentication">Proxy precedence</a></li><li class="level-6"><a href="#scope-and-limitations_configure-a-component-scoped-proxy-for-authentication">Scope and limitations</a></li><li class="level-5"><a href="#auth-component-proxy-configuring_configure-a-component-scoped-proxy-for-authentication">Configuring a component-scoped proxy for authentication</a></li><li class="level-5"><a href="#auth-component-proxy-fields_configure-a-component-scoped-proxy-for-authentication">Authentication operator proxy field reference</a></li><li class="level-6"><a href="#behavioral-notes_configure-a-component-scoped-proxy-for-authentication">Behavioral notes</a></li><li class="level-5"><a href="#auth-component-proxy-troubleshooting_configure-a-component-scoped-proxy-for-authentication">Troubleshooting authentication proxy connectivity</a></li><li class="level-4"><a href="#external-auth-about_bypass-the-internal-authentication-server-for-direct-authentication">About direct authentication with an external OIDC identity provider</a></li><li class="level-5"><a href="#external-auth-disabled-resources_bypass-the-internal-authentication-server-for-direct-authentication">Disabled OAuth resources</a></li><li class="level-6"><a href="#external-auth-providers_bypass-the-internal-authentication-server-for-direct-authentication">Direct authentication identity providers</a></li><li class="level-5"><a href="#external-auth-configuring_bypass-the-internal-authentication-server-for-direct-authentication">Configure an external OIDC identity provider for direct authentication</a></li><li class="level-6"><a href="#external-auth-fields_bypass-the-internal-authentication-server-for-direct-authentication">OIDC provider configuration parameters</a></li><li class="level-6"><a href="#external-auth-cli_bypass-the-internal-authentication-server-for-direct-authentication">Example OIDC provider configuration for CLI clients only</a></li><li class="level-5"><a href="#external-auth-disabling_bypass-the-internal-authentication-server-for-direct-authentication">Disable direct authentication</a></li><li class="level-5"><a href="#structured-auth-config-about_bypass-the-internal-authentication-server-for-direct-authentication">About advanced direct authentication fields</a></li><li class="level-5"><a href="#structured-auth-config-discovery-url_bypass-the-internal-authentication-server-for-direct-authentication">Configure a custom OIDC discovery URL</a></li><li class="level-5"><a href="#structured-auth-config-cel-claim-mapping_bypass-the-internal-authentication-server-for-direct-authentication">Configure CEL expressions for username and groups claim mapping</a></li><li class="level-5"><a href="#structured-auth-config-claim-validation_bypass-the-internal-authentication-server-for-direct-authentication">Configure claim validation rules</a></li><li class="level-5"><a href="#structured-auth-config-user-validation_bypass-the-internal-authentication-server-for-direct-authentication">Configure user validation rules</a></li><li class="level-5"><a href="#structured-auth-config-fields-reference_bypass-the-internal-authentication-server-for-direct-authentication">Advanced authentication field reference</a></li><li class="level-4"><a href="#understanding-kubeadmin_remove-the-default-administrator-account">The kubeadmin user</a></li><li class="level-5"><a href="#removing-kubeadmin_remove-the-default-administrator-account">Remove the kubeadmin user</a></li><li class="level-4"><a href="#oauth-default-clients_register-and-configure-additional-authentication-clients">Default OAuth clients</a></li><li class="level-5"><a href="#oauth-register-additional-client_register-and-configure-additional-authentication-clients">Register an additional OAuth client</a></li><li class="level-5"><a href="#oauth-token-inactivity-timeout_register-and-configure-additional-authentication-clients">Configure token inactivity timeout for an OAuth client</a></li><li class="level-5"><a href="#service-accounts-as-oauth-clients_register-and-configure-additional-authentication-clients">About service accounts as OAuth clients</a></li><li class="level-4"><a href="#manage-and-revoke-active-user-login-tokens-con_manage-and-revoke-active-user-login-tokens">Manage and revoke active user login tokens</a></li><li class="level-5"><a href="#oauth-list-tokens_manage-and-revoke-active-user-login-tokens">List user-owned OAuth access tokens</a></li><li class="level-5"><a href="#oauth-view-details-tokens_manage-and-revoke-active-user-login-tokens">View the details of a user-owned OAuth access token</a></li><li class="level-5"><a href="#oauth-delete-tokens_manage-and-revoke-active-user-login-tokens">Delete user-owned OAuth access tokens</a></li><li class="level-5"><a href="#unauthenticated-users-cluster-role-bindings_manage-and-revoke-active-user-login-tokens">Add unauthenticated groups to cluster roles</a></li><li class="level-5"><a href="#tokens-scoping-about_manage-and-revoke-active-user-login-tokens">About scoping tokens</a></li><li class="level-6"><a href="#scoping-tokens-user-scopes_manage-and-revoke-active-user-login-tokens">User scopes</a></li><li class="level-6"><a href="#scoping-tokens-role-scope_manage-and-revoke-active-user-login-tokens">Role scope</a></li><li class="level-4"><a href="#manage-internal-authentication-server-session-properties-con_manage-internal-authentication-server-session-properties">Manage internal authentication server session properties</a></li><li class="level-5"><a href="#oauth-server-overview_manage-internal-authentication-server-session-properties">Red Hat OpenShift Container Platform OAuth server</a></li><li class="level-5"><a href="#oauth-token-request-flows_manage-internal-authentication-server-session-properties">OAuth token request flows and responses</a></li><li class="level-5"><a href="#oauth-internal-options_manage-internal-authentication-server-session-properties">Options for the internal OAuth server</a></li><li class="level-6"><a href="#oauth-token-duration_manage-internal-authentication-server-session-properties">OAuth token duration options</a></li><li class="level-6"><a href="#oauth-grant-options_manage-internal-authentication-server-session-properties">OAuth grant options</a></li><li class="level-5"><a href="#oauth-configuring-internal-oauth_manage-internal-authentication-server-session-properties">Configure the internal OAuth server’s token duration</a></li><li class="level-5"><a href="#oauth-token-inactivity-timeout_manage-internal-authentication-server-session-properties">Configure token inactivity timeout for the internal OAuth server</a></li><li class="level-5"><a href="#customizing-the-oauth-server-url_manage-internal-authentication-server-session-properties">Customize the internal OAuth server URL</a></li><li class="level-5"><a href="#oauth-server-metadata_manage-internal-authentication-server-session-properties">OAuth server metadata</a></li><li class="level-5"><a href="#oauth-troubleshooting-api-events_manage-internal-authentication-server-session-properties">Troubleshoot OAuth API events</a></li><li class="level-4"><a href="#configure-browser-based-access-to-the-api-server-con_configure-browser-based-access-to-the-api-server">Configure browser-based access to the API server</a></li><li class="level-5"><a href="#auth-allowing-javascript-access-api-server_configure-browser-based-access-to-the-api-server">Allow JavaScript-based access to the API server from additional hosts</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="manage-user-authentication-and-identity-providers-con_manage-user-authentication-and-identity-providers">Manage user authentication and identity providers</h3>
@@ -7884,6 +7856,577 @@ obtain a token from
 </div>
 </div>
 <div class="sect3">
+<h4 id="configure-a-component-scoped-proxy-for-authentication-con_configure-a-component-scoped-proxy-for-authentication">Component-scoped proxy for authentication</h4>
+<div class="paragraph _abstract">
+<p>You can configure a dedicated proxy for the authentication stack so that the Cluster Authentication Operator and the OAuth server reach external identity providers without using the cluster-wide egress proxy. This limits proxy-based egress to authentication components only, which is useful in disconnected or restricted-network environments.</p>
+</div>
+<div class="sect4">
+<h5 id="auth-component-proxy-about_configure-a-component-scoped-proxy-for-authentication">Component-scoped proxy for authentication</h5>
+<div class="paragraph _abstract">
+<p>A component-scoped proxy allows the Cluster Authentication Operator (CAO) and the OAuth server to reach external identity providers (IdPs) without using the cluster-wide egress proxy. This limits proxy-based egress to authentication components only.</p>
+</div>
+<div class="paragraph">
+<p>The OAuth server calls IdP endpoints on every login for OpenID Connect (OIDC) discovery, token exchange, user info retrieval, and group membership resolution. The CAO validates IdP connectivity through the proxy on each configuration change.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Component-scoped proxy for authentication is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+</div>
+<div class="paragraph">
+<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect5">
+<h6 id="when-to-use-component-scoped-proxy_configure-a-component-scoped-proxy-for-authentication">When to use a component-scoped proxy</h6>
+<div class="paragraph">
+<p>Use a component-scoped proxy to restrict proxy-based egress to authentication components. Use the cluster-wide proxy when all components share the same proxy.</p>
+</div>
+<div class="paragraph">
+<p>When <code>spec.proxy</code> is set on the <code>Authentication</code> operator resource, it fully replaces the cluster-wide proxy for authentication components. No fields are inherited.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="proxy-precedence_configure-a-component-scoped-proxy-for-authentication">Proxy precedence</h6>
+<div class="paragraph">
+<p>The authentication stack resolves proxy configuration as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>When <code>spec.proxy</code> is set, authentication components use only those settings.</p>
+</li>
+<li>
+<p>When <code>spec.proxy</code> is absent, authentication components fall back to the cluster-wide proxy.</p>
+</li>
+<li>
+<p>When neither is configured, no proxy is used.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect5">
+<h6 id="scope-and-limitations_configure-a-component-scoped-proxy-for-authentication">Scope and limitations</h6>
+<div class="paragraph">
+<p>The component-scoped proxy applies to the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cluster Authentication Operator (CAO)</p>
+</li>
+<li>
+<p>OAuth server</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The component-scoped proxy does not apply to the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Hosted control planes: The CAO does not run in these environments.</p>
+</li>
+<li>
+<p>MicroShift: The authentication stack is not present.</p>
+</li>
+<li>
+<p>External OIDC mode: Not included in the initial implementation.</p>
+</li>
+<li>
+<p>Per-identity-provider proxy: Different proxy settings for different identity providers are not supported.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>LDAP group sync <code>CronJob</code> resources are not managed by the authentication operator. Configure proxy settings on the <code>CronJob</code> pod specification independently.</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="auth-component-proxy-configuring_configure-a-component-scoped-proxy-for-authentication">Configuring a component-scoped proxy for authentication</h5>
+<div class="paragraph _abstract">
+<p>You can configure a component-scoped proxy for the authentication stack by setting the <code>spec.proxy</code> field on the <code>Authentication</code> operator resource.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have cluster administrator privileges.</p>
+</li>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>You have installed the <code>jq</code> CLI tool.</p>
+</li>
+<li>
+<p>The <code>AuthenticationComponentProxy</code> feature gate is enabled by applying the <code>TechPreviewNoUpgrade</code> or <code>DevPreviewNoUpgrade</code> feature set. For more information, see "Enabling features using feature gates".</p>
+</li>
+<li>
+<p>You have a working HTTP or HTTPS proxy server accessible from the cluster nodes.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Optional: If the proxy requires a custom CA certificate, create a config map in the <code>openshift-config</code> namespace containing the CA bundle:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a file called <code>auth-proxy-ca-bundle.yaml</code> with the following content:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: auth-proxy-ca-bundle
+  namespace: openshift-config
+data:
+  ca-bundle.crt: |
+    -----BEGIN CERTIFICATE-----
+    &lt;PEM_encoded_CA_certificate&gt;
+    -----END CERTIFICATE-----</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>name</code></dt>
+<dd>
+<p>Specifies the config map name. Use this name in the <code>spec.proxy.trustedCA.name</code> field.</p>
+</dd>
+<dt class="hdlist1"><code>namespace</code></dt>
+<dd>
+<p>Specifies the namespace. Must be <code>openshift-config</code>.</p>
+</dd>
+<dt class="hdlist1"><code>ca-bundle.crt</code></dt>
+<dd>
+<p>Specifies the Privacy-Enhanced Mail (PEM)-encoded CA certificate bundle. The key must be <code>ca-bundle.crt</code>.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Create the config map by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f auth-proxy-ca-bundle.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Alternatively, if you already have the CA certificate file, you can create the config map directly by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create configmap auth-proxy-ca-bundle \
+  --from-file=ca-bundle.crt=&lt;path_to_ca_certificate&gt; \
+  -n openshift-config</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;path_to_ca_certificate&gt;</code></dt>
+<dd>
+<p>Specifies the path to the PEM-encoded CA certificate file.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Edit the <code>Authentication</code> operator resource to add the proxy configuration by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit authentication.operator.openshift.io cluster</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add the <code>spec.proxy</code> field with your proxy settings:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: Authentication
+metadata:
+  name: cluster
+spec:
+  managementState: Managed
+  proxy:
+    httpProxy: "http://proxy.example.com:3128"
+    httpsProxy: "http://proxy.example.com:3128"
+    noProxy:
+      - ".example.com"
+      - "idp.internal.example.com"
+    trustedCA:
+      name: "auth-proxy-ca-bundle"</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>httpProxy</code></dt>
+<dd>
+<p>Specifies the proxy URL for HTTP requests. At least one of <code>httpProxy</code> or <code>httpsProxy</code> is required.</p>
+</dd>
+<dt class="hdlist1"><code>httpsProxy</code></dt>
+<dd>
+<p>Specifies the proxy URL for HTTPS requests. At least one of <code>httpProxy</code> or <code>httpsProxy</code> is required.</p>
+</dd>
+<dt class="hdlist1"><code>noProxy</code></dt>
+<dd>
+<p>Specifies hostnames, domains, CIDR ranges, or IP addresses that bypass the proxy. Cluster-internal defaults (<code>.cluster.local</code>, <code>.svc</code>, <code>127.0.0.1</code>, the Kubernetes API service IP, and <code>localhost</code>) are appended automatically. Maximum 64 entries.</p>
+</dd>
+<dt class="hdlist1"><code>trustedCA</code></dt>
+<dd>
+<p>Specifies the config map name in <code>openshift-config</code> containing the proxy CA bundle under the key <code>ca-bundle.crt</code>. Required only if the proxy uses TLS interception or a private CA. Omit this block if you did not create a CA config map in step 1.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Save the file to apply the changes.</p>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Verify that the configuration was accepted by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get authentication.operator.openshift.io cluster -o jsonpath='{.spec.proxy}' | jq .</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "httpProxy": "http://proxy.example.com:3128",
+  "httpsProxy": "http://proxy.example.com:3128",
+  "noProxy": [
+    ".example.com",
+    "idp.internal.example.com"
+  ],
+  "trustedCA": {
+    "name": "auth-proxy-ca-bundle"
+  }
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the authentication operator is not reporting errors by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusteroperator authentication</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME             VERSION   AVAILABLE   PROGRESSING   DEGRADED   SINCE   MESSAGE
+authentication   {product-version}.0     True        False         False      10m</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>AVAILABLE</code> column shows <code>True</code> and the <code>DEGRADED</code> column shows <code>False</code>.</p>
+</div>
+</li>
+<li>
+<p>Optional: Test authentication through the proxy by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc login</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Changing the proxy URL triggers an OAuth server redeployment. On single-node Red&#160;Hat OpenShift Container Platform deployments, this causes a brief authentication outage. Updates to <code>trustedCA</code> config map content are hot-reloaded without redeployment.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A misconfigured proxy can prevent the OAuth server from reaching the identity provider, locking all users out of the cluster. To recover, log in with <code>kubeadmin</code> credentials or client certificate authentication, both of which bypass OAuth, and correct the proxy configuration.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="auth-component-proxy-fields_configure-a-component-scoped-proxy-for-authentication">Authentication operator proxy field reference</h5>
+<div class="paragraph _abstract">
+<p>The <code>spec.proxy</code> object of the <code>Authentication</code> operator resource (<code>operator.openshift.io/v1</code>) defines proxy and trusted CA settings for authentication components.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 848. <code>spec.proxy</code> fields</caption>
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 14.2857%;">
+<col style="width: 57.1429%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>httpProxy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies the proxy URL for HTTP requests. Must use the <code>http</code> or <code>https</code> scheme with a non-empty hostname and no path, query parameters, or fragment. User credentials are allowed (for example, <code>http://user:password@proxy:3128</code>). Maximum 2048 characters. At least one of <code>httpProxy</code> or <code>httpsProxy</code> is required.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>httpsProxy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies the proxy URL for HTTPS requests. Same format rules as <code>httpProxy</code>. At least one of <code>httpProxy</code> or <code>httpsProxy</code> is required.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>noProxy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[]string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies hostnames, domains, CIDR ranges, or IP addresses that bypass the proxy. Each entry must be 1-253 characters. Maximum 64 entries. Duplicates are not permitted. Cluster-internal defaults (<code>.cluster.local</code>, <code>.svc</code>, <code>127.0.0.1</code>, the Kubernetes API service IP, and <code>localhost</code>) are appended automatically.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>trustedCA.name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies the name of a config map in the <code>openshift-config</code> namespace containing a CA certificate bundle under the key <code>ca-bundle.crt</code>. This bundle is appended to the system truststore for proxy TLS connections. When omitted, only the system truststore is used. Must be a valid DNS subdomain name (RFC 1123): at most 253 characters, lowercase alphanumeric characters, hyphens, or periods.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect5">
+<h6 id="behavioral-notes_configure-a-component-scoped-proxy-for-authentication">Behavioral notes</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>When <code>spec.proxy</code> is set, it fully replaces the cluster-wide proxy for authentication. No fields are inherited.</p>
+</li>
+<li>
+<p>The proxy validation controller tests IdP connectivity on every configuration change and emits <code>OperatorStatusChanged</code> events when endpoints are unreachable.</p>
+</li>
+<li>
+<p>Proxy-level failures such as connection refused or TLS handshake errors cause the <code>Available</code> condition to report <code>False</code>. The <code>Degraded</code> condition remains <code>False</code> but includes diagnostic details from the <code>ProxyConfigController</code> sub-controller in its message.</p>
+</li>
+<li>
+<p>The operator injects <code>HTTP_PROXY</code>, <code>HTTPS_PROXY</code>, and <code>NO_PROXY</code> environment variables into the OAuth server pod specification. Changes to these values trigger a redeployment.</p>
+</li>
+<li>
+<p>The <code>trustedCA</code> config map is synced from <code>openshift-config</code> to <code>openshift-authentication</code> by the operator. The OAuth server hot-reloads the mounted CA file without redeployment.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="auth-component-proxy-troubleshooting_configure-a-component-scoped-proxy-for-authentication">Troubleshooting authentication proxy connectivity</h5>
+<div class="paragraph _abstract">
+<p>If you encounter issues with the component-scoped proxy, you can diagnose and resolve them by reviewing operator conditions, events, and pod environment variables.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Proxy-related operator events</dt>
+<dd>
+<div class="paragraph">
+<p>The authentication operator emits events when proxy configuration changes cause failures. Check recent events by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get events -n openshift-authentication-operator --sort-by=.lastTimestamp</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Look for events with <code>reason: OperatorStatusChanged</code> that reference proxy connection errors. Verify that the proxy URL is correct, the proxy server is running, and the cluster nodes can reach the proxy.</p>
+</div>
+</dd>
+<dt class="hdlist1">Authentication operator reports proxy errors</dt>
+<dd>
+<div class="paragraph">
+<p>A proxy-level failure such as connection refused, DNS resolution failure, or TLS handshake error causes the <code>Available</code> condition to report <code>False</code>. The <code>Degraded</code> condition message includes diagnostic details from the <code>ProxyConfigController</code> sub-controller even though the <code>Degraded</code> status remains <code>False</code>. Check the operator status by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusteroperator authentication -o jsonpath='{.status.conditions}' | jq .</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">[
+  {
+    "type": "Available",
+    "status": "False",
+    "reason": "OAuthServerRouteEndpointAccessibleController_EndpointUnavailable",
+    "message": "OAuthServerRouteEndpointAccessibleControllerAvailable: Get \"https://oauth-openshift.apps.example.com/healthz\": proxyconnect tcp: dial tcp: lookup proxy.example.com: no such host"
+  },
+  {
+    "type": "Progressing",
+    "status": "True",
+    "reason": "OAuthServerDeployment_PodsUpdating",
+    "message": "deployment/oauth-openshift: 3/3 pods have been updated to the latest generation and 1/3 pods are available"
+  },
+  {
+    "type": "Degraded",
+    "status": "False",
+    "reason": "AsExpected",
+    "message": "ProxyConfigControllerDegraded: failed to reach endpoint with error: Get \"https://oauth-openshift.apps.example.com/healthz\": proxyconnect tcp: dial tcp: lookup proxy.example.com: no such host"
+  }
+]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>Available</code> condition shows <code>False</code> when the proxy is unreachable. The <code>Degraded</code> condition remains <code>False</code> but includes proxy error details from the <code>ProxyConfigController</code> in its message. Check both conditions when diagnosing proxy issues.</p>
+</div>
+<div class="paragraph">
+<p>Verify that the proxy server is running, the proxy URL and port are correct, and the <code>trustedCA</code> config map contains valid PEM-encoded certificates.</p>
+</div>
+</dd>
+<dt class="hdlist1">All users locked out after proxy misconfiguration</dt>
+<dd>
+<div class="paragraph">
+<p>A misconfigured proxy can lock out all OAuth-authenticated users. To recover access:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Log in by using <code>kubeadmin</code> credentials or client certificate authentication, both of which bypass OAuth.</p>
+</li>
+<li>
+<p>Correct the proxy configuration by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit authentication.operator.openshift.io cluster</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the authentication operator returns to a healthy state by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusteroperator authentication</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME             VERSION   AVAILABLE   PROGRESSING   DEGRADED   SINCE   MESSAGE
+authentication   {product-version}.0     True        False         False      10m</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</dd>
+<dt class="hdlist1">CA bundle not trusted by OAuth server</dt>
+<dd>
+<div class="paragraph">
+<p>If the OAuth server cannot verify the proxy TLS certificate, check the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The config map exists in <code>openshift-config</code> with valid PEM-encoded certificates under the key <code>ca-bundle.crt</code>.</p>
+</li>
+<li>
+<p>The <code>spec.proxy.trustedCA.name</code> value matches the actual config map name.</p>
+</li>
+<li>
+<p>The CA certificate chain is complete, including intermediate certificates.</p>
+<div class="paragraph">
+<p>The operator syncs the config map from <code>openshift-config</code> to <code>openshift-authentication</code> automatically.</p>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Brief authentication outage on single-node Red&#160;Hat OpenShift Container Platform</dt>
+<dd>
+<div class="paragraph">
+<p>Changing the proxy URL triggers an OAuth server redeployment. On single-node deployments, this causes a brief outage because only one replica is available. Make proxy URL changes during a maintenance window. Updates to <code>trustedCA</code> config map content are hot-reloaded without redeployment.</p>
+</div>
+</dd>
+<dt class="hdlist1">LDAP group sync failing through proxy</dt>
+<dd>
+<div class="paragraph">
+<p>LDAP group sync <code>CronJob</code> resources are not managed by the authentication operator. Configure proxy environment variables on the <code>CronJob</code> pod specification independently. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ldap-group-sync
+spec:
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: sync
+            env:
+            - name: HTTPS_PROXY
+              value: "http://proxy.example.com:3128"</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Cluster-wide proxy and component-scoped proxy both configured</dt>
+<dd>
+<div class="paragraph">
+<p>The component-scoped proxy fully replaces the cluster-wide proxy for authentication components. To verify which proxy is active, inspect the OAuth server pod environment variables by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get deployment oauth-openshift -n openshift-authentication -o jsonpath='{.spec.template.spec.containers[0].env}' | jq .</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">[
+  {
+    "name": "HTTP_PROXY",
+    "value": "http://proxy.example.com:3128"
+  },
+  {
+    "name": "HTTPS_PROXY",
+    "value": "http://proxy.example.com:3128"
+  },
+  {
+    "name": "NO_PROXY",
+    "value": ".cluster.local,.example.com,.svc,127.0.0.1,172.30.0.1,idp.internal.example.com,localhost"
+  }
+]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>NO_PROXY</code> value includes your configured entries and automatically appended cluster-internal defaults.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect3">
 <h4 id="external-auth-about_bypass-the-internal-authentication-server-for-direct-authentication">About direct authentication with an external OIDC identity provider</h4>
 <div class="paragraph _abstract">
 <p>You can enable direct integration with an external OpenID Connect (OIDC) identity provider to issue tokens for authentication. This bypasses the built-in OAuth server and uses the external identity provider directly.</p>
@@ -8353,7 +8896,7 @@ kube-apiserver   4.22.0    True        True          False      85m     NodeInst
 <p>The following table lists all available OIDC provider parameters for direct authentication:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 793. <code>oidcProviders</code> configuration</caption>
+<caption class="title">Table 849. <code>oidcProviders</code> configuration</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -9848,7 +10391,7 @@ spec:
 <p>The following table describes the advanced authentication configuration fields available in Red&#160;Hat OpenShift Container Platform.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 794. Advanced <code>oidcProviders</code> configuration fields</caption>
+<caption class="title">Table 850. Advanced <code>oidcProviders</code> configuration fields</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -11979,7 +12522,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-19 18:44:35 +0100
+Last updated 2026-10-20 10:39:05 +0100
 </div>
 </div>
 <style>
