@@ -814,6 +814,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scale-workloads-in-a-hosted-cluster-con_scale-workloads-in-a-hosted-cluster.html">Scale workloads in a hosted cluster</a>
 </li>
+<li><a href="hcp-manage-bm-con_manage-hosted-clusters-on-bare-metal.html">Manage hosted control planes on bare metal</a>
+</li>
+<li><a href="hcp-manage-virt-con_manage-hosted-clusters-on-openshift-virtualization.html">Manage hosted control planes on OpenShift Virtualization</a>
+</li>
+<li><a href="hcp-manage-aws-con_manage-hosted-clusters-on-aws.html">Manage hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-manage-ibm-power-con_manage-hosted-clusters-on-ibm-power.html">Manage hosted control planes on IBM Power</a>
+</li>
+<li><a href="hcp-manage-non-bm-con_manage-hosted-clusters-on-non-bare-metal.html">Manage hosted control planes on non-bare-metal agent machines</a>
+</li>
+<li><a href="hcp-manage-openstack-con_manage-hosted-clusters-on-openstack.html">Manage hosted control planes on RHOSP</a>
+</li>
 <li><a href="multi-architecture-installing-using-cli_schedule-workloads-on-multi-architecture-clusters.html">Installing the Multiarch Tuning Operator by using the CLI</a>
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
@@ -1891,7 +1903,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>You can host the VMware vSphere infrastructure on-premise or on a <a href="https://cloud.vmware.com/providers">VMware Cloud Verified provider</a> that meets the requirements outlined in the following tables:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 164. Version requirements for vSphere virtual environments</caption>
+<caption class="title">Table 165. Version requirements for vSphere virtual environments</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1932,7 +1944,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 165. Minimum supported vSphere version for VMware components</caption>
+<caption class="title">Table 166. Minimum supported vSphere version for VMware components</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -2033,7 +2045,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Review the following details about the required network ports.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 166. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 167. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2343,7 +2355,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 167. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 168. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2392,7 +2404,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 168. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 169. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2534,7 +2546,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 169. Roles and privileges required for installation in vSphere API</caption>
+<caption class="title">Table 170. Roles and privileges required for installation in vSphere API</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3033,7 +3045,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 170. Roles and privileges required for installation in vCenter graphical user interface (GUI)</caption>
+<caption class="title">Table 171. Roles and privileges required for installation in vCenter graphical user interface (GUI)</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 37.5%;">
@@ -3538,7 +3550,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>Additionally, the user requires some <code>ReadOnly</code> permissions, and some of the roles require permission to propagate the permissions to child objects. These settings vary depending on whether or not you install the cluster into an existing folder.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 171. Required permissions and propagation settings</caption>
+<caption class="title">Table 172. Required permissions and propagation settings</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3971,7 +3983,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following tables specify how the required vCenter account privileges provided earlier in this document are relevant to different aspects of Red&#160;Hat OpenShift Container Platform architecture.</p>
 </div>
 <table id="installation-vsphere-minimum-permissions-ipi_ipi-vsphere-installation-reqs" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 172. Minimum permissions on installer-provisioned infrastructure</caption>
+<caption class="title">Table 173. Minimum permissions on installer-provisioned infrastructure</caption>
 <colgroup>
 <col style="width: 36.3636%;">
 <col style="width: 36.3636%;">
@@ -4467,7 +4479,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table id="post-installation-vsphere-minimum-permissions_ipi-vsphere-installation-reqs" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 173. Minimum permissions for postinstallation management of components</caption>
+<caption class="title">Table 174. Minimum permissions for postinstallation management of components</caption>
 <colgroup>
 <col style="width: 36.3636%;">
 <col style="width: 36.3636%;">
@@ -4824,7 +4836,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table id="installation-vsphere-minimum-permissions-storage_ipi-vsphere-installation-reqs" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 174. Minimum permissions for the storage components</caption>
+<caption class="title">Table 175. Minimum permissions for the storage components</caption>
 <colgroup>
 <col style="width: 36.3636%;">
 <col style="width: 36.3636%;">
@@ -5111,7 +5123,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table id="post-installation-vsphere-minimum-machine-api_ipi-vsphere-installation-reqs" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 175. Minimum permissions for the Machine API</caption>
+<caption class="title">Table 176. Minimum permissions for the Machine API</caption>
 <colgroup>
 <col style="width: 36.3636%;">
 <col style="width: 36.3636%;">
@@ -5610,7 +5622,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>You must create DNS records for two static IP addresses in the appropriate DNS server for the vCenter instance that hosts your Red&#160;Hat OpenShift Container Platform cluster. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the cluster base domain that you specify when you install the cluster. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 176. Required DNS records</caption>
+<caption class="title">Table 177. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 55.5555%;">
@@ -5806,7 +5818,7 @@ platform:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 177. Minimum required hosts</caption>
+<caption class="title">Table 178. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5860,7 +5872,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 178. Minimum resource requirements</caption>
+<caption class="title">Table 179. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -6090,7 +6102,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 179. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 180. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -6422,7 +6434,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 180. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 181. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -6471,7 +6483,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 181. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 182. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -6569,7 +6581,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 182. Required DNS records</caption>
+<caption class="title">Table 183. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -7135,7 +7147,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 183. Application Ingress load balancer</caption>
+<caption class="title">Table 184. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -7348,7 +7360,7 @@ listen ingress-router-80
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 184. Required parameters</caption>
+<caption class="title">Table 185. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7551,7 +7563,7 @@ listen ingress-router-80
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 185. Network parameters</caption>
+<caption class="title">Table 186. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7818,6 +7830,50 @@ The prefix length for an IPv6 block is between <code>0</code> and <code>128</cod
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>networking:
+  networkObservability:
+    installationPolicy:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is automatically installed during cluster creation. This field is available only when the <code>NetworkObservabilityInstall</code> feature gate is enabled.</p>
+</div>
+<div class="paragraph">
+<p>When set to <code>InstallAndEnable</code>, the Cluster Network Operator (CNO) installs the Network Observability Operator and creates a default <code>FlowCollector</code> during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</div>
+<div class="paragraph">
+<p>When set to <code>NoAction</code>, automatic installation does not occur.</p>
+</div>
+<div class="paragraph">
+<p>When omitted (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use this field. For more information, see "Install network observability during cluster creation" in <em>Network observability</em>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>InstallAndEnable</code>, <code>NoAction</code>, or omit the field for default behavior.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -7827,7 +7883,7 @@ The prefix length for an IPv6 block is between <code>0</code> and <code>128</cod
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 186. Optional parameters</caption>
+<caption class="title">Table 187. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8426,7 +8482,7 @@ If you are installing on Google Cloud into a shared virtual private cloud (VPC),
 <p>Optional AWS configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 187. Optional AWS parameters</caption>
+<caption class="title">Table 188. Optional AWS parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -9309,7 +9365,7 @@ For more information about the support scope of Red Hat Technology Preview featu
 <p>Additional Google Cloud configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 188. Additional Google Cloud parameters</caption>
+<caption class="title">Table 189. Additional Google Cloud parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -10679,7 +10735,7 @@ For more information about the support scope of Red Hat Technology Preview featu
 <p>Additional VMware vSphere configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 189. Additional VMware vSphere cluster parameters</caption>
+<caption class="title">Table 190. Additional VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -11255,7 +11311,7 @@ If you do not specify a value, the installation program installs the resources i
 <p>The following table lists each deprecated vSphere configuration parameter:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 190. Deprecated VMware vSphere cluster parameters</caption>
+<caption class="title">Table 191. Deprecated VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -11502,7 +11558,7 @@ If you do not specify a value, the installation program installs the resources i
 <p>Optional VMware vSphere machine pool configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 191. Optional VMware vSphere machine pool parameters</caption>
+<caption class="title">Table 192. Optional VMware vSphere machine pool parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -14473,7 +14529,7 @@ spec:
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 192. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 193. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14603,6 +14659,37 @@ spec:
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>spec.networkObservability</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>object</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional: Configures the Network Observability Operator installation during cluster creation.</p>
+</div>
+<div class="paragraph">
+<p>You can configure this field in the <code>install-config.yaml</code> file before creating the cluster to control whether network observability is enabled by default.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation configuration is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use the <code>networkObservability</code> field.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 <div class="admonitionblock important">
@@ -14626,7 +14713,7 @@ spec:
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 193. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 194. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -14691,7 +14778,7 @@ spec:
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 194. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 195. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14854,7 +14941,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 195. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 196. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14905,7 +14992,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 196. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 197. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14956,7 +15043,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 197. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 198. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15063,7 +15150,7 @@ spec:
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-vsphere-ipi-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 198. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 199. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15157,7 +15244,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-vsphere-ipi-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 199. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 200. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15202,7 +15289,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-vsphere-ipi-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 200. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 201. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15247,7 +15334,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-vsphere-ipi-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 201. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 202. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15283,6 +15370,82 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </ul>
 </div>
 </div>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="nw-operator-cr-networkobservability_install-on-vsphere-ipi-with-customizations" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 203. <code>networkObservability</code> object</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Field</th>
+<th class="tableblock halign-left valign-middle">Type</th>
+<th class="tableblock halign-left valign-middle">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>installationPolicy</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is installed during cluster creation. Valid values are:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>InstallAndEnable</code>: Install the Network Observability Operator and create a default <code>FlowCollector</code> configuration during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</li>
+<li>
+<p><code>NoAction</code>: Do not install the Network Observability Operator during cluster creation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>When the <code>networkObservability</code> field is omitted entirely (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: Network
+metadata:
+  name: cluster
+spec:
+  networkObservability:
+    installationPolicy: InstallAndEnable</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This field is only available when the <code>NetworkObservabilityInstall</code> feature gate is enabled. This is a Technology Preview feature.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <ul>
@@ -21342,7 +21505,7 @@ spec:
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 202. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 204. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21472,6 +21635,37 @@ spec:
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>spec.networkObservability</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>object</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional: Configures the Network Observability Operator installation during cluster creation.</p>
+</div>
+<div class="paragraph">
+<p>You can configure this field in the <code>install-config.yaml</code> file before creating the cluster to control whether network observability is enabled by default.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation configuration is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use the <code>networkObservability</code> field.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 <div class="admonitionblock important">
@@ -21495,7 +21689,7 @@ spec:
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 203. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 205. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -21560,7 +21754,7 @@ spec:
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 204. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 206. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21723,7 +21917,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 205. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 207. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21774,7 +21968,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 206. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 208. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21825,7 +22019,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 207. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 209. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21932,7 +22126,7 @@ spec:
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-vsphere-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 208. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 210. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -22026,7 +22220,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-vsphere-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 209. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 211. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -22071,7 +22265,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-vsphere-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 210. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 212. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -22116,7 +22310,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-vsphere-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 211. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 213. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -22152,6 +22346,82 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </ul>
 </div>
 </div>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="nw-operator-cr-networkobservability_install-on-vsphere-with-network-customizations-upi" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 214. <code>networkObservability</code> object</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Field</th>
+<th class="tableblock halign-left valign-middle">Type</th>
+<th class="tableblock halign-left valign-middle">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>installationPolicy</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is installed during cluster creation. Valid values are:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>InstallAndEnable</code>: Install the Network Observability Operator and create a default <code>FlowCollector</code> configuration during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</li>
+<li>
+<p><code>NoAction</code>: Do not install the Network Observability Operator during cluster creation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>When the <code>networkObservability</code> field is omitted entirely (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: Network
+metadata:
+  name: cluster
+spec:
+  networkObservability:
+    installationPolicy: InstallAndEnable</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This field is only available when the <code>NetworkObservabilityInstall</code> feature gate is enabled. This is a Technology Preview feature.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <ul>
@@ -30346,7 +30616,7 @@ I0108 08:32:28.480685       1 operator.go:271] CheckNodeProviderID:&lt;host_name
 <p>The following tables identify the configuration checks that the {operator-name} runs. Some checks verify the configuration of the cluster. Other checks verify the configuration of each node in the cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 212. Cluster configuration checks</caption>
+<caption class="title">Table 215. Cluster configuration checks</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -30455,7 +30725,7 @@ I0108 08:32:28.480685       1 operator.go:271] CheckNodeProviderID:&lt;host_name
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 213. Node configuration checks</caption>
+<caption class="title">Table 216. Node configuration checks</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -30569,7 +30839,7 @@ I0108 08:32:28.480685       1 operator.go:271] CheckNodeProviderID:&lt;host_name
 <p>The {operator-name} exposes the following metrics for use by the Red&#160;Hat OpenShift Container Platform monitoring stack.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 214. Metrics exposed by the {operator-name}</caption>
+<caption class="title">Table 217. Metrics exposed by the {operator-name}</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -30752,7 +31022,7 @@ I0108 08:32:28.480685       1 operator.go:271] CheckNodeProviderID:&lt;host_name
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-20 12:57:13 +0100
+Last updated 2026-10-21 11:29:03 +0100
 </div>
 </div>
 <style>

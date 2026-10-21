@@ -814,6 +814,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scale-workloads-in-a-hosted-cluster-con_scale-workloads-in-a-hosted-cluster.html">Scale workloads in a hosted cluster</a>
 </li>
+<li><a href="hcp-manage-bm-con_manage-hosted-clusters-on-bare-metal.html">Manage hosted control planes on bare metal</a>
+</li>
+<li><a href="hcp-manage-virt-con_manage-hosted-clusters-on-openshift-virtualization.html">Manage hosted control planes on OpenShift Virtualization</a>
+</li>
+<li><a href="hcp-manage-aws-con_manage-hosted-clusters-on-aws.html">Manage hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-manage-ibm-power-con_manage-hosted-clusters-on-ibm-power.html">Manage hosted control planes on IBM Power</a>
+</li>
+<li><a href="hcp-manage-non-bm-con_manage-hosted-clusters-on-non-bare-metal.html">Manage hosted control planes on non-bare-metal agent machines</a>
+</li>
+<li><a href="hcp-manage-openstack-con_manage-hosted-clusters-on-openstack.html">Manage hosted control planes on RHOSP</a>
+</li>
 <li><a href="multi-architecture-installing-using-cli_schedule-workloads-on-multi-architecture-clusters.html">Installing the Multiarch Tuning Operator by using the CLI</a>
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
@@ -1813,7 +1825,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 397. IBM Z&#174; installation options</caption>
+<caption class="title">Table 405. IBM Z&#174; installation options</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 12.5%;">
@@ -1944,7 +1956,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 398. Minimum required hosts</caption>
+<caption class="title">Table 406. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1997,7 +2009,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 399. Minimum resource requirements</caption>
+<caption class="title">Table 407. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -2103,7 +2115,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To install Red&#160;Hat OpenShift Container Platform on IBM Z&#174; or IBM&#174; LinuxONE, your environment must meet minimum hardware, operating system, network, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 400. Supported IBM&#174; hardware</caption>
+<caption class="title">Table 408. Supported IBM&#174; hardware</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2232,7 +2244,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <div class="sect6">
 <h7 id="ibm-z-operating-system-requirements_prepare-to-install-on-ibm-z">IBM Z operating system requirements</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 401. Operating system requirements</caption>
+<caption class="title">Table 409. Operating system requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2278,7 +2290,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <div class="sect6">
 <h7 id="ibm-z-network-connectivity_prepare-to-install-on-ibm-z">IBM Z network connectivity</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 402. Network connectivity requirements</caption>
+<caption class="title">Table 410. Network connectivity requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2320,7 +2332,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <div class="sect6">
 <h7 id="ibm-z-disk-storage_prepare-to-install-on-ibm-z">Disk storage</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 403. Disk storage requirements</caption>
+<caption class="title">Table 411. Disk storage requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2402,7 +2414,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <div class="sect6">
 <h7 id="preferred-ibm-z-operating-system-requirements_prepare-to-install-on-ibm-z">IBM Z operating system requirements</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 404. Operating system requirements</caption>
+<caption class="title">Table 412. Operating system requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2534,7 +2546,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 405. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 413. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2866,7 +2878,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 406. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 414. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2915,7 +2927,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 407. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 415. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -3022,7 +3034,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 <p>The following DNS records are required for a user-provisioned Red&#160;Hat OpenShift Container Platform cluster and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 408. Required DNS records</caption>
+<caption class="title">Table 416. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -3588,7 +3600,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 409. Application Ingress load balancer</caption>
+<caption class="title">Table 417. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -5186,7 +5198,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 410. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 418. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5316,6 +5328,37 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>spec.networkObservability</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>object</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional: Configures the Network Observability Operator installation during cluster creation.</p>
+</div>
+<div class="paragraph">
+<p>You can configure this field in the <code>install-config.yaml</code> file before creating the cluster to control whether network observability is enabled by default.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation configuration is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use the <code>networkObservability</code> field.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 <div class="admonitionblock important">
@@ -5339,7 +5382,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 411. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 419. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -5404,7 +5447,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 412. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 420. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5567,7 +5610,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 413. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 421. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5618,7 +5661,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 414. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 422. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5669,7 +5712,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 415. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 423. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5776,7 +5819,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-ibm-z-z-vm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 416. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 424. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5870,7 +5913,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-ibm-z-z-vm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 417. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 425. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5915,7 +5958,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-ibm-z-z-vm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 418. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 426. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5960,7 +6003,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-ibm-z-z-vm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 419. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 427. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -5996,6 +6039,82 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </ul>
 </div>
 </div>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="nw-operator-cr-networkobservability_install-on-ibm-z-z-vm" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 428. <code>networkObservability</code> object</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Field</th>
+<th class="tableblock halign-left valign-middle">Type</th>
+<th class="tableblock halign-left valign-middle">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>installationPolicy</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is installed during cluster creation. Valid values are:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>InstallAndEnable</code>: Install the Network Observability Operator and create a default <code>FlowCollector</code> configuration during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</li>
+<li>
+<p><code>NoAction</code>: Do not install the Network Observability Operator during cluster creation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>When the <code>networkObservability</code> field is omitted entirely (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: Network
+metadata:
+  name: cluster
+spec:
+  networkObservability:
+    installationPolicy: InstallAndEnable</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This field is only available when the <code>NetworkObservabilityInstall</code> feature gate is enabled. This is a Technology Preview feature.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <ul>
@@ -9081,7 +9200,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 420. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 429. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9211,6 +9330,37 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>spec.networkObservability</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>object</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional: Configures the Network Observability Operator installation during cluster creation.</p>
+</div>
+<div class="paragraph">
+<p>You can configure this field in the <code>install-config.yaml</code> file before creating the cluster to control whether network observability is enabled by default.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation configuration is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use the <code>networkObservability</code> field.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 <div class="admonitionblock important">
@@ -9234,7 +9384,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 421. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 430. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -9299,7 +9449,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 422. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 431. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9462,7 +9612,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 423. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 432. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9513,7 +9663,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 424. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 433. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9564,7 +9714,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 425. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 434. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9671,7 +9821,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table id="gatewayConfig-object_installing-restricted-networks-ibm-z" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 426. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 435. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9765,7 +9915,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_installing-restricted-networks-ibm-z" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 427. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 436. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9810,7 +9960,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_installing-restricted-networks-ibm-z" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 428. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 437. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9855,7 +10005,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_installing-restricted-networks-ibm-z" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 429. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 438. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -9891,6 +10041,82 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </ul>
 </div>
 </div>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="nw-operator-cr-networkobservability_installing-restricted-networks-ibm-z" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 439. <code>networkObservability</code> object</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Field</th>
+<th class="tableblock halign-left valign-middle">Type</th>
+<th class="tableblock halign-left valign-middle">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>installationPolicy</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is installed during cluster creation. Valid values are:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>InstallAndEnable</code>: Install the Network Observability Operator and create a default <code>FlowCollector</code> configuration during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</li>
+<li>
+<p><code>NoAction</code>: Do not install the Network Observability Operator during cluster creation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>When the <code>networkObservability</code> field is omitted entirely (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: Network
+metadata:
+  name: cluster
+spec:
+  networkObservability:
+    installationPolicy: InstallAndEnable</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This field is only available when the <code>NetworkObservabilityInstall</code> feature gate is enabled. This is a Technology Preview feature.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <ul>
@@ -12881,7 +13107,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 430. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 440. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13011,6 +13237,37 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>spec.networkObservability</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>object</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional: Configures the Network Observability Operator installation during cluster creation.</p>
+</div>
+<div class="paragraph">
+<p>You can configure this field in the <code>install-config.yaml</code> file before creating the cluster to control whether network observability is enabled by default.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation configuration is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use the <code>networkObservability</code> field.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 <div class="admonitionblock important">
@@ -13034,7 +13291,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 431. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 441. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -13099,7 +13356,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 432. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 442. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13262,7 +13519,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 433. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 443. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13313,7 +13570,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 434. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 444. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13364,7 +13621,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 435. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 445. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13471,7 +13728,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 436. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 446. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13565,7 +13822,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 437. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 447. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13610,7 +13867,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 438. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 448. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13655,7 +13912,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 439. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 449. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -13691,6 +13948,82 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </ul>
 </div>
 </div>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="nw-operator-cr-networkobservability_install-on-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 450. <code>networkObservability</code> object</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Field</th>
+<th class="tableblock halign-left valign-middle">Type</th>
+<th class="tableblock halign-left valign-middle">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>installationPolicy</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is installed during cluster creation. Valid values are:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>InstallAndEnable</code>: Install the Network Observability Operator and create a default <code>FlowCollector</code> configuration during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</li>
+<li>
+<p><code>NoAction</code>: Do not install the Network Observability Operator during cluster creation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>When the <code>networkObservability</code> field is omitted entirely (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: Network
+metadata:
+  name: cluster
+spec:
+  networkObservability:
+    installationPolicy: InstallAndEnable</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This field is only available when the <code>NetworkObservabilityInstall</code> feature gate is enabled. This is a Technology Preview feature.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <ul>
@@ -16777,7 +17110,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 440. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 451. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -16907,6 +17240,37 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>spec.networkObservability</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>object</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional: Configures the Network Observability Operator installation during cluster creation.</p>
+</div>
+<div class="paragraph">
+<p>You can configure this field in the <code>install-config.yaml</code> file before creating the cluster to control whether network observability is enabled by default.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation configuration is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use the <code>networkObservability</code> field.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 <div class="admonitionblock important">
@@ -16930,7 +17294,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 441. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 452. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -16995,7 +17359,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 442. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 453. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -17158,7 +17522,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 443. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 454. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -17209,7 +17573,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 444. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 455. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -17260,7 +17624,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 445. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 456. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -17367,7 +17731,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table id="gatewayConfig-object_installing-restricted-networks-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 446. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 457. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -17461,7 +17825,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_installing-restricted-networks-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 447. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 458. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -17506,7 +17870,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_installing-restricted-networks-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 448. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 459. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -17551,7 +17915,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_installing-restricted-networks-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 449. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 460. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -17587,6 +17951,82 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </ul>
 </div>
 </div>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="nw-operator-cr-networkobservability_installing-restricted-networks-ibm-z-lpar" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 461. <code>networkObservability</code> object</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Field</th>
+<th class="tableblock halign-left valign-middle">Type</th>
+<th class="tableblock halign-left valign-middle">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>installationPolicy</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is installed during cluster creation. Valid values are:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>InstallAndEnable</code>: Install the Network Observability Operator and create a default <code>FlowCollector</code> configuration during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</li>
+<li>
+<p><code>NoAction</code>: Do not install the Network Observability Operator during cluster creation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>When the <code>networkObservability</code> field is omitted entirely (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: Network
+metadata:
+  name: cluster
+spec:
+  networkObservability:
+    installationPolicy: InstallAndEnable</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This field is only available when the <code>NetworkObservabilityInstall</code> feature gate is enabled. This is a Technology Preview feature.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <ul>
@@ -20635,7 +21075,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 450. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 462. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -20765,6 +21205,37 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>spec.networkObservability</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>object</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional: Configures the Network Observability Operator installation during cluster creation.</p>
+</div>
+<div class="paragraph">
+<p>You can configure this field in the <code>install-config.yaml</code> file before creating the cluster to control whether network observability is enabled by default.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation configuration is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use the <code>networkObservability</code> field.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 <div class="admonitionblock important">
@@ -20788,7 +21259,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 451. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 463. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -20853,7 +21324,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 452. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 464. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21016,7 +21487,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 453. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 465. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21067,7 +21538,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 454. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 466. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21118,7 +21589,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 455. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 467. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21225,7 +21696,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 456. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 468. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21319,7 +21790,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 457. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 469. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21364,7 +21835,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 458. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 470. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21409,7 +21880,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 459. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 471. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -21445,6 +21916,82 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </ul>
 </div>
 </div>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="nw-operator-cr-networkobservability_install-on-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 472. <code>networkObservability</code> object</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Field</th>
+<th class="tableblock halign-left valign-middle">Type</th>
+<th class="tableblock halign-left valign-middle">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>installationPolicy</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is installed during cluster creation. Valid values are:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>InstallAndEnable</code>: Install the Network Observability Operator and create a default <code>FlowCollector</code> configuration during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</li>
+<li>
+<p><code>NoAction</code>: Do not install the Network Observability Operator during cluster creation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>When the <code>networkObservability</code> field is omitted entirely (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: Network
+metadata:
+  name: cluster
+spec:
+  networkObservability:
+    installationPolicy: InstallAndEnable</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This field is only available when the <code>NetworkObservabilityInstall</code> feature gate is enabled. This is a Technology Preview feature.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <ul>
@@ -24569,7 +25116,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 460. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 473. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -24699,6 +25246,37 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>spec.networkObservability</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>object</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional: Configures the Network Observability Operator installation during cluster creation.</p>
+</div>
+<div class="paragraph">
+<p>You can configure this field in the <code>install-config.yaml</code> file before creating the cluster to control whether network observability is enabled by default.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation configuration is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use the <code>networkObservability</code> field.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 <div class="admonitionblock important">
@@ -24722,7 +25300,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 461. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 474. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -24787,7 +25365,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 462. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 475. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -24950,7 +25528,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 463. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 476. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25001,7 +25579,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 464. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 477. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25052,7 +25630,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 465. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 478. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25159,7 +25737,7 @@ with the RHCOS trust bundle. The <code>additionalTrustBundle</code> field is req
 </tbody>
 </table>
 <table id="gatewayConfig-object_installing-restricted-networks-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 466. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 479. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25253,7 +25831,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_installing-restricted-networks-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 467. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 480. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25298,7 +25876,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_installing-restricted-networks-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 468. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 481. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25343,7 +25921,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_installing-restricted-networks-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 469. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 482. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -25379,6 +25957,82 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </ul>
 </div>
 </div>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="nw-operator-cr-networkobservability_installing-restricted-networks-ibm-z-kvm" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 483. <code>networkObservability</code> object</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Field</th>
+<th class="tableblock halign-left valign-middle">Type</th>
+<th class="tableblock halign-left valign-middle">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>installationPolicy</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is installed during cluster creation. Valid values are:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>InstallAndEnable</code>: Install the Network Observability Operator and create a default <code>FlowCollector</code> configuration during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</li>
+<li>
+<p><code>NoAction</code>: Do not install the Network Observability Operator during cluster creation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>When the <code>networkObservability</code> field is omitted entirely (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: Network
+metadata:
+  name: cluster
+spec:
+  networkObservability:
+    installationPolicy: InstallAndEnable</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This field is only available when the <code>NetworkObservabilityInstall</code> feature gate is enabled. This is a Technology Preview feature.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <ul>
@@ -27507,7 +28161,7 @@ openshift-authentication-operator authentication-operator-69d5d8bf84-vh2n8      
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 470. Required parameters</caption>
+<caption class="title">Table 484. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -27696,7 +28350,7 @@ openshift-authentication-operator authentication-operator-69d5d8bf84-vh2n8      
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 471. Network parameters</caption>
+<caption class="title">Table 485. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -27950,6 +28604,50 @@ openshift-authentication-operator authentication-operator-69d5d8bf84-vh2n8      
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>networking:
+  networkObservability:
+    installationPolicy:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is automatically installed during cluster creation. This field is available only when the <code>NetworkObservabilityInstall</code> feature gate is enabled.</p>
+</div>
+<div class="paragraph">
+<p>When set to <code>InstallAndEnable</code>, the Cluster Network Operator (CNO) installs the Network Observability Operator and creates a default <code>FlowCollector</code> during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</div>
+<div class="paragraph">
+<p>When set to <code>NoAction</code>, automatic installation does not occur.</p>
+</div>
+<div class="paragraph">
+<p>When omitted (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use this field. For more information, see "Install network observability during cluster creation" in <em>Network observability</em>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>InstallAndEnable</code>, <code>NoAction</code>, or omit the field for default behavior.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -27959,7 +28657,7 @@ openshift-authentication-operator authentication-operator-69d5d8bf84-vh2n8      
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 472. Optional parameters</caption>
+<caption class="title">Table 486. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -29093,7 +29791,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-20 12:57:13 +0100
+Last updated 2026-10-21 11:29:03 +0100
 </div>
 </div>
 <style>

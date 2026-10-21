@@ -814,6 +814,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scale-workloads-in-a-hosted-cluster-con_scale-workloads-in-a-hosted-cluster.html">Scale workloads in a hosted cluster</a>
 </li>
+<li><a href="hcp-manage-bm-con_manage-hosted-clusters-on-bare-metal.html">Manage hosted control planes on bare metal</a>
+</li>
+<li><a href="hcp-manage-virt-con_manage-hosted-clusters-on-openshift-virtualization.html">Manage hosted control planes on OpenShift Virtualization</a>
+</li>
+<li><a href="hcp-manage-aws-con_manage-hosted-clusters-on-aws.html">Manage hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-manage-ibm-power-con_manage-hosted-clusters-on-ibm-power.html">Manage hosted control planes on IBM Power</a>
+</li>
+<li><a href="hcp-manage-non-bm-con_manage-hosted-clusters-on-non-bare-metal.html">Manage hosted control planes on non-bare-metal agent machines</a>
+</li>
+<li><a href="hcp-manage-openstack-con_manage-hosted-clusters-on-openstack.html">Manage hosted control planes on RHOSP</a>
+</li>
 <li><a href="multi-architecture-installing-using-cli_schedule-workloads-on-multi-architecture-clusters.html">Installing the Multiarch Tuning Operator by using the CLI</a>
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
@@ -2373,7 +2385,7 @@ However, you must have an active subscription to access this page.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 215. Minimum required hosts</caption>
+<caption class="title">Table 218. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2426,7 +2438,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 216. Minimum resource requirements</caption>
+<caption class="title">Table 219. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -2723,7 +2735,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p>You must provide a suitable VPC and subnets that allow communication to your machines.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 217. Required VPC components</caption>
+<caption class="title">Table 220. Required VPC components</caption>
 <colgroup>
 <col style="width: 13.3333%;">
 <col style="width: 46.6666%;">
@@ -3074,7 +3086,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p>The cluster also requires load balancers and listeners for port 6443, which the Kubernetes API and its extensions require, and port 22623, which the Ignition config files for new machines require. The targets are the control plane nodes. Port 6443 must be accessible to both clients external to the cluster and nodes within the cluster. Port 22623 must be accessible to nodes within the cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 218. Required DNS and load balancing components</caption>
+<caption class="title">Table 221. Required DNS and load balancing components</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -3446,7 +3458,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p>The control plane and worker machines require access to the following ports:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 219. Security groups</caption>
+<caption class="title">Table 222. Security groups</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3704,7 +3716,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p>The control plane machines require the following Ingress groups. Each Ingress group is an <code>AWS::EC2::SecurityGroupIngress</code> resource.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 220. Control plane Ingress</caption>
+<caption class="title">Table 223. Control plane Ingress</caption>
 <colgroup>
 <col style="width: 18.1818%;">
 <col style="width: 45.4545%;">
@@ -4608,7 +4620,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p>The worker machines require the following Ingress groups. Each Ingress group is an <code>AWS::EC2::SecurityGroupIngress</code> resource.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 221. Worker Ingress</caption>
+<caption class="title">Table 224. Worker Ingress</caption>
 <colgroup>
 <col style="width: 18.1818%;">
 <col style="width: 45.4545%;">
@@ -5470,7 +5482,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p>You must grant the machines permissions in AWS. The provided CloudFormation templates grant the machines <code>Allow</code> permissions for the following <code>AWS::IAM::Role</code> objects and provide an <code>AWS::IAM::InstanceProfile</code> for each set of roles. If you do not use the templates, you can grant the machines the following broad permissions or the following individual permissions.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 222. Roles and instance profiles</caption>
+<caption class="title">Table 225. Roles and instance profiles</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -6716,7 +6728,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 223. Required parameters</caption>
+<caption class="title">Table 226. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6905,7 +6917,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 224. Network parameters</caption>
+<caption class="title">Table 227. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7172,6 +7184,50 @@ The prefix length for an IPv6 block is between <code>0</code> and <code>128</cod
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>networking:
+  networkObservability:
+    installationPolicy:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is automatically installed during cluster creation. This field is available only when the <code>NetworkObservabilityInstall</code> feature gate is enabled.</p>
+</div>
+<div class="paragraph">
+<p>When set to <code>InstallAndEnable</code>, the Cluster Network Operator (CNO) installs the Network Observability Operator and creates a default <code>FlowCollector</code> during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</div>
+<div class="paragraph">
+<p>When set to <code>NoAction</code>, automatic installation does not occur.</p>
+</div>
+<div class="paragraph">
+<p>When omitted (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use this field. For more information, see "Install network observability during cluster creation" in <em>Network observability</em>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>InstallAndEnable</code>, <code>NoAction</code>, or omit the field for default behavior.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -7181,7 +7237,7 @@ The prefix length for an IPv6 block is between <code>0</code> and <code>128</cod
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 225. Optional parameters</caption>
+<caption class="title">Table 228. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7842,7 +7898,7 @@ If you are installing on Google Cloud into a shared virtual private cloud (VPC),
 <p>Optional AWS configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 226. Optional AWS parameters</caption>
+<caption class="title">Table 229. Optional AWS parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8725,7 +8781,7 @@ For more information about the support scope of Red Hat Technology Preview featu
 <p>Additional Google Cloud configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 227. Additional Google Cloud parameters</caption>
+<caption class="title">Table 230. Additional Google Cloud parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -13034,7 +13090,7 @@ it to install multiple clusters.</p>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 228. Minimum resource requirements</caption>
+<caption class="title">Table 231. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -14483,7 +14539,7 @@ credentialsMode: Manual
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 229. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 232. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14613,6 +14669,37 @@ credentialsMode: Manual
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>spec.networkObservability</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>object</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional: Configures the Network Observability Operator installation during cluster creation.</p>
+</div>
+<div class="paragraph">
+<p>You can configure this field in the <code>install-config.yaml</code> file before creating the cluster to control whether network observability is enabled by default.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation configuration is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use the <code>networkObservability</code> field.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 <div class="admonitionblock important">
@@ -14636,7 +14723,7 @@ credentialsMode: Manual
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 230. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 233. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -14701,7 +14788,7 @@ credentialsMode: Manual
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 231. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 234. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14864,7 +14951,7 @@ credentialsMode: Manual
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 232. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 235. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14915,7 +15002,7 @@ credentialsMode: Manual
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 233. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 236. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -14966,7 +15053,7 @@ credentialsMode: Manual
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 234. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 237. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15073,7 +15160,7 @@ credentialsMode: Manual
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-aws-with-customizations-ipi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 235. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 238. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15167,7 +15254,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-aws-with-customizations-ipi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 236. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 239. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15212,7 +15299,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-aws-with-customizations-ipi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 237. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 240. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15257,7 +15344,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-aws-with-customizations-ipi" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 238. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 241. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -15293,6 +15380,82 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </ul>
 </div>
 </div>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="nw-operator-cr-networkobservability_install-on-aws-with-customizations-ipi" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 242. <code>networkObservability</code> object</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Field</th>
+<th class="tableblock halign-left valign-middle">Type</th>
+<th class="tableblock halign-left valign-middle">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>installationPolicy</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is installed during cluster creation. Valid values are:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>InstallAndEnable</code>: Install the Network Observability Operator and create a default <code>FlowCollector</code> configuration during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</li>
+<li>
+<p><code>NoAction</code>: Do not install the Network Observability Operator during cluster creation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>When the <code>networkObservability</code> field is omitted entirely (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: Network
+metadata:
+  name: cluster
+spec:
+  networkObservability:
+    installationPolicy: InstallAndEnable</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This field is only available when the <code>NetworkObservabilityInstall</code> feature gate is enabled. This is a Technology Preview feature.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <ul>
@@ -16247,7 +16410,7 @@ You can use a private hosted zone from another account by sharing it with the ac
 machines.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 239. Required VPC components</caption>
+<caption class="title">Table 243. Required VPC components</caption>
 <colgroup>
 <col style="width: 13.3333%;">
 <col style="width: 46.6666%;">
@@ -16928,7 +17091,7 @@ it to install multiple clusters.</p>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 240. Minimum resource requirements</caption>
+<caption class="title">Table 244. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -19305,7 +19468,7 @@ You can use a private hosted zone from another account by sharing it with the ac
 machines.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 241. Required VPC components</caption>
+<caption class="title">Table 245. Required VPC components</caption>
 <colgroup>
 <col style="width: 13.3333%;">
 <col style="width: 46.6666%;">
@@ -19868,7 +20031,7 @@ cluster.</p>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 242. Minimum resource requirements</caption>
+<caption class="title">Table 246. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -22033,7 +22196,7 @@ You can use a private hosted zone from another account by sharing it with the ac
 machines.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 243. Required VPC components</caption>
+<caption class="title">Table 247. Required VPC components</caption>
 <colgroup>
 <col style="width: 13.3333%;">
 <col style="width: 46.6666%;">
@@ -22688,7 +22851,7 @@ it to install multiple clusters.</p>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 244. Minimum resource requirements</caption>
+<caption class="title">Table 248. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -25928,7 +26091,7 @@ AMI for an AWS region, such as <code>us-west-1</code>:</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 245. x86_64 RHCOS AMIs</caption>
+<caption class="title">Table 249. x86_64 RHCOS AMIs</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -27033,7 +27196,7 @@ AMI for an AWS region, such as <code>us-west-1</code>:</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 246. aarch64 RHCOS AMIs</caption>
+<caption class="title">Table 250. aarch64 RHCOS AMIs</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -31970,7 +32133,7 @@ AMI for an AWS region, such as <code>us-west-1</code>:</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 247. x86_64 RHCOS AMIs</caption>
+<caption class="title">Table 251. x86_64 RHCOS AMIs</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -33075,7 +33238,7 @@ AMI for an AWS region, such as <code>us-west-1</code>:</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 248. aarch64 RHCOS AMIs</caption>
+<caption class="title">Table 252. aarch64 RHCOS AMIs</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -36492,7 +36655,7 @@ pullSecret: '{"auths": ...}'</code></pre>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 249. Minimum resource requirements</caption>
+<caption class="title">Table 253. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -38782,7 +38945,7 @@ pullSecret: '{"auths": ...}'</code></pre>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 250. Minimum resource requirements</caption>
+<caption class="title">Table 254. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -42904,7 +43067,7 @@ You can use a private hosted zone from another account by sharing it with the ac
 machines.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 251. Required VPC components</caption>
+<caption class="title">Table 255. Required VPC components</caption>
 <colgroup>
 <col style="width: 13.3333%;">
 <col style="width: 46.6666%;">
@@ -43730,7 +43893,7 @@ platform:
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 252. Minimum resource requirements</caption>
+<caption class="title">Table 256. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -45996,7 +46159,7 @@ cluster.</p>
 <p>The following table summarizes the migration process by segmenting between the user-initiated steps in the process and the actions that the migration performs in response.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 253. Live migration of the cluster MTU</caption>
+<caption class="title">Table 257. Live migration of the cluster MTU</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -47751,7 +47914,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-20 12:57:13 +0100
+Last updated 2026-10-21 11:29:03 +0100
 </div>
 </div>
 <style>

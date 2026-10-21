@@ -814,6 +814,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scale-workloads-in-a-hosted-cluster-con_scale-workloads-in-a-hosted-cluster.html">Scale workloads in a hosted cluster</a>
 </li>
+<li><a href="hcp-manage-bm-con_manage-hosted-clusters-on-bare-metal.html">Manage hosted control planes on bare metal</a>
+</li>
+<li><a href="hcp-manage-virt-con_manage-hosted-clusters-on-openshift-virtualization.html">Manage hosted control planes on OpenShift Virtualization</a>
+</li>
+<li><a href="hcp-manage-aws-con_manage-hosted-clusters-on-aws.html">Manage hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-manage-ibm-power-con_manage-hosted-clusters-on-ibm-power.html">Manage hosted control planes on IBM Power</a>
+</li>
+<li><a href="hcp-manage-non-bm-con_manage-hosted-clusters-on-non-bare-metal.html">Manage hosted control planes on non-bare-metal agent machines</a>
+</li>
+<li><a href="hcp-manage-openstack-con_manage-hosted-clusters-on-openstack.html">Manage hosted control planes on RHOSP</a>
+</li>
 <li><a href="multi-architecture-installing-using-cli_schedule-workloads-on-multi-architecture-clusters.html">Installing the Multiarch Tuning Operator by using the CLI</a>
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
@@ -1897,7 +1909,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li>
 <p>Enable the following required API services in the project that hosts your cluster. You can also enable optional API services which are not required for installation. See <a href="https://cloud.google.com/service-usage/docs/enable-disable#enabling">Enabling services</a> in the Google Cloud documentation.</p>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 314. Required API services</caption>
+<caption class="title">Table 320. Required API services</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -2044,7 +2056,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 315. Optional API services</caption>
+<caption class="title">Table 321. Optional API services</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -2215,7 +2227,7 @@ uses the following resources. Note that some resources are required only during
 the bootstrap process and are removed after the cluster deploys.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 316. Google Cloud resources used in a default cluster</caption>
+<caption class="title">Table 322. Google Cloud resources used in a default cluster</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3173,7 +3185,7 @@ See <a href="https://cloud.google.com/iam/docs/creating-managing-service-account
 <p>The following roles are applied to the service accounts that the control plane and compute machines use:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 317. Google Cloud service account roles</caption>
+<caption class="title">Table 323. Google Cloud service account roles</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4747,7 +4759,7 @@ rules:
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 318. Required parameters</caption>
+<caption class="title">Table 324. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4884,7 +4896,7 @@ rules:
 <p>Only IPv4 addresses are supported.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 319. Network parameters</caption>
+<caption class="title">Table 325. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5135,6 +5147,50 @@ rules:
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>networking:
+  networkObservability:
+    installationPolicy:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is automatically installed during cluster creation. This field is available only when the <code>NetworkObservabilityInstall</code> feature gate is enabled.</p>
+</div>
+<div class="paragraph">
+<p>When set to <code>InstallAndEnable</code>, the Cluster Network Operator (CNO) installs the Network Observability Operator and creates a default <code>FlowCollector</code> during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</div>
+<div class="paragraph">
+<p>When set to <code>NoAction</code>, automatic installation does not occur.</p>
+</div>
+<div class="paragraph">
+<p>When omitted (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use this field. For more information, see "Install network observability during cluster creation" in <em>Network observability</em>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>InstallAndEnable</code>, <code>NoAction</code>, or omit the field for default behavior.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -5144,7 +5200,7 @@ rules:
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 320. Optional parameters</caption>
+<caption class="title">Table 326. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5777,7 +5833,7 @@ Supported values are <code>3</code>, or <code>1</code> when deploying single-nod
 <p>Additional Google Cloud configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 321. Additional Google Cloud parameters</caption>
+<caption class="title">Table 327. Additional Google Cloud parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8393,7 +8449,7 @@ it to install multiple clusters.</p>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 322. Minimum resource requirements</caption>
+<caption class="title">Table 328. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -10974,7 +11030,7 @@ spec:
 <p>The fields for the Cluster Network Operator (CNO) are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 323. Cluster Network Operator configuration object</caption>
+<caption class="title">Table 329. Cluster Network Operator configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -11104,6 +11160,37 @@ spec:
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>spec.networkObservability</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>object</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Optional: Configures the Network Observability Operator installation during cluster creation.</p>
+</div>
+<div class="paragraph">
+<p>You can configure this field in the <code>install-config.yaml</code> file before creating the cluster to control whether network observability is enabled by default.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation configuration is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use the <code>networkObservability</code> field.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 <div class="admonitionblock important">
@@ -11127,7 +11214,7 @@ spec:
 <p>The values for the <code>defaultNetwork</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 324. <code>defaultNetwork</code> object</caption>
+<caption class="title">Table 330. <code>defaultNetwork</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -11192,7 +11279,7 @@ spec:
 <p>The following table describes the configuration fields for the OVN-Kubernetes network plugin:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 325. <code>ovnKubernetesConfig</code> object</caption>
+<caption class="title">Table 331. <code>ovnKubernetesConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -11355,7 +11442,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 326. <code>ovnKubernetesConfig.ipv4</code> object</caption>
+<caption class="title">Table 332. <code>ovnKubernetesConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -11406,7 +11493,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 327. <code>ovnKubernetesConfig.ipv6</code> object</caption>
+<caption class="title">Table 333. <code>ovnKubernetesConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -11457,7 +11544,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 328. <code>policyAuditConfig</code> object</caption>
+<caption class="title">Table 334. <code>policyAuditConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -11564,7 +11651,7 @@ spec:
 </tbody>
 </table>
 <table id="gatewayConfig-object_install-on-gcp-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 329. <code>gatewayConfig</code> object</caption>
+<caption class="title">Table 335. <code>gatewayConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -11658,7 +11745,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv4-object_install-on-gcp-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 330. <code>gatewayConfig.ipv4</code> object</caption>
+<caption class="title">Table 336. <code>gatewayConfig.ipv4</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -11703,7 +11790,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="gatewayconfig-ipv6-object_install-on-gcp-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 331. <code>gatewayConfig.ipv6</code> object</caption>
+<caption class="title">Table 337. <code>gatewayConfig.ipv6</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -11748,7 +11835,7 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </tbody>
 </table>
 <table id="nw-operator-cr-ipsec_install-on-gcp-with-customizations" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 332. <code>ipsecConfig</code> object</caption>
+<caption class="title">Table 338. <code>ipsecConfig</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -11784,6 +11871,82 @@ If you set this field to <code>true</code>, you do not receive the performance b
 </ul>
 </div>
 </div>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="nw-operator-cr-networkobservability_install-on-gcp-with-customizations" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 339. <code>networkObservability</code> object</caption>
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Field</th>
+<th class="tableblock halign-left valign-middle">Type</th>
+<th class="tableblock halign-left valign-middle">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>installationPolicy</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is installed during cluster creation. Valid values are:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>InstallAndEnable</code>: Install the Network Observability Operator and create a default <code>FlowCollector</code> configuration during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</li>
+<li>
+<p><code>NoAction</code>: Do not install the Network Observability Operator during cluster creation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>When the <code>networkObservability</code> field is omitted entirely (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1
+kind: Network
+metadata:
+  name: cluster
+spec:
+  networkObservability:
+    installationPolicy: InstallAndEnable</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This field is only available when the <code>NetworkObservabilityInstall</code> feature gate is enabled. This is a Technology Preview feature.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <ul>
@@ -12740,7 +12903,7 @@ it to install multiple clusters.</p>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 333. Minimum resource requirements</caption>
+<caption class="title">Table 340. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -17673,7 +17836,7 @@ INFO Time elapsed: 36m22s</code></pre>
 <li>
 <p>Enable the following required API services in the project that hosts your cluster. You can also enable optional API services which are not required for installation. See <a href="https://cloud.google.com/service-usage/docs/enable-disable#enabling">Enabling services</a> in the Google Cloud documentation.</p>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 334. Required API services</caption>
+<caption class="title">Table 341. Required API services</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -17820,7 +17983,7 @@ INFO Time elapsed: 36m22s</code></pre>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 335. Optional API services</caption>
+<caption class="title">Table 342. Optional API services</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -17959,7 +18122,7 @@ uses the following resources. Note that some resources are required only during
 the bootstrap process and are removed after the cluster deploys.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 336. Google Cloud resources used in a default cluster</caption>
+<caption class="title">Table 343. Google Cloud resources used in a default cluster</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -18719,7 +18882,7 @@ See <a href="https://cloud.google.com/iam/docs/creating-managing-service-account
 <p>The following roles are applied to the service accounts that the control plane and compute machines use:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 337. Google Cloud service account roles</caption>
+<caption class="title">Table 344. Google Cloud service account roles</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -19073,7 +19236,7 @@ in the Google Cloud documentation.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 338. Minimum required hosts</caption>
+<caption class="title">Table 345. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -19127,7 +19290,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 339. Minimum resource requirements</caption>
+<caption class="title">Table 346. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -20135,7 +20298,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 340. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 347. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -20467,7 +20630,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 341. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 348. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -20516,7 +20679,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 342. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 349. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -23025,7 +23188,7 @@ cluster.</p>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 343. Minimum resource requirements</caption>
+<caption class="title">Table 350. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -25503,7 +25666,7 @@ INFO Time elapsed: 36m22s</code></pre>
 <p>The following GCD sovereign cloud regions are supported for Red&#160;Hat OpenShift Container Platform installation:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 344. GCD regions</caption>
+<caption class="title">Table 351. GCD regions</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -26499,7 +26662,7 @@ sshKey: 'ssh-rsa AAAA...'</code></pre>
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 345. Minimum resource requirements</caption>
+<caption class="title">Table 352. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -27336,7 +27499,7 @@ metadata:
 <li>
 <p>Enable the following required API services in the project that hosts your cluster. You can also enable optional API services which are not required for installation. See <a href="https://cloud.google.com/service-usage/docs/enable-disable#enabling">Enabling services</a> in the Google Cloud documentation.</p>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 346. Required API services</caption>
+<caption class="title">Table 353. Required API services</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -27483,7 +27646,7 @@ metadata:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 347. Optional API services</caption>
+<caption class="title">Table 354. Optional API services</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -27676,7 +27839,7 @@ uses the following resources. Note that some resources are required only during
 the bootstrap process and are removed after the cluster deploys.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 348. Google Cloud resources used in a default cluster</caption>
+<caption class="title">Table 355. Google Cloud resources used in a default cluster</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -28437,7 +28600,7 @@ See <a href="https://cloud.google.com/iam/docs/creating-managing-service-account
 <p>The following roles are applied to the service accounts that the control plane and compute machines use:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 349. Google Cloud service account roles</caption>
+<caption class="title">Table 356. Google Cloud service account roles</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -29573,7 +29736,7 @@ in the Google Cloud documentation.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 350. Minimum required hosts</caption>
+<caption class="title">Table 357. Minimum required hosts</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -29627,7 +29790,7 @@ See <a href="https://access.redhat.com/articles/rhel-limits">Red Hat Enterprise 
 <p>To ensure that your Red&#160;Hat OpenShift Container Platform cluster runs as expected, each cluster machine must meet minimum CPU, memory, and storage requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 351. Minimum resource requirements</caption>
+<caption class="title">Table 358. Minimum resource requirements</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -31069,7 +31232,7 @@ for platform containers and provide telemetry data to Red Hat.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 352. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 359. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -31401,7 +31564,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 353. Ports used for all-machine to control plane communications</caption>
+<caption class="title">Table 360. Ports used for all-machine to control plane communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -31450,7 +31613,7 @@ the Cluster Version Operator on port <code>9099</code>.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 354. Ports used for control plane machine to control plane machine communications</caption>
+<caption class="title">Table 361. Ports used for control plane machine to control plane machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -33673,7 +33836,7 @@ cluster.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-20 12:57:13 +0100
+Last updated 2026-10-21 11:29:03 +0100
 </div>
 </div>
 <style>

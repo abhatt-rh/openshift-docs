@@ -815,6 +815,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scale-workloads-in-a-hosted-cluster-con_scale-workloads-in-a-hosted-cluster.html">Scale workloads in a hosted cluster</a>
 </li>
+<li><a href="hcp-manage-bm-con_manage-hosted-clusters-on-bare-metal.html">Manage hosted control planes on bare metal</a>
+</li>
+<li><a href="hcp-manage-virt-con_manage-hosted-clusters-on-openshift-virtualization.html">Manage hosted control planes on OpenShift Virtualization</a>
+</li>
+<li><a href="hcp-manage-aws-con_manage-hosted-clusters-on-aws.html">Manage hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-manage-ibm-power-con_manage-hosted-clusters-on-ibm-power.html">Manage hosted control planes on IBM Power</a>
+</li>
+<li><a href="hcp-manage-non-bm-con_manage-hosted-clusters-on-non-bare-metal.html">Manage hosted control planes on non-bare-metal agent machines</a>
+</li>
+<li><a href="hcp-manage-openstack-con_manage-hosted-clusters-on-openstack.html">Manage hosted control planes on RHOSP</a>
+</li>
 <li><a href="multi-architecture-installing-using-cli_schedule-workloads-on-multi-architecture-clusters.html">Installing the Multiarch Tuning Operator by using the CLI</a>
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
@@ -1869,7 +1881,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The following table summarizes the different Red&#160;Hat OpenShift Container Platform strategies and their outcomes:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 910. Scoring strategy summary</caption>
+<caption class="title">Table 930. Scoring strategy summary</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 37.5%;">
@@ -2510,21 +2522,41 @@ spec:
 <div class="sect4">
 <h5 id="cnf-creating-nrop-cr_schedule-numa-aware-workloads">Create the NUMAResourcesOperator custom resource</h5>
 <div class="paragraph _abstract">
-<p>After you have installed the NUMA Resources Operator, you can create the <code>NUMAResourcesOperator</code> custom resource (CR). This CR instructs the NUMA Resources Operator to install all the cluster infrastructure that is needed to support the NUMA-aware scheduler, including daemon sets and APIs.</p>
+<p>After you have installed the NUMA Resources Operator, you can create the <code>NUMAResourcesOperator</code> custom resource (CR). This CR instructs the NUMA Resources Operator to deploy the Resource Topology Exporter (RTE) as a daemon set on worker nodes and install all the cluster infrastructure that is needed to support the NUMA-aware scheduler.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>Installed the OpenShift CLI (<code>oc</code>).</p>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
 </li>
 <li>
-<p>Logged in as a user with <code>cluster-admin</code> privileges.</p>
+<p>You have logged in as a user with <code>cluster-admin</code> privileges.</p>
 </li>
 <li>
-<p>Installed the NUMA Resources Operator.</p>
+<p>You have installed the NUMA Resources Operator.</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Only cluster administrators should create or modify <code>NUMAResourcesOperator</code> custom resources.
+The Resource Topology Exporter (RTE) runs as a daemon set on worker nodes with elevated read privileges that allow it to discover hardware topology information, observe node resources, and report NUMA zone details.</p>
+</div>
+<div class="paragraph">
+<p>The <code>spec.imageSpec</code> field in the <code>NUMAResourcesOperator</code> custom resource controls which container image runs with these RTE privileges on worker nodes.
+Granting non-admin users write access to the <code>NUMAResourcesOperator</code> resource creates a security risk.
+An attacker with write access could substitute a malicious container image and potentially access sensitive node information or cluster topology data.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
@@ -2564,6 +2596,20 @@ spec:
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f nrop.yaml</code></pre>
 </div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Creating the <code>NUMAResourcesOperator</code> custom resource automatically deploys the Resource Topology Exporter (RTE) as a daemon set on the configured worker nodes. The RTE collects NUMA topology information and makes it available to the NUMA-aware scheduler.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </li>
 </ol>
 </div>
@@ -2591,6 +2637,51 @@ spec:
           machineconfiguration.openshift.io/role: worker-other
 # ...</code></pre>
 </div>
+</div>
+</li>
+<li>
+<p>Optional: When you need to use a non-default Resource Topology Exporter (RTE) image, you can specify a custom image using the <code>spec.imageSpec</code> field:</p>
+<div class="listingblock">
+<div class="title">Example YAML definition for a <code>NUMAResourcesOperator</code> CR with custom RTE image</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: nodetopology.openshift.io/v1
+kind: NUMAResourcesOperator
+metadata:
+  name: numaresourcesoperator
+spec:
+  imageSpec: "registry.example.com/openshift4/ose-numaresources-operator@sha256:abcd1234..."
+  nodeGroups:
+  - machineConfigPoolSelector:
+      matchLabels:
+        pools.operator.machineconfiguration.openshift.io/worker: ""
+# ...</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>spec.imageSpec</code> field is optional. If not specified, the operator uses the default RTE image for your Red&#160;Hat OpenShift Container Platform release.
+Custom operand image override is restricted by default.
+To enable custom image override, set <code>EXPORTER_IMAGE_RESTRICTION=false</code> in the Operator&#8217;s environment variables.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For standard deployments, including disconnected environments that use image mirroring (ICSP or IDMS), omit the <code>spec.imageSpec</code> field to use the default RTE image.
+The cluster&#8217;s image mirroring configuration automatically redirects the default image to your internal registry.
+Only specify <code>spec.imageSpec</code> when you need to override the default image with a different version or custom build.
+When specifying a custom image, use a digest-based reference (SHA256) rather than a tag for security and reproducibility.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ol>
@@ -2629,6 +2720,20 @@ pod/numaresourcesoperator-worker-7d96r                  2/2     Running   0     
 pod/numaresourcesoperator-worker-crsht                  2/2     Running   0          97s
 pod/numaresourcesoperator-worker-jp9mw                  2/2     Running   0          97s</code></pre>
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>numaresourcesoperator-worker-*</code> pods are the Resource Topology Exporter (RTE) daemon set instances running on each configured worker node.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </li>
 </ol>
@@ -2822,6 +2927,37 @@ pod/numaresourcesoperator-democluster-jp9mw             2/2     Running   0     
 <div class="paragraph _abstract">
 <p>To optimize the placement of high-performance workloads, deploy the NUMA-aware secondary pod scheduler. This component aligns pods with specific NUMA zones to ensure efficient resource utilization in your cluster.</p>
 </div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>You have logged in as a user with <code>cluster-admin</code> privileges.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Only cluster administrators should create or modify <code>NUMAResourcesScheduler</code> custom resources.
+The NUMA Resources scheduler runs with elevated privileges that allow it to bind pods to nodes, observe all pods and nodes across the cluster, and make scheduling decisions that affect workload placement.</p>
+</div>
+<div class="paragraph">
+<p>The <code>spec.imageSpec</code> field in the <code>NUMAResourcesScheduler</code> custom resource controls which container image runs with these scheduler privileges.
+Granting non-admin users write access to the <code>NUMAResourcesScheduler</code> resource creates a privilege escalation risk.
+An attacker with write access could substitute a malicious container image and run arbitrary code with scheduler privileges.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
@@ -2846,10 +2982,8 @@ spec:
 <ul>
 <li>
 <p><code>spec.imageSpec</code>: In a disconnected environment, make sure to configure the resolution of this image by either:</p>
-</li>
-</ul>
-</div>
-</li>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
 <li>
 <p>Create an <code>ImageTagMirrorSet</code> custom resource (CR). For more information, see "Configuring image registry repository mirroring" in the "Additional resources" section.</p>
 </li>
@@ -2876,6 +3010,12 @@ spec:
 </td>
 </tr>
 </table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ol>
@@ -5392,21 +5532,41 @@ spec:
 <div class="sect5">
 <h6 id="cnf-creating-nrop-cr_install-and-configure-numa-resources-operator">Create the NUMAResourcesOperator custom resource</h6>
 <div class="paragraph _abstract">
-<p>After you have installed the NUMA Resources Operator, you can create the <code>NUMAResourcesOperator</code> custom resource (CR). This CR instructs the NUMA Resources Operator to install all the cluster infrastructure that is needed to support the NUMA-aware scheduler, including daemon sets and APIs.</p>
+<p>After you have installed the NUMA Resources Operator, you can create the <code>NUMAResourcesOperator</code> custom resource (CR). This CR instructs the NUMA Resources Operator to deploy the Resource Topology Exporter (RTE) as a daemon set on worker nodes and install all the cluster infrastructure that is needed to support the NUMA-aware scheduler.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>Installed the OpenShift CLI (<code>oc</code>).</p>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
 </li>
 <li>
-<p>Logged in as a user with <code>cluster-admin</code> privileges.</p>
+<p>You have logged in as a user with <code>cluster-admin</code> privileges.</p>
 </li>
 <li>
-<p>Installed the NUMA Resources Operator.</p>
+<p>You have installed the NUMA Resources Operator.</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Only cluster administrators should create or modify <code>NUMAResourcesOperator</code> custom resources.
+The Resource Topology Exporter (RTE) runs as a daemon set on worker nodes with elevated read privileges that allow it to discover hardware topology information, observe node resources, and report NUMA zone details.</p>
+</div>
+<div class="paragraph">
+<p>The <code>spec.imageSpec</code> field in the <code>NUMAResourcesOperator</code> custom resource controls which container image runs with these RTE privileges on worker nodes.
+Granting non-admin users write access to the <code>NUMAResourcesOperator</code> resource creates a security risk.
+An attacker with write access could substitute a malicious container image and potentially access sensitive node information or cluster topology data.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
@@ -5446,6 +5606,20 @@ spec:
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f nrop.yaml</code></pre>
 </div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Creating the <code>NUMAResourcesOperator</code> custom resource automatically deploys the Resource Topology Exporter (RTE) as a daemon set on the configured worker nodes. The RTE collects NUMA topology information and makes it available to the NUMA-aware scheduler.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </li>
 </ol>
 </div>
@@ -5473,6 +5647,51 @@ spec:
           machineconfiguration.openshift.io/role: worker-other
 # ...</code></pre>
 </div>
+</div>
+</li>
+<li>
+<p>Optional: When you need to use a non-default Resource Topology Exporter (RTE) image, you can specify a custom image using the <code>spec.imageSpec</code> field:</p>
+<div class="listingblock">
+<div class="title">Example YAML definition for a <code>NUMAResourcesOperator</code> CR with custom RTE image</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: nodetopology.openshift.io/v1
+kind: NUMAResourcesOperator
+metadata:
+  name: numaresourcesoperator
+spec:
+  imageSpec: "registry.example.com/openshift4/ose-numaresources-operator@sha256:abcd1234..."
+  nodeGroups:
+  - machineConfigPoolSelector:
+      matchLabels:
+        pools.operator.machineconfiguration.openshift.io/worker: ""
+# ...</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>spec.imageSpec</code> field is optional. If not specified, the operator uses the default RTE image for your Red&#160;Hat OpenShift Container Platform release.
+Custom operand image override is restricted by default.
+To enable custom image override, set <code>EXPORTER_IMAGE_RESTRICTION=false</code> in the Operator&#8217;s environment variables.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For standard deployments, including disconnected environments that use image mirroring (ICSP or IDMS), omit the <code>spec.imageSpec</code> field to use the default RTE image.
+The cluster&#8217;s image mirroring configuration automatically redirects the default image to your internal registry.
+Only specify <code>spec.imageSpec</code> when you need to override the default image with a different version or custom build.
+When specifying a custom image, use a digest-based reference (SHA256) rather than a tag for security and reproducibility.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ol>
@@ -5511,6 +5730,20 @@ pod/numaresourcesoperator-worker-7d96r                  2/2     Running   0     
 pod/numaresourcesoperator-worker-crsht                  2/2     Running   0          97s
 pod/numaresourcesoperator-worker-jp9mw                  2/2     Running   0          97s</code></pre>
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>numaresourcesoperator-worker-*</code> pods are the Resource Topology Exporter (RTE) daemon set instances running on each configured worker node.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </li>
 </ol>
@@ -5704,6 +5937,37 @@ pod/numaresourcesoperator-democluster-jp9mw             2/2     Running   0     
 <div class="paragraph _abstract">
 <p>To optimize the placement of high-performance workloads, deploy the NUMA-aware secondary pod scheduler. This component aligns pods with specific NUMA zones to ensure efficient resource utilization in your cluster.</p>
 </div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>You have logged in as a user with <code>cluster-admin</code> privileges.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Only cluster administrators should create or modify <code>NUMAResourcesScheduler</code> custom resources.
+The NUMA Resources scheduler runs with elevated privileges that allow it to bind pods to nodes, observe all pods and nodes across the cluster, and make scheduling decisions that affect workload placement.</p>
+</div>
+<div class="paragraph">
+<p>The <code>spec.imageSpec</code> field in the <code>NUMAResourcesScheduler</code> custom resource controls which container image runs with these scheduler privileges.
+Granting non-admin users write access to the <code>NUMAResourcesScheduler</code> resource creates a privilege escalation risk.
+An attacker with write access could substitute a malicious container image and run arbitrary code with scheduler privileges.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
@@ -5728,10 +5992,8 @@ spec:
 <ul>
 <li>
 <p><code>spec.imageSpec</code>: In a disconnected environment, make sure to configure the resolution of this image by either:</p>
-</li>
-</ul>
-</div>
-</li>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
 <li>
 <p>Create an <code>ImageTagMirrorSet</code> custom resource (CR). For more information, see "Configuring image registry repository mirroring" in the "Additional resources" section.</p>
 </li>
@@ -5758,6 +6020,12 @@ spec:
 </td>
 </tr>
 </table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ol>
@@ -6227,7 +6495,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-20 12:57:13 +0100
+Last updated 2026-10-21 11:29:03 +0100
 </div>
 </div>
 <style>

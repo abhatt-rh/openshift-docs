@@ -814,6 +814,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scale-workloads-in-a-hosted-cluster-con_scale-workloads-in-a-hosted-cluster.html">Scale workloads in a hosted cluster</a>
 </li>
+<li><a href="hcp-manage-bm-con_manage-hosted-clusters-on-bare-metal.html">Manage hosted control planes on bare metal</a>
+</li>
+<li><a href="hcp-manage-virt-con_manage-hosted-clusters-on-openshift-virtualization.html">Manage hosted control planes on OpenShift Virtualization</a>
+</li>
+<li><a href="hcp-manage-aws-con_manage-hosted-clusters-on-aws.html">Manage hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-manage-ibm-power-con_manage-hosted-clusters-on-ibm-power.html">Manage hosted control planes on IBM Power</a>
+</li>
+<li><a href="hcp-manage-non-bm-con_manage-hosted-clusters-on-non-bare-metal.html">Manage hosted control planes on non-bare-metal agent machines</a>
+</li>
+<li><a href="hcp-manage-openstack-con_manage-hosted-clusters-on-openstack.html">Manage hosted control planes on RHOSP</a>
+</li>
 <li><a href="multi-architecture-installing-using-cli_schedule-workloads-on-multi-architecture-clusters.html">Installing the Multiarch Tuning Operator by using the CLI</a>
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
@@ -2094,7 +2106,7 @@ fi</code></pre>
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 362. Required parameters</caption>
+<caption class="title">Table 369. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2298,7 +2310,7 @@ The string must be 14 characters or fewer long.</p>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 363. Network parameters</caption>
+<caption class="title">Table 370. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2549,6 +2561,50 @@ The string must be 14 characters or fewer long.</p>
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>networking:
+  networkObservability:
+    installationPolicy:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is automatically installed during cluster creation. This field is available only when the <code>NetworkObservabilityInstall</code> feature gate is enabled.</p>
+</div>
+<div class="paragraph">
+<p>When set to <code>InstallAndEnable</code>, the Cluster Network Operator (CNO) installs the Network Observability Operator and creates a default <code>FlowCollector</code> during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</div>
+<div class="paragraph">
+<p>When set to <code>NoAction</code>, automatic installation does not occur.</p>
+</div>
+<div class="paragraph">
+<p>When omitted (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use this field. For more information, see "Install network observability during cluster creation" in <em>Network observability</em>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>InstallAndEnable</code>, <code>NoAction</code>, or omit the field for default behavior.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -2558,7 +2614,7 @@ The string must be 14 characters or fewer long.</p>
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 364. Optional parameters</caption>
+<caption class="title">Table 371. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3166,7 +3222,7 @@ Supported values are <code>3</code>, or <code>1</code> when deploying single-nod
 <p>Additional RHOSP configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 365. Additional RHOSP parameters</caption>
+<caption class="title">Table 372. Additional RHOSP parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3417,7 +3473,7 @@ Supported values are <code>3</code>, or <code>1</code> when deploying single-nod
 <p>Optional RHOSP configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 366. Optional RHOSP parameters</caption>
+<caption class="title">Table 373. Optional RHOSP parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4942,7 +4998,7 @@ For the Amphora provider the value can be <code>ROUND_ROBIN</code>, <code>LEAST_
 <p>The CCM Operator overrides specific options, which you might recognize from configuring RHOSP. Do not configure these options. The options are for informational purposes only.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 367. Options overridden by the CCM Operator</caption>
+<caption class="title">Table 374. Options overridden by the CCM Operator</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5063,7 +5119,7 @@ For the Amphora provider the value can be <code>ROUND_ROBIN</code>, <code>LEAST_
 <p>To support an Red&#160;Hat OpenShift Container Platform installation, your Red Hat OpenStack Platform (RHOSP) quota must meet certain requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 368. Recommended resources for a default Red&#160;Hat OpenShift Container Platform cluster on RHOSP</caption>
+<caption class="title">Table 375. Recommended resources for a default Red&#160;Hat OpenShift Container Platform cluster on RHOSP</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5392,7 +5448,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 369. Application Ingress load balancer</caption>
+<caption class="title">Table 376. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -8616,7 +8672,7 @@ spec:
 <p>To support an Red&#160;Hat OpenShift Container Platform installation, your Red Hat OpenStack Platform (RHOSP) quota must meet certain requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 370. Recommended resources for a default Red&#160;Hat OpenShift Container Platform cluster on RHOSP</caption>
+<caption class="title">Table 377. Recommended resources for a default Red&#160;Hat OpenShift Container Platform cluster on RHOSP</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -11854,7 +11910,7 @@ you cannot access the required image stream tags.</p>
 <p>To support an Red&#160;Hat OpenShift Container Platform installation, your Red Hat OpenStack Platform (RHOSP) quota must meet certain requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 371. Recommended resources for a default Red&#160;Hat OpenShift Container Platform cluster on RHOSP</caption>
+<caption class="title">Table 378. Recommended resources for a default Red&#160;Hat OpenShift Container Platform cluster on RHOSP</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -13859,7 +13915,7 @@ add the modules' repositories and then download them.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-20 12:57:13 +0100
+Last updated 2026-10-21 11:29:03 +0100
 </div>
 </div>
 <style>

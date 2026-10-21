@@ -815,6 +815,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scale-workloads-in-a-hosted-cluster-con_scale-workloads-in-a-hosted-cluster.html">Scale workloads in a hosted cluster</a>
 </li>
+<li><a href="hcp-manage-bm-con_manage-hosted-clusters-on-bare-metal.html">Manage hosted control planes on bare metal</a>
+</li>
+<li><a href="hcp-manage-virt-con_manage-hosted-clusters-on-openshift-virtualization.html">Manage hosted control planes on OpenShift Virtualization</a>
+</li>
+<li><a href="hcp-manage-aws-con_manage-hosted-clusters-on-aws.html">Manage hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-manage-ibm-power-con_manage-hosted-clusters-on-ibm-power.html">Manage hosted control planes on IBM Power</a>
+</li>
+<li><a href="hcp-manage-non-bm-con_manage-hosted-clusters-on-non-bare-metal.html">Manage hosted control planes on non-bare-metal agent machines</a>
+</li>
+<li><a href="hcp-manage-openstack-con_manage-hosted-clusters-on-openstack.html">Manage hosted control planes on RHOSP</a>
+</li>
 <li><a href="multi-architecture-installing-using-cli_schedule-workloads-on-multi-architecture-clusters.html">Installing the Multiarch Tuning Operator by using the CLI</a>
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
@@ -2122,7 +2134,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>An <code>olm.deprecations</code> schema entry contains one or more of the following <code>reference</code> types, which indicates the deprecation scope. After the Operator is installed, any specified messages can be viewed as status conditions on the related <code>Subscription</code> object.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 976. Deprecation <code>reference</code> types</caption>
+<caption class="title">Table 996. Deprecation <code>reference</code> types</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -2846,7 +2858,7 @@ docker push "$indexImage"</code></pre>
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 977. Global flags</caption>
+<caption class="title">Table 997. Global flags</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2897,7 +2909,7 @@ docker push "$indexImage"</code></pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 978. <code>generate</code> subcommands</caption>
+<caption class="title">Table 998. <code>generate</code> subcommands</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2916,7 +2928,7 @@ docker push "$indexImage"</code></pre>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 979. <code>generate</code> flags</caption>
+<caption class="title">Table 999. <code>generate</code> flags</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2963,7 +2975,7 @@ docker push "$indexImage"</code></pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 980. <code>generate dockerfile</code> flags</caption>
+<caption class="title">Table 1000. <code>generate dockerfile</code> flags</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3040,7 +3052,7 @@ docker push "$indexImage"</code></pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 981. <code>index</code> subcommands</caption>
+<caption class="title">Table 1001. <code>index</code> subcommands</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3082,7 +3094,7 @@ docker push "$indexImage"</code></pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 982. <code>index add</code> flags</caption>
+<caption class="title">Table 1002. <code>index add</code> flags</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3153,7 +3165,7 @@ docker push "$indexImage"</code></pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 983. <code>index prune</code> flags</caption>
+<caption class="title">Table 1003. <code>index prune</code> flags</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3212,7 +3224,7 @@ docker push "$indexImage"</code></pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 984. <code>index prune-stranded</code> flags</caption>
+<caption class="title">Table 1004. <code>index prune-stranded</code> flags</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3271,7 +3283,7 @@ docker push "$indexImage"</code></pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 985. <code>index rm</code> flags</caption>
+<caption class="title">Table 1005. <code>index rm</code> flags</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3343,7 +3355,7 @@ docker push "$indexImage"</code></pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 986. <code>init</code> flags</caption>
+<caption class="title">Table 1006. <code>init</code> flags</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3403,7 +3415,7 @@ docker push "$indexImage"</code></pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 987. <code>migrate</code> flags</caption>
+<caption class="title">Table 1007. <code>migrate</code> flags</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3434,7 +3446,7 @@ docker push "$indexImage"</code></pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 988. <code>render</code> flags</caption>
+<caption class="title">Table 1008. <code>render</code> flags</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3479,7 +3491,7 @@ docker push "$indexImage"</code></pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 989. <code>serve</code> flags</caption>
+<caption class="title">Table 1009. <code>serve</code> flags</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4023,7 +4035,7 @@ schema: olm.bundle
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-20 12:57:13 +0100
+Last updated 2026-10-21 11:29:03 +0100
 </div>
 </div>
 <style>

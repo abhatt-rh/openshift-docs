@@ -815,6 +815,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scale-workloads-in-a-hosted-cluster-con_scale-workloads-in-a-hosted-cluster.html">Scale workloads in a hosted cluster</a>
 </li>
+<li><a href="hcp-manage-bm-con_manage-hosted-clusters-on-bare-metal.html">Manage hosted control planes on bare metal</a>
+</li>
+<li><a href="hcp-manage-virt-con_manage-hosted-clusters-on-openshift-virtualization.html">Manage hosted control planes on OpenShift Virtualization</a>
+</li>
+<li><a href="hcp-manage-aws-con_manage-hosted-clusters-on-aws.html">Manage hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-manage-ibm-power-con_manage-hosted-clusters-on-ibm-power.html">Manage hosted control planes on IBM Power</a>
+</li>
+<li><a href="hcp-manage-non-bm-con_manage-hosted-clusters-on-non-bare-metal.html">Manage hosted control planes on non-bare-metal agent machines</a>
+</li>
+<li><a href="hcp-manage-openstack-con_manage-hosted-clusters-on-openstack.html">Manage hosted control planes on RHOSP</a>
+</li>
 <li><a href="multi-architecture-installing-using-cli_schedule-workloads-on-multi-architecture-clusters.html">Installing the Multiarch Tuning Operator by using the CLI</a>
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
@@ -1834,7 +1846,7 @@ Hardware offloading is not compatible with DPDK applications.</p>
 <p>Hardware offloading is supported on the following network interface controllers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 759. Supported network interface controllers</caption>
+<caption class="title">Table 779. Supported network interface controllers</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -2526,7 +2538,7 @@ metadata:
 <p>The following table describes the currently supported DPU devices.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 760. Supported devices</caption>
+<caption class="title">Table 780. Supported devices</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7288,7 +7300,7 @@ spec:
 <p>The following table describes the configuration for static IP address assignment:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 761. <code>ipam</code> static configuration object</caption>
+<caption class="title">Table 781. <code>ipam</code> static configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7328,7 +7340,7 @@ spec:
 <p>The <code>addresses</code> array requires objects with the following fields:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 762. <code>ipam.addresses[]</code> array</caption>
+<caption class="title">Table 782. <code>ipam.addresses[]</code> array</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7355,7 +7367,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 763. <code>ipam.routes[]</code> array</caption>
+<caption class="title">Table 783. <code>ipam.routes[]</code> array</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7382,7 +7394,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 764. <code>ipam.dns</code> object</caption>
+<caption class="title">Table 784. <code>ipam.dns</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7502,7 +7514,7 @@ spec:
 <p>The following table describes the configuration objects for dynamic IP address assignment with Whereabouts:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 765. <code>ipam</code> whereabouts configuration parameters</caption>
+<caption class="title">Table 785. <code>ipam</code> whereabouts configuration parameters</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10432,7 +10444,7 @@ link/ether 9e:23:69:42:fb:8a brd ff:ff:ff:ff:ff:ff</code></pre>
 <p>The fields for the Ingress Node Firewall configuration object are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 766. Ingress Node Firewall Configuration object</caption>
+<caption class="title">Table 786. Ingress Node Firewall Configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10599,7 +10611,7 @@ EOF</code></pre>
 <p>The fields for the Ingress Node Firewall rules object are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 767. Ingress Node Firewall rules object</caption>
+<caption class="title">Table 787. Ingress Node Firewall rules object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10678,7 +10690,7 @@ EOF</code></pre>
 <p>The values for the <code>ingress</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 768. <code>ingress</code> object</caption>
+<caption class="title">Table 788. <code>ingress</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -11068,7 +11080,7 @@ ingress-node-firewall-daemon-pqx56         3/3    Running        0         5d21h
 <p>The following table describes the currently supported DPU devices.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 769. Supported devices</caption>
+<caption class="title">Table 789. Supported devices</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -12075,7 +12087,7 @@ Hardware offloading is not compatible with DPDK applications.</p>
 <p>Hardware offloading is supported on the following network interface controllers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 770. Supported network interface controllers</caption>
+<caption class="title">Table 790. Supported network interface controllers</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -13036,7 +13048,7 @@ metadata:
 <p>Three nodes form the control plane of the management cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 771. Control plane node requirements</caption>
+<caption class="title">Table 791. Control plane node requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -13081,7 +13093,7 @@ metadata:
 <p>Two physical x86 servers host the NVIDIA BlueField-3 DPUs and act as worker nodes for the management cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 772. Worker node requirements</caption>
+<caption class="title">Table 792. Worker node requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -13136,7 +13148,7 @@ metadata:
 <p>One NVIDIA BlueField-3 DPU is required per worker node.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 773. BlueField-3 DPU requirements</caption>
+<caption class="title">Table 793. BlueField-3 DPU requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -13238,7 +13250,7 @@ metadata:
 <p>A DPF v26.4.1 deployment requires specific versions of Red&#160;Hat OpenShift Container Platform, the OpenShift CLI (<code>oc</code>), hosted control planes, the NVIDIA DPF Operator, and RHCOS BFB, plus <code>cluster-admin</code> privileges on the management cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 774. Software version requirements</caption>
+<caption class="title">Table 794. Software version requirements</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -13285,7 +13297,7 @@ metadata:
 <p>The base BFB is layered with the NVIDIA DOCA stack at provisioning time, and the DOCA services run on the DPUs as separately deployed <code>DPUService</code> resources. The following versions are pinned by this deployment:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 775. NVIDIA DOCA component versions</caption>
+<caption class="title">Table 795. NVIDIA DOCA component versions</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -14504,7 +14516,7 @@ In current multicluster engine Operator versions the component is named <code>hy
 The values of these variables are used in multiple DPF Operator installation and configuration procedures.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 776. DPF Operator environment variables</caption>
+<caption class="title">Table 796. DPF Operator environment variables</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15036,7 +15048,7 @@ The <code>DPUFlavor</code> also supports an optional <code>configFiles</code> fi
 <p>The <code>nvconfig</code> section contains BlueField-3 firmware parameters that the DPU agent applies by using <code>mlxconfig</code> during provisioning. If any parameter differs from the current firmware configuration, the provisioning controller triggers a system-level reset so that the changes take effect. The following parameters are required for DPF operation:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 777. Required BlueField-3 NVConfig parameters</caption>
+<caption class="title">Table 797. Required BlueField-3 NVConfig parameters</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -16565,7 +16577,7 @@ spec:
 These environment variables must be set before you create secrets, the <code>DPUCluster</code> resource, or the <code>DPFHCPProvisioner</code> resource.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 778. Hosted cluster provisioning environment variables</caption>
+<caption class="title">Table 798. Hosted cluster provisioning environment variables</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -18932,7 +18944,7 @@ Grafana is not required for basic metric viewing.</p>
 <p>You should get one series per DPU. Hover over a line to see its labels. Note the <code>source</code> label, which is the DPU node name that identifies each DPU.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 779. DTS <code>PromQL</code> queries</caption>
+<caption class="title">Table 799. DTS <code>PromQL</code> queries</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -19005,7 +19017,7 @@ Adjust the time range by using the <strong>time-range</strong> control on the da
 These dashboards are loaded into Grafana automatically through <code>GrafanaDashboard</code> resources created from <code>ConfigMaps</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 780. DPF framework dashboards</caption>
+<caption class="title">Table 800. DPF framework dashboards</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -20911,7 +20923,7 @@ In the debug shell, run:</p>
 <p>The following table lists the support and hardware offload status of OVN-Kubernetes features in this release.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 781. OVN-Kubernetes feature support and offload status</caption>
+<caption class="title">Table 801. OVN-Kubernetes feature support and offload status</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 25%;">
@@ -21085,7 +21097,7 @@ Access the Prometheus web console and go to <strong>Status</strong> &#8594; <str
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-20 12:57:13 +0100
+Last updated 2026-10-21 11:29:03 +0100
 </div>
 </div>
 <style>

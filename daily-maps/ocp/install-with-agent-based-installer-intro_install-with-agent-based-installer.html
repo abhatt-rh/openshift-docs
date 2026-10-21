@@ -814,6 +814,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scale-workloads-in-a-hosted-cluster-con_scale-workloads-in-a-hosted-cluster.html">Scale workloads in a hosted cluster</a>
 </li>
+<li><a href="hcp-manage-bm-con_manage-hosted-clusters-on-bare-metal.html">Manage hosted control planes on bare metal</a>
+</li>
+<li><a href="hcp-manage-virt-con_manage-hosted-clusters-on-openshift-virtualization.html">Manage hosted control planes on OpenShift Virtualization</a>
+</li>
+<li><a href="hcp-manage-aws-con_manage-hosted-clusters-on-aws.html">Manage hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-manage-ibm-power-con_manage-hosted-clusters-on-ibm-power.html">Manage hosted control planes on IBM Power</a>
+</li>
+<li><a href="hcp-manage-non-bm-con_manage-hosted-clusters-on-non-bare-metal.html">Manage hosted control planes on non-bare-metal agent machines</a>
+</li>
+<li><a href="hcp-manage-openstack-con_manage-hosted-clusters-on-openstack.html">Manage hosted control planes on RHOSP</a>
+</li>
 <li><a href="multi-architecture-installing-using-cli_schedule-workloads-on-multi-architecture-clusters.html">Installing the Multiarch Tuning Operator by using the CLI</a>
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
@@ -1898,7 +1910,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The following cluster resources are recommended for each topology:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 148. Recommended cluster resources</caption>
+<caption class="title">Table 149. Recommended cluster resources</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -2254,7 +2266,7 @@ hosts:
 <p>The installation program examines the devices in the order it discovers them, and compares the discovered values with the hint values. The installation program uses the first discovered device that matches the hint value. The configuration can combine multiple hints, but a device must match all hints for the installation program to select it.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 149. Subfields</caption>
+<caption class="title">Table 150. Subfields</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2434,7 +2446,7 @@ Do not set the <code>network.machineNetwork.cidr</code> parameter to include thi
 <p>During the discovery and bootstrap phases of an installation, all the hosts connect to the Assisted Service that runs on the rendezvous host. Configure your firewall to allow the following traffic from each host to the rendezvous host:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 150. Ports required to reach the Assisted Service on the rendezvous host</caption>
+<caption class="title">Table 151. Ports required to reach the Assisted Service on the rendezvous host</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -2736,7 +2748,7 @@ spec:
 <p>The following DNS records are required for an Red&#160;Hat OpenShift Container Platform cluster using the platform <code>none</code> option and they must be in place before installation. In each record, <code>&lt;cluster_name&gt;</code> is the cluster name and <code>&lt;base_domain&gt;</code> is the base domain that you specify in the <code>install-config.yaml</code> file. A complete DNS record takes the form: <code>&lt;component&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;.</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 151. Required DNS records</caption>
+<caption class="title">Table 152. Required DNS records</caption>
 <colgroup>
 <col style="width: 11.1111%;">
 <col style="width: 33.3333%;">
@@ -3176,7 +3188,7 @@ worker1.ocp4.example.com.	IN	A	192.168.1.7
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 152. API load balancer</caption>
+<caption class="title">Table 153. API load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -3281,7 +3293,7 @@ to become unhealthy, are well-tested values.</p>
 <p>Configure the following ports on both the front and back of the load balancers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 153. Application Ingress load balancer</caption>
+<caption class="title">Table 154. Application Ingress load balancer</caption>
 <colgroup>
 <col style="width: 15.3846%;">
 <col style="width: 38.4615%;">
@@ -4252,7 +4264,7 @@ platform:
 <p>Required installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 154. Required parameters</caption>
+<caption class="title">Table 155. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4442,7 +4454,7 @@ The cluster name is set to <code>agent-cluster</code> when you do not provide th
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 155. Network parameters</caption>
+<caption class="title">Table 156. Network parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4703,6 +4715,50 @@ The prefix length for an IPv6 block is between <code>0</code> and <code>128</cod
 <p></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="literal"><pre>networking:
+  networkObservability:
+    installationPolicy:</pre></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>Controls whether the Network Observability Operator is automatically installed during cluster creation. This field is available only when the <code>NetworkObservabilityInstall</code> feature gate is enabled.</p>
+</div>
+<div class="paragraph">
+<p>When set to <code>InstallAndEnable</code>, the Cluster Network Operator (CNO) installs the Network Observability Operator and creates a default <code>FlowCollector</code> during cluster creation on all cluster types, including single-node OpenShift clusters.</p>
+</div>
+<div class="paragraph">
+<p>When set to <code>NoAction</code>, automatic installation does not occur.</p>
+</div>
+<div class="paragraph">
+<p>When omitted (default behavior), the CNO automatically installs network observability on standard multi-node clusters and Hosted Control Plane clusters. single-node OpenShift clusters skip installation by default due to resource constraints.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, the CNO does not monitor or reinstall the Network Observability Operator if it is removed.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network observability automatic installation is a Technology Preview feature. You must enable the <code>NetworkObservabilityInstall</code> feature gate before you can use this field. For more information, see "Install network observability during cluster creation" in <em>Network observability</em>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Value:</strong> <code>InstallAndEnable</code>, <code>NoAction</code>, or omit the field for default behavior.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -4712,7 +4768,7 @@ The prefix length for an IPv6 block is between <code>0</code> and <code>128</cod
 <p>Optional installation configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 156. Optional parameters</caption>
+<caption class="title">Table 157. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -5407,7 +5463,7 @@ If you are installing on Google Cloud into a shared virtual private cloud (VPC),
 <p>Optional AWS configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 157. Optional AWS parameters</caption>
+<caption class="title">Table 158. Optional AWS parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6305,7 +6361,7 @@ Configuring these fields at install time eliminates the need to set them as a Da
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 158. Additional bare metal parameters</caption>
+<caption class="title">Table 159. Additional bare metal parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -6607,7 +6663,7 @@ The value should be <code>True</code> when using a self-signed certificate for B
 <p>Additional Google Cloud configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 159. Additional Google Cloud parameters</caption>
+<caption class="title">Table 160. Additional Google Cloud parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -7977,7 +8033,7 @@ The value should be <code>True</code> when using a self-signed certificate for B
 <p>Additional VMware vSphere configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 160. Additional VMware vSphere cluster parameters</caption>
+<caption class="title">Table 161. Additional VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8465,7 +8521,7 @@ Red&#160;Hat does not support Storage vMotion, so you must disable Storage vMoti
 <p>The following table lists each deprecated vSphere configuration parameter:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 161. Deprecated VMware vSphere cluster parameters</caption>
+<caption class="title">Table 162. Deprecated VMware vSphere cluster parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8653,7 +8709,7 @@ Red&#160;Hat does not support Storage vMotion, so you must disable Storage vMoti
 <p>Required Agent configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 162. Required parameters</caption>
+<caption class="title">Table 163. Required parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8728,7 +8784,7 @@ When you do not provide <code>metadata.name</code> through either the <code>inst
 <p>Optional Agent configuration parameters are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 163. Optional parameters</caption>
+<caption class="title">Table 164. Optional parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -13206,6 +13262,9 @@ This image includes all of the necessary Red&#160;Hat OpenShift Container Platfo
 <p>In the <strong>Cluster details</strong> page, select the toggle for "I&#8217;m installing on a disconnected/air-gapped/secured environment".</p>
 </li>
 <li>
+<p>Select a version from the <strong>OpenShift version</strong> dropdown menu.</p>
+</li>
+<li>
 <p>Click <strong>Next</strong>.</p>
 </li>
 <li>
@@ -13213,7 +13272,13 @@ This image includes all of the necessary Red&#160;Hat OpenShift Container Platfo
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
+<p>Enter the Rendezvous IP in the <strong>Rendezvous IP</strong> field.</p>
+</li>
+<li>
 <p>Upload a SSH public key in the <strong>SSH public key</strong> field.</p>
+</li>
+<li>
+<p>Click <strong>Replace default NTP sources</strong> and add any NTP pools or servers in the <strong>NTP sources</strong> field.</p>
 </li>
 </ol>
 </div>
@@ -14166,7 +14231,7 @@ local-cluster   true           https://&lt;your cluster url&gt;:6443   True     
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-20 12:57:13 +0100
+Last updated 2026-10-21 11:29:03 +0100
 </div>
 </div>
 <style>

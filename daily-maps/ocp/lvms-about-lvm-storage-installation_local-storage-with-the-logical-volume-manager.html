@@ -815,6 +815,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scale-workloads-in-a-hosted-cluster-con_scale-workloads-in-a-hosted-cluster.html">Scale workloads in a hosted cluster</a>
 </li>
+<li><a href="hcp-manage-bm-con_manage-hosted-clusters-on-bare-metal.html">Manage hosted control planes on bare metal</a>
+</li>
+<li><a href="hcp-manage-virt-con_manage-hosted-clusters-on-openshift-virtualization.html">Manage hosted control planes on OpenShift Virtualization</a>
+</li>
+<li><a href="hcp-manage-aws-con_manage-hosted-clusters-on-aws.html">Manage hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-manage-ibm-power-con_manage-hosted-clusters-on-ibm-power.html">Manage hosted control planes on IBM Power</a>
+</li>
+<li><a href="hcp-manage-non-bm-con_manage-hosted-clusters-on-non-bare-metal.html">Manage hosted control planes on non-bare-metal agent machines</a>
+</li>
+<li><a href="hcp-manage-openstack-con_manage-hosted-clusters-on-openstack.html">Manage hosted control planes on RHOSP</a>
+</li>
 <li><a href="multi-architecture-installing-using-cli_schedule-workloads-on-multi-architecture-clusters.html">Installing the Multiarch Tuning Operator by using the CLI</a>
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
@@ -2406,7 +2418,7 @@ spec:
 <p>The cluster status reports the effective policy by using <code>DeviceDiscoveryPolicyStatus</code>, which distinguishes three runtime states:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 824. Effective policy status values</caption>
+<caption class="title">Table 844. Effective policy status values</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -2436,7 +2448,7 @@ spec:
 <p>The following table shows the behavior matrix:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 825. Device discovery behavior by configuration</caption>
+<caption class="title">Table 845. Device discovery behavior by configuration</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2490,7 +2502,7 @@ spec:
 <p>The discovery policy also controls whether the controller re-queues for periodic device scanning:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 826. Requeue behavior by configuration</caption>
+<caption class="title">Table 846. Requeue behavior by configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2550,7 +2562,7 @@ spec:
 <p>The following table shows how the device discovery policy feature interacts with other features:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 827. Device discovery policy feature interactions</caption>
+<caption class="title">Table 847. Device discovery policy feature interactions</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -2762,7 +2774,7 @@ spec:
 <p>The <code>LVMCluster</code> CR fields are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 828. <code>LVMCluster</code> CR fields</caption>
+<caption class="title">Table 848. <code>LVMCluster</code> CR fields</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3232,7 +3244,7 @@ You can modify this field after the LVM cluster has been created.</p>
 <p>The following tables describe the chunk size and volume size limits for static and host configurations:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 829. Tested configuration</caption>
+<caption class="title">Table 849. Tested configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3255,7 +3267,7 @@ You can modify this field after the LVM cluster has been created.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 830. Theoretical size limits for static configuration</caption>
+<caption class="title">Table 850. Theoretical size limits for static configuration</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3282,7 +3294,7 @@ You can modify this field after the LVM cluster has been created.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 831. Theoretical size limits for a host configuration</caption>
+<caption class="title">Table 851. Theoretical size limits for a host configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4873,7 +4885,7 @@ lvm-block-1   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi        RWO
 <p>If you set an empty configuration (storageClassOptions: {}) or omit the field entirely, the Operator uses the following default settings:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 832. StorageClass Options Reference</caption>
+<caption class="title">Table 852. StorageClass Options Reference</caption>
 <colgroup>
 <col style="width: 12.5%;">
 <col style="width: 12.5%;">
@@ -6513,7 +6525,7 @@ lvm-block-1-clone   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi     
 <p>The following table describes the <code>topolvm</code> metrics:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 833. <code>topolvm</code> metrics</caption>
+<caption class="title">Table 853. <code>topolvm</code> metrics</caption>
 <colgroup>
 <col>
 <col>
@@ -6575,7 +6587,7 @@ lvm-block-1-clone   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi     
 <p>LVM Storage sends the following alerts when the usage of the thin pool and volume group exceeds a certain value:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 834. LVM Storage alerts</caption>
+<caption class="title">Table 854. LVM Storage alerts</caption>
 <colgroup>
 <col>
 <col>
@@ -7148,7 +7160,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table describes the volume failure error messages:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 835. Volume failure error messages</caption>
+<caption class="title">Table 855. Volume failure error messages</caption>
 <colgroup>
 <col>
 <col>
@@ -7369,7 +7381,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares the support for storage types and filesystems provided by LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) to provision local storage:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 836. Comparison of the support for storage types and filesystems</caption>
+<caption class="title">Table 856. Comparison of the support for storage types and filesystems</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 23.8095%;">
@@ -7573,7 +7585,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares how LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) support core functionalities for provisioning local storage:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 837. Comparison of the support for core functionalities</caption>
+<caption class="title">Table 857. Comparison of the support for core functionalities</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 23.8095%;">
@@ -8039,7 +8051,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares the performance and isolation capabilities of LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) in provisioning local storage.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 838. Comparison of performance and isolation capabilities</caption>
+<caption class="title">Table 858. Comparison of performance and isolation capabilities</caption>
 <colgroup>
 <col style="width: 21.7391%;">
 <col style="width: 26.0869%;">
@@ -8180,7 +8192,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares the additional features provided by LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) to provision local storage:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 839. Comparison of the support for additional functionalities</caption>
+<caption class="title">Table 859. Comparison of the support for additional functionalities</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 23.8095%;">
@@ -8398,7 +8410,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-20 12:57:13 +0100
+Last updated 2026-10-21 11:29:03 +0100
 </div>
 </div>
 <style>
