@@ -437,8 +437,48 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
+<!-- navmap-right-toc-start -->
+<style>
+  body.navmap-has-right-toc { padding-right: 18em; }
+  #navmap-right-toc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 16em;
+    height: 100%;
+    overflow: auto;
+    padding: 1.25em 1em;
+    background: #f8f8f7;
+    border-left: 1px solid #e7e7e9;
+    z-index: 1000;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    font-size: .9em;
+  }
+  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
+  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
+  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
+  #navmap-right-toc li.level-3 { padding-left: 1em; }
+  #navmap-right-toc li.level-4 { padding-left: 2em; }
+  #navmap-right-toc li.level-5,
+  #navmap-right-toc li.level-6 { padding-left: 3em; }
+  #navmap-right-toc a { text-decoration: none; }
+  @media screen and (max-width: 1023px) {
+    body.navmap-has-right-toc { padding-right: 0; }
+    #navmap-right-toc {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 1em;
+      border: 1px solid #e7e7e9;
+      border-radius: 4px;
+    }
+  }
+
+
+</style>
+<!-- navmap-right-toc-end -->
 </head>
-<body id="persistent-storage-csi-vsphere-encryption_enable-encryption-on-vsphere-post-installation" class="book toc2 toc-left">
+<body id="control-user-access-to-extensions-con_control-user-access-to-extensions" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -875,6 +915,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_configure.html">Configure</a>
 
 <ul class="sectlevel2">
+<li><a href="configuring-alert-notifications-intro_configuring-alert-notifications.html">Configuring alert notifications</a>
+</li>
+<li><a href="post-install-cluster-tasks-intro_post-install-cluster-tasks.html">Postinstallation cluster tasks</a>
+</li>
 <li><a href="preparing-for-users-intro_post-install-preparing-for-users.html">Preparing for users</a>
 </li>
 <li><a href="change-the-installed-disk-partition-schema-for-new-nodes-con_change-the-installed-disk-partition-schema-for-new-nodes.html">Change the installed disk-partition schema for new nodes</a>
@@ -1045,6 +1089,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-multiarch-tuning-operator-via-web-console-con_install-multiarch-tuning-operator-via-web-console.html">Install the Multiarch Tuning Operator by using the web console</a>
 </li>
+<li><a href="uninstall-multiarch-tuning-operator-intro_multiarch-tuning-operator.html">Uninstalling the Multiarch Tuning Operator</a>
+</li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
 <li><a href="create-kubeletconfig-cr-to-edit-kubelet-parameters-con_create-kubeletconfig-cr-to-edit-kubelet-parameters.html">Create a KubeletConfig CR to edit kubelet parameters</a>
@@ -1082,6 +1128,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="understand-ovn-kubernetes-network-plugin-con_understand-ovn-kubernetes-network-plugin.html">Understand the OVN-Kubernetes network plugin</a>
 </li>
+<li><a href="private-clusters-about_restrict-the-api-server-to-private.html">About private clusters</a>
+</li>
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
 <li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
@@ -1109,6 +1157,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="secure-network-traffic-con_secure-network-traffic.html">Secure network traffic</a>
+</li>
+<li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
 </li>
 <li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
 </li>
@@ -1232,10 +1284,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_secure.html">Secure</a>
+
 <ul class="sectlevel2">
 <li><a href="manage-user-authentication-and-identity-providers-con_manage-user-authentication-and-identity-providers.html">Manage user authentication and identity providers</a>
-</li>
-<li><a href="secure-network-traffic-con_secure-network-traffic.html">Secure network traffic</a>
 </li>
 <li><a href="monitor-platform-vulnerabilities-and-audit-security-incidents-con_monitor-platform-vulnerabilities-and-audit-security-incidents.html">Monitor platform vulnerabilities and audit security incidents</a>
 </li>
@@ -1259,8 +1310,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="enable-fips-mode-on-my-nodes-to-enhance-security-con_enable-fips-mode-on-my-nodes-to-enhance-security.html">Enable FIPS mode on your nodes</a>
 </li>
-<li><a href="persistent-storage-csi-vsphere-encryption_enable-encryption-on-vsphere-post-installation.html"><span class="toc-current">vSphere persistent disks encryption</span></a>
-</li>
 <li><a href="about-etcd_encrypt-etcd.html">etcd encryption</a>
 </li>
 <li><a href="secure-the-container-software-supply-chain-con_secure-the-container-software-supply-chain.html">Secure the container software supply chain</a>
@@ -1277,25 +1326,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="enhance-user-authentication-on-my-nodes-con_enhance-user-authentication-on-my-nodes.html">Enhance user authentication on your nodes</a>
 </li>
-<li><a href="private-clusters-about_restrict-the-api-server-to-private.html">About private clusters</a>
-</li>
 <li><a href="enable-customer-managed-encryption-keys-con_enable-customer-managed-encryption-keys.html">Enable customer-managed encryption keys</a>
 </li>
 <li><a href="configure-confidential-vms-con_configure-confidential-vms.html">Configure confidential VMs</a>
 </li>
-<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a>
+<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants on AWS</a>
 </li>
-<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines</a>
+<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines on AWS</a>
 </li>
-<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines</a>
+<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines on GCP</a>
 </li>
-<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants</a>
+<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants on AWS</a>
 </li>
-<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines</a>
+<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines on AWS</a>
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
-</li>
-<li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1483,7 +1528,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
-
 <ul class="sectlevel2">
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
@@ -1508,6 +1552,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="enable-a-dynamic-plugin-with-the-cli-con_enable-a-dynamic-plugin-with-the-cli.html">Enable a dynamic plugin with the CLI</a>
 </li>
 <li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
+</li>
+<li><a href="control-user-access-to-extensions-con_control-user-access-to-extensions.html"><span class="toc-current">Control user access to extensions</span></a>
 </li>
 <li><a href="extend-the-openshift-cli-with-plugins-intro_extend-the-openshift-cli-with-plugins.html">Extend the OpenShift CLI with plugins</a>
 </li>
@@ -1759,11 +1805,284 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#olmv1-default-cluster-roles-users_control-user-access-to-extensions">Common default cluster roles for users</a></li><li class="level-4"><a href="#olmv1-finding-ce-resources_control-user-access-to-extensions">Find API groups and resources exposed by a cluster extension</a></li><li class="level-4"><a href="#olmv1-granting-user-access-binding_control-user-access-to-extensions">Grant user access to extension resources by using custom role bindings</a></li><li class="level-4"><a href="#olmv1-granting-user-access-aggregated_control-user-access-to-extensions">Grant user access to extension resources by using aggregated cluster roles</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="persistent-storage-csi-vsphere-encryption_enable-encryption-on-vsphere-post-installation">vSphere persistent disks encryption</h3>
+<h3 id="control-user-access-to-extensions-con_control-user-access-to-extensions">Control user access to extensions</h3>
 <div class="paragraph _abstract">
-<p>You can encrypt virtual machines (VMs) and dynamically provisioned persistent volumes (PVs) on Red&#160;Hat OpenShift Container Platform running on top of vSphere.</p>
+<p>A cluster extension managed by Operator Lifecycle Manager (OLM) v1 can provide <code>CustomResourceDefinition</code> (CRD) objects that expose new cluster APIs.</p>
+</div>
+<div class="paragraph">
+<p>Cluster administrators automatically have full access to these resources, but OLM v1 does not configure role-based access control (RBAC) for regular users, so you must define the policy that lets them create, view, or edit the extension&#8217;s custom resources.</p>
+</div>
+<div class="sect3">
+<h4 id="olmv1-default-cluster-roles-users_control-user-access-to-extensions">Common default cluster roles for users</h4>
+<div class="paragraph _abstract">
+<p>An installed cluster extension can include default cluster roles that grant regular users role-based access control (RBAC) to the extension&#8217;s API resources.</p>
+</div>
+<div class="paragraph">
+<p>Cluster extensions commonly include the following default cluster role policies:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>view</code> cluster role</dt>
+<dd>
+<p>Grants read-only access to custom resource (CR) objects for specified API resources across the cluster. This role provides resource visibility without permission to modify resources, which is ideal for monitoring and viewing.</p>
+</dd>
+<dt class="hdlist1"><code>edit</code> cluster role</dt>
+<dd>
+<p>Grants permissions to create, update, and delete CR objects across the cluster. This role is intended for users who manage resources but do not manage RBAC or cluster permissions.</p>
+</dd>
+<dt class="hdlist1"><code>admin</code> cluster role</dt>
+<dd>
+<p>Grants full administrative permissions, including create, update, and delete actions, over all CR objects for specified API resources across the cluster.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="olmv1-finding-ce-resources_control-user-access-to-extensions">Find API groups and resources exposed by a cluster extension</h4>
+<div class="paragraph _abstract">
+<p>To create appropriate RBAC policies for user access to cluster extension resources, you must know which API groups and resources the extension exposes. You can inspect installed CRDs by using the OpenShift CLI (<code>oc</code>).</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>A cluster extension has been installed on your cluster.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>To list installed CRDs while specifying a label selector targeting a specific cluster extension by name to find only CRDs owned by that extension, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get crds -l 'olm.operatorframework.io/owner-kind=ClusterExtension,olm.operatorframework.io/owner-name=&lt;cluster_extension_name&gt;'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Alternatively, you can search through all installed CRDs and individually inspect them by CRD name:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>List all available custom resource definitions (CRDs) currently installed on the cluster by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get crds</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Find the CRD you are looking for in the output.</p>
+</div>
+</li>
+<li>
+<p>Inspect the individual CRD further to find its API groups by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get crd &lt;crd_name&gt; -o yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="olmv1-granting-user-access-binding_control-user-access-to-extensions">Grant user access to extension resources by using custom role bindings</h4>
+<div class="paragraph _abstract">
+<p>As a cluster administrator, you can manually create and configure role-based access control (RBAC) policies to grant user access to extension resources by using custom role bindings.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>A cluster extension has been installed on your cluster.</p>
+</li>
+<li>
+<p>You have a list of API groups and resource names, as described in "Finding API groups and resources exposed by a cluster extension".</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>If the installed cluster extension does not provide default cluster roles, manually create one or more roles:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Consider the use cases for the set of roles described in "Common default cluster roles for users".</p>
+<div class="paragraph">
+<p>For example, create one or more of the following <code>ClusterRole</code> object definitions, replacing <code>&lt;cluster_extension_api_group&gt;</code> and <code>&lt;cluster_extension_custom_resource&gt;</code> with the actual API group and resource names provided by the installed cluster extension:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>view-custom-resource.yaml</code> file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: view-custom-resource
+rules:
+- apiGroups:
+  - &lt;cluster_extension_api_group&gt;
+  resources:
+  - &lt;cluster_extension_custom_resources&gt;
+  verbs:
+  - get
+  - list
+  - watch</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>edit-custom-resource.yaml</code> file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: edit-custom-resource
+rules:
+- apiGroups:
+  - &lt;cluster_extension_api_group&gt;
+  resources:
+  - &lt;cluster_extension_custom_resources&gt;
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>admin-custom-resource.yaml</code> file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: admin-custom-resource
+rules:
+- apiGroups:
+  - &lt;cluster_extension_api_group&gt;
+  resources:
+  - &lt;cluster_extension_custom_resources&gt;
+  verbs:
+  - '*'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Setting a wildcard (<code>*</code>) in  the <code>rules.verbs</code> field allows all actions on the specified resources.</p>
+</div>
+</li>
+<li>
+<p>Create the cluster roles by running the following command for any YAML files you created:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;filename&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Associate a cluster role to specific users or groups to grant them the necessary permissions for the resource by binding the cluster roles to individual user or group names:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create an object definition for either a <em>cluster role binding</em> to grant access across all namespaces or a <em>role binding</em> to grant access within a specific namespace:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The following example cluster role bindings grant read-only <code>view</code> access to the custom resource across all namespaces:</p>
+<div class="listingblock">
+<div class="title">Example <code>ClusterRoleBinding</code> object for a user</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: view-custom-resource-binding
+subjects:
+- kind: User
+  name: &lt;user_name&gt;
+roleRef:
+  kind: ClusterRole
+  name: view-custom-resource
+  apiGroup: rbac.authorization.k8s.io</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example <code>ClusterRoleBinding</code> object for a user</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: view-custom-resource-binding
+subjects:
+- kind: Group
+  name: &lt;group_name&gt;
+roleRef:
+  kind: ClusterRole
+  name: view-custom-resource
+  apiGroup: rbac.authorization.k8s.io</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>The following role binding restricts <code>edit</code> permissions to a specific namespace:</p>
+<div class="listingblock">
+<div class="title">Example <code>RoleBinding</code> object for a user</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: edit-custom-resource-edit-binding
+  namespace: &lt;namespace&gt;
+subjects:
+- kind: User
+  name: &lt;username&gt;
+roleRef:
+  kind: Role
+  name: custom-resource-edit
+  apiGroup: rbac.authorization.k8s.io</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Save your object definition to a YAML file.</p>
+</li>
+<li>
+<p>Create the object by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;filename&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="olmv1-granting-user-access-aggregated_control-user-access-to-extensions">Grant user access to extension resources by using aggregated cluster roles</h4>
+<div class="paragraph _abstract">
+<p>As a cluster administrator, you can configure role-based access control (RBAC) policies to grant user access to extension resources by using aggregated cluster roles.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1773,47 +2092,83 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Red&#160;Hat OpenShift Container Platform does not support RWX-encrypted PVs. You cannot request RWX PVs out of a storage class that uses an encrypted storage policy.</p>
+<p>To automatically extend existing default cluster roles, you can add <em>aggregation labels</em> by adding one or more of the following labels to a <code>ClusterRole</code> object:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml"># ..
+metadata:
+  labels:
+    rbac.authorization.k8s.io/aggregate-to-admin: "true"
+    rbac.authorization.k8s.io/aggregate-to-edit: "true"
+    rbac.authorization.k8s.io/aggregate-to-view: "true"
+# ..</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This allows users who already have <code>view</code>, <code>edit</code>, or <code>admin</code> roles to interact with the  custom resource specified by the <code>ClusterRole</code> object without requiring additional role or cluster role bindings to specific users or groups.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>You must encrypt VMs before you can encrypt PVs, which you can do during or after installation.</p>
-</div>
-<div class="paragraph">
-<p>For information about encrypting VMs, see:</p>
-</div>
 <div class="ulist">
+<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>"Requirements for encrypting virtual machines"</p>
+<p>A cluster extension has been installed on your cluster.</p>
 </li>
 <li>
-<p>"During installation: Step 7 of Installing RHCOS and starting the Red&#160;Hat OpenShift Container Platform bootstrap process"</p>
-</li>
-<li>
-<p>"Enabling encryption on a vSphere cluster"</p>
+<p>You have a list of API groups and resource names, as described in "Finding API groups and resources exposed by a cluster extension".</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>After encrypting VMs, you can configure a storage class that supports dynamic encryption volume provisioning using the vSphere Container Storage Interface (CSI) driver. This can be accomplished in one of two ways using:</p>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create an object definition for a cluster role that specifies the API groups and resources provided by the cluster extension and add an aggregation label to extend one or more existing default cluster roles:</p>
+<div class="listingblock">
+<div class="title">Example <code>ClusterRole</code> object with an aggregation label</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: view-custom-resource-aggregated
+  labels:
+    rbac.authorization.k8s.io/aggregate-to-view: "true"
+rules:
+  - apiGroups:
+      - &lt;cluster_extension_api_group&gt;
+    resources:
+      - &lt;cluster_extension_custom_resource&gt;
+    verbs:
+      - get
+      - list
+      - watch</code></pre>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Datastore URL</strong>: This approach is not very flexible, and forces you to use a single datastore. It also does not support topology-aware provisioning.</p>
+</div>
+<div class="paragraph">
+<p>You can create similar <code>ClusterRole</code> objects for <code>edit</code> and <code>admin</code> with appropriate verbs, such as <code>create</code>, <code>update</code>, and <code>delete</code>. By using aggregation labels, the permissions for the custom resources are added to the default roles.</p>
+</div>
 </li>
 <li>
-<p><strong>Tag-based placement</strong>: Encrypts the provisioned volumes and uses tag-based placement to target specific datastores.</p>
+<p>Save your object definition to a YAML file.</p>
 </li>
-</ul>
+<li>
+<p>Create the object by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;filename&gt;.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="enable-fips-mode-on-my-nodes-to-enhance-security-con_enable-fips-mode-on-my-nodes-to-enhance-security.html">Enable FIPS mode on your nodes</a> | ↑ Up: <a href="_secure.html">Secure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="about-etcd_encrypt-etcd.html">etcd encryption</a> →</p>
+<p>← Previous: <a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a> | ↑ Up: <a href="_extend.html">Extend</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="extend-the-openshift-cli-with-plugins-intro_extend-the-openshift-cli-with-plugins.html">Extend the OpenShift CLI with plugins</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -1824,7 +2179,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-21 15:15:08 +0100
+Last updated 2026-10-21 18:01:53 +0100
 </div>
 </div>
 <style>

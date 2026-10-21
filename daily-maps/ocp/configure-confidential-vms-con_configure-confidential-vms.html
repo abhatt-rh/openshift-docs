@@ -915,6 +915,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_configure.html">Configure</a>
 
 <ul class="sectlevel2">
+<li><a href="configuring-alert-notifications-intro_configuring-alert-notifications.html">Configuring alert notifications</a>
+</li>
+<li><a href="post-install-cluster-tasks-intro_post-install-cluster-tasks.html">Postinstallation cluster tasks</a>
+</li>
 <li><a href="preparing-for-users-intro_post-install-preparing-for-users.html">Preparing for users</a>
 </li>
 <li><a href="change-the-installed-disk-partition-schema-for-new-nodes-con_change-the-installed-disk-partition-schema-for-new-nodes.html">Change the installed disk-partition schema for new nodes</a>
@@ -1085,6 +1089,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-multiarch-tuning-operator-via-web-console-con_install-multiarch-tuning-operator-via-web-console.html">Install the Multiarch Tuning Operator by using the web console</a>
 </li>
+<li><a href="uninstall-multiarch-tuning-operator-intro_multiarch-tuning-operator.html">Uninstalling the Multiarch Tuning Operator</a>
+</li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
 <li><a href="create-kubeletconfig-cr-to-edit-kubelet-parameters-con_create-kubeletconfig-cr-to-edit-kubelet-parameters.html">Create a KubeletConfig CR to edit kubelet parameters</a>
@@ -1122,6 +1128,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="understand-ovn-kubernetes-network-plugin-con_understand-ovn-kubernetes-network-plugin.html">Understand the OVN-Kubernetes network plugin</a>
 </li>
+<li><a href="private-clusters-about_restrict-the-api-server-to-private.html">About private clusters</a>
+</li>
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
 <li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
@@ -1149,6 +1157,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="secure-network-traffic-con_secure-network-traffic.html">Secure network traffic</a>
+</li>
+<li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
 </li>
 <li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
 </li>
@@ -1275,8 +1287,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="manage-user-authentication-and-identity-providers-con_manage-user-authentication-and-identity-providers.html">Manage user authentication and identity providers</a>
 </li>
-<li><a href="secure-network-traffic-con_secure-network-traffic.html">Secure network traffic</a>
-</li>
 <li><a href="monitor-platform-vulnerabilities-and-audit-security-incidents-con_monitor-platform-vulnerabilities-and-audit-security-incidents.html">Monitor platform vulnerabilities and audit security incidents</a>
 </li>
 <li><a href="manage-cluster-authorization-and-rbac-permissions-con_manage-cluster-authorization-and-rbac-permissions.html">Manage cluster authorization and RBAC permissions</a>
@@ -1299,8 +1309,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="enable-fips-mode-on-my-nodes-to-enhance-security-con_enable-fips-mode-on-my-nodes-to-enhance-security.html">Enable FIPS mode on your nodes</a>
 </li>
-<li><a href="persistent-storage-csi-vsphere-encryption_enable-encryption-on-vsphere-post-installation.html">vSphere persistent disks encryption</a>
-</li>
 <li><a href="about-etcd_encrypt-etcd.html">etcd encryption</a>
 </li>
 <li><a href="secure-the-container-software-supply-chain-con_secure-the-container-software-supply-chain.html">Secure the container software supply chain</a>
@@ -1317,25 +1325,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="enhance-user-authentication-on-my-nodes-con_enhance-user-authentication-on-my-nodes.html">Enhance user authentication on your nodes</a>
 </li>
-<li><a href="private-clusters-about_restrict-the-api-server-to-private.html">About private clusters</a>
-</li>
 <li><a href="enable-customer-managed-encryption-keys-con_enable-customer-managed-encryption-keys.html">Enable customer-managed encryption keys</a>
 </li>
 <li><a href="configure-confidential-vms-con_configure-confidential-vms.html"><span class="toc-current">Configure confidential VMs</span></a>
 </li>
-<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a>
+<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants on AWS</a>
 </li>
-<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines</a>
+<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines on AWS</a>
 </li>
-<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines</a>
+<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines on GCP</a>
 </li>
-<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants</a>
+<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants on AWS</a>
 </li>
-<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines</a>
+<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines on AWS</a>
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
-</li>
-<li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1548,6 +1552,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="enable-a-dynamic-plugin-with-the-cli-con_enable-a-dynamic-plugin-with-the-cli.html">Enable a dynamic plugin with the CLI</a>
 </li>
 <li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
+</li>
+<li><a href="control-user-access-to-extensions-con_control-user-access-to-extensions.html">Control user access to extensions</a>
 </li>
 <li><a href="extend-the-openshift-cli-with-plugins-intro_extend-the-openshift-cli-with-plugins.html">Extend the OpenShift CLI with plugins</a>
 </li>
@@ -1799,7 +1805,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#machineset-azure-confidential-vms_configure-confidential-vms">Configure Azure confidential virtual machines by using machine sets</a></li><li class="level-4"><a href="#machineset-gcp-confidential-vm_configure-confidential-vms">Configure Confidential VM by using machine sets</a></li><li class="level-5"><a href="#installation-azure-confidential-vms_configure-confidential-vms">Enable confidential VMs</a></li><li class="level-5"><a href="#installation-gcp-enabling-confidential-vms_configure-confidential-vms">Enable Confidential VMs</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#machineset-azure-confidential-vms_configure-confidential-vms">Configure Azure confidential virtual machines by using machine sets</a></li><li class="level-5"><a href="#installation-azure-confidential-vms_configure-confidential-vms">Enable confidential VMs</a></li><li class="level-4"><a href="#machineset-gcp-confidential-vm_configure-confidential-vms">Configure Confidential VM by using machine sets on Google Cloud</a></li><li class="level-5"><a href="#installation-gcp-enabling-confidential-vms_configure-confidential-vms">Enable Confidential VMs</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="configure-confidential-vms-con_configure-confidential-vms">Configure confidential VMs</h3>
@@ -1917,133 +1923,6 @@ spec:
 <ul>
 <li>
 <p>On the Microsoft Azure portal, review the details for a machine deployed by the machine set and verify that the confidential VM options match the values that you configured.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="machineset-gcp-confidential-vm_configure-confidential-vms">Configure Confidential VM by using machine sets</h4>
-<div class="paragraph _abstract">
-<p>You create machine sets to scale clusters on Google Cloud. By editing the machine set YAML file, you can configure the Confidential VM options that a machine set uses for machines that it deploys.</p>
-</div>
-<div class="paragraph">
-<p>For more information about Confidential VM features, functions, and compatibility, see the Google Cloud Compute Engine documentation about <a href="https://cloud.google.com/confidential-computing/confidential-vm/docs/about-cvm#confidential-vm">Confidential VM</a>.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Confidential VMs are currently not supported on 64-bit ARM architectures.
-If you use Confidential VM, you must ensure that you select a supported region. For details on supported regions and configurations, see the Google Cloud Compute Engine documentation about <a href="https://cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-zones">supported zones</a>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>In a text editor, open the YAML file for an existing machine set or create a new one.</p>
-</li>
-<li>
-<p>Edit the following section under the <code>providerSpec</code> field:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineSet
-# ...
-spec:
-  template:
-    spec:
-      providerSpec:
-        value:
-          confidentialCompute: Enabled
-          onHostMaintenance: Terminate
-          machineType: n2d-standard-8
-# ...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.template.spec.providerSpec.value.confidentialCompute</code></dt>
-<dd>
-<p>Specifies whether Confidential VM is enabled.
-The following values are valid:</p>
-</dd>
-<dt class="hdlist1"><code>Enabled</code></dt>
-<dd>
-<p>Enables Confidential VM with a default selection of Confidential VM technology. The default selection is AMD Secure Encrypted Virtualization (AMD SEV).</p>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>Enabled</code> value selects Confidential Computing with AMD Secure Encrypted Virtualization (AMD SEV), which is deprecated.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</dd>
-<dt class="hdlist1"><code>Disabled</code></dt>
-<dd>
-<p>Disables Confidential VM.</p>
-</dd>
-<dt class="hdlist1"><code>AMDEncryptedVirtualizationNestedPaging</code></dt>
-<dd>
-<p>Enables Confidential VM using AMD Secure Encrypted Virtualization Secure Nested Paging (AMD SEV-SNP). AMD SEV-SNP supports n2d machines.</p>
-</dd>
-<dt class="hdlist1"><code>AMDEncryptedVirtualization</code></dt>
-<dd>
-<p>Enables Confidential VM using AMD SEV. AMD SEV supports c2d, n2d, and c3d machines.</p>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The use of Confidential Computing with AMD Secure Encrypted Virtualization (AMD SEV) has been deprecated and will be removed in a future release.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</dd>
-<dt class="hdlist1"><code>IntelTrustedDomainExtensions</code></dt>
-<dd>
-<p>Enables Confidential VM using Intel Trusted Domain Extensions (Intel TDX). Intel TDX supports n2d machines.</p>
-</dd>
-<dt class="hdlist1"><code>spec.template.spec.providerSpec.value.onHostMaintenance</code></dt>
-<dd>
-<p>Specifies the behavior of the VM during a host maintenance event, such as a hardware or software update. For a machine that uses Confidential VM, this value must be set to <code>Terminate</code>, which stops the VM. Confidential VM does not support live VM migration.</p>
-</dd>
-<dt class="hdlist1"><code>spec.template.spec.providerSpec.value.machineType</code></dt>
-<dd>
-<p>Specifies a machine type that supports the Confidential VM option that you specified in the <code>confidentialCompute</code> field.</p>
-</dd>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>On the Google Cloud console, review the details for a machine deployed by the machine set and verify that the Confidential VM options match the values that you configured.</p>
 </li>
 </ul>
 </div>
@@ -2178,6 +2057,133 @@ The following values are valid:</p>
 </ul>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="machineset-gcp-confidential-vm_configure-confidential-vms">Configure Confidential VM by using machine sets on Google Cloud</h4>
+<div class="paragraph _abstract">
+<p>You create machine sets to scale clusters on Google Cloud. By editing the machine set YAML file, you can configure the Confidential VM options that a machine set uses for machines that it deploys.</p>
+</div>
+<div class="paragraph">
+<p>For more information about Confidential VM features, functions, and compatibility, see the Google Cloud Compute Engine documentation about <a href="https://cloud.google.com/confidential-computing/confidential-vm/docs/about-cvm#confidential-vm">Confidential VM</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Confidential VMs are currently not supported on 64-bit ARM architectures.
+If you use Confidential VM, you must ensure that you select a supported region. For details on supported regions and configurations, see the Google Cloud Compute Engine documentation about <a href="https://cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-zones">supported zones</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In a text editor, open the YAML file for an existing machine set or create a new one.</p>
+</li>
+<li>
+<p>Edit the following section under the <code>providerSpec</code> field:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+# ...
+spec:
+  template:
+    spec:
+      providerSpec:
+        value:
+          confidentialCompute: Enabled
+          onHostMaintenance: Terminate
+          machineType: n2d-standard-8
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.template.spec.providerSpec.value.confidentialCompute</code></dt>
+<dd>
+<p>Specifies whether Confidential VM is enabled.
+The following values are valid:</p>
+</dd>
+<dt class="hdlist1"><code>Enabled</code></dt>
+<dd>
+<p>Enables Confidential VM with a default selection of Confidential VM technology. The default selection is AMD Secure Encrypted Virtualization (AMD SEV).</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>Enabled</code> value selects Confidential Computing with AMD Secure Encrypted Virtualization (AMD SEV), which is deprecated.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+<dt class="hdlist1"><code>Disabled</code></dt>
+<dd>
+<p>Disables Confidential VM.</p>
+</dd>
+<dt class="hdlist1"><code>AMDEncryptedVirtualizationNestedPaging</code></dt>
+<dd>
+<p>Enables Confidential VM using AMD Secure Encrypted Virtualization Secure Nested Paging (AMD SEV-SNP). AMD SEV-SNP supports n2d machines.</p>
+</dd>
+<dt class="hdlist1"><code>AMDEncryptedVirtualization</code></dt>
+<dd>
+<p>Enables Confidential VM using AMD SEV. AMD SEV supports c2d, n2d, and c3d machines.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The use of Confidential Computing with AMD Secure Encrypted Virtualization (AMD SEV) has been deprecated and will be removed in a future release.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+<dt class="hdlist1"><code>IntelTrustedDomainExtensions</code></dt>
+<dd>
+<p>Enables Confidential VM using Intel Trusted Domain Extensions (Intel TDX). Intel TDX supports n2d machines.</p>
+</dd>
+<dt class="hdlist1"><code>spec.template.spec.providerSpec.value.onHostMaintenance</code></dt>
+<dd>
+<p>Specifies the behavior of the VM during a host maintenance event, such as a hardware or software update. For a machine that uses Confidential VM, this value must be set to <code>Terminate</code>, which stops the VM. Confidential VM does not support live VM migration.</p>
+</dd>
+<dt class="hdlist1"><code>spec.template.spec.providerSpec.value.machineType</code></dt>
+<dd>
+<p>Specifies a machine type that supports the Confidential VM option that you specified in the <code>confidentialCompute</code> field.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>On the Google Cloud console, review the details for a machine deployed by the machine set and verify that the Confidential VM options match the values that you configured.</p>
+</li>
+</ul>
+</div>
 <div class="sect4">
 <h5 id="installation-gcp-enabling-confidential-vms_configure-confidential-vms">Enable Confidential VMs</h5>
 <div class="paragraph _abstract">
@@ -2278,7 +2284,7 @@ The following values are valid:</p>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="enable-customer-managed-encryption-keys-con_enable-customer-managed-encryption-keys.html">Enable customer-managed encryption keys</a> | ↑ Up: <a href="_secure.html">Secure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a> →</p>
+<p>← Previous: <a href="enable-customer-managed-encryption-keys-con_enable-customer-managed-encryption-keys.html">Enable customer-managed encryption keys</a> | ↑ Up: <a href="_secure.html">Secure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants on AWS</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2289,7 +2295,7 @@ The following values are valid:</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-21 15:15:08 +0100
+Last updated 2026-10-21 18:01:53 +0100
 </div>
 </div>
 <style>
