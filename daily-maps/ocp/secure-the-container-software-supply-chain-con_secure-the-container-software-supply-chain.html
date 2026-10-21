@@ -915,6 +915,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_configure.html">Configure</a>
 
 <ul class="sectlevel2">
+<li><a href="preparing-for-users-intro_post-install-preparing-for-users.html">Preparing for users</a>
+</li>
 <li><a href="change-the-installed-disk-partition-schema-for-new-nodes-con_change-the-installed-disk-partition-schema-for-new-nodes.html">Change the installed disk-partition schema for new nodes</a>
 </li>
 <li><a href="configure-and-maintain-the-pod-network-cni-213-ensure-every-pod-gets-a-unique-ip-in-a-flat-network-con_configure-and-maintain-the-pod-network-cni-213-ensure-every-pod-gets-a-unique-ip-in-a-flat-network.html">Ensure every pod gets a unique IP in a flat network</a>
@@ -1037,6 +1039,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="coreos-layering-updating_understand-how-to-update-a-cluster-that-uses-the-image-mode-for-openshift.html">Update with a RHCOS custom layered image</a>
 </li>
+<li><a href="post-install-configuration-overview-intro_post-installation-configuration-overview.html">Postinstallation configuration overview</a>
+</li>
 <li><a href="identity-provider-overview_prepare-a-cluster-for-user-access.html">Identity providers in Red&#160;Hat OpenShift Container Platform</a>
 </li>
 <li><a href="manage-workloads-using-taints-and-tolerations-con_manage-workloads-using-taints-and-tolerations.html">Manage workloads using taints and tolerations</a>
@@ -1050,6 +1054,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-private-storage-endpoint-with-iro-discovery-con_configure-private-storage-endpoint-with-iro-discovery.html">Configure a private storage endpoint by using Image Registry Operator discovery</a>
 </li>
 <li><a href="configure-private-storage-endpoint-with-user-provided-vnet-con_configure-private-storage-endpoint-with-user-provided-vnet.html">Configure a private storage endpoint with a user-provided VNet</a>
+</li>
+<li><a href="postinstallation-storage-configuration-intro_post-install-storage-configuration.html">Postinstallation storage configuration</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_create-multi-architecture-compute-clusters.html">Configuring your cluster with multi-architecture compute machines</a>
 </li>
@@ -1094,6 +1100,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="registry-removed_configure-the-image-registry-after-installation.html">Image registry removed during installation</a>
 </li>
 <li><a href="configure-registry-storage-by-platform-con_configure-registry-storage-by-platform.html">Configure registry storage by platform</a>
+</li>
+<li><a href="configuring-image-streams-and-registries-intro_post-install-image-config.html">Configuring image streams and image registries</a>
 </li>
 <li><a href="odc-customizing-user-perspectives_enable-the-developer-perspective.html">Customize user perspectives</a>
 </li>
@@ -1791,7 +1799,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#security-container-content-inside_secure-the-container-software-supply-chain">Secure inside the container</a></li><li class="level-4"><a href="#security-container-content-universal_secure-the-container-software-supply-chain">Create redistributable images with UBI</a></li><li class="level-4"><a href="#security-container-content-scanning_secure-the-container-software-supply-chain">Security scanning in RHEL</a></li><li class="level-5"><a href="#quay-security-scan_secure-the-container-software-supply-chain">Scanning OpenShift images</a></li><li class="level-4"><a href="#security-container-content-external-scanning_secure-the-container-software-supply-chain">Integrate external scanning</a></li><li class="level-5"><a href="#security-image-metadata_secure-the-container-software-supply-chain">Image metadata</a></li><li class="level-6"><a href="#security-example-annotation-keys_secure-the-container-software-supply-chain">Example annotation keys</a></li><li class="level-6"><a href="#security-example-annotation-values_secure-the-container-software-supply-chain">Example annotation values</a></li><li class="level-5"><a href="#security-annotating-image-objects_secure-the-container-software-supply-chain">Annotating image objects</a></li><li class="level-6"><a href="#security-example-annotate-CLI_secure-the-container-software-supply-chain">Example annotate CLI command</a></li><li class="level-5"><a href="#controlling-pod-execution_secure-the-container-software-supply-chain">Controlling pod execution</a></li><li class="level-6"><a href="#security-controlling-pod-execution-example-annotation_secure-the-container-software-supply-chain">Example annotation</a></li><li class="level-5"><a href="#security-integration-reference_secure-the-container-software-supply-chain">Integration reference</a></li><li class="level-6"><a href="#security-integration-reference-example-api-call_secure-the-container-software-supply-chain">Example REST API call</a></li><li class="level-4"><a href="#security-container-content-inside_secure-container-content-using-red-hat-universal-base-images-ubi">Secure inside the container</a></li><li class="level-5"><a href="#security-container-content-universal_secure-container-content-using-red-hat-universal-base-images-ubi">Create redistributable images with UBI</a></li><li class="level-5"><a href="#security-container-content-scanning_secure-container-content-using-red-hat-universal-base-images-ubi">Security scanning in RHEL</a></li><li class="level-6"><a href="#quay-security-scan_secure-container-content-using-red-hat-universal-base-images-ubi">Scanning OpenShift images</a></li><li class="level-5"><a href="#security-container-content-external-scanning_secure-container-content-using-red-hat-universal-base-images-ubi">Integrate external scanning</a></li><li class="level-6"><a href="#security-image-metadata_secure-container-content-using-red-hat-universal-base-images-ubi">Image metadata</a></li><li class="level-6"><a href="#security-annotating-image-objects_secure-container-content-using-red-hat-universal-base-images-ubi">Annotating image objects</a></li><li class="level-6"><a href="#controlling-pod-execution_secure-container-content-using-red-hat-universal-base-images-ubi">Controlling pod execution</a></li><li class="level-6"><a href="#security-integration-reference_secure-container-content-using-red-hat-universal-base-images-ubi">Integration reference</a></li><li class="level-5"><a href="#security-registries-where_secure-container-content-using-red-hat-universal-base-images-ubi">Know where containers come from</a></li><li class="level-5"><a href="#security-registries-immutable_secure-container-content-using-red-hat-universal-base-images-ubi">Immutable and certified containers</a></li><li class="level-5"><a href="#security-registries-ecosystem_secure-container-content-using-red-hat-universal-base-images-ubi">Get containers from Red Hat Registry and Ecosystem Catalog</a></li><li class="level-5"><a href="#security-registries-openshift_secure-container-content-using-red-hat-universal-base-images-ubi">OpenShift Container Registry</a></li><li class="level-5"><a href="#security-registries-quay_secure-container-content-using-red-hat-universal-base-images-ubi">Store containers using Red Hat Quay</a></li><li class="level-4"><a href="#security-build-once_secure-the-build-pipeline-and-automate-image-updates">Build once, deploy everywhere</a></li><li class="level-5"><a href="#security-build-management_secure-the-build-pipeline-and-automate-image-updates">Manage builds</a></li><li class="level-5"><a href="#security-build-inputs_secure-the-build-pipeline-and-automate-image-updates">Secure inputs during builds</a></li><li class="level-5"><a href="#security-build-designing_secure-the-build-pipeline-and-automate-image-updates">Design your build process</a></li><li class="level-5"><a href="#security-build-knative_secure-the-build-pipeline-and-automate-image-updates">Build Knative serverless applications</a></li><li class="level-5"><a href="#security-deploy-trigger_secure-the-build-pipeline-and-automate-image-updates">Control container deployments with triggers</a></li><li class="level-5"><a href="#security-deploy-image-sources_secure-the-build-pipeline-and-automate-image-updates">Control what image sources can be deployed</a></li><li class="level-5"><a href="#security-deploy-signature_secure-the-build-pipeline-and-automate-image-updates">Use signature transports</a></li><li class="level-5"><a href="#security-deploy-secrets_secure-the-build-pipeline-and-automate-image-updates">Create secrets and config maps</a></li><li class="level-5"><a href="#security-deploy-continuous_secure-the-build-pipeline-and-automate-image-updates">Automate continuous deployment</a></li><li class="level-5"><a href="#configmap-adding-ca_secure-the-build-pipeline-and-automate-image-updates">Add certificate authorities to the cluster</a></li><li class="level-4"><a href="#control-image-deployment-using-trusted-sources-and-signature-verification-con_control-image-deployment-using-trusted-sources-and-signature-verification">Control image deployment using trusted sources and signature verification</a></li><li class="level-5"><a href="#containers-signature-verify-enable_control-image-deployment-using-trusted-sources-and-signature-verification">Enable signature verification for Red Hat Container Registries</a></li><li class="level-5"><a href="#containers-signature-verify-application_control-image-deployment-using-trusted-sources-and-signature-verification">Verify the signature verification configuration</a></li><li class="level-5"><a href="#containers-signature-verify-artifacts_control-image-deployment-using-trusted-sources-and-signature-verification">Understand the verification of container images lacking verifiable signatures</a></li><li class="level-6"><a href="#containers-signature-verification-automatic_control-image-deployment-using-trusted-sources-and-signature-verification">Automated verification during updates</a></li><li class="level-6"><a href="#containers-signature-verify-skopeo_control-image-deployment-using-trusted-sources-and-signature-verification">Use skopeo to verify signatures of Red Hat container images</a></li><li class="level-5"><a href="#nodes-sigstore-using-about_control-image-deployment-using-trusted-sources-and-signature-verification">About sigstore</a></li><li class="level-5"><a href="#nodes-sigstore-configure_control-image-deployment-using-trusted-sources-and-signature-verification">About configuring sigstore support</a></li><li class="level-6"><a href="#nodes-sigstore-configure-parameters_control-image-deployment-using-trusted-sources-and-signature-verification">About cluster and image policy parameters</a></li><li class="level-6"><a href="#nodes-sigstore-configure-parameters-modify_control-image-deployment-using-trusted-sources-and-signature-verification">About modifying or removing image policies</a></li><li class="level-5"><a href="#nodes-sigstore-configure-cluster-policy_control-image-deployment-using-trusted-sources-and-signature-verification">Create a cluster image policy CR</a></li><li class="level-5"><a href="#nodes-sigstore-configure-image-policy_control-image-deployment-using-trusted-sources-and-signature-verification">Create an image policy CR</a></li><li class="level-5"><a href="#security-deploy-image-sources_control-image-deployment-using-trusted-sources-and-signature-verification">Control what image sources can be deployed</a></li><li class="level-5"><a href="#security-deploy-signature_control-image-deployment-using-trusted-sources-and-signature-verification">Use signature transports</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#security-container-content-inside_secure-the-container-software-supply-chain">Secure inside the container</a></li><li class="level-4"><a href="#security-container-content-universal_secure-the-container-software-supply-chain">Create redistributable images with UBI</a></li><li class="level-4"><a href="#security-container-content-scanning_secure-the-container-software-supply-chain">Security scanning in RHEL</a></li><li class="level-5"><a href="#quay-security-scan_secure-the-container-software-supply-chain">Scanning OpenShift images</a></li><li class="level-4"><a href="#security-container-content-external-scanning_secure-the-container-software-supply-chain">Integrate external scanning</a></li><li class="level-5"><a href="#security-image-metadata_secure-the-container-software-supply-chain">Image metadata</a></li><li class="level-6"><a href="#security-example-annotation-keys_secure-the-container-software-supply-chain">Example annotation keys</a></li><li class="level-6"><a href="#security-example-annotation-values_secure-the-container-software-supply-chain">Example annotation values</a></li><li class="level-5"><a href="#security-annotating-image-objects_secure-the-container-software-supply-chain">Annotating image objects</a></li><li class="level-6"><a href="#security-example-annotate-CLI_secure-the-container-software-supply-chain">Example annotate CLI command</a></li><li class="level-5"><a href="#controlling-pod-execution_secure-the-container-software-supply-chain">Controlling pod execution</a></li><li class="level-6"><a href="#security-controlling-pod-execution-example-annotation_secure-the-container-software-supply-chain">Example annotation</a></li><li class="level-5"><a href="#security-integration-reference_secure-the-container-software-supply-chain">Integration reference</a></li><li class="level-6"><a href="#security-integration-reference-example-api-call_secure-the-container-software-supply-chain">Example REST API call</a></li><li class="level-4"><a href="#security-container-content-inside_secure-container-content-using-red-hat-universal-base-images-ubi">Secure inside the container</a></li><li class="level-5"><a href="#security-container-content-universal_secure-container-content-using-red-hat-universal-base-images-ubi">Create redistributable images with UBI</a></li><li class="level-5"><a href="#security-container-content-scanning_secure-container-content-using-red-hat-universal-base-images-ubi">Security scanning in RHEL</a></li><li class="level-6"><a href="#quay-security-scan_secure-container-content-using-red-hat-universal-base-images-ubi">Scanning OpenShift images</a></li><li class="level-5"><a href="#security-container-content-external-scanning_secure-container-content-using-red-hat-universal-base-images-ubi">Integrate external scanning</a></li><li class="level-6"><a href="#security-image-metadata_secure-container-content-using-red-hat-universal-base-images-ubi">Image metadata</a></li><li class="level-6"><a href="#security-annotating-image-objects_secure-container-content-using-red-hat-universal-base-images-ubi">Annotating image objects</a></li><li class="level-6"><a href="#controlling-pod-execution_secure-container-content-using-red-hat-universal-base-images-ubi">Controlling pod execution</a></li><li class="level-6"><a href="#security-integration-reference_secure-container-content-using-red-hat-universal-base-images-ubi">Integration reference</a></li><li class="level-5"><a href="#security-registries-where_secure-container-content-using-red-hat-universal-base-images-ubi">Know where containers come from</a></li><li class="level-5"><a href="#security-registries-immutable_secure-container-content-using-red-hat-universal-base-images-ubi">Immutable and certified containers</a></li><li class="level-5"><a href="#security-registries-ecosystem_secure-container-content-using-red-hat-universal-base-images-ubi">Get containers from Red Hat Registry and Ecosystem Catalog</a></li><li class="level-5"><a href="#security-registries-openshift_secure-container-content-using-red-hat-universal-base-images-ubi">OpenShift Container Registry</a></li><li class="level-5"><a href="#security-registries-quay_secure-container-content-using-red-hat-universal-base-images-ubi">Store containers using Red Hat Quay</a></li><li class="level-4"><a href="#security-build-once_secure-the-build-pipeline-and-automate-image-updates">Build once, deploy everywhere</a></li><li class="level-5"><a href="#security-build-management_secure-the-build-pipeline-and-automate-image-updates">Manage builds</a></li><li class="level-5"><a href="#security-build-inputs_secure-the-build-pipeline-and-automate-image-updates">Secure inputs during builds</a></li><li class="level-5"><a href="#security-build-designing_secure-the-build-pipeline-and-automate-image-updates">Design your build process</a></li><li class="level-5"><a href="#security-build-knative_secure-the-build-pipeline-and-automate-image-updates">Build Knative serverless applications</a></li><li class="level-5"><a href="#security-deploy-trigger_secure-the-build-pipeline-and-automate-image-updates">Control container deployments with triggers</a></li><li class="level-5"><a href="#security-deploy-image-sources_secure-the-build-pipeline-and-automate-image-updates">Control what image sources can be deployed</a></li><li class="level-5"><a href="#security-deploy-signature_secure-the-build-pipeline-and-automate-image-updates">Use signature transports</a></li><li class="level-5"><a href="#security-deploy-secrets_secure-the-build-pipeline-and-automate-image-updates">Create secrets and config maps</a></li><li class="level-5"><a href="#security-deploy-continuous_secure-the-build-pipeline-and-automate-image-updates">Automate continuous deployment</a></li><li class="level-5"><a href="#configmap-adding-ca_secure-the-build-pipeline-and-automate-image-updates">Add certificate authorities to the cluster</a></li><li class="level-4"><a href="#control-image-deployment-using-trusted-sources-and-signature-verification-con_control-image-deployment-using-trusted-sources-and-signature-verification">Control image deployment using trusted sources and signature verification</a></li><li class="level-5"><a href="#containers-signature-verify-enable_control-image-deployment-using-trusted-sources-and-signature-verification">Enable signature verification for Red Hat Container Registries</a></li><li class="level-5"><a href="#containers-signature-verify-application_control-image-deployment-using-trusted-sources-and-signature-verification">Verify the signature verification configuration</a></li><li class="level-5"><a href="#containers-signature-verify-artifacts_control-image-deployment-using-trusted-sources-and-signature-verification">Understand the verification of container images lacking verifiable signatures</a></li><li class="level-6"><a href="#containers-signature-verification-automatic_control-image-deployment-using-trusted-sources-and-signature-verification">Automated verification during updates</a></li><li class="level-6"><a href="#containers-signature-verify-skopeo_control-image-deployment-using-trusted-sources-and-signature-verification">Use skopeo to verify signatures of Red Hat container images</a></li><li class="level-5"><a href="#nodes-sigstore-using-about_control-image-deployment-using-trusted-sources-and-signature-verification">Understand image signature verification</a></li><li class="level-5"><a href="#nodes-sigstore-configure_control-image-deployment-using-trusted-sources-and-signature-verification">About configuring sigstore support</a></li><li class="level-6"><a href="#nodes-sigstore-configure-parameters_control-image-deployment-using-trusted-sources-and-signature-verification">About cluster and image policy parameters</a></li><li class="level-6"><a href="#nodes-sigstore-configure-parameters-modify_control-image-deployment-using-trusted-sources-and-signature-verification">About modifying or removing image policies</a></li><li class="level-5"><a href="#nodes-sigstore-configure-cluster-policy_control-image-deployment-using-trusted-sources-and-signature-verification">Create a cluster image policy CR</a></li><li class="level-5"><a href="#nodes-sigstore-configure-image-policy_control-image-deployment-using-trusted-sources-and-signature-verification">Create an image policy CR</a></li><li class="level-5"><a href="#security-deploy-image-sources_control-image-deployment-using-trusted-sources-and-signature-verification">Control what image sources can be deployed</a></li><li class="level-5"><a href="#security-deploy-signature_control-image-deployment-using-trusted-sources-and-signature-verification">Use signature transports</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="secure-the-container-software-supply-chain-con_secure-the-container-software-supply-chain">Secure the container software supply chain</h3>
@@ -3727,15 +3735,21 @@ Pull From: quay.io/openshift-release-dev/ocp-release@sha256:e73ab4b33a9c3ff00c9f
 </div>
 </div>
 <div class="sect4">
-<h5 id="nodes-sigstore-using-about_control-image-deployment-using-trusted-sources-and-signature-verification">About sigstore</h5>
+<h5 id="nodes-sigstore-using-about_control-image-deployment-using-trusted-sources-and-signature-verification">Understand image signature verification</h5>
 <div class="paragraph _abstract">
-<p>Cluster administrators or application developers can use the sigstore project to improve supply chain security. Developers can sign-off on what they build and administrators can verify those signatures and monitor workflows at scale.</p>
+<p>Cluster administrators or application developers can use the sigstore project to improve supply chain security by verifying that container images have not been tampered with and come from trusted sources.
+You can configure signature verification for all platform and Operator images, including in disconnected environments.
+This capability is useful for organizations that require strict supply chain security.</p>
 </div>
 <div class="paragraph">
-<p>With the sigstore project, signatures can be stored in the same registry as the build images. A second server is not needed. The identity piece of a signature is tied to the OpenID Connect (OIDC) identity through the Fulcio certificate authority, which simplifies the signature process by allowing key-less signing. Additionally, sigstore includes Rekor, which records signature metadata to an immutable, tamper-resistant ledger.</p>
+<p>With the sigstore project, signatures can be stored in the same registry as the container images, eliminating the need for a separate signature server.
+When using mirror registries, you must also mirror the sigstore signatures.
+The oc-mirror plugin v2 mirrors signatures automatically.</p>
 </div>
 <div class="paragraph">
-<p>You can use the <code>ClusterImagePolicy</code> and <code>ImagePolicy</code> custom resource (CR) objects to enable and configure sigstore support at the cluster or namespace scope. These objects specify the images and repositories to be verified and how the signatures must be verified.</p>
+<p>You can use the <code>ClusterImagePolicy</code> and <code>ImagePolicy</code> custom resource (CR) objects to enable and configure sigstore support at the cluster or namespace scope.
+These objects specify the images and repositories to be verified and how the signatures must be verified.
+When enabled, pods that attempt to use unsigned or incorrectly signed images are blocked from starting.</p>
 </div>
 </div>
 <div class="sect4">
@@ -4075,7 +4089,7 @@ spec:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1alpha1
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1
 kind: ClusterImagePolicy
 metadata:
   name: pki-policy
@@ -4266,11 +4280,11 @@ spec:
 </li>
 </ol>
 </div>
-<div class="ulist">
+<div class="olist arabic">
 <div class="title">Verification</div>
-<ul>
+<ol class="arabic">
 <li>
-<p>After the nodes in your cluster are updated, you can verify that the cluster image policy has been configured:</p>
+<p>After the nodes in your cluster are updated, verify that the cluster image policy has been configured:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -4296,8 +4310,10 @@ spec:
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-5.1# cat /etc/containers/policy.json</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>The following example output shows the cluster image policy with a public key:</p>
+</div>
 <div class="listingblock">
-<div class="title">Example output for the cluster image policy object with a public key showing the new cluster image policy</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json"># ...
   "transports": {
@@ -4316,8 +4332,10 @@ spec:
 # ...</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>The following example output shows the cluster image policy with a BYOPKI certificate:</p>
+</div>
 <div class="listingblock">
-<div class="title">Example output for the cluster image policy object for a BYOPKI certificate showing the new cluster image policy</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json"># ...
   "transports": {
@@ -4339,8 +4357,10 @@ spec:
       ],</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>The following example output shows the cluster image policy with a Fulcio certificate:</p>
+</div>
 <div class="listingblock">
-<div class="title">Example output for the cluster image policy object with a Fulcio certificate showing the new cluster image policy</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json"># ...
   "transports": {
@@ -4373,8 +4393,10 @@ spec:
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-5.1# cat /etc/containers/registries.d/sigstore-registries.yaml</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>The following example output shows that the scoped registry was added:</p>
+</div>
 <div class="listingblock">
-<div class="title">Example output showing that the scoped registry was added</div>
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">docker:
   example.com:
@@ -4386,19 +4408,99 @@ spec:
 <div class="paragraph">
 <p>where:</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>docker.example.com.use-sigstore-attachments</code></dt>
-<dd>
-<p>When <code>true</code>, specifies that sigstore signatures are going to be read along with the image.</p>
-</dd>
-</dl>
+<div class="ulist">
+<ul>
+<li>
+<p><code>docker.example.com.use-sigstore-attachments</code>&#8201;&#8212;&#8201;Specifies that sigstore signatures are read along with the image when set to <code>true</code>.</p>
+</li>
+</ul>
 </div>
 </li>
 </ol>
 </div>
 </li>
+<li>
+<p>Verify that unsigned or incorrectly signed images are blocked from running:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a test pod that uses an unsigned image from the scoped registry:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc run test-unsigned --image=&lt;scoped_registry&gt;/&lt;unsigned_image&gt;:&lt;tag&gt; --restart=Never</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;scoped_registry&gt;</code>&#8201;&#8212;&#8201;Specifies the registry defined in your <code>ClusterImagePolicy</code> scope.</p>
+</li>
+<li>
+<p><code>&lt;unsigned_image&gt;</code>&#8201;&#8212;&#8201;Specifies an image that does not have a valid sigstore signature.</p>
+</li>
+<li>
+<p><code>&lt;tag&gt;</code>&#8201;&#8212;&#8201;Specifies the image tag.</p>
+</li>
 </ul>
+</div>
+</li>
+<li>
+<p>Check the pod status:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pod test-unsigned -o jsonpath='{.status.containerStatuses[0].state}'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example output shows that the image was blocked:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{ "waiting": { "message": "Back-off pulling image \"registry.example.com/example:v1\": SignatureValidationFailed: image pull failed for registry.example.com/example:v1 because the signature validation failed: unable to pull image or OCI artifact: pull image err: Source image rejected: A signature was required, but no signature exists; artifact err: image reference: reference is a container image, not an OCI artifact", "reason": "ImagePullBackOff" }}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>SignatureValidationFailed</code> error with a "Source image rejected" message confirms that the signature verification policy is blocking unsigned images.</p>
+</div>
+</li>
+<li>
+<p>Check the pod events for detailed error information:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe pod test-unsigned</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example output shows signature verification failure in the pod events:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">Events:
+  Type     Reason                    Age                     From     Message
+  ----     ------                    ----                    ----     -------
+...
+  Warning  Failed                    4m36s (x5 over 7m36s)   kubelet  spec.containers{sleep-container}: Failed to pull image "registry.example.com/my-namespace/unsigned-image:v1.0": SignatureValidationFailed: unable to pull image or OCI artifact: pull image err: Source image rejected: A signature was required, but no signature exists; artifact err: image reference: reference is a container image, not an OCI artifact
+  Warning  Failed                    4m36s (x5 over 7m36s)   kubelet  spec.containers{sleep-container}: Error: SignatureValidationFailed
+  Normal   BackOff                   2m28s (x21 over 7m35s)  kubelet  spec.containers{sleep-container}: Back-off pulling image "registry.example.com/my-namespace/unsigned-image:v1.0"
+  Warning  Failed                    2m28s (x21 over 7m35s)  kubelet  spec.containers{sleep-container}: Error: ImagePullBackOff</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the test pod:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete pod test-unsigned --ignore-not-found</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect4">
@@ -4538,7 +4640,7 @@ spec:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1alpha1
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1
 kind: ImagePolicy
 metadata:
   name: pki-policy
@@ -5031,7 +5133,7 @@ namespace to be signed by the public key for <code>example.com</code>.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-21 11:29:03 +0100
+Last updated 2026-10-21 15:15:08 +0100
 </div>
 </div>
 <style>
