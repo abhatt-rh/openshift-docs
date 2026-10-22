@@ -437,47 +437,48 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
-<!-- navmap-preview-warning-start -->
+<!-- navmap-right-toc-start -->
 <style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
+  body.navmap-has-right-toc { padding-right: 18em; }
+  #navmap-right-toc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 16em;
+    height: 100%;
     overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
+    padding: 1.25em 1em;
+    background: #f8f8f7;
+    border-left: 1px solid #e7e7e9;
+    z-index: 1000;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    font-size: .9em;
   }
+  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
+  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
+  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
+  #navmap-right-toc li.level-3 { padding-left: 1em; }
+  #navmap-right-toc li.level-4 { padding-left: 2em; }
+  #navmap-right-toc li.level-5,
+  #navmap-right-toc li.level-6 { padding-left: 3em; }
+  #navmap-right-toc a { text-decoration: none; }
+  @media screen and (max-width: 1023px) {
+    body.navmap-has-right-toc { padding-right: 0; }
+    #navmap-right-toc {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 1em;
+      border: 1px solid #e7e7e9;
+      border-radius: 4px;
+    }
+  }
+
+
 </style>
-<!-- navmap-preview-warning-end -->
+<!-- navmap-right-toc-end -->
 </head>
-<body id="virt-about-the-overview-dashboard_view-cluster-resource-inventory" class="book toc2 toc-left">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/ocp-jobs/configure-multi-tenant-namespace-isolation.adoc:20
-    include::modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc
-  maps/ocp/ocp-jobs/scale-components-based-on-cluster-size.adoc:34
-    include::modules/network-observability-flowcollector-api-specifications.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/modules/network-observability-flowcollector-api-specifications.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
+<body id="understand-hardware-accelerators-intro_understand-hardware-accelerators" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -541,7 +542,6 @@ How to fix these errors:
 </ul>
 </li>
 <li><a href="_plan.html">Plan</a>
-
 <ul class="sectlevel2">
 <li><a href="size-control-plane-infrastructure-con_size-control-plane-infrastructure.html">Size control plane infrastructure</a>
 </li>
@@ -553,9 +553,9 @@ How to fix these errors:
 </li>
 <li><a href="plan-telco-core-network-deployment-con_plan-telco-core-network-deployment.html">Plan telco core network deployment</a>
 </li>
-<li><a href="telco-hub-architecture-overview_plan-telco-hub-cluster-deployment.html">Hub cluster architecture overview</a>
+<li><a href="plan-telco-hub-cluster-deployment-intro_plan-telco-hub-cluster-deployment.html">Plan telco hub cluster deployment</a>
 </li>
-<li><a href="telco-ref-design-overview_plan-telco-ran-distributed-unit-deployment.html">Reference design specifications for telco RAN DU 5G deployments</a>
+<li><a href="plan-telco-ran-distributed-unit-deployment-intro_plan-telco-ran-distributed-unit-deployment.html">Plan telco RAN distributed unit deployment</a>
 </li>
 <li><a href="choose-an-installation-method-con_choose-an-installation-method.html">Choose an installation method</a>
 </li>
@@ -579,6 +579,8 @@ How to fix these errors:
 </li>
 <li><a href="storage-ephemeral-storage-types_understand-different-types-of-ephemeral-storage.html">Types of ephemeral storage</a>
 </li>
+<li><a href="understand-hardware-accelerators-intro_understand-hardware-accelerators.html"><span class="toc-current">Understand hardware accelerators</span></a>
+</li>
 </ul>
 </li>
 <li><a href="_deploy.html">Deploy</a>
@@ -588,7 +590,7 @@ How to fix these errors:
 </li>
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
-<li><a href="about-ztp_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
+<li><a href="automate-edge-cluster-deployment-with-gitops-ztp-intro_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
 </li>
 </ul>
 </li>
@@ -638,6 +640,22 @@ How to fix these errors:
 <li><a href="rhcos-validate-live-media_validate-boot-artifacts.html">Validating RHCOS live media</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
+</li>
+<li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-deploy-azure-con_deploying-hosted-control-planes-on-azure.html">Deploying hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-bm-overview_deploying-hosted-control-planes-on-bare-metal-with-the-agent-platform.html">About hosted control planes on bare metal with the Agent platform</a>
+</li>
+<li><a href="deploying-hosted-control-planes-on-openshift-virtualization-intro_deploying-hosted-control-planes-on-openshift-virtualization.html">Deploying hosted control planes on OpenShift Virtualization</a>
+</li>
+<li><a href="deploying-hosted-control-planes-on-non-bare-metal-agent-machines-intro_deploying-hosted-control-planes-on-non-bare-metal-agent-machines.html">Deploying hosted control planes on non-bare-metal agent machines</a>
+</li>
+<li><a href="install-sno-with-image-based-installation-intro_install-sno-with-image-based-installation.html">Install single-node OpenShift with image-based installation</a>
+</li>
+<li><a href="install-virtualized-control-plane-cluster-intro_install-virtualized-control-plane-cluster.html">Install a virtualized control plane cluster</a>
+</li>
+<li><a href="install-topology-aware-lifecycle-manager-intro_install-topology-aware-lifecycle-manager.html">Install the Topology Aware Lifecycle Manager</a>
 </li>
 </ul>
 </li>
@@ -710,6 +728,12 @@ How to fix these errors:
 <li><a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a>
 </li>
 <li><a href="gathering-data-cluster-update_gather-data-about-a-cluster-update.html">Gathering data about your cluster update</a>
+</li>
+<li><a href="upgrade-sno-with-image-based-upgrade-intro_upgrade-sno-with-image-based-upgrade.html">Upgrade single-node OpenShift with image-based upgrade</a>
+</li>
+<li><a href="upgrade-managed-clusters-with-talm-intro_upgrade-managed-clusters-with-talm.html">Upgrade managed clusters with the Topology Aware Lifecycle Manager</a>
+</li>
+<li><a href="update-telco-cnf-clusters-intro_update-telco-cnf-clusters.html">Update telco CNF clusters</a>
 </li>
 </ul>
 </li>
@@ -856,7 +880,7 @@ How to fix these errors:
 </li>
 <li><a href="images-configuration-mco-and-registry-changes_understand-mco-rollout-behavior.html">Machine Config Operator behavior and registry changes</a>
 </li>
-<li><a href="cnf-about-topology-aware-lifecycle-manager-config_configure-topology-aware-lifecycle-manager.html">About the Topology Aware Lifecycle Manager configuration</a>
+<li><a href="configure-topology-aware-lifecycle-manager-intro_configure-topology-aware-lifecycle-manager.html">Configure the Topology Aware Lifecycle Manager</a>
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
@@ -884,6 +908,8 @@ How to fix these errors:
 </li>
 <li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernate a cluster</a>
 </li>
+<li><a href="add-worker-nodes-to-sno-clusters-intro_add-worker-nodes-to-sno-clusters.html">Add worker nodes to single-node OpenShift clusters</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -908,6 +934,8 @@ How to fix these errors:
 <li><a href="developing-containerized-applications_review-platform-extensibility-and-development-workflows.html">Containerized application development</a>
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
+</li>
+<li><a href="consume-ptp-fast-event-notifications-intro_consume-ptp-fast-event-notifications.html">Consume PTP fast event notifications</a>
 </li>
 </ul>
 </li>
@@ -1120,6 +1148,10 @@ How to fix these errors:
 </li>
 <li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
 </li>
+<li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
+</li>
+<li><a href="configure-rdma-for-gpu-workloads-intro_configure-rdma-for-gpu-workloads.html">Configure RDMA for GPU workloads</a>
+</li>
 </ul>
 </li>
 <li><a href="_networking.html">Networking</a>
@@ -1153,6 +1185,8 @@ How to fix these errors:
 </li>
 <li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
+<li><a href="review-namespace-policy-and-verify-admin-policy-deployment-con_review-namespace-policy-and-verify-admin-policy-deployment.html">Review namespace policy and verify admin policy deployment</a>
+</li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
@@ -1180,6 +1214,12 @@ How to fix these errors:
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
+</li>
+<li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
+</li>
+<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1357,9 +1397,12 @@ How to fix these errors:
 </li>
 <li><a href="security-profiles-operator-release-notes_review-security-profiles-operator-release-notes.html">Security Profiles Operator release notes</a>
 </li>
+<li><a href="understand-telco-cluster-security-intro_understand-telco-cluster-security.html">Understand telco cluster security</a>
+</li>
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
+
 <ul class="sectlevel2">
 <li><a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a>
 </li>
@@ -1381,15 +1424,13 @@ How to fix these errors:
 </li>
 <li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
 </li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html"><span class="toc-current">About the Red&#160;Hat OpenShift Container Platform dashboards page</span></a>
-</li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="view-node-status-and-resource-usage-con_view-node-status-and-resource-usage.html">View node status and resource usage</a>
 </li>
 <li><a href="view-pod-status-and-logs-con_view-pod-status-and-logs.html">View pod status and logs</a>
+</li>
+<li><a href="observe-telco-cluster-health-intro_observe-telco-cluster-health.html">Observe telco cluster health</a>
 </li>
 </ul>
 </li>
@@ -1523,6 +1564,8 @@ How to fix these errors:
 </li>
 <li><a href="manage-large-scale-ai-training-workloads-with-jobset-operator-intro_manage-large-scale-ai-training-workloads-with-jobset-operator.html">Manage large-scale AI training workloads with the JobSet Operator</a>
 </li>
+<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
+</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1613,11 +1656,13 @@ How to fix these errors:
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
 </li>
-<li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
+<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
 <li><a href="cnf-measuring-latency_validate-node-performance-with-latency-tests.html">Measuring latency</a>
+</li>
+<li><a href="compare-cluster-configurations-intro_compare-cluster-configurations.html">Compare cluster configurations</a>
 </li>
 </ul>
 </li>
@@ -1788,6 +1833,8 @@ How to fix these errors:
 </li>
 <li><a href="storage-troubleshooting-intro_troubleshoot-storage.html">Troubleshooting storage</a>
 </li>
+<li><a href="troubleshoot-telco-cluster-operations-intro_troubleshoot-telco-cluster-operations.html">Troubleshoot telco cluster operations</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1804,91 +1851,412 @@ How to fix these errors:
 </ul>
 </div>
 </div>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#hardware-accelerators_understand-hardware-accelerators">Hardware accelerators</a></li><li class="level-4"><a href="#nvidia-gpu-enablement_understand-hardware-accelerators">NVIDIA GPU enablement</a></li><li class="level-5"><a href="#nvidia-gpu-bare-metal_understand-hardware-accelerators">GPUs and bare metal</a></li><li class="level-5"><a href="#nvidia-gpu-kvm_understand-hardware-accelerators">GPUs and Red Hat KVM</a></li><li class="level-5"><a href="#nvidia-gpu-csps_understand-hardware-accelerators">GPUs and CSPs</a></li><li class="level-4"><a href="#nvidia-gpu-cuda-streams_understand-hardware-accelerators">CUDA streams</a></li><li class="level-4"><a href="#nvidia-gpu-cuda-mps_understand-hardware-accelerators">CUDA Multi-Process Service</a></li><li class="level-4"><a href="#nvidia-gpu-mig-gpu_understand-hardware-accelerators">Multi-instance GPU</a></li><li class="level-4"><a href="#nvidia-gpu-features_understand-hardware-accelerators">NVIDIA GPU features for Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#amd-about-amd-gpu-operator_understand-hardware-accelerators">About the AMD GPU Operator</a></li><li class="level-4"><a href="#amd-testing-the-amd-gpu-operator_understand-hardware-accelerators">Testing the AMD GPU Operator</a></li><li class="level-4"><a href="#gaudi-ai-accelerators-prerequisites_understand-hardware-accelerators">Intel Gaudi AI accelerators prerequisites</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="virt-about-the-overview-dashboard_view-cluster-resource-inventory">About the Red&#160;Hat OpenShift Container Platform dashboards page</h3>
+<h3 id="understand-hardware-accelerators-intro_understand-hardware-accelerators">Understand hardware accelerators</h3>
 <div class="paragraph _abstract">
-<p>Access the Red&#160;Hat OpenShift Container Platform dashboard, which captures high-level information about the cluster, by navigating to <strong>Home</strong> &#8594; <strong>Overview</strong> from the Red&#160;Hat OpenShift Container Platform web console.</p>
+<p>You can review the types of hardware accelerators available for Red&#160;Hat OpenShift Container Platform clusters, including GPUs and DPUs, and understand how to use them for specialized workloads.</p>
+</div>
+<div class="sect3">
+<h4 id="hardware-accelerators_understand-hardware-accelerators">Hardware accelerators</h4>
+<div class="paragraph">
+<p>Red&#160;Hat Red&#160;Hat OpenShift Container Platform enables the following hardware accelerators:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>NVIDIA GPU</p>
+</li>
+<li>
+<p>AMD Instinct&#174; GPU</p>
+</li>
+<li>
+<p>Intel&#174; Gaudi&#174;</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nvidia-gpu-enablement_understand-hardware-accelerators">NVIDIA GPU enablement</h4>
+<div class="paragraph _abstract">
+<p>NVIDIA GPU enablement makes GPU hardware available to workloads that run on Red&#160;Hat OpenShift Container Platform clusters.</p>
 </div>
 <div class="paragraph">
-<p>The Red&#160;Hat OpenShift Container Platform dashboard provides various cluster information, captured in individual dashboard cards.</p>
+<p>The following diagram shows how the GPU architecture is enabled for OpenShift:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="NVIDIA GPU enablement">
+</div>
+<div class="title">Figure 22. NVIDIA GPU enablement</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>MIG is supported on GPUs starting with the NVIDIA Ampere generation. For a list of GPUs that support MIG, see the <a href="https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#supported-gpus">NVIDIA MIG User Guide</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="nvidia-gpu-bare-metal_understand-hardware-accelerators">GPUs and bare metal</h5>
+<div class="paragraph _abstract">
+<p>You can deploy Red&#160;Hat OpenShift Container Platform on an NVIDIA-certified bare-metal server.
+However, consider several limitations that might affect your objectives.</p>
 </div>
 <div class="paragraph">
-<p>The Red&#160;Hat OpenShift Container Platform dashboard consists of the following cards:</p>
+<p>The following list details these limitations:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Details</strong> provides a brief overview of informational cluster details.</p>
+<p>Control plane nodes can be CPU nodes.</p>
+</li>
+<li>
+<p>Worker nodes must be GPU nodes, provided that AI/ML workloads are executed on these worker nodes.</p>
 <div class="paragraph">
-<p>Statuses include <strong>OK</strong>, <strong>error</strong>, <strong>warning</strong>, <strong>in progress</strong>, and <strong>unknown</strong>. Resources can add custom status names.</p>
+<p>In addition, the worker nodes can host one or more GPUs, but they must be of the same type.
+For example, a node can have two NVIDIA A100 GPUs, but a node with one A100 GPU and one T4 GPU is not supported.
+The NVIDIA Device Plugin for Kubernetes does not support mixing different GPU models on the same node.</p>
+</div>
+</li>
+<li>
+<p>When using Red&#160;Hat OpenShift Container Platform, note that one or three or more servers are required.
+Clusters with two servers are not supported.
+The single server deployment is called single-node OpenShift and using this configuration results in a non-high availability Red&#160;Hat OpenShift Container Platform environment.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can choose one of the following methods to access the containerized GPUs:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Cluster ID</p>
+<p>GPU passthrough</p>
 </li>
 <li>
-<p>Provider</p>
-</li>
-<li>
-<p>Version</p>
+<p>Multi-Instance GPU (MIG)</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p><strong>Cluster Inventory</strong> details the number of resources and associated statuses. It is helpful when intervention is required to resolve problems, including information about:</p>
+</div>
+<div class="sect4">
+<h5 id="nvidia-gpu-kvm_understand-hardware-accelerators">GPUs and Red Hat KVM</h5>
+<div class="paragraph _abstract">
+<p>You can use Red&#160;Hat OpenShift Container Platform on an NVIDIA-certified kernel-based virtual machine (KVM) server. Similar to bare metal deployments, one or three or more servers are required.</p>
+</div>
+<div class="paragraph">
+<p>Clusters with two servers are not supported.</p>
+</div>
+<div class="paragraph">
+<p>However, unlike bare metal deployments, you can use different types of GPUs in the server.
+This is because you can assign these GPUs to different VMs that act as Kubernetes nodes.
+The only limitation is that a Kubernetes node must have the same set of GPU types at its own level.</p>
+</div>
+<div class="paragraph">
+<p>You can choose one of the following methods to access the containerized GPUs:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Number of nodes.</p>
+<p>GPU passthrough for accessing and using GPU hardware within a virtual machine (VM)</p>
 </li>
 <li>
-<p>Number of pods.</p>
-</li>
-<li>
-<p>Persistent storage volume claims.</p>
-</li>
-<li>
-<p>Bare-metal hosts in the cluster, listed according to their state (only available in <strong>metal3</strong> environment).</p>
+<p>GPU (vGPU) time-slicing when not all of the GPU is needed</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p><strong>Status</strong> helps administrators understand how cluster resources are consumed. Click a resource to jump to a detailed page listing pods and nodes that consume the largest amount of the specified cluster resource (CPU, memory, or storage).</p>
-</li>
-<li>
-<p><strong>Cluster Utilization</strong> shows the capacity of various resources over a specified period of time, to help administrators understand the scale and frequency of high resource consumption, including information about:</p>
+<div class="paragraph">
+<p>To enable the vGPU capability, a special driver must be installed at the host level.
+This driver is delivered as an RPM package.
+This host driver is not required for GPU passthrough allocation.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="nvidia-gpu-csps_understand-hardware-accelerators">GPUs and CSPs</h5>
+<div class="paragraph _abstract">
+<p>You can deploy Red&#160;Hat OpenShift Container Platform to one of the major cloud service providers (CSPs): Amazon Web Services (AWS), Google Cloud, or Microsoft Azure.</p>
+</div>
+<div class="paragraph">
+<p>Two modes of operation are available: a fully managed deployment and a self-managed deployment.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>CPU time.</p>
+<p>In a fully managed deployment, everything is automated by Red&#160;Hat in collaboration with CSP.
+You can request an Red&#160;Hat OpenShift Container Platform instance through the CSP web console, and the cluster is automatically created and fully managed by Red&#160;Hat.
+Red Hat manages infrastructure operations, including node failure recovery and environment maintenance.
+Red&#160;Hat is fully responsible for maintaining the uptime of the cluster.
+The fully managed services are available on AWS, Azure, and Google Cloud.
+For AWS, the Red&#160;Hat OpenShift Container Platform service is called (Red&#160;Hat Red&#160;Hat OpenShift Container Platform Service on AWS).
+For Azure, the service is called Azure Red&#160;Hat OpenShift.
+For Google Cloud, the service is called OpenShift Dedicated on Google Cloud.</p>
 </li>
 <li>
-<p>Memory allocation.</p>
-</li>
-<li>
-<p>Storage consumed.</p>
-</li>
-<li>
-<p>Network resources consumed.</p>
-</li>
-<li>
-<p>Pod count.</p>
+<p>In a self-managed deployment, you are responsible for instantiating and maintaining the Red&#160;Hat OpenShift Container Platform cluster.
+Red&#160;Hat provides the Red&#160;Hat OpenShift Container Platform install utility to support the deployment of the Red&#160;Hat OpenShift Container Platform cluster in this case. The self-managed services are available globally to all CSPs.</p>
 </li>
 </ul>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The compute instance must be a GPU-accelerated compute instance. Additionally, the GPU type must match the list of supported GPUs from NVIDIA AI Enterprise. For example, T4, V100, and A100 are part of this list.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can choose one of the following methods to access the containerized GPUs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GPU passthrough to access and use GPU hardware within a virtual machine (VM).</p>
 </li>
 <li>
-<p><strong>Activity</strong> lists messages related to recent activity in the cluster, such as pod creation or virtual machine migration to another host.</p>
+<p>GPU (vGPU) time slicing when the entire GPU is not required.</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nvidia-gpu-cuda-streams_understand-hardware-accelerators">CUDA streams</h4>
+<div class="paragraph _abstract">
+<p>Compute Unified Device Architecture (CUDA) is a parallel computing platform and programming model developed by NVIDIA for general computing on GPUs.</p>
+</div>
+<div class="paragraph">
+<p>A stream is a sequence of operations that executes in issue-order on the GPU.
+CUDA commands are typically executed sequentially in a default stream and a task does not start until a preceding task has completed.</p>
+</div>
+<div class="paragraph">
+<p>Asynchronous processing of operations across different streams allows for parallel execution of tasks.
+A task issued in one stream runs before, during, or after another task is issued into another stream.
+This task process allows the GPU to run multiple tasks simultaneously in no prescribed order, leading to improved performance.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nvidia-gpu-cuda-mps_understand-hardware-accelerators">CUDA Multi-Process Service</h4>
+<div class="paragraph _abstract">
+<p>CUDA Multi-Process Service (MPS) allows a single GPU to use multiple CUDA processes. The processes run in parallel on the GPU, eliminating saturation of the GPU compute resources.</p>
+</div>
+<div class="paragraph">
+<p>MPS also enables concurrent execution, or overlapping, of kernel operations and memory copying from different processes to enhance utilization.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nvidia-gpu-mig-gpu_understand-hardware-accelerators">Multi-instance GPU</h4>
+<div class="paragraph _abstract">
+<p>Using Multi-instance GPU (MIG), you can split GPU compute units and memory into multiple MIG instances. Each of these instances represents a standalone GPU device from a system perspective and can be connected to any application, container, or virtual machine running on the node.</p>
+</div>
+<div class="paragraph">
+<p>The software that uses the GPU treats each of these MIG instances as an individual GPU.</p>
+</div>
+<div class="paragraph">
+<p>MIG is useful when you have an application that does not require the full power of an entire GPU. By using the MIG feature of the new NVIDIA Ampere architecture, you can split your hardware resources into multiple GPU instances, each of which is available to the operating system as an independent CUDA-enabled GPU.</p>
+</div>
+<div class="paragraph">
+<p>NVIDIA GPU Operator version 1.7.0 and later provides MIG support for the A100 and A30 Ampere cards. These GPU instances are designed to support up to seven independent CUDA applications so that they operate completely isolated with dedicated hardware resources.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nvidia-gpu-features_understand-hardware-accelerators">NVIDIA GPU features for Red&#160;Hat OpenShift Container Platform</h4>
+<div class="paragraph _abstract">
+<p>Learn about the NVIDIA GPU features, software components, and monitoring tools available to accelerate containerized workloads in Red&#160;Hat OpenShift Container Platform.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">NVIDIA Container Toolkit</dt>
+<dd>
+<p>By using the NVIDIA Container Toolkit, you can create and run GPU-accelerated containers. The toolkit includes a container runtime library and utilities to automatically configure containers to use NVIDIA GPUs.</p>
+</dd>
+<dt class="hdlist1">NVIDIA AI Enterprise</dt>
+<dd>
+<p>NVIDIA AI Enterprise is an end-to-end, cloud-native suite of AI and data analytics software optimized, certified, and supported with NVIDIA-Certified systems.</p>
+<div class="paragraph">
+<p>NVIDIA AI Enterprise includes support for Red Hat Red&#160;Hat OpenShift Container Platform.
+The following installation methods are supported:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Red&#160;Hat OpenShift Container Platform on bare metal or VMware vSphere with GPU Passthrough.</p>
+</li>
+<li>
+<p>Red&#160;Hat OpenShift Container Platform on VMware vSphere with NVIDIA vGPU.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">GPU Feature Discovery</dt>
+<dd>
+<p>NVIDIA GPU Feature Discovery for Kubernetes is a software component that you can use to automatically generate labels for the GPUs available on a node. GPU Feature Discovery uses node feature discovery (NFD) to perform this labeling.</p>
+<div class="paragraph">
+<p>The Node Feature Discovery Operator (NFD) manages the discovery of hardware features and configurations in an Red&#160;Hat OpenShift Container Platform cluster by labeling nodes with hardware-specific information. NFD labels the host with node-specific attributes, such as PCI cards, kernel, OS version, and so on.</p>
+</div>
+<div class="paragraph">
+<p>You can find the NFD Operator in the Operator Hub by searching for “Node Feature Discovery”.</p>
+</div>
+</dd>
+<dt class="hdlist1">NVIDIA GPU Operator with OpenShift Virtualization</dt>
+<dd>
+<p>The GPU Operator only provisioned worker nodes to run GPU-accelerated containers. The GPU Operator can also provision worker nodes for running GPU-accelerated virtual machines (VMs).</p>
+<div class="paragraph">
+<p>You can configure the GPU Operator to deploy different software components to worker nodes depending on which GPU workload is configured to run on those nodes.</p>
+</div>
+</dd>
+<dt class="hdlist1">GPU Monitoring dashboard</dt>
+<dd>
+<p>You can install a monitoring dashboard to display GPU usage information on the cluster <strong>Observe</strong> page in the Red&#160;Hat OpenShift Container Platform web console. GPU utilization information includes the number of available GPUs, power consumption (in watts), temperature (in degrees Celsius), utilization (in percent), and other metrics for each GPU.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="amd-about-amd-gpu-operator_understand-hardware-accelerators">About the AMD GPU Operator</h4>
+<div class="paragraph">
+<p>The hardware acceleration capabilities of the AMD GPU Operator provide enhanced performance and cost efficiency for data scientists and developers using Red Hat OpenShift AI for creating artificial intelligence and machine learning (AI/ML) applications. Accelerating specific areas of GPU functions can minimize CPU processing and memory usage, improving overall application speed, memory consumption, and bandwidth restrictions.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="amd-testing-the-amd-gpu-operator_understand-hardware-accelerators">Testing the AMD GPU Operator</h4>
+<div class="paragraph">
+<p>Use the following procedure to test the ROCmInfo installation and view the logs for the AMD MI210 GPU.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a YAML file that tests ROCmInfo:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cat &lt;&lt; EOF &gt; rocminfo.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+ name: rocminfo
+spec:
+ containers:
+ - image: docker.io/rocm/pytorch:latest
+   name: rocminfo
+   command: ["/bin/sh","-c"]
+   args: ["rocminfo"]
+   resources:
+    limits:
+      amd.com/gpu: 1
+    requests:
+      amd.com/gpu: 1
+ restartPolicy: Never
+EOF</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the <code>rocminfo</code> pod:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f rocminfo.yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">apiVersion: v1
+pod/rocminfo created</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Check the <code>rocmnfo</code> log with one MI210 GPU:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs rocminfo | grep -A5 "Agent"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">HSA Agents
+==========
+*******
+Agent 1
+*******
+  Name:                    Intel(R) Xeon(R) Gold 6330 CPU @ 2.00GHz
+  Uuid:                    CPU-XX
+  Marketing Name:          Intel(R) Xeon(R) Gold 6330 CPU @ 2.00GHz
+  Vendor Name:             CPU
+--
+Agent 2
+*******
+  Name:                    Intel(R) Xeon(R) Gold 6330 CPU @ 2.00GHz
+  Uuid:                    CPU-XX
+  Marketing Name:          Intel(R) Xeon(R) Gold 6330 CPU @ 2.00GHz
+  Vendor Name:             CPU
+--
+Agent 3
+*******
+  Name:                    gfx90a
+  Uuid:                    GPU-024b776f768a638b
+  Marketing Name:          AMD Instinct MI210
+  Vendor Name:             AMD</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the pod:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete -f rocminfo.yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">pod "rocminfo" deleted</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="gaudi-ai-accelerators-prerequisites_understand-hardware-accelerators">Intel Gaudi AI accelerators prerequisites</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>You have a working Red&#160;Hat OpenShift Container Platform cluster with at least one GPU worker node.</p>
+</li>
+<li>
+<p>You have access to the Red&#160;Hat OpenShift Container Platform cluster as a cluster-admin to perform the required steps.</p>
+</li>
+<li>
+<p>You have installed OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>You have installed the Node Feature Discovery (NFD) Operator and created a <code>NodeFeatureDiscovery</code> instance.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a> | ↑ Up: <a href="_observe.html">Observe</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a> →</p>
+<p>← Previous: <a href="storage-ephemeral-storage-types_understand-different-types-of-ephemeral-storage.html">Types of ephemeral storage</a> | ↑ Up: <a href="_plan.html">Plan</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="_deploy.html">Deploy</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -1899,7 +2267,7 @@ How to fix these errors:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-22 13:31:11 +0100
+Last updated 2026-10-22 17:55:50 +0100
 </div>
 </div>
 <style>

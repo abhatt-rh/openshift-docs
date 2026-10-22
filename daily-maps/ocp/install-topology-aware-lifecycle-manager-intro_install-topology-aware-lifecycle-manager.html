@@ -477,47 +477,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
-<body id="telco-hub-architecture-overview_plan-telco-hub-cluster-deployment" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/ocp-jobs/configure-multi-tenant-namespace-isolation.adoc:20
-    include::modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc
-  maps/ocp/ocp-jobs/scale-components-based-on-cluster-size.adoc:34
-    include::modules/network-observability-flowcollector-api-specifications.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/modules/network-observability-flowcollector-api-specifications.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
+<body id="install-topology-aware-lifecycle-manager-intro_install-topology-aware-lifecycle-manager" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -581,6 +542,7 @@ How to fix these errors:
 </ul>
 </li>
 <li><a href="_plan.html">Plan</a>
+
 <ul class="sectlevel2">
 <li><a href="size-control-plane-infrastructure-con_size-control-plane-infrastructure.html">Size control plane infrastructure</a>
 </li>
@@ -592,9 +554,9 @@ How to fix these errors:
 </li>
 <li><a href="plan-telco-core-network-deployment-con_plan-telco-core-network-deployment.html">Plan telco core network deployment</a>
 </li>
-<li><a href="telco-hub-architecture-overview_plan-telco-hub-cluster-deployment.html"><span class="toc-current">Hub cluster architecture overview</span></a>
+<li><a href="plan-telco-hub-cluster-deployment-intro_plan-telco-hub-cluster-deployment.html">Plan telco hub cluster deployment</a>
 </li>
-<li><a href="telco-ref-design-overview_plan-telco-ran-distributed-unit-deployment.html">Reference design specifications for telco RAN DU 5G deployments</a>
+<li><a href="plan-telco-ran-distributed-unit-deployment-intro_plan-telco-ran-distributed-unit-deployment.html">Plan telco RAN distributed unit deployment</a>
 </li>
 <li><a href="choose-an-installation-method-con_choose-an-installation-method.html">Choose an installation method</a>
 </li>
@@ -618,6 +580,8 @@ How to fix these errors:
 </li>
 <li><a href="storage-ephemeral-storage-types_understand-different-types-of-ephemeral-storage.html">Types of ephemeral storage</a>
 </li>
+<li><a href="understand-hardware-accelerators-intro_understand-hardware-accelerators.html">Understand hardware accelerators</a>
+</li>
 </ul>
 </li>
 <li><a href="_deploy.html">Deploy</a>
@@ -627,12 +591,11 @@ How to fix these errors:
 </li>
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
-<li><a href="about-ztp_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
+<li><a href="automate-edge-cluster-deployment-with-gitops-ztp-intro_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
 </li>
 </ul>
 </li>
 <li><a href="_install.html">Install</a>
-
 <ul class="sectlevel2">
 <li><a href="installation-overview_understand-openshift-installation-architecture.html">Red&#160;Hat OpenShift Container Platform installation options</a>
 </li>
@@ -677,6 +640,22 @@ How to fix these errors:
 <li><a href="rhcos-validate-live-media_validate-boot-artifacts.html">Validating RHCOS live media</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
+</li>
+<li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-deploy-azure-con_deploying-hosted-control-planes-on-azure.html">Deploying hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-bm-overview_deploying-hosted-control-planes-on-bare-metal-with-the-agent-platform.html">About hosted control planes on bare metal with the Agent platform</a>
+</li>
+<li><a href="deploying-hosted-control-planes-on-openshift-virtualization-intro_deploying-hosted-control-planes-on-openshift-virtualization.html">Deploying hosted control planes on OpenShift Virtualization</a>
+</li>
+<li><a href="deploying-hosted-control-planes-on-non-bare-metal-agent-machines-intro_deploying-hosted-control-planes-on-non-bare-metal-agent-machines.html">Deploying hosted control planes on non-bare-metal agent machines</a>
+</li>
+<li><a href="install-sno-with-image-based-installation-intro_install-sno-with-image-based-installation.html">Install single-node OpenShift with image-based installation</a>
+</li>
+<li><a href="install-virtualized-control-plane-cluster-intro_install-virtualized-control-plane-cluster.html">Install a virtualized control plane cluster</a>
+</li>
+<li><a href="install-topology-aware-lifecycle-manager-intro_install-topology-aware-lifecycle-manager.html"><span class="toc-current">Install the Topology Aware Lifecycle Manager</span></a>
 </li>
 </ul>
 </li>
@@ -749,6 +728,12 @@ How to fix these errors:
 <li><a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a>
 </li>
 <li><a href="gathering-data-cluster-update_gather-data-about-a-cluster-update.html">Gathering data about your cluster update</a>
+</li>
+<li><a href="upgrade-sno-with-image-based-upgrade-intro_upgrade-sno-with-image-based-upgrade.html">Upgrade single-node OpenShift with image-based upgrade</a>
+</li>
+<li><a href="upgrade-managed-clusters-with-talm-intro_upgrade-managed-clusters-with-talm.html">Upgrade managed clusters with the Topology Aware Lifecycle Manager</a>
+</li>
+<li><a href="update-telco-cnf-clusters-intro_update-telco-cnf-clusters.html">Update telco CNF clusters</a>
 </li>
 </ul>
 </li>
@@ -895,7 +880,7 @@ How to fix these errors:
 </li>
 <li><a href="images-configuration-mco-and-registry-changes_understand-mco-rollout-behavior.html">Machine Config Operator behavior and registry changes</a>
 </li>
-<li><a href="cnf-about-topology-aware-lifecycle-manager-config_configure-topology-aware-lifecycle-manager.html">About the Topology Aware Lifecycle Manager configuration</a>
+<li><a href="configure-topology-aware-lifecycle-manager-intro_configure-topology-aware-lifecycle-manager.html">Configure the Topology Aware Lifecycle Manager</a>
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
@@ -923,6 +908,8 @@ How to fix these errors:
 </li>
 <li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernate a cluster</a>
 </li>
+<li><a href="add-worker-nodes-to-sno-clusters-intro_add-worker-nodes-to-sno-clusters.html">Add worker nodes to single-node OpenShift clusters</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -947,6 +934,8 @@ How to fix these errors:
 <li><a href="developing-containerized-applications_review-platform-extensibility-and-development-workflows.html">Containerized application development</a>
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
+</li>
+<li><a href="consume-ptp-fast-event-notifications-intro_consume-ptp-fast-event-notifications.html">Consume PTP fast event notifications</a>
 </li>
 </ul>
 </li>
@@ -1159,6 +1148,10 @@ How to fix these errors:
 </li>
 <li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
 </li>
+<li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
+</li>
+<li><a href="configure-rdma-for-gpu-workloads-intro_configure-rdma-for-gpu-workloads.html">Configure RDMA for GPU workloads</a>
+</li>
 </ul>
 </li>
 <li><a href="_networking.html">Networking</a>
@@ -1192,6 +1185,8 @@ How to fix these errors:
 </li>
 <li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
+<li><a href="review-namespace-policy-and-verify-admin-policy-deployment-con_review-namespace-policy-and-verify-admin-policy-deployment.html">Review namespace policy and verify admin policy deployment</a>
+</li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
@@ -1219,6 +1214,12 @@ How to fix these errors:
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
+</li>
+<li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
+</li>
+<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1396,6 +1397,8 @@ How to fix these errors:
 </li>
 <li><a href="security-profiles-operator-release-notes_review-security-profiles-operator-release-notes.html">Security Profiles Operator release notes</a>
 </li>
+<li><a href="understand-telco-cluster-security-intro_understand-telco-cluster-security.html">Understand telco cluster security</a>
+</li>
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
@@ -1421,15 +1424,13 @@ How to fix these errors:
 </li>
 <li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
 </li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="view-node-status-and-resource-usage-con_view-node-status-and-resource-usage.html">View node status and resource usage</a>
 </li>
 <li><a href="view-pod-status-and-logs-con_view-pod-status-and-logs.html">View pod status and logs</a>
+</li>
+<li><a href="observe-telco-cluster-health-intro_observe-telco-cluster-health.html">Observe telco cluster health</a>
 </li>
 </ul>
 </li>
@@ -1563,6 +1564,8 @@ How to fix these errors:
 </li>
 <li><a href="manage-large-scale-ai-training-workloads-with-jobset-operator-intro_manage-large-scale-ai-training-workloads-with-jobset-operator.html">Manage large-scale AI training workloads with the JobSet Operator</a>
 </li>
+<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
+</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1653,11 +1656,13 @@ How to fix these errors:
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
 </li>
-<li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
+<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
 <li><a href="cnf-measuring-latency_validate-node-performance-with-latency-tests.html">Measuring latency</a>
+</li>
+<li><a href="compare-cluster-configurations-intro_compare-cluster-configurations.html">Compare cluster configurations</a>
 </li>
 </ul>
 </li>
@@ -1828,6 +1833,8 @@ How to fix these errors:
 </li>
 <li><a href="storage-troubleshooting-intro_troubleshoot-storage.html">Troubleshooting storage</a>
 </li>
+<li><a href="troubleshoot-telco-cluster-operations-intro_troubleshoot-telco-cluster-operations.html">Troubleshoot telco cluster operations</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1844,451 +1851,222 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#telco-hub-telco-management-cluster-use-model_plan-telco-hub-cluster-deployment">Telco management hub cluster use model</a></li><li class="level-4"><a href="#telco-hub-cluster-topology_plan-telco-hub-cluster-deployment">Hub cluster topology</a></li><li class="level-4"><a href="#review-telco-hub-reference-design-specification-con_review-telco-hub-reference-design-specification">Review the telco hub reference design specification</a></li><li class="level-5"><a href="#telco-ran-core-ref-design-spec_review-telco-hub-reference-design-specification">Reference design scope</a></li><li class="level-5"><a href="#telco-deviations-from-the-ref-design_review-telco-hub-reference-design-specification">Deviations from the reference design</a></li><li class="level-5"><a href="#telco-hub-scaling-targets_review-telco-hub-reference-design-specification">Hub cluster scaling target</a></li><li class="level-5"><a href="#telco-hub-resource-utilization_review-telco-hub-reference-design-specification">Hub cluster resource utilization</a></li><li class="level-5"><a href="#telco-hub-memory-and-cpu-requirements_review-telco-hub-reference-design-specification">Hub cluster memory and CPU requirements</a></li><li class="level-5"><a href="#telco-hub-storage-requirements_review-telco-hub-reference-design-specification">Hub cluster storage requirements</a></li><li class="level-5"><a href="#telco-hub-software-stack_review-telco-hub-reference-design-specification">Telco hub reference configuration software specifications</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#installing-topology-aware-lifecycle-manager-using-cli_install-topology-aware-lifecycle-manager">Installing the Topology Aware Lifecycle Manager by using the CLI</a></li><li class="level-4"><a href="#installing-topology-aware-lifecycle-manager-using-web-console_install-topology-aware-lifecycle-manager">Installing the Topology Aware Lifecycle Manager by using the web console</a></li><li class="level-4"><a href="#ztp-definition-of-done-for-ztp-installations_install-topology-aware-lifecycle-manager">Indication of done for GitOps ZTP installations</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="telco-hub-architecture-overview_plan-telco-hub-cluster-deployment">Hub cluster architecture overview</h3>
+<h3 id="install-topology-aware-lifecycle-manager-intro_install-topology-aware-lifecycle-manager">Install the Topology Aware Lifecycle Manager</h3>
 <div class="paragraph _abstract">
-<p>Use the features and components running on the management hub cluster to manage many other clusters in a hub-and-spoke topology.
-The hub cluster provides a highly available and centralized interface for managing the configuration, lifecycle, and observability of the fleet of deployed clusters.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>All management hub functionality can be deployed on a dedicated Red&#160;Hat OpenShift Container Platform cluster or as applications that are co-resident on an existing cluster.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Managed cluster lifecycle</dt>
-<dd>
-<p>Using a combination of Day 2 Operators, the hub cluster provides the necessary infrastructure to deploy and configure the fleet of clusters by using a GitOps methodology.
-Over the lifetime of the deployed clusters, further management of upgrades, scaling the number of clusters, node replacement, and other lifecycle management functions can be declaratively defined and rolled out.
-You can control the timing and progression of the rollout across the fleet.</p>
-</dd>
-<dt class="hdlist1">Monitoring</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>The hub cluster provides monitoring and status reporting for the managed clusters through the Observability pillar of the RHACM Operator.
-This includes aggregated metrics, alerts, and compliance monitoring through the Governance policy framework.</p>
-</div>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>The telco management hub reference design specification (RDS) and the associated reference custom resources (CRs) describe the telco engineering and QE validated method for deploying, configuring and managing the lifecycle of telco managed cluster infrastructure.
-The reference configuration includes the installation and configuration of the hub cluster components on top of Red&#160;Hat OpenShift Container Platform.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="data:image/png;base64," alt="telco hub cluster reference design components">
-</div>
-<div class="title">Figure 13. Hub cluster reference design components</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="data:image/png;base64," alt="telco hub cluster rds architecture">
-</div>
-<div class="title">Figure 14. Hub cluster reference design architecture</div>
+<p>You can install the Topology Aware Lifecycle Manager to orchestrate policy-based updates and configuration changes across your managed clusters.</p>
 </div>
 <div class="sect3">
-<h4 id="telco-hub-telco-management-cluster-use-model_plan-telco-hub-cluster-deployment">Telco management hub cluster use model</h4>
+<h4 id="installing-topology-aware-lifecycle-manager-using-cli_install-topology-aware-lifecycle-manager">Installing the Topology Aware Lifecycle Manager by using the CLI</h4>
 <div class="paragraph _abstract">
-<p>The hub cluster provides managed cluster installation, configuration, observability and ongoing lifecycle management for telco application and workload clusters.</p>
+<p>You can use the OpenShift CLI (<code>oc</code>) to install the Topology Aware Lifecycle Manager (TALM).</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="telco-hub-cluster-topology_plan-telco-hub-cluster-deployment">Hub cluster topology</h4>
-<div class="paragraph _abstract">
-<p>In production environments, the Red&#160;Hat OpenShift Container Platform hub cluster must be highly available to maintain high availability of the management functions.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Limits and requirements</dt>
-<dd>
-<p>Use a highly available cluster topology for the hub cluster, for example:</p>
 <div class="ulist">
+<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>Compact (3 nodes combined control plane and compute nodes)</p>
+<p>Install the OpenShift CLI (<code>oc</code>).</p>
 </li>
 <li>
-<p>Standard (3 control plane nodes + N compute nodes)</p>
+<p>Install the latest version of the RHACM Operator.</p>
+</li>
+<li>
+<p>TALM requires RHACM 2.9 or later.</p>
+</li>
+<li>
+<p>Set up a hub cluster with disconnected registry.</p>
+</li>
+<li>
+<p>Log in as a user with <code>cluster-admin</code> privileges.</p>
 </li>
 </ul>
 </div>
-</dd>
-<dt class="hdlist1">Engineering considerations</dt>
-<dd>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
 <li>
-<p>In non-production environments, a single-node OpenShift cluster can be used for limited hub cluster functionality.</p>
-</li>
+<p>Create a <code>Subscription</code> CR:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>Certain capabilities, for example Red Hat OpenShift Data Foundation, are not supported on single-node OpenShift.
-In this configuration, some hub cluster features might not be available.</p>
-</li>
-<li>
-<p>The number of optional compute nodes can vary depending on the scale of the specific use case.</p>
-</li>
-<li>
-<p>Compute nodes can be added later as required.</p>
-</li>
-<li>
-<p>Consult the 4.21 release notes regarding the decrease in the default maximum open files soft limit for containers in this release.</p>
-</li>
-</ul>
+<p>Define the <code>Subscription</code> CR and save the YAML file, for example, <code>talm-subscription.yaml</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: openshift-topology-aware-lifecycle-manager-subscription
+  namespace: openshift-operators
+spec:
+  channel: "stable"
+  name: topology-aware-lifecycle-manager
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace</code></pre>
 </div>
-</dd>
-</dl>
+</div>
+</li>
+<li>
+<p>Create the <code>Subscription</code> CR by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f talm-subscription.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Verify that the installation succeeded by inspecting the CSV resource:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get csv -n openshift-operators</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                                                   DISPLAY                            VERSION               REPLACES                           PHASE
+topology-aware-lifecycle-manager.{product-version}.x   Topology Aware Lifecycle Manager   {product-version}.x                                      Succeeded</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the TALM is up and running:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get deploy -n openshift-operators</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAMESPACE                                          NAME                                             READY   UP-TO-DATE   AVAILABLE   AGE
+openshift-operators                                cluster-group-upgrades-controller-manager        1/1     1            1           14s</code></pre>
+</div>
+</div>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect3">
-<h4 id="review-telco-hub-reference-design-specification-con_review-telco-hub-reference-design-specification">Review the telco hub reference design specification</h4>
+<h4 id="installing-topology-aware-lifecycle-manager-using-web-console_install-topology-aware-lifecycle-manager">Installing the Topology Aware Lifecycle Manager by using the web console</h4>
 <div class="paragraph _abstract">
-<p>The telco hub reference design specification (RDS) defines the validated scope, scaling targets, and resource requirements for a hub cluster that manages edge infrastructure. Review it before you size and deploy the hub.</p>
-</div>
-<div class="sect4">
-<h5 id="telco-ran-core-ref-design-spec_review-telco-hub-reference-design-specification">Reference design scope</h5>
-<div class="paragraph _abstract">
-<p>The telco core, telco RAN and telco hub reference design specifications (RDS) capture the recommended, tested, and supported configurations to get reliable and repeatable performance for clusters running the telco core and telco RAN profiles.</p>
-</div>
-<div class="paragraph">
-<p>Each RDS includes the released features and supported configurations that are engineered and validated for clusters to run the individual profiles.
-The configurations provide a baseline Red&#160;Hat OpenShift Container Platform installation that meets feature and KPI targets.
-Each RDS also describes expected variations for each individual configuration.
-Validation of each RDS includes many long duration and at-scale tests.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The validated reference configurations are updated for each major Y-stream release of Red&#160;Hat OpenShift Container Platform.
-Z-stream patch releases are periodically re-tested against the reference configurations.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="telco-deviations-from-the-ref-design_review-telco-hub-reference-design-specification">Deviations from the reference design</h5>
-<div class="paragraph _abstract">
-<p>Deviating from the validated telco core, telco RAN DU, and telco hub reference design specifications (RDS) can have significant impact beyond the specific component or feature that you change.
-Deviations require analysis and engineering in the context of the complete solution.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>All deviations from the RDS should be analyzed and documented with clear action tracking information.
-Due diligence is expected from partners to understand how to bring deviations into line with the reference design.
-This might require partners to provide additional resources to engage with Red Hat to work towards enabling their use case to achieve a best in class outcome with the platform.
-This is critical for the supportability of the solution and ensuring alignment across Red Hat and with partners.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Deviation from the RDS can have some or all of the following consequences:</p>
+<p>You can use the Red&#160;Hat OpenShift Container Platform web console to install the Topology Aware Lifecycle Manager.</p>
 </div>
 <div class="ulist">
+<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>It can take longer to resolve issues.</p>
+<p>Install the latest version of the RHACM Operator.</p>
 </li>
 <li>
-<p>There is a risk of missing project service-level agreements (SLAs), project deadlines, end provider performance requirements, and so on.</p>
+<p>TALM requires RHACM 2.9 or later.</p>
 </li>
 <li>
-<p>Unapproved deviations may require escalation at executive levels.</p>
+<p>Set up a hub cluster with a disconnected registry.</p>
+</li>
+<li>
+<p>Log in as a user with <code>cluster-admin</code> privileges.</p>
 </li>
 </ul>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the Red&#160;Hat OpenShift Container Platform web console, navigate to <strong>Ecosystem</strong> &#8594; <strong>Software Catalog</strong>.</p>
+</li>
+<li>
+<p>Search for the <strong>Topology Aware Lifecycle Manager</strong> from the list of available Operators, and then click <strong>Install</strong>.</p>
+</li>
+<li>
+<p>Keep the default selection of <strong>Installation mode</strong> ["All namespaces on the cluster (default)"] and <strong>Installed Namespace</strong> ("openshift-operators") to ensure that the Operator is installed properly.</p>
+</li>
+<li>
+<p>Click <strong>Install</strong>.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
-<p>Red Hat prioritizes the servicing of requests for deviations based on partner engagement priorities.</p>
+<div class="title">Verification</div>
+<p>To confirm that the installation is successful:</p>
 </div>
-</td>
-</tr>
-</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to the <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong> page.</p>
+</li>
+<li>
+<p>Check that the Operator is installed in the <code>All Namespaces</code> namespace and its status is <code>Succeeded</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If the Operator is not installed successfully:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to the <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong> page and inspect the <code>Status</code> column for any errors or failures.</p>
+</li>
+<li>
+<p>Navigate to the <strong>Workloads</strong> &#8594; <strong>Pods</strong> page and check the logs in any containers in the <code>cluster-group-upgrades-controller-manager</code> pod that are reporting issues.</p>
+</li>
+</ol>
 </div>
 </div>
-<div class="sect4">
-<h5 id="telco-hub-scaling-targets_review-telco-hub-reference-design-specification">Hub cluster scaling target</h5>
+<div class="sect3">
+<h4 id="ztp-definition-of-done-for-ztp-installations_install-topology-aware-lifecycle-manager">Indication of done for GitOps ZTP installations</h4>
 <div class="paragraph _abstract">
-<p>The resource requirements for the hub cluster are directly dependent on the number of clusters being managed by the hub, the number of policies used for each managed cluster, and the set of features that are configured in Red&#160;Hat Advanced Cluster Management (RHACM).</p>
-</div>
-<div class="paragraph">
-<p>The hub cluster reference configuration can support up to 3500 managed single-node OpenShift clusters under the following conditions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>10 RHACM configuration policies (comprising 5 Red Hat-provided policies and up to 5 custom configuration policies) with hub-side templating bound to the 3500 clusters and configured with a 10 minute evaluation interval.</p>
-</li>
-<li>
-<p>Only the following RHACM add-ons are enabled:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Policy controller</p>
-</li>
-<li>
-<p>Observability with the default configuration</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>You deploy managed clusters by using GitOps ZTP in batches of up to 500 clusters at a time.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The reference configuration is also validated for deployment and management of a mix of managed cluster topologies.
-The specific limits depend on the mix of cluster topologies, enabled RHACM features, and so on.
-In a mixed topology scenario, the reference hub configuration is validated with a combination of 1200 single-node OpenShift clusters, 400 compact clusters (3 nodes combined control plane and compute nodes), and 230 standard clusters (3 control plane and 2 worker nodes).</p>
-</div>
-<div class="paragraph">
-<p>A hub cluster conforming to this reference specification can support synchronization of 1000 single node <code>ClusterInstance</code> CRs for each ArgoCD application.
-You can use multiple applications to achieve the maximum number of clusters supported by a single hub cluster.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Specific dimensioning requirements are highly dependent on the cluster topology and workload.
-For more information, see "Storage requirements".
-Adjust cluster dimensions for the specific characteristics of your fleet of managed clusters.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="telco-hub-resource-utilization_review-telco-hub-reference-design-specification">Hub cluster resource utilization</h5>
-<div class="paragraph _abstract">
-<p>Resource utilization was measured for deploying hub clusters in the following scenario:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Under reference load managing 3500 single-node OpenShift clusters.</p>
-</li>
-<li>
-<p>3-node compact cluster for management hub running on dual socket bare-metal servers.</p>
-</li>
-<li>
-<p>Network impairment of 50 ms round-trip latency, 100 Mbps bandwidth limit and 0.02% packet loss.</p>
-</li>
-<li>
-<p>Observability was not enabled.</p>
-</li>
-<li>
-<p>Only local storage was used.</p>
-</li>
-</ul>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 31. Resource utilization values</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Metric</th>
-<th class="tableblock halign-left valign-top">Peak Measurement</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OpenShift Platform CPU</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">106 cores (52 cores peak per node)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OpenShift Platform memory</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">504 G (168 G peak per node)</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="telco-hub-memory-and-cpu-requirements_review-telco-hub-reference-design-specification">Hub cluster memory and CPU requirements</h5>
-<div class="paragraph _abstract">
-<p>The memory and CPU requirements of the hub cluster vary depending on the configuration of the hub cluster, the number of resources on the cluster, and the number of managed clusters.</p>
+<p>GitOps Zero Touch Provisioning (ZTP) simplifies the process of checking the GitOps ZTP installation status for a cluster. The GitOps ZTP status moves through three phases: cluster installation, cluster configuration, and GitOps ZTP done.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Limits and requirements</dt>
+<dt class="hdlist1">Cluster installation phase</dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Ensure that the hub cluster meets the underlying memory and CPU requirements for Red&#160;Hat OpenShift Container Platform and Red&#160;Hat Advanced Cluster Management (RHACM).</p>
-</li>
-</ul>
-</div>
+<p>The cluster installation phase is shown by the <code>ManagedClusterJoined</code> and  <code>ManagedClusterAvailable</code> conditions in the <code>ManagedCluster</code> CR . If the <code>ManagedCluster</code> CR does not have these conditions, or the condition is set to <code>False</code>, the cluster is still in the installation phase. Additional details about installation are available from the <code>AgentClusterInstall</code> and <code>ClusterDeployment</code> CRs. For more information, see "Troubleshooting GitOps ZTP".</p>
 </dd>
-<dt class="hdlist1">Engineering considerations</dt>
+<dt class="hdlist1">Cluster configuration phase</dt>
 <dd>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Before deploying a telco hub cluster, ensure that your cluster host meets cluster requirements.</p>
-</li>
-</ul>
+<p>The cluster configuration phase is shown by a <code>ztp-running</code> label applied the <code>ManagedCluster</code> CR for the cluster.</p>
+</dd>
+<dt class="hdlist1">GitOps ZTP done</dt>
+<dd>
+<p>Cluster installation and configuration is complete in the GitOps ZTP done phase. This is shown by the removal of the <code>ztp-running</code> label and addition of the <code>ztp-done</code> label to the <code>ManagedCluster</code> CR. The <code>ztp-done</code> label shows that the configuration has been applied and the baseline DU configuration has completed cluster tuning.</p>
+<div class="paragraph">
+<p>The change to the GitOps ZTP done state is conditional on the compliant state of a Red&#160;Hat Advanced Cluster Management (RHACM) validator inform policy. This policy captures the existing criteria for a completed installation and validates that it moves to a compliant state only when GitOps ZTP provisioning of the managed cluster is complete.</p>
 </div>
 <div class="paragraph">
-<p>For more information about scaling the number of managed clusters, see "Hub cluster scaling target".</p>
+<p>The validator inform policy ensures the configuration of the cluster is fully applied and Operators have completed their initialization. The policy validates the following:</p>
 </div>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The target <code>MachineConfigPool</code> contains the expected entries and has finished updating. All nodes are available and not degraded.</p>
+</li>
+<li>
+<p>The SR-IOV Operator has completed initialization as indicated by at least one <code>SriovNetworkNodeState</code> with <code>syncStatus: Succeeded</code>.</p>
+</li>
+<li>
+<p>The PTP Operator daemon set exists.</p>
+</li>
+</ul>
 </div>
 </dd>
 </dl>
-</div>
-</div>
-<div class="sect4">
-<h5 id="telco-hub-storage-requirements_review-telco-hub-reference-design-specification">Hub cluster storage requirements</h5>
-<div class="paragraph _abstract">
-<p>The total amount of storage required by the management hub cluster is dependant on the storage requirements for each of the applications deployed on the cluster.
-The main components that require storage through highly available <code>PersistentVolume</code> resources are described in the following sections.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The storage required for the underlying Red&#160;Hat OpenShift Container Platform installation is separate to these requirements.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="telco-hub-software-stack_review-telco-hub-reference-design-specification">Telco hub reference configuration software specifications</h5>
-<div class="paragraph _abstract">
-<p>The following y-stream versions were used in validation of the telco hub solution for Red&#160;Hat OpenShift Container Platform clusters.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 62%;">
-<col style="width: 38%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Hub Cluster Component</th>
-<th class="tableblock halign-left valign-top">Software Version (y-stream)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat OpenShift Container Platform</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat Advanced Cluster Management (RHACM)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2.17</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Local Storage Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">cert-manager Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.19</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat OpenShift Data Foundation (ODF)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.21</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat OpenShift GitOps</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.20</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GitOps Zero Touch Provisioning (ZTP) plugins</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">multicluster engine Operator PolicyGenerator plugin</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2.17</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Topology Aware Lifecycle Manager (TALM)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster Logging Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6.5</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OpenShift API for Data Protection (OADP)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The version aligned with the RHACM release.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="ulist">
-<ul>
-<li>
-<p>ODF will be updated to 4.22 when the aligned ODF version is released.</p>
-</li>
-<li>
-<p>Cluster Logging Operator will be updated to 6.6 when the aligned Cluster Logging Operator version is released.</p>
-</li>
-<li>
-<p>The cert-manager Operator and Red&#160;Hat OpenShift GitOps Operator are platform agnostic operators.
-The support lifecycle for these operators is independent from the support lifecycle for Red&#160;Hat OpenShift Container Platform.
-You might need to update to a newer minor version of these operators at the end of an operator lifecycle, or when planning to update the Red&#160;Hat OpenShift Container Platform cluster to continue support.
-For support lifecycle details for platform agnostic operators, see <a href="https://access.redhat.com/support/policy/updates/openshift_operators">OpenShift Operator Life Cycles</a>.</p>
-</li>
-</ul>
-</div>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="plan-telco-core-network-deployment-con_plan-telco-core-network-deployment.html">Plan telco core network deployment</a> | ↑ Up: <a href="_plan.html">Plan</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="telco-ref-design-overview_plan-telco-ran-distributed-unit-deployment.html">Reference design specifications for telco RAN DU 5G deployments</a> →</p>
+<p>← Previous: <a href="install-virtualized-control-plane-cluster-intro_install-virtualized-control-plane-cluster.html">Install a virtualized control plane cluster</a> | ↑ Up: <a href="_install.html">Install</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="_disconnected_environments.html">Disconnected environments</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2299,7 +2077,7 @@ For support lifecycle details for platform agnostic operators, see <a href="http
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-22 13:31:11 +0100
+Last updated 2026-10-22 17:55:50 +0100
 </div>
 </div>
 <style>

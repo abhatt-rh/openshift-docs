@@ -477,47 +477,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
 <body id="plan-telco-core-network-deployment-con_plan-telco-core-network-deployment" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/ocp-jobs/configure-multi-tenant-namespace-isolation.adoc:20
-    include::modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc
-  maps/ocp/ocp-jobs/scale-components-based-on-cluster-size.adoc:34
-    include::modules/network-observability-flowcollector-api-specifications.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/modules/network-observability-flowcollector-api-specifications.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -592,9 +553,9 @@ How to fix these errors:
 </li>
 <li><a href="plan-telco-core-network-deployment-con_plan-telco-core-network-deployment.html"><span class="toc-current">Plan telco core network deployment</span></a>
 </li>
-<li><a href="telco-hub-architecture-overview_plan-telco-hub-cluster-deployment.html">Hub cluster architecture overview</a>
+<li><a href="plan-telco-hub-cluster-deployment-intro_plan-telco-hub-cluster-deployment.html">Plan telco hub cluster deployment</a>
 </li>
-<li><a href="telco-ref-design-overview_plan-telco-ran-distributed-unit-deployment.html">Reference design specifications for telco RAN DU 5G deployments</a>
+<li><a href="plan-telco-ran-distributed-unit-deployment-intro_plan-telco-ran-distributed-unit-deployment.html">Plan telco RAN distributed unit deployment</a>
 </li>
 <li><a href="choose-an-installation-method-con_choose-an-installation-method.html">Choose an installation method</a>
 </li>
@@ -618,6 +579,8 @@ How to fix these errors:
 </li>
 <li><a href="storage-ephemeral-storage-types_understand-different-types-of-ephemeral-storage.html">Types of ephemeral storage</a>
 </li>
+<li><a href="understand-hardware-accelerators-intro_understand-hardware-accelerators.html">Understand hardware accelerators</a>
+</li>
 </ul>
 </li>
 <li><a href="_deploy.html">Deploy</a>
@@ -627,7 +590,7 @@ How to fix these errors:
 </li>
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
-<li><a href="about-ztp_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
+<li><a href="automate-edge-cluster-deployment-with-gitops-ztp-intro_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
 </li>
 </ul>
 </li>
@@ -677,6 +640,22 @@ How to fix these errors:
 <li><a href="rhcos-validate-live-media_validate-boot-artifacts.html">Validating RHCOS live media</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
+</li>
+<li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-deploy-azure-con_deploying-hosted-control-planes-on-azure.html">Deploying hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-bm-overview_deploying-hosted-control-planes-on-bare-metal-with-the-agent-platform.html">About hosted control planes on bare metal with the Agent platform</a>
+</li>
+<li><a href="deploying-hosted-control-planes-on-openshift-virtualization-intro_deploying-hosted-control-planes-on-openshift-virtualization.html">Deploying hosted control planes on OpenShift Virtualization</a>
+</li>
+<li><a href="deploying-hosted-control-planes-on-non-bare-metal-agent-machines-intro_deploying-hosted-control-planes-on-non-bare-metal-agent-machines.html">Deploying hosted control planes on non-bare-metal agent machines</a>
+</li>
+<li><a href="install-sno-with-image-based-installation-intro_install-sno-with-image-based-installation.html">Install single-node OpenShift with image-based installation</a>
+</li>
+<li><a href="install-virtualized-control-plane-cluster-intro_install-virtualized-control-plane-cluster.html">Install a virtualized control plane cluster</a>
+</li>
+<li><a href="install-topology-aware-lifecycle-manager-intro_install-topology-aware-lifecycle-manager.html">Install the Topology Aware Lifecycle Manager</a>
 </li>
 </ul>
 </li>
@@ -749,6 +728,12 @@ How to fix these errors:
 <li><a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a>
 </li>
 <li><a href="gathering-data-cluster-update_gather-data-about-a-cluster-update.html">Gathering data about your cluster update</a>
+</li>
+<li><a href="upgrade-sno-with-image-based-upgrade-intro_upgrade-sno-with-image-based-upgrade.html">Upgrade single-node OpenShift with image-based upgrade</a>
+</li>
+<li><a href="upgrade-managed-clusters-with-talm-intro_upgrade-managed-clusters-with-talm.html">Upgrade managed clusters with the Topology Aware Lifecycle Manager</a>
+</li>
+<li><a href="update-telco-cnf-clusters-intro_update-telco-cnf-clusters.html">Update telco CNF clusters</a>
 </li>
 </ul>
 </li>
@@ -895,7 +880,7 @@ How to fix these errors:
 </li>
 <li><a href="images-configuration-mco-and-registry-changes_understand-mco-rollout-behavior.html">Machine Config Operator behavior and registry changes</a>
 </li>
-<li><a href="cnf-about-topology-aware-lifecycle-manager-config_configure-topology-aware-lifecycle-manager.html">About the Topology Aware Lifecycle Manager configuration</a>
+<li><a href="configure-topology-aware-lifecycle-manager-intro_configure-topology-aware-lifecycle-manager.html">Configure the Topology Aware Lifecycle Manager</a>
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
@@ -923,6 +908,8 @@ How to fix these errors:
 </li>
 <li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernate a cluster</a>
 </li>
+<li><a href="add-worker-nodes-to-sno-clusters-intro_add-worker-nodes-to-sno-clusters.html">Add worker nodes to single-node OpenShift clusters</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -947,6 +934,8 @@ How to fix these errors:
 <li><a href="developing-containerized-applications_review-platform-extensibility-and-development-workflows.html">Containerized application development</a>
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
+</li>
+<li><a href="consume-ptp-fast-event-notifications-intro_consume-ptp-fast-event-notifications.html">Consume PTP fast event notifications</a>
 </li>
 </ul>
 </li>
@@ -1159,6 +1148,10 @@ How to fix these errors:
 </li>
 <li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
 </li>
+<li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
+</li>
+<li><a href="configure-rdma-for-gpu-workloads-intro_configure-rdma-for-gpu-workloads.html">Configure RDMA for GPU workloads</a>
+</li>
 </ul>
 </li>
 <li><a href="_networking.html">Networking</a>
@@ -1192,6 +1185,8 @@ How to fix these errors:
 </li>
 <li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
+<li><a href="review-namespace-policy-and-verify-admin-policy-deployment-con_review-namespace-policy-and-verify-admin-policy-deployment.html">Review namespace policy and verify admin policy deployment</a>
+</li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
@@ -1219,6 +1214,12 @@ How to fix these errors:
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
+</li>
+<li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
+</li>
+<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1396,6 +1397,8 @@ How to fix these errors:
 </li>
 <li><a href="security-profiles-operator-release-notes_review-security-profiles-operator-release-notes.html">Security Profiles Operator release notes</a>
 </li>
+<li><a href="understand-telco-cluster-security-intro_understand-telco-cluster-security.html">Understand telco cluster security</a>
+</li>
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
@@ -1421,15 +1424,13 @@ How to fix these errors:
 </li>
 <li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
 </li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="view-node-status-and-resource-usage-con_view-node-status-and-resource-usage.html">View node status and resource usage</a>
 </li>
 <li><a href="view-pod-status-and-logs-con_view-pod-status-and-logs.html">View pod status and logs</a>
+</li>
+<li><a href="observe-telco-cluster-health-intro_observe-telco-cluster-health.html">Observe telco cluster health</a>
 </li>
 </ul>
 </li>
@@ -1563,6 +1564,8 @@ How to fix these errors:
 </li>
 <li><a href="manage-large-scale-ai-training-workloads-with-jobset-operator-intro_manage-large-scale-ai-training-workloads-with-jobset-operator.html">Manage large-scale AI training workloads with the JobSet Operator</a>
 </li>
+<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
+</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1653,11 +1656,13 @@ How to fix these errors:
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
 </li>
-<li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
+<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
 <li><a href="cnf-measuring-latency_validate-node-performance-with-latency-tests.html">Measuring latency</a>
+</li>
+<li><a href="compare-cluster-configurations-intro_compare-cluster-configurations.html">Compare cluster configurations</a>
 </li>
 </ul>
 </li>
@@ -1828,6 +1833,8 @@ How to fix these errors:
 </li>
 <li><a href="storage-troubleshooting-intro_troubleshoot-storage.html">Troubleshooting storage</a>
 </li>
+<li><a href="troubleshoot-telco-cluster-operations-intro_troubleshoot-telco-cluster-operations.html">Troubleshoot telco cluster operations</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1844,7 +1851,7 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#telco-core-rds-product-version-use-model-overview_plan-telco-core-network-deployment">Telco core RDS use model overview</a></li><li class="level-4"><a href="#telco-core-about-the-telco-core-cluster-use-model_plan-telco-core-network-deployment">About the telco core cluster use model</a></li><li class="level-4"><a href="#telco-core-common-baseline-model_plan-telco-core-network-deployment">Telco core common baseline model</a></li><li class="level-4"><a href="#review-telco-core-reference-design-specification-con_review-telco-core-reference-design-specification">Review the telco core reference design specification</a></li><li class="level-5"><a href="#telco-ran-core-ref-design-spec_review-telco-core-reference-design-specification">Reference design scope</a></li><li class="level-5"><a href="#telco-deviations-from-the-ref-design_review-telco-core-reference-design-specification">Deviations from the reference design</a></li><li class="level-5"><a href="#telco-core-rds-components_review-telco-core-reference-design-specification">Telco core RDS components</a></li><li class="level-5"><a href="#telco-core-software-stack_review-telco-core-reference-design-specification">Telco core reference configuration software specifications</a></li><li class="level-4"><a href="#plan-deployment-topology-con_plan-deployment-topology">Plan the telco core deployment topology</a></li><li class="level-5"><a href="#telco-core-deployment-planning_plan-deployment-topology">Deployment planning</a></li><li class="level-6"><a href="#telco-core-worker-nodes-and-machineconfigpools_plan-deployment-topology">Worker Nodes and MachineConfigPools</a></li><li class="level-6"><a href="#telco-core-zones_plan-deployment-topology">Zones</a></li><li class="level-5"><a href="#telco-core-cluster-common-use-model-engineering-considerations_plan-deployment-topology">Telco core cluster common use model engineering considerations</a></li><li class="level-6"><a href="#telco-core-application-workloads_plan-deployment-topology">Application workloads</a></li><li class="level-6"><a href="#telco-core-signaling-workloads_plan-deployment-topology">Signaling workloads</a></li><li class="level-5"><a href="#telco-core-scalability_plan-deployment-topology">Scalability</a></li><li class="level-4"><a href="#extract-reference-configuration-crs-con_extract-reference-configuration-crs">Extract telco core reference configuration CRs</a></li><li class="level-5"><a href="#telco-core-reference-configuration-crs_extract-reference-configuration-crs">Telco core reference configuration CRs</a></li><li class="level-6"><a href="#telco-core-rds-container_extract-reference-configuration-crs">Extract the telco core reference design configuration CRs</a></li><li class="level-6"><a href="#using-cluster-compare-telco_core_extract-reference-configuration-crs">Compare a cluster with the {rds} reference configuration</a></li><li class="level-6"><a href="#node-configuration-crs_extract-reference-configuration-crs">Node configuration reference CRs</a></li><li class="level-6"><a href="#cluster-infrastructure-crs_extract-reference-configuration-crs">Cluster infrastructure reference CRs</a></li><li class="level-6"><a href="#resource-tuning-crs_extract-reference-configuration-crs">Resource tuning reference CRs</a></li><li class="level-6"><a href="#networking-crs_extract-reference-configuration-crs">Networking reference CRs</a></li><li class="level-6"><a href="#scheduling-crs_extract-reference-configuration-crs">Scheduling reference CRs</a></li><li class="level-6"><a href="#storage-crs_extract-reference-configuration-crs">Storage reference CRs</a></li><li class="level-6"><a href="#security-crs_extract-reference-configuration-crs">Security reference CRs</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#telco-core-rds-product-version-use-model-overview_plan-telco-core-network-deployment">Telco core RDS use model overview</a></li><li class="level-4"><a href="#telco-core-about-the-telco-core-cluster-use-model_plan-telco-core-network-deployment">About the telco core cluster use model</a></li><li class="level-4"><a href="#telco-core-common-baseline-model_plan-telco-core-network-deployment">Telco core common baseline model</a></li><li class="level-4"><a href="#review-telco-core-reference-design-specification-intro_review-telco-core-reference-design-specification">Review telco core reference design specifications</a></li><li class="level-5"><a href="#scalability-and-performance-telco-reference-designs_review-telco-core-reference-design-specification">Telco reference design specifications</a></li><li class="level-4"><a href="#review-telco-core-reference-design-specification-con_review-telco-core-reference-design-specification">Review the telco core reference design specification</a></li><li class="level-5"><a href="#telco-ran-core-ref-design-spec_review-telco-core-reference-design-specification">Reference design scope</a></li><li class="level-5"><a href="#telco-deviations-from-the-ref-design_review-telco-core-reference-design-specification">Deviations from the reference design</a></li><li class="level-5"><a href="#telco-core-rds-components_review-telco-core-reference-design-specification">Telco core RDS components</a></li><li class="level-6"><a href="#telco-core-cpu-partitioning-and-performance-tuning_review-telco-core-reference-design-specification">CPU partitioning and performance tuning</a></li><li class="level-6"><a href="#telco-core-workloads-on-schedulable-control-planes_review-telco-core-reference-design-specification">Workloads on schedulable control planes</a></li><li class="level-6"><a href="#telco-core-service-mesh_review-telco-core-reference-design-specification">Service Mesh</a></li><li class="level-6"><a href="#telco-core-networking_review-telco-core-reference-design-specification">Networking</a></li><li class="level-6"><a href="#telco-core-logging_review-telco-core-reference-design-specification">Logging</a></li><li class="level-6"><a href="#telco-core-power-management_review-telco-core-reference-design-specification">Power Management</a></li><li class="level-6"><a href="#telco-core-storage_review-telco-core-reference-design-specification">Storage</a></li><li class="level-5"><a href="#telco-reference-core-deployment-components_review-telco-core-reference-design-specification">Telco core deployment components</a></li><li class="level-6"><a href="#telco-core-red-hat-advanced-cluster-management_review-telco-core-reference-design-specification">Red Hat Advanced Cluster Management</a></li><li class="level-6"><a href="#telco-core-topology-aware-lifecycle-manager_review-telco-core-reference-design-specification">Topology Aware Lifecycle Manager</a></li><li class="level-6"><a href="#telco-core-gitops-operator-and-ztp-plugins_review-telco-core-reference-design-specification">GitOps Operator and GitOps ZTP plugins</a></li><li class="level-6"><a href="#telco-core-agent-based-installer_review-telco-core-reference-design-specification">Agent-based Installer</a></li><li class="level-5"><a href="#telco-core-monitoring_review-telco-core-reference-design-specification">Monitoring</a></li><li class="level-5"><a href="#telco-core-scheduling_review-telco-core-reference-design-specification">Scheduling</a></li><li class="level-5"><a href="#telco-core-node-configuration_review-telco-core-reference-design-specification">Node Configuration</a></li><li class="level-6"><a href="#telco-core-host-firmware-and-boot-loader-configuration_review-telco-core-reference-design-specification">Host firmware and boot loader configuration</a></li><li class="level-6"><a href="#telco-core-kubelet-settings_review-telco-core-reference-design-specification">Kubelet Settings</a></li><li class="level-5"><a href="#telco-core-disconnected-environment_review-telco-core-reference-design-specification">Disconnected environment</a></li><li class="level-5"><a href="#telco-core-security_review-telco-core-reference-design-specification">Security</a></li><li class="level-5"><a href="#telco-core-cert-manager-operator_review-telco-core-reference-design-specification">cert-manager Operator</a></li><li class="level-5"><a href="#telco-core-software-stack_review-telco-core-reference-design-specification">Telco core reference configuration software specifications</a></li><li class="level-4"><a href="#plan-deployment-topology-con_plan-deployment-topology">Plan the telco core deployment topology</a></li><li class="level-5"><a href="#telco-core-deployment-planning_plan-deployment-topology">Deployment planning</a></li><li class="level-6"><a href="#telco-core-worker-nodes-and-machineconfigpools_plan-deployment-topology">Worker Nodes and MachineConfigPools</a></li><li class="level-6"><a href="#telco-core-zones_plan-deployment-topology">Zones</a></li><li class="level-5"><a href="#telco-core-cluster-common-use-model-engineering-considerations_plan-deployment-topology">Telco core cluster common use model engineering considerations</a></li><li class="level-6"><a href="#telco-core-application-workloads_plan-deployment-topology">Application workloads</a></li><li class="level-6"><a href="#telco-core-signaling-workloads_plan-deployment-topology">Signaling workloads</a></li><li class="level-5"><a href="#telco-core-scalability_plan-deployment-topology">Scalability</a></li><li class="level-4"><a href="#extract-reference-configuration-crs-con_extract-reference-configuration-crs">Extract telco core reference configuration CRs</a></li><li class="level-5"><a href="#telco-core-reference-configuration-crs_extract-reference-configuration-crs">Telco core reference configuration CRs</a></li><li class="level-6"><a href="#telco-core-rds-container_extract-reference-configuration-crs">Extract the telco core reference design configuration CRs</a></li><li class="level-6"><a href="#using-cluster-compare-telco_core_extract-reference-configuration-crs">Compare a cluster with the {rds} reference configuration</a></li><li class="level-6"><a href="#node-configuration-crs_extract-reference-configuration-crs">Node configuration reference CRs</a></li><li class="level-6"><a href="#cluster-infrastructure-crs_extract-reference-configuration-crs">Cluster infrastructure reference CRs</a></li><li class="level-6"><a href="#resource-tuning-crs_extract-reference-configuration-crs">Resource tuning reference CRs</a></li><li class="level-6"><a href="#networking-crs_extract-reference-configuration-crs">Networking reference CRs</a></li><li class="level-6"><a href="#scheduling-crs_extract-reference-configuration-crs">Scheduling reference CRs</a></li><li class="level-6"><a href="#storage-crs_extract-reference-configuration-crs">Storage reference CRs</a></li><li class="level-6"><a href="#security-crs_extract-reference-configuration-crs">Security reference CRs</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="plan-telco-core-network-deployment-con_plan-telco-core-network-deployment">Plan telco core network deployment</h3>
@@ -1986,6 +1993,24 @@ The choice of implementation and configuration is outside the scope of this spec
 </div>
 </div>
 <div class="sect3">
+<h4 id="review-telco-core-reference-design-specification-intro_review-telco-core-reference-design-specification">Review telco core reference design specifications</h4>
+<div class="paragraph _abstract">
+<p>Review the reference design specifications for telco core deployments, including validated components, networking, storage, and deployment configurations.</p>
+</div>
+<div class="sect4">
+<h5 id="scalability-and-performance-telco-reference-designs_review-telco-core-reference-design-specification">Telco reference design specifications</h5>
+<div class="paragraph _abstract">
+<p>Review the telco reference design specifications for Red&#160;Hat OpenShift Container Platform.</p>
+</div>
+<div class="paragraph">
+<p><a href="../scalability_and_performance/telco-ran-du-rds.html#telco-ran-du-ref-design-specs">Telco RAN DU reference design specification for Red&#160;Hat OpenShift Container Platform {product-version}</a></p>
+</div>
+<div class="paragraph">
+<p><a href="../scalability_and_performance/telco-core-rds.html#telco-core-ref-design-specs">Telco core reference design specification</a></p>
+</div>
+</div>
+</div>
+<div class="sect3">
 <h4 id="review-telco-core-reference-design-specification-con_review-telco-core-reference-design-specification">Review the telco core reference design specification</h4>
 <div class="paragraph _abstract">
 <p>The reference design specification (RDS) defines the scope, components, and software stack that Red&#160;Hat validates for telco core clusters. Review it, and the rules for deviating from it, before you plan your deployment.</p>
@@ -2076,6 +2101,1821 @@ This is critical for the supportability of the solution and ensuring alignment a
 <div class="paragraph _abstract">
 <p>The following sections describe the various Red&#160;Hat OpenShift Container Platform components and configurations that you use to configure and deploy clusters to run telco core workloads.</p>
 </div>
+<div class="sect5">
+<h6 id="telco-core-cpu-partitioning-and-performance-tuning_review-telco-core-reference-design-specification">CPU partitioning and performance tuning</h6>
+<div class="paragraph _abstract">
+<p>CPU partitioning separates sensitive workloads from general-purpose tasks, interrupts, and driver work queues to improve performance and reduce latency.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>CPU partitioning improves performance and reduces latency by separating sensitive workloads from general-purpose tasks, interrupts, and driver work queues.
+The CPUs allocated to those auxiliary processes are referred to as <strong>reserved</strong> in the following sections.
+In a system with Hyper-Threading enabled, a CPU is one hyper-thread.</p>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>The operating system needs a certain amount of CPU to perform all the support tasks, including kernel networking.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A system with just user plane networking applications (DPDK) needs at least one core (2 hyper-threads when enabled) reserved for the operating system and the infrastructure components.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In a system with Hyper-Threading enabled, core sibling threads must always be in the same pool of CPUs.</p>
+</li>
+<li>
+<p>The set of reserved and isolated cores must include all CPU cores.</p>
+</li>
+<li>
+<p>Core 0 of each NUMA node must be included in the reserved CPU set.</p>
+</li>
+<li>
+<p>Low latency workloads require special configuration to avoid being affected by interrupts, kernel scheduler, or other parts of the platform.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>For more information, see "Creating a performance profile".</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>As of OpenShift 4.19, <code>cgroup v1</code> is no longer supported and has been removed.
+All workloads must now be compatible with <code>cgroup v2</code>.
+For more information, see <a href="https://www.redhat.com/en/blog/rhel-9-changes-context-red-hat-openshift-workloads">Red Hat Enterprise Linux 9 changes in the context of Red Hat OpenShift workloads</a>.</p>
+</li>
+<li>
+<p>The minimum reserved capacity (<code>systemReserved</code>) required can be found by following the guidance in <a href="https://access.redhat.com/solutions/5843241">Which amount of CPU and memory are recommended to reserve for the system in OCP 4 nodes?</a>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The specific values must be custom-tuned for each cluster based on its size and application workload.</p>
+</li>
+<li>
+<p>The minimum recommended <code>systemReserved</code> memory is 11Gi for worker nodes and 30Gi for control plane nodes.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>For schedulable control planes, the minimum recommended reserved capacity is at least 16 CPUs.</p>
+</li>
+<li>
+<p>The actual required reserved CPU capacity depends on the cluster configuration and workload attributes.</p>
+</li>
+<li>
+<p>The reserved CPU value must be rounded up to a full core (2 hyper-threads) alignment.</p>
+</li>
+<li>
+<p>Changes to CPU partitioning cause the nodes contained in the relevant machine config pool to be drained and rebooted.</p>
+</li>
+<li>
+<p>The reserved CPUs reduce the pod density, because the reserved CPUs are removed from the allocatable capacity of the Red&#160;Hat OpenShift Container Platform node.</p>
+</li>
+<li>
+<p>The real-time workload hint should be enabled for real-time capable workloads.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Applying the real-time <code>workloadHint</code> setting results in the <code>nohz_full</code> kernel command line parameter being applied to improve performance of high performance applications.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Hardware without IRQ affinity support affects isolated CPUs.
+All server hardware must support IRQ affinity to ensure that pods with guaranteed CPU QoS can fully use allocated CPUs.</p>
+</li>
+<li>
+<p>OVS dynamically manages its <code>cpuset</code> entry to adapt to network traffic needs.
+You do not need to reserve an additional CPU for handling high network throughput on the primary CNI.</p>
+</li>
+<li>
+<p>If workloads running on the cluster use kernel level networking, the RX/TX queue count for the participating NICs should be set to 16 or 32 queues if the hardware permits it.
+Be aware of the default queue count.
+With no configuration, the default queue count is one RX/TX queue per online CPU; which can result in too many interrupts being allocated.</p>
+</li>
+<li>
+<p>The irdma kernel module might result in the allocation of too many interrupt vectors on systems with high core counts.
+To prevent this condition the reference configuration excludes this kernel module from loading through a kernel commandline argument in the <code>PerformanceProfile</code> resource.
+Typically Core workloads do not require this kernel module.</p>
+</li>
+<li>
+<p>To enable the <code>acpi_idle</code> CPUIdle driver, for example for Intel FlexRAN workloads, add <code>intel_idle.max_cstate=0</code> to the <code>additionalKernelArgs</code> list in the <code>PerformanceProfile</code> resource.</p>
+</li>
+<li>
+<p>The <code>TunedPerformancePatch.yaml</code> file in the reference configures the <code>kernel.panic_on_unrecovered_nmi</code> sysctl parameter to enable triggering a kernel panic through BMC Non-Maskable Interrupt (NMI) on x86_64 architures.
+This provides a mechanism to force a kernel panic for system recovery and diagnostic purposes when nodes become unresponsive.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Some drivers do not deallocate the interrupts even after reducing the queue count.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect5">
+<h6 id="telco-core-workloads-on-schedulable-control-planes_review-telco-core-reference-design-specification">Workloads on schedulable control planes</h6>
+<div class="paragraph _abstract">
+<p>You can enable schedulable control planes to run workloads on control plane nodes, utilizing idle CPU capacity on bare-metal machines.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Enabling workloads on control plane nodes</dt>
+<dd>
+<p>You can enable schedulable control planes to run workloads on control plane nodes, utilizing idle CPU capacity on bare-metal machines for potential cost savings. This feature is only applicable to clusters with bare-metal control plane nodes.</p>
+<div class="paragraph">
+<p>There are two distinct parts to this functionality:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Allowing workloads on control plane nodes: This feature can be configured after initial cluster installation, allowing you to enable it when you need to run workloads on those nodes.</p>
+</li>
+<li>
+<p>Enabling workload partitioning: This is a critical isolation measure that protects the control plane from interference by regular workloads, ensuring cluster stability and reliability. Workload partitioning must be configured during the initial "day zero" cluster installation and cannot be enabled later.</p>
+</li>
+</ol>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>If you plan to run workloads on your control plane nodes, you must first enable workload partitioning during the initial setup. You can then enable the schedulable control plane feature at a later time.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Workload characterization and limitations</dt>
+<dd>
+<p>You must test and verify workloads to ensure that applications do not interfere with core cluster functions. It is recommended that you start with lightweight containers that do not heavily load the CPU or networking.</p>
+<div class="paragraph">
+<p>Certain workloads are not permitted on control plane nodes due to the risk to cluster stability. This includes any workload that reconfigures kernel arguments or system global <code>sysctls</code>, as this can lead to unpredictable outcomes for the cluster.</p>
+</div>
+<div class="paragraph">
+<p>To ensure stability, you must adhere to the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Make sure all non-trivial workloads have memory limits defined. This protects the control plane in case of a memory leak.</p>
+</li>
+<li>
+<p>Avoid excessively loading reserved CPUs, for example, by heavy use of exec probes.</p>
+</li>
+<li>
+<p>Avoid heavy kernel-based networking usage, as it can increase reserved CPU load through software networking components like OVS.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">NUMA Resources Operator support</dt>
+<dd>
+<p>As part of this enablement, the NUMA Resources Operator is supported on control plane nodes. The functional behavior of the NUMA Resources Operator remains the same, but its use on control plane nodes is explicitly permitted.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect5">
+<h6 id="telco-core-service-mesh_review-telco-core-reference-design-specification">Service Mesh</h6>
+<div class="paragraph _abstract">
+<p>Telco core cloud-native functions (CNFs) typically require a Service Mesh implementation.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>Telco core cloud-native functions (CNFs) typically require a Service Mesh implementation.
+Specific Service Mesh features and performance requirements are dependent on the application.
+The selection of Service Mesh implementation and configuration is outside the scope of this documentation.
+The implementation must account for the impact of Service Mesh on cluster resource usage and performance, including additional latency introduced in pod networking.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect5">
+<h6 id="telco-core-networking_review-telco-core-reference-design-specification">Networking</h6>
+<div class="paragraph _abstract">
+<p>The following diagram describes the telco core reference design networking configuration.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="Overview of the telco core reference design networking configuration">
+</div>
+<div class="title">Figure 13. Telco core reference design networking configuration</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The diagram shows the recommended network topology, where bonding uses ports from the same dual-port NIC. Bonding ports across different NICs is not recommended.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Per-interface IP forwarding</p>
+</li>
+<li>
+<p>Support for alt-names on network interfaces</p>
+</li>
+<li>
+<p>Host firewall rules for multi-node clusters</p>
+</li>
+<li>
+<p>MetalLB <code>ConfigurationStatus</code> CRD</p>
+</li>
+<li>
+<p>Extended BGP/L2 advertisements with service selectors</p>
+</li>
+<li>
+<p>Support for Intel E830 Jasper Beach in telco core</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you have custom <code>FRRConfiguration</code> CRs in the <code>metallb-system</code> namespace, you must move them under the <code>openshift-network-operator</code> namespace.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>The cluster is configured for dual-stack IP (IPv4 and IPv6).</p>
+</li>
+<li>
+<p>The validated physical network configuration consists of two dual-port NICs.
+One NIC is shared among the primary CNI (OVN-Kubernetes) and IPVLAN and MACVLAN traffic, while the second one is dedicated to SR-IOV VF-based pod traffic.</p>
+</li>
+<li>
+<p>A Linux bonding interface (<code>bond0</code>) is created in active-active IEEE 802.3ad LACP mode with the two NIC ports attached.
+The top-of-rack networking equipment must support and be configured for multi-chassis link aggregation (mLAG) technology.</p>
+</li>
+<li>
+<p>VLAN interfaces are created on top of <code>bond0</code>, including for the primary CNI.</p>
+</li>
+<li>
+<p>Bond and VLAN interfaces are created at cluster install time during the network configuration stage of the installation.
+Except for the <code>vlan0</code> VLAN used by the primary CNI, all other VLANs can be created during Day 2 activities with the Kubernetes NMstate Operator.</p>
+</li>
+<li>
+<p>MACVLAN and IPVLAN interfaces are created with their corresponding CNIs.
+They do not share the same base interface.
+For more information, see "Cluster Network Operator".</p>
+</li>
+<li>
+<p>SR-IOV VFs are managed by the SR-IOV Network Operator.</p>
+</li>
+<li>
+<p>To ensure consistent source IP addresses for pods behind a LoadBalancer Service, configure an <code>EgressIP</code> CR and specify the <code>podSelector</code> parameter.
+EgressIP is further discussed in the "Cluster Network Operator" section.</p>
+</li>
+<li>
+<p>You can implement service traffic separation by doing the following:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Configure VLAN interfaces and specific kernel IP routes on the nodes using <code>NodeNetworkConfigurationPolicy</code> CRs.</p>
+</li>
+<li>
+<p>Create a MetalLB <code>BGPPeer</code> CR for each VLAN to establish peering with the remote BGP router.</p>
+</li>
+<li>
+<p>Define a MetalLB <code>BGPAdvertisement</code> CR to specify which IP address pools should be advertised to a selected list of <code>BGPPeer</code> resources. The following diagram illustrates how specific service IP addresses are advertised externally through specific VLAN interfaces. Services routes are defined in <code>BGPAdvertisement</code> CRs and configured with values for <code>IPAddressPool1</code> and <code>BGPPeer1</code> fields.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Host-level per-interface IP forwarding can be enabled or disabled by using <code>net.ipv4.conf.&lt;interface&gt;.forwarding</code> through the install network configuration (Day 1) or the Kubernetes NMState Operator (Day 2).</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="Telco core reference design MetalLB service separation">
+</div>
+<div class="title">Figure 14. Telco core reference design MetalLB service separation</div>
+</div>
+<div class="sect6">
+<h7 id="telco-core-cluster-network-operator_review-telco-core-reference-design-specification">Cluster Network Operator</h7>
+<div class="paragraph _abstract">
+<p>The Cluster Network Operator (CNO) deploys and manages the cluster network components including the default OVN-Kubernetes network plugin during cluster installation.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>The Cluster Network Operator (CNO) deploys and manages the cluster network components including the default OVN-Kubernetes network plugin during cluster installation.
+The CNO allows configuration of primary interface MTU settings, OVN gateway modes to use node routing tables for pod egress, and additional secondary networks such as MACVLAN.</p>
+<div class="paragraph">
+<p>In support of network traffic separation, multiple network interfaces are configured through the CNO.
+Traffic steering to these interfaces is configured through static routes applied by using the NMState Operator.
+To ensure that pod traffic is properly routed, OVN-K is configured with the <code>routingViaHost</code> option enabled.
+This setting uses the kernel routing table and the applied static routes rather than OVN for pod egress traffic.</p>
+</div>
+<div class="paragraph">
+<p>The Whereabouts CNI plugin is used to provide dynamic IPv4 and IPv6 addressing for additional pod network interfaces without the use of a DHCP server.</p>
+</div>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>OVN-Kubernetes is required for IPv6 support.</p>
+</li>
+<li>
+<p>Large MTU cluster support requires connected network equipment to be set to the same or larger value.
+MTU size up to 8900 is supported.</p>
+</li>
+<li>
+<p>MACVLAN and IPVLAN cannot co-locate on the same main interface due to their reliance on the same underlying kernel mechanism, specifically the <code>rx_handler</code>.
+This handler allows a third-party module to process incoming packets before the host processes them, and only one such handler can be registered per network interface.
+Since both MACVLAN and IPVLAN need to register their own <code>rx_handler</code> to function, they conflict and cannot coexist on the same interface.
+Review the source code for more details:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://elixir.bootlin.com/linux/v6.10.2/source/drivers/net/ipvlan/ipvlan_main.c#L82">linux/v6.10.2/source/drivers/net/ipvlan/ipvlan_main.c#L82</a></p>
+</li>
+<li>
+<p><a href="https://elixir.bootlin.com/linux/v6.10.2/source/drivers/net/macvlan.c#L1260">linux/v6.10.2/source/drivers/net/macvlan.c#L1260</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Alternative NIC configurations include splitting the shared NIC into multiple NICs or using a single dual-port NIC, though they have not been tested and validated.</p>
+</li>
+<li>
+<p>Clusters with single-stack IP configuration are not validated.</p>
+</li>
+<li>
+<p>EgressIP</p>
+<div class="ulist">
+<ul>
+<li>
+<p>EgressIP failover time depends on the <code>reachabilityTotalTimeoutSeconds</code> parameter in the <code>Network</code> CR.
+This parameter determines the frequency of probes used to detect when the selected egress node is unreachable.
+The recommended value of this parameter is <code>1</code> second.</p>
+</li>
+<li>
+<p>When EgressIP is configured with multiple egress nodes, the failover time is expected to be on the order of seconds or longer.</p>
+</li>
+<li>
+<p>On nodes with additional network interfaces EgressIP traffic will egress through the interface on which the EgressIP address has been assigned.
+For more information, see "Configuring an egress IP address".</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Pod-level SR-IOV bonding mode must be set to <code>active-backup</code> and a value in <code>miimon</code> must be set (<code>100</code> is recommended).</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Pod egress traffic is managed by kernel routing table using the <code>routingViaHost</code> option.
+Appropriate static routes must be configured in the host.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect6">
+<h7 id="telco-core-load-balancer_review-telco-core-reference-design-specification">Load balancer</h7>
+<div class="paragraph _abstract">
+<p>MetalLB is a load-balancer implementation for bare metal Kubernetes clusters that uses standard routing protocols.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you have custom <code>FRRConfiguration</code> CRs in the <code>metallb-system</code> namespace, you must move them under the <code>openshift-network-operator</code> namespace.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>MetalLB is a load-balancer implementation for bare metal Kubernetes clusters that uses standard routing protocols.
+It enables a Kubernetes service to get an external IP address which is also added to the host network for the cluster.
+The MetalLB Operator deploys and manages the lifecycle of a MetalLB instance in a cluster.
+Some use cases might require features not available in MetalLB, such as stateful load balancing.
+Where necessary, you can use an external third party load balancer.
+Selection and configuration of an external load balancer is outside the scope of this specification.
+When an external third-party load balancer is used, the integration effort must include enough analysis to ensure all performance and resource utilization requirements are met.</p>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Stateful load balancing is not supported by MetalLB. An alternate load balancer implementation must be used if this is a requirement for workload CNFs.</p>
+</li>
+<li>
+<p>You must ensure that the external IP address is routable from clients to the host network for the cluster.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>MetalLB is used in BGP mode only for telco core use models.</p>
+</li>
+<li>
+<p>For telco core use models, MetalLB is supported only with the OVN-Kubernetes network provider used in local gateway mode.
+See <code>routingViaHost</code> in "Cluster Network Operator".</p>
+</li>
+<li>
+<p>BGP configuration in MetalLB is expected to vary depending on the requirements of the network and peers.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>You can configure address pools with variations in addresses, aggregation length, auto assignment, and so on.</p>
+</li>
+<li>
+<p>MetalLB uses BGP for announcing routes only.
+Only the <code>transmitInterval</code> and <code>minimumTtl</code> parameters are relevant in this mode.
+Other parameters in the BFD profile should remain close to the defaults as shorter values can lead to false negatives and affect performance.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect6">
+<h7 id="telco-core-sr-iov_review-telco-core-reference-design-specification">SR-IOV</h7>
+<div class="paragraph _abstract">
+<p>SR-IOV enables physical functions (PFs) to be divided into multiple virtual functions (VFs) for higher throughput performance while keeping pods isolated.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>SR-IOV enables physical functions (PFs) to be divided into multiple virtual functions (VFs).
+VFs can then be assigned to multiple pods to achieve higher throughput performance while keeping the pods isolated.
+The SR-IOV Network Operator provisions and manages SR-IOV CNI, network device plugin, and other components of the SR-IOV stack.</p>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Only certain network interfaces are supported. See "Supported devices" for more information.</p>
+</li>
+<li>
+<p>Enabling SR-IOV and IOMMU: the SR-IOV Network Operator automatically enables IOMMU on the kernel command line.</p>
+</li>
+<li>
+<p>SR-IOV VFs do not receive link state updates from the PF.
+If a link down detection is required, it must be done at the protocol level.</p>
+</li>
+<li>
+<p><code>MultiNetworkPolicy</code> CRs can be applied to <code>netdevice</code> networks only.
+This is because the implementation uses iptables, which cannot manage vfio interfaces.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>SR-IOV interfaces in <code>vfio</code> mode are typically used to enable additional secondary networks for applications that require high throughput or low latency.</p>
+</li>
+<li>
+<p>The <code>SriovOperatorConfig</code> CR must be explicitly created.
+This CR is included in the reference configuration policies, which causes it to be created during initial deployment.</p>
+</li>
+<li>
+<p>NICs that do not support firmware updates with UEFI secure boot or kernel lockdown must be preconfigured with sufficient virtual functions (VFs) enabled to support the number of VFs required by the application workload.
+For Mellanox NICs, you must disable the Mellanox vendor plugin in the SR-IOV Network Operator. For more information see, "Configuring an SR-IOV network device".</p>
+</li>
+<li>
+<p>To change the MTU value of a VF after the pod has started, do not configure the <code>SriovNetworkNodePolicy</code> MTU field.
+Instead, use the Kubernetes NMState Operator to set the MTU of the related PF.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect6">
+<h7 id="telco-core-nmstate-operator_review-telco-core-reference-design-specification">NMState Operator</h7>
+<div class="paragraph _abstract">
+<p>The Kubernetes NMState Operator provides a Kubernetes API for performing state-driven network configuration across cluster nodes.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>The Kubernetes NMState Operator provides a Kubernetes API for performing state-driven network configuration across cluster nodes.
+It enables network interface configurations, static IPs and DNS, VLANs, trunks, bonding, static routes, MTU, and enabling promiscuous mode on the secondary interfaces.
+The cluster nodes periodically report on the state of each node&#8217;s network interfaces to the API server.</p>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<p>Not applicable</p>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Initial networking configuration is applied using <code>NMStateConfig</code> content in the installation CRs.
+The NMState Operator is used only when required for network updates.</p>
+</li>
+<li>
+<p>When SR-IOV virtual functions are used for host networking, the NMState Operator (via <code>nodeNetworkConfigurationPolicy</code> CRs) is used to configure VF interfaces, such as VLANs and MTU.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="telco-core-logging_review-telco-core-reference-design-specification">Logging</h6>
+<div class="paragraph _abstract">
+<p>The Cluster Logging Operator enables collection and shipping of logs off the node for remote archival and analysis.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>The Cluster Logging Operator enables collection and shipping of logs off the node for remote archival and analysis.
+The reference configuration uses Kafka to ship audit and infrastructure logs to a remote archive.</p>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<p>Not applicable</p>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>The impact of cluster CPU use is based on the number or size of logs generated and the amount of log filtering configured.</p>
+</li>
+<li>
+<p>The reference configuration does not include shipping of application logs.
+The inclusion of application logs in the configuration requires you to evaluate the application logging rate and have sufficient additional CPU resources allocated to the reserved set.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect5">
+<h6 id="telco-core-power-management_review-telco-core-reference-design-specification">Power Management</h6>
+<div class="paragraph _abstract">
+<p>Use the performance profile to configure clusters with high power mode, low power mode, or mixed mode depending on workload latency sensitivity.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>Use the Performance profile to configure clusters with high power mode, low power mode, or mixed mode.
+The choice of power mode depends on the characteristics of the workloads running on the cluster, particularly how sensitive they are to latency.
+Configure the maximum latency for a low-latency pod by using the per-pod power management C-states feature.</p>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Power configuration relies on appropriate BIOS configuration, for example, enabling C-states and P-states.
+Configuration varies between hardware vendors.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Latency: To ensure that latency-sensitive workloads meet requirements, you require a high-power or a per-pod power management configuration.
+Per-pod power management is only available for Guaranteed QoS pods with dedicated pinned CPUs.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect5">
+<h6 id="telco-core-storage_review-telco-core-reference-design-specification">Storage</h6>
+<div class="paragraph _abstract">
+<p>Cloud native storage services can be provided by OpenShift Data Foundation or other third-party solutions for telco core clusters.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Cloud native storage services can be provided by OpenShift Data Foundation or other third-party solutions.</p>
+</div>
+<div class="paragraph">
+<p>OpenShift Data Foundation is a Red Hat Ceph Storage based software-defined storage solution for containers.
+It provides block storage, file system storage, and on-premise object storage, which can be dynamically provisioned for both persistent and non-persistent data requirements.
+Telco core applications require persistent storage.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>All storage data might not be encrypted in flight.
+To reduce risk, isolate the storage network from other cluster networks.
+The storage network must not be reachable, or routable, from other cluster networks.
+Only nodes directly attached to the storage network should be allowed to gain access to it.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="sect6">
+<h7 id="telco-core-openshift-data-foundation_review-telco-core-reference-design-specification">OpenShift Data Foundation</h7>
+<div class="paragraph _abstract">
+<p>OpenShift Data Foundation is a software-defined storage service for containers that provides block storage, file system storage, and on-premise object storage.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>OpenShift Data Foundation is a software-defined storage service for containers.
+OpenShift Data Foundation can be deployed in one of two modes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Internal mode, where OpenShift Data Foundation software components are deployed as software containers directly on the OpenShift cluster nodes, together with other containerized applications.</p>
+</li>
+<li>
+<p>External mode, where OpenShift Data Foundation is deployed on a dedicated storage cluster, which is usually a separate Red Hat Ceph Storage cluster running on Red&#160;Hat Enterprise Linux.
+These storage services are running externally to the application workload cluster.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>For telco core clusters, storage support is provided by OpenShift Data Foundation storage services running in external mode, for several reasons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Separating dependencies between Red&#160;Hat OpenShift Container Platform and Ceph operations allows for independent Red&#160;Hat OpenShift Container Platform and OpenShift Data Foundation updates.</p>
+</li>
+<li>
+<p>Separation of operations functions for the Storage and Red&#160;Hat OpenShift Container Platform infrastructure layers, is a typical customer requirement for telco core use cases.</p>
+</li>
+<li>
+<p>External Red Hat Ceph Storage clusters can be re-used by multiple Red&#160;Hat OpenShift Container Platform clusters deployed in the same region.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>OpenShift Data Foundation supports separation of storage traffic using secondary CNI networks.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>In an IPv4/IPv6 dual-stack networking environment, OpenShift Data Foundation uses IPv4 addressing.
+For more information, see <a href="https://docs.redhat.com/en/documentation/red_hat_openshift_data_foundation/latest/html/planning_your_deployment/network-requirements_rhodf#ipv6-support_rhodf">IPv6 support</a>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>OpenShift Data Foundation network traffic should be isolated from other traffic on a dedicated network, for example, by using VLAN isolation.</p>
+</li>
+<li>
+<p>Workload requirements must be scoped before attaching multiple Red&#160;Hat OpenShift Container Platform clusters to an external OpenShift Data Foundation cluster to ensure enough throughput, bandwidth, and performance KPIs.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect6">
+<h7 id="telco-core-additional-storage-solutions_review-telco-core-reference-design-specification">Additional storage solutions</h7>
+<div class="paragraph _abstract">
+<p>You can use other storage solutions to provide persistent storage for telco core clusters.
+The configuration and integration of these solutions is outside the scope of the reference design specifications (RDS).</p>
+</div>
+<div class="paragraph">
+<p>Integration of the storage solution into the telco core cluster must include proper sizing and performance analysis to ensure the storage meets overall performance and resource usage requirements.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="telco-reference-core-deployment-components_review-telco-core-reference-design-specification">Telco core deployment components</h5>
+<div class="paragraph _abstract">
+<p>The following sections describe the various Red&#160;Hat OpenShift Container Platform components and configurations that you use to configure the hub cluster with Red&#160;Hat Advanced Cluster Management (RHACM).</p>
+</div>
+<div class="sect5">
+<h6 id="telco-core-red-hat-advanced-cluster-management_review-telco-core-reference-design-specification">Red Hat Advanced Cluster Management</h6>
+<div class="paragraph _abstract">
+<p>RHACM provides Multi Cluster Engine (MCE) installation and ongoing lifecycle management for deployed clusters.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>RHACM provides Multi Cluster Engine (MCE) installation and ongoing GitOps ZTP lifecycle management for deployed clusters.
+You manage cluster configuration and upgrades declaratively by applying <code>Policy</code> custom resources (CRs) to clusters during maintenance windows.</p>
+</div>
+<div class="paragraph">
+<p>You apply policies with the RHACM policy controller as managed by TALM.
+Configuration, upgrades, and cluster status are managed through the policy controller.</p>
+</div>
+<div class="paragraph">
+<p>When installing managed clusters, RHACM applies labels and initial ignition configuration to individual nodes in support of custom disk partitioning, allocation of roles, and allocation to machine config pools.
+You define these configurations with <code>SiteConfig</code> or <code>ClusterInstance</code> CRs.</p>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Hub cluster sizing is discussed in <a href="https://docs.redhat.com/en/documentation/red_hat_advanced_cluster_management_for_kubernetes/2.15/html-single/install/index#sizing-your-cluster">Sizing your cluster</a>.</p>
+</li>
+<li>
+<p>RHACM scaling limits are described in <a href="https://docs.redhat.com/en/documentation/red_hat_advanced_cluster_management_for_kubernetes/2.15/html-single/install/index#performance-and-scalability">Performance and Scalability</a>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>When managing multiple clusters with unique content per installation, site, or deployment, using RHACM hub templating is strongly recommended.
+With RHACM hub templating, you can apply a consistent set of policies to clusters while providing unique values per installation.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect5">
+<h6 id="telco-core-topology-aware-lifecycle-manager_review-telco-core-reference-design-specification">Topology Aware Lifecycle Manager</h6>
+<div class="paragraph _abstract">
+<p>TALM manages how changes are rolled out to managed clusters in the network.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>TALM is an Operator that runs only on the hub cluster.
+TALM manages how changes including cluster and Operator upgrades, configurations, and so on, are rolled out to managed clusters in the network.
+TALM has the following core features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Provides sequenced updates of cluster configurations and upgrades (Red&#160;Hat OpenShift Container Platform and Operators) as defined by cluster policies.</p>
+</li>
+<li>
+<p>Provides for deferred application of cluster updates.</p>
+</li>
+<li>
+<p>Supports progressive rollout of policy updates to sets of clusters in user configurable batches.</p>
+</li>
+<li>
+<p>Allows for per-cluster actions by adding <code>ztp-done</code> or similar user-defined labels to clusters.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Supports concurrent cluster deployments in batches of 400</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Only policies with the <code>ran.openshift.io/ztp-deploy-wave</code> annotation are applied by TALM during initial cluster installation.</p>
+</li>
+<li>
+<p>Any policy can be remediated by TALM under control of a user created <code>ClusterGroupUpgrade</code> CR.</p>
+</li>
+<li>
+<p>Set the <code>MachineConfigPool</code> (<code>mcp</code>) CR <code>paused</code> field to true during a cluster upgrade maintenance window and set the <code>maxUnavailable</code> field to the maximum tolerable value.
+This prevents multiple cluster node reboots during upgrade, which results in a shorter overall upgrade.
+When you unpause the <code>mcp</code> CR, all the configuration changes are applied with a single reboot.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>During installation, custom <code>mcp</code> CRs can be paused along with setting <code>maxUnavailable</code> to 100% to improve installation times.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>You can orchestrate upgrades for Red&#160;Hat OpenShift Container Platform, Day 2 OLM operators, and custom configurations using a ClusterGroupUpgrade (CGU) CR that defines the required policies.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>An EUS to EUS upgrade can be orchestrated using chained CGU CRs.</p>
+</li>
+<li>
+<p>Control of MCP pause can be managed through policy in the CGU CRs for a full control plane and worker node rollout of upgrades.</p>
+</li>
+<li>
+<p>For more information, see "Performing an EUS-to-EUS update for telco core clusters".</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect5">
+<h6 id="telco-core-gitops-operator-and-ztp-plugins_review-telco-core-reference-design-specification">GitOps Operator and GitOps ZTP plugins</h6>
+<div class="paragraph _abstract">
+<p>The GitOps Operator provides a GitOps-driven infrastructure for managing cluster deployment and configuration.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>The GitOps Operator provides a GitOps driven infrastructure for managing cluster deployment and configuration.
+Cluster definitions and configuration are maintained in a Git repository.</p>
+</div>
+<div class="paragraph">
+<p>The SiteConfig Operator generates installation CRs from <code>ClusterInstance</code> CRs.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>From Red&#160;Hat OpenShift Container Platform 4.21, you must use <code>ClusterInstance</code> CRs and the SiteConfig Operator to define managed cluster installations.
+With this release, support for defining managed cluster installations with the <code>SiteConfig</code> CR is removed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>GitOps ZTP plugins provide support for automatically wrapping configuration CRs in policies based on RHACM <code>PolicyGenerator</code> CRs.</p>
+</div>
+<div class="paragraph">
+<p>You should structure the Git repository according to the release version, with all necessary artifacts added to the repository, such as the <code>ClusterInstance</code>, <code>PolicyGenerator</code>, and supporting reference CRs.
+This structure enables deploying and managing multiple versions of the Red&#160;Hat OpenShift Container Platform and configuration versions to clusters simultaneously and through upgrades.</p>
+</div>
+<div class="paragraph">
+<p>The recommended Git structure keeps reference CRs in a directory separate from customer or partner provided content.
+This means that you can import reference updates by simply overwriting existing content.
+Customer or partner supplied CRs can be provided in a parallel directory to the reference CRs for easy inclusion in the generated configuration policies.</p>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Each ArgoCD application supports up to 1000 nodes on a hub cluster conforming to the Hub RDS.
+Multiple ArgoCD applications can be used to achieve the maximum number of clusters supported by a single hub cluster.</p>
+</li>
+<li>
+<p>Use the <code>extraManifestsRefs</code> field in the <code>ClusterInstance</code> CR to reference <code>ConfigMap</code> resources that contain additional manifests to apply at install time.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>To avoid confusion or unintentional overwriting when updating content, you should use unique and distinguishable names for custom CRs in the <code>reference-crs/</code> directory under core-overlay and extra manifests in git.</p>
+</li>
+<li>
+<p>The <code>ClusterInstance</code> CR allows multiple <code>ConfigMap</code> references in the <code>extraManifestsRefs</code> field for additional install-time manifests.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect5">
+<h6 id="telco-core-agent-based-installer_review-telco-core-reference-design-specification">Agent-based Installer</h6>
+<div class="paragraph _abstract">
+<p>The Agent-based Installer provides an installation method for Red&#160;Hat OpenShift Container Platform in environments without existing deployment infrastructure.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>The recommended method for Telco Core cluster installation is using Red Hat Advanced Cluster Management.
+The Agent Based Installer (ABI) is a separate installation flow for Openshift in environments without existing infrastructure for running cluster deployments.
+Use the ABI to install Red&#160;Hat OpenShift Container Platform on bare-metal servers without requiring additional servers or VMs for managing the installation, but does not provide ongoing lifecycle management, monitoring or automations.
+The ABI can be run on any system for example, from a laptop to generate an ISO installation image.
+The ISO is used as the installation media for the cluster control plane nodes.
+You can monitor the progress by using the ABI from any system with network connectivity to the control plane node&#8217;s API interfaces.</p>
+<div class="paragraph">
+<p>ABI supports the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Installation from declarative CRs</p>
+</li>
+<li>
+<p>Installation in disconnected environments</p>
+</li>
+<li>
+<p>No additional servers required to support installation, for example, the bastion node is no longer needed</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Disconnected installation requires a registry with all required content mirrored and reachable from the installed host.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Networking configuration should be applied as NMState configuration during installation as opposed to Day 2 configuration using the NMState Operator.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="telco-core-monitoring_review-telco-core-reference-design-specification">Monitoring</h5>
+<div class="paragraph _abstract">
+<p>The Cluster Monitoring Operator (CMO) is included by default in Red&#160;Hat OpenShift Container Platform and provides monitoring for the platform components and optionally user projects.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>The Cluster Monitoring Operator (CMO) is included by default in Red&#160;Hat OpenShift Container Platform and provides monitoring (metrics, dashboards, and alerting) for the platform components and optionally user projects.
+You can customize the default log retention period, custom alert rules, and so on.</p>
+<div class="paragraph">
+<p>Configuration of the monitoring stack is done through a single string value in the cluster-monitoring-config ConfigMap. The reference tuning merges content from two requirements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Prometheus configuration is extended to forward alerts to the Red&#160;Hat Advanced Cluster Management (RHACM) hub cluster for alert aggregation.
+If required, you can extend this configuration to forward alerts to additional locations.</p>
+</li>
+<li>
+<p>Prometheus retention period is reduced from the default.
+The primary metrics storage is typically external to the cluster.
+Metrics storage on the core cluster is typically a backup to that central store and available for local troubleshooting purposes.
+You can add a <code>remoteWrite</code> endpoint to the Prometheus configuration to directly forward metrics to the central store.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>In addition to the default configuration, telco core clusters typically configure pod CPU and memory metrics and alerts for user workloads.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>The Prometheus retention period is specified by the user.
+The value used is a tradeoff between operational requirements for maintaining historical data on the cluster against CPU and storage resources.
+Longer retention periods increase the need for storage and require additional CPU to manage the indexing of data.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="telco-core-scheduling_review-telco-core-reference-design-specification">Scheduling</h5>
+<div class="paragraph _abstract">
+<p>The scheduler is a cluster-wide component responsible for selecting the right node for a given workload.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>The scheduler is a cluster-wide component responsible for selecting the right node for a given workload.
+It is a core part of the platform and does not require any specific configuration in the common deployment scenarios.
+However, there are few specific use cases described in the following section.</p>
+<div class="paragraph">
+<p>NUMA-aware scheduling can be enabled through the NUMA Resources Operator.
+For more information, see "Scheduling NUMA-aware workloads".</p>
+</div>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>The default scheduler does not understand the NUMA locality of workloads.
+It only knows about the sum of all free resources on a worker node.
+This might cause workloads to be rejected when scheduled to a node with the topology manager policy set to single-numa-node or restricted.
+For more information, see "Topology Manager policies"..</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For example, consider a pod requesting 6 CPUs and being scheduled to an empty node that has 4 CPUs per NUMA node.
+The total allocatable capacity of the node is 8 CPUs. The scheduler places the pod on the empty node.
+The node local admission fails, as there are only 4 CPUs available in each of the NUMA nodes.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>All clusters with multi-NUMA nodes are required to use the NUMA Resources Operator.
+See "Installing the NUMA Resources Operator" for more information.
+Use the <code>machineConfigPoolSelector</code> field in the <code>KubeletConfig</code> CR to select all nodes where NUMA aligned scheduling is required.</p>
+</li>
+<li>
+<p>All machine config pools must have consistent hardware configuration.
+For example, all nodes are expected to have the same NUMA zone count.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Pods might require annotations for correct scheduling and isolation.
+For more information about annotations, see "CPU partitioning and performance tuning".</p>
+</li>
+<li>
+<p>You can configure SR-IOV virtual function NUMA affinity to be ignored during scheduling by using the excludeTopology field in <code>SriovNetworkNodePolicy</code> CR.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="telco-core-node-configuration_review-telco-core-reference-design-specification">Node Configuration</h5>
+<div class="paragraph _abstract">
+<p>Node configuration for telco core clusters includes additional kernel modules, container mount namespace settings, and kdump configuration.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Analyze additional kernel modules to determine impact on CPU load, system performance, and ability to meet KPIs.</p>
+<div class="openblock">
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 23. Additional kernel modules</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Additional kernel modules</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Install the following kernel modules by using <code>MachineConfig</code> CRs to provide extended kernel functionality to CNFs.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>sctp</p>
+</li>
+<li>
+<p>ip_gre</p>
+</li>
+<li>
+<p>nf_tables</p>
+</li>
+<li>
+<p>nf_conntrack</p>
+</li>
+<li>
+<p>nft_ct</p>
+</li>
+<li>
+<p>nft_limit</p>
+</li>
+<li>
+<p>nft_log</p>
+</li>
+<li>
+<p>nft_nat</p>
+</li>
+<li>
+<p>nft_chain_nat</p>
+</li>
+<li>
+<p>nf_reject_ipv4</p>
+</li>
+<li>
+<p>nf_reject_ipv6</p>
+</li>
+<li>
+<p>nfnetlink_log</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Container mount namespace hiding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reduce the frequency of kubelet housekeeping and eviction monitoring to reduce CPU usage.
+Creates a container mount namespace, visible to kubelet/CRI-O, to reduce system mount scanning overhead.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kdump enable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional configuration (enabled by default)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="sect5">
+<h6 id="telco-core-host-firmware-and-boot-loader-configuration_review-telco-core-reference-design-specification">Host firmware and boot loader configuration</h6>
+<div class="paragraph _abstract">
+<p>Configure host firmware and boot loader settings to support telco core cluster requirements.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no reference design updates in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Enabling secure boot is the recommended configuration.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When secure boot is enabled, only signed kernel modules are loaded by the kernel.
+Out-of-tree drivers are not supported.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect5">
+<h6 id="telco-core-kubelet-settings_review-telco-core-reference-design-specification">Kubelet Settings</h6>
+<div class="paragraph _abstract">
+<p>Some CNF workloads make use of sysctls which are not in the list of system-wide safe <code>sysctls</code>.
+Generally network sysctls are namespaced and can be enabled by using the <code>kubeletconfig.experimental</code> annotation in the PerformanceProfile as a string of JSON in the form <code>allowedUnsafeSysctls</code>.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, the <code>systemReserved</code> memory can be configured through the same <code>kubeletconfig.experimental</code> annotation to reserve memory for system daemons and kernel processes.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example snippet showing allowedUnsafeSysctls and systemReserved</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: performance.openshift.io/v2
+kind: PerformanceProfile
+metadata:
+  name: {{ .metadata.name }}
+  annotations:
+    # allowedUnsafeSysctls: some pods want the kernel stack to ignore IPv6 router Advertisement.
+    # systemReserved: when used, it should be tailored for each environment.
+    kubeletconfig.experimental: |
+      {
+       "allowedUnsafeSysctls":["net.ipv6.conf.all.accept_ra"],
+       "systemReserved":{"memory":"11Gi"}
+      }</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Although these are namespaced they may allow a pod to consume memory or other resources beyond any limits specified in the pod description. You must ensure that these <code>sysctls</code> do not exhaust platform resources.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="telco-core-disconnected-environment_review-telco-core-reference-design-specification">Disconnected environment</h5>
+<div class="paragraph _abstract">
+<p>Telco core clusters are expected to be installed in networks without direct access to the internet.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Added requirement to use the <code>oc mirror</code> plugin v2 for mirroring image signatures in disconnected environments.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>Telco core clusters are expected to be installed in networks without direct access to the internet.
+All container images needed to install, configure, and operate the cluster must be available in a disconnected registry.
+This includes Red&#160;Hat OpenShift Container Platform images, Day 2 OLM Operator images, and application workload images.
+The use of a disconnected environment provides multiple benefits, including:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Security - limiting access to the cluster</p>
+</li>
+<li>
+<p>Curated content - the registry is populated based on curated and approved updates for clusters</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>A unique name is required for all custom <code>CatalogSource</code> resources.
+Do not reuse the default catalog names.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>A valid time source must be configured as part of cluster installation.</p>
+</li>
+<li>
+<p>In Red&#160;Hat OpenShift Container Platform {product-version} and later, pulling OpenShift images from a disconnected mirror registry requires copying the image signatures into that registry during the mirroring process.
+The <code>oc adm mirror</code> command does not mirror signatures and must not be used.
+Instead, use the <code>oc mirror</code> plugin v2 to ensure signatures are properly mirrored.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="telco-core-security_review-telco-core-reference-design-specification">Security</h5>
+<div class="paragraph _abstract">
+<p>Telco core clusters require hardening against multiple attack vectors through various security features and configurations.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Starting with Red&#160;Hat OpenShift Container Platform {product-version}, administrators can use the <code>oc commatrix</code> plugin to automatically generate <code>MachineConfig</code> CRs with a default set of nftables firewall rules.
+The generated <code>MachineConfig</code> CRs can then be added to the cluster configuration to improve security.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Telco customers are security conscious and require clusters to be hardened against multiple attack vectors.
+In Red&#160;Hat OpenShift Container Platform, there is no single component or feature responsible for securing a cluster.
+Described below are various security oriented features and configurations for the use models covered in the telco core RDS.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SecurityContextConstraints (SCC): All workload pods should be run with <code>restricted-v2</code> or <code>restricted</code> SCC.</p>
+</li>
+<li>
+<p>Seccomp: All pods should run with the <code>RuntimeDefault</code> (or stronger) seccomp profile.</p>
+</li>
+<li>
+<p>Rootless DPDK pods: Many user-plane networking (DPDK) CNFs require pods to run with root privileges.
+With this feature, a conformant DPDK pod can be run without requiring root privileges.
+Rootless DPDK pods create a tap device in a rootless pod that injects traffic from a DPDK application to the kernel.</p>
+</li>
+<li>
+<p>Storage: The storage network should be isolated and non-routable to other cluster networks.
+See the "Storage" section for additional details.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Security-conscious cluster administrators can configure nftables rules to restrict inbound network flows.
+See <a href="https://docs.redhat.com/en/documentation/openshift_container_platform/latest/html/installation_configuration/configuring-firewall.html#network-commatrix-plugin-intro_configuring-firewall">the Red&#160;Hat OpenShift Container Platform documentation</a> for a supported method for implementing custom nftables firewall rules in Red&#160;Hat OpenShift Container Platform cluster nodes with the <code>oc commatrix</code> plugin.
+You can add the generated <code>MachineConfig</code> CRs to the cluster configuration at install time as extra manifests.
+When the cluster is managed under a Hub RDS compliant RHACM cluster the content of the <code>MachineConfig</code> resource is maintained across the life of the cluster through a <code>Policy</code> resource.</p>
+</div>
+<div class="paragraph">
+<p>It is crucial to carefully consider the operational implications before deploying this method, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Early application: The rules are applied at boot time, before the network is fully operational.
+Ensure the rules do not inadvertently block essential services required during the boot process.</p>
+</li>
+<li>
+<p>Risk of misconfiguration: Errors in your custom rules can lead to unintended consequences, potentially leading to performance impact or blocking legitimate traffic or isolating nodes.
+Thoroughly test your rules in a non-production environment before deploying them to your main cluster.</p>
+</li>
+<li>
+<p>External endpoints: Red&#160;Hat OpenShift Container Platform requires access to external endpoints to function.
+For more information about the firewall allowlist, see "Configuring your firewall for Red&#160;Hat OpenShift Container Platform".
+Ensure that cluster nodes are permitted access to those endpoints.</p>
+</li>
+<li>
+<p>Node reboot: Unless node disruption policies are configured, applying the <code>MachineConfig</code> CR with the required firewall settings causes a node reboot.
+Be aware of this impact and schedule a maintenance window accordingly.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Node disruption policies are available in Red&#160;Hat OpenShift Container Platform 4.17 and later.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Network flow matrix: For more information about managing ingress traffic, see "Network flow matrix".
+You can restrict ingress traffic to essential flows to improve network security.
+The matrix provides insights into base cluster services but excludes traffic generated by Day 2 Operators.</p>
+</li>
+<li>
+<p>Cluster version updates and upgrades: Exercise caution when updating or upgrading Red&#160;Hat OpenShift Container Platform clusters.
+Recent changes to the platform&#8217;s firewall requirements might require adjustments to network port permissions.
+While the documentation provides guidelines, note that these requirements can evolve over time.
+To minimize disruptions, you should test any updates or upgrades in a staging environment before applying them in production.
+This helps you to identify and address potential compatibility issues related to firewall configuration changes.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Rootless DPDK pods requires the following additional configuration:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Configure the <code>container_t</code> SELinux context for the tap plugin.</p>
+</li>
+<li>
+<p>Enable the <code>container_use_devices</code> SELinux boolean for the cluster host.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>For rootless DPDK pod support, enable the SELinux <code>container_use_devices</code> boolean on the host to allow the tap device to be created.
+This introduces an acceptable security risk.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="telco-core-cert-manager-operator_review-telco-core-reference-design-specification">cert-manager Operator</h5>
+<div class="paragraph _abstract">
+<p>The cert-manager Operator for Red&#160;Hat OpenShift Container Platform manages the lifecycle of TLS certificates for cluster components and workloads.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">New in this release</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>The cert-manager Operator is a new optional component in this release.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>The cert-manager Operator for Red&#160;Hat OpenShift Container Platform manages the lifecycle of TLS certificates for cluster components and workloads.
+The cert-manager Operator automates certificate issuance, renewal, and rotation, eliminating manual certificate management.
+The reference configuration includes the cert-manager Operator to optionally manage certificates for the API server and ingress controller endpoints.</p>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Limits and requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>The reference configuration includes only the ACME DNS01 challenge type for platform certificate issuance.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Engineering considerations</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Use RHACM <code>CertificatePolicy</code> resources on the hub cluster to monitor certificate expiration and compliance across managed clusters.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
 </div>
 <div class="sect4">
 <h5 id="telco-core-software-stack_review-telco-core-reference-design-specification">Telco core reference configuration software specifications</h5>
@@ -2083,7 +3923,7 @@ This is critical for the supportability of the solution and ensuring alignment a
 <p>The Red&#160;Hat telco core {product-version} solution has been validated using the following Red&#160;Hat software products for Red&#160;Hat OpenShift Container Platform clusters.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 80%;">
-<caption class="title">Table 23. Telco core cluster validated software components</caption>
+<caption class="title">Table 24. Telco core cluster validated software components</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2914,7 +4754,7 @@ No patched CRs</code></pre>
 <p>Use the following custom resources (CRs) to configure node settings for the telco core profile.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 24. Node configuration CRs</caption>
+<caption class="title">Table 25. Node configuration CRs</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2981,7 +4821,7 @@ No patched CRs</code></pre>
 <p>Use the following custom resources (CRs) to configure cluster infrastructure components for the telco core profile.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 25. Cluster infrastructure CRs</caption>
+<caption class="title">Table 26. Cluster infrastructure CRs</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3078,7 +4918,7 @@ No patched CRs</code></pre>
 <p>Use the following custom resources (CRs) to configure resource tuning for the telco core profile.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 26. Resource tuning CRs</caption>
+<caption class="title">Table 27. Resource tuning CRs</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3109,7 +4949,7 @@ No patched CRs</code></pre>
 <p>Use the following custom resources (CRs) to configure networking components for the telco core profile.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 27. Networking CRs</caption>
+<caption class="title">Table 28. Networking CRs</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3266,7 +5106,7 @@ No patched CRs</code></pre>
 <p>Use the following custom resources (CRs) to configure scheduling for the telco core profile.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 28. Scheduling CRs</caption>
+<caption class="title">Table 29. Scheduling CRs</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3327,7 +5167,7 @@ No patched CRs</code></pre>
 <p>Use the following custom resources (CRs) to configure storage for the telco core profile.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 29. Storage CRs</caption>
+<caption class="title">Table 30. Storage CRs</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3382,7 +5222,7 @@ No patched CRs</code></pre>
 <p>Use the following custom resources (CRs) to configure security components for the telco core profile.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 30. Security CRs</caption>
+<caption class="title">Table 31. Security CRs</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -3453,7 +5293,7 @@ No patched CRs</code></pre>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="deploy-clusters-across-data-centers-con_deploy-clusters-across-data-centers.html">Deploy clusters across data centers</a> | ↑ Up: <a href="_plan.html">Plan</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="telco-hub-architecture-overview_plan-telco-hub-cluster-deployment.html">Hub cluster architecture overview</a> →</p>
+<p>← Previous: <a href="deploy-clusters-across-data-centers-con_deploy-clusters-across-data-centers.html">Deploy clusters across data centers</a> | ↑ Up: <a href="_plan.html">Plan</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="plan-telco-hub-cluster-deployment-intro_plan-telco-hub-cluster-deployment.html">Plan telco hub cluster deployment</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -3464,7 +5304,7 @@ No patched CRs</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-22 13:31:11 +0100
+Last updated 2026-10-22 17:55:50 +0100
 </div>
 </div>
 <style>

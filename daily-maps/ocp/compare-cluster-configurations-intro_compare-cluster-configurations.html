@@ -477,47 +477,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
-<body id="telco-ref-design-overview_plan-telco-ran-distributed-unit-deployment" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/ocp-jobs/configure-multi-tenant-namespace-isolation.adoc:20
-    include::modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc
-  maps/ocp/ocp-jobs/scale-components-based-on-cluster-size.adoc:34
-    include::modules/network-observability-flowcollector-api-specifications.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/modules/network-observability-flowcollector-api-specifications.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
+<body id="compare-cluster-configurations-intro_compare-cluster-configurations" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -581,6 +542,7 @@ How to fix these errors:
 </ul>
 </li>
 <li><a href="_plan.html">Plan</a>
+
 <ul class="sectlevel2">
 <li><a href="size-control-plane-infrastructure-con_size-control-plane-infrastructure.html">Size control plane infrastructure</a>
 </li>
@@ -592,9 +554,9 @@ How to fix these errors:
 </li>
 <li><a href="plan-telco-core-network-deployment-con_plan-telco-core-network-deployment.html">Plan telco core network deployment</a>
 </li>
-<li><a href="telco-hub-architecture-overview_plan-telco-hub-cluster-deployment.html">Hub cluster architecture overview</a>
+<li><a href="plan-telco-hub-cluster-deployment-intro_plan-telco-hub-cluster-deployment.html">Plan telco hub cluster deployment</a>
 </li>
-<li><a href="telco-ref-design-overview_plan-telco-ran-distributed-unit-deployment.html"><span class="toc-current">Reference design specifications for telco RAN DU 5G deployments</span></a>
+<li><a href="plan-telco-ran-distributed-unit-deployment-intro_plan-telco-ran-distributed-unit-deployment.html">Plan telco RAN distributed unit deployment</a>
 </li>
 <li><a href="choose-an-installation-method-con_choose-an-installation-method.html">Choose an installation method</a>
 </li>
@@ -618,6 +580,8 @@ How to fix these errors:
 </li>
 <li><a href="storage-ephemeral-storage-types_understand-different-types-of-ephemeral-storage.html">Types of ephemeral storage</a>
 </li>
+<li><a href="understand-hardware-accelerators-intro_understand-hardware-accelerators.html">Understand hardware accelerators</a>
+</li>
 </ul>
 </li>
 <li><a href="_deploy.html">Deploy</a>
@@ -627,7 +591,7 @@ How to fix these errors:
 </li>
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
-<li><a href="about-ztp_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
+<li><a href="automate-edge-cluster-deployment-with-gitops-ztp-intro_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
 </li>
 </ul>
 </li>
@@ -677,6 +641,22 @@ How to fix these errors:
 <li><a href="rhcos-validate-live-media_validate-boot-artifacts.html">Validating RHCOS live media</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
+</li>
+<li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-deploy-azure-con_deploying-hosted-control-planes-on-azure.html">Deploying hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-bm-overview_deploying-hosted-control-planes-on-bare-metal-with-the-agent-platform.html">About hosted control planes on bare metal with the Agent platform</a>
+</li>
+<li><a href="deploying-hosted-control-planes-on-openshift-virtualization-intro_deploying-hosted-control-planes-on-openshift-virtualization.html">Deploying hosted control planes on OpenShift Virtualization</a>
+</li>
+<li><a href="deploying-hosted-control-planes-on-non-bare-metal-agent-machines-intro_deploying-hosted-control-planes-on-non-bare-metal-agent-machines.html">Deploying hosted control planes on non-bare-metal agent machines</a>
+</li>
+<li><a href="install-sno-with-image-based-installation-intro_install-sno-with-image-based-installation.html">Install single-node OpenShift with image-based installation</a>
+</li>
+<li><a href="install-virtualized-control-plane-cluster-intro_install-virtualized-control-plane-cluster.html">Install a virtualized control plane cluster</a>
+</li>
+<li><a href="install-topology-aware-lifecycle-manager-intro_install-topology-aware-lifecycle-manager.html">Install the Topology Aware Lifecycle Manager</a>
 </li>
 </ul>
 </li>
@@ -749,6 +729,12 @@ How to fix these errors:
 <li><a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a>
 </li>
 <li><a href="gathering-data-cluster-update_gather-data-about-a-cluster-update.html">Gathering data about your cluster update</a>
+</li>
+<li><a href="upgrade-sno-with-image-based-upgrade-intro_upgrade-sno-with-image-based-upgrade.html">Upgrade single-node OpenShift with image-based upgrade</a>
+</li>
+<li><a href="upgrade-managed-clusters-with-talm-intro_upgrade-managed-clusters-with-talm.html">Upgrade managed clusters with the Topology Aware Lifecycle Manager</a>
+</li>
+<li><a href="update-telco-cnf-clusters-intro_update-telco-cnf-clusters.html">Update telco CNF clusters</a>
 </li>
 </ul>
 </li>
@@ -895,7 +881,7 @@ How to fix these errors:
 </li>
 <li><a href="images-configuration-mco-and-registry-changes_understand-mco-rollout-behavior.html">Machine Config Operator behavior and registry changes</a>
 </li>
-<li><a href="cnf-about-topology-aware-lifecycle-manager-config_configure-topology-aware-lifecycle-manager.html">About the Topology Aware Lifecycle Manager configuration</a>
+<li><a href="configure-topology-aware-lifecycle-manager-intro_configure-topology-aware-lifecycle-manager.html">Configure the Topology Aware Lifecycle Manager</a>
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
@@ -923,6 +909,8 @@ How to fix these errors:
 </li>
 <li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernate a cluster</a>
 </li>
+<li><a href="add-worker-nodes-to-sno-clusters-intro_add-worker-nodes-to-sno-clusters.html">Add worker nodes to single-node OpenShift clusters</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -947,6 +935,8 @@ How to fix these errors:
 <li><a href="developing-containerized-applications_review-platform-extensibility-and-development-workflows.html">Containerized application development</a>
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
+</li>
+<li><a href="consume-ptp-fast-event-notifications-intro_consume-ptp-fast-event-notifications.html">Consume PTP fast event notifications</a>
 </li>
 </ul>
 </li>
@@ -1159,6 +1149,10 @@ How to fix these errors:
 </li>
 <li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
 </li>
+<li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
+</li>
+<li><a href="configure-rdma-for-gpu-workloads-intro_configure-rdma-for-gpu-workloads.html">Configure RDMA for GPU workloads</a>
+</li>
 </ul>
 </li>
 <li><a href="_networking.html">Networking</a>
@@ -1192,6 +1186,8 @@ How to fix these errors:
 </li>
 <li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
+<li><a href="review-namespace-policy-and-verify-admin-policy-deployment-con_review-namespace-policy-and-verify-admin-policy-deployment.html">Review namespace policy and verify admin policy deployment</a>
+</li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
@@ -1219,6 +1215,12 @@ How to fix these errors:
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
+</li>
+<li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
+</li>
+<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1396,6 +1398,8 @@ How to fix these errors:
 </li>
 <li><a href="security-profiles-operator-release-notes_review-security-profiles-operator-release-notes.html">Security Profiles Operator release notes</a>
 </li>
+<li><a href="understand-telco-cluster-security-intro_understand-telco-cluster-security.html">Understand telco cluster security</a>
+</li>
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
@@ -1421,15 +1425,13 @@ How to fix these errors:
 </li>
 <li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
 </li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="view-node-status-and-resource-usage-con_view-node-status-and-resource-usage.html">View node status and resource usage</a>
 </li>
 <li><a href="view-pod-status-and-logs-con_view-pod-status-and-logs.html">View pod status and logs</a>
+</li>
+<li><a href="observe-telco-cluster-health-intro_observe-telco-cluster-health.html">Observe telco cluster health</a>
 </li>
 </ul>
 </li>
@@ -1563,6 +1565,8 @@ How to fix these errors:
 </li>
 <li><a href="manage-large-scale-ai-training-workloads-with-jobset-operator-intro_manage-large-scale-ai-training-workloads-with-jobset-operator.html">Manage large-scale AI training workloads with the JobSet Operator</a>
 </li>
+<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
+</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1647,17 +1651,18 @@ How to fix these errors:
 </ul>
 </li>
 <li><a href="_validate.html">Validate</a>
-
 <ul class="sectlevel2">
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
 </li>
-<li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
+<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
 <li><a href="cnf-measuring-latency_validate-node-performance-with-latency-tests.html">Measuring latency</a>
+</li>
+<li><a href="compare-cluster-configurations-intro_compare-cluster-configurations.html"><span class="toc-current">Compare cluster configurations</span></a>
 </li>
 </ul>
 </li>
@@ -1828,6 +1833,8 @@ How to fix these errors:
 </li>
 <li><a href="storage-troubleshooting-intro_troubleshoot-storage.html">Troubleshooting storage</a>
 </li>
+<li><a href="troubleshoot-telco-cluster-operations-intro_troubleshoot-telco-cluster-operations.html">Troubleshoot telco cluster operations</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1844,1678 +1851,1452 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#_supported_cpu_architectures_for_ran_du">Supported CPU architectures for RAN DU</a></li><li class="level-4"><a href="#telco-ran-engineering-considerations-for-the-ran-du-use-model_plan-telco-ran-distributed-unit-deployment">Engineering considerations for the RAN DU use model</a></li><li class="level-4"><a href="#telco-ran-du-application-workloads_plan-telco-ran-distributed-unit-deployment">Telco RAN DU application workloads</a></li><li class="level-4"><a href="#review-telco-ran-du-reference-design-specification-con_review-telco-ran-du-reference-design-specification">Review the telco RAN DU reference design specification</a></li><li class="level-5"><a href="#telco-ran-core-ref-design-spec_review-telco-ran-du-reference-design-specification">Reference design scope</a></li><li class="level-5"><a href="#telco-deviations-from-the-ref-design_review-telco-ran-du-reference-design-specification">Deviations from the reference design</a></li><li class="level-5"><a href="#ztp-telco-ran-software-versions_review-telco-ran-du-reference-design-specification">Telco RAN DU {product-version} validated software components</a></li><li class="level-4"><a href="#plan-component-configuration-con_plan-component-configuration">Plan telco RAN DU component configuration</a></li><li class="level-5"><a href="#telco-ran-du-reference-design-components_plan-component-configuration">Telco RAN DU reference design components</a></li><li class="level-6"><a href="#telco-ran-bios-tuning_plan-component-configuration">Host firmware tuning</a></li><li class="level-6"><a href="#telco-ran-sysctls_plan-component-configuration">Kubelet settings</a></li><li class="level-6"><a href="#telco-ran-node-tuning-operator_plan-component-configuration">CPU partitioning and performance tuning</a></li><li class="level-6"><a href="#telco-ran-ptp-operator_plan-component-configuration">PTP Operator</a></li><li class="level-6"><a href="#telco-ran-sr-iov-operator_plan-component-configuration">SR-IOV Operator</a></li><li class="level-6"><a href="#telco-ran-logging_plan-component-configuration">Logging</a></li><li class="level-6"><a href="#telco-ran-sriov-fec-operator_plan-component-configuration">SRIOV-FEC Operator</a></li><li class="level-6"><a href="#telco-ran-lca-operator_plan-component-configuration">Lifecycle Agent</a></li><li class="level-6"><a href="#telco-ran-local-storage-operator_plan-component-configuration">Local Storage Operator</a></li><li class="level-6"><a href="#telco-ran-lvms-operator_plan-component-configuration">Logical Volume Manager Storage</a></li><li class="level-6"><a href="#telco-ran-workload-partitioning_plan-component-configuration">Workload partitioning</a></li><li class="level-6"><a href="#telco-ran-cluster-tuning_plan-component-configuration">Cluster tuning</a></li><li class="level-6"><a href="#telco-ran-machine-configuration_plan-component-configuration">Machine configuration</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cc-understand-intro_cc-understand">Understand the cluster-compare plugin</a></li><li class="level-5"><a href="#cluster-compare-overview_cc-understand">Overview of the cluster-compare plugin</a></li><li class="level-5"><a href="#understanding-a-reference-config_cc-understand">Understanding a reference configuration</a></li><li class="level-4"><a href="#cc-install-intro_cc-install">Install the cluster-compare plugin</a></li><li class="level-5"><a href="#installing-cluster-compare_cc-install">Installing the cluster-compare plugin</a></li><li class="level-4"><a href="#cc-use-intro_cc-use">Use the cluster-compare plugin</a></li><li class="level-5"><a href="#using-cluster-compare-live-cluster_cc-use">Using the cluster-compare plugin with a live cluster</a></li><li class="level-5"><a href="#using-cluster-compare-must-gather_cc-use">Using the cluster-compare plugin with must-gather data</a></li><li class="level-5"><a href="#cluster-compare-reference-args_cc-use">Reference cluster-compare plugin options</a></li><li class="level-5"><a href="#using-cluster-compare-telco_ref_cc-use">Example: Comparing a cluster with the telco core reference configuration</a></li><li class="level-4"><a href="#cc-create-reference-intro_cc-create-reference">Create a reference configuration</a></li><li class="level-5"><a href="#cluster-compare-metadata-structure_cc-create-reference">Structure of the metadata.yaml file</a></li><li class="level-5"><a href="#cluster-compare-template-groupings_cc-create-reference">Configuring template relationships</a></li><li class="level-5"><a href="#cluster-compare-templating_cc-create-reference">Configuring expected variation in a template</a></li><li class="level-6"><a href="#cluster-compare-templating-reference_cc-create-reference">Reference template functions</a></li><li class="level-5"><a href="#cluster-compare-exclude-metadata_cc-create-reference">Configuring the metadata.yaml file to exclude template fields</a></li><li class="level-6"><a href="#cluster-compare-ignore-all-fields_cc-create-reference">Excluding all fields not specified in a template</a></li><li class="level-6"><a href="#cluster-compare-ignore-default-fields_cc-create-reference">Excluding specific fields by setting default exclusion fields</a></li><li class="level-6"><a href="#cluster-compare-ignore-specified-fields_cc-create-reference">Excluding specific fields</a></li><li class="level-6"><a href="#cluster-compare-ignore-default-groups_cc-create-reference">Excluding specific fields by setting default exclusion groups</a></li><li class="level-5"><a href="#cluster-compare-configure-inline-diff_cc-create-reference">Configuring inline validation for template fields</a></li><li class="level-6"><a href="#cluster-compare-configure-regex_cc-create-reference">Configuring inline validation with the regex function</a></li><li class="level-6"><a href="#cluster-compare-configure-capturegroups_cc-create-reference">Configuring inline validation with the capturegroups function</a></li><li class="level-5"><a href="#cluster-compare-output-description_cc-create-reference">Configuring descriptions for the output</a></li><li class="level-4"><a href="#cc-customize-advanced-intro_cc-customize-advanced">Customize reference configurations</a></li><li class="level-5"><a href="#cluster-compare-manual-match_cc-customize-advanced">Configuring manual matching between CRs and templates</a></li><li class="level-5"><a href="#cluster-compare-patching_cc-customize-advanced">Patching a reference configuration</a></li><li class="level-6"><a href="#_using_the_cluster_compare_plugin_to_generate_a_patch">Using the cluster-compare plugin to generate a patch</a></li><li class="level-6"><a href="#_creating_a_patch_file_manually">Creating a patch file manually</a></li><li class="level-4"><a href="#cc-troubleshoot-intro_cc-troubleshoot">Troubleshoot cluster comparisons</a></li><li class="level-5"><a href="#troubleshooting-cc-false-positives_cc-troubleshoot">Troubleshooting false positives for missing resources</a></li><li class="level-5"><a href="#troubleshooting-cc-multiple-matches_cc-troubleshoot">Troubleshooting multiple template matches for the same CR</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="telco-ref-design-overview_plan-telco-ran-distributed-unit-deployment">Reference design specifications for telco RAN DU 5G deployments</h3>
+<h3 id="compare-cluster-configurations-intro_compare-cluster-configurations">Compare cluster configurations</h3>
 <div class="paragraph _abstract">
-<p>Red Hat and certified partners offer deep technical expertise and support for networking and operational capabilities required to run telco applications on Red&#160;Hat OpenShift Container Platform {product-version} clusters.</p>
+<p>Use the <code>cluster-compare</code> plugin to validate that your cluster configuration matches a reference baseline, including installing the plugin, running comparisons, and creating custom reference configurations.</p>
+</div>
+<div class="sect3">
+<h4 id="cc-understand-intro_cc-understand">Understand the cluster-compare plugin</h4>
+<div class="paragraph _abstract">
+<p>Learn how the <code>cluster-compare</code> plugin works and what a reference configuration contains.</p>
+</div>
+<div class="sect4">
+<h5 id="cluster-compare-overview_cc-understand">Overview of the cluster-compare plugin</h5>
+<div class="paragraph _abstract">
+<p>Clusters deployed at scale typically use a validated set of baseline custom resources (CRs) to configure clusters to meet use-case requirements and ensure consistency when deploying across different environments.</p>
 </div>
 <div class="paragraph">
-<p>Red Hat&#8217;s telco partners require a well-integrated, well-tested, and stable environment that can be replicated at scale for enterprise 5G solutions.
-The telco core and RAN DU reference design specifications (RDS) outline the recommended solution architecture based on a specific version of Red&#160;Hat OpenShift Container Platform.
-Each RDS describes a tested and validated platform configuration for telco core and RAN DU use models.
-The RDS ensures an optimal experience when running your applications by defining the set of critical KPIs for telco 5G core and RAN DU.
-Following the RDS minimizes high severity escalations and improves application stability.</p>
+<p>In live clusters, some variation from the validated set of CRs is expected. For example, configurations might differ because of variable substitution, optional components, or hardware-specific fields. This variation makes it difficult to accurately assess if a cluster is compliant with the baseline configuration.</p>
 </div>
 <div class="paragraph">
-<p>5G use cases are evolving and your workloads are continually changing.
-Red Hat is committed to iterating over the telco core and RAN DU RDS to support evolving requirements based on customer and partner feedback.</p>
+<p>Using the <code>cluster-compare</code> plugin with the <code>oc</code> command, you can compare the configuration from a live cluster with a reference configuration. A reference configuration represents the baseline configuration but uses the various plugin features to suppresses expected variation during a comparison. For example, you can apply validation rules, specify optional and required resources, and define relationships between resources. By reducing irrelevant differences, the plugin makes it easier to assess cluster compliance with baseline configurations, and across environments.</p>
 </div>
 <div class="paragraph">
-<p>The reference configuration includes the configuration of the far edge clusters and hub cluster components.</p>
+<p>The ability to intelligently compare a configuration from a cluster with a reference configuration has the following example use-cases:</p>
 </div>
 <div class="paragraph">
-<p>The reference configurations in this document are deployed using a centrally managed hub cluster infrastructure as shown in the following image.</p>
+<p><strong>Production:</strong> Ensure compliance with a reference configuration across service updates, upgrades and changes to the reference configuration.</p>
+</div>
+<div class="paragraph">
+<p><strong>Development:</strong> Ensure compliance with a reference configuration in test pipelines.</p>
+</div>
+<div class="paragraph">
+<p><strong>Design:</strong> Compare configurations with a partner lab reference configuration to ensure consistency.</p>
+</div>
+<div class="paragraph">
+<p><strong>Support:</strong> Compare the reference configuration to <code>must-gather</code> data from a live cluster to troubleshoot configuration issues.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="data:image/png;base64," alt="A diagram showing two distinctive network far edge deployment processes" width="one showing how the hub cluster uses GitOps ZTP to install managed clusters" height="and the other showing how the hub cluster uses TALM to apply policies to managed clusters">
+<img src="data:image/png;base64," alt="Cluster-compare plugin overview">
 </div>
-<div class="title">Figure 15. Telco RAN DU deployment architecture</div>
+<div class="title">Figure 130. Cluster-compare plugin overview</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="understanding-a-reference-config_cc-understand">Understanding a reference configuration</h5>
+<div class="paragraph _abstract">
+<p>The <code>cluster-compare</code> plugin uses a reference configuration to validate a configuration from a live cluster.
+The reference configuration consists of a YAML file called <code>metadata.yaml</code>, which references a set of templates that represent the baseline configuration.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example directory structure for a reference configuration</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">├── metadata.yaml
+├── optional
+│   ├── optionalTemplate1.yaml
+│   └── optionalTemplate2.yaml
+├── required
+│   ├── requiredTemplate3.yaml
+│   └── requiredTemplate4.yaml
+└── baselineClusterResources
+    ├── clusterResource1.yaml
+    ├── clusterResource2.yaml
+    ├── clusterResource3.yaml
+    └── clusterResource4.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>metadata.yaml</code></dt>
+<dd>
+<p>The reference configuration consists of the <code>metadata.yaml</code> file and a set of templates.</p>
+</dd>
+<dt class="hdlist1"><code>optional</code></dt>
+<dd>
+<p>This example uses an optional and required directory structure for templates that are referenced by the <code>metadata.yaml</code> file.</p>
+</dd>
+<dt class="hdlist1"><code>baselineClusterResources</code></dt>
+<dd>
+<p>The configuration CRs to use as a baseline configuration for clusters.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>During a comparison, the plugin matches each template to a configuration resource from the cluster.
+The plugin evaluates optional or required fields in the template using features such as Golang templating syntax and inline regular expression validation. The <code>metadata.yaml</code> file applies additional validation rules to decide whether a template is optional or required and assesses template dependency relationships.</p>
+</div>
+<div class="paragraph">
+<p>Using these features, the plugin identifies relevant configuration differences between the cluster and the reference configuration. For example, the plugin can highlight mismatched field values, missing resources, extra resources, field type mismatches, or version discrepancies.</p>
+</div>
+<div class="paragraph">
+<p>For further information about configuring a reference configuration, see "Creating a reference configuration".</p>
+</div>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_supported_cpu_architectures_for_ran_du">Supported CPU architectures for RAN DU</h4>
+<h4 id="cc-install-intro_cc-install">Install the cluster-compare plugin</h4>
+<div class="paragraph _abstract">
+<p>Install the <code>cluster-compare</code> plugin so that you can compare your cluster configuration against a reference baseline.</p>
+</div>
+<div class="sect4">
+<h5 id="installing-cluster-compare_cc-install">Installing the cluster-compare plugin</h5>
+<div class="paragraph _abstract">
+<p>Install the <code>cluster-compare</code> plugin to compare a reference configuration with a cluster configuration from a live cluster or <code>must-gather</code> data.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Prerequisites</div>
+<ol class="arabic">
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>You installed <code>podman</code>.</p>
+</li>
+<li>
+<p>You have access to the Red Hat container catalog.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Log in to the Red Hat container catalog by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman login registry.redhat.io</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a container for the <code>cluster-compare</code> image by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman create --name cca registry.redhat.io/openshift4/kube-compare-artifacts-rhel9:latest</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Copy the <code>cluster-compare</code> plugin to a directory that is included in your <code>PATH</code> environment variable by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman cp cca:/usr/share/openshift/&lt;arch&gt;/kube-compare.&lt;rhel_version&gt; &lt;directory_on_path&gt;/kubectl-cluster_compare</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>arch</code> is the architecture for your machine. Valid values are:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>linux_amd64</code></p>
+</li>
+<li>
+<p><code>linux_arm64</code></p>
+</li>
+<li>
+<p><code>linux_ppc64le</code></p>
+</li>
+<li>
+<p><code>linux_s390x</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>&lt;rhel_version&gt;</code> is the version of RHEL on your machine. Valid values are <code>rhel8</code> or <code>rhel9</code>.</p>
+</li>
+<li>
+<p><code>&lt;directory_on_path&gt;</code> is the path to a directory included in your <code>PATH</code> environment variable.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>View the help for the plugin by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc cluster-compare -h</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following is example output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">Compare a known valid reference configuration and a set of specific cluster configuration CRs.
+
+...
+
+Usage:
+  compare -r &lt;Reference File&gt;
+
+Examples:
+  # Compare a known valid reference configuration with a live cluster:
+  kubectl cluster-compare -r ./reference/metadata.yaml
+
+ ...</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cc-use-intro_cc-use">Use the cluster-compare plugin</h4>
+<div class="paragraph _abstract">
+<p>Compare a live cluster or must-gather archive against a reference configuration and interpret the plugin output.</p>
+</div>
+<div class="sect4">
+<h5 id="using-cluster-compare-live-cluster_cc-use">Using the cluster-compare plugin with a live cluster</h5>
+<div class="paragraph _abstract">
+<p>You can use the <code>cluster-compare</code> plugin to compare a reference configuration with configuration custom resources (CRs) from a live cluster.</p>
+</div>
+<div class="paragraph">
+<p>Validate live cluster configurations to ensure compliance with reference configurations during design, development, or testing scenarios.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Use the <code>cluster-compare</code> plugin with live clusters in non-production environments only. For production environments, use the plugin with <code>must-gather</code> data.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>You downloaded the <code>cluster-compare</code> plugin and include it in your <code>PATH</code> environment variable.</p>
+</li>
+<li>
+<p>You have access to a reference configuration.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Run the <code>cluster-compare</code> plugin by using the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc cluster-compare -r &lt;path_to_reference_config&gt;/metadata.yaml</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>-r</code> specifies a path to the <code>metadata.yaml</code> file of the reference configuration. You can specify a local directory or a URI.</p>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">...
+
+**********************************
+
+Cluster CR: operator.openshift.io/v1_Console_cluster
+Reference File: optional/console-disable/ConsoleOperatorDisable.yaml
+Diff Output: diff -u -N /tmp/MERGED-622469311/operator-openshift-io-v1_console_cluster /tmp/LIVE-2358803347/operator-openshift-io-v1_console_cluster
+/tmp/MERGED-622469311/operator-openshift-io-v1_console_cluster	2024-11-20 15:43:42.888633602 +0000
++++ /tmp/LIVE-2358803347/operator-openshift-io-v1_console_cluster	2024-11-20 15:43:42.888633602 +0000
+@@ -4,5 +4,5 @@
+   name: cluster
+ spec:
+   logLevel: Normal
+-  managementState: Removed
++  managementState: Managed
+   operatorLogLevel: Normal
+
+**********************************
+
+…
+
+Summary
+CRs with diffs: 5/49
+CRs in reference missing from the cluster: 1
+required-cluster-tuning:
+  cluster-tuning:
+    Missing CRs:
+    - required/cluster-tuning/disabling-network-diagnostics/DisableSnoNetworkDiag.yaml
+No CRs are unmatched to reference CRs
+Metadata Hash: 512a9bf2e57fd5a5c44bbdea7abb3ffd7739d4a1f14ef9021f6793d5cdf868f0
+No patched CRs</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>Cluster CR</code></dt>
+<dd>
+<p>The CR under comparison. The plugin displays each CR with a difference from the corresponding template.</p>
+</dd>
+<dt class="hdlist1"><code>Reference File</code></dt>
+<dd>
+<p>The template matching with the CR for comparison.</p>
+</dd>
+<dt class="hdlist1"><code>Diff Output</code></dt>
+<dd>
+<p>The output in Linux diff format shows the difference between the template and the cluster CR.</p>
+</dd>
+<dt class="hdlist1"><code>Summary</code></dt>
+<dd>
+<p>After the plugin reports the line diffs for each CR, the summary of differences are reported.</p>
+</dd>
+<dt class="hdlist1"><code>CRs with diffs</code></dt>
+<dd>
+<p>The number of CRs in the comparison with differences from the corresponding templates.</p>
+</dd>
+<dt class="hdlist1"><code>CRs in reference missing from the cluster</code></dt>
+<dd>
+<p>The number of CRs represented in the reference configuration, but missing from the live cluster.</p>
+</dd>
+<dt class="hdlist1"><code>Missing CRs</code></dt>
+<dd>
+<p>The list of CRs represented in the reference configuration, but missing from the live cluster.</p>
+</dd>
+<dt class="hdlist1"><code>No CRs are unmatched to reference CRs</code></dt>
+<dd>
+<p>The CRs that did not match to a corresponding template in the reference configuration.</p>
+</dd>
+<dt class="hdlist1"><code>Metadata Hash</code></dt>
+<dd>
+<p>The metadata hash identifies the reference configuration.</p>
+</dd>
+<dt class="hdlist1"><code>No patched CRs</code></dt>
+<dd>
+<p>The list of patched CRs.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Get the output in the <code>junit</code> format by adding <code>-o junit</code> to the command. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc cluster-compare -r &lt;path_to_reference_config&gt;/metadata.yaml -o junit</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>junit</code> output includes the following result types:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Passed results for each fully matched template.</p>
+</li>
+<li>
+<p>Failed results for differences found or missing required custom resources (CRs).</p>
+</li>
+<li>
+<p>Skipped results for differences patched using the user override mechanism.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="using-cluster-compare-must-gather_cc-use">Using the cluster-compare plugin with must-gather data</h5>
+<div class="paragraph _abstract">
+<p>You can use the <code>cluster-compare</code> plugin to compare a reference configuration with configuration custom resources (CRs) from <code>must-gather</code> data.</p>
+</div>
+<div class="paragraph">
+<p>Validate cluster configurations by using <code>must-gather</code> data to troubleshoot configuration issues in production environments.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For production environments, use the <code>cluster-compare</code> plugin with <code>must-gather</code> data only.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You have access to <code>must-gather</code> data from a target cluster.</p>
+</li>
+<li>
+<p>You installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>You have downloaded the <code>cluster-compare</code> plugin and included it in your <code>PATH</code> environment variable.</p>
+</li>
+<li>
+<p>You have access to a reference configuration.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Compare the <code>must-gather</code> data to a reference configuration by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc cluster-compare -r &lt;path_to_reference_config&gt;/metadata.yaml -f "must-gather*/*/cluster-scoped-resources","must-gather*/*/namespaces" -R</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>-r</code> specifies a path to the <code>metadata.yaml</code> file of the reference configuration. You can specify a local directory or a URI.</p>
+</li>
+<li>
+<p><code>-f</code> specifies the path to the <code>must-gather</code> data directory. You can specify a local directory or a URI. This example restricts the comparison to the relevant cluster configuration directories.</p>
+</li>
+<li>
+<p><code>-R</code> searches the target directories recursively.</p>
+<div class="paragraph">
+<p>The following is example output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">...
+
+**********************************
+
+Cluster CR: operator.openshift.io/v1_Console_cluster
+Reference File: optional/console-disable/ConsoleOperatorDisable.yaml
+Diff Output: diff -u -N /tmp/MERGED-622469311/operator-openshift-io-v1_console_cluster /tmp/LIVE-2358803347/operator-openshift-io-v1_console_cluster
+/tmp/MERGED-622469311/operator-openshift-io-v1_console_cluster	2024-11-20 15:43:42.888633602 +0000
++++ /tmp/LIVE-2358803347/operator-openshift-io-v1_console_cluster	2024-11-20 15:43:42.888633602 +0000
+@@ -4,5 +4,5 @@
+   name: cluster
+ spec:
+   logLevel: Normal
+-  managementState: Removed
++  managementState: Managed
+   operatorLogLevel: Normal
+
+**********************************
+
+…
+
+Summary
+CRs with diffs: 5/49
+CRs in reference missing from the cluster: 1
+required-cluster-tuning:
+  cluster-tuning:
+    Missing CRs:
+    - required/cluster-tuning/disabling-network-diagnostics/DisableSnoNetworkDiag.yaml
+No CRs are unmatched to reference CRs
+Metadata Hash: 512a9bf2e57fd5a5c44bbdea7abb3ffd7739d4a1f14ef9021f6793d5cdf868f0
+No patched CRs</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>Cluster CR</code></dt>
+<dd>
+<p>The CR under comparison. The plugin displays each CR with a difference from the corresponding template.</p>
+</dd>
+<dt class="hdlist1"><code>Reference File</code></dt>
+<dd>
+<p>The template matching with the CR for comparison.</p>
+</dd>
+<dt class="hdlist1"><code>Diff Output</code></dt>
+<dd>
+<p>The output in Linux diff format shows the difference between the template and the cluster CR.</p>
+</dd>
+<dt class="hdlist1"><code>Summary</code></dt>
+<dd>
+<p>After the plugin reports the line diffs for each CR, the summary of differences are reported.</p>
+</dd>
+<dt class="hdlist1"><code>CRs with diffs</code></dt>
+<dd>
+<p>The number of CRs in the comparison with differences from the corresponding templates.</p>
+</dd>
+<dt class="hdlist1"><code>CRs in reference missing from the cluster</code></dt>
+<dd>
+<p>The number of CRs represented in the reference configuration, but missing from the live cluster.</p>
+</dd>
+<dt class="hdlist1"><code>Missing CRs</code></dt>
+<dd>
+<p>The list of CRs represented in the reference configuration, but missing from the live cluster.</p>
+</dd>
+<dt class="hdlist1"><code>No CRs are unmatched to reference CRs</code></dt>
+<dd>
+<p>The CRs that did not match to a corresponding template in the reference configuration.</p>
+</dd>
+<dt class="hdlist1"><code>Metadata Hash</code></dt>
+<dd>
+<p>The metadata hash identifies the reference configuration.</p>
+</dd>
+<dt class="hdlist1"><code>No patched CRs</code></dt>
+<dd>
+<p>The list of patched CRs.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Get the output in the <code>junit</code> format by adding <code>-o junit</code> to the command. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc cluster-compare -r &lt;path_to_reference_config&gt;/metadata.yaml -f "must-gather*/*/cluster-scoped-resources","must-gather*/*/namespaces" -R -o junit</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>junit</code> output includes the following result types:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Passed results for each fully matched template.</p>
+</li>
+<li>
+<p>Failed results for differences found or missing required custom resources (CRs).</p>
+</li>
+<li>
+<p>Skipped results for differences patched using the user override mechanism.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="cluster-compare-reference-args_cc-use">Reference cluster-compare plugin options</h5>
+<div class="paragraph _abstract">
+<p>The following content describes the options for the <code>cluster-compare</code> plugin.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 32. Supported CPU architectures for RAN DU</caption>
+<caption class="title">Table 1101. Cluster-compare plugin options</caption>
 <colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 33.3333%;">
-<col style="width: 50.0001%;">
+<col style="width: 40%;">
+<col style="width: 60%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Architecture</th>
-<th class="tableblock halign-left valign-top">Real-time kernel</th>
-<th class="tableblock halign-left valign-top">Non-real-time kernel</th>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x86_64</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>-A</code>, <code>--all-resources</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>When used with a live cluster, attempts to match all resources in the cluster that match a type in the reference configuration. When used with local files, attempts to match all resources in the local files that match a type in the reference configuration.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">aarch64</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>--concurrency</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Specify an integer value for the number of templates to process in parallel when comparing with resources from the live version. A larger number increases speed but also memory, I/O, and CPU usage during that period. The default value is <code>4</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>-c</code>, <code>--diff-config</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Specify the path to the user configuration file.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>-f</code>, <code>--filename</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Specify a filename, directory, or URL for the configuration custom resources that you want to use for a comparison with a reference configuration.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>--generate-override-for</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Specify the path for templates that requires a patch.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>--show-template-functions</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Displays the available template functions.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You must use a file path for the target template that is relative to the <code>metadata.yaml</code> file. For example, if the file path for the <code>metadata.yaml</code> file is <code>./compare/metadata.yaml</code>, a relative file path for the template might be <code>optional/my-template.yaml</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>-h</code>, <code>--help</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Display help information.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>-k</code>, <code>--kustomize</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Specify a path to process the <code>kustomization</code> directory. This flag cannot be used together with <code>-f</code> or <code>-R</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>-o</code>, <code>--output</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Specify the output format. Options include <code>json</code>, <code>yaml</code>, <code>junit</code>, or <code>generate-patches</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>--override-reason</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Specify a reason for generating the override.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>-p</code>, <code>--overrides</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Specify a path to a patch override file for the reference configuration.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>-R</code>, <code>--recursive</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Processes the directory specified in <code>-f</code>, <code>--filename</code> recursively.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>-r</code>, <code>--reference</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Specify the path to the reference configuration <code>metadata.yaml</code> file.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>--show-managed-fields</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Specify <code>true</code> to include managed fields in the comparison.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>-v</code>, <code>--verbose</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Increases the verbosity of the plugin output.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>+
-* For <code>aarch64</code> architecture CPUs, the non-real-time configuration uses the standard kernel with a 64k page size.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="telco-ran-engineering-considerations-for-the-ran-du-use-model_plan-telco-ran-distributed-unit-deployment">Engineering considerations for the RAN DU use model</h4>
+<div class="sect4">
+<h5 id="using-cluster-compare-telco_ref_cc-use">Example: Comparing a cluster with the telco core reference configuration</h5>
 <div class="paragraph _abstract">
-<p>The RAN DU use model configures an Red&#160;Hat OpenShift Container Platform cluster running on commodity hardware for hosting RAN distributed unit (DU) workloads.</p>
+<p>You can use the <code>cluster-compare</code> plugin to compare a reference configuration with a configuration from a live cluster or <code>must-gather</code> data.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
 <div class="paragraph">
-<p>For details of the telco RAN DU RDS KPI test results, see the <a href="https://access.redhat.com/articles/7143490">telco RAN DU {product-version} reference design specification KPI test results</a>.
-This information is only available to customers and partners.</p>
+<p>This example compares a configuration from a live cluster with the telco core reference configuration. The telco core reference configuration is derived from the telco core reference design specifications (RDS). The telco core RDS is designed for clusters to support large scale telco applications including control plane and some centralized data plane functions.</p>
 </div>
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The reference configuration is packaged in a container image with the telco core RDS.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Cluster topology</dt>
-<dd>
-<div class="openblock">
+<div class="paragraph">
+<p>For further examples of using the <code>cluster-compare</code> plugin with the telco core and telco RAN distributed unit (DU) profiles, see the "Additional resources" section.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>You have credentials to access the <code>registry.redhat.io</code> container image registry.</p>
+</li>
+<li>
+<p>You installed the <code>cluster-compare</code> plugin.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Log on to the container image registry with your credentials by running the following command:</p>
+<div class="listingblock">
 <div class="content">
-<div class="paragraph">
-<p>The recommended topology for RAN DU workloads is single-node OpenShift.
-DU workloads may be run on other cluster topologies such as 3-node compact cluster, high availability (3 control plane + n worker nodes), or SNO+1 as needed.
-Multiple SNO clusters, or a highly-available 3-node compact cluster, are recommended over the SNO+1 topology.</p>
-</div>
-<div class="paragraph">
-<p>Under the standard cluster topology case (3+n), a mixed architecture cluster is allowed only if:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>All control plane nodes are x86_64.</p>
-</li>
-<li>
-<p>All worker nodes are aarch64.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Remote worker node (RWN) cluster topologies are not recommended or included under this reference design specification.
-For workloads with high service level agreement requirements such as RAN DU the following drawbacks exclude RWN from consideration:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>No support for Image Based Upgrades and the benefits offered by that feature, such as faster upgrades and rollback capability.</p>
-</li>
-<li>
-<p>Updates to Day 2 operators affect all RWNs simultaneously without the ability to perform a rolling update.</p>
-</li>
-<li>
-<p>Loss of the control plane (disaster scenario) would have a significantly higher impact on overall service availability due to the greater number of sites served by that control plane.</p>
-</li>
-<li>
-<p>Loss of network connectivity between the RWN and the control plane for a period exceeding the monitoring grace period and toleration timeouts might result in pod eviction and lead to a service outage.</p>
-</li>
-<li>
-<p>No support for container image pre-caching.</p>
-</li>
-<li>
-<p>Additional complexities in workload affinities.</p>
-</li>
-</ul>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman login registry.redhat.io</code></pre>
 </div>
 </div>
-</div>
-</dd>
-<dt class="hdlist1">Supported cluster topologies for RAN DU</dt>
-<dd>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 33. Supported cluster topologies for RAN DU</caption>
-<colgroup>
-<col style="width: 4.7619%;">
-<col style="width: 9.5238%;">
-<col style="width: 14.2857%;">
-<col style="width: 19.0476%;">
-<col style="width: 23.8095%;">
-<col style="width: 28.5715%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Architecture</th>
-<th class="tableblock halign-left valign-top">SNO</th>
-<th class="tableblock halign-left valign-top">SNO+1</th>
-<th class="tableblock halign-left valign-top">3-node</th>
-<th class="tableblock halign-left valign-top">Standard</th>
-<th class="tableblock halign-left valign-top">RWN</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x86_64</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">aarch64</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mixed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-</tr>
-</tbody>
-</table>
-<div class="ulist">
-<ul>
-<li>
-<p>The standard mixed-architecture topology uses <code>x86_64</code> control plane nodes and <code>AArch64</code> worker nodes.</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Workloads</dt>
-<dd>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>DU workloads are described in <a href="../scalability_and_performance/telco-ran-du-rds.html#telco-ran-du-application-workloads_telco-ran-du">Telco RAN DU application workloads</a>.</p>
 </li>
 <li>
-<p>DU worker nodes are Intel 3rd Generation Xeon (Ice Lake) 2.20 GHz or newer with host firmware tuned for maximum performance.</p>
-</li>
-</ol>
-</div>
-</dd>
-<dt class="hdlist1">Resources</dt>
-<dd>
-<p>The maximum number of running pods in the system, inclusive of application workload and Red&#160;Hat OpenShift Container Platform pods, is 160.</p>
-</dd>
-<dt class="hdlist1">Resource utilization</dt>
-<dd>
-<div class="openblock">
+<p>Extract the content from the <code>telco-core-rds-rhel9</code> container image by running the following commands:</p>
+<div class="listingblock">
 <div class="content">
-<div class="paragraph">
-<p>Red&#160;Hat OpenShift Container Platform resource utilization varies depending on many factors such as the following application workload characteristics:</p>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ mkdir -p ./out</code></pre>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Pod count</p>
-</li>
-<li>
-<p>Type and frequency of probes</p>
-</li>
-<li>
-<p>Messaging rates on the primary or secondary CNI with kernel networking</p>
-</li>
-<li>
-<p>API access rate</p>
-</li>
-<li>
-<p>Logging rates</p>
-</li>
-<li>
-<p>Storage IOPS</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Resource utilization is measured for clusters configured as follows:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>The cluster is a single host with single-node OpenShift installed.</p>
-</li>
-<li>
-<p>The cluster runs the representative application workload described in "Reference application workload characteristics".</p>
-</li>
-<li>
-<p>The cluster is managed under the constraints detailed in "Hub cluster management characteristics".</p>
-</li>
-<li>
-<p>Components noted as "optional" in the use model configuration are not included.</p>
-</li>
-</ol>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Configuration outside the scope of the RAN DU RDS that do not meet these criteria requires additional analysis to determine the impact on resource utilization and ability to meet KPI targets.
-You might need to allocate additional cluster resources to meet these requirements.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">Reference application workload characteristics</dt>
-<dd>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Uses 75 pods across 5 namespaces with 4 containers per pod for the vRAN application including its management and control functions</p>
-</li>
-<li>
-<p>Creates 30 <code>ConfigMap</code> CRs and 30 <code>Secret</code> CRs for each namespace</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The RDS validates mutable <code>ConfigMap</code> CRs. However, use immutable <code>ConfigMap</code> CRs where possible. Immutable resources significantly reduce the load on the API server by eliminating resource watches. A high volume of <code>ConfigMap</code> CRs, up to the validated 30 for vDU, might increase node recovery time during reboots, as volume mount points are recreated. The maximum size for each <code>ConfigMap</code> CR is limited to 1 MB.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Uses no exec probes</p>
-</li>
-<li>
-<p>Uses a secondary network</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You can extract CPU load can from the platform metrics.
-For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ query=avg_over_time(pod:container_cpu_usage:sum{namespace="openshift-kube-apiserver"}[30m])</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman run -it registry.redhat.io/openshift4/openshift-telco-core-rds-rhel9:v4.18 | base64 -d | tar xv -C out</code></pre>
 </div>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Application logs are not collected by the platform log collector.</p>
-</li>
-<li>
-<p>Aggregate traffic on the primary CNI is up to 30 Mbps and up to 5 Gbps on the secondary network</p>
-</li>
-</ol>
-</div>
-</dd>
-<dt class="hdlist1">Hub cluster management characteristics</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>RHACM  is the recommended cluster management solution and is configured to these limits:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Use a maximum of 10 RHACM configuration policies, comprising 5 Red&#160;Hat provided policies and up to 5 custom configuration policies with a compliant evaluation interval of not less than 10 minutes.</p>
-</li>
-<li>
-<p>Use a minimal number (up to 10) of managed cluster templates in cluster policies.
-Use hub-side templating.</p>
-</li>
-<li>
-<p>Disable RHACM addons with the exception of the <code>policyController</code> and configure observability with the default configuration.</p>
-</li>
-</ol>
 </div>
 <div class="paragraph">
-<p>The following table describes resource utilization under reference application load.</p>
-</div>
-<table class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 34. Resource utilization under reference application load</caption>
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 33.3333%;">
-<col style="width: 50.0001%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Metric</th>
-<th class="tableblock halign-left valign-top">Limits</th>
-<th class="tableblock halign-left valign-top">Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OpenShift platform CPU usage</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Less than 4000mc – 2 cores (4HT)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Platform CPU is pinned to reserved cores, including both hyper-threads of each reserved core.
-The system is engineered to 3 CPUs (3000mc) at steady-state to allow for periodic system tasks and spikes.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OpenShift Platform memory</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Less than 16G</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">Disconnected environment</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>RAN DU clusters are typically deployed in disconnected environments without direct access to the internet.
-All container images needed to install, configure, and operate the cluster must be available in a disconnected registry.</p>
-</div>
-<div class="paragraph">
-<p>In Red&#160;Hat OpenShift Container Platform {product-version} and later, pulling OpenShift images from a disconnected mirror registry requires copying the image signatures into that registry during the mirroring process.
-The <code>oc adm mirror</code> command does not mirror signatures and must not be used.
-Instead, use the <code>oc mirror</code> plugin v2 to ensure signatures are properly mirrored.</p>
-</div>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect3">
-<h4 id="telco-ran-du-application-workloads_plan-telco-ran-distributed-unit-deployment">Telco RAN DU application workloads</h4>
-<div class="paragraph _abstract">
-<p>Develop RAN DU applications that are subject to the following requirements and limitations.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Description and limits</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Develop cloud-native network functions (CNFs) that conform to the latest version of <a href="https://redhat-best-practices-for-k8s.github.io/guide/">Red Hat best practices for Kubernetes</a>.</p>
-</li>
-<li>
-<p>Use SR-IOV for high performance networking.</p>
-</li>
-<li>
-<p>For information on the decrease in the default maximum open files soft limit for containers, see the Red&#160;Hat OpenShift Container Platform 4.21 release notes.</p>
-</li>
-<li>
-<p>Use exec probes sparingly and only when no other suitable options are available.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Do not use exec probes if a CNF uses CPU pinning.
-Use other probe implementations, for example, <code>httpGet</code> or <code>tcpSocket</code>.</p>
-</li>
-<li>
-<p>When you need to use exec probes, limit the exec probe frequency and quantity.
-The maximum number of exec probes must be kept below 10, and frequency must not be set to less than 10 seconds.
-Exec probes cause much higher CPU usage on management cores compared to other probe types because they require process forking.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Startup probes require minimal resources during steady-state operation.
-The limitation on exec probes applies primarily to liveness and readiness probes.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>A test workload that conforms to the dimensions of the reference DU application workload described in this specification can be found at <a href="https://github.com/openshift-kni/du-test-workloads/tree/v1.0">openshift-kni/du-test-workloads</a>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect3">
-<h4 id="review-telco-ran-du-reference-design-specification-con_review-telco-ran-du-reference-design-specification">Review the telco RAN DU reference design specification</h4>
-<div class="paragraph _abstract">
-<p>The telco RAN distributed unit (DU) reference design specification (RDS) defines the validated scope and software versions for RAN DU clusters. Review it, and the rules for deviating from it, before you plan your deployment.</p>
-</div>
-<div class="sect4">
-<h5 id="telco-ran-core-ref-design-spec_review-telco-ran-du-reference-design-specification">Reference design scope</h5>
-<div class="paragraph _abstract">
-<p>The telco core, telco RAN and telco hub reference design specifications (RDS) capture the recommended, tested, and supported configurations to get reliable and repeatable performance for clusters running the telco core and telco RAN profiles.</p>
-</div>
-<div class="paragraph">
-<p>Each RDS includes the released features and supported configurations that are engineered and validated for clusters to run the individual profiles.
-The configurations provide a baseline Red&#160;Hat OpenShift Container Platform installation that meets feature and KPI targets.
-Each RDS also describes expected variations for each individual configuration.
-Validation of each RDS includes many long duration and at-scale tests.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The validated reference configurations are updated for each major Y-stream release of Red&#160;Hat OpenShift Container Platform.
-Z-stream patch releases are periodically re-tested against the reference configurations.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="telco-deviations-from-the-ref-design_review-telco-ran-du-reference-design-specification">Deviations from the reference design</h5>
-<div class="paragraph _abstract">
-<p>Deviating from the validated telco core, telco RAN DU, and telco hub reference design specifications (RDS) can have significant impact beyond the specific component or feature that you change.
-Deviations require analysis and engineering in the context of the complete solution.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>All deviations from the RDS should be analyzed and documented with clear action tracking information.
-Due diligence is expected from partners to understand how to bring deviations into line with the reference design.
-This might require partners to provide additional resources to engage with Red Hat to work towards enabling their use case to achieve a best in class outcome with the platform.
-This is critical for the supportability of the solution and ensuring alignment across Red Hat and with partners.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Deviation from the RDS can have some or all of the following consequences:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>It can take longer to resolve issues.</p>
-</li>
-<li>
-<p>There is a risk of missing project service-level agreements (SLAs), project deadlines, end provider performance requirements, and so on.</p>
-</li>
-<li>
-<p>Unapproved deviations may require escalation at executive levels.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Red Hat prioritizes the servicing of requests for deviations based on partner engagement priorities.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="ztp-telco-ran-software-versions_review-telco-ran-du-reference-design-specification">Telco RAN DU {product-version} validated software components</h5>
-<div class="paragraph _abstract">
-<p>The Red Hat telco RAN DU {product-version} solution has been validated using the following Red Hat software products for Red&#160;Hat OpenShift Container Platform managed clusters.</p>
-</div>
-<table class="tableblock frame-all grid-all" style="width: 80%;">
-<caption class="title">Table 35. Telco RAN DU managed cluster validated software components</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Component</th>
-<th class="tableblock halign-left valign-top">Software version</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat OpenShift Container Platform</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster Logging Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6.5</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Local Storage Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OpenShift API for Data Protection (OADP)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.6</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PTP Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SR-IOV Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SRIOV-FEC Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2.12</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Lifecycle Agent Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
-</tr>
-</tbody>
-</table>
-<div class="ulist">
-<ul>
-<li>
-<p>Cluster Logging Operator will be updated to 6.6 when the aligned Cluster Logging Operator version is released.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="plan-component-configuration-con_plan-component-configuration">Plan telco RAN DU component configuration</h4>
-<div class="paragraph _abstract">
-<p>The telco RAN DU reference design configures BIOS, kernel tuning, timing, networking, logging, storage, and workload partitioning as a coordinated set. Review each reference subsection so that your cluster configuration stays within the validated design.</p>
-</div>
-<div class="sect4">
-<h5 id="telco-ran-du-reference-design-components_plan-component-configuration">Telco RAN DU reference design components</h5>
-<div class="paragraph _abstract">
-<p>The following sections describe the various Red&#160;Hat OpenShift Container Platform components and configurations that you use to configure and deploy clusters to run RAN DU workloads.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="data:image/png;base64," alt="Diagram showing telco RAN DU RDS components">
-</div>
-<div class="title">Figure 16. Telco RAN DU reference design components</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Ensure that additional components you include that are not specified in the telco RAN DU profile do not affect the CPU resources allocated to workload applications.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Out of tree drivers are not supported.
-5G RAN application components are not included in the RAN DU profile and must be engineered against resources (CPU) allocated to applications.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="sect5">
-<h6 id="telco-ran-bios-tuning_plan-component-configuration">Host firmware tuning</h6>
-<div class="paragraph _abstract">
-<p>Tune host firmware settings for optimal performance during initial cluster deployment.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">New in this release</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>No reference design updates in this release</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<p>Tune host firmware settings for optimal performance during initial cluster deployment.
-For more information, see "Recommended single-node OpenShift cluster configuration for vDU application workloads".
-Apply tuning settings in the host firmware during initial deployment. For more information, see "Managing host firmware settings with GitOps ZTP".
-The managed cluster host firmware settings are available on the hub cluster as individual <code>BareMetalHost</code> custom resources (CRs) that are created when you deploy the managed cluster with the <code>ClusterInstance</code> CR and GitOps ZTP.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Create the <code>ClusterInstance</code> CR based on the provided reference <code>example-sno.yaml</code> CR.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</dd>
-<dt class="hdlist1">Limits and requirements</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>You must enable Hyper-Threading in the host firmware settings</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Engineering considerations</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Tune all firmware settings for maximum performance.</p>
-</li>
-<li>
-<p>All settings are expected to be for maximum performance unless tuned for power savings.</p>
-</li>
-<li>
-<p>You can tune host firmware for power savings at the expense of performance as required.</p>
-</li>
-<li>
-<p>Enable secure boot.
-When secure boot is enabled, only signed kernel modules are loaded by the kernel.
-Out-of-tree drivers are not supported.</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect5">
-<h6 id="telco-ran-sysctls_plan-component-configuration">Kubelet settings</h6>
-<div class="paragraph _abstract">
-<p>Configure kubelet settings and sysctls for the telco RAN DU use model, including <code>systemReserved</code> and unsafe sysctl parameters.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">New in this release</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>No reference design updates in this release</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>Some CNF workloads make use of sysctls which are not in the list of system-wide safe sysctls.
-Generally, network sysctls are namespaced and you can enable them using the <code>kubeletconfig.experimental</code> annotation in the <code>PerformanceProfile</code> Custom Resource (CR).</p>
-</div>
-<div class="paragraph">
-<p>Additionally, the <code>systemReserved</code> memory can be configured through the same <code>kubeletconfig.experimental</code> annotation to reserve memory for system daemons and kernel processes.</p>
-</div>
-<div class="paragraph">
-<p>An example setting of these parameters as a string of JSON is shown here:</p>
+<p>You can view the reference configuration in the <code>reference-crs-kube-compare/</code> directory.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example snippet showing allowedUnsafeSysctls and systemReserved</div>
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: performance.openshift.io/v2
-kind: PerformanceProfile
+<pre class="highlight"><code class="language-text" data-lang="text">out/telco-core-rds/configuration/reference-crs-kube-compare/
+├── metadata.yaml
+├── optional
+│   ├── logging
+│   ├── networking
+│   ├── other
+│   └── tuning
+└── required
+    ├── networking
+    ├── other
+    ├── performance
+    ├── scheduling
+    └── storage</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>metadata.yaml</code></dt>
+<dd>
+<p>Configuration file for the reference configuration.</p>
+</dd>
+<dt class="hdlist1"><code>optional</code></dt>
+<dd>
+<p>Directory for optional templates.</p>
+</dd>
+<dt class="hdlist1"><code>required</code></dt>
+<dd>
+<p>Directory for required templates.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Compare the configuration for your cluster to the telco core reference configuration by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc cluster-compare -r out/telco-core-rds/configuration/reference-crs-kube-compare/metadata.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following is example output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">W1212 14:13:06.281590   36629 compare.go:425] Reference Contains Templates With Types (kind) Not Supported By Cluster: BFDProfile, BGPAdvertisement, BGPPeer, ClusterLogForwarder, Community, IPAddressPool, MetalLB, MultiNetworkPolicy, NMState, NUMAResourcesOperator, NUMAResourcesScheduler, NodeNetworkConfigurationPolicy, SriovNetwork, SriovNetworkNodePolicy, SriovOperatorConfig, StorageCluster
+
+...
+
+**********************************
+
+Cluster CR: config.openshift.io/v1_OperatorHub_cluster
+Reference File: required/other/operator-hub.yaml
+Diff Output: diff -u -N /tmp/MERGED-2801470219/config-openshift-io-v1_operatorhub_cluster /tmp/LIVE-2569768241/config-openshift-io-v1_operatorhub_cluster
+--- /tmp/MERGED-2801470219/config-openshift-io-v1_operatorhub_cluster	2024-12-12 14:13:22.898756462 +0000
++++ /tmp/LIVE-2569768241/config-openshift-io-v1_operatorhub_cluster	2024-12-12 14:13:22.898756462 +0000
+@@ -1,6 +1,6 @@
+ apiVersion: config.openshift.io/v1
+ kind: OperatorHub
+ metadata:
++  annotations:
++    include.release.openshift.io/hypershift: "true"
+   name: cluster
+-spec:
+-  disableAllDefaultSources: true
+
+**********************************
+
+Summary
+CRs with diffs: 3/4
+CRs in reference missing from the cluster: 22
+other:
+  other:
+    Missing CRs:
+    - optional/other/control-plane-load-kernel-modules.yaml
+    - optional/other/worker-load-kernel-modules.yaml
+required-networking:
+  networking-root:
+    Missing CRs:
+    - required/networking/nodeNetworkConfigurationPolicy.yaml
+  networking-sriov:
+    Missing CRs:
+    - required/networking/sriov/sriovNetwork.yaml
+    - required/networking/sriov/sriovNetworkNodePolicy.yaml
+    - required/networking/sriov/SriovOperatorConfig.yaml
+    - required/networking/sriov/SriovSubscription.yaml
+    - required/networking/sriov/SriovSubscriptionNS.yaml
+    - required/networking/sriov/SriovSubscriptionOperGroup.yaml
+required-other:
+  scheduling:
+    Missing CRs:
+    - required/other/catalog-source.yaml
+    - required/other/icsp.yaml
+required-performance:
+  performance:
+    Missing CRs:
+    - required/performance/PerformanceProfile.yaml
+required-scheduling:
+  scheduling:
+    Missing CRs:
+    - required/scheduling/nrop.yaml
+    - required/scheduling/NROPSubscription.yaml
+    - required/scheduling/NROPSubscriptionNS.yaml
+    - required/scheduling/NROPSubscriptionOperGroup.yaml
+    - required/scheduling/sched.yaml
+required-storage:
+  storage-odf:
+    Missing CRs:
+    - required/storage/odf-external/01-rook-ceph-external-cluster-details.secret.yaml
+    - required/storage/odf-external/02-ocs-external-storagecluster.yaml
+    - required/storage/odf-external/odfNS.yaml
+    - required/storage/odf-external/odfOperGroup.yaml
+    - required/storage/odf-external/odfSubscription.yaml
+No CRs are unmatched to reference CRs
+Metadata Hash: fe41066bac56517be02053d436c815661c9fa35eec5922af25a1be359818f297
+No patched CRs</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>Cluster CR</code></dt>
+<dd>
+<p>The CR under comparison. The plugin displays each CR with a difference from the corresponding template.</p>
+</dd>
+<dt class="hdlist1"><code>Reference File</code></dt>
+<dd>
+<p>The template matching with the CR for comparison.</p>
+</dd>
+<dt class="hdlist1"><code>Diff Output</code></dt>
+<dd>
+<p>The output in Linux diff format shows the difference between the template and the cluster CR.</p>
+</dd>
+<dt class="hdlist1"><code>Summary</code></dt>
+<dd>
+<p>After the plugin reports the line diffs for each CR, the summary of differences are reported.</p>
+</dd>
+<dt class="hdlist1"><code>CRs with diffs</code></dt>
+<dd>
+<p>The number of CRs in the comparison with differences from the corresponding templates.</p>
+</dd>
+<dt class="hdlist1"><code>CRs in reference missing from the cluster</code></dt>
+<dd>
+<p>The number of CRs represented in the reference configuration, but missing from the live cluster.</p>
+</dd>
+<dt class="hdlist1"><code>Missing CRs</code></dt>
+<dd>
+<p>The list of CRs represented in the reference configuration, but missing from the live cluster.</p>
+</dd>
+<dt class="hdlist1"><code>No CRs are unmatched to reference CRs</code></dt>
+<dd>
+<p>The CRs that did not match to a corresponding template in the reference configuration.</p>
+</dd>
+<dt class="hdlist1"><code>Metadata Hash</code></dt>
+<dd>
+<p>The metadata hash identifies the reference configuration.</p>
+</dd>
+<dt class="hdlist1"><code>No patched CRs</code></dt>
+<dd>
+<p>The list of patched CRs.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Get the output in the <code>junit</code> format by adding <code>-o junit</code> to the command. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc cluster-compare -r out/telco-core-rds/configuration/reference-crs-kube-compare/metadata.yaml -o junit</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>junit</code> output includes the following result types:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Passed results for each fully matched template.</p>
+</li>
+<li>
+<p>Failed results for differences found or missing required custom resources (CRs).</p>
+</li>
+<li>
+<p>Skipped results for differences patched using the user override mechanism.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cc-create-reference-intro_cc-create-reference">Create a reference configuration</h4>
+<div class="paragraph _abstract">
+<p>Create a reference configuration with metadata, templates, and expected variation so that the <code>cluster-compare</code> plugin can validate your clusters.</p>
+</div>
+<div class="sect4">
+<h5 id="cluster-compare-metadata-structure_cc-create-reference">Structure of the metadata.yaml file</h5>
+<div class="paragraph _abstract">
+<p>The <code>metadata.yaml</code> file provides a central configuration point to define and configure the templates in a reference configuration.
+The file features a hierarchy of <code>parts</code> and <code>components</code>. <code>parts</code> are groups of <code>components</code> and <code>components</code> are groups of templates.
+Under each component, you can configure template dependencies, validation rules, and add descriptive metadata.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example metadata.yaml file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v2
+parts:
+  - name: &lt;part_name&gt;
+    components:
+      - name: &lt;component_name&gt;
+        &lt;component_configuration&gt;
+  - name: &lt;part_name&gt;
+      - name: &lt;component_name&gt;
+        &lt;component_configuration&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;part_name&gt;</code></dt>
+<dd>
+<p>Specify a <code>part</code> name. Every <code>part</code> typically describes a workload or a set of workloads.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;component_name&gt;</code></dt>
+<dd>
+<p>Specify a <code>component</code> name.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;component_configuration&gt;</code></dt>
+<dd>
+<p>Specify the configuration for a template. For example, define template relationships or configure what fields to use in a comparison.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="cluster-compare-template-groupings_cc-create-reference">Configuring template relationships</h5>
+<div class="paragraph _abstract">
+<p>By defining relationships between templates in your reference configuration, you can support use-cases with complex dependencies. For example, you can configure a component to require specific templates, require one template from a group, or allow any template from a group, and so on.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Create a <code>metadata.yaml</code> file to match your use case. Use the following structure as an example:</p>
+<div class="listingblock">
+<div class="title">Example metadata.yaml file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v2
+parts:
+  - name: Part1
+    components:
+      - name: Component1
+        allOf:
+          - path: RequiredTemplate1.yaml
+          - path: RequiredTemplate2.yaml
+      - name: Component2
+        allOrNoneOf:
+          - path: OptionalBlockTemplate1.yaml
+          - path: OptionalBlockTemplate2.yaml
+      - name: Component3
+        anyOf:
+          - path: OptionalTemplate1.yaml
+          - path: OptionalTemplate2.yaml
+      - name: Component4
+        noneOf:
+          - path: BannedTemplate1.yaml
+          - path: BannedTemplate2.yaml
+      - name: Component5
+        oneOf:
+          - path: RequiredExclusiveTemplate1.yaml
+          - path: RequiredExclusiveTemplate2.yaml
+      - name: Component6
+        anyOneOf:
+          - path: OptionalExclusiveTemplate1.yaml
+          - path: OptionalExclusiveTemplate2.yaml
+#...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>allOf</code></dt>
+<dd>
+<p>Specifies required templates.</p>
+</dd>
+<dt class="hdlist1"><code>allOrNoneOf</code></dt>
+<dd>
+<p>Specifies a group of templates that are either all required or all optional. If one corresponding custom resource (CR) is present in the cluster, then all corresponding CRs must be present in the cluster.</p>
+</dd>
+<dt class="hdlist1"><code>anyOf</code></dt>
+<dd>
+<p>Specifies optional templates.</p>
+</dd>
+<dt class="hdlist1"><code>noneOf</code></dt>
+<dd>
+<p>Specifies templates to exclude. If a corresponding CR is present in the cluster, the plugin returns a validation error.</p>
+</dd>
+<dt class="hdlist1"><code>oneOf</code></dt>
+<dd>
+<p>Specifies templates where only one can be present. If none, or more than one of the corresponding CRs are present in the cluster, the plugin returns a validation error.</p>
+</dd>
+<dt class="hdlist1"><code>anyOneOf</code></dt>
+<dd>
+<p>Specifies templates where only one can be present in the cluster. If more than one of the corresponding CRs are present in the cluster, the plugin returns a validation error.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="cluster-compare-templating_cc-create-reference">Configuring expected variation in a template</h5>
+<div class="paragraph _abstract">
+<p>You can handle variable content within a template by using Golang templating syntax. Using this syntax, you can configure validation logic that handles optional, required, and conditional content within the template.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>cluster-compare</code> plugin requires all templates to render as valid YAML. To avoid parsing errors for missing fields, use conditional templating syntax such as <code>{{- if .spec.&lt;optional_field&gt; }}</code> when implementing templating syntax. This conditional logic ensures templates process missing fields gracefully and maintains valid YAML formatting.</p>
+</li>
+<li>
+<p>You can use the Golang templating syntax with custom and built-in functions for complex use cases. All Golang built-in functions are supported including the functions in the Sprig library.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Create a <code>metadata.yaml</code> file to match your use case. Use the following structure as an example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v2
+kind: Service
 metadata:
-  name: {{ .metadata.name }}
-  annotations:
-    # allowedUnsafeSysctls: some pods want the kernel stack to ignore IPv6 router Advertisement.
-    # systemReserved: when used, it should be tailored for each environment.
-    kubeletconfig.experimental: |
-      {
-       "allowedUnsafeSysctls":["net.ipv6.conf.all.accept_ra"],
-       "systemReserved":{"memory":"11Gi"}
-      }
-# ...</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Although these sysctls are namespaced, they may allow a pod to consume memory or other resources beyond any limits specified in the pod description.
-You must ensure that these sysctls do not exhaust platform resources.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>For more information, see "Using sysctls in containers".</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="telco-ran-node-tuning-operator_plan-component-configuration">CPU partitioning and performance tuning</h6>
-<div class="paragraph _abstract">
-<p>The RAN DU use model includes cluster performance tuning using <code>PerformanceProfile</code> CRs for low-latency performance, and a <code>TunedPerformancePatch</code> CR that adds additional RAN-specific tuning.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">New in this release</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>No reference design updates in this release</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<p>The RAN DU use model includes cluster performance tuning using <code>PerformanceProfile</code> CRs for low-latency performance, and a <code>TunedPerformancePatch</code> CR that adds additional RAN-specific tuning.
-A reference <code>PerformanceProfile</code> is provided for both x86_64 and aarch64 CPU architectures.
-The single <code>TunedPerformancePatch</code> object provided automatically detects the CPU architecture and performs the required additional tuning.
-The RAN DU use case requires the cluster to be tuned for low-latency performance.
-The Node Tuning Operator reconciles the <code>PerformanceProfile</code> and <code>TunedPerformancePatch</code> CRs.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>For more information about node tuning with the <code>PerformanceProfile</code> CR, see "Tuning nodes for low latency with the performance profile".</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Limits and requirements</dt>
-<dd>
-<p>You must configure the following settings in the telco RAN DU profile <code>PerformanceProfile</code> CR:</p>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Set a reserved <code>cpuset</code> of 4 or more, equating to 4 hyper-threads (2 cores) on x86_64, or 4 cores on aarch64 for any of the following CPUs:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Intel 3rd Generation Xeon (IceLake) 2.20 GHz, or newer, CPUs with host firmware tuned for maximum performance</p>
-</li>
-<li>
-<p>AMD EPYC Zen 4 CPUs (Genoa, Bergamo)</p>
-</li>
-<li>
-<p>ARM CPUs (Neoverse)</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>It is recommended to evaluate features, such as per-pod power management, to determine any potential impact on performance.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>x86_64:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Set the reserved <code>cpuset</code> to include both hyper-thread siblings for each included core.
-Unreserved cores are available as allocatable CPU for scheduling workloads.</p>
-</li>
-<li>
-<p>Ensure that hyper-thread siblings are not split across reserved and isolated cores.</p>
-</li>
-<li>
-<p>Ensure that reserved and isolated CPUs include all the threads for all cores in the CPU.</p>
-</li>
-<li>
-<p>Include Core 0 for each NUMA node in the reserved CPU set.</p>
-</li>
-<li>
-<p>Set the hugepage size to 1G.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>aarch64:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Use the first 4 cores for the reserved CPU set (or more).</p>
-</li>
-<li>
-<p>Set the hugepage size to 512M.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Only pin Red&#160;Hat OpenShift Container Platform pods that are by default configured as part of the management workload partition to reserved cores.</p>
-</li>
-<li>
-<p>When recommended by the hardware vendor, set the maximum CPU frequency for reserved and isolated CPUs using the <code>hardwareTuning</code> section.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">Engineering considerations</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>RealTime (RT) kernel</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Under x86_64, to reach the full performance metrics, you must use the RT kernel, which is the default in the <code>x86_64/PerformanceProfile.yaml</code> configuration.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>If required, you can select the non-RT kernel with corresponding impact to performance.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Under aarch64, only the 64k-pagesize non-RT kernel is recommended for RAN DU use cases, which is the default in the <code>aarch64/PerformanceProfile.yaml</code> configuration.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>The number of hugepages you configure depends on application workload requirements.
-Variation in this parameter is expected and allowed.</p>
-</li>
-<li>
-<p>Variation is expected in the configuration of reserved and isolated CPU sets based on selected hardware and additional components in use on the system.
-The variation must still meet the specified limits.</p>
-</li>
-<li>
-<p>Hardware without IRQ affinity support affects isolated CPUs.
-To ensure that pods with guaranteed whole CPU QoS have full use of allocated CPUs, all hardware in the server must support IRQ affinity.</p>
-</li>
-<li>
-<p>To enable workload partitioning, set <code>cpuPartitioningMode</code> to <code>AllNodes</code> during deployment, and then use the <code>PerformanceProfile</code> CR to allocate enough CPUs to support the operating system, interrupts, and Red&#160;Hat OpenShift Container Platform pods.</p>
-</li>
-<li>
-<p>Tailor <code>systemReserved</code> memory for each cluster based on its size and application workload. The minimum recommended value is 11Gi.</p>
-</li>
-<li>
-<p>Under x86_64, the <code>PerformanceProfile</code> may be customized with the following optional arguments in the <code>additionalKernelargs</code> list:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The <code>vfio_pci</code> arguments support devices such as the FEC accelerator. You can omit them if they are not required for your workload.</p>
-</li>
-<li>
-<p>To enable the <code>acpi_idle</code> CPUIdle driver, for example, for Intel FlexRAN, add <code>intel_idle.max_cstate=0</code></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Under aarch64, the <code>PerformanceProfile</code> must be adjusted depending on the needs of the platform:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>For Grace Hopper systems, the following kernel commandline arguments are required:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>acpi_power_meter.force_cap_on=y</code></p>
-</li>
-<li>
-<p><code>module_blacklist=nouveau</code></p>
-</li>
-<li>
-<p><code>pci=realloc=off</code></p>
-</li>
-<li>
-<p><code>pci=pcie_bus_safe</code></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>For other ARM platforms, you may need to enable <code>iommu.passthrough=1</code> or <code>pci=realloc</code></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Extending and augmenting <code>TunedPerformancePatch.yaml</code>:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>TunedPerformancePatch.yaml</code> introduces a default top-level tuned profile named <code>ran-du-performance</code> and an architecture-aware RAN tuning profile named <code>ran-du-performance-architecture-common</code>, and additional archichitecture-specific child policies that are automatically selected by the common policy.</p>
-</li>
-<li>
-<p>By default, the <code>ran-du-performance</code> profile is set to <code>priority</code> level <code>18</code>, and it includes both the PerformanceProfile-created profile <code>openshift-node-performance-openshift-node-performance-profile</code> and <code>ran-du-performance-architecture-common</code></p>
-</li>
-<li>
-<p>If you have customized the name of the <code>PerformanceProfile</code> object, you must create a new tuned object that includes the name change of the tuned profile created by the <code>PerformanceProfile</code> CR, as well as the <code>ran-du-performance-architecture-common</code> RAN tuning profile. This must have a <code>priority</code> less than 18.
-For example, if the PerformanceProfile object is named <code>change-this-name</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: tuned.openshift.io/v1
-kind: Tuned
-metadata:
-  name: custom-performance-profile-override
-  namespace: openshift-cluster-node-tuning-operator
+  name: frontend
+  namespace: {{ .metadata.namespace }}
+  labels:
+    app: guestbook
+    tier: frontend
 spec:
-  profile:
-    - name: custom-performance-profile-x
-      data: |
-        [main]
-        summary=Override of the default ran-du performance tuning to adjust for our renamed PerformanceProfile
-        include=openshift-node-performance-change-this-name,ran-du-performance-architecture-common
-  recommend:
-    - machineConfigLabels:
-        machineconfiguration.openshift.io/role: "master"
-      priority: 15
-      profile: custom-performance-profile-x</code></pre>
+  {{- if and .spec.type (eq (.spec.type) "NodePort" "LoadBalancer") }}
+  type: {{.spec.type }}
+  {{- else }}
+  type: should be NodePort or LoadBalancer
+  {{- end }}
+  ports:
+  - port: 80
+  selector:
+    app: guestbook
+    {{- if .spec.selector.tier }}
+    tier: frontend
+    {{- end }}</code></pre>
 </div>
-</div>
-</li>
-<li>
-<p>To further override, the optional <code>TunedPowerCustom.yaml</code> config file exemplifies how to extend the provided <code>TunedPerformancePatch.yaml</code> without needing to overlay or edit it directly.
-Creating an additional tuned profile which includes the top-level tuned profile named <code>ran-du-performance</code> and has a lower <code>priority</code> number in the <code>recommend</code> section allows adding additional settings easily.</p>
-</li>
-<li>
-<p>For additional information on the Node Tuning Operator, see "Using the Node Tuning Operator".</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect5">
-<h6 id="telco-ran-ptp-operator_plan-component-configuration">PTP Operator</h6>
-<div class="paragraph _abstract">
-<p>Configure Precision Time Protocol (PTP) in cluster nodes to ensure precise timing and reliability in the RAN environment.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">New in this release</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Support for PTP boundary clock without holdover on GNR-D hardware.</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<p>Configure PTP in cluster nodes.
-PTP ensures precise timing and reliability in the RAN environment, compared to other clock synchronization protocols, like NTP.</p>
-</dd>
-<dt class="hdlist1">Support includes</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Grandmaster clock (T-GM): use GPS to sync the local clock and provide time synchronization to other devices</p>
-</li>
-<li>
-<p>Boundary clock (T-BC): receive time from another PTP source and redistribute it to other devices</p>
-</li>
-<li>
-<p>Ordinary clock (T-TSC): synchronize the local clock from another PTP time provider</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
 </div>
 <div class="paragraph">
-<p>Configuration variations allow for multiple NIC configurations for greater time distribution and high availability (HA), and optional fast event notification over HTTP.</p>
+<p>where:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Limits and requirements</dt>
+<dt class="hdlist1"><code>name: frontend</code></dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Supports the PTP G.8275.1 profile for the following telco use-cases:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>T-GM use-case:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Limited to a maximum of 3 Westport channel NICs</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Requires GNSS input to one NIC card, with SMA connections to synchronize additional NICs</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>HA support N/A</p>
-</li>
-<li>
-<p>GNR-D is not supported for T-GM.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>T-BC use-case:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Limited to a maximum of 2 NICs</p>
-</li>
-<li>
-<p>System clock HA support is optional in 2-NIC configuration.</p>
-</li>
-<li>
-<p>GNR-D is not supported for T-BC.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>T-TSC use-case:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Limited to single NIC only</p>
-</li>
-<li>
-<p>System clock HA support is optional in active/standby 2-port configuration.</p>
-</li>
-<li>
-<p>GNR-D is not supported for T-TSC.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>T-BC without holdover use-case:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>GNR-D hardware with 0, 1, or 2 additional Carter Flats, e830 NICs</p>
-</li>
-<li>
-<p>Time receiver port must be one of the onboard NAC ports.</p>
-</li>
-<li>
-<p>Time transmitters may be configured to any combination of NAC and Carter Flats ports, up to a total of 23.</p>
-</li>
-<li>
-<p>Holdover is not enabled, so any failure of the Time receiver will enter <code>FREERUN</code> state immediately.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Log reduction must be enabled with <code>true</code> or <code>enhanced</code>.</p>
-</li>
-</ul>
-</div>
+<p>Configures a required field that must match the specified value.</p>
 </dd>
-<dt class="hdlist1">Engineering considerations</dt>
+<dt class="hdlist1"><code>namespace: \{{ .metadata.namespace }}</code></dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Example RAN DU RDS configurations are provided for:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>T-GM, T-BC, T-TSC, and BC-without-holdover</p>
-</li>
-<li>
-<p>Variations with and without HA</p>
-</li>
-<li>
-<p>Variations with and without fast event notification</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>PTP fast event notifications use <code>ConfigMap</code> CRs to persist subscriber details.</p>
-</li>
-<li>
-<p>Hierarchical event subscription as described in the O-RAN specification is not supported for PTP events.</p>
-</li>
-<li>
-<p>Cluster nodes must have proper NTP configuration to ensure correct time prior to PTP operator taking ownership of node timing.</p>
-</li>
-</ul>
-</div>
+<p>Configures a required field that can have any value.</p>
+</dd>
+<dt class="hdlist1"><code>type: \{{.spec.type }}</code></dt>
+<dd>
+<p>Configures validation for the <code>.spec.type</code> field.</p>
+</dd>
+<dt class="hdlist1"><code>\{{- if .spec.selector.tier }}</code></dt>
+<dd>
+<p>Configures an optional field.</p>
 </dd>
 </dl>
 </div>
+</li>
+</ul>
 </div>
 <div class="sect5">
-<h6 id="telco-ran-sr-iov-operator_plan-component-configuration">SR-IOV Operator</h6>
+<h6 id="cluster-compare-templating-reference_cc-create-reference">Reference template functions</h6>
 <div class="paragraph _abstract">
-<p>The SR-IOV Operator provisions and configures the SR-IOV CNI and device plugins.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">New in this release</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>No reference design updates in this release</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<p>The SR-IOV Operator provisions and configures the SR-IOV CNI and device plugins.
-Both <code>netdevice</code> (kernel VFs) and <code>vfio</code> (DPDK) devices are supported and applicable to the RAN DU use models.</p>
-</dd>
-<dt class="hdlist1">Limits and requirements</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Use devices that are supported for Red&#160;Hat OpenShift Container Platform.
-For more information, see "Supported devices".</p>
-</li>
-<li>
-<p>SR-IOV and IOMMU enablement in host firmware settings: The SR-IOV Network Operator automatically enables IOMMU on the kernel command line.</p>
-</li>
-<li>
-<p>SR-IOV VFs do not receive link state updates from the PF.
-If link down detection is required you must configure this at the protocol level.</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Engineering considerations</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>SR-IOV interfaces with the <code>vfio</code> driver type are typically used to enable additional secondary networks for applications that require high throughput or low latency.</p>
-</li>
-<li>
-<p>Customer variation on the configuration and number of <code>SriovNetwork</code> and <code>SriovNetworkNodePolicy</code> custom resources (CRs) is expected.</p>
-</li>
-<li>
-<p>IOMMU kernel command line settings are applied with a <code>MachineConfig</code> CR at install time.
-This ensures that the <code>SriovOperator</code> CR does not cause a reboot of the node when adding them.</p>
-</li>
-<li>
-<p>SR-IOV support for draining nodes in parallel is not applicable in a single-node OpenShift cluster.</p>
-</li>
-<li>
-<p>You must include the <code>SriovOperatorConfig</code> CR in your deployment; the CR is not created automatically.
-This CR is included in the reference configuration policies which are applied during initial deployment.</p>
-</li>
-<li>
-<p>In scenarios where you pin or restrict workloads to specific nodes, the SR-IOV parallel node drain feature will not result in the rescheduling of pods.
-In these scenarios, the SR-IOV Operator disables the parallel node drain functionality.</p>
-</li>
-<li>
-<p>You must pre-configure NICs which do not support firmware updates under secure boot or kernel lockdown with sufficient virtual functions (VFs) to support the number of VFs needed by the application workload.
-For Mellanox NICs, you must disable the Mellanox vendor plugin in the SR-IOV Network Operator.
-For more information, see "Configuring the SR-IOV Network Operator on Mellanox cards when Secure Boot is enabled".</p>
-</li>
-<li>
-<p>To change the MTU value of a virtual function after the pod has started, do not configure the MTU field in the <code>SriovNetworkNodePolicy</code> CR.
-Instead, configure the Network Manager or use a custom <code>systemd</code> script to set the MTU of the physical function to an appropriate value.
-For example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># ip link set dev &lt;physical_function&gt; mtu 9000</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect5">
-<h6 id="telco-ran-logging_plan-component-configuration">Logging</h6>
-<div class="paragraph _abstract">
-<p>Use logging to collect logs from the far edge node for remote analysis.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">New in this release</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>No reference design updates in this release</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<p>Use logging to collect logs from the far edge node for remote analysis.
-The recommended log collector is Vector.</p>
-</dd>
-<dt class="hdlist1">Engineering considerations</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Handling logs beyond the infrastructure and audit logs, for example, from the application workload requires additional CPU and network bandwidth based on additional logging rate.</p>
-</li>
-<li>
-<p>As of Red&#160;Hat OpenShift Container Platform 4.14, Vector is the reference log collector.
-Use of fluentd in the RAN use models is deprecated.</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect5">
-<h6 id="telco-ran-sriov-fec-operator_plan-component-configuration">SRIOV-FEC Operator</h6>
-<div class="paragraph _abstract">
-<p>SRIOV-FEC Operator is an optional 3rd party Certified Operator supporting FEC accelerator hardware.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">New in this release</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>No reference design updates in this release</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<p>SRIOV-FEC Operator is an optional 3rd party Certified Operator supporting FEC accelerator hardware.</p>
-</dd>
-<dt class="hdlist1">Limits and requirements</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Starting with FEC Operator v2.7.0:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Secure boot is supported</p>
-</li>
-<li>
-<p><code>vfio</code> drivers for PFs require the usage of a <code>vfio-token</code> that is injected into the pods.
-Applications in the pod can pass the VF token to DPDK by using EAL parameter <code>--vfio-vf-token</code>.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Engineering considerations</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>The SRIOV-FEC Operator uses CPU cores from the isolated CPU set.</p>
-</li>
-<li>
-<p>You can validate FEC readiness as part of the pre-checks for application deployment, for example, by extending the validation policy.</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect5">
-<h6 id="telco-ran-lca-operator_plan-component-configuration">Lifecycle Agent</h6>
-<div class="paragraph _abstract">
-<p>The Lifecycle Agent provides local lifecycle management services for image-based upgrade of single-node OpenShift clusters.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">New in this release</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>No reference design updates in this release</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<p>The Lifecycle Agent provides local lifecycle management services for image-based upgrade of single-node OpenShift clusters.
-Image-based upgrade is the recommended upgrade method for single-node OpenShift clusters.</p>
-</dd>
-<dt class="hdlist1">Limits and requirements</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>The Lifecycle Agent is not applicable in multi-node clusters or single-node OpenShift clusters with an additional worker.</p>
-</li>
-<li>
-<p>The Lifecycle Agent requires a persistent volume that you create when installing the cluster.</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
+<p>The <code>cluster-compare</code> plugin supports all <code>sprig</code> library functions, except for the <code>env</code> and <code>expandenv</code> functions. For the full list of <code>sprig</code> library functions, see "Sprig Function Documentation".</p>
 </div>
 <div class="paragraph">
-<p>For more information about partition requirements, see "Configuring a shared container directory between ostree stateroots when using GitOps ZTP".</p>
+<p>The following table describes the additional template functions for the <code>cluster-compare</code> plugin:</p>
 </div>
-</div>
-<div class="sect5">
-<h6 id="telco-ran-local-storage-operator_plan-component-configuration">Local Storage Operator</h6>
-<div class="paragraph _abstract">
-<p>You can create persistent volumes that can be used as <code>PVC</code> resources by applications with the Local Storage Operator.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">New in this release</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>No reference design updates in this release</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<p>You can create persistent volumes that can be used as <code>PVC</code> resources by applications with the Local Storage Operator.
-The number and type of <code>PV</code> resources that you create depends on your requirements.</p>
-</dd>
-<dt class="hdlist1">Engineering considerations</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Create backing storage for <code>PV</code> CRs before creating the <code>PV</code>.
-This can be a partition, a local volume, LVM volume, or full disk.</p>
-</li>
-<li>
-<p>Refer to the device listing in <code>LocalVolume</code> CRs by the hardware path used to access each device to ensure correct allocation of disks and partitions, for example, <code>/dev/disk/by-path/&lt;id&gt;</code>.
-Logical names (for example, <code>/dev/sda</code>) are not guaranteed to be consistent across node reboots.</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect5">
-<h6 id="telco-ran-lvms-operator_plan-component-configuration">Logical Volume Manager Storage</h6>
-<div class="paragraph _abstract">
-<p>Logical Volume Manager (LVM) Storage provides dynamic provisioning of block and file storage by creating logical volumes from local devices that can be consumed as persistent volume claim (PVC) resources by applications.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">New in this release</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>No reference design updates in this release</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<p>Logical Volume Manager (LVM) Storage is an optional component.
-It provides dynamic provisioning of both block and file storage by creating logical volumes from local devices that can be consumed as persistent volume claim (PVC) resources by applications.
-Volume expansion and snapshots are also possible.
-An example configuration is provided in the RDS with the <code>StorageLVMCluster.yaml</code> file.</p>
-</dd>
-<dt class="hdlist1">Limits and requirements</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>In single-node OpenShift clusters, persistent storage must be provided by either LVM Storage or local storage, not both.</p>
-</li>
-<li>
-<p>Volume snapshots are excluded from the reference configuration.</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Engineering considerations</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>LVM Storage can be used as the local storage implementation for the RAN DU use case.
-When LVM Storage is used as the storage solution, it replaces the Local Storage Operator, and the CPU required is assigned to the management partition as platform overhead.
-The reference configuration must include one of these storage solutions but not both.</p>
-</li>
-<li>
-<p>Ensure that sufficient disks or partitions are available for storage requirements.</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect5">
-<h6 id="telco-ran-workload-partitioning_plan-component-configuration">Workload partitioning</h6>
-<div class="paragraph _abstract">
-<p>Workload partitioning pins Red&#160;Hat OpenShift Container Platform and Day 2 Operator pods that are part of the DU profile to the reserved CPU set and removes the reserved CPU from node accounting.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">New in this release</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>No reference design updates in this release</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<p>Workload partitioning pins Red&#160;Hat OpenShift Container Platform and Day 2 Operator pods that are part of the DU profile to the reserved CPU set and removes the reserved CPU from node accounting.
-This leaves all unreserved CPU cores available for user workloads.
-This leaves all non-reserved CPU cores available for user workloads.
-Workload partitioning is enabled through a capability set in installation parameters: <code>cpuPartitioningMode: AllNodes</code>.
-The set of management partition cores are set with the reserved CPU set that you configure in the <code>PerformanceProfile</code> CR.</p>
-</dd>
-<dt class="hdlist1">Limits and requirements</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p><code>Namespace</code> and <code>Pod</code> CRs must be annotated to allow the pod to be applied to the management partition</p>
-</li>
-<li>
-<p>Pods with CPU limits cannot be allocated to the partition.
-This is because mutation can change the pod QoS.</p>
-</li>
-<li>
-<p>For more information about the minimum number of CPUs that can be allocated to the management partition, see "Node Tuning Operator".</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Engineering considerations</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Workload partitioning pins all management pods to reserved cores.
-A sufficient number of cores must be allocated to the reserved set to account for operating system, management pods, and expected spikes in CPU use that occur when the workload starts, the node reboots, or other system events happen.</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect5">
-<h6 id="telco-ran-cluster-tuning_plan-component-configuration">Cluster tuning</h6>
-<div class="paragraph _abstract">
-<p>Configure cluster tuning settings including cluster capabilities and monitoring for the telco RAN DU reference design.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">New in this release</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>OLM profile collection is removed in Red&#160;Hat OpenShift Container Platform 4.22. The <code>DisableOLMPprof</code> CR compliance type is now set to <code>mustnothave</code> to remove the previously applied configuration from clusters.</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<p>For a full list of components that you can disable using the cluster capabilities feature, see "Cluster capabilities".</p>
-</dd>
-<dt class="hdlist1">Limits and requirements</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Cluster capabilities are not available for installer-provisioned installation methods.</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>The following table lists the required platform tuning configurations:</p>
-</div>
-<table class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 36. Cluster capabilities configurations</caption>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1102. Additional cluster-compare template functions</caption>
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 16.6666%;">
+<col style="width: 33.3333%;">
+<col style="width: 50.0001%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Feature</th>
-<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-middle">Function</th>
+<th class="tableblock halign-left valign-middle">Description</th>
+<th class="tableblock halign-left valign-middle">Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Remove optional cluster capabilities</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Reduce the Red&#160;Hat OpenShift Container Platform footprint by disabling optional cluster Operators on single-node OpenShift clusters only.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Remove all optional Operators except the Node Tuning Operator, Operator Lifecycle Manager, and the Ingress Operator.</p>
-</li>
-</ul>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>fromJson</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Parses the incoming string as a structured JSON object.</p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><code>value: {{ obj := spec.jsontext | fromJson }}{{ obj.field }}</code></p>
 </div>
 <div class="ulist">
 <ul>
@@ -3526,26 +3307,204 @@ A sufficient number of cores must be allocated to the reserved set to account fo
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configure cluster monitoring</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Configure the monitoring stack for reduced footprint by doing the following:</p>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>fromJsonArray</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Parses the incoming string as a structured JSON array.</p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><code>value: {{ obj := spec.jsontext | fromJson}}{{ index $obj 0 }}</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>fromYaml</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Parses the incoming string as a structured YAML object.</p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><code>value: {{ obj := spec.yamltext | fromYaml }}{{ obj.field }}</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>fromYamlArray</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Parses the incoming string as a structured YAML array.</p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><code>value: {{ obj := spec.yamltext | fromYaml}}{{ index $obj 0 }</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>toJson</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Renders incoming data as JSON while preserving object types.</p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><code>jsonstring: {{ $variable | toJson }}</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>toToml</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Renders the incoming string as structured TOML data.</p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><code>tomlstring: {{ $variable | toToml }}</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>toYaml</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Renders incoming data as YAML while preserving object types.</p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>For simple scalar values: <code>value: {{ $data | toYaml }}</code></p>
+</div>
+<div class="paragraph">
+<p>For lists or dictionaries: <code>value: {{ $dict | toYaml | nindent 2 }}</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>doNotMatch</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Prevents a template from matching a cluster resource, even if it would normally match. You can use this function inside a template to conditionally exclude certain resources from correlation. The specified reason is logged when running with the <code>--verbose</code> flag. Templates excluded due to <code>doNotMatch</code> are not considered comparison failures.</p>
+<p class="tableblock">This function is especially useful when your template does not specify a fixed name or namespace. In these cases, you can use the <code>doNotMatch</code> function to exclude specific resources based on other fields, such as <code>labels</code> or <code>annotations</code>.</p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><code>{{ if $condition }}{{ doNotMatch $reason }}{{ end }}</code></p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>lookupCRs</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Returns an array of objects that match the specified parameters. For example: <code>lookupCRs $apiVersion $kind $namespace $name</code>.</p>
+<p class="tableblock">If the <code>$namespace</code> parameter is an empty string (<code>""</code>) or <code>*</code>, the function matches all namespaces. For cluster-scoped objects, the function matches objects with no namespace.</p>
+<p class="tableblock">If the <code>$name</code> is an empty string or <code>*</code>, the function matches any named object.</p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>-</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>lookupCR</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Returns a single object that matches the parameters. If multiple objects match, the function returns nothing. This function takes the same arguments as the <code>lookupCRs</code> function.</p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>-</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The following example shows how to use the <code>lookupCRs</code> function to retrieve and render values from multiple matching resources:</p>
+</div>
+<div class="listingblock">
+<div class="title">Config map example using <code>lookupCRs</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: ConfigMap
+apiVersion: v1
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard-settings
+  namespace: kubernetes-dashboard
+data:
+  dashboard: {{ index (lookupCR "apps/v1" "Deployment" "kubernetes-dashboard" "kubernetes-dashboard") "metadata" "name" \| toYaml }}
+  metrics: {{ (lookupCR "apps/v1" "Deployment" "kubernetes-dashboard" "dashboard-metrics-scraper").metadata.name \| toYaml }}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example shows how to use the <code>lookupCR</code> function to retrieve and use specific values from a single matching resource:</p>
+</div>
+<div class="listingblock">
+<div class="title">Config map example using <code>lookupCR</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: ConfigMap
+apiVersion: v1
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard-settings
+  namespace: kubernetes-dashboard
+data:
+  {{- $objlist := lookupCRs "apps/v1" "Deployment" "kubernetes-dashboard" "*" }}
+  {{- $dashboardName := "unknown" }}
+  {{- $metricsName := "unknown" }}
+  {{- range $obj := $objlist }}
+    {{- $appname := index $obj "metadata" "labels" "k8s-app" }}
+    {{- if contains "metrics" $appname }}
+      {{- $metricsName = $obj.metadata.name }}
+    {{- end }}
+    {{- if eq "kubernetes-dashboard" $appname }}
+      {{- $dashboardName = $obj.metadata.name }}
+    {{- end }}
+  {{- end }}
+  dashboard: {{ $dashboardName }}
+  metrics: {{ $metricsName }}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="cluster-compare-exclude-metadata_cc-create-reference">Configuring the metadata.yaml file to exclude template fields</h5>
+<div class="paragraph _abstract">
+<p>You can configure the <code>metadata.yaml</code> file to exclude fields from a comparison. Exclude fields that are irrelevant to a comparison, for example annotations or labels that are inconsequential to a cluster configuration.</p>
+</div>
+<div class="paragraph">
+<p>You can configure exclusions in the <code>metadata.yaml</code> file in the following ways:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Disable the local <code>alertmanager</code> and <code>telemeter</code> components.</p>
+<p>Exclude all fields in a custom resource not specified in a template.</p>
 </li>
 <li>
-<p>If you use RHACM observability, the CR must be augmented with appropriate <code>additionalAlertManagerConfigs</code> CRs to forward alerts to the hub cluster.</p>
-</li>
-<li>
-<p>RHACM observability combines its default data values with the monitoring configuration <code>ConfigMap</code> CR provided as part of the cluster tuning reference CRs.
-This merge results in the policy becoming non-compliant.
-To ensure that the provided configuration is not overwritten or merged with RHACM data values, you can disable the RHACM management of this <code>ConfigMap</code> CR .
-This keeps the policy compliant. For more information, see the Observability section of Telco hub reference design specifications.</p>
-</li>
-<li>
-<p>Reduce the <code>Prometheus</code> retention period to 24h.</p>
+<p>Exclude specific fields that you define using the <code>pathToKey</code> field.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -3554,7 +3513,7 @@ This keeps the policy compliant. For more information, see the Observability sec
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The RHACM hub cluster aggregates managed cluster metrics.</p>
+<p><code>pathToKey</code> is a dot separated path. Use quotes to escape key values featuring a period.</p>
 </div>
 </td>
 </tr>
@@ -3563,130 +3522,845 @@ This keeps the policy compliant. For more information, see the Observability sec
 </li>
 </ul>
 </div>
-<div class="ulist">
-<ul>
-</ul>
+<div class="sect5">
+<h6 id="cluster-compare-ignore-all-fields_cc-create-reference">Excluding all fields not specified in a template</h6>
+<div class="paragraph">
+<p>During the comparison process, the <code>cluster-compare</code> plugin renders a template by merging fields from the corresponding custom resource (CR). If you configure the <code>ignore-unspecified-fields</code> to <code>true</code>, all fields that are present in the CR, but not in the template, are excluded from the merge. Use this approach when you want to focus the comparison on the fields specified in the template only.</p>
 </div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Disable networking diagnostics</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Disable networking diagnostics for single-node OpenShift because they are not required.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configure a single OperatorHub catalog source</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configure the cluster to use a single catalog source that contains only the Operators required for a RAN DU deployment.
-Each catalog source increases the CPU use on the cluster.
-Using a single <code>CatalogSource</code> fits within the platform CPU budget.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Disable the Console Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If the cluster was deployed with the console disabled, the <code>Console</code> CR (<code>ConsoleOperatorDisable.yaml</code>) is not needed.
-If the cluster was deployed with the console enabled, you must apply the <code>Console</code> CR.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Engineering considerations</dt>
-<dd>
 <div class="ulist">
+<div class="title">Procedure</div>
 <ul>
 <li>
-<p>As of Red&#160;Hat OpenShift Container Platform 4.19, cgroup v1 is no longer supported and has been removed.
-All workloads must now be compatible with cgroup v2. For more information, see <a href="https://www.redhat.com/en/blog/rhel-9-changes-context-red-hat-openshift-workloads">Red Hat Enterprise Linux 9 changes in the context of Red Hat OpenShift workloads</a>.</p>
-</li>
-</ul>
+<p>Create a <code>metadata.yaml</code> file to match your use case. Use the following structure as an example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v2
+parts:
+  - name: Part1
+    components:
+      - name: Namespace
+        allOf:
+          - path: namespace.yaml
+            config:
+              ignore-unspecified-fields: true
+#...</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>ignore-unspecified-fields: true</code></dt>
+<dd>
+<p>Specify <code>true</code> to exclude from the comparison all fields in a CR that are not explicitly configured in the corresponding <code>namespace.yaml</code> template.</p>
 </dd>
 </dl>
+</div>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect5">
-<h6 id="telco-ran-machine-configuration_plan-component-configuration">Machine configuration</h6>
-<div class="paragraph _abstract">
-<p>Configure machine configuration settings for container runtime, kubelet, SCTP, kdump, and other system-level components in the telco RAN DU reference design.</p>
+<h6 id="cluster-compare-ignore-default-fields_cc-create-reference">Excluding specific fields by setting default exclusion fields</h6>
+<div class="paragraph">
+<p>You can exclude fields by defining a default value for <code>fieldsToOmitRefs</code> in the <code>defaultOmitRef</code> field. This default exclusion applies to all templates, unless overridden by the <code>config.fieldsToOmitRefs</code> field for a specific template.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Create a <code>metadata.yaml</code> file to match your use case. Use the following structure as an example:</p>
+<div class="listingblock">
+<div class="title">Example metadata.yaml file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v2
+parts:
+
+#...
+
+fieldsToOmit:
+   defaultOmitRef: default
+   items:
+      default:
+         - pathToKey: a.custom.default."k8s.io"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">New in this release</dt>
+<dt class="hdlist1"><code>defaultOmitRef: default</code></dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p>No reference design updates in this release</p>
+<p>Sets the default exclusion for all templates, unless overridden by the <code>config.fieldsToOmitRefs</code> field for a specific template.</p>
+</dd>
+<dt class="hdlist1"><code>pathToKey: a.custom.default."k8s.io"</code></dt>
+<dd>
+<p>The value is excluded for all templates.</p>
+</dd>
+</dl>
+</div>
 </li>
 </ul>
 </div>
-</dd>
-<dt class="hdlist1">Limits and requirements</dt>
-<dd>
+</div>
+<div class="sect5">
+<h6 id="cluster-compare-ignore-specified-fields_cc-create-reference">Excluding specific fields</h6>
+<div class="paragraph">
+<p>You can specify fields to exclude by defining the path to the field, and then referencing the definition in the <code>config</code> section for a template.</p>
+</div>
 <div class="ulist">
+<div class="title">Procedure</div>
 <ul>
 <li>
-<p>To ensure images are static, except during scheduled maintenance in defined maintenance windows, do not set the pod <code>imagePullPolicy</code> field to <code>Always</code>.</p>
-</li>
-<li>
-<p>The configuration CRs in this table are required components unless otherwise noted.</p>
-</li>
-</ul>
+<p>Create a <code>metadata.yaml</code> file to match your use case. Use the following structure as an example:</p>
+<div class="listingblock">
+<div class="title">Example metadata.yaml file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v2
+parts:
+  - name: Part1
+    components:
+      - name: Component1
+        - path: deployment.yaml
+          config:
+            fieldsToOmitRefs:
+              - deployments
+
+#...
+
+fieldsToOmit:
+   items:
+      deployments:
+         - pathToKey: spec.selector.matchLabels.k8s-app</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>deployments</code></dt>
+<dd>
+<p>References the <code>fieldsToOmit.items.deployments</code> item for the <code>deployment.yaml</code> template.</p>
+</dd>
+<dt class="hdlist1"><code>pathToKey: spec.selector.matchLabels.k8s-app</code></dt>
+<dd>
+<p>Excludes the <code>spec.selector.matchLabels.k8s-app</code> field from the comparison.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Setting <code>fieldsToOmitRefs</code> replaces the default value.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </dd>
 </dl>
 </div>
-<table class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 37. Machine configuration options</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 66.6667%;">
-</colgroup>
-<thead>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="cluster-compare-ignore-default-groups_cc-create-reference">Excluding specific fields by setting default exclusion groups</h6>
+<div class="paragraph">
+<p>You can create default groups of fields to exclude. A group of exclusions can reference another group to avoid duplication when defining exclusions.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Create a <code>metadata.yaml</code> file to match your use case. Use the following structure as an example:</p>
+<div class="listingblock">
+<div class="title">Example metadata.yaml file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v2
+parts:
+
+#...
+
+fieldsToOmit:
+   defaultOmitRef: default
+   items:
+    common:
+      - pathToKey: metadata.annotations."kubernetes.io/metadata.name"
+      - pathToKey: metadata.annotations."kubernetes.io/metadata.name"
+      - pathToKey: metadata.annotations."kubectl.kubernetes.io/last-applied-configuration"
+      - pathToKey: metadata.creationTimestamp
+      - pathToKey: metadata.generation
+      - pathToKey: spec.ownerReferences
+      - pathToKey: metadata.ownerReferences
+    default:
+      - include: common
+      - pathToKey: status</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>include: common</code></dt>
+<dd>
+<p>The <code>common</code> group is included in the default group.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="cluster-compare-configure-inline-diff_cc-create-reference">Configuring inline validation for template fields</h5>
+<div class="paragraph _abstract">
+<p>You can enable inline regular expressions to validate template fields, especially in scenarios where Golang templating syntax is difficult to maintain or overly complex. Using inline regular expressions simplifies templates, improves readability, and allows for more advanced validation logic.</p>
+</div>
+<div class="paragraph">
+<p>The <code>cluster-compare</code> plugin provides two functions for inline validation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>regex</code>: Validates content in a field using a regular expression.</p>
+</li>
+<li>
+<p><code>capturegroups</code>: Enhances multi-line text comparisons by processing non-capture group text as exact matches, applying regular expression matching only within named capture groups, and ensuring consistency for repeated capture groups.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When you use either the <code>regex</code> or <code>capturegroups</code> function for inline validation, the <code>cluster-compare</code> plugin enforces that identically named capture groups have the same values across multiple fields within a template. This means that if a named capture group, such as <code>(?&lt;username&gt;[a-z0-9]+)</code>, appears in multiple fields, the values for that group must be consistent throughout the template.</p>
+</div>
+<div class="sect5">
+<h6 id="cluster-compare-configure-regex_cc-create-reference">Configuring inline validation with the regex function</h6>
+<div class="paragraph">
+<p>Use the <code>regex</code> inline function to validate fields using regular expressions.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a <code>metadata.yaml</code> file to match your use case. Use the following structure as an example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v2
+parts:
+- name: Part1
+  components:
+  - name: Example
+    allOf:
+    - path: example.yaml
+      config:
+        perField:
+        - pathToKey: spec.bigTextBlock
+          inlineDiffFunc: regex</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>pathToKey: spec.bigTextBlock</code></dt>
+<dd>
+<p>Specifies the field for inline validation.</p>
+</dd>
+<dt class="hdlist1"><code>inlineDiffFunc: regex</code></dt>
+<dd>
+<p>Enables inline validation using regular expressions.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Use a regular expression to validate the field in the associated template:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: dashboard
+data:
+  username: "(?&lt;username&gt;[a-z0-9]+)"
+  bigTextBlock: |-
+    This is a big text block with some static content, like this line.
+    It also has a place where (?&lt;username&gt;[a-z0-9]+) would put in their own name. (?&lt;username&gt;[a-z0-9]+) would put in their own name.</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect5">
+<h6 id="cluster-compare-configure-capturegroups_cc-create-reference">Configuring inline validation with the capturegroups function</h6>
+<div class="paragraph">
+<p>Use the <code>capturegroups</code> inline function for more precise validation of fields featuring multi-line strings. This function also ensures that identically named capture groups have the same values across multiple fields.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a <code>metadata.yaml</code> file to match your use case. Use the following structure as an example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v2
+parts:
+- name: Part1
+  components:
+  - name: Example
+    allOf:
+    - path: example.yaml
+      config:
+        perField:
+        - pathToKey: data.username
+          inlineDiffFunc: regex
+        - pathToKey: spec.bigTextBlock
+          inlineDiffFunc: capturegroups</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>pathToKey: data.username</code></dt>
+<dd>
+<p>Specifies the field for inline validation.</p>
+</dd>
+<dt class="hdlist1"><code>inlineDiffFunc: regex</code></dt>
+<dd>
+<p>Enables inline validation using capture groups.</p>
+</dd>
+<dt class="hdlist1"><code>pathToKey: spec.bigTextBlock</code></dt>
+<dd>
+<p>Specifies the multi-line field for capture-group validation.</p>
+</dd>
+<dt class="hdlist1"><code>inlineDiffFunc: capturegroups</code></dt>
+<dd>
+<p>Enables inline validation using capture groups.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Use a regular expression to validate the field in the associated template:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: dashboard
+data:
+  username: "(?&lt;username&gt;[a-z0-9]+)"
+  bigTextBlock: |-
+    This static content outside of a capture group should match exactly.
+    Here is a username capture group: (?&lt;username&gt;[a-z0-9]+).
+    It should match this capture group: (?&lt;username&gt;[a-z0-9]+).</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the username value captured in the <code>data.username</code> field does not match the value captured in <code>bigTextBlock</code>, the <code>cluster-compare</code> plugin warns you about the inconsistent matching.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following is example output with a warning about the inconsistent matching:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">WARNING: Capturegroup (?&lt;username&gt;…) matched multiple values: « mismatchuser | exampleuser »</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="cluster-compare-output-description_cc-create-reference">Configuring descriptions for the output</h5>
+<div class="paragraph _abstract">
+<p>Each part, component, or template can include descriptions to provide additional context, instructions, or documentation links. These descriptions are helpful to convey why a specific template or structure is required.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Create a <code>metadata.yaml</code> file to match your use case. Use the following structure as an example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v2
+parts:
+  - name: Part1
+    description: |-
+      General text for every template under this part, unless overridden.
+    components:
+      - name: Component1
+        # With no description set, this inherits the description from the part above.
+        OneOf:
+          - path: Template1.yaml
+            # This inherits the component description, if set.
+          - path: Template2.yaml
+          - path: Template3.yaml
+            description: |-
+              This template has special instructions that don't apply to the others.
+      - name: Component2
+        description: |-
+          This overrides the part text with something more specific.
+          Multi-line text is supported, at all levels.
+        allOf:
+          - path: RequiredTemplate1.yaml
+          - path: RequiredTemplate2.yaml
+            description: |-
+              Required for important reasons.
+          - path: RequiredTemplate3.yaml</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cc-customize-advanced-intro_cc-customize-advanced">Customize reference configurations</h4>
+<div class="paragraph _abstract">
+<p>Apply advanced customizations such as manual matching and patches to refine how the <code>cluster-compare</code> plugin evaluates your reference configuration.</p>
+</div>
+<div class="sect4">
+<h5 id="cluster-compare-manual-match_cc-customize-advanced">Configuring manual matching between CRs and templates</h5>
+<div class="paragraph _abstract">
+<p>In some cases, the <code>cluster-compare</code> plugin&#8217;s default matching might not work as expected. You can manually define how a custom resource (CR) maps to a template by using a user configuration file.</p>
+</div>
+<div class="paragraph">
+<p>By default, the plugin maps a CR to a template based on the <code>apiversion</code>, <code>kind</code>, <code>name</code>, and <code>namespace</code> fields. However, multiple templates might match a single CR. For example, this can occur in the following scenarios:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Multiple templates exist with the same <code>apiversion</code>, <code>kind</code>, <code>name</code>, and <code>namespace</code> fields.</p>
+</li>
+<li>
+<p>Templates match any CR with a specific <code>apiversion</code> and <code>kind</code>, regardless of its <code>namespace</code> or <code>name</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When a CR matches multiple templates, the plugin uses a tie-breaking mechanism that selects the template with the fewest differences. To explicitly control which template the plugin chooses, you can create a user configuration YAML file that defines manual matching rules. You can pass this configuration file to the <code>cluster-compare</code> command to enforce the required template selection.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a user configuration file to define the manual matching criteria:</p>
+<div class="listingblock">
+<div class="title">Example <code>user-config.yaml</code> file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">correlationSettings:
+   manualCorrelation:
+      correlationPairs:
+        ptp.openshift.io/v1_PtpConfig_openshift-ptp_grandmaster: optional/ptp-config/PtpOperatorConfig.yaml
+        ptp.openshift.io/v1_PtpOperatorConfig_openshift-ptp_default: optional/ptp-config/PtpOperatorConfig.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>correlationSettings</code></dt>
+<dd>
+<p>The <code>correlationSettings</code> section contains the manual correlation settings.</p>
+</dd>
+<dt class="hdlist1"><code>manualCorrelation</code></dt>
+<dd>
+<p>The <code>manualCorrelation</code> section specifies that manual correlation is enabled.</p>
+</dd>
+<dt class="hdlist1"><code>correlationPairs</code></dt>
+<dd>
+<p>The <code>correlationPairs</code> section lists the CR and template pairs to manually match.</p>
+</dd>
+<dt class="hdlist1"><code>ptp.openshift.io/v1_PtpConfig_openshift-ptp_grandmaster: optional/ptp-config/PtpOperatorConfig.yaml</code></dt>
+<dd>
+<p>Specifies the CR and template pair to match. The CR specification uses the following format: <code>&lt;apiversion&gt;_&lt;kind&gt;_&lt;namespace&gt;_&lt;name&gt;</code>. For cluster-scoped CRs that do not have a namespace, use the following format: <code>&lt;apiversion&gt;_&lt;kind&gt;_&lt;name&gt;</code>. The path to the template must be relative to the <code>metadata.yaml</code> file.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Reference the user configuration file in a <code>cluster-compare</code> command by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc cluster-compare -r &lt;path_to_reference_config&gt;/metadata.yaml -c &lt;path_to_user_config&gt;/user-config.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>-c &lt;path_to_user_config&gt;/user-config.yaml</code></dt>
+<dd>
+<p>Specify the <code>user-config.yaml</code> file by using the <code>-c</code> option.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="cluster-compare-patching_cc-customize-advanced">Patching a reference configuration</h5>
+<div class="paragraph _abstract">
+<p>In certain scenarios, you might need to patch the reference configuration to handle expected deviations in a cluster configuration. The plugin applies the patch during the comparison process, modifying the specified resource fields as defined in the patch file.</p>
+</div>
+<div class="paragraph">
+<p>For example, you might need to temporarily patch a template because a cluster uses a deprecated field that is out-of-date with the latest reference configuration. Patched files are reported in the comparison output summary.</p>
+</div>
+<div class="paragraph">
+<p>You can create a patch file in two ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <code>cluster-compare</code> plugin to generate a patch YAML file.</p>
+</li>
+<li>
+<p>Create your own patch file.</p>
+</li>
+</ul>
+</div>
+<div class="sect5">
+<h6 id="_using_the_cluster_compare_plugin_to_generate_a_patch">Using the cluster-compare plugin to generate a patch</h6>
+<div class="paragraph">
+<p>You can use the <code>cluster-compare</code> plugin to generate a patch for specific template files. The plugin adjusts the template to ensure it matches with the cluster custom resource (CR). Any previously valid differences in the patched template are not reported. The plugin highlights the patched files in the output.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Generate patches for templates by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc cluster-compare -r &lt;path_to_reference_config&gt;/metadata.yaml -o 'generate-patches' --override-reason "A valid reason for the override" --generate-override-for "&lt;template1_path&gt;" --generate-override-for "&lt;template2_path&gt;" &gt; &lt;path_to_patches_file&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>-r</code> specifies the path to the metadata.yaml file of the reference configuration.</p>
+</li>
+<li>
+<p><code>-o</code> specifies the output format. To generate a patch output, you must use the <code>generate-patches</code> value.</p>
+</li>
+<li>
+<p><code>--override-reason</code> describes the reason for the patch.</p>
+</li>
+<li>
+<p><code>--generate-override-for</code> specifies a path to the template that requires a patch.</p>
+<div class="admonitionblock note">
+<table>
 <tr>
-<th class="tableblock halign-left valign-top">Feature</th>
-<th class="tableblock halign-left valign-top">Description</th>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You must use a file path for the target template that is relative to the <code>metadata.yaml</code> file. For example, if the file path for the <code>metadata.yaml</code> file is <code>./compare/metadata.yaml</code>, a relative file path for the template might be <code>optional/my-template.yaml</code>.</p>
+</div>
+</td>
 </tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Container Runtime</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the container runtime to <code>crun</code> for all node roles.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kubelet config and container mount namespace hiding</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Reduces the frequency of kubelet housekeeping and eviction monitoring, which reduces CPU usage</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SCTP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Optional configuration (enabled by default)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kdump</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Optional configuration (enabled by default)
-Enables kdump to capture debug information when a kernel panic occurs.
-The reference CRs that enable kdump have an increased memory reservation based on the set of drivers and kernel modules included in the reference configuration.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SR-IOV-related kernel arguments</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Include additional SR-IOV-related arguments in the kernel command line</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Set RCU Normal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Systemd service that sets <code>rcu_normal</code> after the system finishes startup</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">One-shot time sync</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Replaces <code>chrony-wait.service</code> with a one-time NTP system time synchronization job for control plane or worker nodes. This MachineConfig is required for nodes running PTP and should not be included for nodes which use NTP for time synchronization.</p></td>
-</tr>
-</tbody>
 </table>
+</div>
+</li>
+<li>
+<p><code>&lt;path_to_patches_file&gt;</code> specifies the filename and path for your patch.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Optional: Review the patch file before applying to the reference configuration:</p>
+<div class="listingblock">
+<div class="title">Example <code>patch-config</code> file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">- apiVersion: storage.k8s.io/v1
+  kind: StorageClass
+  name: crc-csi-hostpath-provisioner
+  patch: '{"provisioner":"kubevirt.io.hostpath-provisioner"}'
+  reason: A valid reason for the override
+  templatePath: optional/local-storage-operator/StorageClass.yaml
+  type: mergepatch</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>patch</code></dt>
+<dd>
+<p>The plugin patches the fields in the template to match the CR.</p>
+</dd>
+<dt class="hdlist1"><code>templatePath</code></dt>
+<dd>
+<p>The path to the template.</p>
+</dd>
+<dt class="hdlist1"><code>type: mergepatch</code></dt>
+<dd>
+<p>The <code>mergepath</code> option merges the JSON into the target template. Unspecified fields remain unchanged.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Apply the patch to the reference configuration by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc cluster-compare -r &lt;referenceConfigurationDirectory&gt; -p &lt;path_to_patches_file&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>-r</code> specifies the path to the metadata.yaml file of the reference configuration.</p>
+</li>
+<li>
+<p><code>-p</code> specifies the path to the patch file.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following is example output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">...
+
+Cluster CR: storage.k8s.io/v1_StorageClass_crc-csi-hostpath-provisioner
+Reference File: optional/local-storage-operator/StorageClass.yaml
+Description: Component description
+Diff Output: None
+Patched with patch
+Patch Reasons:
+- A valid reason for the override
+
+...
+
+No CRs are unmatched to reference CRs
+Metadata Hash: bb2165004c496b32e0c8509428fb99c653c3cf4fba41196ea6821bd05c3083ab
+Cluster CRs with patches applied: 1</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_creating_a_patch_file_manually">Creating a patch file manually</h6>
+<div class="paragraph">
+<p>You can write a patch file to handle expected deviations in a cluster configuration.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Patches have three possible values for the <code>type</code> field:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>mergepatch</code> - Merges the JSON into the target template. Unspecified fields remain unchanged.</p>
+</li>
+<li>
+<p><code>rfc6902</code> - Merges the JSON in the target template using <code>add</code>, <code>remove</code>, <code>replace</code>, <code>move</code>, and <code>copy</code> operations. Each operation targets a specific path.</p>
+</li>
+<li>
+<p><code>go-template</code> - Defines a Golang template. The plugin renders the template using the cluster custom resource (CR) as input and generates either a <code>mergepatch</code> or <code>rfc6902</code> patch for the target template.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following example shows the same patch using all three different formats.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a patch file to match your use case. Use the following structure as an example:</p>
+<div class="listingblock">
+<div class="title">Example <code>patch-config</code></div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">- apiVersion: v1
+  kind: Namespace
+  name: openshift-storage
+  reason: known deviation
+  templatePath: namespace.yaml
+  type: mergepatch
+  patch: '{"metadata":{"annotations":{"openshift.io/sa.scc.mcs":"s0:c29,c14","openshift.io/sa.scc.supplemental-groups":"1000840000/10000","openshift.io/sa.scc.uid-range":"1000840000/10000","reclaimspace.csiaddons.openshift.io/schedule":"@weekly","workload.openshift.io/allowed":null},"labels":{"kubernetes.io/metadata.name":"openshift-storage","olm.operatorgroup.uid/ffcf3f2d-3e37-4772-97bc-983cdfce128b":"","openshift.io/cluster-monitoring":"false","pod-security.kubernetes.io/audit":"privileged","pod-security.kubernetes.io/audit-version":"v1.24","pod-security.kubernetes.io/warn":"privileged","pod-security.kubernetes.io/warn-version":"v1.24","security.openshift.io/scc.podSecurityLabelSync":"true"}},"spec":{"finalizers":["kubernetes"]}}'
+- name: openshift-storage
+  apiVersion: v1
+  kind: Namespace
+  templatePath: namespace.yaml
+  type: rfc6902
+  reason: known deviation
+  patch: '[
+    {"op": "add", "path": "/metadata/annotations/openshift.io~1sa.scc.mcs", "value": "s0:c29,c14"},
+    {"op": "add", "path": "/metadata/annotations/openshift.io~1sa.scc.supplemental-groups", "value": "1000840000/10000"},
+    {"op": "add", "path": "/metadata/annotations/openshift.io~1sa.scc.uid-range", "value": "1000840000/10000"},
+    {"op": "add", "path": "/metadata/annotations/reclaimspace.csiaddons.openshift.io~1schedule", "value": "@weekly"},
+    {"op": "remove", "path": "/metadata/annotations/workload.openshift.io~1allowed"},
+    {"op": "add", "path": "/metadata/labels/kubernetes.io~1metadata.name", "value": "openshift-storage"},
+    {"op": "add", "path": "/metadata/labels/olm.operatorgroup.uid~1ffcf3f2d-3e37-4772-97bc-983cdfce128b", "value": ""},
+    {"op": "add", "path": "/metadata/labels/openshift.io~1cluster-monitoring", "value": "false"},
+    {"op": "add", "path": "/metadata/labels/pod-security.kubernetes.io~1audit", "value": "privileged"},
+    {"op": "add", "path": "/metadata/labels/pod-security.kubernetes.io~1audit-version", "value": "v1.24"},
+    {"op": "add", "path": "/metadata/labels/pod-security.kubernetes.io~1warn", "value": "privileged"},
+    {"op": "add", "path": "/metadata/labels/pod-security.kubernetes.io~1warn-version", "value": "v1.24"},
+    {"op": "add", "path": "/metadata/labels/security.openshift.io~1scc.podSecurityLabelSync", "value": "true"},
+    {"op": "add", "path": "/spec", "value": {"finalizers": ["kubernetes"]}}
+    ]'
+- apiVersion: v1
+  kind: Namespace
+  name: openshift-storage
+  reason: "known deviation"
+  templatePath: namespace.yaml
+  type: go-template
+  patch: |
+    {
+        "type": "rfc6902",
+        "patch": '[
+            {"op": "add", "path": "/metadata/annotations/openshift.io~1sa.scc.mcs", "value": "s0:c29,c14"},
+            {"op": "add", "path": "/metadata/annotations/openshift.io~1sa.scc.supplemental-groups", "value": "1000840000/10000"},
+            {"op": "add", "path": "/metadata/annotations/openshift.io~1sa.scc.uid-range", "value": "1000840000/10000"},
+            {"op": "add", "path": "/metadata/annotations/reclaimspace.csiaddons.openshift.io~1schedule", "value": "@weekly"},
+            {"op": "remove", "path": "/metadata/annotations/workload.openshift.io~1allowed"},
+            {"op": "add", "path": "/metadata/labels/kubernetes.io~1metadata.name", "value": "openshift-storage"},
+            {"op": "add", "path": "/metadata/labels/olm.operatorgroup.uid~1ffcf3f2d-3e37-4772-97bc-983cdfce128b", "value": ""},
+            {"op": "add", "path": "/metadata/labels/openshift.io~1cluster-monitoring", "value": "false"},
+            {"op": "add", "path": "/metadata/labels/pod-security.kubernetes.io~1audit", "value": "privileged"},
+            {"op": "add", "path": "/metadata/labels/pod-security.kubernetes.io~1audit-version", "value": "v1.24"},
+            {"op": "add", "path": "/metadata/labels/pod-security.kubernetes.io~1warn", "value": "privileged"},
+            {"op": "add", "path": "/metadata/labels/pod-security.kubernetes.io~1warn-version", "value": "v1.24"},
+            {"op": "add", "path": "/metadata/labels/security.openshift.io~1scc.podSecurityLabelSync", "value": "true"},
+            {"op": "add", "path": "/spec", "value": {"finalizers": {{ .spec.finalizers | toJson }} }}
+        ]'
+    }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The patches use the <code>kind</code>, <code>apiVersion</code>, <code>name</code>, and <code>namespace</code> fields to match the patch with the correct cluster CR.</p>
+</div>
+</li>
+<li>
+<p>Apply the patch to the reference configuration by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc cluster-compare -r &lt;referenceConfigurationDirectory&gt; -p &lt;path_to_patches_file&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>-r</code> specifies the path to the metadata.yaml file of the reference configuration.</p>
+</li>
+<li>
+<p><code>p</code> specifies the path to the patch file.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following is example output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">...
+
+Cluster CR: storage.k8s.io/v1_StorageClass_crc-csi-hostpath-provisioner
+Reference File: namespace.yaml
+Description: Component description
+Diff Output: None
+Patched with patch
+Patch Reasons:
+- known deviation
+- known deviation
+- known deviation
+
+...
+
+No CRs are unmatched to reference CRs
+Metadata Hash: bb2165004c496b32e0c8509428fb99c653c3cf4fba41196ea6821bd05c3083ab
+Cluster CRs with patches applied: 1</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cc-troubleshoot-intro_cc-troubleshoot">Troubleshoot cluster comparisons</h4>
+<div class="paragraph _abstract">
+<p>Diagnose and resolve common issues when comparing cluster configurations, including false positives and multiple template matches.</p>
+</div>
+<div class="sect4">
+<h5 id="troubleshooting-cc-false-positives_cc-troubleshoot">Troubleshooting false positives for missing resources</h5>
+<div class="paragraph _abstract">
+<p>The plugin might report a missing resource even though the cluster custom resource (CR) is present in the cluster.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Ensure you are using the latest version of the <code>cluster-compare</code> plugin. For more information, see "Installing the cluster-compare plugin".</p>
+</li>
+<li>
+<p>Ensure you are using the most up-to-date version of the reference configuration.</p>
+</li>
+<li>
+<p>Ensure that template has the same <code>apiVersion</code>, <code>kind</code>, <code>name</code>, and <code>namespace</code> fields as the cluster CR.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="troubleshooting-cc-multiple-matches_cc-troubleshoot">Troubleshooting multiple template matches for the same CR</h5>
+<div class="paragraph _abstract">
+<p>In some cases, more than one cluster CR can match a template because they feature the same <code>apiVersion</code>, <code>namespace</code>, and <code>kind</code>. The plugin&#8217;s default matching compares the CR that features the least differences.</p>
+</div>
+<div class="paragraph">
+<p>You can optionally configure your reference configuration to avoid this situation.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Ensure the templates feature distinct <code>apiVersion</code>, <code>namespace</code>, and <code>kind</code> values to ensure no duplicate template matching.</p>
+</li>
+<li>
+<p>Use a user configuration file to manually match a template to a CR. For more information, see "Configuring manual matching between CRs and templates".</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="telco-hub-architecture-overview_plan-telco-hub-cluster-deployment.html">Hub cluster architecture overview</a> | ↑ Up: <a href="_plan.html">Plan</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="choose-an-installation-method-con_choose-an-installation-method.html">Choose an installation method</a> →</p>
+<p>← Previous: <a href="cnf-measuring-latency_validate-node-performance-with-latency-tests.html">Measuring latency</a> | ↑ Up: <a href="_validate.html">Validate</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="_troubleshoot.html">Troubleshoot</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -3697,7 +4371,7 @@ The reference CRs that enable kdump have an increased memory reservation based o
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-22 13:31:11 +0100
+Last updated 2026-10-22 17:55:50 +0100
 </div>
 </div>
 <style>

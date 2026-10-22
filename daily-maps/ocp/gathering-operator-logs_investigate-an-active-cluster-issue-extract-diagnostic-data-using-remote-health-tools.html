@@ -477,47 +477,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
 <body id="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/ocp-jobs/configure-multi-tenant-namespace-isolation.adoc:20
-    include::modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc
-  maps/ocp/ocp-jobs/scale-components-based-on-cluster-size.adoc:34
-    include::modules/network-observability-flowcollector-api-specifications.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/modules/network-observability-flowcollector-api-specifications.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -593,9 +554,9 @@ How to fix these errors:
 </li>
 <li><a href="plan-telco-core-network-deployment-con_plan-telco-core-network-deployment.html">Plan telco core network deployment</a>
 </li>
-<li><a href="telco-hub-architecture-overview_plan-telco-hub-cluster-deployment.html">Hub cluster architecture overview</a>
+<li><a href="plan-telco-hub-cluster-deployment-intro_plan-telco-hub-cluster-deployment.html">Plan telco hub cluster deployment</a>
 </li>
-<li><a href="telco-ref-design-overview_plan-telco-ran-distributed-unit-deployment.html">Reference design specifications for telco RAN DU 5G deployments</a>
+<li><a href="plan-telco-ran-distributed-unit-deployment-intro_plan-telco-ran-distributed-unit-deployment.html">Plan telco RAN distributed unit deployment</a>
 </li>
 <li><a href="choose-an-installation-method-con_choose-an-installation-method.html">Choose an installation method</a>
 </li>
@@ -619,6 +580,8 @@ How to fix these errors:
 </li>
 <li><a href="storage-ephemeral-storage-types_understand-different-types-of-ephemeral-storage.html">Types of ephemeral storage</a>
 </li>
+<li><a href="understand-hardware-accelerators-intro_understand-hardware-accelerators.html">Understand hardware accelerators</a>
+</li>
 </ul>
 </li>
 <li><a href="_deploy.html">Deploy</a>
@@ -628,7 +591,7 @@ How to fix these errors:
 </li>
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
-<li><a href="about-ztp_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
+<li><a href="automate-edge-cluster-deployment-with-gitops-ztp-intro_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
 </li>
 </ul>
 </li>
@@ -678,6 +641,22 @@ How to fix these errors:
 <li><a href="rhcos-validate-live-media_validate-boot-artifacts.html">Validating RHCOS live media</a>
 </li>
 <li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
+</li>
+<li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-deploy-azure-con_deploying-hosted-control-planes-on-azure.html">Deploying hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-bm-overview_deploying-hosted-control-planes-on-bare-metal-with-the-agent-platform.html">About hosted control planes on bare metal with the Agent platform</a>
+</li>
+<li><a href="deploying-hosted-control-planes-on-openshift-virtualization-intro_deploying-hosted-control-planes-on-openshift-virtualization.html">Deploying hosted control planes on OpenShift Virtualization</a>
+</li>
+<li><a href="deploying-hosted-control-planes-on-non-bare-metal-agent-machines-intro_deploying-hosted-control-planes-on-non-bare-metal-agent-machines.html">Deploying hosted control planes on non-bare-metal agent machines</a>
+</li>
+<li><a href="install-sno-with-image-based-installation-intro_install-sno-with-image-based-installation.html">Install single-node OpenShift with image-based installation</a>
+</li>
+<li><a href="install-virtualized-control-plane-cluster-intro_install-virtualized-control-plane-cluster.html">Install a virtualized control plane cluster</a>
+</li>
+<li><a href="install-topology-aware-lifecycle-manager-intro_install-topology-aware-lifecycle-manager.html">Install the Topology Aware Lifecycle Manager</a>
 </li>
 </ul>
 </li>
@@ -750,6 +729,12 @@ How to fix these errors:
 <li><a href="upgrade-hosted-control-planes-intro_upgrade-hosted-control-planes.html">Upgrade Hosted Control Planes</a>
 </li>
 <li><a href="gathering-data-cluster-update_gather-data-about-a-cluster-update.html">Gathering data about your cluster update</a>
+</li>
+<li><a href="upgrade-sno-with-image-based-upgrade-intro_upgrade-sno-with-image-based-upgrade.html">Upgrade single-node OpenShift with image-based upgrade</a>
+</li>
+<li><a href="upgrade-managed-clusters-with-talm-intro_upgrade-managed-clusters-with-talm.html">Upgrade managed clusters with the Topology Aware Lifecycle Manager</a>
+</li>
+<li><a href="update-telco-cnf-clusters-intro_update-telco-cnf-clusters.html">Update telco CNF clusters</a>
 </li>
 </ul>
 </li>
@@ -896,7 +881,7 @@ How to fix these errors:
 </li>
 <li><a href="images-configuration-mco-and-registry-changes_understand-mco-rollout-behavior.html">Machine Config Operator behavior and registry changes</a>
 </li>
-<li><a href="cnf-about-topology-aware-lifecycle-manager-config_configure-topology-aware-lifecycle-manager.html">About the Topology Aware Lifecycle Manager configuration</a>
+<li><a href="configure-topology-aware-lifecycle-manager-intro_configure-topology-aware-lifecycle-manager.html">Configure the Topology Aware Lifecycle Manager</a>
 </li>
 <li><a href="configure-rhacm-for-telco-deployments-con_configure-rhacm-for-telco-deployments.html">Configure Red&#160;Hat Advanced Cluster Management (RHACM) for telco deployments</a>
 </li>
@@ -924,6 +909,8 @@ How to fix these errors:
 </li>
 <li><a href="hibernating-cluster-intro_hibernating-cluster.html">Hibernate a cluster</a>
 </li>
+<li><a href="add-worker-nodes-to-sno-clusters-intro_add-worker-nodes-to-sno-clusters.html">Add worker nodes to single-node OpenShift clusters</a>
+</li>
 </ul>
 </li>
 <li><a href="_develop.html">Develop</a>
@@ -948,6 +935,8 @@ How to fix these errors:
 <li><a href="developing-containerized-applications_review-platform-extensibility-and-development-workflows.html">Containerized application development</a>
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
+</li>
+<li><a href="consume-ptp-fast-event-notifications-intro_consume-ptp-fast-event-notifications.html">Consume PTP fast event notifications</a>
 </li>
 </ul>
 </li>
@@ -1160,6 +1149,10 @@ How to fix these errors:
 </li>
 <li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
 </li>
+<li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
+</li>
+<li><a href="configure-rdma-for-gpu-workloads-intro_configure-rdma-for-gpu-workloads.html">Configure RDMA for GPU workloads</a>
+</li>
 </ul>
 </li>
 <li><a href="_networking.html">Networking</a>
@@ -1193,6 +1186,8 @@ How to fix these errors:
 </li>
 <li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
+<li><a href="review-namespace-policy-and-verify-admin-policy-deployment-con_review-namespace-policy-and-verify-admin-policy-deployment.html">Review namespace policy and verify admin policy deployment</a>
+</li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
@@ -1220,6 +1215,12 @@ How to fix these errors:
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
+</li>
+<li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
+</li>
+<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1397,6 +1398,8 @@ How to fix these errors:
 </li>
 <li><a href="security-profiles-operator-release-notes_review-security-profiles-operator-release-notes.html">Security Profiles Operator release notes</a>
 </li>
+<li><a href="understand-telco-cluster-security-intro_understand-telco-cluster-security.html">Understand telco cluster security</a>
+</li>
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
@@ -1422,15 +1425,13 @@ How to fix these errors:
 </li>
 <li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
 </li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="view-node-status-and-resource-usage-con_view-node-status-and-resource-usage.html">View node status and resource usage</a>
 </li>
 <li><a href="view-pod-status-and-logs-con_view-pod-status-and-logs.html">View pod status and logs</a>
+</li>
+<li><a href="observe-telco-cluster-health-intro_observe-telco-cluster-health.html">Observe telco cluster health</a>
 </li>
 </ul>
 </li>
@@ -1564,6 +1565,8 @@ How to fix these errors:
 </li>
 <li><a href="manage-large-scale-ai-training-workloads-with-jobset-operator-intro_manage-large-scale-ai-training-workloads-with-jobset-operator.html">Manage large-scale AI training workloads with the JobSet Operator</a>
 </li>
+<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
+</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1654,11 +1657,13 @@ How to fix these errors:
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
 </li>
-<li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
+<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
 <li><a href="cnf-measuring-latency_validate-node-performance-with-latency-tests.html">Measuring latency</a>
+</li>
+<li><a href="compare-cluster-configurations-intro_compare-cluster-configurations.html">Compare cluster configurations</a>
 </li>
 </ul>
 </li>
@@ -1828,6 +1833,8 @@ How to fix these errors:
 </li>
 <li><a href="storage-troubleshooting-intro_troubleshoot-storage.html">Troubleshooting storage</a>
 </li>
+<li><a href="troubleshoot-telco-cluster-operations-intro_troubleshoot-telco-cluster-operations.html">Troubleshoot telco cluster operations</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1844,7 +1851,7 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#olm-installing-operators-from-software-catalog_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">About Operator installation from the software catalog</a></li><li class="level-4"><a href="#olm-installing-operators-from-software-catalog-configure_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">About Operator Catalogs in Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#support-log-gather-overview_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">About Support Log Gather</a></li><li class="level-5"><a href="#support-log-gather-install-console_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Installing Support Log Gather by using the web console</a></li><li class="level-5"><a href="#support-log-gather-install-cli_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Installing Support Log Gather by using the CLI</a></li><li class="level-5"><a href="#support-log-gather-config-cli_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configuring a Support Log Gather instance</a></li><li class="level-5"><a href="#support-log-gather-reduce-size_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configurations for reducing the must-gather log size</a></li><li class="level-5"><a href="#support-log-gather-config-params_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configuration parameters for MustGather custom resource</a></li><li class="level-5"><a href="#support-log-gather-uninstall-console_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Uninstalling Support Log Gather</a></li><li class="level-5"><a href="#support-log-gather-remove-resources-console_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Removing Support Log Gather resources</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#olm-installing-operators-from-software-catalog_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">About Operator installation from the software catalog</a></li><li class="level-4"><a href="#olm-installing-operators-from-software-catalog-configure_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">About Operator Catalogs in Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#support-log-gather-overview_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">About Support Log Gather</a></li><li class="level-5"><a href="#support-log-gather-install-console_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Installing Support Log Gather by using the web console</a></li><li class="level-5"><a href="#support-log-gather-install-cli_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Installing Support Log Gather by using the CLI</a></li><li class="level-5"><a href="#support-log-gather-config-cli_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configuring a Support Log Gather instance</a></li><li class="level-5"><a href="#support-log-gather-reduce-size_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configurations for reducing the must-gather log size</a></li><li class="level-5"><a href="#support-log-gather-config-params_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configuration parameters for the MustGather custom resource</a></li><li class="level-5"><a href="#support-log-gather-uninstall-console_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Uninstalling Support Log Gather</a></li><li class="level-5"><a href="#support-log-gather-remove-resources-console_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Removing Support Log Gather resources</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Gather Operator logs</h3>
@@ -2014,24 +2021,7 @@ These operators are built and distributed by the community.</p>
 <div class="sect3">
 <h4 id="support-log-gather-overview_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">About Support Log Gather</h4>
 <div class="paragraph _abstract">
-<p>Support Log Gather Operator builds on the functionality of the traditional <code>must-gather</code> tool to automate the collection of debugging data. It streamlines troubleshooting by packaging the collected information into a single <code>.tar</code> file and automatically uploading it to the specified Red&#160;Hat Support case.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Support Log Gather is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
-</div>
-<div class="paragraph">
-<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>Support Log Gather Operator builds on the functionality of the traditional <code>must-gather</code> tool to automate the collection of debugging data. It streamlines troubleshooting by packaging the collected information into a single <code>.tar</code> file and optionally uploading it to the specified Red&#160;Hat Support case.</p>
 </div>
 <div class="paragraph">
 <p>The key features of Support Log Gather include the following:</p>
@@ -2039,7 +2029,7 @@ These operators are built and distributed by the community.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>No administrator privileges required</strong>: Enables you to collect and upload logs without needing elevated permissions, making it easier for non-administrators to gather data securely.</p>
+<p><strong>Flexible permissions model</strong>: Creates a <code>MustGather</code> custom resource without <code>cluster-admin</code> privileges. The job runs as the service account that you specify in the CR. Ensure that this service account has sufficient permissions to collect diagnostic data.</p>
 </li>
 <li>
 <p><strong>Simplified log collection</strong>: Collects debugging data from the cluster, such as resource definitions and service logs.</p>
@@ -2047,29 +2037,15 @@ These operators are built and distributed by the community.</p>
 <li>
 <p><strong>Configurable data upload</strong>: Provides configuration options to either automatically upload the <code>.tar</code> file to a support case, or store it locally for manual upload.</p>
 </li>
+<li>
+<p><strong>Optional data obfuscation</strong>: Obfuscates sensitive information such as IP addresses, MAC addresses, secrets, and ConfigMaps in the collected bundle before upload or local persistence by using the integrated <code>must-gather-clean</code> tool.</p>
+</li>
 </ul>
 </div>
 <div class="sect4">
 <h5 id="support-log-gather-install-console_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Installing Support Log Gather by using the web console</h5>
 <div class="paragraph _abstract">
 <p>You can use the web console to install the Support Log Gather.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Support Log Gather is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
-</div>
-<div class="paragraph">
-<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -2171,23 +2147,6 @@ These operators are built and distributed by the community.</p>
 <div class="paragraph _abstract">
 <p>To enable automated log collection for support cases, you can install Support Log Gather from the command-line interface (CLI).</p>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Support Log Gather is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
-</div>
-<div class="paragraph">
-<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
@@ -2249,7 +2208,7 @@ metadata:
   name: support-log-gather-operator
   namespace: must-gather-operator
 spec:
-  channel: tech-preview
+  channel: stable
   name: support-log-gather-operator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
@@ -2302,7 +2261,7 @@ must-gather-operator-657fc74d64-2gg2w                             1/1     Runnin
 <div class="title">Example output</div>
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                          PACKAGE                       SOURCE            CHANNEL
-support-log-gather-operator   support-log-gather-operator   redhat-operators  tech-preview</code></pre>
+support-log-gather-operator   support-log-gather-operator   redhat-operators  stable</code></pre>
 </div>
 </div>
 </li>
@@ -2327,24 +2286,7 @@ support-log-gather-operator.v4.22.0   support log gather     4.22.0             
 <div class="sect4">
 <h5 id="support-log-gather-config-cli_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configuring a Support Log Gather instance</h5>
 <div class="paragraph _abstract">
-<p>You must create a <code>MustGather</code> custom resource (CR) from the command-line interface (CLI) to automate the collection of diagnostic data from your cluster. This process also automatically uploads the data to a Red&#160;Hat Support case.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Support Log Gather is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
-</div>
-<div class="paragraph">
-<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>You must create a <code>MustGather</code> custom resource (CR) from the command-line interface (CLI) to automate the collection of diagnostic data from your cluster. This process also optionally uploads the data to a Red&#160;Hat Support case.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -2356,10 +2298,13 @@ support-log-gather-operator.v4.22.0   support log gather     4.22.0             
 <p>You have installed Support Log Gather in your cluster.</p>
 </li>
 <li>
-<p>You have a Red&#160;Hat Support case ID.</p>
+<p>You have created a Kubernetes secret containing your Red Hat Customer Portal credentials. The secret must contain a username field and a password field.</p>
 </li>
 <li>
-<p>You have created a Kubernetes secret containing your Red Hat Customer Portal credentials. The secret must contain a username field and a password field.</p>
+<p>If you want to upload the logs to a Red&#160;Hat Support case, you have a Red&#160;Hat Support case ID.</p>
+</li>
+<li>
+<p>If you want to persist the archive, you have created a persistent volume claim (PVC) in the CR namespace.</p>
 </li>
 <li>
 <p>If you are using a custom image, you have configured an <code>ImageStream</code> resource in the Operator namespace that references an approved custom image URL.</p>
@@ -2393,10 +2338,6 @@ spec:
   imageStreamRef:
     name: "network-debug-tools"
     tag: "v1.2"
-  proxyConfig:
-    httpProxy: "http://proxy.example.com:8080"
-    httpsProxy: "https://proxy.example.com:8443"
-    noProxy: ".example.com,localhost"
   mustGatherTimeout: "1h30m9s"
   uploadTarget:
     type: SFTP
@@ -2476,6 +2417,20 @@ example-mg-gk8m8                                                  2/2     Runnin
 <p>When successful, the process must create an archive and upload it to the Red&#160;Hat Secure File Transfer Protocol (SFTP) server for the specified case.</p>
 </div>
 </li>
+<li>
+<p>If no job is created, check validation errors by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get mustgather example-mg -o yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For failures that the controller detects after the CR is created, the controller sets <code>status.status</code> to <code>Failed</code>, <code>status.completed</code> to <code>true</code>, and describes the failure in <code>status.reason</code>.</p>
+</div>
+<div class="paragraph">
+<p>However, if a referenced secret or obfuscation ConfigMap is missing, the controller generates a requeueing error and a <code>Warning</code> event without setting <code>status.status</code> to <code>Failed</code> so that the CR keeps retrying.</p>
+</div>
+</li>
 </ol>
 </div>
 </div>
@@ -2525,6 +2480,24 @@ spec:
 </dl>
 </div>
 </dd>
+</dl>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When you create a <code>MustGather</code> CR in the Operator namespace, do not set <code>serviceAccountName</code> to the Operator service account. Instead, use a dedicated service account with the permissions required to run the <code>must-gather</code> tool.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">Compress all uncompressed logs</dt>
 <dd>
 <p>You can configure the <code>gather</code> script to compress uncompressed diagnostic log files larger than 10 MB. Set the <code>REDUCE_LOGS</code> shell variable to <code>compress_logs</code> when you run the <code>gather</code> script.</p>
@@ -2601,12 +2574,12 @@ spec:
 </div>
 </div>
 <div class="sect4">
-<h5 id="support-log-gather-config-params_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configuration parameters for MustGather custom resource</h5>
+<h5 id="support-log-gather-config-params_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Configuration parameters for the MustGather custom resource</h5>
 <div class="paragraph _abstract">
-<p>You can manage your <code>MustGather</code> custom resource (CR) by creating a YAML file that specifies the parameters for data collection and the upload process.
-The following table provides an overview of the parameters that you can configure in the <code>MustGather</code> CR.</p>
+<p>You can configure data collection and upload settings by creating a <code>MustGather</code> custom resource (CR), and monitor the progress and completion status in the CR <code>status</code> section.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1132. Configuration parameters</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 60%;">
@@ -2689,6 +2662,41 @@ The following table provides an overview of the parameters that you can configur
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value must be a number with a time unit. The valid units are <code>s</code> (seconds), <code>m</code> (minutes), or <code>h</code> (hours). By default, no time limit is set.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.obfuscate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional: Specifies the post-gather obfuscation settings for sensitive data by using <code>must-gather-clean</code>. For more information, see "Data obfuscation in must-gather bundles".</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>object</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.obfuscate.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional: Enables data obfuscation. The valid values are <code>true</code> and <code>false</code>. When set to <code>true</code>, you must specify at least one of the following parameters: <code>uploadTarget</code>, <code>storage</code>, or <code>obfuscate.source</code>. The default value is <code>false</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.obfuscate.obfuscationConfigRef</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional: Specifies a ConfigMap in the custom resource namespace with a <code>config.yaml</code> key that contains <code>must-gather-clean</code> rules. If omitted, the default configuration is used, which is consistent IP and MAC address replacement and omitting Secrets and ConfigMaps.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>object</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.obfuscate.obfuscationConfigRef.name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies the name of the ConfigMap. This field is required when <code>spec.obfuscate.obfuscationConfigRef</code> is set.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.obfuscate.source</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional: Specifies an existing PVC bundle to run in obfuscate-only mode without performing a gather operation. You must specify <code>spec.uploadTarget</code> and set <code>spec.obfuscate.enabled</code> to <code>true</code>. When you specify this field, you must not specify <code>spec.imageStreamRef</code>, <code>spec.gatherSpec.command</code>, or set <code>spec.gatherSpec.audit</code> to <code>true</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>object</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.obfuscate.source.claim.name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies the name of the source PVC. This field is required when <code>spec.obfuscate.source</code> is specified.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.obfuscate.source.subPath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional: Specifies a subpath within the source PVC. The value must not contain relative parent directory indicators (<code>..</code>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.retainResourcesOnCompletion</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Optional: Specifies whether to retain the <code>must-gather</code> job and its related resources after the completion of data collection. The valid values are <code>true</code> and <code>false</code>. The default value is <code>false</code>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
@@ -2696,7 +2704,7 @@ The following table provides an overview of the parameters that you can configur
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.serviceAccountName</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Optional: Specifies the name of the service account. The default value is <code>default</code>.</p>
+<p>Specifies the name of a service account with sufficient permissions to collect diagnostic data.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2706,7 +2714,7 @@ The following table provides an overview of the parameters that you can configur
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Because the <code>default</code> service account has minimal permissions, you can specify the service account that you created.</p>
+<p>Because the <code>default</code> service account has minimal permissions, you can specify the service account that you created. When you create a <code>MustGather</code> CR in the Operator namespace, do not set <code>serviceAccountName</code> to the Operator service account. Instead, use a dedicated service account with the permissions required to run the <code>must-gather</code> tool.</p>
 </div>
 </td>
 </tr>
@@ -2724,17 +2732,17 @@ The following table provides an overview of the parameters that you can configur
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.storage</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Optional: Defines the storage configuration for the <code>must-gather</code> bundle.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>object</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.storage.persistentVolume</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Defines the details of the persistent volume.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>object</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.storage.persistentVolume.claim</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Defines the details of the persistent volume claim (PVC).</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>object</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.storage.persistentVolume.claim.name</code></p></td>
@@ -2743,7 +2751,7 @@ The following table provides an overview of the parameters that you can configur
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.storage.persistentVolume.subPath</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Optional: Specifies the path within the PVC to store the bundle.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional: Specifies the path within the PVC to store the bundle. Each run creates an isolated subdirectory under this path named <code>must-gather.local.&lt;cluster-id-suffix&gt;.&lt;timestamp&gt;.&lt;random&gt;</code>. The value must not contain relative parent directory indicators (<code>..</code>).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
 </tr>
 <tr>
@@ -2754,7 +2762,7 @@ The following table provides an overview of the parameters that you can configur
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.uploadTarget</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Optional: Defines the upload location for the <code>must-gather</code> bundle.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>object</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.uploadTarget.sftp.caseID</code></p></td>
@@ -2764,7 +2772,7 @@ The following table provides an overview of the parameters that you can configur
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.uploadTarget.sftp.caseManagementAccountSecretRef</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Defines the credentials required for authenticating and uploading the files to the Red&#160;Hat Customer Portal support case. The value must contain a <code>username</code> and <code>password</code> field.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>object</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.uploadTarget.sftp.caseManagementAccountSecretRef.name</code></p></td>
@@ -2802,6 +2810,43 @@ The following table provides an overview of the parameters that you can configur
 </tr>
 </table>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1133. Status fields</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 60%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status.completed</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies whether the job finished. The Operator sets this field to <code>true</code> when the job finishes.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status.conditions</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies standard Kubernetes conditions. On validation failure, the Operator sets the <code>type</code> field to <code>ReconcileError</code> and the <code>reason</code> field to <code>ValidationFailed</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of objects</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status.reason</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies the description of the outcome or validation failure.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status.status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies the overall resource status. The valid values are <code>Completed</code> and <code>Failed</code>. This field is empty while the job is running.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect4">
 <h5 id="support-log-gather-uninstall-console_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools">Uninstalling Support Log Gather</h5>
@@ -2955,7 +3000,7 @@ The following table provides an overview of the parameters that you can configur
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-22 13:31:11 +0100
+Last updated 2026-10-22 17:55:50 +0100
 </div>
 </div>
 <style>
