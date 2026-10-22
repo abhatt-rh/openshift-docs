@@ -437,8 +437,87 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
+<!-- navmap-right-toc-start -->
+<style>
+  body.navmap-has-right-toc { padding-right: 18em; }
+  #navmap-right-toc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 16em;
+    height: 100%;
+    overflow: auto;
+    padding: 1.25em 1em;
+    background: #f8f8f7;
+    border-left: 1px solid #e7e7e9;
+    z-index: 1000;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    font-size: .9em;
+  }
+  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
+  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
+  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
+  #navmap-right-toc li.level-3 { padding-left: 1em; }
+  #navmap-right-toc li.level-4 { padding-left: 2em; }
+  #navmap-right-toc li.level-5,
+  #navmap-right-toc li.level-6 { padding-left: 3em; }
+  #navmap-right-toc a { text-decoration: none; }
+  @media screen and (max-width: 1023px) {
+    body.navmap-has-right-toc { padding-right: 0; }
+    #navmap-right-toc {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 1em;
+      border: 1px solid #e7e7e9;
+      border-radius: 4px;
+    }
+  }
+
+
+</style>
+<!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
-<body id="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x" class="book toc2 toc-left">
+<body id="understand-update-channels-and-releases-intro_understanding-update-channels-releases" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/ocp-jobs/configure-multi-tenant-namespace-isolation.adoc:20
+    include::modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc
+  maps/ocp/ocp-jobs/scale-components-based-on-cluster-size.adoc:34
+    include::modules/network-observability-flowcollector-api-specifications.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/modules/network-observability-flowcollector-api-specifications.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -635,33 +714,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_upgrade.html">Upgrade</a>
 <ul class="sectlevel2">
-<li><a href="about-updates_update-clusters-overview.html">Cluster update overview</a>
+<li><a href="understanding-openshift-updates_understanding-openshift-updates.html">Introduction to OpenShift updates</a>
 </li>
-<li><a href="update-cluster-version-object_understand-openshift-updates.html">The ClusterVersion object</a>
+<li><a href="how-updates-work_how-updates-work.html">How cluster updates work</a>
 </li>
-<li><a href="understand-update-channels-and-releases-intro_understand-update-channels-and-releases.html">Understand update channels and releases</a>
+<li><a href="understand-update-channels-and-releases-intro_understanding-update-channels-releases.html"><span class="toc-current">Understand update channels and releases</span></a>
 </li>
-<li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
+<li><a href="understand-update-duration-intro_openshift-update-duration.html">Understand update duration</a>
 </li>
-<li><a href="update-assessment-ai_prepare-to-update-a-cluster.html">Analyzing update risk and status using AI</a>
+<li><a href="updating-cluster-prepare_updating-cluster-prepare.html">Preparing to update to Red&#160;Hat OpenShift Container Platform {product-version}</a>
 </li>
-<li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
+<li><a href="preparing-manual-creds-update_preparing-manual-creds-update.html">Prepare to update a cluster with manually maintained credentials</a>
 </li>
-<li><a href="before-updating-ocp_update-a-cluster-using-the-web-console.html">Before updating the Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="updating-cluster-web-console_updating-cluster-web-console.html">Update a cluster using the web console</a>
 </li>
-<li><a href="update-single-node-openshift_update-a-cluster-using-the-cli.html">About updating single node Red&#160;Hat OpenShift Container Platform</a>
+<li><a href="updating-cluster-cli_updating-cluster-cli.html">Update a cluster using the CLI</a>
 </li>
-<li><a href="perform-a-control-plane-only-update-intro_perform-a-control-plane-only-update.html">Perform a Control Plane Only update</a>
+<li><a href="perform-a-control-plane-only-update-intro_control-plane-only-update.html">Perform a Control Plane Only update</a>
 </li>
-<li><a href="example_perform-a-canary-rollout-update.html">Example Canary update strategy</a>
+<li><a href="update-using-custom-machine-config-pools_update-using-custom-machine-config-pools.html">Perform a canary rollout update</a>
 </li>
 <li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
 </li>
-<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a multi-architecture cluster</a>
+<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a cluster with multi-architecture compute machines</a>
 </li>
-<li><a href="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x.html"><span class="toc-current">Update from 4.x to 5.x</span></a>
+<li><a href="update-from-4-x-to-5-x-intro_updating-ocp-5.html">Update a cluster to Red&#160;Hat OpenShift Container Platform 5.0</a>
 </li>
-<li><a href="mco-image-streams-updating_update-nodes-from-rhcos-9-to-rhcos-10.html">Updating the nodes in an existing cluster from RHCOS 9.x to RHCOS 10.x</a>
+<li><a href="mco-image-streams_mco-image-streams.html">Updating the cluster to RHCOS 10.x</a>
 </li>
 <li><a href="update-hardware-on-vsphere-nodes-con_update-hardware-on-vsphere-nodes.html">Update hardware on vSphere nodes</a>
 </li>
@@ -1765,15 +1844,300 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#understanding-update-channels-overview_understanding-update-channels-releases">Overview of update channels</a></li><li class="level-4"><a href="#understanding-update-channels_understanding-update-channels-releases">Update channels</a></li><li class="level-5"><a href="#fast-version-channel_understanding-update-channels-releases">fast-{product-version} channel</a></li><li class="level-5"><a href="#stable-version-channel_understanding-update-channels-releases">stable-{product-version} channel</a></li><li class="level-5"><a href="#eus-4y-channel_understanding-update-channels-releases">eus-4.y channel</a></li><li class="level-5"><a href="#candidate-version-channel_understanding-update-channels-releases">candidate-{product-version} channel</a></li><li class="level-4"><a href="#restricted-network-clusters_understanding-update-channels-releases">Restricted network clusters</a></li><li class="level-4"><a href="#upgrade-version-paths_understanding-update-channels-releases">Update recommendations in the channel</a></li><li class="level-4"><a href="#conditional-updates-overview_understanding-update-channels-releases">Update recommendations and Conditional Updates</a></li><li class="level-4"><a href="#fast-stable-channel-strategies_understanding-update-channels-releases">What to consider when choosing an update channel</a></li><li class="level-4"><a href="#switching-between-channels_understanding-update-channels-releases">Considerations for switching between channels</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x">Update from 4.x to 5.x</h3>
+<h3 id="understand-update-channels-and-releases-intro_understanding-update-channels-releases">Understand update channels and releases</h3>
 <div class="paragraph _abstract">
-<p>When I want to update my system from 4.x to 5.x, I need the update procedure to verify compatibility and execute the version update so I can run the latest software release seamlessly.</p>
+<p>Update channels are how users declare the Red&#160;Hat OpenShift Container Platform major or minor version they intend to update their clusters to. They also allow users to choose the timing and level of support their updates will have through the <code>fast</code>, <code>stable</code>, <code>candidate</code>, and <code>eus</code> channel options.</p>
+</div>
+<div class="paragraph">
+<p>The Cluster Version Operator uses an update graph based on the channel declaration, along with other conditional information, to provide a list of recommended and conditional updates available to the cluster.</p>
+</div>
+<div class="sect3">
+<h4 id="understanding-update-channels-overview_understanding-update-channels-releases">Overview of update channels</h4>
+<div class="paragraph _abstract">
+<p>Update channels correspond to a minor version of Red&#160;Hat OpenShift Container Platform. The version number in the channel represents the target minor version that the cluster will eventually be updated to, even if it is higher than the cluster&#8217;s current minor version.</p>
+</div>
+<div class="paragraph">
+<p>For instance, Red&#160;Hat OpenShift Container Platform 4.10 update channels provide the following recommendations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Updates within 4.10.</p>
+</li>
+<li>
+<p>Updates within 4.9.</p>
+</li>
+<li>
+<p>Updates from 4.9 to 4.10, allowing all 4.9 clusters to eventually update to 4.10, even if they do not immediately meet the minimum z-stream version requirements.</p>
+</li>
+<li>
+<p><code>eus-4.10</code> only: updates within 4.8.</p>
+</li>
+<li>
+<p><code>eus-4.10</code> only: updates from 4.8 to 4.9 to 4.10, allowing all 4.8 clusters to eventually update to 4.10.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>4.10 update channels do not recommend updates to 4.11 or later releases. This strategy ensures that administrators must explicitly decide to update to the next minor version of Red&#160;Hat OpenShift Container Platform.</p>
+</div>
+<div class="paragraph">
+<p>Update channels control only release selection and do not impact the version of the cluster that you install. The <code>openshift-install</code> binary file for a specific version of Red&#160;Hat OpenShift Container Platform always installs that version.</p>
+</div>
+<div class="paragraph">
+<p>Red&#160;Hat OpenShift Container Platform {product-version} offers the following update channels:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>stable-{product-version}</code></p>
+</li>
+<li>
+<p><code>eus-4.y</code> (only offered for EUS versions and meant to facilitate updates between EUS versions)</p>
+</li>
+<li>
+<p><code>fast-{product-version}</code></p>
+</li>
+<li>
+<p><code>candidate-{product-version}</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you do not want the Cluster Version Operator to fetch available updates from the update recommendation service, you can use the <code>oc adm upgrade channel</code> command in the OpenShift CLI to configure an empty channel. This configuration can be helpful if, for example, a cluster has restricted network access and there is no local, reachable update recommendation service.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Red&#160;Hat recommends updating only to versions suggested by OpenShift Update Service. For a minor version update, versions must be contiguous. Red&#160;Hat does not test updates to noncontiguous versions and cannot guarantee compatibility with earlier versions.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="understanding-update-channels_understanding-update-channels-releases">Update channels</h4>
+<div class="paragraph _abstract">
+<p>Red&#160;Hat OpenShift Container Platform offers several update channels for you to choose from, depending on your desired update strategy.</p>
+</div>
+<div class="sect4">
+<h5 id="fast-version-channel_understanding-update-channels-releases">fast-{product-version} channel</h5>
+<div class="paragraph">
+<p>The <code>fast-{product-version}</code> channel is updated with new versions of Red&#160;Hat OpenShift Container Platform {product-version} as soon as Red&#160;Hat declares the version as a general availability (GA) release. As such, these releases are fully supported and purposed to be used in production environments.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="stable-version-channel_understanding-update-channels-releases">stable-{product-version} channel</h5>
+<div class="paragraph">
+<p>While the <code>fast-{product-version}</code> channel contains releases as soon as their errata are published, releases are added to the <code>stable-{product-version}</code> channel after a delay. During this delay, data is collected from multiple sources and analyzed for indications of product regressions. Once a significant number of data points have been collected, these releases are added to the stable channel.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Since the time required to obtain a significant number of data points varies based on many factors, Service LeveL Objective (SLO) is not offered for the delay duration between fast and stable channels. For more information, please see "Choosing the correct channel for your cluster"</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Newly installed clusters default to using stable channels.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="eus-4y-channel_understanding-update-channels-releases">eus-4.y channel</h5>
+<div class="paragraph">
+<p>In addition to the stable channel, all even-numbered minor versions of Red&#160;Hat OpenShift Container Platform offer <a href="https://access.redhat.com/support/policy/updates/openshift#ocp4_phases">Extended Update Support</a> (EUS). Releases promoted to the stable channel are also simultaneously promoted to the EUS channels. The primary purpose of the EUS channels is to serve as a convenience for clusters performing a Control Plane Only update.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Both standard and non-EUS subscribers can access all EUS repositories and necessary RPMs (<code>rhel-*-eus-rpms</code>) to be able to support critical purposes such as debugging and building drivers.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="candidate-version-channel_understanding-update-channels-releases">candidate-{product-version} channel</h5>
+<div class="paragraph">
+<p>The <code>candidate-{product-version}</code> channel offers unsupported early access to releases as soon as they are built. Releases present only in candidate channels
+may not contain the full feature set of eventual GA releases or features may be removed prior to GA. Additionally, these releases have not been subject to full
+Red&#160;Hat Quality Assurance and may not offer update paths to later GA releases. Given these caveats, the candidate channel is only suitable for testing purposes
+where destroying and recreating a cluster is acceptable.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="restricted-network-clusters_understanding-update-channels-releases">Restricted network clusters</h4>
+<div class="paragraph _abstract">
+<p>If you manage the container images for your Red&#160;Hat OpenShift Container Platform clusters yourself, you must consult the Red&#160;Hat errata that is associated with product releases and note any comments that impact updates.</p>
+</div>
+<div class="paragraph">
+<p>During an update, the user interface might warn you about switching between these versions, so you must ensure that you selected an appropriate version before you bypass those warnings.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="upgrade-version-paths_understanding-update-channels-releases">Update recommendations in the channel</h4>
+<div class="paragraph _abstract">
+<p>Red&#160;Hat OpenShift Container Platform maintains an update recommendation service that knows your installed Red&#160;Hat OpenShift Container Platform version and the path to take within the channel to get you to the next release.</p>
+</div>
+<div class="paragraph">
+<p>Update paths are also limited to versions relevant to your currently selected channel and its promotion characteristics.</p>
+</div>
+<div class="paragraph">
+<p>You can imagine seeing the following releases in your channel:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>{product-version}.0</p>
+</li>
+<li>
+<p>{product-version}.1</p>
+</li>
+<li>
+<p>{product-version}.3</p>
+</li>
+<li>
+<p>{product-version}.4</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The service recommends only updates that have been tested and have no known serious regressions. For example, if your cluster is on {product-version}.1 and Red&#160;Hat OpenShift Container Platform suggests {product-version}.4, then it is recommended to update from {product-version}.1 to {product-version}.4.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Do not rely on consecutive patch numbers. In this example, {product-version}.2 is not and never was available in the channel, therefore updates to {product-version}.2 are not recommended or supported.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="conditional-updates-overview_understanding-update-channels-releases">Update recommendations and Conditional Updates</h4>
+<div class="paragraph _abstract">
+<p>Red&#160;Hat monitors newly released versions and update paths associated with those versions before and after they are added to supported channels.</p>
+</div>
+<div class="paragraph">
+<p>If Red Hat removes update recommendations from any supported release, a superseding update recommendation will be provided to a future version that corrects the regression. There may however be a delay while the defect is corrected, tested, and promoted to your selected channel.</p>
+</div>
+<div class="paragraph">
+<p>Beginning in Red&#160;Hat OpenShift Container Platform 4.10, when update risks are confirmed, they are declared as Conditional Update risks for the relevant updates. Each known risk may apply to all clusters or only clusters matching certain conditions. Some examples include having the <code>Platform</code> set to <code>None</code> or the CNI provider set to <code>OpenShiftSDN</code>. The Cluster Version Operator (CVO) continually evaluates known risks against the current cluster state. If no risks match, the update is recommended. If the risk matches, those update paths are labeled as <em>updates with known issues</em>, and a reference link to the known issues is provided. The reference link helps the cluster admin decide if they want to accept the risk and continue to update their cluster.</p>
+</div>
+<div class="paragraph">
+<p>When Red&#160;Hat chooses to declare Conditional Update risks, that action is taken in all relevant channels simultaneously. Declaration of a Conditional Update risk may happen either before or after the update has been promoted to supported channels.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="fast-stable-channel-strategies_understanding-update-channels-releases">What to consider when choosing an update channel</h4>
+<div class="paragraph _abstract">
+<p>Choosing the appropriate update channel for your cluster involves two decisions.</p>
+</div>
+<div class="paragraph">
+<p>First, select the minor version you want for your cluster update. Selecting a channel which matches your current version ensures that you only apply z-stream updates and do not receive feature updates. Selecting an available channel which has a version greater than your current version will ensure that after one or more updates your cluster will have updated to that version. Your cluster will only be offered channels which match its current version, the next version, or the next EUS version.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Due to the complexity involved in planning updates between versions many minors apart, channels that assist in planning updates beyond a single Control Plane Only update are not offered.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Second, you should choose your desired rollout strategy. You may choose to update as soon as Red&#160;Hat declares a release GA by selecting from fast channels or you may want to wait for Red&#160;Hat to promote releases to the stable channel. Update recommendations offered in the <code>fast-{product-version}</code> and <code>stable-{product-version}</code> are both fully supported and benefit equally from ongoing data analysis. The promotion delay before promoting a release to the stable channel represents the only difference between the two channels. Updates to the latest z-streams are generally promoted to the stable channel within a week or two, however the delay when initially rolling out updates to the latest minor is much longer, generally 45-90 days. Please consider the promotion delay when choosing your desired channel, as waiting for promotion to the stable channel may affect your scheduling plans.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, there are several factors which may lead an organization to move clusters to the fast channel either permanently or temporarily including the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The desire to apply a specific fix known to affect your environment without delay.</p>
+</li>
+<li>
+<p>Application of CVE fixes without delay. CVE fixes may introduce regressions, so promotion delays still apply to z-streams with CVE fixes.</p>
+</li>
+<li>
+<p>Internal testing processes. If it takes your organization several weeks to qualify releases it is best test concurrently with our promotion process rather than waiting. This also assures that any telemetry signal provided to Red&#160;Hat is a factored into our rollout, so issues relevant to you can be fixed faster.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="switching-between-channels_understanding-update-channels-releases">Considerations for switching between channels</h4>
+<div class="paragraph _abstract">
+<p>You can switch your cluster&#8217;s update channel through the web console or the CLI, in order to access different update recommendations for your cluster.</p>
+</div>
+<div class="paragraph">
+<p>You can switch the channel from the CLI by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm upgrade channel &lt;channel&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The web console will display an alert if you switch to a channel that does not include the current release. The web console does not recommend any updates while on a channel without the current release. You can return to the original channel at any point, however.</p>
+</div>
+<div class="paragraph">
+<p>Changing your channel might impact the supportability of your cluster. The following conditions might apply:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Your cluster is still supported if you change from the <code>stable-{product-version}</code> channel to the <code>fast-{product-version}</code> channel.</p>
+</li>
+<li>
+<p>You can switch to the <code>candidate-{product-version}</code> channel at any time, but some releases for this channel might be unsupported.</p>
+</li>
+<li>
+<p>You can switch from the <code>candidate-{product-version}</code> channel to the <code>fast-{product-version}</code> channel if your current release is a general availability release.</p>
+</li>
+<li>
+<p>You can always switch from the <code>fast-{product-version}</code> channel to the <code>stable-{product-version}</code> channel. There is a possible delay of up to a day for the release to be promoted to <code>stable-{product-version}</code> if the current release was recently promoted.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a multi-architecture cluster</a> | ↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="mco-image-streams-updating_update-nodes-from-rhcos-9-to-rhcos-10.html">Updating the nodes in an existing cluster from RHCOS 9.x to RHCOS 10.x</a> →</p>
+<p>← Previous: <a href="how-updates-work_how-updates-work.html">How cluster updates work</a> | ↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="understand-update-duration-intro_openshift-update-duration.html">Understand update duration</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -1784,7 +2148,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-21 18:01:53 +0100
+Last updated 2026-10-22 13:31:11 +0100
 </div>
 </div>
 <style>

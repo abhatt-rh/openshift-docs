@@ -477,8 +477,47 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
 <body id="lvms-about-lvm-storage-installation_local-storage-with-the-logical-volume-manager" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/ocp-jobs/configure-multi-tenant-namespace-isolation.adoc:20
+    include::modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc
+  maps/ocp/ocp-jobs/scale-components-based-on-cluster-size.adoc:34
+    include::modules/network-observability-flowcollector-api-specifications.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/modules/network-observability-flowcollector-api-specifications.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -676,33 +715,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_upgrade.html">Upgrade</a>
 
 <ul class="sectlevel2">
-<li><a href="about-updates_update-clusters-overview.html">Cluster update overview</a>
+<li><a href="understanding-openshift-updates_understanding-openshift-updates.html">Introduction to OpenShift updates</a>
 </li>
-<li><a href="update-cluster-version-object_understand-openshift-updates.html">The ClusterVersion object</a>
+<li><a href="how-updates-work_how-updates-work.html">How cluster updates work</a>
 </li>
-<li><a href="understand-update-channels-and-releases-intro_understand-update-channels-and-releases.html">Understand update channels and releases</a>
+<li><a href="understand-update-channels-and-releases-intro_understanding-update-channels-releases.html">Understand update channels and releases</a>
 </li>
-<li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
+<li><a href="understand-update-duration-intro_openshift-update-duration.html">Understand update duration</a>
 </li>
-<li><a href="update-assessment-ai_prepare-to-update-a-cluster.html">Analyzing update risk and status using AI</a>
+<li><a href="updating-cluster-prepare_updating-cluster-prepare.html">Preparing to update to Red&#160;Hat OpenShift Container Platform {product-version}</a>
 </li>
-<li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
+<li><a href="preparing-manual-creds-update_preparing-manual-creds-update.html">Prepare to update a cluster with manually maintained credentials</a>
 </li>
-<li><a href="before-updating-ocp_update-a-cluster-using-the-web-console.html">Before updating the Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="updating-cluster-web-console_updating-cluster-web-console.html">Update a cluster using the web console</a>
 </li>
-<li><a href="update-single-node-openshift_update-a-cluster-using-the-cli.html">About updating single node Red&#160;Hat OpenShift Container Platform</a>
+<li><a href="updating-cluster-cli_updating-cluster-cli.html">Update a cluster using the CLI</a>
 </li>
-<li><a href="perform-a-control-plane-only-update-intro_perform-a-control-plane-only-update.html">Perform a Control Plane Only update</a>
+<li><a href="perform-a-control-plane-only-update-intro_control-plane-only-update.html">Perform a Control Plane Only update</a>
 </li>
-<li><a href="example_perform-a-canary-rollout-update.html">Example Canary update strategy</a>
+<li><a href="update-using-custom-machine-config-pools_update-using-custom-machine-config-pools.html">Perform a canary rollout update</a>
 </li>
 <li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
 </li>
-<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a multi-architecture cluster</a>
+<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a cluster with multi-architecture compute machines</a>
 </li>
-<li><a href="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x.html">Update from 4.x to 5.x</a>
+<li><a href="update-from-4-x-to-5-x-intro_updating-ocp-5.html">Update a cluster to Red&#160;Hat OpenShift Container Platform 5.0</a>
 </li>
-<li><a href="mco-image-streams-updating_update-nodes-from-rhcos-9-to-rhcos-10.html">Updating the nodes in an existing cluster from RHCOS 9.x to RHCOS 10.x</a>
+<li><a href="mco-image-streams_mco-image-streams.html">Updating the cluster to RHCOS 10.x</a>
 </li>
 <li><a href="update-hardware-on-vsphere-nodes-con_update-hardware-on-vsphere-nodes.html">Update hardware on vSphere nodes</a>
 </li>
@@ -2432,7 +2471,7 @@ spec:
 <p>The cluster status reports the effective policy by using <code>DeviceDiscoveryPolicyStatus</code>, which distinguishes three runtime states:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 853. Effective policy status values</caption>
+<caption class="title">Table 856. Effective policy status values</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -2462,7 +2501,7 @@ spec:
 <p>The following table shows the behavior matrix:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 854. Device discovery behavior by configuration</caption>
+<caption class="title">Table 857. Device discovery behavior by configuration</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2516,7 +2555,7 @@ spec:
 <p>The discovery policy also controls whether the controller re-queues for periodic device scanning:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 855. Requeue behavior by configuration</caption>
+<caption class="title">Table 858. Requeue behavior by configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2576,7 +2615,7 @@ spec:
 <p>The following table shows how the device discovery policy feature interacts with other features:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 856. Device discovery policy feature interactions</caption>
+<caption class="title">Table 859. Device discovery policy feature interactions</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -2788,7 +2827,7 @@ spec:
 <p>The <code>LVMCluster</code> CR fields are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 857. <code>LVMCluster</code> CR fields</caption>
+<caption class="title">Table 860. <code>LVMCluster</code> CR fields</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3258,7 +3297,7 @@ You can modify this field after the LVM cluster has been created.</p>
 <p>The following tables describe the chunk size and volume size limits for static and host configurations:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 858. Tested configuration</caption>
+<caption class="title">Table 861. Tested configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3281,7 +3320,7 @@ You can modify this field after the LVM cluster has been created.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 859. Theoretical size limits for static configuration</caption>
+<caption class="title">Table 862. Theoretical size limits for static configuration</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3308,7 +3347,7 @@ You can modify this field after the LVM cluster has been created.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 860. Theoretical size limits for a host configuration</caption>
+<caption class="title">Table 863. Theoretical size limits for a host configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4899,7 +4938,7 @@ lvm-block-1   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi        RWO
 <p>If you set an empty configuration (storageClassOptions: {}) or omit the field entirely, the Operator uses the following default settings:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 861. StorageClass Options Reference</caption>
+<caption class="title">Table 864. StorageClass Options Reference</caption>
 <colgroup>
 <col style="width: 12.5%;">
 <col style="width: 12.5%;">
@@ -6539,7 +6578,7 @@ lvm-block-1-clone   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi     
 <p>The following table describes the <code>topolvm</code> metrics:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 862. <code>topolvm</code> metrics</caption>
+<caption class="title">Table 865. <code>topolvm</code> metrics</caption>
 <colgroup>
 <col>
 <col>
@@ -6601,7 +6640,7 @@ lvm-block-1-clone   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi     
 <p>LVM Storage sends the following alerts when the usage of the thin pool and volume group exceeds a certain value:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 863. LVM Storage alerts</caption>
+<caption class="title">Table 866. LVM Storage alerts</caption>
 <colgroup>
 <col>
 <col>
@@ -7174,7 +7213,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table describes the volume failure error messages:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 864. Volume failure error messages</caption>
+<caption class="title">Table 867. Volume failure error messages</caption>
 <colgroup>
 <col>
 <col>
@@ -7395,7 +7434,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares the support for storage types and filesystems provided by LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) to provision local storage:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 865. Comparison of the support for storage types and filesystems</caption>
+<caption class="title">Table 868. Comparison of the support for storage types and filesystems</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 23.8095%;">
@@ -7599,7 +7638,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares how LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) support core functionalities for provisioning local storage:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 866. Comparison of the support for core functionalities</caption>
+<caption class="title">Table 869. Comparison of the support for core functionalities</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 23.8095%;">
@@ -8065,7 +8104,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares the performance and isolation capabilities of LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) in provisioning local storage.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 867. Comparison of performance and isolation capabilities</caption>
+<caption class="title">Table 870. Comparison of performance and isolation capabilities</caption>
 <colgroup>
 <col style="width: 21.7391%;">
 <col style="width: 26.0869%;">
@@ -8206,7 +8245,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares the additional features provided by LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) to provision local storage:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 868. Comparison of the support for additional functionalities</caption>
+<caption class="title">Table 871. Comparison of the support for additional functionalities</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 23.8095%;">
@@ -8424,7 +8463,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-21 18:01:53 +0100
+Last updated 2026-10-22 13:31:11 +0100
 </div>
 </div>
 <style>

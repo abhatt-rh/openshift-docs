@@ -477,8 +477,47 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
-<body id="update-cluster-version-object_understand-openshift-updates" class="book toc2 toc-left navmap-has-right-toc">
+<body id="preparing-manual-creds-update_preparing-manual-creds-update" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/ocp-jobs/configure-multi-tenant-namespace-isolation.adoc:20
+    include::modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc
+  maps/ocp/ocp-jobs/scale-components-based-on-cluster-size.adoc:34
+    include::modules/network-observability-flowcollector-api-specifications.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/modules/network-observability-flowcollector-api-specifications.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -675,33 +714,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_upgrade.html">Upgrade</a>
 <ul class="sectlevel2">
-<li><a href="about-updates_update-clusters-overview.html">Cluster update overview</a>
+<li><a href="understanding-openshift-updates_understanding-openshift-updates.html">Introduction to OpenShift updates</a>
 </li>
-<li><a href="update-cluster-version-object_understand-openshift-updates.html"><span class="toc-current">The ClusterVersion object</span></a>
+<li><a href="how-updates-work_how-updates-work.html">How cluster updates work</a>
 </li>
-<li><a href="understand-update-channels-and-releases-intro_understand-update-channels-and-releases.html">Understand update channels and releases</a>
+<li><a href="understand-update-channels-and-releases-intro_understanding-update-channels-releases.html">Understand update channels and releases</a>
 </li>
-<li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
+<li><a href="understand-update-duration-intro_openshift-update-duration.html">Understand update duration</a>
 </li>
-<li><a href="update-assessment-ai_prepare-to-update-a-cluster.html">Analyzing update risk and status using AI</a>
+<li><a href="updating-cluster-prepare_updating-cluster-prepare.html">Preparing to update to Red&#160;Hat OpenShift Container Platform {product-version}</a>
 </li>
-<li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
+<li><a href="preparing-manual-creds-update_preparing-manual-creds-update.html"><span class="toc-current">Prepare to update a cluster with manually maintained credentials</span></a>
 </li>
-<li><a href="before-updating-ocp_update-a-cluster-using-the-web-console.html">Before updating the Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="updating-cluster-web-console_updating-cluster-web-console.html">Update a cluster using the web console</a>
 </li>
-<li><a href="update-single-node-openshift_update-a-cluster-using-the-cli.html">About updating single node Red&#160;Hat OpenShift Container Platform</a>
+<li><a href="updating-cluster-cli_updating-cluster-cli.html">Update a cluster using the CLI</a>
 </li>
-<li><a href="perform-a-control-plane-only-update-intro_perform-a-control-plane-only-update.html">Perform a Control Plane Only update</a>
+<li><a href="perform-a-control-plane-only-update-intro_control-plane-only-update.html">Perform a Control Plane Only update</a>
 </li>
-<li><a href="example_perform-a-canary-rollout-update.html">Example Canary update strategy</a>
+<li><a href="update-using-custom-machine-config-pools_update-using-custom-machine-config-pools.html">Perform a canary rollout update</a>
 </li>
 <li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
 </li>
-<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a multi-architecture cluster</a>
+<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a cluster with multi-architecture compute machines</a>
 </li>
-<li><a href="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x.html">Update from 4.x to 5.x</a>
+<li><a href="update-from-4-x-to-5-x-intro_updating-ocp-5.html">Update a cluster to Red&#160;Hat OpenShift Container Platform 5.0</a>
 </li>
-<li><a href="mco-image-streams-updating_update-nodes-from-rhcos-9-to-rhcos-10.html">Updating the nodes in an existing cluster from RHCOS 9.x to RHCOS 10.x</a>
+<li><a href="mco-image-streams_mco-image-streams.html">Updating the cluster to RHCOS 10.x</a>
 </li>
 <li><a href="update-hardware-on-vsphere-nodes-con_update-hardware-on-vsphere-nodes.html">Update hardware on vSphere nodes</a>
 </li>
@@ -1805,16 +1844,36 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#update-availability-data_understand-openshift-updates">Update availability data</a></li><li class="level-4"><a href="#update-evaluate-availability_understand-openshift-updates">Evaluation of update availability</a></li><li class="level-4"><a href="#update-release-images_understand-openshift-updates">Release images</a></li><li class="level-4"><a href="#update-process-workflow_understand-openshift-updates">Update process workflow</a></li><li class="level-4"><a href="#update-manifest-application_understand-openshift-updates">Understanding how manifests are applied during an update</a></li><li class="level-4"><a href="#mco-update-process_understand-openshift-updates">Understanding how the Machine Config Operator updates nodes</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#about-manually-maintained-credentials-upgrade_preparing-manual-creds-update">Update requirements for clusters with manually maintained credentials</a></li><li class="level-5"><a href="#cco-platform-options_preparing-manual-creds-update">Cloud credential configuration options and update requirements by platform type</a></li><li class="level-5"><a href="#cco-determine-mode-gui_preparing-manual-creds-update">Determine the Cloud Credential Operator mode by using the web console</a></li><li class="level-5"><a href="#cco-determine-mode-cli_preparing-manual-creds-update">Determine the Cloud Credential Operator mode by using the CLI</a></li><li class="level-5"><a href="#cco-determine-mode-next_preparing-manual-creds-update">Determining the next steps in the update</a></li><li class="level-4"><a href="#cco-ccoctl-upgrading-extracting_preparing-manual-creds-update">Extracting and preparing credentials request resources</a></li><li class="level-4"><a href="#cco-ccoctl-configuring_preparing-manual-creds-update">Configuring the Cloud Credential Operator utility for a cluster update</a></li><li class="level-4"><a href="#cco-ccoctl-upgrading_preparing-manual-creds-update">Updating cloud provider resources with the Cloud Credential Operator utility</a></li><li class="level-4"><a href="#manually-maintained-credentials-upgrade_preparing-manual-creds-update">Manually updating cloud provider resources</a></li><li class="level-4"><a href="#cco-manual-upgrade-annotation_preparing-manual-creds-update">Indicating that the cluster is ready to upgrade</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="update-cluster-version-object_understand-openshift-updates">The ClusterVersion object</h3>
+<h3 id="preparing-manual-creds-update_preparing-manual-creds-update">Prepare to update a cluster with manually maintained credentials</h3>
 <div class="paragraph _abstract">
-<p>One of the resources that the Cluster Version Operator (CVO) monitors is the <code>ClusterVersion</code> resource.</p>
+<p>Before you update a cluster that uses manually maintained credentials, accommodate any new or changed cloud provider credentials in the target release. This preparation ensures the Cloud Credential Operator (CCO) does not block the upgrade.</p>
 </div>
 <div class="paragraph">
-<p>Administrators and Red&#160;Hat OpenShift Container Platform components can communicate or interact with the CVO through the <code>ClusterVersion</code> object.
-The desired CVO state is declared through the <code>ClusterVersion</code> object and the current CVO state is reflected in the object&#8217;s status.</p>
+<p>The CCO <code>Upgradeable</code> status for a cluster with manually maintained credentials is <code>False</code> by default.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For minor releases, for example, from 4.20 to 4.21, this status prevents you from updating until you have addressed any updated permissions and annotated the <code>CloudCredential</code> resource to indicate that the permissions are updated as needed for the next version. This annotation changes the <code>Upgradeable</code> status to <code>True</code>.</p>
+</li>
+<li>
+<p>For z-stream releases, for example, from 4.20.0 to 4.20.1, no permissions are added or changed, so the update is not blocked.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="about-manually-maintained-credentials-upgrade_preparing-manual-creds-update">Update requirements for clusters with manually maintained credentials</h4>
+<div class="paragraph _abstract">
+<p>Before you update a cluster that uses manually maintained credentials with the Cloud Credential Operator (CCO), you must update the cloud provider resources for the new release.</p>
+</div>
+<div class="paragraph">
+<p>If the cloud credential management for your cluster was configured using the CCO utility (<code>ccoctl</code>), use the <code>ccoctl</code> utility to update the resources. Clusters that were configured to use manual mode without the <code>ccoctl</code> utility require manual updates for the resources.</p>
+</div>
+<div class="paragraph">
+<p>After updating the cloud provider resources, you must update the <code>upgradeable-to</code> annotation for the cluster to indicate that it is ready to update.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1824,425 +1883,93 @@ The desired CVO state is declared through the <code>ClusterVersion</code> object
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Do not directly modify the <code>ClusterVersion</code> object. Instead, use interfaces such as the <code>oc</code> CLI or the web console to declare your update target.</p>
+<p>The process to update the cloud provider resources and the <code>upgradeable-to</code> annotation can only be completed by using command-line tools.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
+<div class="sect4">
+<h5 id="cco-platform-options_preparing-manual-creds-update">Cloud credential configuration options and update requirements by platform type</h5>
 <div class="paragraph">
-<p>The CVO continually reconciles the cluster with the target state declared in the <code>spec</code> property of the <code>ClusterVersion</code> resource.
-When the desired release differs from the actual release, that reconciliation updates the cluster.</p>
-</div>
-<div class="sect3">
-<h4 id="update-availability-data_understand-openshift-updates">Update availability data</h4>
-<div class="paragraph">
-<p>The <code>ClusterVersion</code> resource also contains information about updates that are available to the cluster.
-This includes updates that are available, but not recommended due to a known risk that applies to the cluster.
-These updates are known as conditional updates.
-To learn how the CVO maintains this information about available updates in the <code>ClusterVersion</code> resource, see the "Evaluation of update availability" section.</p>
+<p>Some platforms only support using the CCO in one mode. For clusters that are installed on those platforms, the platform type determines the credentials update requirements.</p>
 </div>
 <div class="paragraph">
-<p>You can inspect all available updates with the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm upgrade --include-not-recommended</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The additional <code>--include-not-recommended</code> parameter includes updates that are available with known issues that apply to the cluster.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">Cluster version is 4.13.40
-
-Upstream is unset, so the cluster will use an appropriate default.
-Channel: stable-4.14 (available channels: candidate-4.13, candidate-4.14, eus-4.14, fast-4.13, fast-4.14, stable-4.13, stable-4.14)
-
-Recommended updates:
-
-  VERSION     IMAGE
-  4.14.27     quay.io/openshift-release-dev/ocp-release@sha256:4d30b359aa6600a89ed49ce6a9a5fdab54092bcb821a25480fdfbc47e66af9ec
-  4.14.26     quay.io/openshift-release-dev/ocp-release@sha256:4fe7d4ccf4d967a309f83118f1a380a656a733d7fcee1dbaf4d51752a6372890
-  4.14.25     quay.io/openshift-release-dev/ocp-release@sha256:a0ef946ef8ae75aef726af1d9bbaad278559ad8cab2c1ed1088928a0087990b6
-  4.14.24     quay.io/openshift-release-dev/ocp-release@sha256:0a34eac4b834e67f1bca94493c237e307be2c0eae7b8956d4d8ef1c0c462c7b0
-  4.14.23     quay.io/openshift-release-dev/ocp-release@sha256:f8465817382128ec7c0bc676174bad0fb43204c353e49c146ddd83a5b3d58d92
-  4.13.42     quay.io/openshift-release-dev/ocp-release@sha256:dcf5c3ad7384f8bee3c275da8f886b0bc9aea7611d166d695d0cf0fff40a0b55
-  4.13.41     quay.io/openshift-release-dev/ocp-release@sha256:dbb8aa0cf53dc5ac663514e259ad2768d8c82fd1fe7181a4cfb484e3ffdbd3ba
-
-Updates with known issues:
-
-  Version: 4.14.22
-  Image: quay.io/openshift-release-dev/ocp-release@sha256:7093fa606debe63820671cc92a1384e14d0b70058d4b4719d666571e1fc62190
-  Reason: MultipleReasons
-  Message: Exposure to AzureRegistryImageMigrationUserProvisioned is unknown due to an evaluation failure: client-side throttling: only 18.061µs has elapsed since the last match call completed for this cluster condition backend; this cached cluster condition request has been queued for later execution
-  In Azure clusters with the user-provisioned registry storage, the in-cluster image registry component may struggle to complete the cluster update. https://issues.redhat.com/browse/IR-468
-
-  Incoming HTTP requests to services exposed by Routes may fail while routers reload their configuration, especially when made with Apache HTTPClient versions before 5.0. The problem is more likely to occur in clusters with higher number of Routes and corresponding endpoints. https://issues.redhat.com/browse/NE-1689
-
-  Version: 4.14.21
-  Image: quay.io/openshift-release-dev/ocp-release@sha256:6e3fba19a1453e61f8846c6b0ad3abf41436a3550092cbfd364ad4ce194582b7
-  Reason: MultipleReasons
-  Message: Exposure to AzureRegistryImageMigrationUserProvisioned is unknown due to an evaluation failure: client-side throttling: only 33.991µs has elapsed since the last match call completed for this cluster condition backend; this cached cluster condition request has been queued for later execution
-  In Azure clusters with the user-provisioned registry storage, the in-cluster image registry component may struggle to complete the cluster update. https://issues.redhat.com/browse/IR-468
-
-  Incoming HTTP requests to services exposed by Routes may fail while routers reload their configuration, especially when made with Apache HTTPClient versions before 5.0. The problem is more likely to occur in clusters with higher number of Routes and corresponding endpoints. https://issues.redhat.com/browse/NE-1689</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>oc adm upgrade</code> command queries the <code>ClusterVersion</code> resource for information about available updates and presents it in a human-readable format.</p>
-</div>
-<div class="paragraph">
-<p>One way to directly inspect the underlying availability data created by the CVO is by querying the <code>ClusterVersion</code> resource with the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusterversion version -o json | jq '.status.availableUpdates'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">[
-  {
-    "channels": [
-      "candidate-4.11",
-      "candidate-4.12",
-      "fast-4.11",
-      "fast-4.12"
-    ],
-    "image": "quay.io/openshift-release-dev/ocp-release@sha256:400267c7f4e61c6bfa0a59571467e8bd85c9188e442cbd820cc8263809be3775",
-    "url": "https://access.redhat.com/errata/RHBA-2023:3213",
-    "version": "4.11.41"
-  },
-  ...
-]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>A similar command can be used to check conditional updates:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusterversion version -o json | jq '.status.conditionalUpdates'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">[
-  {
-    "conditions": [
-      {
-        "lastTransitionTime": "2023-05-30T16:28:59Z",
-        "message": "The 4.11.36 release only resolves an installation issue https://issues.redhat.com//browse/OCPBUGS-11663 , which does not affect already running clusters. 4.11.36 does not include fixes delivered in recent 4.11.z releases and therefore upgrading from these versions would cause fixed bugs to reappear. Red Hat does not recommend upgrading clusters to 4.11.36 version for this reason. https://access.redhat.com/solutions/7007136",
-        "reason": "PatchesOlderRelease",
-        "status": "False",
-        "type": "Recommended"
-      }
-    ],
-    "release": {
-      "channels": [...],
-      "image": "quay.io/openshift-release-dev/ocp-release@sha256:8c04176b771a62abd801fcda3e952633566c8b5ff177b93592e8e8d2d1f8471d",
-      "url": "https://access.redhat.com/errata/RHBA-2023:1733",
-      "version": "4.11.36"
-    },
-    "risks": [...]
-  },
-  ...
-]</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="update-evaluate-availability_understand-openshift-updates">Evaluation of update availability</h4>
-<div class="paragraph _abstract">
-<p>The Cluster Version Operator (CVO) periodically queries the OpenShift Update Service (OSUS) for the most recent data about update possibilities.</p>
-</div>
-<div class="paragraph">
-<p>This data is based on the cluster&#8217;s subscribed channel.
-The CVO then saves information about update recommendations into either the <code>availableUpdates</code> or <code>conditionalUpdates</code> field of its <code>ClusterVersion</code> resource.</p>
-</div>
-<div class="paragraph">
-<p>The CVO periodically checks the conditional updates for update risks.
-These risks are conveyed through the data served by the OSUS, which contains information for each version about known issues that might affect a cluster updated to that version.
-Most risks are limited to clusters with specific characteristics, such as clusters with a certain size or clusters that are deployed in a particular cloud platform.</p>
-</div>
-<div class="paragraph">
-<p>The CVO continuously evaluates its cluster characteristics against the conditional risk information for each conditional update. If the CVO finds that the cluster matches the criteria, the CVO stores this information in the <code>conditionalUpdates</code> field of its <code>ClusterVersion</code> resource.
-If the CVO finds that the cluster does not match the risks of an update, or that there are no risks associated with the update, it stores the target version in the <code>availableUpdates</code> field of its <code>ClusterVersion</code> resource.</p>
-</div>
-<div class="paragraph">
-<p>The user interface, either the web console or the OpenShift CLI (<code>oc</code>), presents this information in sectioned headings to the administrator.
-Each known issue associated with the update path contains a link to further resources about the risk so that the administrator can make an informed decision about the update.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="update-release-images_understand-openshift-updates">Release images</h4>
-<div class="paragraph _abstract">
-<p>A release image is the delivery mechanism for a specific Red&#160;Hat OpenShift Container Platform (OCP) version.</p>
-</div>
-<div class="paragraph">
-<p>It contains the release metadata, a Cluster Version Operator (CVO) binary matching the release version, every manifest needed to deploy individual cluster Operators, and a list of SHA digest-versioned references to all container images that make up this version.</p>
-</div>
-<div class="paragraph">
-<p>You can extract a specific release image by running the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm release extract &lt;release image&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example command</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm release extract quay.io/openshift-release-dev/ocp-release:4.12.6-x86_64</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">Extracted release payload from digest sha256:800d1e39d145664975a3bb7cbc6e674fbf78e3c45b5dde9ff2c5a11a8690c87b created at 2023-03-01T12:46:29Z</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>After the release image is extracted, you can inspect its contents by running the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ls</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">0000_03_authorization-openshift_01_rolebindingrestriction.crd.yaml
-0000_03_config-operator_01_proxy.crd.yaml
-0000_03_marketplace-operator_01_operatorhub.crd.yaml
-0000_03_marketplace-operator_02_operatorhub.cr.yaml
-0000_03_quota-openshift_01_clusterresourcequota.crd.yaml
-...
-0000_90_service-ca-operator_02_prometheusrolebinding.yaml
-0000_90_service-ca-operator_03_servicemonitor.yaml
-0000_99_machine-api-operator_00_tombstones.yaml
-image-references
-release-metadata</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In this example output, the following contents can be seen:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>0000_03_quota-openshift_01_clusterresourcequota.crd.yaml</code> is the manifest for the <code>ClusterResourceQuota</code> CRD, to be applied on Runlevel 03.</p>
-</li>
-<li>
-<p><code>0000_90_service-ca-operator_02_prometheusrolebinding.yaml</code> is the manifest for the <code>PrometheusRoleBinding</code> resource for the <code>service-ca-operator</code>, to be applied on Runlevel 90.</p>
-</li>
-<li>
-<p><code>image-references</code> is the list of SHA digest-versioned references to all required images.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="update-process-workflow_understand-openshift-updates">Update process workflow</h4>
-<div class="paragraph _abstract">
-<p>When you initiate a cluster update, the Cluster Version Operator (CVO) begins a specific sequence of events to orchestrate the update.</p>
-</div>
-<div class="paragraph">
-<p>The following steps represent a detailed workflow of the Red&#160;Hat OpenShift Container Platform update process:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>The target version is stored in the <code>spec.desiredUpdate.version</code> field of the <code>ClusterVersion</code> resource, which may be managed through the web console or the CLI.</p>
-</li>
-<li>
-<p>The CVO detects that the <code>desiredUpdate</code> field in the <code>ClusterVersion</code> resource differs from the current cluster version.
-Using graph data from the OpenShift Update Service, the CVO resolves the desired cluster version to a pull spec for the release image.</p>
-</li>
-<li>
-<p>The CVO validates the integrity and authenticity of the release image.
-Red Hat publishes cryptographically-signed statements about published release images at predefined locations by using image SHA digests as unique and immutable release image identifiers.
-The CVO utilizes a list of built-in public keys to validate the presence and signatures of the statement matching the checked release image.</p>
-</li>
-<li>
-<p>The CVO creates a job named <code>version-$version-$hash</code> in the <code>openshift-cluster-version</code> namespace.
-This job uses containers that are executing the release image, so the cluster downloads the image through the container runtime.
-The job then extracts the manifests and metadata from the release image to a shared volume that is accessible to the CVO.</p>
-</li>
-<li>
-<p>The CVO validates the extracted manifests and metadata.</p>
-</li>
-<li>
-<p>The CVO checks some preconditions to ensure that no problematic condition is detected in the cluster.
-Certain conditions can prevent updates from proceeding.
-These conditions are either determined by the CVO itself, or reported by individual cluster Operators that detect some details about the cluster that the Operator considers problematic for the update.</p>
-</li>
-<li>
-<p>The CVO records the accepted release in <code>status.desired</code> and creates a <code>status.history</code> entry about the new update.</p>
-</li>
-<li>
-<p>The CVO begins reconciling the manifests from the release image.
-Cluster Operators are updated in separate stages called Runlevels, and the CVO ensures that all Operators in a Runlevel finish updating before it proceeds to the next level.</p>
-</li>
-<li>
-<p>Manifests for the CVO itself are applied early in the process.
-When the CVO deployment is applied, the current CVO pod stops, and a CVO pod that uses the new version starts.
-The new CVO proceeds to reconcile the remaining manifests.</p>
-</li>
-<li>
-<p>The update proceeds until the entire control plane is updated to the new version.
-Individual cluster Operators might perform update tasks on their domain of the cluster, and while they do so, they report their state through the <code>Progressing=True</code> condition.</p>
-</li>
-<li>
-<p>The Machine Config Operator (MCO) manifests are applied towards the end of the process.
-The updated MCO then begins updating the system configuration and operating system of every node.
-Each node might be drained, updated, and rebooted before it starts to accept workloads again.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>The cluster reports as updated after the control plane update is finished, usually before all nodes are updated.
-After the update, the CVO maintains all cluster resources to match the state delivered in the release image.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="update-manifest-application_understand-openshift-updates">Understanding how manifests are applied during an update</h4>
-<div class="paragraph _abstract">
-<p>Some manifests supplied in a release image must be applied in a certain order because of the dependencies between them.</p>
-</div>
-<div class="paragraph">
-<p>For example, the <code>CustomResourceDefinition</code> resource must be created before the matching custom resources.
-Additionally, there is a logical order in which the individual cluster Operators must be updated to minimize disruption in the cluster.
-The Cluster Version Operator (CVO) implements this logical order through the concept of Runlevels.</p>
-</div>
-<div class="paragraph">
-<p>These dependencies are encoded in the filenames of the manifests in the release image:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">0000_&lt;runlevel&gt;_&lt;component&gt;_&lt;manifest-name&gt;.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">0000_03_config-operator_01_proxy.crd.yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The CVO internally builds a dependency graph for the manifests, where the CVO obeys the following rules:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>During an update, manifests at a lower Runlevel are applied before those at a higher Runlevel.</p>
-</li>
-<li>
-<p>Within one Runlevel, manifests for different components can be applied in parallel.</p>
-</li>
-<li>
-<p>Within one Runlevel, manifests for a single component are applied in lexicographic order.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The CVO then applies manifests following the generated dependency graph.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>For some resource types, the CVO monitors the resource after its manifest is applied, and considers it to be successfully updated only after the resource reaches a stable state.
-Achieving this state can take some time.
-This is especially true for <code>ClusterOperator</code> resources, while the CVO waits for a cluster Operator to update itself and then update its <code>ClusterOperator</code> status.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The CVO waits until all cluster Operators in the Runlevel meet the following conditions before it proceeds to the next Runlevel:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The cluster Operators have an <code>Available=True</code> condition.</p>
-</li>
-<li>
-<p>The cluster Operators have a <code>Degraded=False</code> condition.</p>
-</li>
-<li>
-<p>The cluster Operators declare they have achieved the desired version in their ClusterOperator resource.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Some actions can take significant time to finish. The CVO waits for the actions to complete in order to ensure the subsequent Runlevels can proceed safely.
-Initially reconciling the new release&#8217;s manifests is expected to take 60 to 120 minutes in total; see <strong>Understanding Red&#160;Hat OpenShift Container Platform update duration</strong> for more information about factors that influence update duration.</p>
+<p>For platforms that support using the CCO in multiple modes, you must determine which mode the cluster is configured to use and take the required actions for that configuration.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="data:image/png;base64," alt="A diagram displaying the sequence of Runlevels and the manifests of components within each level">
+<img src="data:image/png;base64," alt="Decision tree showing the possible update paths for your cluster depending on the configured CCO credentials mode.">
 </div>
+<div class="title">Figure 54. Credentials update requirements by platform type</div>
 </div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Red Hat OpenStack Platform (RHOSP) and VMware vSphere</dt>
+<dd>
+<p>These platforms do not support using the CCO in manual mode. Clusters on these platforms handle changes in cloud provider resources automatically and do not require an update to the <code>upgradeable-to</code> annotation.</p>
 <div class="paragraph">
-<p>In the previous example diagram, the CVO is waiting until all work is completed at Runlevel 20.
-The CVO has applied all manifests to the Operators in the Runlevel, but the <code>kube-apiserver-operator ClusterOperator</code> performs some actions after its new version was deployed. The <code>kube-apiserver-operator ClusterOperator</code> declares this progress through the <code>Progressing=True</code> condition and by not declaring the new version as reconciled in its <code>status.versions</code>.
-The CVO waits until the ClusterOperator reports an acceptable status, and then it will start reconciling manifests at Runlevel 25.</p>
+<p>Administrators of clusters on these platforms should skip the manually maintained credentials section of the update process.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="mco-update-process_understand-openshift-updates">Understanding how the Machine Config Operator updates nodes</h4>
-<div class="paragraph _abstract">
-<p>The Machine Config Operator (MCO) applies a new machine configuration to each control plane node and compute node. During the machine configuration update, control plane nodes and compute nodes are organized into their own machine config pools, where the pools of machines are updated in parallel.</p>
-</div>
+</dd>
+<dt class="hdlist1">IBM Cloud and Nutanix</dt>
+<dd>
+<p>Clusters installed on these platforms are configured using the <code>ccoctl</code> utility.</p>
 <div class="paragraph">
-<p>The <code>.spec.maxUnavailable</code> parameter, which has a default value of <code>1</code>, determines how many nodes in a machine config pool can simultaneously undergo the update process.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Warning">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The default setting for <code>maxUnavailable</code> is <code>1</code> for all the machine config pools in Red&#160;Hat OpenShift Container Platform. It is recommended to not change this value and update one control plane node at a time. Do not change this value to <code>3</code> for the control plane pool.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>When the machine configuration update process begins, the MCO checks the amount of currently unavailable nodes in a pool. If there are fewer unavailable nodes than the value of <code>.spec.maxUnavailable</code>, the MCO initiates the following sequence of actions on available nodes in the pool:</p>
+<p>Administrators of clusters on these platforms must take the following actions:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Cordon and drain the node</p>
+<p>Extract and prepare the <code>CredentialsRequest</code> custom resources (CRs) for the new release.</p>
+</li>
+<li>
+<p>Configure the <code>ccoctl</code> utility for the new release and use it to update the cloud provider resources.</p>
+</li>
+<li>
+<p>Indicate that the cluster is ready to update with the <code>upgradeable-to</code> annotation.</p>
+</li>
+</ol>
+</div>
+</dd>
+<dt class="hdlist1">Microsoft Azure Stack Hub</dt>
+<dd>
+<p>These clusters use manual mode with long-term credentials and do not use the <code>ccoctl</code> utility.</p>
+<div class="paragraph">
+<p>Administrators of clusters on these platforms must take the following actions:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Extract and prepare the <code>CredentialsRequest</code> custom resources (CRs) for the new release.</p>
+</li>
+<li>
+<p>Manually update the cloud provider resources for the new release.</p>
+</li>
+<li>
+<p>Indicate that the cluster is ready to update with the <code>upgradeable-to</code> annotation.</p>
+</li>
+</ol>
+</div>
+</dd>
+<dt class="hdlist1">Amazon Web Services (AWS), global Microsoft Azure, and Google Cloud</dt>
+<dd>
+<p>Clusters installed on these platforms support multiple CCO modes.</p>
+<div class="paragraph">
+<p>The required update process depends on the mode that the cluster is configured to use. If you are not sure what mode the CCO is configured to use on your cluster, you can use the web console or the CLI to determine this information.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="cco-determine-mode-gui_preparing-manual-creds-update">Determine the Cloud Credential Operator mode by using the web console</h5>
+<div class="paragraph _abstract">
+<p>You can determine what mode the Cloud Credential Operator (CCO) is configured to use by using the web console.</p>
+</div>
+<div class="paragraph">
+<p>Before you perform upgrades or troubleshoot, ensure you understand your cluster&#8217;s credential management configuration.</p>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2251,7 +1978,76 @@ The CVO waits until the ClusterOperator reports an acceptable status, and then i
 </td>
 <td class="content">
 <div class="paragraph">
-<p>When a node is cordoned, workloads cannot be scheduled to it.</p>
+<p>Only Amazon Web Services (AWS), global Microsoft Azure, and Google Cloud clusters support multiple CCO modes.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to an Red&#160;Hat OpenShift Container Platform account with cluster administrator permissions.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Log in to the Red&#160;Hat OpenShift Container Platform web console as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>Navigate to <strong>Administration</strong> &#8594; <strong>Cluster Settings</strong>.</p>
+</li>
+<li>
+<p>On the <strong>Cluster Settings</strong> page, select the <strong>Configuration</strong> tab.</p>
+</li>
+<li>
+<p>Under <strong>Configuration resource</strong>, select <strong>CloudCredential</strong>.</p>
+</li>
+<li>
+<p>On the <strong>CloudCredential details</strong> page, select the <strong>YAML</strong> tab.</p>
+</li>
+<li>
+<p>In the YAML block, check the value of <code>spec.credentialsMode</code>. The following values are possible, though not all are supported on all platforms:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>''</code>: The CCO is operating in the default mode. In this configuration, the CCO operates in mint or passthrough mode, depending on the credentials provided during installation.</p>
+</li>
+<li>
+<p><code>Mint</code>: The CCO is operating in mint mode.</p>
+</li>
+<li>
+<p><code>Passthrough</code>: The CCO is operating in passthrough mode.</p>
+</li>
+<li>
+<p><code>Manual</code>: The CCO is operating in manual mode.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To determine the specific configuration of an AWS, Google Cloud, or global Microsoft Azure cluster that has a <code>spec.credentialsMode</code> of <code>''</code>, <code>Mint</code>, or <code>Manual</code>, you must investigate further.</p>
+</div>
+<div class="paragraph">
+<p>AWS and Google Cloud clusters support using mint mode with the root secret deleted.
+If the cluster is specifically configured to use mint mode or uses mint mode by default, you must determine if the root secret is present on the cluster before updating.</p>
+</div>
+<div class="paragraph">
+<p>An AWS, Google Cloud, or global Microsoft Azure cluster that uses manual mode might be configured to create and manage cloud credentials from outside of the cluster with AWS STS, Google Cloud Workload Identity, or Microsoft Entra Workload ID. You can determine whether your cluster uses this strategy by examining the cluster <code>Authentication</code> object.</p>
 </div>
 </td>
 </tr>
@@ -2259,70 +2055,1226 @@ The CVO waits until the ClusterOperator reports an acceptable status, and then i
 </div>
 </li>
 <li>
-<p>Update the system configuration and operating system (OS) of the node</p>
+<p>AWS or Google Cloud clusters that use mint mode only: To determine whether the cluster is operating without the root secret, navigate to <strong>Workloads</strong> &#8594; <strong>Secrets</strong> and look for the root secret for your cloud provider.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Ensure that the <strong>Project</strong> dropdown is set to <strong>All Projects</strong>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Platform</th>
+<th class="tableblock halign-left valign-top">Secret name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AWS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aws-creds</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Google Cloud</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gcp-credentials</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>If you see one of these values, your cluster is using mint or passthrough mode with the root secret present.</p>
 </li>
 <li>
-<p>Reboot the node</p>
+<p>If you do not see these values, your cluster is using the CCO in mint mode with the root secret removed.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </li>
 <li>
-<p>Uncordon the node</p>
+<p>AWS, Google Cloud, or global Microsoft Azure clusters that use manual mode only: To determine whether the cluster is configured to create and manage cloud credentials from outside of the cluster, you must check the cluster <code>Authentication</code> object YAML values.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Navigate to <strong>Administration</strong> &#8594; <strong>Cluster Settings</strong>.</p>
+</li>
+<li>
+<p>On the <strong>Cluster Settings</strong> page, select the <strong>Configuration</strong> tab.</p>
+</li>
+<li>
+<p>Under <strong>Configuration resource</strong>, select <strong>Authentication</strong>.</p>
+</li>
+<li>
+<p>On the <strong>Authentication details</strong> page, select the <strong>YAML</strong> tab.</p>
+</li>
+<li>
+<p>In the YAML block, check the value of the <code>.spec.serviceAccountIssuer</code> parameter.</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>A value that contains a URL that is associated with your cloud provider indicates that the CCO is using manual mode with short-term credentials for components. These clusters are configured using the <code>ccoctl</code> utility to create and manage cloud credentials from outside of the cluster.</p>
+</li>
+<li>
+<p>An empty value (<code>''</code>) indicates that the cluster is using the CCO in manual mode but was not configured using the <code>ccoctl</code> utility.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>A node undergoing this process is unavailable until it is uncordoned and workloads can be scheduled to it again. The MCO begins updating nodes until the number of unavailable nodes is equal to the value of <code>.spec.maxUnavailable</code>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="cco-determine-mode-cli_preparing-manual-creds-update">Determine the Cloud Credential Operator mode by using the CLI</h5>
+<div class="paragraph _abstract">
+<p>You can determine what mode the Cloud Credential Operator (CCO) is configured to use by using the CLI.</p>
 </div>
 <div class="paragraph">
-<p>As a node completes its update and becomes available, the number of unavailable nodes in the machine config pool is once again fewer than <code>.spec.maxUnavailable</code>. If there are remaining nodes that need to be updated, the MCO initiates the update process on a node until the <code>.spec.maxUnavailable</code> limit is once again reached. This process repeats until each control plane node and compute node has been updated.</p>
+<p>Before you perform upgrades or troubleshoot, ensure you understand your cluster&#8217;s credential management configuration.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>The following example workflow describes how this process might occur in a machine config pool with 5 nodes, where <code>.spec.maxUnavailable</code> is 3 and all nodes are initially available:</p>
+<p>Only Amazon Web Services (AWS), global Microsoft Azure, and Google Cloud clusters support multiple CCO modes.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to an Red&#160;Hat OpenShift Container Platform account with cluster administrator permissions.</p>
+</li>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
+<div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>The MCO cordons nodes 1, 2, and 3, and begins to drain them.</p>
+<p>Log in to <code>oc</code> on the cluster as a user with the <code>cluster-admin</code> role.</p>
 </li>
 <li>
-<p>Node 2 finishes draining, reboots, and becomes available again. The MCO cordons node 4 and begins draining it.</p>
+<p>To determine the mode that the CCO is configured to use, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get cloudcredentials cluster \
+  -o=jsonpath={.spec.credentialsMode}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following output values are possible, though not all are supported on all platforms:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>''</code>: The CCO is operating in the default mode. In this configuration, the CCO operates in mint or passthrough mode, depending on the credentials provided during installation.</p>
 </li>
 <li>
-<p>Node 1 finishes draining, reboots, and becomes available again. The MCO cordons node 5 and begins draining it.</p>
+<p><code>Mint</code>: The CCO is operating in mint mode.</p>
 </li>
 <li>
-<p>Node 3 finishes draining, reboots, and becomes available again.</p>
+<p><code>Passthrough</code>: The CCO is operating in passthrough mode.</p>
 </li>
 <li>
-<p>Node 5 finishes draining, reboots, and becomes available again.</p>
+<p><code>Manual</code>: The CCO is operating in manual mode.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To determine the specific configuration of an AWS, Google Cloud, or global Microsoft Azure cluster that has a <code>spec.credentialsMode</code> of <code>''</code>, <code>Mint</code>, or <code>Manual</code>, you must investigate further.</p>
+</div>
+<div class="paragraph">
+<p>AWS and Google Cloud clusters support using mint mode with the root secret deleted.
+If the cluster is specifically configured to use mint mode or uses mint mode by default, you must determine if the root secret is present on the cluster before updating.</p>
+</div>
+<div class="paragraph">
+<p>An AWS, Google Cloud, or global Microsoft Azure cluster that uses manual mode might be configured to create and manage cloud credentials from outside of the cluster with AWS STS, Google Cloud Workload Identity, or Microsoft Entra Workload ID. You can determine whether your cluster uses this strategy by examining the cluster <code>Authentication</code> object.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </li>
 <li>
-<p>Node 4 finishes draining, reboots, and becomes available again.</p>
+<p>AWS or Google Cloud clusters that use mint mode only: To determine whether the cluster is operating without the root secret, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get secret &lt;secret_name&gt; \
+  -n=kube-system</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where <code>&lt;secret_name&gt;</code> is <code>aws-creds</code> for AWS or <code>gcp-credentials</code> for Google Cloud.</p>
+</div>
+<div class="paragraph">
+<p>If the root secret is present, the output of this command returns information about the secret. An error indicates that the root secret is not present on the cluster.</p>
+</div>
+</li>
+<li>
+<p>AWS, Google Cloud, or global Microsoft Azure clusters that use manual mode only: To determine whether the cluster is configured to create and manage cloud credentials from outside of the cluster, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get authentication cluster \
+  -o jsonpath \
+  --template='{ .spec.serviceAccountIssuer }'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command displays the value of the <code>.spec.serviceAccountIssuer</code> parameter in the cluster <code>Authentication</code> object.</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>An output of a URL that is associated with your cloud provider indicates that the CCO is using manual mode with short-term credentials for components. These clusters are configured using the <code>ccoctl</code> utility to create and manage cloud credentials from outside of the cluster.</p>
+</li>
+<li>
+<p>An empty output indicates that the cluster is using the CCO in manual mode but was not configured using the <code>ccoctl</code> utility.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>Because the update process for each node is independent of other nodes, some nodes in the example above finish their update out of the order in which they were cordoned by the MCO.</p>
+</div>
+<div class="sect4">
+<h5 id="cco-determine-mode-next_preparing-manual-creds-update">Determining the next steps in the update</h5>
+<div class="paragraph _abstract">
+<p>After you determine the Cloud Credential Operator mode, it is important to understand how to proceed with the update.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>If you are updating a cluster that has the CCO operating in mint or passthrough mode and the root secret is present, you do not need to update any cloud provider resources and can continue to the next part of the update process.</p>
+</li>
+<li>
+<p>If your cluster is using the CCO in mint mode with the root secret removed, you must reinstate the credential secret with the administrator-level credential before continuing to the next part of the update process.</p>
+</li>
+<li>
+<p>If your cluster was configured using the CCO utility (<code>ccoctl</code>), you must take the following actions:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Extract and prepare the <code>CredentialsRequest</code> custom resources (CRs) for the new release.</p>
+</li>
+<li>
+<p>Configure the <code>ccoctl</code> utility for the new release and use it to update the cloud provider resources.</p>
+</li>
+<li>
+<p>Update the <code>upgradeable-to</code> annotation to indicate that the cluster is ready to update.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>If your cluster is using the CCO in manual mode but was not configured using the <code>ccoctl</code> utility, you must take the following actions:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Extract and prepare the <code>CredentialsRequest</code> custom resources (CRs) for the new release.</p>
+</li>
+<li>
+<p>Manually update the cloud provider resources for the new release.</p>
+</li>
+<li>
+<p>Update the <code>upgradeable-to</code> annotation to indicate that the cluster is ready to update.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cco-ccoctl-upgrading-extracting_preparing-manual-creds-update">Extracting and preparing credentials request resources</h4>
+<div class="paragraph _abstract">
+<p>Before updating a cluster that uses the Cloud Credential Operator (CCO) in manual mode, you must extract and prepare the <code>CredentialsRequest</code> custom resources (CRs) for the new release.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Install the OpenShift CLI (<code>oc</code>) that matches the version for your updated version.</p>
+</li>
+<li>
+<p>Log in to the cluster as user with <code>cluster-admin</code> privileges.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Obtain the pull spec for the update that you want to apply by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm upgrade</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>You can check the status of the machine configuration update by running the following command:</p>
+<p>The output of this command includes pull specs for the available updates similar to the following:</p>
+</div>
+<div class="listingblock">
+<div class="title">Partial example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">...
+Recommended updates:
+
+VERSION IMAGE
+4.22.0  quay.io/openshift-release-dev/ocp-release@sha256:6a899c54dda6b844bb12a247e324a0f6cde367e880b73ba110c056df6d018032
+...</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Set a <code>$RELEASE_IMAGE</code> variable with the release image that you want to use by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ RELEASE_IMAGE=&lt;update_pull_spec&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where <code>&lt;update_pull_spec&gt;</code> is the pull spec for the release image that you want to use. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get mcp</code></pre>
+<pre class="highlight"><code class="language-text" data-lang="text">quay.io/openshift-release-dev/ocp-release@sha256:6a899c54dda6b844bb12a247e324a0f6cde367e880b73ba110c056df6d018032</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Extract the list of <code>CredentialsRequest</code> custom resources (CRs) from the Red&#160;Hat OpenShift Container Platform release image by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm release extract \
+  --from=$RELEASE_IMAGE \
+  --credentials-requests \
+  --included \
+  --to=&lt;path_to_directory_for_credentials_requests&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>--included</code></dt>
+<dd>
+<p>Includes only the manifests that your specific cluster configuration requires for the target release.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;path_to_directory_for_credentials_requests&gt;</code></dt>
+<dd>
+<p>Specifies the path to the directory where you want to store the <code>CredentialsRequest</code> objects. If the specified directory does not exist, this command creates it.</p>
+<div class="paragraph">
+<p>This command creates a YAML file for each <code>CredentialsRequest</code> object.</p>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>For each <code>CredentialsRequest</code> CR in the release image, ensure that a namespace that matches the text in the <code>spec.secretRef.namespace</code> field exists in the cluster. This field is where the generated secrets that hold the credentials configuration are stored.</p>
+<div class="listingblock">
+<div class="title">Sample AWS <code>CredentialsRequest</code> object</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  name: cloud-credential-operator-iam-ro
+  namespace: openshift-cloud-credential-operator
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: AWSProviderSpec
+    statementEntries:
+    - effect: Allow
+      action:
+      - iam:GetUser
+      - iam:GetUserPolicy
+      - iam:ListAccessKeys
+      resource: "*"
+  secretRef:
+    name: cloud-credential-operator-iam-ro-creds
+    namespace: openshift-cloud-credential-operator</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>openshift-cloud-credential-operator</code></dt>
+<dd>
+<p>Indicates the namespace which must exist to hold the generated secret.</p>
+<div class="paragraph">
+<p>The <code>CredentialsRequest</code> CRs for other platforms have a similar format with different platform-specific values.</p>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>For any <code>CredentialsRequest</code> CR for which the cluster does not already have a namespace with the name specified in <code>spec.secretRef.namespace</code>, create the namespace by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create namespace &lt;component_namespace&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Next steps</div>
+<ul>
+<li>
+<p>If the cloud credential management for your cluster was configured using the CCO utility (<code>ccoctl</code>), configure the <code>ccoctl</code> utility for a cluster update and use it to update your cloud provider resources.</p>
+</li>
+<li>
+<p>If your cluster was not configured with the <code>ccoctl</code> utility, manually update your cloud provider resources.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cco-ccoctl-configuring_preparing-manual-creds-update">Configuring the Cloud Credential Operator utility for a cluster update</h4>
+<div class="paragraph _abstract">
+<p>To upgrade a cluster that uses the Cloud Credential Operator (CCO) in manual mode to create and manage cloud credentials from outside of the cluster, extract and prepare the CCO utility (<code>ccoctl</code>) binary.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>ccoctl</code> utility is a Linux binary that must run in a Linux environment.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to an Red&#160;Hat OpenShift Container Platform account with cluster administrator access.</p>
+</li>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Your cluster was configured using the <code>ccoctl</code> utility to create and manage cloud credentials from outside of the cluster.</p>
+</li>
+<li>
+<p>You have extracted the <code>CredentialsRequest</code> custom resources (CRs) from the Red&#160;Hat OpenShift Container Platform release image and ensured that a namespace that matches the text in the <code>spec.secretRef.namespace</code> field exists in the cluster.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Set a variable for the Red&#160;Hat OpenShift Container Platform release image by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ RELEASE_IMAGE=$(oc get clusterversion -o jsonpath={..desired.image})</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Obtain the CCO container image from the Red&#160;Hat OpenShift Container Platform release image by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ CCO_IMAGE=$(oc adm release info --image-for='cloud-credential-operator' $RELEASE_IMAGE -a ~/.pull-secret)</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Ensure that the architecture of the <code>$RELEASE_IMAGE</code> matches the architecture of the environment in which you will use the <code>ccoctl</code> tool.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Extract the <code>ccoctl</code> binary from the CCO container image within the Red&#160;Hat OpenShift Container Platform release image by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc image extract $CCO_IMAGE \
+  --file="/usr/bin/ccoctl.&lt;rhel_version&gt;" \
+  -a ~/.pull-secret</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For <code>&lt;rhel_version&gt;</code>, specify the value that corresponds to the version of Red&#160;Hat Enterprise Linux (RHEL) that the host uses.
+If no value is specified, <code>ccoctl.rhel8</code> is used by default.
+The following values are valid:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>rhel8</code>: Specify this value for hosts that use RHEL 8.</p>
+</li>
+<li>
+<p><code>rhel9</code>: Specify this value for hosts that use RHEL 9.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>ccoctl</code> binary is created in the directory from where you executed the command and not in <code>/usr/bin/</code>. You must rename the directory or move the <code>ccoctl.&lt;rhel_version&gt;</code> binary to <code>ccoctl</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Change the permissions to make <code>ccoctl</code> executable by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ chmod 775 ccoctl</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>To verify that <code>ccoctl</code> is ready to use, display the help file. Use a relative file name when you run the command, for example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ./ccoctl</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Example output</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME         CONFIG                                                 UPDATED   UPDATING   DEGRADED   MACHINECOUNT   READYMACHINECOUNT   UPDATEDMACHINECOUNT   DEGRADEDMACHINECOUNT   AGE
-master       rendered-master-acd1358917e9f98cbdb599aea622d78b       True      False      False      3              3                   3                     0                      22h
-worker       rendered-worker-1d871ac76e1951d32b2fe92369879826       False     True       False      2              1                   1                     0                      22h</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">OpenShift credentials provisioning tool
+
+Usage:
+  ccoctl [command]
+
+Available Commands:
+  aws          Manage credentials objects for AWS cloud
+  azure        Manage credentials objects for Azure
+  gcp          Manage credentials objects for Google cloud
+  help         Help about any command
+  ibmcloud     Manage credentials objects for IBM Cloud
+  nutanix      Manage credentials objects for Nutanix
+
+Flags:
+  -h, --help   help for ccoctl
+
+Use "ccoctl [command] --help" for more information about a command.</code></pre>
 </div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cco-ccoctl-upgrading_preparing-manual-creds-update">Updating cloud provider resources with the Cloud Credential Operator utility</h4>
+<div class="paragraph _abstract">
+<p>Update the cloud provider resources for your Red&#160;Hat OpenShift Container Platform cluster by using the CCO utility (<code>ccoctl</code>). The process for upgrading these resources is similar to creating the resources during installation.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>On AWS clusters, some <code>ccoctl</code> commands make AWS API calls to create or modify AWS resources. You can use the <code>--dry-run</code> flag to avoid making API calls. Using this flag creates JSON files on the local file system instead. You can review and modify the JSON files and then apply them with the AWS CLI tool using the <code>--cli-input-json</code> parameters.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have extracted the <code>CredentialsRequest</code> custom resources (CRs) from the Red&#160;Hat OpenShift Container Platform release image and ensured that a namespace that matches the text in the <code>spec.secretRef.namespace</code> field exists in the cluster.</p>
+</li>
+<li>
+<p>You have extracted and configured the <code>ccoctl</code> binary from the release image.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create the output directory if it does not already exist by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ mkdir -p &lt;path_to_ccoctl_output_dir&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Extract the bound service account signing key from the cluster and save it to the output directory by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get secret bound-service-account-signing-key \
+  -n openshift-kube-apiserver \
+  -ojsonpath='{ .data.service-account\.pub }' | base64 \
+  -d &gt; &lt;path_to_ccoctl_output_dir&gt;/serviceaccount-signer.public</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Use the <code>ccoctl</code> tool to process all <code>CredentialsRequest</code> objects by running the command for your cloud provider. The following commands process <code>CredentialsRequest</code> objects:</p>
+<div class="listingblock">
+<div class="title">Amazon Web Services (AWS)</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ccoctl aws create-all \
+  --name=&lt;name&gt; \
+  --region=&lt;aws_region&gt; \
+  --credentials-requests-dir=&lt;path_to_credentials_requests_directory&gt; \
+  --output-dir=&lt;path_to_ccoctl_output_dir&gt; \
+  --public-key-file= \
+  &lt;path_to_ccoctl_output_dir&gt;/serviceaccount-signer.public \
+  --create-private-s3-bucket \
+  --permissions-boundary-arn=&lt;policy_arn&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;name&gt;</code></dt>
+<dd>
+<p>Specifies the name used to tag any cloud resources that are created for tracking.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;aws_region&gt;</code></dt>
+<dd>
+<p>Specifies the AWS region in which cloud resources will be created.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;path_to_credentials_requests_directory&gt;</code></dt>
+<dd>
+<p>Specifies the directory containing the files for the component <code>CredentialsRequest</code> objects.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;path_to_ccoctl_output_dir&gt;</code></dt>
+<dd>
+<p>Specifies the path to the output directory. For <code>--public-key-file</code>, this directory contains the <code>serviceaccount-signer.public</code> file that you extracted from the cluster.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;policy_arn&gt;</code></dt>
+<dd>
+<p>Optional: Specifies the Amazon Resource Name (ARN) of the AWS IAM policy to use as the permissions boundary for the IAM roles created by the <code>ccoctl</code> utility.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>By default, the <code>ccoctl</code> utility stores the OpenID Connect (OIDC) configuration files in a public S3 bucket and uses the S3 URL as the public OIDC endpoint. To store the OIDC configuration in a private S3 bucket that is accessed by the IAM identity provider through a public CloudFront distribution URL instead, use the <code>--create-private-s3-bucket</code> parameter. This is an optional parameter.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To create the AWS resources individually, use the "Creating AWS resources individually" procedure in the "Installing a cluster on AWS with customizations" content. This option might be useful if you need to review the JSON files that the <code>ccoctl</code> tool creates before modifying AWS resources, or if the process the <code>ccoctl</code> tool uses to create AWS resources automatically does not meet the requirements of your organization.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Google Cloud</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ccoctl gcp create-all \
+  --name=&lt;name&gt; \
+  --region=&lt;gcp_region&gt; \
+  --project=&lt;gcp_project_id&gt; \
+  --credentials-requests-dir=&lt;path_to_credentials_requests_directory&gt; \
+  --output-dir=&lt;path_to_ccoctl_output_dir&gt; \
+  --public-key-file=&lt;path_to_ccoctl_output_dir&gt;/serviceaccount-signer.public \
+  --key-storage-method=&lt;key_storage_method&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;name&gt;</code></dt>
+<dd>
+<p>Specifies the user-defined name for all created Google Cloud resources used for tracking.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;gcp_region&gt;</code></dt>
+<dd>
+<p>Specifies the Google Cloud region in which cloud resources will be created.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;gcp_project_id&gt;</code></dt>
+<dd>
+<p>Specifies the Google Cloud project ID in which cloud resources will be created.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;path_to_credentials_requests_directory&gt;</code></dt>
+<dd>
+<p>Specifies the directory containing the files of <code>CredentialsRequest</code> manifests to create Google Cloud service accounts.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;path_to_ccoctl_output_dir&gt;</code></dt>
+<dd>
+<p>Specifies the path to the output directory. For <code>--public-key-file</code>, this directory contains the <code>serviceaccount-signer.public</code> file that you extracted from the cluster.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;key_storage_method&gt;</code></dt>
+<dd>
+<p>Optional: Specifies the method for storing OIDC JWK files. Accepted values are <code>public-bucket</code> and <code>pool-jwk-file</code>. The default value <code>public-bucket</code> creates a public GCS bucket to host the OIDC configuration and JWK files. The <code>pool-jwk-file</code> value attaches the JWK directly to the workload identity pool provider without creating a public bucket.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If your cluster was previously configured with the <code>public-bucket</code> method and you switch to <code>pool-jwk-file</code>, the existing GCS bucket is no longer used. You can delete the old <code>&lt;name&gt;-oidc</code> bucket from your Google Cloud project to avoid retaining an unnecessary public resource.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">IBM Cloud</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ccoctl ibmcloud create-service-id \
+  --credentials-requests-dir=&lt;path_to_credential_requests_directory&gt; \
+  --name=&lt;cluster_name&gt; \
+  --output-dir=&lt;installation_directory&gt; \
+  --resource-group-name=&lt;resource_group_name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;path_to_credential_requests_directory&gt;</code></dt>
+<dd>
+<p>Specifies the directory containing the files for the component <code>CredentialsRequest</code> objects.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;cluster_name&gt;</code></dt>
+<dd>
+<p>Specifies the name of the Red&#160;Hat OpenShift Container Platform cluster.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;installation_directory&gt;</code></dt>
+<dd>
+<p>Optional: Specifies the directory in which you want the <code>ccoctl</code> utility to create objects. By default, the utility creates objects in the directory in which the commands are run.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;resource_group_name&gt;</code></dt>
+<dd>
+<p>Optional: Specifies the name of the resource group used for scoping the access policies.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Microsoft Azure</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ccoctl azure create-managed-identities \
+  --name &lt;azure_infra_name&gt; \
+  --output-dir=&lt;path_to_ccoctl_output_dir&gt; \
+  --region &lt;azure_region&gt; \
+  --subscription-id &lt;azure_subscription_id&gt; \
+  --credentials-requests-dir &lt;path_to_directory_for_credentials_requests&gt; \
+  --issuer-url "${OIDC_ISSUER_URL}" \
+  --dnszone-resource-group-name &lt;azure_dns_zone_resourcegroup_name&gt; \
+  --installation-resource-group-name "${AZURE_INSTALL_RG}" \
+  --preserve-existing-roles</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;azure_infra_name&gt;</code></dt>
+<dd>
+<p>Specifies the value of the <code>name</code> parameter used to create an Azure resource group.
+To use an existing Azure resource group instead of creating a new one, specify the <code>--oidc-resource-group-name</code> argument with the existing group name as its value.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;path_to_ccoctl_output_dir&gt;</code></dt>
+<dd>
+<p>Specifies the path to the output directory.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;azure_region&gt;</code></dt>
+<dd>
+<p>Specifies the region of the existing cluster.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;azure_subscription_id&gt;</code></dt>
+<dd>
+<p>Specifies the subscription ID of the existing cluster.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;path_to_directory_for_credentials_requests&gt;</code></dt>
+<dd>
+<p>Specifies the directory containing the files for the component <code>CredentialsRequest</code> objects.</p>
+</dd>
+<dt class="hdlist1"><code>"${OIDC_ISSUER_URL}"</code></dt>
+<dd>
+<p>Specifies the OIDC issuer URL from the existing cluster.
+You can obtain this value by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get authentication cluster \
+  -o jsonpath \
+  --template='{ .spec.serviceAccountIssuer }'</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><code>&lt;azure_dns_zone_resourcegroup_name&gt;</code></dt>
+<dd>
+<p>Specifies the name of the resource group that contains the DNS zone.</p>
+</dd>
+<dt class="hdlist1"><code>"${AZURE_INSTALL_RG}"</code></dt>
+<dd>
+<p>Specifies the Azure resource group name.
+You can obtain this value by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get infrastructure cluster \
+  -o jsonpath \
+  --template '{ .status.platformStatus.azure.resourceGroupName }'</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Specifying the flag <code>ccoctl.azure.create-managed-identities.preserve-existing-roles</code> ensures that any custom role assignments you define on managed identities are not removed during Red&#160;Hat OpenShift Container Platform updates. This flag is optional.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Nutanix</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ccoctl nutanix create-shared-secrets \
+  --credentials-requests-dir=&lt;path_to_credentials_requests_directory&gt; \
+  --output-dir=&lt;ccoctl_output_dir&gt; \
+  --credentials-source-filepath=&lt;path_to_credentials_file&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;path_to_credentials_requests_directory&gt;</code></dt>
+<dd>
+<p>Specifies the path to the directory that contains the files for the component <code>CredentialsRequests</code> objects.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;ccoctl_output_dir&gt;</code></dt>
+<dd>
+<p>Optional: Specifies the directory in which you want the <code>ccoctl</code> utility to create objects. By default, the utility creates objects in the directory in which the commands are run.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;path_to_credentials_file&gt;</code></dt>
+<dd>
+<p>Optional: Specifies the directory that contains the credentials data YAML file. By default, <code>ccoctl</code> expects this file to be in <code>&lt;home_directory&gt;/.nutanix/credentials</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>For each <code>CredentialsRequest</code> object, <code>ccoctl</code> creates the required provider resources and a permissions policy as defined in each <code>CredentialsRequest</code> object from the Red&#160;Hat OpenShift Container Platform release image.</p>
+</div>
+</li>
+<li>
+<p>Apply the secrets to your cluster by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ls &lt;path_to_ccoctl_output_dir&gt;/manifests/*-credentials.yaml | xargs -I{} oc apply -f {}</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Verification</div>
+<p>You can verify that the required provider resources and permissions policies are created by querying the cloud provider. For more information, refer to your cloud provider documentation on listing roles or service accounts.</p>
+</div>
+<div class="ulist">
+<div class="title">Next steps</div>
+<ul>
+<li>
+<p>Update the <code>upgradeable-to</code> annotation to indicate that the cluster is ready to upgrade.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="manually-maintained-credentials-upgrade_preparing-manual-creds-update">Manually updating cloud provider resources</h4>
+<div class="paragraph _abstract">
+<p>Meet the requirements of the target release by manually updating cloud provider credentials. Update these credentials by creating secrets for new components and by adjusting the permissions for existing components.</p>
+</div>
+<div class="paragraph">
+<p>Before you upgrade a cluster with manually maintained credentials, you must create secrets for any new credentials for the release image that you are upgrading to. You must also review the required permissions for existing credentials and accommodate any new permissions requirements in the new release for those components.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have extracted the <code>CredentialsRequest</code> custom resources (CRs) from the Red&#160;Hat OpenShift Container Platform release image and ensured that a namespace that matches the text in the <code>spec.secretRef.namespace</code> field exists in the cluster.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create YAML files with secrets for any <code>CredentialsRequest</code> custom resources that the new release image adds. The secrets must be stored using the namespace and secret name defined in the <code>spec.secretRef</code> for each <code>CredentialsRequest</code> object.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Sample AWS <code>CredentialsRequest</code> object with secrets</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  name: &lt;component_credentials_request&gt;
+  namespace: openshift-cloud-credential-operator
+  ...
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: AWSProviderSpec
+    statementEntries:
+    - effect: Allow
+      action:
+      - s3:CreateBucket
+      - s3:DeleteBucket
+      resource: "*"
+      ...
+  secretRef:
+    name: &lt;component_secret&gt;
+    namespace: &lt;component_namespace&gt;
+  ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Sample AWS <code>Secret</code> object</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Secret
+metadata:
+  name: &lt;component_secret&gt;
+  namespace: &lt;component_namespace&gt;
+data:
+  aws_access_key_id: &lt;base64_encoded_aws_access_key_id&gt;
+  aws_secret_access_key: &lt;base64_encoded_aws_secret_access_key&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Global Azure and Azure Stack Hub use the same <code>CredentialsRequest</code> object and secret formats.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Sample Azure <code>CredentialsRequest</code> object with secrets</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  name: &lt;component_credentials_request&gt;
+  namespace: openshift-cloud-credential-operator
+  ...
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: AzureProviderSpec
+    roleBindings:
+    - role: Contributor
+      ...
+  secretRef:
+    name: &lt;component_secret&gt;
+    namespace: &lt;component_namespace&gt;
+  ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Sample Azure <code>Secret</code> object</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Secret
+metadata:
+  name: &lt;component_secret&gt;
+  namespace: &lt;component_namespace&gt;
+data:
+  azure_subscription_id: &lt;base64_encoded_azure_subscription_id&gt;
+  azure_client_id: &lt;base64_encoded_azure_client_id&gt;
+  azure_client_secret: &lt;base64_encoded_azure_client_secret&gt;
+  azure_tenant_id: &lt;base64_encoded_azure_tenant_id&gt;
+  azure_resource_prefix: &lt;base64_encoded_azure_resource_prefix&gt;
+  azure_resourcegroup: &lt;base64_encoded_azure_resourcegroup&gt;
+  azure_region: &lt;base64_encoded_azure_region&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Sample Google Cloud <code>CredentialsRequest</code> object with secrets</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  name: &lt;component_credentials_request&gt;
+  namespace: openshift-cloud-credential-operator
+  ...
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: GCPProviderSpec
+      predefinedRoles:
+      - roles/iam.securityReviewer
+      - roles/iam.roleViewer
+      skipServiceCheck: true
+      ...
+  secretRef:
+    name: &lt;component_secret&gt;
+    namespace: &lt;component_namespace&gt;
+  ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Sample Google Cloud <code>Secret</code> object</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Secret
+metadata:
+  name: &lt;component_secret&gt;
+  namespace: &lt;component_namespace&gt;
+data:
+  service_account.json: &lt;base64_encoded_gcp_service_account_file&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>If the <code>CredentialsRequest</code> custom resources for any existing credentials that are stored in secrets have changed permissions requirements, update the permissions as required.</p>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Next steps</div>
+<ul>
+<li>
+<p>Update the <code>upgradeable-to</code> annotation to indicate that the cluster is ready to upgrade.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cco-manual-upgrade-annotation_preparing-manual-creds-update">Indicating that the cluster is ready to upgrade</h4>
+<div class="paragraph _abstract">
+<p>Modify the <code>CloudCredential</code> resource to include an <code>upgradeable-to</code> annotation. This signals that you updated manually maintained credentials and that the cluster is ready to upgrade.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>For the release image that you are upgrading to, you have processed any new credentials manually or by using the Cloud Credential Operator utility (<code>ccoctl</code>).</p>
+</li>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Log in to <code>oc</code> on the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>Edit the <code>CloudCredential</code> resource to add an <code>upgradeable-to</code> annotation within the <code>metadata</code> field by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit cloudcredential cluster</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Text to add:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">...
+  metadata:
+    annotations:
+      cloudcredential.openshift.io/upgradeable-to: &lt;version_number&gt;
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where <code>&lt;version_number&gt;</code> is the version that you are upgrading to, in the format <code>x.y.z</code>. For example, use <code>4.12.2</code> for Red&#160;Hat OpenShift Container Platform 4.12.2.</p>
+</div>
+<div class="paragraph">
+<p>It may take several minutes after adding the annotation for the upgradeable status to change.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>In the <strong>Administrator</strong> perspective of the web console, navigate to <strong>Administration</strong> &#8594; <strong>Cluster Settings</strong>.</p>
+</li>
+<li>
+<p>To view the CCO status details, click <strong>cloud-credential</strong> in the <strong>Cluster Operators</strong> list.</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>If the <strong>Upgradeable</strong> status in the <strong>Conditions</strong> section is <strong>False</strong>, verify that the <code>upgradeable-to</code> annotation is free of typographical errors.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>When the <strong>Upgradeable</strong> status in the <strong>Conditions</strong> section is <strong>True</strong>, begin the Red&#160;Hat OpenShift Container Platform upgrade.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="about-updates_update-clusters-overview.html">Cluster update overview</a> | ↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="understand-update-channels-and-releases-intro_understand-update-channels-and-releases.html">Understand update channels and releases</a> →</p>
+<p>← Previous: <a href="updating-cluster-prepare_updating-cluster-prepare.html">Preparing to update to Red&#160;Hat OpenShift Container Platform {product-version}</a> | ↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="updating-cluster-web-console_updating-cluster-web-console.html">Update a cluster using the web console</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2333,7 +3285,7 @@ worker       rendered-worker-1d871ac76e1951d32b2fe92369879826       False     Tr
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-21 18:01:53 +0100
+Last updated 2026-10-22 13:31:11 +0100
 </div>
 </div>
 <style>

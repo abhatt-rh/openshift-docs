@@ -437,8 +437,87 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
+<!-- navmap-right-toc-start -->
+<style>
+  body.navmap-has-right-toc { padding-right: 18em; }
+  #navmap-right-toc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 16em;
+    height: 100%;
+    overflow: auto;
+    padding: 1.25em 1em;
+    background: #f8f8f7;
+    border-left: 1px solid #e7e7e9;
+    z-index: 1000;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    font-size: .9em;
+  }
+  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
+  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
+  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
+  #navmap-right-toc li.level-3 { padding-left: 1em; }
+  #navmap-right-toc li.level-4 { padding-left: 2em; }
+  #navmap-right-toc li.level-5,
+  #navmap-right-toc li.level-6 { padding-left: 3em; }
+  #navmap-right-toc a { text-decoration: none; }
+  @media screen and (max-width: 1023px) {
+    body.navmap-has-right-toc { padding-right: 0; }
+    #navmap-right-toc {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 1em;
+      border: 1px solid #e7e7e9;
+      border-radius: 4px;
+    }
+  }
+
+
+</style>
+<!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
-<body id="mco-image-streams-updating_update-nodes-from-rhcos-9-to-rhcos-10" class="book toc2 toc-left">
+<body id="understanding-openshift-updates_understanding-openshift-updates" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/ocp-jobs/configure-multi-tenant-namespace-isolation.adoc:20
+    include::modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc
+  maps/ocp/ocp-jobs/scale-components-based-on-cluster-size.adoc:34
+    include::modules/network-observability-flowcollector-api-specifications.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/modules/network-observability-flowcollector-api-specifications.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -635,33 +714,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_upgrade.html">Upgrade</a>
 <ul class="sectlevel2">
-<li><a href="about-updates_update-clusters-overview.html">Cluster update overview</a>
+<li><a href="understanding-openshift-updates_understanding-openshift-updates.html"><span class="toc-current">Introduction to OpenShift updates</span></a>
 </li>
-<li><a href="update-cluster-version-object_understand-openshift-updates.html">The ClusterVersion object</a>
+<li><a href="how-updates-work_how-updates-work.html">How cluster updates work</a>
 </li>
-<li><a href="understand-update-channels-and-releases-intro_understand-update-channels-and-releases.html">Understand update channels and releases</a>
+<li><a href="understand-update-channels-and-releases-intro_understanding-update-channels-releases.html">Understand update channels and releases</a>
 </li>
-<li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
+<li><a href="understand-update-duration-intro_openshift-update-duration.html">Understand update duration</a>
 </li>
-<li><a href="update-assessment-ai_prepare-to-update-a-cluster.html">Analyzing update risk and status using AI</a>
+<li><a href="updating-cluster-prepare_updating-cluster-prepare.html">Preparing to update to Red&#160;Hat OpenShift Container Platform {product-version}</a>
 </li>
-<li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
+<li><a href="preparing-manual-creds-update_preparing-manual-creds-update.html">Prepare to update a cluster with manually maintained credentials</a>
 </li>
-<li><a href="before-updating-ocp_update-a-cluster-using-the-web-console.html">Before updating the Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="updating-cluster-web-console_updating-cluster-web-console.html">Update a cluster using the web console</a>
 </li>
-<li><a href="update-single-node-openshift_update-a-cluster-using-the-cli.html">About updating single node Red&#160;Hat OpenShift Container Platform</a>
+<li><a href="updating-cluster-cli_updating-cluster-cli.html">Update a cluster using the CLI</a>
 </li>
-<li><a href="perform-a-control-plane-only-update-intro_perform-a-control-plane-only-update.html">Perform a Control Plane Only update</a>
+<li><a href="perform-a-control-plane-only-update-intro_control-plane-only-update.html">Perform a Control Plane Only update</a>
 </li>
-<li><a href="example_perform-a-canary-rollout-update.html">Example Canary update strategy</a>
+<li><a href="update-using-custom-machine-config-pools_update-using-custom-machine-config-pools.html">Perform a canary rollout update</a>
 </li>
 <li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
 </li>
-<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a multi-architecture cluster</a>
+<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a cluster with multi-architecture compute machines</a>
 </li>
-<li><a href="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x.html">Update from 4.x to 5.x</a>
+<li><a href="update-from-4-x-to-5-x-intro_updating-ocp-5.html">Update a cluster to Red&#160;Hat OpenShift Container Platform 5.0</a>
 </li>
-<li><a href="mco-image-streams-updating_update-nodes-from-rhcos-9-to-rhcos-10.html"><span class="toc-current">Updating the nodes in an existing cluster from RHCOS 9.x to RHCOS 10.x</span></a>
+<li><a href="mco-image-streams_mco-image-streams.html">Updating the cluster to RHCOS 10.x</a>
 </li>
 <li><a href="update-hardware-on-vsphere-nodes-con_update-hardware-on-vsphere-nodes.html">Update hardware on vSphere nodes</a>
 </li>
@@ -1765,11 +1844,194 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#about-updates_understanding-openshift-updates">Cluster update overview</a></li><li class="level-4"><a href="#update-availability_understanding-openshift-updates">Common questions about update availability</a></li><li class="level-4"><a href="#update-service-about_understanding-openshift-updates">About the OpenShift Update Service</a></li><li class="level-4"><a href="#understanding_clusteroperator_conditiontypes_understanding-openshift-updates">Understanding cluster Operator condition types</a></li><li class="level-4"><a href="#understanding-clusterversion-conditiontypes_understanding-openshift-updates">Understanding cluster version condition types</a></li><li class="level-4"><a href="#update-common-terms_understanding-openshift-updates">Common terms</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="mco-image-streams-updating_update-nodes-from-rhcos-9-to-rhcos-10">Updating the nodes in an existing cluster from RHCOS 9.x to RHCOS 10.x</h3>
+<h3 id="understanding-openshift-updates_understanding-openshift-updates">Introduction to OpenShift updates</h3>
 <div class="paragraph _abstract">
-<p>For an existing Red&#160;Hat OpenShift Container Platform 5.0 cluster that is using Red Hat Enterprise Linux CoreOS (RHCOS) 9.x, you can move the nodes to RHCOS 10.x.</p>
+<p>With Red&#160;Hat OpenShift Container Platform 4, you can update an Red&#160;Hat OpenShift Container Platform cluster with a single operation by using the web console or the OpenShift CLI (<code>oc</code>).</p>
+</div>
+<div class="paragraph">
+<p>Platform administrators can view new update options either by going to <strong>Administration</strong> &#8594; <strong>Cluster Settings</strong> in the web console or by looking at the output of the <code>oc adm upgrade</code> command.</p>
+</div>
+<div class="sect3">
+<h4 id="about-updates_understanding-openshift-updates">Cluster update overview</h4>
+<div class="paragraph _abstract">
+<p>Red&#160;Hat OpenShift Container Platform updates involve several services, Operators, and processes working in tandem to change the cluster to the desired version.</p>
+</div>
+<div class="paragraph">
+<p>Red&#160;Hat hosts a public OpenShift Update Service (OSUS), which serves a graph of update possibilities based on the Red&#160;Hat OpenShift Container Platform release images in the official registry.
+The graph contains update information for any public release.
+Red&#160;Hat OpenShift Container Platform clusters are configured to connect to the OSUS by default, and the OSUS responds to clusters with information about known update targets.</p>
+</div>
+<div class="paragraph">
+<p>An update begins when either a cluster administrator or an automatic update controller edits the custom resource (CR) of the Cluster Version Operator (CVO) with a new version.
+To reconcile the cluster with the newly specified version, the CVO retrieves the target release image from an image registry and begins to apply changes to the cluster.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Operators previously installed through Operator Lifecycle Manager (OLM) follow a different process for updates. See "Updating installed Operators" for more information.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The target release image contains manifest files for all cluster components that form a specific OCP version.
+When updating the cluster to a new version, the CVO applies manifests in separate stages called Runlevels.
+Most, but not all, manifests support one of the cluster Operators.
+As the CVO applies a manifest to a cluster Operator, the Operator might perform update tasks to reconcile itself with its new specified version.</p>
+</div>
+<div class="paragraph">
+<p>The CVO monitors the state of each applied resource and the states reported by all cluster Operators. The CVO only proceeds with the update when all manifests and cluster Operators in the active Runlevel reach a stable condition.
+After the CVO updates the entire control plane through this process, the Machine Config Operator (MCO) updates the operating system and configuration of every node in the cluster.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="update-availability_understanding-openshift-updates">Common questions about update availability</h4>
+<div class="paragraph _abstract">
+<p>There are several factors that affect if and when an update is made available to an Red&#160;Hat OpenShift Container Platform cluster.</p>
+</div>
+<div class="paragraph">
+<p>The following list provides common questions regarding the availability of an update:</p>
+</div>
+<div id="channel-differences_understanding-openshift-updates" class="paragraph">
+<p><strong>What are the differences between each of the update channels?</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A new release is initially added to the <code>candidate</code> channel.</p>
+</li>
+<li>
+<p>After successful final testing, a release on the <code>candidate</code> channel is promoted to the <code>fast</code> channel, an errata is published, and the release is now fully supported.</p>
+</li>
+<li>
+<p>After a delay, a release on the <code>fast</code> channel is finally promoted to the <code>stable</code> channel. This delay represents the only difference between the <code>fast</code> and <code>stable</code> channels.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For the latest z-stream releases, this delay may generally be a week or two. However, the delay for initial updates to the latest minor version may take much longer, generally 45-90 days.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Releases promoted to the <code>stable</code> channel are simultaneously promoted to the <code>eus</code> channel.
+The primary purpose of the <code>eus</code> channel is to serve as a convenience for clusters performing a Control Plane Only update.</p>
+</li>
+</ul>
+</div>
+<div id="channel-safety_understanding-openshift-updates" class="paragraph">
+<p><strong>Is a release on the <code>stable</code> channel safer or more supported than a release on the <code>fast</code> channel?</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If a regression is identified for a release on a <code>fast</code> channel, it will be resolved and managed to the same extent as if that regression was identified for a release on the <code>stable</code> channel.</p>
+</li>
+<li>
+<p>The only difference between releases on the <code>fast</code> and <code>stable</code> channels is that a release only appears on the <code>stable</code> channel after it has been on the <code>fast</code> channel for some time, which provides more time for new update risks to be discovered.</p>
+</li>
+<li>
+<p>A release that is available on the <code>fast</code> channel always becomes available on the <code>stable</code> channel after this delay.</p>
+</li>
+</ul>
+</div>
+<div id="supported-updates_understanding-openshift-updates" class="paragraph">
+<p><strong>What does it mean if an update has known issues?</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Red&#160;Hat continuously evaluates data from multiple sources to determine whether updates from one version to another have any declared issues. Identified issues are typically documented in the version&#8217;s release notes.
+Even if the update path has known issues, customers are still supported if they perform the update.</p>
+</li>
+<li>
+<p>Red Hat does not block users from updating to a certain version.
+Red Hat may declare conditional update risks, which may or may not apply to a particular cluster.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Declared risks provide cluster administrators more context about a supported update.
+Cluster administrators can still accept the risk and update to that particular target version.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="removed-recommendation_understanding-openshift-updates" class="paragraph">
+<p><strong>What if I see that an update to a particular release is no longer recommended?</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If Red Hat removes update recommendations from any supported release due to a regression, a superseding update recommendation will be provided to a future version that corrects the regression.
+There may be a delay while the defect is corrected, tested, and promoted to your selected channel.</p>
+</li>
+</ul>
+</div>
+<div id="z-stream-release-cadence_understanding-openshift-updates" class="paragraph">
+<p><strong>How long until the next z-stream release is made available on the fast and stable channels?</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>While the specific cadence can vary based on a number of factors, new z-stream releases for the latest minor version are typically made available about every week. Older minor versions, which have become more stable over time, may take much longer for new z-stream releases to be made available.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>These are only estimates based on past data about z-stream releases. Red&#160;Hat reserves the right to change the release frequency as needed. Any number of issues could cause irregularities and delays in this release cadence.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Once a z-stream release is published, it also appears in the <code>fast</code> channel for that minor version. After a delay, the z-stream release may then appear in that minor version&#8217;s <code>stable</code> channel.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="update-service-about_understanding-openshift-updates">About the OpenShift Update Service</h4>
+<div class="paragraph _abstract">
+<p>The OpenShift Update Service (OSUS) provides update recommendations to Red&#160;Hat OpenShift Container Platform, including Red Hat Enterprise Linux CoreOS (RHCOS). It provides a graph, or diagram, that contains the <em>vertices</em> of component Operators and the <em>edges</em> that connect them.</p>
+</div>
+<div class="paragraph">
+<p>The edges in the graph show which versions you can safely update to. The vertices are update payloads that specify the intended state of the managed cluster components.</p>
+</div>
+<div class="paragraph">
+<p>The Cluster Version Operator (CVO) in your cluster checks with the OpenShift Update Service to see the valid updates and update paths based on current component versions and information in the graph. When you request an update, the CVO uses the corresponding release image to update your cluster. The release artifacts are hosted in Quay as container images.</p>
+</div>
+<div class="paragraph">
+<p>To allow the OpenShift Update Service to provide only compatible updates, a release verification pipeline drives automation. Each release artifact is verified for compatibility with supported cloud platforms and system architectures, as well as other component packages. After the pipeline confirms the suitability of a release, the OpenShift Update Service notifies you that it is available.</p>
+</div>
+<div class="paragraph">
+<p>The OpenShift Update Service (OSUS) supports a single-stream release model, where only one release version is active and supported at any given time. When a new release is deployed, it fully replaces the previous release.</p>
+</div>
+<div class="paragraph">
+<p>The updated release provides support for upgrades from all Red&#160;Hat OpenShift Container Platform versions starting after 4.8 up to the new release version.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -1779,84 +2041,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Running a cluster with a mixture of RHCOS 9.x and 10.x nodes is not supported. You must move all of your nodes to RHCOS 10.x.</p>
+<p>The OpenShift Update Service displays all recommended updates for your current cluster. If an update path is not recommended by the OpenShift Update Service, it might be because of a known issue related to the update path, such as incompatibility or availability.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>The following procedure shows how to upgrade the nodes in your cluster to run RHCOS 10.x.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>The boot image in your cluster is at least RHCOS 9.x. Note that the boot image on each node remains at RHCOS 9.x after installing or upgrading to RHCOS 10.x. After you configure RHCOS 10.x in your cluster, new nodes boot using RHCOS 9.x initially and automatically upgrade to RHCOS 10.x. For more information, see "Manually updating the boot image".</p>
-</li>
-<li>
-<p>Your cluster is updated to Red&#160;Hat OpenShift Container Platform 5.0.</p>
-</li>
-<li>
-<p>The nodes in your cluster are configured to use crun as the default container runtime. You cannot update the RHCOS version on nodes that use the runC container runtime, because runC is deprecated in Red&#160;Hat OpenShift Container Platform 5.0. If you attempt to update a machine config pool (MCP) that has runC nodes, the nodes in the pool will degrade and will not update. The MCP status reports the following error:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">apiVersion: machineconfiguration.openshift.io/v1
-kind: MachineConfigPool
-metadata:
-  name: worker
-# ...
-status
-# ...
-  conditions
-  - lastTransitionTime: "2026-09-24T22:42:24Z"
-    message: 'Failed to render configuration for pool worker: MachineConfigPool worker
-      targets a RHEL 10 OS image where runc is not available. To unblock, migrate
-      to crun by removing any ContainerRuntimeConfig that sets defaultRuntime to runc,
-      and removing any MachineConfig that sets default_runtime = "runc" in CRI-O configuration
-      under /etc/crio/crio.conf.d/'
-    reason: ""
-    status: "True"
-    type: RenderDegraded
-  - lastTransitionTime: "2026-09-24T22:42:29Z"
-    message: ""
-    reason: ""
-    status: "True"
-    type: Degraded</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You must configure your cluster to use the crun container runtime. For more information, see "Configuring the container runtime".</p>
-</div>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Confirm that your cluster has the RHCOS 10.x stream available by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get osImageStreams/cluster -o yaml | grep rhel-10</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">  - name: rhel-10</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Update the nodes in your cluster to use RHCOS 10.x by running the following command to edit the <code>OSImageStream</code> custom resource:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch osimagestream cluster --type merge -p '{"spec":{"defaultStream":"rhel-10"}}'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>spec.defaultStream: rhel-10</code> parameter specifies that new nodes use the image referenced in <code>status.availableStreams.osImage.name: rhel-10</code> in the <code>OSImageStream</code> custom resource.</p>
+<p>Two controllers run during continuous update mode. The first controller continuously updates the payload manifests, applies the manifests to the cluster, and outputs the controlled rollout status of the Operators to indicate whether they are available, upgrading, or failed. The second controller polls the OpenShift Update Service to determine if updates are available.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -1866,93 +2058,165 @@ status
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Running a cluster with a mixture of RHCOS 9.x and 10.x nodes is not supported. You must move all of your nodes to RHCOS 10.x.</p>
+<p>Only updating to a newer version is supported. Reverting or rolling back your cluster to a previous version is not supported. If your update fails, contact Red Hat support.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Wait for the pools to finish rolling out the update.</p>
+<p>During the update process, the Machine Config Operator (MCO) applies the new configuration to your cluster machines. The MCO cordons the number of nodes specified by the <code>maxUnavailable</code> field on the machine configuration pool and marks them unavailable. By default, this value is set to <code>1</code>. The MCO updates the affected nodes alphabetically by zone, based on the <code>topology.kubernetes.io/zone</code> label. If a zone has more than one node, the oldest nodes are updated first. For nodes that do not use zones, such as in bare metal deployments, the nodes are updated by age, with the oldest nodes updated first. The MCO updates the number of nodes as specified by the <code>maxUnavailable</code> field on the machine configuration pool at a time. The MCO then applies the new configuration and reboots the machine.</p>
 </div>
-</li>
-</ol>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The default setting for <code>maxUnavailable</code> is <code>1</code> for all the machine config pools in Red&#160;Hat OpenShift Container Platform. It is recommended to not change this value and update one control plane node at a time. Do not change this value to <code>3</code> for the control plane pool.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you use Red&#160;Hat Enterprise Linux (RHEL) machines as workers, the MCO does not update the kubelet because you must update the OpenShift API on the machines first.</p>
+</div>
+<div class="paragraph">
+<p>With the specification for the new version applied to the old kubelet, the RHEL machine cannot return to the <code>Ready</code> state. You cannot complete the update until the machines are available. However, the maximum number of unavailable nodes is set to ensure that normal cluster operations can continue with that number of machines out of service.</p>
+</div>
+<div class="paragraph">
+<p>The OpenShift Update Service is composed of an Operator and one or more application instances.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="understanding_clusteroperator_conditiontypes_understanding-openshift-updates">Understanding cluster Operator condition types</h4>
+<div class="paragraph _abstract">
+<p>The status of cluster Operators includes their condition type, which informs you of the current state of your Operator&#8217;s health.</p>
+</div>
+<div class="paragraph">
+<p>The following definitions cover a list of some common ClusterOperator condition types. Operators that have additional condition types and use Operator-specific language have been omitted.</p>
+</div>
+<div class="paragraph">
+<p>The Cluster Version Operator (CVO) is responsible for collecting the status conditions from cluster Operators so that cluster administrators can better understand the state of the Red&#160;Hat OpenShift Container Platform cluster.</p>
 </div>
 <div class="ulist">
-<div class="title">Verification</div>
 <ul>
 <li>
-<p>After the nodes have returned to the <code>READY</code> state, check the machine config pool status for the nodes in a machine config pool to view the current RHCOS version by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machineconfigpool -n openshift-machine-config-operator &lt;machine_config_pool_name&gt; -o yaml</code></pre>
-</div>
-</div>
+<p>Available:
+The condition type <code>Available</code> indicates that an Operator is functional and available in the cluster. If the status is <code>False</code>, at least one part of the operand is non-functional and the condition requires an administrator to intervene.</p>
+</li>
+<li>
+<p>Progressing:
+The condition type <code>Progressing</code> indicates that an Operator is actively rolling out new code, propagating configuration changes, or otherwise moving from one steady state to another.</p>
 <div class="paragraph">
-<p>Replace <code>&lt;machine_config_pool_name&gt;</code> with the name of a machine config pool.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">apiVersion: machineconfiguration.openshift.io/v1
-kind: MachineConfigPool
-metadata:
-  name: worker
-# ...
-status
-# ...
-  osImageStream:
-    name: rhel-10</code></pre>
-</div>
+<p>Operators do not report the condition type <code>Progressing</code> as <code>True</code> when they are reconciling a previous known state. If the observed cluster state has changed and the Operator is reacting to it, then the status reports back as <code>True</code>, since it is moving from one steady state to another.</p>
 </div>
 </li>
 <li>
-<p>Examine the <code>/etc/redhat-release</code> file on a node to see the current RHCOS version on that node by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; -- chroot /host cat /etc/redhat-release</code></pre>
-</div>
-</div>
+<p>Degraded:
+The condition type <code>Degraded</code> indicates that an Operator has a current state that does not match its required state over a period of time. The period of time can vary by component, but a <code>Degraded</code> status represents persistent observation of an Operator&#8217;s condition.  As a result, an Operator does not fluctuate in and out of the <code>Degraded</code> state.</p>
 <div class="paragraph">
-<p>Replace <code>&lt;node_name&gt;</code> with the name of the node.</p>
+<p>There might be a different condition type if the transition from one state to another does not persist over a long enough period to report <code>Degraded</code>.
+An Operator does not report <code>Degraded</code> during the course of a normal update.  An Operator may report <code>Degraded</code> in response to a persistent infrastructure failure that requires eventual administrator intervention.</p>
 </div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">Red Hat Enterprise Linux release 10.2 (Coughlan)</code></pre>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This condition type is only an indication that something may need investigation and adjustment. As long as the Operator is available, the <code>Degraded</code> condition does not cause user workload failure or application downtime.</p>
 </div>
+</td>
+</tr>
+</table>
 </div>
 </li>
 <li>
-<p>Examine the <code>/etc/os-release</code> file on a node to see the current RHCOS version on that node by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; -- chroot /host cat /etc/os-release</code></pre>
-</div>
-</div>
+<p>Upgradeable:
+The condition type <code>Upgradeable</code> indicates whether the Operator is safe to update based on the current cluster state. The message field contains a human-readable description of what the administrator needs to do for the cluster to successfully update. The CVO allows updates when this condition is <code>True</code>, <code>Unknown</code> or missing.</p>
 <div class="paragraph">
-<p>Replace <code>&lt;node_name&gt;</code> with the name of the node.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME="Red Hat Enterprise Linux CoreOS"
-VERSION="10.2.20260824-0 (Coughlan)"
-RELEASE_TYPE=stable
-ID="rhel"
-ID_LIKE="centos fedora"
-VERSION_ID="10.2"
-PLATFORM_ID="platform:el10"
-PRETTY_NAME="Red Hat Enterprise Linux CoreOS 10.2.20260824-0 (Coughlan)"
-# ...</code></pre>
-</div>
+<p>When the <code>Upgradeable</code> status is <code>False</code>, only minor updates are impacted, and the CVO prevents the cluster from performing impacted updates unless forced.</p>
 </div>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="understanding-clusterversion-conditiontypes_understanding-openshift-updates">Understanding cluster version condition types</h4>
+<div class="paragraph _abstract">
+<p>The Cluster Version Operator (CVO) monitors cluster Operators and other components, and is responsible for collecting the status of both the cluster version and its Operators. This status includes the condition type, which informs you of the health and current state of the Red&#160;Hat OpenShift Container Platform cluster.</p>
+</div>
+<div class="paragraph">
+<p>In addition to <code>Available</code>, <code>Progressing</code>, and <code>Upgradeable</code>, there are condition types that affect cluster versions and Operators.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Failing:
+The cluster version condition type <code>Failing</code> indicates that a cluster cannot reach its desired state, is unhealthy, and requires an administrator to intervene.</p>
+</li>
+<li>
+<p>Invalid:
+The cluster version condition type <code>Invalid</code> indicates that the cluster version has an error that prevents the server from taking action. The CVO only reconciles the current state as long as this condition is set.</p>
+</li>
+<li>
+<p>RetrievedUpdates:
+The cluster version condition type <code>RetrievedUpdates</code> indicates whether or not available updates have been retrieved from the upstream update server. The condition is <code>Unknown</code> before retrieval, <code>False</code> if the updates either recently failed or could not be retrieved, or <code>True</code> if the <code>availableUpdates</code> field is both recent and accurate.</p>
+</li>
+<li>
+<p>ReleaseAccepted:
+The cluster version condition type <code>ReleaseAccepted</code> with a <code>True</code> status indicates that the requested release payload was successfully loaded without failure during image verification and precondition checking.</p>
+</li>
+<li>
+<p>ImplicitlyEnabledCapabilities:
+The cluster version condition type <code>ImplicitlyEnabledCapabilities</code> with a <code>True</code> status indicates that there are enabled capabilities that the user is not currently requesting through <code>spec.capabilities</code>. The CVO does not support disabling capabilities if any associated resources were previously managed by the CVO.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="update-common-terms_understanding-openshift-updates">Common terms</h4>
+<div class="paragraph _abstract">
+<p>Some terms are commonly used in the context of Red&#160;Hat OpenShift Container Platform updates, which might be useful to learn.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Control plane</dt>
+<dd>
+<p>The <em>control plane</em>, which is composed of control plane machines, manages the Red&#160;Hat OpenShift Container Platform cluster. The control plane machines manage workloads on the compute machines, which are also known as worker machines.</p>
+</dd>
+<dt class="hdlist1">Cluster Version Operator</dt>
+<dd>
+<p>The <em>Cluster Version Operator</em> (CVO) starts the update process for the cluster. It checks with OSUS based on the current cluster version and retrieves the graph which contains available or possible update paths.</p>
+</dd>
+<dt class="hdlist1">Machine Config Operator</dt>
+<dd>
+<p>The <em>Machine Config Operator</em> (MCO) is a cluster-level Operator that manages the operating system and machine configurations. Through the MCO, platform administrators can configure and update systemd, CRI-O and Kubelet, the kernel, NetworkManager, and other system features on the worker nodes.</p>
+</dd>
+<dt class="hdlist1">OpenShift Update Service</dt>
+<dd>
+<p>The <em>OpenShift Update Service</em> (OSUS) provides over-the-air updates to Red&#160;Hat OpenShift Container Platform, including to Red Hat Enterprise Linux CoreOS (RHCOS). It provides a graph, or diagram, that contains the vertices of component Operators and the edges that connect them.</p>
+</dd>
+<dt class="hdlist1">Channels</dt>
+<dd>
+<p><em>Channels</em> declare an update strategy tied to minor versions of Red&#160;Hat OpenShift Container Platform. The OSUS uses this configured strategy to recommend update edges consistent with that strategy.</p>
+</dd>
+<dt class="hdlist1">Recommended update edge</dt>
+<dd>
+<p>A <em>recommended update edge</em> is a recommended update between Red&#160;Hat OpenShift Container Platform releases. Whether a given update is recommended can depend on the cluster&#8217;s configured channel, current version, known bugs, and other information. OSUS communicates the recommended edges to the CVO, which runs in every cluster.</p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x.html">Update from 4.x to 5.x</a> | ↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="update-hardware-on-vsphere-nodes-con_update-hardware-on-vsphere-nodes.html">Update hardware on vSphere nodes</a> →</p>
+<p>↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="how-updates-work_how-updates-work.html">How cluster updates work</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -1963,7 +2227,7 @@ PRETTY_NAME="Red Hat Enterprise Linux CoreOS 10.2.20260824-0 (Coughlan)"
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-21 18:01:53 +0100
+Last updated 2026-10-22 13:31:11 +0100
 </div>
 </div>
 <style>

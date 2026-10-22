@@ -477,8 +477,47 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-start -->
+<style>
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
+  }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
+  }
+</style>
+<!-- navmap-preview-warning-end -->
 </head>
 <body id="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue" class="book toc2 toc-left navmap-has-right-toc">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/ocp-jobs/configure-multi-tenant-namespace-isolation.adoc:20
+    include::modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc
+  maps/ocp/ocp-jobs/scale-components-based-on-cluster-size.adoc:34
+    include::modules/network-observability-flowcollector-api-specifications.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/modules/network-observability-flowcollector-api-specifications.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -676,33 +715,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_upgrade.html">Upgrade</a>
 
 <ul class="sectlevel2">
-<li><a href="about-updates_update-clusters-overview.html">Cluster update overview</a>
+<li><a href="understanding-openshift-updates_understanding-openshift-updates.html">Introduction to OpenShift updates</a>
 </li>
-<li><a href="update-cluster-version-object_understand-openshift-updates.html">The ClusterVersion object</a>
+<li><a href="how-updates-work_how-updates-work.html">How cluster updates work</a>
 </li>
-<li><a href="understand-update-channels-and-releases-intro_understand-update-channels-and-releases.html">Understand update channels and releases</a>
+<li><a href="understand-update-channels-and-releases-intro_understanding-update-channels-releases.html">Understand update channels and releases</a>
 </li>
-<li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
+<li><a href="understand-update-duration-intro_openshift-update-duration.html">Understand update duration</a>
 </li>
-<li><a href="update-assessment-ai_prepare-to-update-a-cluster.html">Analyzing update risk and status using AI</a>
+<li><a href="updating-cluster-prepare_updating-cluster-prepare.html">Preparing to update to Red&#160;Hat OpenShift Container Platform {product-version}</a>
 </li>
-<li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
+<li><a href="preparing-manual-creds-update_preparing-manual-creds-update.html">Prepare to update a cluster with manually maintained credentials</a>
 </li>
-<li><a href="before-updating-ocp_update-a-cluster-using-the-web-console.html">Before updating the Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="updating-cluster-web-console_updating-cluster-web-console.html">Update a cluster using the web console</a>
 </li>
-<li><a href="update-single-node-openshift_update-a-cluster-using-the-cli.html">About updating single node Red&#160;Hat OpenShift Container Platform</a>
+<li><a href="updating-cluster-cli_updating-cluster-cli.html">Update a cluster using the CLI</a>
 </li>
-<li><a href="perform-a-control-plane-only-update-intro_perform-a-control-plane-only-update.html">Perform a Control Plane Only update</a>
+<li><a href="perform-a-control-plane-only-update-intro_control-plane-only-update.html">Perform a Control Plane Only update</a>
 </li>
-<li><a href="example_perform-a-canary-rollout-update.html">Example Canary update strategy</a>
+<li><a href="update-using-custom-machine-config-pools_update-using-custom-machine-config-pools.html">Perform a canary rollout update</a>
 </li>
 <li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
 </li>
-<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a multi-architecture cluster</a>
+<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a cluster with multi-architecture compute machines</a>
 </li>
-<li><a href="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x.html">Update from 4.x to 5.x</a>
+<li><a href="update-from-4-x-to-5-x-intro_updating-ocp-5.html">Update a cluster to Red&#160;Hat OpenShift Container Platform 5.0</a>
 </li>
-<li><a href="mco-image-streams-updating_update-nodes-from-rhcos-9-to-rhcos-10.html">Updating the nodes in an existing cluster from RHCOS 9.x to RHCOS 10.x</a>
+<li><a href="mco-image-streams_mco-image-streams.html">Updating the cluster to RHCOS 10.x</a>
 </li>
 <li><a href="update-hardware-on-vsphere-nodes-con_update-hardware-on-vsphere-nodes.html">Update hardware on vSphere nodes</a>
 </li>
@@ -1805,7 +1844,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#ai-operators_run-ai-and-ml-workloads-with-red-hat-build-of-kueue">Operators for running AI workloads</a></li><li class="level-4"><a href="#kueue-overview_run-ai-and-ml-workloads-with-red-hat-build-of-kueue">Red Hat build of Kueue overview</a></li><li class="level-4"><a href="#kueue-personas_run-ai-and-ml-workloads-with-red-hat-build-of-kueue">Red Hat build of Kueue personas</a></li><li class="level-4"><a href="#kueue-workflow-overview_run-ai-and-ml-workloads-with-red-hat-build-of-kueue">Red Hat build of Kueue workflow overview</a></li><li class="level-4"><a href="#install-kueue-intro_install-red-hat-build-of-kueue">Install Red Hat build of Kueue</a></li><li class="level-5"><a href="#compatible-environments_install-red-hat-build-of-kueue">Compatible environments</a></li><li class="level-6"><a href="#compatible-environments-arch_install-red-hat-build-of-kueue">Supported architectures</a></li><li class="level-6"><a href="#compatible-environments-platforms_install-red-hat-build-of-kueue">Supported platforms</a></li><li class="level-5"><a href="#install-kueue-operator_install-red-hat-build-of-kueue">Installing the Red Hat Build of Kueue Operator</a></li><li class="level-5"><a href="#upgrading-kueue_install-red-hat-build-of-kueue">Upgrading Red Hat build of Kueue</a></li><li class="level-5"><a href="#create-kueue-cr_install-red-hat-build-of-kueue">Creating a Kueue custom resource</a></li><li class="level-5"><a href="#label-namespaces_install-red-hat-build-of-kueue">Labeling namespaces to allow Red Hat build of Kueue to manage jobs</a></li><li class="level-4"><a href="#configure-kueue-quotas-intro_configure-kueue-quotas-and-queues">Configure Red Hat build of Kueue quotas and queues</a></li><li class="level-5"><a href="#configuring-clusterqueues_configure-kueue-quotas-and-queues">Configuring a cluster queue</a></li><li class="level-5"><a href="#configuring-resourceflavors_configure-kueue-quotas-and-queues">Configuring a resource flavor</a></li><li class="level-5"><a href="#configuring-localqueues_configure-kueue-quotas-and-queues">Configuring a local queue</a></li><li class="level-5"><a href="#configuring-localqueue-defaults_configure-kueue-quotas-and-queues">Configuring a default local queue</a></li><li class="level-4"><a href="#kueue-cohorts-intro_share-quota-across-cluster-queues-with-cohorts">Share quota across cluster queues with cohorts</a></li><li class="level-5"><a href="#clusterqueue-configuring-cohorts-reference_share-quota-across-cluster-queues-with-cohorts">Cohort configuration within a cluster queue spec</a></li><li class="level-4"><a href="#kueue-fair-sharing-intro_configure-fair-sharing-between-cluster-queues">Configure fair sharing between cluster queues</a></li><li class="level-5"><a href="#clusterqueue-share-value_configure-fair-sharing-between-cluster-queues">Cluster queue weights</a></li><li class="level-6"><a href="#clusterqueue-share-value-zero_configure-fair-sharing-between-cluster-queues">Zero weight</a></li><li class="level-4"><a href="#kueue-admission-fair-sharing-intro_configure-admission-fair-sharing">Configure admission fair sharing</a></li><li class="level-5"><a href="#configuring-kueue-instance-for-admission-fair-sharing_configure-admission-fair-sharing">Configuring the Red Hat build of Kueue instance for admission fair sharing</a></li><li class="level-6"><a href="#setting-resource-weights_configure-admission-fair-sharing">Set resource weights</a></li><li class="level-5"><a href="#configuring-clusterqueue-for-admission-fair-sharing_configure-admission-fair-sharing">Configuring a cluster queue for admission fair sharing</a></li><li class="level-5"><a href="#configuring-localqueue-for-admission-fair-sharing_configure-admission-fair-sharing">Configuring a local queue for admission fair sharing (optional)</a></li><li class="level-5"><a href="#verifying-the-admission-fair-sharing-status_configure-admission-fair-sharing">Verifying the admission fair sharing status</a></li><li class="level-4"><a href="#kueue-run-jobs-intro_run-jobs-with-quota-limits">Run jobs with quota limits</a></li><li class="level-5"><a href="#identifying-local-queues_run-jobs-with-quota-limits">Identifying available local queues</a></li><li class="level-5"><a href="#defining-running-jobs_run-jobs-with-quota-limits">Defining a job to run with Red Hat build of Kueue</a></li><li class="level-4"><a href="#kueue-manage-workloads-intro_manage-jobs-and-workloads-with-kueue">Manage jobs and workloads with Red Hat build of Kueue</a></li><li class="level-5"><a href="#configuring-labelpolicy_manage-jobs-and-workloads-with-kueue">Configuring label policies for jobs</a></li><li class="level-4"><a href="#kueue-gang-scheduling-intro_configure-gang-scheduling-for-kueue-jobs">Configure gang scheduling for Red Hat build of Kueue jobs</a></li><li class="level-5"><a href="#configuring-gangscheduling_configure-gang-scheduling-for-kueue-jobs">Configuring gang scheduling</a></li><li class="level-4"><a href="#kueue-integrate-jobset-intro_integrate-the-jobset-operator-with-kueue">Integrate the JobSet Operator with Red Hat build of Kueue</a></li><li class="level-5"><a href="#kueue-installing-jobset_integrate-the-jobset-operator-with-kueue">Installing JobSet Operator with Red Hat build of Kueue</a></li><li class="level-5"><a href="#kueue-running-jobset_integrate-the-jobset-operator-with-kueue">Running JobSet Operator with Red Hat build of Kueue</a></li><li class="level-4"><a href="#kueue-integrate-lws-intro_integrate-the-leader-worker-set-operator-with-kueue">Integrate the Leader Worker Set Operator with Red Hat build of Kueue</a></li><li class="level-5"><a href="#kueue-installing-lws_integrate-the-leader-worker-set-operator-with-kueue">Installing Leader Worker Set Operator with Red Hat build of Kueue</a></li><li class="level-5"><a href="#kueue-running-lws_integrate-the-leader-worker-set-operator-with-kueue">Running Leader Worker Set Operator with Red Hat build of Kueue</a></li><li class="level-4"><a href="#kueue-dra-quota-management_integrate-dynamic-resource-allocation-with-kueue">DRA quota management overview</a></li><li class="level-5"><a href="#kueue-dra-resourceclaimtemplates_integrate-dynamic-resource-allocation-with-kueue">Configuring the resource claim template path</a></li><li class="level-5"><a href="#kueue-dra-extended-resources_integrate-dynamic-resource-allocation-with-kueue">Configuring the extended resources path</a></li><li class="level-5"><a href="#kueue-dra-partitionable-devices_integrate-dynamic-resource-allocation-with-kueue">Configuring the partitionable devices</a></li><li class="level-4"><a href="#kueue-monitor-pending-workloads-intro_monitor-pending-kueue-workloads">Monitor pending Red Hat build of Kueue workloads</a></li><li class="level-5"><a href="#configuring-api-priority-and-fairness_monitor-pending-kueue-workloads">API Priority and Fairness</a></li><li class="level-5"><a href="#providing-user-permissions_monitor-pending-kueue-workloads">Providing user permissions</a></li><li class="level-5"><a href="#monitoring-pending-workloads-on-demand_monitor-pending-kueue-workloads">Monitoring pending workloads on demand</a></li><li class="level-6"><a href="#viewing-pending-workloads-clusterqueue_monitor-pending-kueue-workloads">Viewing pending workloads in ClusterQueue</a></li><li class="level-6"><a href="#viewing-pending-workloads-localqueue_monitor-pending-kueue-workloads">Viewing pending workloads in LocalQueue</a></li><li class="level-5"><a href="#modifying-monitoring-settings_monitor-pending-kueue-workloads">Modifying monitoring settings</a></li><li class="level-4"><a href="#kueue-rbac-intro_configure-role-based-permissions-for-kueue">Configure role-based permissions for Red Hat build of Kueue</a></li><li class="level-5"><a href="#kueue-cluster-roles_configure-role-based-permissions-for-kueue">Red Hat build of Kueue cluster roles</a></li><li class="level-5"><a href="#configure-rbac-batch-admins_configure-role-based-permissions-for-kueue">Configuring permissions for batch administrators</a></li><li class="level-5"><a href="#configure-rbac-batch-users_configure-role-based-permissions-for-kueue">Configuring permissions for users</a></li><li class="level-4"><a href="#kueue-support-intro_collect-kueue-data-for-red-hat-support">Collect Red Hat build of Kueue data for Red Hat Support</a></li><li class="level-5"><a href="#gathering-cluster-data_collect-kueue-data-for-red-hat-support">Collecting data for Red Hat Support</a></li><li class="level-4"><a href="#kueue-release-notes-intro_review-the-red-hat-build-of-kueue-release-notes">Review the Red Hat build of Kueue release notes</a></li><li class="level-5"><a href="#release-notes-1-4-2_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.4.2</a></li><li class="level-6"><a href="#release-notes-1-4-2-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-5"><a href="#release-notes-1.3.2_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.3.2</a></li><li class="level-6"><a href="#release-notes-1.3.2-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-5"><a href="#release-notes-1.4.1_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.4.1</a></li><li class="level-6"><a href="#release-notes-1.4.1-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-5"><a href="#release-notes-1.4_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.4</a></li><li class="level-6"><a href="#release-notes-1.4-new-features_review-the-red-hat-build-of-kueue-release-notes">New features and enhancements</a></li><li class="level-6"><a href="#release-notes-1.4-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-5"><a href="#release-notes-1.3.1_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.3.1</a></li><li class="level-6"><a href="#release-notes-1.3.1-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-5"><a href="#release-notes-1.3_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.3</a></li><li class="level-6"><a href="#release-notes-1.3-new-features_review-the-red-hat-build-of-kueue-release-notes">New features and enhancements</a></li><li class="level-6"><a href="#release-notes-1.3-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-6"><a href="#release-notes-1.3-known-issues_review-the-red-hat-build-of-kueue-release-notes">Known issues</a></li><li class="level-5"><a href="#release-notes-1.2_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.2</a></li><li class="level-6"><a href="#release-notes-1.2-new-features_review-the-red-hat-build-of-kueue-release-notes">New features and enhancements</a></li><li class="level-6"><a href="#release-notes-1.2-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-6"><a href="#release-notes-1.2-known-issues_review-the-red-hat-build-of-kueue-release-notes">Known issues</a></li><li class="level-5"><a href="#kueue-release-notes-1.1_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.1</a></li><li class="level-6"><a href="#release-notes-1.1-new-features_review-the-red-hat-build-of-kueue-release-notes">New features and enhancements</a></li><li class="level-6"><a href="#release-notes-1.1-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-6"><a href="#release-notes-1.1-known-issues_review-the-red-hat-build-of-kueue-release-notes">Known issues</a></li><li class="level-5"><a href="#release-notes-1.0.1_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.0.1</a></li><li class="level-6"><a href="#release-notes-1.0.1-bug-fixes_review-the-red-hat-build-of-kueue-release-notes">Bug fixes in Red Hat build of Kueue version 1.0.1</a></li><li class="level-5"><a href="#release-notes-1.0_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.0</a></li><li class="level-6"><a href="#release-notes-1.0-new-features_review-the-red-hat-build-of-kueue-release-notes">New features and enhancements</a></li><li class="level-6"><a href="#release-notes-1.0-known-issues_review-the-red-hat-build-of-kueue-release-notes">Known issues</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#ai-operators_run-ai-and-ml-workloads-with-red-hat-build-of-kueue">Operators for running AI workloads</a></li><li class="level-4"><a href="#kueue-overview_run-ai-and-ml-workloads-with-red-hat-build-of-kueue">Red Hat build of Kueue overview</a></li><li class="level-4"><a href="#kueue-personas_run-ai-and-ml-workloads-with-red-hat-build-of-kueue">Red Hat build of Kueue personas</a></li><li class="level-4"><a href="#kueue-workflow-overview_run-ai-and-ml-workloads-with-red-hat-build-of-kueue">Red Hat build of Kueue workflow overview</a></li><li class="level-4"><a href="#install-kueue-intro_install-red-hat-build-of-kueue">Install Red Hat build of Kueue</a></li><li class="level-5"><a href="#compatible-environments_install-red-hat-build-of-kueue">Compatible environments</a></li><li class="level-6"><a href="#compatible-environments-arch_install-red-hat-build-of-kueue">Supported architectures</a></li><li class="level-6"><a href="#compatible-environments-platforms_install-red-hat-build-of-kueue">Supported platforms</a></li><li class="level-5"><a href="#install-kueue-operator_install-red-hat-build-of-kueue">Installing the Red Hat Build of Kueue Operator</a></li><li class="level-5"><a href="#upgrading-kueue_install-red-hat-build-of-kueue">Upgrading Red Hat build of Kueue</a></li><li class="level-5"><a href="#create-kueue-cr_install-red-hat-build-of-kueue">Creating a Kueue custom resource</a></li><li class="level-5"><a href="#label-namespaces_install-red-hat-build-of-kueue">Labeling namespaces to allow Red Hat build of Kueue to manage jobs</a></li><li class="level-4"><a href="#configure-kueue-quotas-intro_configure-kueue-quotas-and-queues">Configure Red Hat build of Kueue quotas and queues</a></li><li class="level-5"><a href="#configuring-clusterqueues_configure-kueue-quotas-and-queues">Configuring a cluster queue</a></li><li class="level-5"><a href="#configuring-resourceflavors_configure-kueue-quotas-and-queues">Configuring a resource flavor</a></li><li class="level-5"><a href="#configuring-localqueues_configure-kueue-quotas-and-queues">Configuring a local queue</a></li><li class="level-5"><a href="#configuring-localqueue-defaults_configure-kueue-quotas-and-queues">Configuring a default local queue</a></li><li class="level-4"><a href="#kueue-cohorts-intro_share-quota-across-cluster-queues-with-cohorts">Share quota across cluster queues with cohorts</a></li><li class="level-5"><a href="#clusterqueue-configuring-cohorts-reference_share-quota-across-cluster-queues-with-cohorts">Cohort configuration within a cluster queue spec</a></li><li class="level-4"><a href="#kueue-fair-sharing-intro_configure-fair-sharing-between-cluster-queues">Configure fair sharing between cluster queues</a></li><li class="level-5"><a href="#clusterqueue-share-value_configure-fair-sharing-between-cluster-queues">Cluster queue weights</a></li><li class="level-6"><a href="#clusterqueue-share-value-zero_configure-fair-sharing-between-cluster-queues">Zero weight</a></li><li class="level-4"><a href="#kueue-admission-fair-sharing-intro_configure-admission-fair-sharing">Configure admission fair sharing</a></li><li class="level-5"><a href="#configuring-kueue-instance-for-admission-fair-sharing_configure-admission-fair-sharing">Configuring the Red Hat build of Kueue instance for admission fair sharing</a></li><li class="level-6"><a href="#setting-resource-weights_configure-admission-fair-sharing">Set resource weights</a></li><li class="level-5"><a href="#configuring-clusterqueue-for-admission-fair-sharing_configure-admission-fair-sharing">Configuring a cluster queue for admission fair sharing</a></li><li class="level-5"><a href="#configuring-localqueue-for-admission-fair-sharing_configure-admission-fair-sharing">Configuring a local queue for admission fair sharing (optional)</a></li><li class="level-5"><a href="#verifying-the-admission-fair-sharing-status_configure-admission-fair-sharing">Verifying the admission fair sharing status</a></li><li class="level-4"><a href="#kueue-run-jobs-intro_run-jobs-with-quota-limits">Run jobs with quota limits</a></li><li class="level-5"><a href="#identifying-local-queues_run-jobs-with-quota-limits">Identifying available local queues</a></li><li class="level-5"><a href="#defining-running-jobs_run-jobs-with-quota-limits">Defining a job to run with Red Hat build of Kueue</a></li><li class="level-4"><a href="#kueue-manage-workloads-intro_manage-jobs-and-workloads-with-kueue">Manage jobs and workloads with Red Hat build of Kueue</a></li><li class="level-5"><a href="#configuring-labelpolicy_manage-jobs-and-workloads-with-kueue">Configuring label policies for jobs</a></li><li class="level-4"><a href="#kueue-gang-scheduling-intro_configure-gang-scheduling-for-kueue-jobs">Configure gang scheduling for Red Hat build of Kueue jobs</a></li><li class="level-5"><a href="#configuring-gangscheduling_configure-gang-scheduling-for-kueue-jobs">Gang scheduling configuration</a></li><li class="level-4"><a href="#kueue-integrate-jobset-intro_integrate-the-jobset-operator-with-kueue">Integrate the JobSet Operator with Red Hat build of Kueue</a></li><li class="level-5"><a href="#kueue-installing-jobset_integrate-the-jobset-operator-with-kueue">Installing JobSet Operator with Red Hat build of Kueue</a></li><li class="level-5"><a href="#kueue-running-jobset_integrate-the-jobset-operator-with-kueue">Running JobSet Operator with Red Hat build of Kueue</a></li><li class="level-4"><a href="#kueue-integrate-lws-intro_integrate-the-leader-worker-set-operator-with-kueue">Integrate the Leader Worker Set Operator with Red Hat build of Kueue</a></li><li class="level-5"><a href="#kueue-installing-lws_integrate-the-leader-worker-set-operator-with-kueue">Installing Leader Worker Set Operator with Red Hat build of Kueue</a></li><li class="level-5"><a href="#kueue-running-lws_integrate-the-leader-worker-set-operator-with-kueue">Running Leader Worker Set Operator with Red Hat build of Kueue</a></li><li class="level-4"><a href="#kueue-dra-quota-management_integrate-dynamic-resource-allocation-with-kueue">DRA quota management overview</a></li><li class="level-5"><a href="#kueue-dra-resourceclaimtemplates_integrate-dynamic-resource-allocation-with-kueue">Configuring the resource claim template path</a></li><li class="level-5"><a href="#kueue-dra-extended-resources_integrate-dynamic-resource-allocation-with-kueue">Configuring the extended resources path</a></li><li class="level-5"><a href="#kueue-dra-partitionable-devices_integrate-dynamic-resource-allocation-with-kueue">Configuring the partitionable devices</a></li><li class="level-4"><a href="#kueue-monitor-pending-workloads-intro_monitor-pending-kueue-workloads">Monitor pending Red Hat build of Kueue workloads</a></li><li class="level-5"><a href="#configuring-api-priority-and-fairness_monitor-pending-kueue-workloads">API Priority and Fairness</a></li><li class="level-5"><a href="#providing-user-permissions_monitor-pending-kueue-workloads">Providing user permissions</a></li><li class="level-5"><a href="#monitoring-pending-workloads-on-demand_monitor-pending-kueue-workloads">Monitoring pending workloads on demand</a></li><li class="level-6"><a href="#viewing-pending-workloads-clusterqueue_monitor-pending-kueue-workloads">Viewing pending workloads in ClusterQueue</a></li><li class="level-6"><a href="#viewing-pending-workloads-localqueue_monitor-pending-kueue-workloads">Viewing pending workloads in LocalQueue</a></li><li class="level-5"><a href="#modifying-monitoring-settings_monitor-pending-kueue-workloads">Modifying monitoring settings</a></li><li class="level-4"><a href="#kueue-rbac-intro_configure-role-based-permissions-for-kueue">Configure role-based permissions for Red Hat build of Kueue</a></li><li class="level-5"><a href="#kueue-cluster-roles_configure-role-based-permissions-for-kueue">Red Hat build of Kueue cluster roles</a></li><li class="level-5"><a href="#configure-rbac-batch-admins_configure-role-based-permissions-for-kueue">Configuring permissions for batch administrators</a></li><li class="level-5"><a href="#configure-rbac-batch-users_configure-role-based-permissions-for-kueue">Configuring permissions for users</a></li><li class="level-4"><a href="#kueue-support-intro_collect-kueue-data-for-red-hat-support">Collect Red Hat build of Kueue data for Red Hat Support</a></li><li class="level-5"><a href="#gathering-cluster-data_collect-kueue-data-for-red-hat-support">Collecting data for Red Hat Support</a></li><li class="level-4"><a href="#kueue-release-notes-intro_review-the-red-hat-build-of-kueue-release-notes">Review the Red Hat build of Kueue release notes</a></li><li class="level-5"><a href="#release-notes-1-4-2_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.4.2</a></li><li class="level-6"><a href="#release-notes-1-4-2-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-5"><a href="#release-notes-1.3.2_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.3.2</a></li><li class="level-6"><a href="#release-notes-1.3.2-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-5"><a href="#release-notes-1.4.1_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.4.1</a></li><li class="level-6"><a href="#release-notes-1.4.1-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-5"><a href="#release-notes-1.4_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.4</a></li><li class="level-6"><a href="#release-notes-1.4-new-features_review-the-red-hat-build-of-kueue-release-notes">New features and enhancements</a></li><li class="level-6"><a href="#release-notes-1.4-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-5"><a href="#release-notes-1.3.1_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.3.1</a></li><li class="level-6"><a href="#release-notes-1.3.1-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-5"><a href="#release-notes-1.3_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.3</a></li><li class="level-6"><a href="#release-notes-1.3-new-features_review-the-red-hat-build-of-kueue-release-notes">New features and enhancements</a></li><li class="level-6"><a href="#release-notes-1.3-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-6"><a href="#release-notes-1.3-known-issues_review-the-red-hat-build-of-kueue-release-notes">Known issues</a></li><li class="level-5"><a href="#release-notes-1.2_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.2</a></li><li class="level-6"><a href="#release-notes-1.2-new-features_review-the-red-hat-build-of-kueue-release-notes">New features and enhancements</a></li><li class="level-6"><a href="#release-notes-1.2-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-6"><a href="#release-notes-1.2-known-issues_review-the-red-hat-build-of-kueue-release-notes">Known issues</a></li><li class="level-5"><a href="#kueue-release-notes-1.1_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.1</a></li><li class="level-6"><a href="#release-notes-1.1-new-features_review-the-red-hat-build-of-kueue-release-notes">New features and enhancements</a></li><li class="level-6"><a href="#release-notes-1.1-fixed-issues_review-the-red-hat-build-of-kueue-release-notes">Fixed issues</a></li><li class="level-6"><a href="#release-notes-1.1-known-issues_review-the-red-hat-build-of-kueue-release-notes">Known issues</a></li><li class="level-5"><a href="#release-notes-1.0.1_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.0.1</a></li><li class="level-6"><a href="#release-notes-1.0.1-bug-fixes_review-the-red-hat-build-of-kueue-release-notes">Bug fixes in Red Hat build of Kueue version 1.0.1</a></li><li class="level-5"><a href="#release-notes-1.0_review-the-red-hat-build-of-kueue-release-notes">Release notes for Red Hat build of Kueue version 1.0</a></li><li class="level-6"><a href="#release-notes-1.0-new-features_review-the-red-hat-build-of-kueue-release-notes">New features and enhancements</a></li><li class="level-6"><a href="#release-notes-1.0-known-issues_review-the-red-hat-build-of-kueue-release-notes">Known issues</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue">Run AI and ML workloads with Red&#160;Hat build of Kueue</h3>
@@ -2649,7 +2688,10 @@ spec:
 </div>
 </div>
 <div class="paragraph">
-<p>All cluster queues that have a matching <code>spec.cohortName</code> are part of the same cohort.</p>
+<p>All cluster queues that have a matching <code>spec.cohortName</code> field are part of the same cohort.</p>
+</div>
+<div class="paragraph">
+<p>To add a cohort-level quota or place the cluster queue in a hierarchy, create a <code>Cohort</code> object with the same name.</p>
 </div>
 <div class="paragraph">
 <p>If the <code>spec.cohortName</code> field is omitted, the cluster queue does not belong to any cohort and cannot access borrowable resources.</p>
@@ -3147,9 +3189,12 @@ spec:
 <p>Red&#160;Hat build of Kueue suspends jobs until the Red&#160;Hat OpenShift Container Platform cluster can guarantee the capacity to start and run all of the related jobs together, which is also known as all-or-nothing scheduling.</p>
 </div>
 <div class="sect4">
-<h5 id="configuring-gangscheduling_configure-gang-scheduling-for-kueue-jobs">Configuring gang scheduling</h5>
+<h5 id="configuring-gangscheduling_configure-gang-scheduling-for-kueue-jobs">Gang scheduling configuration</h5>
 <div class="paragraph _abstract">
-<p>As a cluster administrator, you can configure gang scheduling by modifying the <code>gangScheduling</code> spec in the <code>Kueue</code> custom resource (CR).</p>
+<p>The <code>spec.config.gangScheduling.policy</code> field in the <code>Kueue</code> custom resource (CR) controls the gang scheduling policy for workloads.</p>
+</div>
+<div class="paragraph">
+<p>The following example uses parallel admission and a 10-minute start timeout:</p>
 </div>
 <div class="listingblock">
 <div class="title">Example <code>Kueue</code> CR with gang scheduling configured</div>
@@ -3161,29 +3206,52 @@ metadata:
   labels:
     app.kubernetes.io/managed-by: kustomize
     app.kubernetes.io/name: kueue-operator
-  namespace: openshift-kueue-operator
 spec:
   config:
+    integrations:
+      frameworks:
+      - BatchJob
     gangScheduling:
       policy: ByWorkload
       byWorkload:
         admission: Parallel
-# ...</code></pre>
+        timeoutSeconds: 600</code></pre>
 </div>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.config.gangScheduling.policy</code></dt>
-<dd>
-<p>You can set the <code>policy</code> value to enable or disable gang scheduling. The possible values are <code>ByWorkload</code>, <code>None</code>, or empty (<code>""</code>).
-When the <code>policy</code> value is set to <code>ByWorkload</code>, each job is processed and considered for admission as a single unit. If the job does not become ready within the specified time, the entire job is evicted and retried at a later time. When the <code>policy</code> value is set to <code>None</code>, gang scheduling is disabled. When the <code>policy</code> value is empty or set to <code>""</code>, the Red&#160;Hat build of Kueue Operator determines settings for gang scheduling. Currently, gang scheduling is disabled by default.</p>
-</dd>
-<dt class="hdlist1"><code>spec.config.gangScheduling.byWorkload.admission</code></dt>
-<dd>
-<p>If the <code>policy</code> value is set to <code>ByWorkload</code>, you must configure job admission settings. The possible values for the <code>admission</code> spec are <code>Parallel</code>, <code>Sequential</code>, or empty (<code>""</code>). When the <code>admission</code> value is set to <code>Parallel</code>, pods from any job can be admitted at any time. This can cause a deadlock, where jobs are in contention for cluster capacity. When a deadlock occurs, the successful scheduling of pods from another job can prevent the scheduling of pods from the current job. When the <code>admission</code> value is set to <code>Sequential</code>, only pods from the currently processing job are admitted. After all of the pods from the current job have been admitted and are ready, Red&#160;Hat build of Kueue processes the next job. Sequential processing can slow down admission when the cluster has sufficient capacity for multiple jobs, but provides a higher likelihood that all of the pods for a job are scheduled together successfully. When the <code>admission</code> value is empty or set to <code>""</code>, the Red&#160;Hat build of Kueue Operator determines job admission settings. Currently, the <code>admission</code> value is set to <code>Parallel</code> by default.</p>
-</dd>
-</dl>
+<div class="paragraph">
+<p>The <code>policy</code> field accepts the following values:</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 981. <code>spec.config.gangScheduling.policy</code> values</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ByWorkload</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Processes each workload as a single unit for admission. The readiness timeout applies to the entire workload. If retries remain or you omit the limit, Red&#160;Hat build of Kueue evicts and requeues the workload for another admission attempt. If no retries remain, Red&#160;Hat build of Kueue deactivates the workload. Include the <code>byWorkload</code> field.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ByWorkloadDefaults</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Processes each workload as a single unit for admission and uses the default admission, timeout, and requeue settings. The <code>ByWorkloadDefaults</code> policy does not allow the <code>byWorkload</code> field.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>None</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uses parallel admission and a fixed one-year readiness timeout. For workloads that reach a ready state within one year, this policy provides the same behavior as disabling gang scheduling. Workloads that do not reach a ready state remain subject to the timeout. The <code>None</code> policy does not allow the <code>byWorkload</code> field.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Empty string (<code>""</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uses <code>ByWorkloadDefaults</code>, the default policy. An empty <code>policy</code> value does not allow the <code>byWorkload</code> field.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -5739,7 +5807,7 @@ Subjects:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-21 18:01:53 +0100
+Last updated 2026-10-22 13:31:11 +0100
 </div>
 </div>
 <style>

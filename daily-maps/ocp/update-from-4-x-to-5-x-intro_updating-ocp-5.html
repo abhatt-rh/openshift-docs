@@ -437,48 +437,47 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
-<!-- navmap-right-toc-start -->
+<!-- navmap-preview-warning-start -->
 <style>
-  body.navmap-has-right-toc { padding-right: 18em; }
-  #navmap-right-toc {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 16em;
-    height: 100%;
-    overflow: auto;
-    padding: 1.25em 1em;
-    background: #f8f8f7;
-    border-left: 1px solid #e7e7e9;
-    z-index: 1000;
+  .navmap-preview-warning {
+    background: #fff1f1;
+    border: 2px solid #c9190b;
+    border-radius: 4px;
+    color: #3b0a0a;
     font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    font-size: .9em;
+    margin: 1em auto;
+    max-width: 70em;
+    padding: 1em 1.25em;
   }
-  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
-  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
-  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
-  #navmap-right-toc li.level-3 { padding-left: 1em; }
-  #navmap-right-toc li.level-4 { padding-left: 2em; }
-  #navmap-right-toc li.level-5,
-  #navmap-right-toc li.level-6 { padding-left: 3em; }
-  #navmap-right-toc a { text-decoration: none; }
-  @media screen and (max-width: 1023px) {
-    body.navmap-has-right-toc { padding-right: 0; }
-    #navmap-right-toc {
-      position: static;
-      width: auto;
-      height: auto;
-      margin: 1em;
-      border: 1px solid #e7e7e9;
-      border-radius: 4px;
-    }
+  .navmap-preview-warning strong { color: #a30000; }
+  .navmap-preview-warning details { margin-top: .75em; }
+  .navmap-preview-warning pre {
+    background: #fff;
+    border: 1px solid #d7d7d7;
+    max-height: 20em;
+    overflow: auto;
+    padding: .75em;
+    white-space: pre-wrap;
   }
-
-
 </style>
-<!-- navmap-right-toc-end -->
+<!-- navmap-preview-warning-end -->
 </head>
-<body id="update-single-node-openshift_update-a-cluster-using-the-cli" class="book toc2 toc-left navmap-has-right-toc">
+<body id="update-from-4-x-to-5-x-intro_updating-ocp-5" class="book toc2 toc-left">
+<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
+
+Missing include targets:
+  maps/ocp/ocp-jobs/configure-multi-tenant-namespace-isolation.adoc:20
+    include::modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/modules/network-observability-per-tenant-flowcollector-slice-api-reference.adoc
+  maps/ocp/ocp-jobs/scale-components-based-on-cluster-size.adoc:34
+    include::modules/network-observability-flowcollector-api-specifications.adoc[leveloffset=+1]
+    expected: maps/ocp/ocp-jobs/modules/network-observability-flowcollector-api-specifications.adoc
+
+How to fix these errors:
+  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
+  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
+  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
+</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -675,33 +674,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_upgrade.html">Upgrade</a>
 <ul class="sectlevel2">
-<li><a href="about-updates_update-clusters-overview.html">Cluster update overview</a>
+<li><a href="understanding-openshift-updates_understanding-openshift-updates.html">Introduction to OpenShift updates</a>
 </li>
-<li><a href="update-cluster-version-object_understand-openshift-updates.html">The ClusterVersion object</a>
+<li><a href="how-updates-work_how-updates-work.html">How cluster updates work</a>
 </li>
-<li><a href="understand-update-channels-and-releases-intro_understand-update-channels-and-releases.html">Understand update channels and releases</a>
+<li><a href="understand-update-channels-and-releases-intro_understanding-update-channels-releases.html">Understand update channels and releases</a>
 </li>
-<li><a href="understand-update-duration-intro_understand-update-duration.html">Understand update duration</a>
+<li><a href="understand-update-duration-intro_openshift-update-duration.html">Understand update duration</a>
 </li>
-<li><a href="update-assessment-ai_prepare-to-update-a-cluster.html">Analyzing update risk and status using AI</a>
+<li><a href="updating-cluster-prepare_updating-cluster-prepare.html">Preparing to update to Red&#160;Hat OpenShift Container Platform {product-version}</a>
 </li>
-<li><a href="about-manually-maintained-credentials-upgrade_prepare-to-update-with-manually-maintained-credentials.html">Update requirements for clusters with manually maintained credentials</a>
+<li><a href="preparing-manual-creds-update_preparing-manual-creds-update.html">Prepare to update a cluster with manually maintained credentials</a>
 </li>
-<li><a href="before-updating-ocp_update-a-cluster-using-the-web-console.html">Before updating the Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="updating-cluster-web-console_updating-cluster-web-console.html">Update a cluster using the web console</a>
 </li>
-<li><a href="update-single-node-openshift_update-a-cluster-using-the-cli.html"><span class="toc-current">About updating single node Red&#160;Hat OpenShift Container Platform</span></a>
+<li><a href="updating-cluster-cli_updating-cluster-cli.html">Update a cluster using the CLI</a>
 </li>
-<li><a href="perform-a-control-plane-only-update-intro_perform-a-control-plane-only-update.html">Perform a Control Plane Only update</a>
+<li><a href="perform-a-control-plane-only-update-intro_control-plane-only-update.html">Perform a Control Plane Only update</a>
 </li>
-<li><a href="example_perform-a-canary-rollout-update.html">Example Canary update strategy</a>
+<li><a href="update-using-custom-machine-config-pools_update-using-custom-machine-config-pools.html">Perform a canary rollout update</a>
 </li>
 <li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
 </li>
-<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a multi-architecture cluster</a>
+<li><a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a cluster with multi-architecture compute machines</a>
 </li>
-<li><a href="update-from-4-x-to-5-x-intro_update-from-4-x-to-5-x.html">Update from 4.x to 5.x</a>
+<li><a href="update-from-4-x-to-5-x-intro_updating-ocp-5.html"><span class="toc-current">Update a cluster to Red&#160;Hat OpenShift Container Platform 5.0</span></a>
 </li>
-<li><a href="mco-image-streams-updating_update-nodes-from-rhcos-9-to-rhcos-10.html">Updating the nodes in an existing cluster from RHCOS 9.x to RHCOS 10.x</a>
+<li><a href="mco-image-streams_mco-image-streams.html">Updating the cluster to RHCOS 10.x</a>
 </li>
 <li><a href="update-hardware-on-vsphere-nodes-con_update-hardware-on-vsphere-nodes.html">Update hardware on vSphere nodes</a>
 </li>
@@ -1805,302 +1804,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#updating-cli-prereqs_update-a-cluster-using-the-cli">Prerequisites for a cluster update</a></li><li class="level-4"><a href="#machine-health-checks-pausing_update-a-cluster-using-the-cli">Pausing a MachineHealthCheck resource</a></li><li class="level-4"><a href="#update-upgrading-cli_update-a-cluster-using-the-cli">Updating a cluster by using the CLI</a></li><li class="level-4"><a href="#update-upgrading-oc-adm-upgrade-status_update-a-cluster-using-the-cli">Cluster update status using oc adm upgrade status</a></li><li class="level-4"><a href="#update-changing-update-server-cli_update-a-cluster-using-the-cli">Changing the update server by using the CLI</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="update-single-node-openshift_update-a-cluster-using-the-cli">About updating single node Red&#160;Hat OpenShift Container Platform</h3>
+<h3 id="update-from-4-x-to-5-x-intro_updating-ocp-5">Update a cluster to Red&#160;Hat OpenShift Container Platform 5.0</h3>
 <div class="paragraph _abstract">
-<p>You can update a single-node Red&#160;Hat OpenShift Container Platform cluster by using either the console or CLI.</p>
+<p>You can update your cluster to Red&#160;Hat OpenShift Container Platform 5.0 using any of the methods available for minor version updates.</p>
 </div>
 <div class="paragraph">
-<p>However, note the following limitations:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The prerequisite to pause the <code>MachineHealthCheck</code> resources is not required because there is no other node to perform the health check.</p>
-</li>
-<li>
-<p>Restoring a single-node Red&#160;Hat OpenShift Container Platform cluster using an etcd backup is not officially supported. However, it is good practice to perform the etcd backup in case your update fails. If your control plane is healthy, you might be able to restore your cluster to a previous state by using the backup.</p>
-</li>
-<li>
-<p>Updating a single-node Red&#160;Hat OpenShift Container Platform cluster requires downtime and can include an automatic reboot. The amount of downtime depends on the update payload, as described in the following scenarios:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>If the update payload contains an operating system update, which requires a reboot, the downtime is significant and impacts cluster management and user workloads.</p>
-</li>
-<li>
-<p>If the update contains machine configuration changes that do not require a reboot, the downtime is less, and the impact on the cluster management and user workloads is lessened. In this case, the node draining step is skipped with single-node Red&#160;Hat OpenShift Container Platform because there is no other node in the cluster to reschedule the workloads to.</p>
-</li>
-<li>
-<p>If the update payload does not contain an operating system update or machine configuration changes, a short API outage occurs and resolves quickly.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>There are conditions, such as bugs in an updated package, that can cause the single node to not restart after a reboot. In this case, the update does not rollback automatically.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="sect3">
-<h4 id="updating-cli-prereqs_update-a-cluster-using-the-cli">Prerequisites for a cluster update</h4>
-<div class="paragraph _abstract">
-<p>You must satisfy the following prerequisites before updating a cluster using the CLI.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Have access to the cluster as a user with <code>admin</code> privileges.
-See "Using RBAC to define and apply permissions" for more information.</p>
-</li>
-<li>
-<p>Have a recent etcd backup in case your update fails and you must restore your cluster to a previous state.</p>
-</li>
-<li>
-<p>Have a recent Container Storage Interface (CSI) volume snapshot in case you need to restore persistent volumes due to a pod failure.</p>
-</li>
-<li>
-<p>Your RHEL7 workers are replaced with RHEL8 or RHCOS workers. Red&#160;Hat does not support in-place RHEL7 to RHEL8 updates for RHEL workers; those hosts must be replaced with a clean operating system install.</p>
-</li>
-<li>
-<p>You have updated all Operators previously installed through Operator Lifecycle Manager (OLM) to a version that is compatible with your target release. Updating the Operators ensures they have a valid update path when the default software catalogs switch from the current minor version to the next during a cluster update. See "Updating installed Operators" for more information on how to check compatibility and, if necessary, update the installed Operators.</p>
-</li>
-<li>
-<p>Ensure that all machine config pools (MCPs) are running and not paused. Nodes associated with a paused MCP are skipped during the update process. You can pause the MCPs if you are performing a canary rollout update strategy.</p>
-</li>
-<li>
-<p>If your cluster uses manually maintained credentials, update the cloud provider resources for the new release. For more information, including how to determine if this is a requirement for your cluster, see "Preparing to update a cluster with manually maintained credentials".</p>
-</li>
-<li>
-<p>Ensure that you address all <code>Upgradeable=False</code> conditions so the cluster allows an update to the next minor version. An alert displays at the top of the <strong>Cluster Settings</strong> page when you have one or more cluster Operators that cannot be updated. You can still update to the next available patch update for the minor release you are currently on.</p>
-</li>
-<li>
-<p>If you run an Operator or you have configured any application with the pod disruption budget, you might experience an interruption during the update process. If <code>minAvailable</code> is set to 1 in <code>PodDisruptionBudget</code>, the nodes are drained to apply pending machine configs which might block the eviction process. If several nodes are rebooted, all the pods might run on only one node, and the <code>PodDisruptionBudget</code> field can prevent the node drain.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>When an update is failing to complete, the Cluster Version Operator (CVO) reports the status of any blocking components while attempting to reconcile the update. Rolling your cluster back to a previous version is not supported. If your update is failing to complete, contact Red&#160;Hat support.</p>
-</li>
-<li>
-<p>Using the <code>unsupportedConfigOverrides</code> section to modify the configuration of an Operator is unsupported and might block cluster updates. You must remove this setting before you can update your cluster.</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="machine-health-checks-pausing_update-a-cluster-using-the-cli">Pausing a MachineHealthCheck resource</h4>
-<div class="paragraph _abstract">
-<p>During the update process, nodes in the cluster might become temporarily unavailable.</p>
+<p>Updating an Red&#160;Hat OpenShift Container Platform cluster from a 4.x release to version 5.0 is an in-place update.
+The process is functionally identical to a minor version update, such as updating from 4.16 to 4.17, and does not require a cluster rebuild or manual data migration.</p>
 </div>
 <div class="paragraph">
-<p>For worker nodes, the <code>MachineHealthCheck</code> resources might identify such nodes as unhealthy and reboot them. To avoid rebooting worker nodes, you must pause all the <code>MachineHealthCheck</code> resources before updating the cluster.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Some <code>MachineHealthCheck</code> resources might not need to be paused. If your <code>MachineHealthCheck</code> resource relies on unrecoverable conditions, pausing that MHC is unnecessary.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You installed the OpenShift CLI (<code>oc</code>).</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>List all of the available <code>MachineHealthCheck</code> resources that you want to pause by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machinehealthcheck -n openshift-machine-api</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>For each <code>MachineHealthCheck</code> resource, pause the machine health check by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-machine-api annotate mhc &lt;mhc_name&gt; cluster.x-k8s.io/paused=""</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The annotated <code>MachineHealthCheck</code> resource resembles the following YAML file:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineHealthCheck
-metadata:
-  name: example
-  namespace: openshift-machine-api
-  annotations:
-    cluster.x-k8s.io/paused: ""
-spec:
-  selector:
-    matchLabels:
-      role: worker
-  unhealthyConditions:
-  - type:    "Ready"
-    status:  "Unknown"
-    timeout: "300s"
-  - type:    "Ready"
-    status:  "False"
-    timeout: "300s"
-  maxUnhealthy: "40%"
-status:
-  currentHealthy: 5
-  expectedMachines: 5</code></pre>
-</div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Resume the machine health checks after updating the cluster. To resume the check, remove the pause annotation from the <code>MachineHealthCheck</code> resource by running the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-machine-api annotate mhc &lt;mhc-name&gt; cluster.x-k8s.io/paused-</code></pre>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="update-upgrading-cli_update-a-cluster-using-the-cli">Updating a cluster by using the CLI</h4>
-<div class="paragraph _abstract">
-<p>You can use the OpenShift CLI (<code>oc</code>) to review and request cluster updates.</p>
-</div>
-<div class="paragraph">
-<p>You can find information about available Red&#160;Hat OpenShift Container Platform advisories and updates
-<a href="https://access.redhat.com/downloads/content/290">in the errata section</a>
-of the Customer Portal.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You installed the OpenShift CLI (<code>oc</code>) that matches the version for your updated version.</p>
-</li>
-<li>
-<p>You are logged in to the cluster as user with <code>cluster-admin</code> privileges.</p>
-</li>
-<li>
-<p>You have paused all <code>MachineHealthCheck</code> resources.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>View the available updates and note the version number of the update that you want to apply by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm upgrade recommend</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">The following conditions found no cause for concern in updating this cluster to later releases: recommended/CriticalAlerts (AsExpected), recommended/NodeAlerts (AsExpected), recommended/PodDisruptionBudgetAlerts (AsExpected), recommended/PodImagePullAlerts (AsExpected), recommended/UpdatePrecheckAlerts (AsExpected)
-
-Upstream update service is unset, so the cluster will use an appropriate default.
-Channel: stable-4.21 (available channels: candidate-4.20, candidate-4.21, candidate-4.22, eus-4.20, fast-4.20, fast-4.21, stable-4.20, stable-4.21)
-
-Updates to 4.21:
-  VERSION     ISSUES
-  4.21.14     no known issues relevant to this cluster
-  4.21.13     no known issues relevant to this cluster
-And 2 older 4.21 updates you can see with '--show-outdated-releases' or '--version VERSION'.
-
-Updates to 4.20:
-  VERSION     ISSUES
-  4.20.20     no known issues relevant to this cluster</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>You can use the <code>--version</code> flag to determine whether a specific version is recommended for your update. If there are no recommended updates, updates that have known issues might still be available.</p>
-</li>
-<li>
-<p>For details and information on how to perform a <em>Control Plane Only</em> update, see "Performing a Control Plane Only update".</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Based on your organization requirements, set the appropriate update channel by running the following command. For example, you can set your channel to <code>stable-4.13</code> or <code>fast-4.13</code>. For more information about channels, see "Understanding update channels and releases".</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm upgrade channel &lt;channel&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example command</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm upgrade channel stable-{product-version}</code></pre>
-</div>
+<p>Updates to version 5.0 are available on the <code>stable-5.0</code> and <code>candidate-5.0</code> channels.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -2116,263 +1831,9 @@ Updates to 4.20:
 </tr>
 </table>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>When you are ready to move to the next minor version, choose the channel that corresponds to that minor version.
-The sooner you declare the update channel, the more effectively the cluster can recommend update paths to your target version.
-The cluster might take some time to evaluate all the possible updates that are available and offer the best update recommendations to choose from.
-Update recommendations can change over time, as they are based on what update options are available at the time.</p>
-</div>
-<div class="paragraph">
-<p>If you cannot see an update path to your target minor version, keep updating your cluster to the latest patch release for your current version until the next minor version is available in the path.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Apply an update:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>To update to the latest version, run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm upgrade --to-latest=true</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>To update to a specific version, run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm upgrade --to=&lt;version&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;version&gt;</code> with the update version that you obtained from the output of the <code>oc adm upgrade recommend</code> command.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>When using the <code>oc adm upgrade --help</code> command, there is a listed option for the <code>--force</code> flag. This is <em>heavily discouraged</em>, because using the <code>--force</code> option bypasses cluster-side guards, including release verification and precondition checks. Using the <code>--force</code> flag does not guarantee a successful update. Bypassing guards puts the cluster at risk.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>If the cluster administrator evaluates the potential known risks and decides it is acceptable for the current cluster, then the administrator can waive the safety guards and proceed with the update by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm upgrade --allow-not-recommended --to &lt;version&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Optional: Review the status of the Cluster Version Operator by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm upgrade status</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>To monitor the update in real time, run <code>oc adm upgrade status</code> in a <code>watch</code> utility.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>After the update completes, confirm that the cluster version has
-updated to the new version by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm upgrade</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">Cluster version is &lt;version&gt;
-
-Upstream is unset, so the cluster will use an appropriate default.
-Channel: stable-&lt;version&gt; (available channels: candidate-&lt;version&gt;, eus-&lt;version&gt;, fast-&lt;version&gt;, stable-&lt;version&gt;)
-
-No updates available. You may force an update to a specific release image, but doing so might not be supported and might result in downtime or data loss.</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>If you are updating your cluster to the next minor version, such as version X.y to X.(y+1), confirm that your nodes are updated before deploying workloads that rely on a new feature. Run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                           STATUS   ROLES    AGE   VERSION
-ip-10-0-168-251.ec2.internal   Ready    master   82m   v1.36.3
-ip-10-0-170-223.ec2.internal   Ready    master   82m   v1.36.3
-ip-10-0-179-95.ec2.internal    Ready    worker   70m   v1.36.3
-ip-10-0-182-134.ec2.internal   Ready    worker   70m   v1.36.3
-ip-10-0-211-16.ec2.internal    Ready    master   82m   v1.36.3
-ip-10-0-250-100.ec2.internal   Ready    worker   69m   v1.36.3</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="update-upgrading-oc-adm-upgrade-status_update-a-cluster-using-the-cli">Cluster update status using oc adm upgrade status</h4>
-<div class="paragraph _abstract">
-<p>You can use the <code>oc adm upgrade status</code> command to get detailed cluster update information, including control plane and worker node status, beyond what the standard <code>oc adm upgrade</code> command provides.</p>
-</div>
-<div class="paragraph">
-<p>The <code>oc adm upgrade status</code> command is read-only and does not alter any state in your cluster.</p>
-</div>
-<div class="paragraph">
-<p>The <code>oc adm upgrade status</code> command can be used for clusters on versions 4.12 or later.</p>
-</div>
-<div class="paragraph">
-<p>The <code>oc adm upgrade status</code> command will output three sections, control plane update, worker nodes update, and health insights.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Control Plane Update</dt>
-<dd>
-<p>Displays details about the updating cluster control plane, contains a high-level assessment, completion status, duration estimate, or cluster Operator health. The section also shows a table with control plane node update information.</p>
-<div class="paragraph">
-<p>The control plane update section can also show an additional table that lists cluster Operators being updated if the <code>--details=operators</code> or <code>--details-all</code> flags are used. Please note that due the asynchronous distributed nature of Red&#160;Hat OpenShift Container Platform, an operator may appear in this section more than once during the update, or not at all. The section is only shown when a cluster Operator is observed to be updating. It is normal during an update to observe no updating cluster Operator at certain periods; not every performed action can be assigned to an observable updating cluster Operator.</p>
-</div>
-</dd>
-<dt class="hdlist1">Worker Notes Update</dt>
-<dd>
-<p>Displays the worker node update information. The worker nodes section starts with a table that displays a summary of information about each worker pool configured in the cluster. Each non-empty worker pool output will show a dedicated table listing update information about nodes that belong to that pool. If a cluster does not have any worker nodes, the output will not contain the worker node section. You can make the node tables show all lines by using the <code>--details=nodes</code> or <code>--details=all</code> flags.</p>
-</dd>
-<dt class="hdlist1">Health Insights</dt>
-<dd>
-<p>Displays insights about states and events present in the cluster that may be relevant for the ongoing update. You can use the <code>--details=health</code> flag to expand the items in this section into a more verbose form with more content such as documentation links, longer form descriptions, or cluster resources involved in the insight.</p>
-</dd>
-</dl>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>oc adm upgrade status</code> command is currently not supported on hosted control planes clusters.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The following is an example of the output you will see for an update progressing successfully:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">= Control Plane =
-Assessment:      Progressing
-Target Version:  4.17.1 (from 4.17.0)
-Updating:        machine-config
-Completion:      97% (32 operators updated, 1 updating, 0 waiting)
-Duration:        54m (Est. Time Remaining: &lt;10m)
-Operator Status: 32 Healthy, 1 Unavailable
-
-Control Plane Nodes
-NAME                                        ASSESSMENT    PHASE      VERSION   EST    MESSAGE
-ip-10-0-53-40.us-east-2.compute.internal    Progressing   Draining   4.17.0    +10m
-ip-10-0-30-217.us-east-2.compute.internal   Outdated      Pending    4.17.0    ?
-ip-10-0-92-180.us-east-2.compute.internal   Outdated      Pending    4.17.0    ?
-
-= Worker Upgrade =
-
-WORKER POOL   ASSESSMENT    COMPLETION   STATUS
-worker        Progressing   0% (0/2)     1 Available, 1 Progressing, 1 Draining
-infra         Progressing   50% (1/2)    1 Available, 1 Progressing, 1 Draining
-
-Worker Pool Nodes: Worker
-NAME                                       ASSESSMENT    PHASE      VERSION   EST    MESSAGE
-ip-10-0-4-159.us-east-2.compute.internal   Progressing   Draining   4.17.0    +10m
-ip-10-0-99-40.us-east-2.compute.internal   Outdated      Pending    4.17.0    ?
-
-Worker Pool Nodes: infra
-NAME                                             ASSESSMENT    PHASE      VERSION   EST    MESSAGE
-ip-10-0-4-159-infra.us-east-2.compute.internal   Progressing   Draining   4.17.0    +10m
-ip-10-0-20-162.us-east-2.compute.internal        Completed     Updated    4.17.1    -
-
-= Update Health =
-
-SINCE   LEVEL   IMPACT   MESSAGE
-54m4s   Info    None     Update is proceeding well</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="update-changing-update-server-cli_update-a-cluster-using-the-cli">Changing the update server by using the CLI</h4>
-<div class="paragraph _abstract">
-<p>You can change the update server your cluster uses to retrieve information about update paths.</p>
-</div>
-<div class="paragraph">
-<p>Changing the update server is optional. If you have an OpenShift Update Service (OSUS) installed and configured locally, you must set the URL for the server as the <code>upstream</code> to use the local server during updates. The default value for <code>upstream</code> is <code>https://api.openshift.com/api/upgrades_info/v1/graph</code>.</p>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>Change the <code>upstream</code> parameter value in the cluster version by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch clusterversion/version --patch '{"spec":{"upstream":"&lt;update_server_url&gt;"}}' --type=merge</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;update_server_url&gt;</code> with the URL for the update server.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">clusterversion.config.openshift.io/version patched</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="before-updating-ocp_update-a-cluster-using-the-web-console.html">Before updating the Red&#160;Hat OpenShift Container Platform cluster</a> | ↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="perform-a-control-plane-only-update-intro_perform-a-control-plane-only-update.html">Perform a Control Plane Only update</a> →</p>
+<p>← Previous: <a href="migrate-to-a-multi-architecture-cluster-intro_migrate-to-a-multi-architecture-cluster.html">Migrate to a cluster with multi-architecture compute machines</a> | ↑ Up: <a href="_upgrade.html">Upgrade</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="mco-image-streams_mco-image-streams.html">Updating the cluster to RHCOS 10.x</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2383,7 +1844,7 @@ SINCE   LEVEL   IMPACT   MESSAGE
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-21 18:01:53 +0100
+Last updated 2026-10-22 13:31:11 +0100
 </div>
 </div>
 <style>
