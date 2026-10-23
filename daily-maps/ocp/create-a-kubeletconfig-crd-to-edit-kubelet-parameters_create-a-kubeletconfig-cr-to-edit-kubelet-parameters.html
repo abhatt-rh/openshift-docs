@@ -437,48 +437,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
-<!-- navmap-right-toc-start -->
-<style>
-  body.navmap-has-right-toc { padding-right: 18em; }
-  #navmap-right-toc {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 16em;
-    height: 100%;
-    overflow: auto;
-    padding: 1.25em 1em;
-    background: #f8f8f7;
-    border-left: 1px solid #e7e7e9;
-    z-index: 1000;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    font-size: .9em;
-  }
-  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
-  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
-  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
-  #navmap-right-toc li.level-3 { padding-left: 1em; }
-  #navmap-right-toc li.level-4 { padding-left: 2em; }
-  #navmap-right-toc li.level-5,
-  #navmap-right-toc li.level-6 { padding-left: 3em; }
-  #navmap-right-toc a { text-decoration: none; }
-  @media screen and (max-width: 1023px) {
-    body.navmap-has-right-toc { padding-right: 0; }
-    #navmap-right-toc {
-      position: static;
-      width: auto;
-      height: auto;
-      margin: 1em;
-      border: 1px solid #e7e7e9;
-      border-radius: 4px;
-    }
-  }
-
-
-</style>
-<!-- navmap-right-toc-end -->
 </head>
-<body id="review-namespace-policy-and-verify-admin-policy-deployment-con_review-namespace-policy-and-verify-admin-policy-deployment" class="book toc2 toc-left navmap-has-right-toc">
+<body id="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_create-a-kubeletconfig-cr-to-edit-kubelet-parameters" class="book toc2 toc-left">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -523,6 +483,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="deploy-hosted-control-planes-intro_hosted-control-planes.html">Deploy hosted control planes</a>
 </li>
 <li><a href="review-cluster-operators-con_review-cluster-operators.html">Review cluster Operators</a>
+</li>
+<li><a href="how-etcd-works_how-etcd-works.html">How etcd works</a>
 </li>
 </ul>
 </li>
@@ -592,6 +554,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
 <li><a href="automate-edge-cluster-deployment-with-gitops-ztp-intro_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
+</li>
+<li><a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a>
 </li>
 </ul>
 </li>
@@ -941,7 +905,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_configure.html">Configure</a>
-
 <ul class="sectlevel2">
 <li><a href="configuring-alert-notifications-intro_configuring-alert-notifications.html">Configuring alert notifications</a>
 </li>
@@ -1021,7 +984,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
+<li><a href="kmm-day0-day2-installation_manage-kmm-day0-day2-lifecycle.html">Day 0 through Day 2 kmod installation</a>
+</li>
 <li><a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a>
+</li>
+<li><a href="kmm-hub-kmm-hub_install-and-use-kmm-hub.html">KMM-Hub</a>
+</li>
+<li><a href="kmm-defining-full-paths_use-wildcard-and-glob-patterns-to-sign-kernel-module-files.html">Defining full paths</a>
+</li>
+<li><a href="kmm-must-gather-tool_gather-diagnostic-data-for-kmm.html">Using the must-gather tool</a>
 </li>
 <li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
@@ -1153,9 +1124,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rdma-for-gpu-workloads-intro_configure-rdma-for-gpu-workloads.html">Configure RDMA for GPU workloads</a>
 </li>
+<li><a href="about-machine-config-operator_configure-node-changes-on-a-cluster.html">About the Machine Config Operator</a>
+</li>
+<li><a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a>
+</li>
+<li><a href="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_create-a-kubeletconfig-cr-to-edit-kubelet-parameters.html"><span class="toc-current">Create a KubeletConfig CR to edit kubelet parameters</span></a>
+</li>
 </ul>
 </li>
 <li><a href="_networking.html">Networking</a>
+
 <ul class="sectlevel2">
 <li><a href="understand-ovn-kubernetes-network-plugin-con_understand-ovn-kubernetes-network-plugin.html">Understand the OVN-Kubernetes network plugin</a>
 </li>
@@ -1184,8 +1162,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
 <li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
-</li>
-<li><a href="review-namespace-policy-and-verify-admin-policy-deployment-con_review-namespace-policy-and-verify-admin-policy-deployment.html"><span class="toc-current">Review namespace policy and verify admin policy deployment</span></a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
@@ -1399,6 +1375,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="understand-telco-cluster-security-intro_understand-telco-cluster-security.html">Understand telco cluster security</a>
 </li>
+<li><a href="nodes-containers-projected-volumes-about_map-configuration-sources-with-projected-volumes.html">Understanding projected volumes</a>
+</li>
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
@@ -1423,6 +1401,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="install-node-observability-operator_install-the-node-observability-operator.html">Installing the Node Observability Operator</a>
 </li>
 <li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
+</li>
+<li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
+</li>
+<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
@@ -1466,15 +1448,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="etcd-database-size_scale-etcd-database-size.html">Determine the size of the etcd database and understand its effects</a>
 </li>
-<li><a href="how-etcd-works_understand-etcd-performance-factors.html">How etcd works</a>
+<li><a href="understand-etcd-performance_understand-etcd-performance-factors.html">Factors that affect etcd performance</a>
 </li>
 <li><a href="infrastructure-components_create-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="nodes-nodes-managing-about_make-changes-to-the-kubelet-settings-on-my-nodes.html">Modifying nodes</a>
+<li><a href="make-changes-to-the-kubelet-settings-on-my-nodes-overview_make-changes-to-the-kubelet-settings-on-my-nodes.html">Allocate resources to nodes</a>
 </li>
 <li><a href="nodes-nodes-working-evacuating_evacuate-pods-on-a-node.html">Evacuate pods on nodes</a>
-</li>
-<li><a href="about-machine-config-operator_configure-node-changes-on-a-cluster.html">About the Machine Config Operator</a>
 </li>
 <li><a href="nodes-cluster-limit-ranges-about_restrict-resource-consumption-with-limit-ranges.html">About limit ranges</a>
 </li>
@@ -1496,8 +1476,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scalability-and-performance-recommended-practices_optimize-cluster-performance-across-subsystems.html">Recommended performance and scalability practices</a>
 </li>
-<li><a href="machine-config-pin-preload-images_reduce-image-pull-time.html">Pin images</a>
-</li>
 <li><a href="add-cri-o-storage-locations-for-faster-container-startup-con_add-cri-o-storage-locations-for-faster-container-startup.html">Add CRI-O storage locations for faster container startup</a>
 </li>
 <li><a href="nodes-pods-adjust-resources-in-place-about_adjust-pod-resource-levels-without-pod-disruption.html">About in-place pod resizing</a>
@@ -1508,27 +1486,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="etcd-tuning-parameters_optimize-etcd-performance.html">Set tuning parameters for etcd</a>
 </li>
-<li><a href="nodes-containers-projected-volumes-about_map-configuration-sources-with-projected-volumes.html">Understanding projected volumes</a>
-</li>
 <li><a href="nodes-cluster-overcommit-about_control-the-level-of-overcommitted-pods.html">Understanding overcommitment</a>
 </li>
 <li><a href="nodes-nodes-parallel-container-pulls-about_configure-parallel-configuration-image-pulls.html">About configuring parallel container image pulls</a>
 </li>
 <li><a href="nodes-nodes-kernel-arguments_customize-kernel-behavior.html">Add kernel arguments to nodes</a>
 </li>
-<li><a href="nodes-cluster-worker-latency-profiles-about_improve-cluster-stability-in-high-latency-environments.html">Understanding worker latency profiles</a>
-</li>
-<li><a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a>
-</li>
 <li><a href="rodoo-about_run-once-duration-override-operator.html">About the Run Once Duration Override Operator</a>
 </li>
-<li><a href="configuring-node-pools-for-hcp_machine-configuration-for-hosted-control-planes.html">Configure node pools for hosted control planes</a>
+<li><a href="machine-configuration-for-hosted-control-planes-overview_machine-configuration-for-hosted-control-planes.html">Scale hosted clusters</a>
 </li>
-<li><a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a>
-</li>
-<li><a href="nodes-nodes-kernel-arguments_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html">Add kernel arguments to nodes</a>
-</li>
-<li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
+<li><a href="cnf-about-hyper-threading-for-low-latency-and-real-time-applications_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html">About Hyper-Threading for low latency and real-time applications</a>
 </li>
 <li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
@@ -1540,23 +1508,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
-</li>
-<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+<li><a href="reserve-capacity-for-planned-workloads-overview_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads on AWS and Azure</a>
 </li>
 <li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
 </li>
 <li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
 </li>
-<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
-</li>
 <li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
 </li>
-<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
-</li>
-<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
-</li>
-<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-overview_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for machines on vSphere</a>
 </li>
 <li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
 </li>
@@ -1851,67 +1811,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nw-networkpolicy-object_review-namespace-policy-and-verify-admin-policy-deployment">Example NetworkPolicy object</a></li><li class="level-4"><a href="#nw-networkpolicy-view-cli_review-namespace-policy-and-verify-admin-policy-deployment">View network policies using the CLI</a></li><li class="level-4"><a href="#nw-networkpolicy-view-ocm_review-namespace-policy-and-verify-admin-policy-deployment">View network policies using OpenShift Cluster Manager</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="review-namespace-policy-and-verify-admin-policy-deployment-con_review-namespace-policy-and-verify-admin-policy-deployment">Review namespace policy and verify admin policy deployment</h3>
+<h3 id="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_create-a-kubeletconfig-cr-to-edit-kubelet-parameters">Create a KubeletConfig CR to edit kubelet parameters</h3>
 <div class="paragraph _abstract">
-<p>Inspecting the network policy objects in a namespace shows what traffic is permitted there, and confirms that cluster-wide administrative policy reached the namespace.</p>
-</div>
-<div class="sect3">
-<h4 id="nw-networkpolicy-object_review-namespace-policy-and-verify-admin-policy-deployment">Example NetworkPolicy object</h4>
-<div class="paragraph _abstract">
-<p>Reference the example <code>NetworkPolicy</code> object to understand how to configure this object.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: NetworkPolicy
-apiVersion: networking.k8s.io/v1
-metadata:
-  name: allow-27107
-spec:
-  podSelector:
-    matchLabels:
-      app: mongodb
-  ingress:
-  - from:
-    - podSelector:
-        matchLabels:
-          app: app
-    ports:
-    - protocol: TCP
-      port: 27017</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>name</code></dt>
-<dd>
-<p>The name of the NetworkPolicy object.</p>
-</dd>
-<dt class="hdlist1"><code>spec.podSelector</code></dt>
-<dd>
-<p>A selector that describes the pods to which the policy applies.
-The policy object can only select pods in the project that defines the NetworkPolicy object.</p>
-</dd>
-<dt class="hdlist1"><code>ingress.from.podSelector</code></dt>
-<dd>
-<p>A selector that matches the pods from which the policy object allows ingress traffic. The selector matches pods in the same namespace as the NetworkPolicy.</p>
-</dd>
-<dt class="hdlist1"><code>ingress.ports</code></dt>
-<dd>
-<p>A list of one or more destination ports on which to accept traffic.</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect3">
-<h4 id="nw-networkpolicy-view-cli_review-namespace-policy-and-verify-admin-policy-deployment">View network policies using the CLI</h4>
-<div class="paragraph _abstract">
-<p>You can examine the network policies in a namespace.</p>
+<p>You can use a <code>KubeletConfig</code> custom resource (CR) to edit a kubelet parameters without modifing the kubelet configuration directly.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1921,61 +1825,274 @@ The policy object can only select pods in the project that defines the NetworkPo
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If you log in with <code>cluster-admin</code> privileges, you can edit network policies in any namespace in the cluster.</p>
+<p>As the fields in the <code>kubeletConfig</code> object are passed directly to the kubelet from upstream Kubernetes, the kubelet validates those values directly. Invalid values in the <code>kubeletConfig</code> object might cause cluster nodes to become unavailable. For valid values, see the <a href="https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/">Kubernetes documentation</a>.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
 <div class="paragraph">
-<p>If you log in with <code>cluster-admin</code> privileges, you can edit network policies in any namespace in the cluster. In the web console, you can edit policies directly in YAML or by using the <strong>Actions</strong> menu.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>You can set most kubelet configuration options. You cannot overwrite the following options:</p>
 </div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You installed the OpenShift CLI (<code>oc</code>).</p>
+<p><code>CgroupDriver</code></p>
 </li>
 <li>
-<p>You are logged in to the cluster with a user with <code>admin</code> privileges.</p>
+<p><code>ClusterDNS</code></p>
 </li>
 <li>
-<p>You are working in the namespace where the network policy exists.</p>
+<p><code>ClusterDomain</code></p>
+</li>
+<li>
+<p><code>StaticPodPath</code></p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Consider the following guidance:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Edit an existing <code>KubeletConfig</code> CR to modify existing settings or add new settings, instead of creating a CR for each change. It is recommended that you create a CR only to modify a different machine config pool, or for changes that are intended to be temporary, so that you can revert the changes.</p>
+</li>
+<li>
+<p>Create one <code>KubeletConfig</code> CR for each machine config pool with all the config changes you want for that pool.</p>
+</li>
+<li>
+<p>As needed, create multiple <code>KubeletConfig</code> CRs with a limit of 10 per cluster. For the first <code>KubeletConfig</code> CR, the Machine Config Operator (MCO) creates a machine config appended with <code>kubelet</code>. With each subsequent CR, the controller creates another <code>kubelet</code> machine config with a numeric suffix. For example, if you have a <code>kubelet</code> machine config with a <code>-2</code> suffix, the next <code>kubelet</code> machine config is appended with <code>-3</code>.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The Machine Config Operator does not merge multiple <code>KubeletConfig</code> CRs that target the same machine config pool. Each CR generates a separate machine config that writes the kubelet configuration. The most recently created <code>KubeletConfig</code> CR takes precedence and overrides the kubelet settings from earlier CRs for that pool.</p>
+</div>
+<div class="paragraph">
+<p>To apply multiple kubelet settings to the same pool, include all of the settings in a single <code>KubeletConfig</code> CR.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you are applying a kubelet or container runtime config to a custom machine config pool, the custom role in the <code>machineConfigSelector</code> must match the name of the custom machine config pool.</p>
+</div>
+<div class="paragraph">
+<p>For example, because the following custom machine config pool is named <code>infra</code>, the custom role must also be <code>infra</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfigPool
+metadata:
+  name: infra
+spec:
+  machineConfigSelector:
+    matchExpressions:
+      - {key: machineconfiguration.openshift.io/role, operator: In, values: [worker,infra]}
+# ...</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you want to delete the machine configs, delete them in reverse order to avoid exceeding the limit. For example, you delete the <code>kubelet-3</code> machine config before deleting the <code>kubelet-2</code> machine config.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you have a machine config with a <code>kubelet-9</code> suffix, and you create another <code>KubeletConfig</code> CR, a new machine config is not created, even if there are fewer than 10 <code>kubelet</code> machine configs.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following example command and output show a <code>KubeletConfig</code> CR:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeletconfig</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                      AGE
+set-kubelet-config        15m</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example command and output show a <code>KubeletConfig</code> machine config:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get mc | grep kubelet</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">...
+99-worker-generated-kubelet-1                  b5c5119de007945b6fe6fb215db3b8e2ceb12511   3.5.0             26m
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following procedure is an example to show how to configure the maximum number of pods per node, the maximum PIDs per node, and the maximum container log size size on the worker nodes.</p>
+</div>
 <div class="olist arabic">
-<div class="title">Procedure</div>
+<div class="title">Prerequisites</div>
 <ol class="arabic">
 <li>
-<p>List network policies in a namespace.</p>
+<p>Obtain the label associated with the static <code>MachineConfigPool</code> CR for the type of node you want to configure.
+Perform one of the following steps:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>To view network policy objects defined in a namespace enter the following
-command:</p>
+<p>View the machine config pool:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get networkpolicy</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe machineconfigpool &lt;name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe machineconfigpool worker</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfigPool
+metadata:
+  creationTimestamp: 2019-02-08T14:52:39Z
+  generation: 1
+  labels:
+    custom-kubelet: set-kubelet-config</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>metadata.labels</code> parameter specifies labels you can use with a <code>KubeletConfig</code> CR.</p>
+</div>
+</li>
+<li>
+<p>If the label is not present, add a key/value pair:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc label machineconfigpool worker custom-kubelet=set-kubelet-config</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>View the available machine configuration objects that you can select:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machineconfig</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default, the two kubelet-related configs are <code>01-master-kubelet</code> and <code>01-worker-kubelet</code>.</p>
+</div>
+</li>
+<li>
+<p>Check the current value for the maximum pods per node:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe node &lt;node_name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe node ci-ln-5grqprb-f76d1-ncnqq-worker-a-mdv94</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Look for <code>value: pods: &lt;value&gt;</code> in the <code>Allocatable</code> stanza:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">Allocatable:
+ attachable-volumes-aws-ebs:  25
+ cpu:                         3500m
+ hugepages-1Gi:               0
+ hugepages-2Mi:               0
+ memory:                      15341844Ki
+ pods:                        250</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Optional: To examine a specific network policy enter the following command:</p>
+<p>Configure the worker nodes as needed:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a YAML file similar to the following that contains the kubelet configuration:</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Kubelet configurations that target a specific machine config pool also affect any dependent pools. For example, creating a kubelet configuration for the pool containing worker nodes will also apply to any subset pools, including the pool containing infrastructure nodes. To avoid this, you must create a new machine config pool with a selection expression that only includes worker nodes, and have your kubelet configuration target this new pool.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe networkpolicy &lt;policy_name&gt; -n &lt;namespace&gt;</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: KubeletConfig
+metadata:
+  name: set-kubelet-config
+spec:
+  machineConfigPoolSelector:
+    matchLabels:
+      custom-kubelet: set-kubelet-config
+  kubeletConfig:
+      podPidsLimit: 8192
+      containerLogMaxSize: 50Mi
+      maxPods: 500</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1983,91 +2100,178 @@ command:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>&lt;policy_name&gt;</code></dt>
+<dt class="hdlist1"><code>spec.machineConfigPoolSelector.matchLabels</code></dt>
 <dd>
-<p>Specifies the name of the network policy to inspect.</p>
+<p>Specifies the label from the machine config pool.</p>
 </dd>
-<dt class="hdlist1"><code>&lt;namespace&gt;</code></dt>
+<dt class="hdlist1"><code>spec.kubeletConfig</code></dt>
 <dd>
-<p>Optional: Specifies the namespace if the object is defined in a different namespace than the current namespace.</p>
+<p>Specifies the kubelet configuration. For example:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Use <code>podPidsLimit</code> to set the maximum number of PIDs in any pod.</p>
+</li>
+<li>
+<p>Use <code>containerLogMaxSize</code> to set the maximum size of the container log file before it is rotated.</p>
+</li>
+<li>
+<p>Use <code>maxPods</code> to set the maximum pods per node.</p>
+</li>
+<li>
+<p>Use <code>nodeStatusMaxImages</code> to set how many images the node reports. If a node contains more than 50 images, pod scheduling might be imbalanced because the image list is shortened to 50 by default. Set <code>nodeStatusMaxImages</code> to <code>-1</code> to disable that limit.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The rate at which the kubelet talks to the API server depends on queries per second (QPS) and burst values. The default values, <code>50</code> for <code>kubeAPIQPS</code> and <code>100</code> for <code>kubeAPIBurst</code>, are sufficient if there are limited pods running on each node. It is recommended to update the kubelet QPS and burst rates if there are enough CPU and memory resources on the node.</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe networkpolicy allow-same-namespace</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: KubeletConfig
+metadata:
+  name: set-kubelet-config
+spec:
+  machineConfigPoolSelector:
+    matchLabels:
+      custom-kubelet: set-kubelet-config
+  kubeletConfig:
+    maxPods: &lt;pod_count&gt;
+    kubeAPIBurst: &lt;burst_rate&gt;
+    kubeAPIQPS: &lt;QPS&gt;</code></pre>
 </div>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">Name:         allow-same-namespace
-Namespace:    ns1
-Created on:   2021-05-24 22:28:56 -0400 EDT
-Labels:       &lt;none&gt;
-Annotations:  &lt;none&gt;
-Spec:
-  PodSelector:     &lt;none&gt; (Allowing the specific traffic to all pods in this namespace)
-  Allowing ingress traffic:
-    To Port: &lt;any&gt; (traffic allowed to all ports)
-    From:
-      PodSelector: &lt;none&gt;
-  Not affecting egress traffic
-  Policy Types: Ingress</code></pre>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </dd>
 </dl>
 </div>
 </li>
-</ol>
+<li>
+<p>Update the machine config pool for workers with the label:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc label machineconfigpool worker custom-kubelet=set-kubelet-config</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the <code>KubeletConfig</code> object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f change-maxPods-cr.yaml</code></pre>
+</div>
 </div>
 </li>
 </ol>
 </div>
-</div>
-<div class="sect3">
-<h4 id="nw-networkpolicy-view-ocm_review-namespace-policy-and-verify-admin-policy-deployment">View network policies using OpenShift Cluster Manager</h4>
-<div class="paragraph _abstract">
-<p>You can view the configuration details of your network policy in Red Hat OpenShift Cluster Manager.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You logged in to <a href="https://console.redhat.com/openshift">OpenShift Cluster Manager</a>.</p>
 </li>
-<li>
-<p>You created an Red&#160;Hat OpenShift Container Platform cluster.</p>
-</li>
-<li>
-<p>You configured an identity provider for your cluster.</p>
-</li>
-<li>
-<p>You added your user account to the configured identity provider.</p>
-</li>
-<li>
-<p>You created a network policy.</p>
-</li>
-</ul>
+</ol>
 </div>
 <div class="olist arabic">
-<div class="title">Procedure</div>
+<div class="title">Verification</div>
 <ol class="arabic">
 <li>
-<p>From the <strong>Administrator</strong> perspective in the OpenShift Cluster Manager web console, under <strong>Networking</strong>, click <strong><code>NetworkPolicies</code></strong>.</p>
+<p>Verify that the <code>KubeletConfig</code> object is created:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeletconfig</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                      AGE
+set-kubelet-config        15m</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Depending on the number of worker nodes in the cluster, wait for the worker nodes to be rebooted one by one. For a cluster with 3 worker nodes, this could take about 10 to 15 minutes.</p>
+</div>
 </li>
 <li>
-<p>Select the required network policy to view.</p>
+<p>Verify that the changes are applied to the node:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Check on a worker node that the <code>maxPods</code> value changed:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe node &lt;node_name&gt;</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>In the <strong>Network Policy</strong> details page, you can view all of the associated ingress and egress rules.</p>
-</li>
-<li>
-<p>Select <strong>YAML</strong> on the network policy details to view the policy configuration in YAML format.</p>
+<p>Locate the <code>Allocatable</code> stanza:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"> ...
+Allocatable:
+  attachable-volumes-gce-pd:  127
+  cpu:                        3500m
+  ephemeral-storage:          123201474766
+  hugepages-1Gi:              0
+  hugepages-2Mi:              0
+  memory:                     14225400Ki
+  pods:                       500
+ ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example, the <code>pods</code> parameter should report the value you set in the <code>KubeletConfig</code> object.</p>
+</div>
 </li>
 </ol>
 </div>
+</li>
+<li>
+<p>Verify the change in the <code>KubeletConfig</code> object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeletconfigs set-kubelet-config -o yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This should show a status of <code>True</code> and <code>type:Success</code>, as shown in the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">spec:
+  kubeletConfig:
+    containerLogMaxSize: 50Mi
+    maxPods: 500
+    podPidsLimit: 8192
+  machineConfigPoolSelector:
+    matchLabels:
+      custom-kubelet: set-kubelet-config
+status:
+  conditions:
+  - lastTransitionTime: "2021-06-30T17:04:07Z"
+    message: Success
+    status: "True"
+    type: Success</code></pre>
+</div>
+</div>
+</li>
+</ol>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a> →</p>
+<p>← Previous: <a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a> | ↑ Up: <a href="_configure.html">Configure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="_networking.html">Networking</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2078,7 +2282,7 @@ Spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-22 17:55:50 +0100
+Last updated 2026-10-23 11:25:23 +0100
 </div>
 </div>
 <style>

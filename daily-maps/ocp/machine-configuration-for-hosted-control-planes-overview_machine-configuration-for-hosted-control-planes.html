@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads" class="book toc2 toc-left navmap-has-right-toc">
+<body id="machine-configuration-for-hosted-control-planes-overview_machine-configuration-for-hosted-control-planes" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -523,6 +523,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="deploy-hosted-control-planes-intro_hosted-control-planes.html">Deploy hosted control planes</a>
 </li>
 <li><a href="review-cluster-operators-con_review-cluster-operators.html">Review cluster Operators</a>
+</li>
+<li><a href="how-etcd-works_how-etcd-works.html">How etcd works</a>
 </li>
 </ul>
 </li>
@@ -592,6 +594,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
 <li><a href="automate-edge-cluster-deployment-with-gitops-ztp-intro_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
+</li>
+<li><a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a>
 </li>
 </ul>
 </li>
@@ -1021,7 +1025,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
+<li><a href="kmm-day0-day2-installation_manage-kmm-day0-day2-lifecycle.html">Day 0 through Day 2 kmod installation</a>
+</li>
 <li><a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a>
+</li>
+<li><a href="kmm-hub-kmm-hub_install-and-use-kmm-hub.html">KMM-Hub</a>
+</li>
+<li><a href="kmm-defining-full-paths_use-wildcard-and-glob-patterns-to-sign-kernel-module-files.html">Defining full paths</a>
+</li>
+<li><a href="kmm-must-gather-tool_gather-diagnostic-data-for-kmm.html">Using the must-gather tool</a>
 </li>
 <li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
@@ -1153,6 +1165,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rdma-for-gpu-workloads-intro_configure-rdma-for-gpu-workloads.html">Configure RDMA for GPU workloads</a>
 </li>
+<li><a href="about-machine-config-operator_configure-node-changes-on-a-cluster.html">About the Machine Config Operator</a>
+</li>
+<li><a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a>
+</li>
+<li><a href="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_create-a-kubeletconfig-cr-to-edit-kubelet-parameters.html">Create a KubeletConfig CR to edit kubelet parameters</a>
+</li>
 </ul>
 </li>
 <li><a href="_networking.html">Networking</a>
@@ -1185,8 +1203,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
 <li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
-</li>
-<li><a href="review-namespace-policy-and-verify-admin-policy-deployment-con_review-namespace-policy-and-verify-admin-policy-deployment.html">Review namespace policy and verify admin policy deployment</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
@@ -1400,6 +1416,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="understand-telco-cluster-security-intro_understand-telco-cluster-security.html">Understand telco cluster security</a>
 </li>
+<li><a href="nodes-containers-projected-volumes-about_map-configuration-sources-with-projected-volumes.html">Understanding projected volumes</a>
+</li>
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
@@ -1424,6 +1442,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="install-node-observability-operator_install-the-node-observability-operator.html">Installing the Node Observability Operator</a>
 </li>
 <li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
+</li>
+<li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
+</li>
+<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
@@ -1466,15 +1488,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="etcd-database-size_scale-etcd-database-size.html">Determine the size of the etcd database and understand its effects</a>
 </li>
-<li><a href="how-etcd-works_understand-etcd-performance-factors.html">How etcd works</a>
+<li><a href="understand-etcd-performance_understand-etcd-performance-factors.html">Factors that affect etcd performance</a>
 </li>
 <li><a href="infrastructure-components_create-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="nodes-nodes-managing-about_make-changes-to-the-kubelet-settings-on-my-nodes.html">Modifying nodes</a>
+<li><a href="make-changes-to-the-kubelet-settings-on-my-nodes-overview_make-changes-to-the-kubelet-settings-on-my-nodes.html">Allocate resources to nodes</a>
 </li>
 <li><a href="nodes-nodes-working-evacuating_evacuate-pods-on-a-node.html">Evacuate pods on nodes</a>
-</li>
-<li><a href="about-machine-config-operator_configure-node-changes-on-a-cluster.html">About the Machine Config Operator</a>
 </li>
 <li><a href="nodes-cluster-limit-ranges-about_restrict-resource-consumption-with-limit-ranges.html">About limit ranges</a>
 </li>
@@ -1496,8 +1516,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scalability-and-performance-recommended-practices_optimize-cluster-performance-across-subsystems.html">Recommended performance and scalability practices</a>
 </li>
-<li><a href="machine-config-pin-preload-images_reduce-image-pull-time.html">Pin images</a>
-</li>
 <li><a href="add-cri-o-storage-locations-for-faster-container-startup-con_add-cri-o-storage-locations-for-faster-container-startup.html">Add CRI-O storage locations for faster container startup</a>
 </li>
 <li><a href="nodes-pods-adjust-resources-in-place-about_adjust-pod-resource-levels-without-pod-disruption.html">About in-place pod resizing</a>
@@ -1508,27 +1526,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="etcd-tuning-parameters_optimize-etcd-performance.html">Set tuning parameters for etcd</a>
 </li>
-<li><a href="nodes-containers-projected-volumes-about_map-configuration-sources-with-projected-volumes.html">Understanding projected volumes</a>
-</li>
 <li><a href="nodes-cluster-overcommit-about_control-the-level-of-overcommitted-pods.html">Understanding overcommitment</a>
 </li>
 <li><a href="nodes-nodes-parallel-container-pulls-about_configure-parallel-configuration-image-pulls.html">About configuring parallel container image pulls</a>
 </li>
 <li><a href="nodes-nodes-kernel-arguments_customize-kernel-behavior.html">Add kernel arguments to nodes</a>
 </li>
-<li><a href="nodes-cluster-worker-latency-profiles-about_improve-cluster-stability-in-high-latency-environments.html">Understanding worker latency profiles</a>
-</li>
-<li><a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a>
-</li>
 <li><a href="rodoo-about_run-once-duration-override-operator.html">About the Run Once Duration Override Operator</a>
 </li>
-<li><a href="configuring-node-pools-for-hcp_machine-configuration-for-hosted-control-planes.html">Configure node pools for hosted control planes</a>
+<li><a href="machine-configuration-for-hosted-control-planes-overview_machine-configuration-for-hosted-control-planes.html"><span class="toc-current">Scale hosted clusters</span></a>
 </li>
-<li><a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a>
-</li>
-<li><a href="nodes-nodes-kernel-arguments_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html">Add kernel arguments to nodes</a>
-</li>
-<li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
+<li><a href="cnf-about-hyper-threading-for-low-latency-and-real-time-applications_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html">About Hyper-Threading for low latency and real-time applications</a>
 </li>
 <li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
@@ -1540,23 +1548,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
-</li>
-<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html"><span class="toc-current">Reserve capacity for planned control plane workloads</span></a>
+<li><a href="reserve-capacity-for-planned-workloads-overview_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads on AWS and Azure</a>
 </li>
 <li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
 </li>
 <li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
 </li>
-<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
-</li>
 <li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
 </li>
-<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
-</li>
-<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
-</li>
-<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-overview_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for machines on vSphere</a>
 </li>
 <li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
 </li>
@@ -1851,169 +1851,91 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#machineset-capacity-reservation_cpmso-supported-features-aws">Configure Capacity Reservations by using machine sets</a></li><li class="level-4"><a href="#machineset-capacity-reservation_cpmso-supported-features-azure">Configure Capacity Reservations by using machine sets</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#configuring-node-pools-for-hcp_machine-configuration-for-hosted-control-planes">Configure node pools for hosted control planes</a></li><li class="level-4"><a href="#scale-down-data-plane_machine-configuration-for-hosted-control-planes">Scale down the data plane to zero</a></li><li class="level-4"><a href="#scale-up-down-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Scale up and down workloads in a hosted cluster</a></li><li class="level-4"><a href="#scale-up-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Scale up workloads in a hosted cluster</a></li><li class="level-4"><a href="#hcp-autoscaling-to-from-zero_machine-configuration-for-hosted-control-planes">Autoscaling to and from zero on hosted control planes node pools</a></li><li class="level-5"><a href="#hcp-autoscaling-terminology_machine-configuration-for-hosted-control-planes">Terminology</a></li><li class="level-5"><a href="#hcp-scale-to-zero-use-cases_machine-configuration-for-hosted-control-planes">Use cases for scale-to-zero autoscaling</a></li><li class="level-5"><a href="#hcp-scale-to-zero-best-practices_machine-configuration-for-hosted-control-planes">Best practices for scale-to-zero autoscaling</a></li><li class="level-5"><a href="#hcp-autoscaling-to-from-zero-configure_machine-configuration-for-hosted-control-planes">Configure autoscaling to and from zero on hosted control planes node pools</a></li><li class="level-5"><a href="#hcp-autoscaling-nodepool-reference_machine-configuration-for-hosted-control-planes">NodePool autoscaling configuration reference</a></li><li class="level-5"><a href="#hcp-nodepool-api-reference_machine-configuration-for-hosted-control-planes">NodePool API reference for autoscaling</a></li><li class="level-6"><a href="#hcp-nodepool-api-spec-autoscaling_machine-configuration-for-hosted-control-planes">spec.autoScaling</a></li><li class="level-6"><a href="#hcp-nodepool-api-spec-replicas_machine-configuration-for-hosted-control-planes">spec.replicas</a></li><li class="level-6"><a href="#hcp-nodepool-api-drain-detach-timeouts_machine-configuration-for-hosted-control-planes">Drain and detach timeouts</a></li><li class="level-6"><a href="#hcp-nodepool-api-status-conditions_machine-configuration-for-hosted-control-planes">status.conditions</a></li><li class="level-6"><a href="#hcp-nodepool-api-sm-operator-flags_machine-configuration-for-hosted-control-planes">HyperShift Operator flags</a></li><li class="level-4"><a href="#priority-expander-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Set the priority expander in a hosted cluster</a></li><li class="level-4"><a href="#balance-ignored-labels-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Balance ignored labels in a hosted cluster</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads">Reserve capacity for planned control plane workloads</h3>
+<h3 id="machine-configuration-for-hosted-control-planes-overview_machine-configuration-for-hosted-control-planes">Scale hosted clusters</h3>
 <div class="paragraph _abstract">
-<p>A capacity reservation holds resources at your cloud provider before you need them. You describe the resources the control plane requires, and the control plane machine set then deploys machines onto any available resources that match that request.</p>
+<p>You can scale hosted clusters by changing the number of nodes in a node pool or configuring autoscaling. Use autoscaler settings to control how node pools respond to workload demand.</p>
 </div>
 <div class="sect3">
-<h4 id="machineset-capacity-reservation_cpmso-supported-features-aws">Configure Capacity Reservations by using machine sets</h4>
+<h4 id="configuring-node-pools-for-hcp_machine-configuration-for-hosted-control-planes">Configure node pools for hosted control planes</h4>
 <div class="paragraph _abstract">
-<p>You can configure a machine set to deploy machines on any available resources that match the parameters of a capacity request that you define by using
-Capacity Reservations on Amazon Web Services clusters, including On-Demand Capacity Reservations and Capacity Blocks for ML.</p>
-</div>
-<div class="paragraph _abstract">
-<p>You can configure a machine set to deploy machines on any available resources that match the parameters of a capacity request that you define.</p>
-</div>
-<div class="paragraph">
-<p>These parameters specify the
-instance type,
-region, and number of instances that you want to reserve.
-If your
-Capacity Reservation
-can accommodate the capacity request, the deployment succeeds.</p>
-</div>
-<div class="paragraph">
-<p>For more information, including limitations and suggested use cases for this
-Amazon Web Services offering, see <a href="https://docs.aws.amazon.com/en_us/AWSEC2/latest/UserGuide/capacity-reservation-overview.html">On-Demand Capacity Reservations and Capacity Blocks for ML</a> in the AWS documentation.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have access to the cluster with <code>cluster-admin</code> privileges.</p>
-</li>
-<li>
-<p>You installed the OpenShift CLI (<code>oc</code>).</p>
-</li>
-<li>
-<p>You have purchased an On-Demand Capacity Reservation or Capacity Block for ML.
-For more information, see <a href="https://docs.aws.amazon.com/en_us/AWSEC2/latest/UserGuide/capacity-reservation-overview.html">On-Demand Capacity Reservations and Capacity Blocks for ML</a> in the AWS documentation.</p>
-</li>
-</ul>
+<p>In hosted control planes, you can configure node pools by creating a <code>MachineConfig</code> object inside of a config map in the management cluster.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Edit your control plane machine set custom resource (CR) by running the following command:</p>
+<p>To create a <code>MachineConfig</code> object inside of a config map in the management cluster, enter the following information:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit controlplanemachineset.machine.openshift.io cluster --namespace openshift-machine-api</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: &lt;configmap_name&gt;
+  namespace: clusters
+data:
+  config: |
+    apiVersion: machineconfiguration.openshift.io/v1
+    kind: MachineConfig
+    metadata:
+      labels:
+        machineconfiguration.openshift.io/role: worker
+      name: &lt;machineconfig_name&gt;
+    spec:
+      config:
+        ignition:
+          version: 3.2.0
+        storage:
+          files:
+          - contents:
+              source: data:...
+            mode: 420
+            overwrite: true
+            path: ${PATH}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>path</code> field specifies the path on the node where the <code>MachineConfig</code> object is stored.</p>
+</div>
+</li>
+<li>
+<p>After you add the object to the config map, you can apply the config map to the node pool as follows:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">$ oc edit nodepool &lt;nodepool_name&gt; --namespace &lt;hosted_cluster_namespace&gt;</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Update the CR to implement your configuration changes:</p>
+<p>Edit the <code>NodePool</code> resource to include the config map:</p>
 <div class="listingblock">
-<div class="title">Sample configuration</div>
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1
-kind: ControlPlaneMachineSet
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: hypershift.openshift.io/v1alpha1
+kind: NodePool
+metadata:
+# ...
+  name: nodepool-1
+  namespace: clusters
 # ...
 spec:
-  template:
-    machines_v1beta1_machine_openshift_io:
-      spec:
-        providerSpec:
-          value:
-            capacityReservationId: &lt;capacity_reservation&gt;
-            marketType: &lt;market_type&gt;
+  config:
+  - name: &lt;configmap_name&gt;
 # ...</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;capacity_reservation&gt;</code></dt>
-<dd>
-<p>Specifies the ID of the Capacity Block for ML or On-Demand Capacity Reservation that you want the machine set to deploy machines on.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;market_type&gt;</code></dt>
-<dd>
-<p>Specifies the market type to use.
-The following values are valid:</p>
-<div class="openblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>CapacityBlock</code></dt>
-<dd>
-<p>Use this market type with Capacity Blocks for ML.</p>
-</dd>
-<dt class="hdlist1"><code>OnDemand</code></dt>
-<dd>
-<p>Use this market type with On-Demand Capacity Reservations.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Save your changes and exit the object specification.</p>
-<div class="paragraph">
-<p>When you save an update to the control plane machine set, the Control Plane Machine Set Operator updates the control plane machines according to your configured update strategy.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>For clusters that use the default <code>RollingUpdate</code> update strategy, the Operator automatically propagates the changes to your control plane configuration.</p>
-</li>
-<li>
-<p>For clusters that are configured to use the <code>OnDelete</code> update strategy, you must replace your control plane machines manually.</p>
-</li>
-</ul>
+<p>Replace <code>&lt;configmap_name&gt;</code> with the name of your config map.</p>
 </div>
 </li>
 </ol>
 </div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>To verify machine deployment, list the machines that the machine set created by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machine \
-  -n openshift-machine-api \
-  -l machine.openshift.io/cluster-api-machine-role=master</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In the output, verify that the characteristics of the listed machines match the parameters of your Capacity Reservation.</p>
-</div>
-</li>
-</ul>
-</div>
 </div>
 <div class="sect3">
-<h4 id="machineset-capacity-reservation_cpmso-supported-features-azure">Configure Capacity Reservations by using machine sets</h4>
+<h4 id="scale-down-data-plane_machine-configuration-for-hosted-control-planes">Scale down the data plane to zero</h4>
 <div class="paragraph _abstract">
-<p>You can configure a machine set to deploy machines on any available resources that match the parameters of a capacity request that you define by using
-on-demand Capacity Reservation with Capacity Reservation groups on Microsoft Azure clusters.</p>
-</div>
-<div class="paragraph _abstract">
-<p>You can configure a machine set to deploy machines on any available resources that match the parameters of a capacity request that you define.</p>
-</div>
-<div class="paragraph">
-<p>These parameters specify the
-VM size,
-region, and number of instances that you want to reserve.
-If your
-Azure subscription quota
-can accommodate the capacity request, the deployment succeeds.</p>
-</div>
-<div class="paragraph">
-<p>For more information, including limitations and suggested use cases for this
-Azure offering, see <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/capacity-reservation-overview">On-demand Capacity Reservation</a> in the Microsoft Azure documentation.</p>
+<p>If you are not using the hosted control plane, to save the resources and cost you can scale down a data plane to zero.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2023,83 +1945,127 @@ Azure offering, see <a href="https://learn.microsoft.com/en-us/azure/virtual-mac
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You cannot change an existing Capacity Reservation configuration for a machine set.
-To use a different Capacity Reservation group, you must replace the machine set and the machines that the previous machine set deployed.</p>
+<p>Ensure you are prepared to scale down the data plane to zero. Because the workload from the worker nodes disappears after scaling down.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have access to the cluster with <code>cluster-admin</code> privileges.</p>
-</li>
-<li>
-<p>You installed the OpenShift CLI (<code>oc</code>).</p>
-</li>
-<li>
-<p>You have created a Capacity Reservation group.
-For more information, see <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/capacity-reservation-create">Create a Capacity Reservation</a> in the Microsoft Azure documentation.</p>
-</li>
-</ul>
-</div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Edit your control plane machine set custom resource (CR) by running the following command:</p>
+<p>Set the <code>kubeconfig</code> file to access the hosted cluster by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit controlplanemachineset.machine.openshift.io cluster --namespace openshift-machine-api</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export KUBECONFIG=&lt;install_directory&gt;/auth/kubeconfig</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Update the CR to implement your configuration changes:</p>
+<p>Get the name of the <code>NodePool</code> resource associated to your hosted cluster by running the following command:</p>
 <div class="listingblock">
-<div class="title">Sample configuration</div>
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1
-kind: ControlPlaneMachineSet
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodepool --namespace &lt;hosted_cluster_namespace&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Optional: To prevent the pods from draining, add the <code>nodeDrainTimeout</code> field in the <code>NodePool</code> resource by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit nodepool &lt;nodepool_name&gt;  --namespace &lt;hosted_cluster_namespace&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: hypershift.openshift.io/v1alpha1
+kind: NodePool
+metadata:
+# ...
+  name: nodepool-1
+  namespace: clusters
 # ...
 spec:
-  template:
-    machines_v1beta1_machine_openshift_io:
-      spec:
-        providerSpec:
-          value:
-            capacityReservationGroupID: &lt;capacity_reservation_group&gt;
+  arch: amd64
+  clusterName: clustername
+  management:
+    autoRepair: false
+    replace:
+      rollingUpdate:
+        maxSurge: 1
+        maxUnavailable: 0
+      strategy: RollingUpdate
+    upgradeType: Replace
+  nodeDrainTimeout: 0s
+  nodeVolumeDetachTimeout: 0
 # ...</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>where:</p>
-</div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>&lt;capacity_reservation_group&gt;</code></dt>
+<dt class="hdlist1"><code>spec.arch.clusterName</code></dt>
 <dd>
-<p>Specifies the ID of the Capacity Reservation group that you want the machine set to deploy machines on.</p>
+<p>Defines the name of your hosted cluster.</p>
+</dd>
+<dt class="hdlist1"><code>spec.nodeDrainTimeout</code></dt>
+<dd>
+<p>Specifies the total amount of time that the controller spends to drain a node. By default, the <code>nodeDrainTimeout: 0s</code> setting blocks the node draining process. To allow the node draining process to continue for a certain period of time, you can set the value of the <code>nodeDrainTimeout</code> field; for example, <code>nodeDrainTimeout: 1m</code>.</p>
+</dd>
+<dt class="hdlist1"><code>spec.nodeVolumeDetachTimeout</code></dt>
+<dd>
+<p>Specifies the total amount of time that the controller spends detaching volumes from a node. By default, the <code>0</code> setting blocks the volume detachment process.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To prevent nodes from getting stuck when scaling down, set the <code>.spec.nodeDrainTimeout</code> and <code>.spec.nodeVolumeDetachTimeout</code> in the <code>NodePool</code> resource to a value greater than <code>0</code>. This setting forces nodes to be removed after the timeout specified in the field is reached, regardless of whether the node can be drained or the volumes can be detached.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </dd>
 </dl>
 </div>
 </li>
 <li>
-<p>Save your changes and exit the object specification.</p>
-<div class="paragraph">
-<p>When you save an update to the control plane machine set, the Control Plane Machine Set Operator updates the control plane machines according to your configured update strategy.</p>
+<p>Scale down the <code>NodePool</code> resource associated to your hosted cluster by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc scale nodepool/&lt;nodepool_name&gt; --namespace &lt;hosted_cluster_namespace&gt; \
+  --replicas=0</code></pre>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>For clusters that use the default <code>RollingUpdate</code> update strategy, the Operator automatically propagates the changes to your control plane configuration.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>After scaling down the data plan to zero, some pods in the control plane stay in the <code>Pending</code> status and the hosted control plane stays up and running. If necessary, you can scale up the <code>NodePool</code> resource.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </li>
 <li>
-<p>For clusters that are configured to use the <code>OnDelete</code> update strategy, you must replace your control plane machines manually.</p>
-</li>
-</ul>
+<p>Optional: Scale up the <code>NodePool</code> resource associated to your hosted cluster by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc scale nodepool/&lt;nodepool_name&gt; --namespace &lt;hosted_cluster_namespace&gt; --replicas=1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After rescaling the <code>NodePool</code> resource,  wait for couple of minutes for the <code>NodePool</code> resource to become available in a <code>Ready</code> state.</p>
 </div>
 </li>
 </ol>
@@ -2108,16 +2074,915 @@ spec:
 <div class="title">Verification</div>
 <ul>
 <li>
-<p>To verify machine deployment, list the machines that the machine set created by running the following command:</p>
+<p>Verify that the value for the <code>nodeDrainTimeout</code> field is greater than <code>0s</code> by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machine \
-  -n openshift-machine-api \
-  -l machine.openshift.io/cluster-api-machine-role=master</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodepool -n &lt;hosted_cluster_namespace&gt; &lt;nodepool_name&gt; -ojsonpath='{.spec.nodeDrainTimeout}'</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="scale-up-down-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Scale up and down workloads in a hosted cluster</h4>
+<div class="paragraph _abstract">
+<p>To scale up and down the workloads in your hosted cluster, you can use the <code>ScaleUpAndScaleDown</code> behavior. The compute nodes scale up when you add workloads and scale down when you delete workloads.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have created the <code>HostedCluster</code> and <code>NodePool</code> resources.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Enable cluster autoscaling for your hosted cluster by setting the scaling behavior to <code>ScaleUpAndScaleDown</code>. Run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n &lt;hosted_cluster_namespace&gt; \
+  hostedcluster &lt;hosted_cluster_name&gt; \
+  --type=merge \
+  --patch='{"spec": {"autoscaling": {"scaling": "ScaleUpAndScaleDown", "maxPodGracePeriod": 60, "scaleDown": {"utilizationThresholdPercent": 50}}}}'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Remove the <code>spec.replicas</code> field from the <code>NodePool</code> resource to allow cluster autoscaler to manage the node count. Run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n &lt;hosted_cluster_namespace&gt; \
+  nodepool &lt;node_pool_name&gt; \
+  --type=json  \
+  --patch='[{"op": "remove", "path": "/spec/replicas"}]'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enable cluster autoscaling to configure the minimum and maximum node counts for your node pools. Run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n &lt;hosted_cluster_namespace&gt; \
+  nodepool &lt;nodepool_name&gt; \
+  --type=merge --patch='{"spec": {"autoScaling": {"max": 3, "min": 1}}}'</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>To verify that all compute nodes are in the <code>Ready</code> status, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig &lt;hosted_cluster_name&gt;.kubeconfig get nodes</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="scale-up-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Scale up workloads in a hosted cluster</h4>
+<div class="paragraph _abstract">
+<p>To scale up the workloads in your hosted cluster, you can use the <code>ScaleUpOnly</code> behavior.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have created the <code>HostedCluster</code> and <code>NodePool</code> resources.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Enable cluster autoscaling for your hosted cluster by setting the scaling behavior to <code>ScaleUpOnly</code>. Run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n &lt;hosted_cluster_namespace&gt; hostedcluster &lt;hosted_cluster_name&gt; --type=merge --patch='{"spec": {"autoscaling": {"scaling": "ScaleUpOnly", "maxPodGracePeriod": 60}}}'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Remove the <code>spec.replicas</code> field from the <code>NodePool</code> resource to allow the cluster autoscaler to manage the node count. Additionally, enable cluster autoscaling to configure the minimum and maximum node counts for your node pools. Enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n clusters patch nodepool yhe-hosted-ap-northeast-1a \
+  --type=json \
+  -p='[
+    {"op":"remove","path":"/spec/replicas"},
+    {"op":"add","path":"/spec/autoScaling","value":{"min":2,"max":4}}
+  ]'</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Verify that all compute nodes are in the <code>Ready</code> status by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig &lt;hosted_cluster_name&gt;.kubeconfig get nodes</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the compute nodes are scaled up successfully by checking the node count for your node pools. Run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig nested.config get nodes -l 'hypershift.openshift.io/nodePool=&lt;node_pool_name&gt;'</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="hcp-autoscaling-to-from-zero_machine-configuration-for-hosted-control-planes">Autoscaling to and from zero on hosted control planes node pools</h4>
+<div class="paragraph _abstract">
+<p>You can configure hosted control planes node pools to autoscale down to zero compute nodes when no schedulable workloads remain on the pool and to provision nodes on-demand when pending pods require capacity.</p>
+</div>
+<div class="paragraph">
+<p>This capability reduces idle compute costs for variable workloads while the hosted control plane stays available.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Scale-from-zero autoscaling is available on Red&#160;Hat OpenShift Container Platform 4.18 and later for eligible hosted control planes deployments on Amazon Web Services (AWS) and Azure.
+Platform validation and HyperShift Operator configuration determine whether a node pool can use <code>spec.autoScaling.min: 0</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When you enable autoscaling on a <code>NodePool</code> object, you set <code>spec.autoScaling.min</code> to <code>0</code> and omit <code>spec.replicas</code>. The cluster autoscaler then manages pool size instead of a fixed replica count.</p>
+</div>
+<div class="paragraph">
+<p>The cluster autoscaler scales up from zero differently than it scales pools that already have nodes. When a pool has zero nodes, the autoscaler cannot observe utilization on existing compute nodes. Instead, it uses instance-type metadata from the cloud provider (CPU, memory, and GPU capacity for the <code>NodePool</code> platform configuration) to decide how many nodes to provision for pending pods.</p>
+</div>
+<div class="paragraph">
+<p>This behavior contrasts with classic fixed-minimum autoscaling, where <code>spec.autoScaling.min</code> is at least <code>1</code>. With a minimum of one or more replicas, the pool always retains at least one node even when workloads are idle.</p>
+</div>
+<div class="paragraph">
+<p>The hosted control plane remains operational when compute node pools scale to zero. Control plane pods continue running on the management cluster. Workloads that target a scale-to-zero pool remain unschedulable until the autoscaler provisions new nodes.</p>
+</div>
+<div class="sect4">
+<h5 id="hcp-autoscaling-terminology_machine-configuration-for-hosted-control-planes">Terminology</h5>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>AutoscalingEnabled</code> condition</dt>
+<dd>
+<p>A <code>NodePool</code> status condition that reports whether autoscaling is correctly configured and active on the pool.
+Verify that this condition is <code>True</code> after you enable autoscaling.</p>
+</dd>
+<dt class="hdlist1">minimum replicas</dt>
+<dd>
+<p>The <code>spec.autoScaling.min</code> value on a <code>NodePool</code> object. When autoscaling is enabled, this value is the lowest number of nodes the autoscaler can scale the pool to.</p>
+</dd>
+<dt class="hdlist1">non-tainted pools</dt>
+<dd>
+<p>Node pools without taints that can accept system and user workloads. These pools must keep baseline capacity for highly available platform Operators.</p>
+</dd>
+<dt class="hdlist1">scale-from-zero</dt>
+<dd>
+<p>Provisioning the first node in a pool that currently has zero nodes because pending pods require capacity.</p>
+</dd>
+<dt class="hdlist1">scale-to-zero</dt>
+<dd>
+<p>Reducing a pool to zero nodes when no schedulable workloads remain on that pool and autoscaling minimum is <code>0</code>.</p>
+</dd>
+<dt class="hdlist1">tainted pools</dt>
+<dd>
+<p>Node pools with taints that restrict which pods can schedule on them. Tainted workload pools are typical candidates for <code>spec.autoScaling.min: 0</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="hcp-scale-to-zero-use-cases_machine-configuration-for-hosted-control-planes">Use cases for scale-to-zero autoscaling</h5>
+<div class="paragraph">
+<p>Scale-to-zero autoscaling is appropriate for the following scenarios:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Development and test node pools that are idle outside business hours</p>
+</li>
+<li>
+<p>Batch or burst workload pools that run jobs periodically</p>
+</li>
+<li>
+<p>GPU or specialized instance pools that are expensive when idle</p>
+</li>
+<li>
+<p>Tainted workload pools that isolate optional capacity from system workloads</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In each case, keep separate baseline pools for platform Operators and confine scale-to-zero configuration to pools that tolerate cold-start latency.</p>
+</div>
+<div class="paragraph">
+<p>Do not use scale-to-zero autoscaling in the following scenarios:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Do not configure scale-to-zero on pools that must always accept system or highly available platform workloads.</p>
+</li>
+<li>
+<p>Scaling all non-tainted node pools to zero violates the cluster-level minimum replica constraint and can prevent system pods from scheduling.</p>
+</li>
+<li>
+<p>Do not use scale-to-zero as a substitute for full cluster hibernation.</p>
+</li>
+<li>
+<p>Data-plane node pool autoscaling removes compute nodes only; the hosted control plane and management infrastructure remain active.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="hcp-scale-to-zero-best-practices_machine-configuration-for-hosted-control-planes">Best practices for scale-to-zero autoscaling</h5>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Base and burst pool architecture</dt>
+<dd>
+<div class="paragraph">
+<p>Keep at least two non-tainted compute nodes across baseline pools for highly available platform Operators. Confine <code>spec.autoScaling.min: 0</code> to tainted burst pools that run dev, test, batch, or specialized workloads.</p>
+</div>
+<div class="paragraph">
+<p>Do not scale all non-tainted pools to zero. Use taints and tolerations to isolate burst capacity from system scheduling requirements.</p>
+</div>
+</dd>
+<dt class="hdlist1">Platform and version eligibility</dt>
+<dd>
+<div class="paragraph">
+<p>Configure scale-to-zero only on AWS or Azure hosted clusters running Red&#160;Hat OpenShift Container Platform 4.18 or later with a HyperShift Operator release that includes the backport.</p>
+</div>
+</dd>
+<dt class="hdlist1">Drain timeout tuning</dt>
+<dd>
+<div class="paragraph">
+<p>Set <code>nodeDrainTimeout</code> and <code>nodeVolumeDetachTimeout</code> to positive values when workloads use persistent storage or long termination grace periods. Zero values block drain and detach operations and can leave nodes stuck during scale-down.</p>
+</div>
+<div class="paragraph">
+<p>Tune timeouts for cost-optimization patterns such as nightly scale-down of dev pools.</p>
+</div>
+</dd>
+<dt class="hdlist1">Scale-up latency planning</dt>
+<dd>
+<div class="paragraph">
+<p>Expect cold-start delay when pools scale from zero. Nodes must provision, join the cluster, and pull images before pending pods schedule.</p>
+</div>
+<div class="paragraph">
+<p>Plan batch jobs and interactive workloads to tolerate this latency, or keep a small nonzero minimum on latency-sensitive pools.</p>
+</div>
+</dd>
+<dt class="hdlist1">Distinguish autoscaling from hibernation</dt>
+<dd>
+<div class="paragraph">
+<p>Data-plane node pool autoscaling removes compute nodes only. The hosted control plane remains active on the management cluster. Full cluster hibernation is a separate operational pattern.</p>
+</div>
+</dd>
+<dt class="hdlist1">Cluster-level minimum replica constraint</dt>
+<dd>
+<div class="paragraph">
+<p>The sum of <code>spec.autoScaling.min</code> (or fixed <code>spec.replicas</code> when autoscaling is disabled) across all non-tainted node pools must be at least <code>2</code>.</p>
+</div>
+<div class="paragraph">
+<p>This constraint ensures highly available platform Operators, such as ingress, console, monitoring, and image registry, can schedule second replicas that require anti-affinity across compute nodes.</p>
+</div>
+<div class="paragraph">
+<p>Tainted workload pools might use <code>spec.autoScaling.min: 0</code> because taints prevent system pods from scheduling on those nodes.
+Baseline non-tainted pools must retain enough minimum capacity to satisfy the cluster-wide constraint.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="hcp-autoscaling-to-from-zero-configure_machine-configuration-for-hosted-control-planes">Configure autoscaling to and from zero on hosted control planes node pools</h5>
+<div class="paragraph _abstract">
+<p>Configure a <code>NodePool</code> object to autoscale between zero and a maximum replica count on supported Amazon Web Services (AWS) or Azure hosted clusters. After configuration, verify the <code>AutoscalingEnabled</code> condition and validate scale-down and scale-up behavior.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>A hosted cluster on AWS or Azure running Red&#160;Hat OpenShift Container Platform 4.18 or later</p>
+</li>
+<li>
+<p>Permission to edit <code>NodePool</code> objects in the hosted cluster namespace</p>
+</li>
+<li>
+<p>Understanding of scale-to-zero use cases, platform support, and Operator implications</p>
+</li>
+<li>
+<p>For AWS and Azure, scale-from-zero provider credentials</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Confirm that your hosted cluster platform supports <code>spec.autoScaling.min: 0</code>.</p>
+<div class="paragraph">
+<p>On AWS and Azure, the <code>NodePool</code> API accepts <code>min: 0</code>. On other platforms, <code>min</code> must be at least <code>1</code>.</p>
+</div>
+</li>
+<li>
+<p>Confirm that the HyperShift Operator enables scale-from-zero.</p>
+<div class="paragraph">
+<p>On AWS and Azure, confirm that <code>--scale-from-zero-provider</code> and <code>--scale-from-zero-creds</code> are configured so instance-type metadata is available.</p>
+</div>
+</li>
+<li>
+<p>Enable autoscaling on the target <code>NodePool</code> object by removing fixed replicas and setting autoscaling bounds.</p>
+<div class="paragraph">
+<p>Replace <code>&lt;hosted_cluster_namespace&gt;</code>, <code>&lt;nodepool_name&gt;</code>, and <code>&lt;max_replicas&gt;</code> with your values.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n &lt;hosted_cluster_namespace&gt; patch nodepool &lt;nodepool_name&gt; \
+  --type=json \
+  -p '[{"op": "remove", "path": "/spec/replicas"}, \
+       {"op": "add", "path": "/spec/autoScaling", \
+        "value": {"min": 0, "max": &lt;max_replicas&gt;}}]'</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>spec.replicas</code> and <code>spec.autoScaling</code> are mutually exclusive. When autoscaling is enabled, omit <code>spec.replicas</code> so the cluster autoscaler manages pool size.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Optional: Configure hosted cluster-level autoscaling behavior on the <code>HostedCluster</code> resource.</p>
+<div class="paragraph">
+<p>For example, set scaling behavior to <code>ScaleUpAndScaleDown</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n &lt;hosted_cluster_namespace&gt; \
+  hostedcluster &lt;hosted_cluster_name&gt; \
+  --type=merge \
+  --patch='{"spec": {"autoscaling": {"scaling": "ScaleUpAndScaleDown"}}}'</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In the output, verify that the characteristics of the listed machines match the parameters of your Capacity Reservation.</p>
+<p>Hosted cluster autoscaling settings apply cluster-wide autoscaler behavior. Node pool autoscaling bounds are configured on each <code>NodePool</code> object.</p>
+</div>
+</li>
+<li>
+<p>Verify that the <code>AutoscalingEnabled</code> condition on the <code>NodePool</code> is <code>True</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodepool -n &lt;hosted_cluster_namespace&gt; &lt;nodepool_name&gt; \
+  -o jsonpath='{range .status.conditions[*]}\
+{.type}={.status}{"\n"}{end}'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output must include <code>AutoscalingEnabled=True</code>.</p>
+</div>
+</li>
+<li>
+<p>Verify scale-down to zero by removing schedulable workloads from the pool.</p>
+<div class="paragraph">
+<p>Remove or reschedule deployments, jobs, or other workloads that schedule on the target pool. If the pool uses taints, only workloads with matching tolerations count toward pool utilization.</p>
+</div>
+<div class="paragraph">
+<p>Wait for the cluster autoscaler to scale the pool down. When no schedulable workloads remain, the pool can reach zero nodes if <code>spec.autoScaling.min</code> is <code>0</code>.</p>
+</div>
+</li>
+<li>
+<p>Verify scale-up from zero by deploying a workload that creates pending pods on the pool.</p>
+<div class="paragraph">
+<p>For example, create a deployment with resource requests that exceed available capacity:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scale-from-zero-test
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: scale-from-zero-test
+  template:
+    metadata:
+      labels:
+        app: scale-from-zero-test
+    spec:
+      tolerations:
+      - key: "&lt;taint_key&gt;"
+        operator: "Equal"
+        value: "&lt;taint_value&gt;"
+        effect: "NoSchedule"
+      containers:
+      - name: app
+        image: registry.redhat.io/ubi9/ubi-minimal
+        resources:
+          requests:
+            cpu: "1"
+            memory: 1Gi</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Apply the manifest and wait for the cluster autoscaler to provision nodes from zero.</p>
+</div>
+</li>
+<li>
+<p>Extract the hosted cluster kubeconfig and verify node count changes.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc extract -n &lt;hosted_cluster_namespace&gt; \
+  secret/&lt;hosted_cluster_name&gt;-admin-kubeconfig \
+  --to=./hostedcluster-secrets --confirm</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig ./hostedcluster-secrets/kubeconfig get nodes</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>The <code>AutoscalingEnabled</code> condition on the <code>NodePool</code> is <code>True</code>.</p>
+</li>
+<li>
+<p>After workloads are removed, the pool scales down and <code>CURRENT NODES</code> can reach <code>0</code> when <code>min</code> is <code>0</code>.</p>
+</li>
+<li>
+<p>After pending pods are created, new nodes appear and reach <code>Ready</code> status.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When pools are at zero nodes, platform Operators on non-tainted baseline pools can report degraded status if minimum replica constraints are not satisfied.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="hcp-autoscaling-nodepool-reference_machine-configuration-for-hosted-control-planes">NodePool autoscaling configuration reference</h5>
+<div class="paragraph _abstract">
+<p>Get familiar with the <code>NodePool</code> fields and status conditions for autoscaling to and from zero on hosted control planes.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field or condition</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.autoScaling.min</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum nodes the cluster autoscaler can scale the pool to.
+Valid values include <code>0</code> on Amazon Web Services (AWS) and Azure.
+On other platforms, the minimum must be at least <code>1</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.autoScaling.max</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum nodes the cluster autoscaler can scale the pool to.
+Must be greater than or equal to <code>spec.autoScaling.min</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spec.replicas</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fixed replica count when autoscaling is disabled.
+Must be omitted when <code>spec.autoScaling</code> is configured.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AutoscalingEnabled</code> condition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reports whether autoscaling is active on the <code>NodePool</code>.
+Status <code>True</code> indicates the autoscaler manages pool size.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--scale-from-zero-provider</code> and <code>--scale-from-zero-creds</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">On AWS and Azure, credentials and provider configuration for instance-type metadata used during scale-from-zero.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Non-tainted pool minimum sum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sum of minimum replicas across non-tainted pools must be at least <code>2</code> cluster-wide for HA platform operators.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>spec.replicas</code> and <code>spec.autoScaling</code> are mutually exclusive.
+Patch or edit the <code>NodePool</code> to remove <code>spec.replicas</code> before adding <code>spec.autoScaling</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="hcp-nodepool-api-reference_machine-configuration-for-hosted-control-planes">NodePool API reference for autoscaling</h5>
+<div class="paragraph _abstract">
+<p>Get familiar with the <code>NodePool</code> specification fields related to autoscaling, including scaling to and from zero on supported platforms.</p>
+</div>
+<div class="sect5">
+<h6 id="hcp-nodepool-api-spec-autoscaling_machine-configuration-for-hosted-control-planes">spec.autoScaling</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>min</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum number of nodes for the pool when autoscaling is enabled.
+<code>0</code> is valid on Amazon Web Services (AWS) and Azure.
+Other platforms require <code>min</code> to be at least <code>1</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>max</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum number of nodes the cluster autoscaler can add to the pool.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="hcp-nodepool-api-spec-replicas_machine-configuration-for-hosted-control-planes">spec.replicas</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>replicas</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fixed number of nodes when autoscaling is disabled.
+Omit this field when <code>spec.autoScaling</code> is set.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="hcp-nodepool-api-drain-detach-timeouts_machine-configuration-for-hosted-control-planes">Drain and detach timeouts</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nodeDrainTimeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">duration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Time the controller spends draining a node during scale-down.
+A value of <code>0s</code> blocks draining until a positive timeout is set.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nodeVolumeDetachTimeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">duration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Time the controller spends detaching volumes from a node during scale-down.
+A value of <code>0</code> blocks detachment until a positive timeout is set.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="hcp-nodepool-api-status-conditions_machine-configuration-for-hosted-control-planes">status.conditions</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Condition</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AutoscalingEnabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reports <code>True</code> when autoscaling is correctly configured and the autoscaler manages the pool.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="hcp-nodepool-api-sm-operator-flags_machine-configuration-for-hosted-control-planes">HyperShift Operator flags</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Flag</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--scale-from-zero-provider</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provider used to fetch instance-type metadata on AWS and Azure.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--scale-from-zero-creds</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Credentials for the scale-from-zero provider on AWS and Azure.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="priority-expander-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Set the priority expander in a hosted cluster</h4>
+<div class="paragraph _abstract">
+<p>You can define the priority for your node pools and create high priority machines before low priority machines by using the priority expander in your hosted cluster.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have created the <code>HostedCluster</code> and <code>NodePool</code> resources.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>To define the priority for your node pools, create a config map named <code>priority-expander-configmap.yaml</code> in your hosted cluster. Node pools with low numbers receive high priority. See the following example configuration:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cluster-autoscaler-priority-expander
+  namespace: kube-system
+# ...
+data:
+  priorities: |-
+    10:
+      - ".*&lt;node_pool_name1&gt;.*"
+    100:
+      - ".*&lt;node_pool_name2&gt;.*"
+# ...</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Generate the <code>kubeconfig</code> file by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ hcp create kubeconfig --name &lt;hosted_cluster_name&gt; --namespace &lt;hosted_cluster_namespace&gt; &gt; nested.config</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the <code>ConfigMap</code> object by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig nested.config create -f priority-expander-configmap.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enable cluster autoscaling by setting the priority expander for your hosted cluster. Run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n &lt;hosted_cluster_namespace&gt; \
+  hostedcluster &lt;hosted_cluster_name&gt; \
+  --type=merge \
+  --patch='{"spec": {"autoscaling": {"scaling": "ScaleUpOnly", "maxPodGracePeriod": 60, "expanders": ["Priority"]}}}'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Remove the <code>spec.replicas</code> field from the <code>NodePool</code> resource to allow the cluster autoscaler to manage the node count. Run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n &lt;hosted_cluster_namespace&gt; \
+  nodepool &lt;node_pool_name&gt; \
+  --type=json
+  --patch='[{"op": "remove", "path": "/spec/replicas"}]'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enable cluster autoscaling to configure the minimum and maximum node counts for your node pools. Run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n &lt;hosted_cluster_namespace&gt; \
+  nodepool &lt;nodepool_name&gt; \
+  --type=merge --patch='{"spec": {"autoScaling": {"max": 3, "min": 1}}}'</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>After you apply new workloads, verify that the compute nodes associated with the priority node pool are scaled up first. Run the following command to check the status of the compute node:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig nested.config get nodes -l 'hypershift.openshift.io/nodePool=&lt;node_pool_name&gt;'</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="balance-ignored-labels-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Balance ignored labels in a hosted cluster</h4>
+<div class="paragraph _abstract">
+<p>After you scale up your node pools, you can use <code>balancingIgnoredLabels</code> to evenly distribute the machines across node pools.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have created the <code>HostedCluster</code> and <code>NodePool</code> resources.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Add the <code>node.group.balancing.ignored</code> label to each of the relevant node pool by using the same label value. Run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n &lt;hosted_cluster_namespace&gt; \
+  nodepool &lt;node_pool_name&gt; \
+  --type=merge \
+  --patch='{"spec": {"nodeLabels": {"node.group.balancing.ignored": "&lt;label_name&gt;"}}}'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enable cluster autoscaling for your hosted cluster by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n &lt;hosted_cluster_namespace&gt; \
+ hostedcluster &lt;hosted_cluster_name&gt; \
+ --type=merge \
+ --patch='{"spec": {"autoscaling": {"balancingIgnoredLabels": ["node.group.balancing.ignored"]}}}'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Remove the <code>spec.replicas</code> field from the <code>NodePool</code> resource to allow the cluster autoscaler to manage the node count. Run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n &lt;hosted_cluster_namespace&gt; \
+  nodepool &lt;node_pool_name&gt; \
+  --type=json \
+  --patch='[{"op": "remove", "path": "/spec/replicas"}]'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enable cluster autoscaling to configure the minimum and maximum node counts for your node pools. Run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n &lt;hosted_cluster_namespace&gt; \
+  nodepool &lt;nodepool_name&gt; \
+  --type=merge --patch='{"spec": {"autoScaling": {"max": 3, "min": 1}}}'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Generate the <code>kubeconfig</code> file by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ hcp create kubeconfig \
+  --name &lt;hosted_cluster_name&gt; \
+  --namespace &lt;hosted_cluster_namespace&gt; &gt; nested.config</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>After you scale up the node pools, check that all compute nodes are in the <code>Ready</code> status by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig nested.config get nodes -l 'hypershift.openshift.io/nodePool=&lt;node_pool_name&gt;'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Confirm that the new nodes contain the <code>node.group.balancing.ignored</code> label by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig nested.config get nodes \
+  -l 'hypershift.openshift.io/nodePool=&lt;node_pool_name&gt;' \
+  -o jsonpath='{.items[*].metadata.labels}' | grep "node.group.balancing.ignored"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enable cluster autoscaling for your hosted cluster by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n &lt;hosted_cluster_namespace&gt; \
+  hostedcluster &lt;hosted_cluster_name&gt; \
+  --type=merge \
+  --patch='{"spec": {"autoscaling": {"balancingIgnoredLabels": ["node.group.balancing.ignored"]}}}'</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Verify that the number of nodes provisioned by each node pool is evenly distributed. For example, if you created three node pools with the same label value, the node counts might be 3, 2, and 3. Run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig nested.config get nodes -l 'hypershift.openshift.io/nodePool=&lt;node_pool_name&gt;'</code></pre>
+</div>
 </div>
 </li>
 </ul>
@@ -2125,7 +2990,7 @@ spec:
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a> | ↑ Up: <a href="_optimize.html">Optimize</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a> →</p>
+<p>← Previous: <a href="rodoo-about_run-once-duration-override-operator.html">About the Run Once Duration Override Operator</a> | ↑ Up: <a href="_optimize.html">Optimize</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="cnf-about-hyper-threading-for-low-latency-and-real-time-applications_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html">About Hyper-Threading for low latency and real-time applications</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2136,7 +3001,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-22 17:55:50 +0100
+Last updated 2026-10-23 11:25:23 +0100
 </div>
 </div>
 <style>

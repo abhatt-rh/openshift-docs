@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines" class="book toc2 toc-left navmap-has-right-toc">
+<body id="kmm-defining-full-paths_use-wildcard-and-glob-patterns-to-sign-kernel-module-files" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -523,6 +523,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="deploy-hosted-control-planes-intro_hosted-control-planes.html">Deploy hosted control planes</a>
 </li>
 <li><a href="review-cluster-operators-con_review-cluster-operators.html">Review cluster Operators</a>
+</li>
+<li><a href="how-etcd-works_how-etcd-works.html">How etcd works</a>
 </li>
 </ul>
 </li>
@@ -592,6 +594,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
 <li><a href="automate-edge-cluster-deployment-with-gitops-ztp-intro_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
+</li>
+<li><a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a>
 </li>
 </ul>
 </li>
@@ -941,7 +945,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_configure.html">Configure</a>
-
 <ul class="sectlevel2">
 <li><a href="configuring-alert-notifications-intro_configuring-alert-notifications.html">Configuring alert notifications</a>
 </li>
@@ -1021,7 +1024,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
+<li><a href="kmm-day0-day2-installation_manage-kmm-day0-day2-lifecycle.html">Day 0 through Day 2 kmod installation</a>
+</li>
 <li><a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a>
+</li>
+<li><a href="kmm-hub-kmm-hub_install-and-use-kmm-hub.html">KMM-Hub</a>
+</li>
+<li><a href="kmm-defining-full-paths_use-wildcard-and-glob-patterns-to-sign-kernel-module-files.html"><span class="toc-current">Defining full paths</span></a>
+</li>
+<li><a href="kmm-must-gather-tool_gather-diagnostic-data-for-kmm.html">Using the must-gather tool</a>
 </li>
 <li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
@@ -1153,6 +1164,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-rdma-for-gpu-workloads-intro_configure-rdma-for-gpu-workloads.html">Configure RDMA for GPU workloads</a>
 </li>
+<li><a href="about-machine-config-operator_configure-node-changes-on-a-cluster.html">About the Machine Config Operator</a>
+</li>
+<li><a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a>
+</li>
+<li><a href="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_create-a-kubeletconfig-cr-to-edit-kubelet-parameters.html">Create a KubeletConfig CR to edit kubelet parameters</a>
+</li>
 </ul>
 </li>
 <li><a href="_networking.html">Networking</a>
@@ -1185,8 +1202,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
 <li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
-</li>
-<li><a href="review-namespace-policy-and-verify-admin-policy-deployment-con_review-namespace-policy-and-verify-admin-policy-deployment.html">Review namespace policy and verify admin policy deployment</a>
 </li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
@@ -1400,6 +1415,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="understand-telco-cluster-security-intro_understand-telco-cluster-security.html">Understand telco cluster security</a>
 </li>
+<li><a href="nodes-containers-projected-volumes-about_map-configuration-sources-with-projected-volumes.html">Understanding projected volumes</a>
+</li>
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
@@ -1425,6 +1442,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
 </li>
+<li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
+</li>
+<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
+</li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="view-node-status-and-resource-usage-con_view-node-status-and-resource-usage.html">View node status and resource usage</a>
@@ -1447,6 +1468,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_optimize.html">Optimize</a>
+
 <ul class="sectlevel2">
 <li><a href="about-node-tuning-operator_node-tuning-operator.html">Node Tuning Operator</a>
 </li>
@@ -1466,15 +1488,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="etcd-database-size_scale-etcd-database-size.html">Determine the size of the etcd database and understand its effects</a>
 </li>
-<li><a href="how-etcd-works_understand-etcd-performance-factors.html">How etcd works</a>
+<li><a href="understand-etcd-performance_understand-etcd-performance-factors.html">Factors that affect etcd performance</a>
 </li>
 <li><a href="infrastructure-components_create-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="nodes-nodes-managing-about_make-changes-to-the-kubelet-settings-on-my-nodes.html">Modifying nodes</a>
+<li><a href="make-changes-to-the-kubelet-settings-on-my-nodes-overview_make-changes-to-the-kubelet-settings-on-my-nodes.html">Allocate resources to nodes</a>
 </li>
 <li><a href="nodes-nodes-working-evacuating_evacuate-pods-on-a-node.html">Evacuate pods on nodes</a>
-</li>
-<li><a href="about-machine-config-operator_configure-node-changes-on-a-cluster.html">About the Machine Config Operator</a>
 </li>
 <li><a href="nodes-cluster-limit-ranges-about_restrict-resource-consumption-with-limit-ranges.html">About limit ranges</a>
 </li>
@@ -1496,8 +1516,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scalability-and-performance-recommended-practices_optimize-cluster-performance-across-subsystems.html">Recommended performance and scalability practices</a>
 </li>
-<li><a href="machine-config-pin-preload-images_reduce-image-pull-time.html">Pin images</a>
-</li>
 <li><a href="add-cri-o-storage-locations-for-faster-container-startup-con_add-cri-o-storage-locations-for-faster-container-startup.html">Add CRI-O storage locations for faster container startup</a>
 </li>
 <li><a href="nodes-pods-adjust-resources-in-place-about_adjust-pod-resource-levels-without-pod-disruption.html">About in-place pod resizing</a>
@@ -1508,27 +1526,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="etcd-tuning-parameters_optimize-etcd-performance.html">Set tuning parameters for etcd</a>
 </li>
-<li><a href="nodes-containers-projected-volumes-about_map-configuration-sources-with-projected-volumes.html">Understanding projected volumes</a>
-</li>
 <li><a href="nodes-cluster-overcommit-about_control-the-level-of-overcommitted-pods.html">Understanding overcommitment</a>
 </li>
 <li><a href="nodes-nodes-parallel-container-pulls-about_configure-parallel-configuration-image-pulls.html">About configuring parallel container image pulls</a>
 </li>
 <li><a href="nodes-nodes-kernel-arguments_customize-kernel-behavior.html">Add kernel arguments to nodes</a>
 </li>
-<li><a href="nodes-cluster-worker-latency-profiles-about_improve-cluster-stability-in-high-latency-environments.html">Understanding worker latency profiles</a>
-</li>
-<li><a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a>
-</li>
 <li><a href="rodoo-about_run-once-duration-override-operator.html">About the Run Once Duration Override Operator</a>
 </li>
-<li><a href="configuring-node-pools-for-hcp_machine-configuration-for-hosted-control-planes.html">Configure node pools for hosted control planes</a>
+<li><a href="machine-configuration-for-hosted-control-planes-overview_machine-configuration-for-hosted-control-planes.html">Scale hosted clusters</a>
 </li>
-<li><a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a>
-</li>
-<li><a href="nodes-nodes-kernel-arguments_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html">Add kernel arguments to nodes</a>
-</li>
-<li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
+<li><a href="cnf-about-hyper-threading-for-low-latency-and-real-time-applications_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html">About Hyper-Threading for low latency and real-time applications</a>
 </li>
 <li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
@@ -1540,23 +1548,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
-</li>
-<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+<li><a href="reserve-capacity-for-planned-workloads-overview_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads on AWS and Azure</a>
 </li>
 <li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
 </li>
 <li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
 </li>
-<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html"><span class="toc-current">Improve network performance for control plane machines</span></a>
-</li>
 <li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
 </li>
-<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
-</li>
-<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
-</li>
-<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-overview_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for machines on vSphere</a>
 </li>
 <li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
 </li>
@@ -1851,236 +1851,116 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#machineset-aws-existing-placement-group_cpmso-supported-features-aws">Assigning machines to placement groups for Elastic Fabric Adapter instances by using machine sets</a></li><li class="level-4"><a href="#machineset-azure-accelerated-networking_cpmso-supported-features-azure">Accelerated Networking for Microsoft Azure VMs</a></li><li class="level-5"><a href="#machineset-azure-accelerated-networking-limits_cpmso-supported-features-azure">Limitations</a></li><li class="level-5"><a href="#machineset-azure-enabling-accelerated-networking-existing_cpmso-supported-features-azure">Enabling Accelerated Networking on an existing Microsoft Azure cluster</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#kmm-using-wildcard-and-glob-patterns_use-wildcard-and-glob-patterns-to-sign-kernel-module-files">Using wildcard and glob patterns</a></li><li class="level-4"><a href="#kmm-specifying-files-to-sign_use-wildcard-and-glob-patterns-to-sign-kernel-module-files">Specify files to sign</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines">Improve network performance for control plane machines</h3>
+<h3 id="kmm-defining-full-paths_use-wildcard-and-glob-patterns-to-sign-kernel-module-files">Defining full paths</h3>
 <div class="paragraph _abstract">
-<p>Several machine settings affect how fast a control plane machine moves traffic. You can shorten the network path between the control plane machines, and give them a more direct path to the switch.</p>
+<p>You can define one or more absolute paths to kernel module <code>.ko</code> files inside the image.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows full path usage in the <code>sign.filesToSign</code> field:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">sign:
+  certSecret:
+    name: &lt;cert_secret&gt;
+  keySecret:
+    name: &lt;key_secret&gt;
+  filesToSign:
+    - /opt/lib/modules/${KERNEL_FULL_VERSION}/&lt;my-kmod&gt;.ko
+    - /opt/lib/modules/${KERNEL_FULL_VERSION}/&lt;my_kmod1&gt;.ko
+    - /opt/lib/modules/${KERNEL_FULL_VERSION}/&lt;my_kmod2&gt;.ko</code></pre>
+</div>
 </div>
 <div class="sect3">
-<h4 id="machineset-aws-existing-placement-group_cpmso-supported-features-aws">Assigning machines to placement groups for Elastic Fabric Adapter instances by using machine sets</h4>
+<h4 id="kmm-using-wildcard-and-glob-patterns_use-wildcard-and-glob-patterns-to-sign-kernel-module-files">Using wildcard and glob patterns</h4>
 <div class="paragraph _abstract">
-<p>You can configure a machine set to deploy machines on Elastic Fabric Adapter (EFA) instances within an existing Amazon Web Services (AWS) placement group. Using EFA instances to run control plane machines can improve network performance.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">EFA</a> instances do not require placement groups, and you can use placement groups for purposes other than configuring an EFA. This example uses both to demonstrate a configuration that can improve network performance for machines within the specified placement group.</p>
+<p>You can use wildcard and any glob expression supported by the Ash shell in the <code>sign.filesToSign</code> field. The shell expands each entry at sign time, so you can match multiple modules with a single entry.</p>
 </div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have access to the OpenShift CLI (<code>oc</code>) as a user with administrator privileges.</p>
-</li>
-<li>
-<p>You created a placement group in the AWS console.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Ensure that the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html#limitations-placement-groups">rules and limitations</a> for the type of placement group that you create are compatible with your intended use case.
-The control plane machine set spreads the control plane machines across multiple failure domains when possible.
-To use placement groups for the control plane, you must use a placement group type that can span multiple Availability Zones.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Edit your control plane machine set custom resource (CR) by running the following command:</p>
+<p>The following example signs all <code>.ko</code> files in that directory:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit controlplanemachineset.machine.openshift.io cluster --namespace openshift-machine-api</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">sign:
+  certSecret:
+    name: &lt;cert_secret&gt;
+  keySecret:
+    name: &lt;key_secret&gt;
+  filesToSign:
+    - /opt/lib/modules/${KERNEL_FULL_VERSION}/*.ko</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Update the CR to implement your configuration changes:</p>
+<p>The following example signs all modules matching that pattern, for example, <code>kmm_ci_a.ko</code>, <code>kmm_ci_b.ko</code>, and so on:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1
-kind: ControlPlaneMachineSet
-# ...
-spec:
-  template:
-    machines_v1beta1_machine_openshift_io:
-      spec:
-        providerSpec:
-          value:
-            instanceType: &lt;supported_instance_type&gt;
-            networkInterfaceType: &lt;interface_type&gt;
-            placement:
-              availabilityZone: &lt;zone&gt;
-              region: &lt;region&gt;
-            placementGroupName: &lt;placement_group&gt;
-            placementGroupPartition: &lt;placement_group_partition_number&gt;</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">sign:
+  certSecret:
+    name: &lt;cert_secret&gt;
+  keySecret:
+    name: &lt;key_secret&gt;
+  filesToSign:
+    - /opt/lib/modules/${KERNEL_FULL_VERSION}/kmm_ci_?.ko</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;supported_instance_type&gt;</code></dt>
-<dd>
-<p>Specifies an instance type that <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html#efa-instance-types">supports EFAs</a>.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;interface_type&gt;</code></dt>
-<dd>
-<p>Specifies the network interface type.
-To use an EFA, set this value to <code>EFA</code>.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;zone&gt;</code></dt>
-<dd>
-<p>Specifies the zone; for example, <code>us-east-1a</code>.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;region&gt;</code></dt>
-<dd>
-<p>Specifies the region; for example, <code>us-east-1</code>.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;placement_group&gt;</code></dt>
-<dd>
-<p>Specifies the name of the existing AWS placement group to deploy machines in.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;placement_group_partition_number&gt;</code></dt>
-<dd>
-<p>Specifies the partition number of the existing AWS placement group to deploy machines in. This parameter is optional.</p>
-</dd>
-</dl>
 </div>
 </li>
 <li>
-<p>Save your changes and exit the object specification.</p>
-<div class="paragraph">
-<p>When you save an update to the control plane machine set, the Control Plane Machine Set Operator updates the control plane machines according to your configured update strategy.</p>
+<p>The following example signs <code>driver-a.ko</code>, <code>driver-b.ko</code>, or <code>driver-c.ko</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">sign:
+  certSecret:
+    name: &lt;cert_secret&gt;
+  keySecret:
+    name: &lt;key_secret&gt;
+  filesToSign:
+    - /opt/lib/modules/${KERNEL_FULL_VERSION}/driver-[abc].ko</code></pre>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>For clusters that use the default <code>RollingUpdate</code> update strategy, the Operator automatically propagates the changes to your control plane configuration.</p>
-</li>
-<li>
-<p>For clusters that are configured to use the <code>OnDelete</code> update strategy, you must replace your control plane machines manually.</p>
-</li>
-</ul>
 </div>
 </li>
-</ol>
+<li>
+<p>The following example signs <code>mod-0.ko</code> through <code>mod-9.ko</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">sign:
+  certSecret:
+    name: &lt;cert_secret&gt;
+  keySecret:
+    name: &lt;key_secret&gt;
+  filesToSign:
+    - /opt/lib/modules/${KERNEL_FULL_VERSION}/mod-[0-9].ko</code></pre>
 </div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>In the AWS console, find a machine that the machine set created and verify the following in the machine properties:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The placement group field has the value that you specified for the <code>placementGroupName</code> parameter in the machine set.</p>
-</li>
-<li>
-<p>If you specified a partition number, the partition number field has the value that you specified for the <code>placementGroupPartition</code> parameter in the machine set.</p>
-</li>
-<li>
-<p>The interface type field indicates that it uses an EFA.</p>
-</li>
-</ul>
 </div>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="machineset-azure-accelerated-networking_cpmso-supported-features-azure">Accelerated Networking for Microsoft Azure VMs</h4>
+<h4 id="kmm-specifying-files-to-sign_use-wildcard-and-glob-patterns-to-sign-kernel-module-files">Specify files to sign</h4>
 <div class="paragraph _abstract">
-<p>You can enable Accelerated Networking, which uses single root I/O virtualization (SR-IOV) to provide Microsoft Azure VMs with a more direct path to the switch,
-after installation. This enhances network performance.</p>
-</div>
-<div class="sect4">
-<h5 id="machineset-azure-accelerated-networking-limits_cpmso-supported-features-azure">Limitations</h5>
-<div class="paragraph">
-<p>Consider the following limitations when deciding whether to use Accelerated Networking:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Accelerated Networking is only supported on clusters where the Machine API is operational.</p>
-</li>
-<li>
-<p></p>
-<div class="paragraph">
-<p>Accelerated Networking requires an Azure VM size that includes at least four vCPUs. To satisfy this requirement, you can change the value of <code>vmSize</code> in your machine set. For information about Azure VM sizes, see <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/sizes">Microsoft Azure documentation</a>.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="machineset-azure-enabling-accelerated-networking-existing_cpmso-supported-features-azure">Enabling Accelerated Networking on an existing Microsoft Azure cluster</h5>
-<div class="paragraph _abstract">
-<p>You can enable Accelerated Networking on Microsoft Azure by adding <code>acceleratedNetworking</code> to your machine set YAML file. Accelerated Networking uses SR-IOV to help improve network performance for new nodes.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>Have an existing Azure cluster where the Machine API is operational.</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>Add the following to the <code>providerSpec</code> field:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">providerSpec:
-  value:
-    acceleratedNetworking: true
-    vmSize: &lt;azure-vm-size&gt;</code></pre>
-</div>
+<p>You can specify full paths or wildcard and glob patterns to sign kernel module (<code>.ko</code>) files in specific directories.</p>
 </div>
 <div class="paragraph">
-<p>where:</p>
+<p>Kernel Module Management (KMM) provides support for wildcard and glob pattern support for the <code>sign.filesToSign</code> field in the <code>Module</code> CR for signing kernel modules. In addition to using a full path to explicit files, you can use any glob patterns supported by the Bash shell to specify the files to sign.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>providerSpec.value.acceleratedNetworking</code></dt>
-<dd>
-<p>Enables Accelerated Networking.</p>
-</dd>
-<dt class="hdlist1"><code>providerSpec.value.vmSize</code></dt>
-<dd>
-<p>Specifies an Azure VM size that includes at least four vCPUs. For information about VM sizes, see the Microsoft Azure documentation <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/sizes">Sizes for virtual machines in Azure</a>.</p>
-</dd>
-</dl>
+<div class="paragraph">
+<p>The <code>DirName</code> value from <code>moduleLoader.container.modprobe</code> is propagated into the sign image. The validation webhook also verifies that all <code>filesToSign</code> entries fall under the configured <code>DirName</code>.</p>
 </div>
-</li>
-</ul>
+<div class="paragraph">
+<p>All paths in <code>filesToSign</code> must be under the directory defined by <code>DirName</code> in the same <code>moduleLoader.container.modprobe</code> (default <code>/opt</code>).</p>
 </div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>On the Microsoft Azure portal, review the <strong>Networking</strong> settings page for a machine provisioned by the machine set, and verify that the <code>Accelerated networking</code> field is set to <code>Enabled</code>.</p>
-</li>
-</ul>
-</div>
+<div class="paragraph">
+<p>The KMM Operator loads the signed kmods onto all of the nodes that match the selector. The kmods should be successfully loaded on any nodes that have the public key in their Machine Owner Key (MOK) database and on any nodes that are not secure-boot enabled (which will just ignore the signature). They should fail to load on any that have secure-boot enabled but do not have that key in their MOK database.</p>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a> | ↑ Up: <a href="_optimize.html">Optimize</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a> →</p>
+<p>← Previous: <a href="kmm-hub-kmm-hub_install-and-use-kmm-hub.html">KMM-Hub</a> | ↑ Up: <a href="_configure.html">Configure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="kmm-must-gather-tool_gather-diagnostic-data-for-kmm.html">Using the must-gather tool</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2091,7 +1971,7 @@ after installation. This enhances network performance.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-22 17:55:50 +0100
+Last updated 2026-10-23 11:25:23 +0100
 </div>
 </div>
 <style>
