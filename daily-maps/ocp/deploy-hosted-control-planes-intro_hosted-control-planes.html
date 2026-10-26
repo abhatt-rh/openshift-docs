@@ -715,6 +715,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="perform-a-control-plane-only-update-intro_control-plane-only-update.html">Perform a Control Plane Only update</a>
 </li>
+<li><a href="update-ai-plugin-intro_updating-ai.html">Create cluster update assessments with OpenShift Lightspeed</a>
+</li>
 <li><a href="update-using-custom-machine-config-pools_update-using-custom-machine-config-pools.html">Perform a canary rollout update</a>
 </li>
 <li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
@@ -902,6 +904,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
+<li><a href="recover-a-two-node-cluster-with-fencing-con_recover-a-two-node-cluster-with-fencing.html">Recover a two-node cluster with fencing</a>
+</li>
 <li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replace a healthy etcd member</a>
 </li>
 <li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replace an unhealthy etcd member</a>
@@ -932,6 +936,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="reclaim-registry-storage-con_reclaim-registry-storage.html">Reclaim registry storage</a>
 </li>
 <li><a href="deploy-images-from-external-sources-con_deploy-images-from-external-sources.html">Deploy images from external sources</a>
+</li>
+<li><a href="templates-overview_use-templates-to-deploy-applications.html">Understanding templates</a>
+</li>
+<li><a href="templates-writing_write-and-manage-templates.html">Writing templates</a>
+</li>
+<li><a href="templates-rails-setting-up-database_deploy-a-rails-application-with-templates.html">Setting up the database</a>
 </li>
 <li><a href="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console.html">Use developer workflows in the console</a>
 </li>
@@ -1159,6 +1169,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-web-terminal-timeout-and-image-settings-con_configure-web-terminal-timeout-and-image-settings.html">Configure web terminal timeout and image settings</a>
 </li>
 <li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
+</li>
+<li><a href="fencing-credential-management_manage-fencing-credentials-for-a-two-node-cluster.html">Fencing credential management</a>
+</li>
+<li><a href="tnf-tuning-fencing-parameters-overview_tune-fencing-parameters-for-a-two-node-cluster.html">Overview of tuning fencing parameters</a>
 </li>
 <li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
 </li>
@@ -1679,7 +1693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="remediate-node-configuration-drift-to-return-the-node-to-ready-con_remediate-node-configuration-drift-to-return-the-node-to-ready.html">Remediate node configuration drift to return the node to ready</a>
 </li>
-<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
+<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collect Windows application event logs</a>
 </li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
@@ -1731,7 +1745,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
+<li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collect Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
 </li>
@@ -1834,6 +1848,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="storage-troubleshooting-intro_troubleshoot-storage.html">Troubleshooting storage</a>
 </li>
 <li><a href="troubleshoot-telco-cluster-operations-intro_troubleshoot-telco-cluster-operations.html">Troubleshoot telco cluster operations</a>
+</li>
+<li><a href="tnf-cluster-degradation-causes_troubleshoot-a-degraded-two-node-cluster-with-fencing.html">TNF cluster degradation causes</a>
 </li>
 </ul>
 </li>
@@ -2939,7 +2955,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect4">
 <h5 id="hcp-support-matrix_install-hosted-control-planes">Support matrix for hosted control planes</h5>
 <div class="paragraph _abstract">
-<p>ecause multicluster engine for Kubernetes Operator includes the HyperShift Operator, hosted control planes releases align with multicluster engine Operator. The support matrix covers supported clusters, platforms, architectures, updates, and technology preview features.</p>
+<p>Because multicluster engine for Kubernetes Operator includes the HyperShift Operator, hosted control planes releases align with multicluster engine Operator. The support matrix covers supported clusters, platforms, architectures, updates, and technology preview features.</p>
 </div>
 <div class="paragraph">
 <p>For more information, see "OpenShift Operator Life Cycles".</p>
@@ -2984,10 +3000,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">2.6</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.16</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2.7</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4.16, 4.18</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2.8</p></td>
 </tr>
@@ -3006,6 +3018,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4.20 - 4.22</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2.17</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.21 - 5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0</p></td>
 </tr>
 </tbody>
 </table>
@@ -3040,7 +3056,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Although the HyperShift Operator supports the hosted cluster versions in the following table, multicluster engine Operator supports only as far back as 2 versions earlier than the current version. For example, if the current hosted cluster version is 4.21, multicluster engine Operator supports as far back as version 4.19. If you want to use a hosted cluster version that is earlier than one of the versions that multicluster engine Operator supports, you can detach your hosted clusters from multicluster engine Operator to be unmanaged, or you can use an earlier version of multicluster engine Operator. For instructions to detach your hosted clusters from multicluster engine Operator, see "Removing a cluster from management" (RHACM documentation). For more information about multicluster engine Operator support, see "The multicluster engine for Kubernetes operator 2.17 Support Matrix" (Red&#160;Hat Knowledgebase).</p>
+<p>Although the HyperShift Operator supports the hosted cluster versions in the following table, multicluster engine Operator supports only as far back as 2 versions earlier than the current version. For example, if the current hosted cluster version is 4.21, multicluster engine Operator supports as far back as version 4.19. If you want to use a hosted cluster version that is earlier than one of the versions that multicluster engine Operator supports, you can detach your hosted clusters from multicluster engine Operator to be unmanaged, or you can use an earlier version of multicluster engine Operator. For instructions to detach your hosted clusters from multicluster engine Operator, see "Removing a cluster from management" (RHACM documentation). For more information about multicluster engine Operator support, see "The multicluster engine for Kubernetes operator 5.0 Support Matrix" (Red&#160;Hat Knowledgebase).</p>
 </div>
 </td>
 </tr>
@@ -3062,12 +3078,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tr>
 <th class="tableblock halign-left valign-top">Hosted cluster version</th>
 <th class="tableblock halign-left valign-top">HyperShift Operator in multicluster engine Operator 2.6</th>
-<th class="tableblock halign-left valign-top">HyperShift Operator in multicluster engine Operator 2.7</th>
 <th class="tableblock halign-left valign-top">HyperShift Operator in multicluster engine Operator 2.8</th>
 <th class="tableblock halign-left valign-top">HyperShift Operator in multicluster engine Operator 2.9</th>
 <th class="tableblock halign-left valign-top">HyperShift Operator in multicluster engine Operator 2.10</th>
 <th class="tableblock halign-left valign-top">HyperShift Operator in multicluster engine Operator 2.11</th>
 <th class="tableblock halign-left valign-top">HyperShift Operator in multicluster engine Operator 2.17</th>
+<th class="tableblock halign-left valign-top">HyperShift Operator in multicluster engine Operator 5.0</th>
 </tr>
 </thead>
 <tbody>
@@ -3075,7 +3091,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">4.14</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
@@ -3086,7 +3102,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
@@ -3094,10 +3110,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4.18</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 </tr>
@@ -3105,10 +3121,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">4.19</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 </tr>
 <tr>
@@ -3116,10 +3132,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4.21</p></td>
@@ -3127,12 +3143,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
@@ -3186,43 +3212,43 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Amazon Web Services</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.16, 4.18 - 4.22</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.16, 4.18 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.16, 4.18 - 5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.16, 4.18 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">IBM Power</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 4.22</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">IBM Z</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 4.22</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OpenShift Virtualization</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.14, 4.16, 4.18 - 4.22</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.14, 4.16, 4.18 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.14, 4.16, 4.18 - 5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.14, 4.16, 4.18 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bare metal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.14, 4.16, 4.18 - 4.22</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.14, 4.16, 4.18 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.14, 4.16, 4.18 - 5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.14, 4.16, 4.18 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Non-bare-metal agent machines (Technology Preview)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.16, 4.18 - 4.22</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.16, 4.18 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.16, 4.18 - 5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.16, 4.18 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Red Hat OpenStack Platform (RHOSP) (Technology Preview)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.19 - 4.22</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.19 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.19 - 5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.19 - 5.0</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Microsoft Azure (Technology Preview)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microsoft Azure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0</p></td>
 </tr>
 </tbody>
 </table>
@@ -3253,79 +3279,85 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">AWS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.16, 4.18 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.16, 4.18 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AWS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ARM64</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AWS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ARM64</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ARM64</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AWS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ARM64</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 5.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Azure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bare metal (Agent platform)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.14, 4.16, 4.18 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.14, 4.16, 4.18 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bare metal (Agent platform)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ARM64</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.21 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.21 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">IBM Power</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ppc64le</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">IBM Z</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">s390x</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.18 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">IBM Z</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">s390x</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">s390x</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.20 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.20 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Non-bare-metal Agent machines (Technology Preview)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.16, 4.18 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.16, 4.18 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OpenShift Virtualization</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.14, 4.16, 4.18 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.14, 4.16, 4.18 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OpenShift Virtualization</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">s390x</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">s390x</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.22 - 5.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Red Hat OpenStack Platform (RHOSP) (Technology Preview)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">64-bit x86</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.19 - 4.22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.19 - 5.0</p></td>
 </tr>
 </tbody>
 </table>
@@ -3343,7 +3375,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Although the HyperShift Operator supports the hosted cluster versions in the following table, multicluster engine Operator supports only as far back as 2 versions earlier than the current version. For example, if the current hosted cluster version is 4.21, multicluster engine Operator supports as far back as version 4.19. If you want to use a hosted cluster version that is earlier than one of the versions that multicluster engine Operator supports, you can detach your hosted clusters from multicluster engine Operator to be unmanaged, or you can use an earlier version of multicluster engine Operator. For instructions to detach your hosted clusters from multicluster engine Operator, see "Removing a cluster from management" (RHACM documentation). For more information about multicluster engine Operator support, see "The multicluster engine for Kubernetes operator 2.17 Support Matrix" (Red&#160;Hat Knowledgebase).</p>
+<p>Although the HyperShift Operator supports the hosted cluster versions in the following table, multicluster engine Operator supports only as far back as 2 versions earlier than the current version. For example, if the current hosted cluster version is 4.21, multicluster engine Operator supports as far back as version 4.19. If you want to use a hosted cluster version that is earlier than one of the versions that multicluster engine Operator supports, you can detach your hosted clusters from multicluster engine Operator to be unmanaged, or you can use an earlier version of multicluster engine Operator. For instructions to detach your hosted clusters from multicluster engine Operator, see "Removing a cluster from management" (RHACM documentation). For more information about multicluster engine Operator support, see "The multicluster engine for Kubernetes operator 5.0 Support Matrix" (Red&#160;Hat Knowledgebase).</p>
 </div>
 </td>
 </tr>
@@ -3367,11 +3399,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat OpenShift Container Platform 4.14, 4.16</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Updating from 2.6 to 2.7</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat OpenShift Container Platform 4.14, 4.16</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Updating from 2.7 to 2.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updating from 2.6 to 2.8</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat OpenShift Container Platform 4.16</p></td>
 </tr>
 <tr>
@@ -3389,6 +3417,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Updating from 2.11 to 2.17</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat OpenShift Container Platform 4.20, 4.21</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updating from 2.17 to 5.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat OpenShift Container Platform 4.21, 4.22</p></td>
 </tr>
 </tbody>
 </table>
@@ -3451,7 +3483,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-23 11:25:23 +0100
+Last updated 2026-10-26 14:12:22 +0000
 </div>
 </div>
 <style>

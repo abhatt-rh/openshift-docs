@@ -716,6 +716,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="perform-a-control-plane-only-update-intro_control-plane-only-update.html">Perform a Control Plane Only update</a>
 </li>
+<li><a href="update-ai-plugin-intro_updating-ai.html">Create cluster update assessments with OpenShift Lightspeed</a>
+</li>
 <li><a href="update-using-custom-machine-config-pools_update-using-custom-machine-config-pools.html">Perform a canary rollout update</a>
 </li>
 <li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
@@ -903,6 +905,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
+<li><a href="recover-a-two-node-cluster-with-fencing-con_recover-a-two-node-cluster-with-fencing.html">Recover a two-node cluster with fencing</a>
+</li>
 <li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replace a healthy etcd member</a>
 </li>
 <li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replace an unhealthy etcd member</a>
@@ -933,6 +937,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="reclaim-registry-storage-con_reclaim-registry-storage.html">Reclaim registry storage</a>
 </li>
 <li><a href="deploy-images-from-external-sources-con_deploy-images-from-external-sources.html">Deploy images from external sources</a>
+</li>
+<li><a href="templates-overview_use-templates-to-deploy-applications.html">Understanding templates</a>
+</li>
+<li><a href="templates-writing_write-and-manage-templates.html">Writing templates</a>
+</li>
+<li><a href="templates-rails-setting-up-database_deploy-a-rails-application-with-templates.html">Setting up the database</a>
 </li>
 <li><a href="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console.html">Use developer workflows in the console</a>
 </li>
@@ -1160,6 +1170,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-web-terminal-timeout-and-image-settings-con_configure-web-terminal-timeout-and-image-settings.html">Configure web terminal timeout and image settings</a>
 </li>
 <li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
+</li>
+<li><a href="fencing-credential-management_manage-fencing-credentials-for-a-two-node-cluster.html">Fencing credential management</a>
+</li>
+<li><a href="tnf-tuning-fencing-parameters-overview_tune-fencing-parameters-for-a-two-node-cluster.html">Overview of tuning fencing parameters</a>
 </li>
 <li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
 </li>
@@ -1679,7 +1693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="remediate-node-configuration-drift-to-return-the-node-to-ready-con_remediate-node-configuration-drift-to-return-the-node-to-ready.html">Remediate node configuration drift to return the node to ready</a>
 </li>
-<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
+<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collect Windows application event logs</a>
 </li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
@@ -1731,7 +1745,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
+<li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collect Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
 </li>
@@ -1835,6 +1849,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="troubleshoot-telco-cluster-operations-intro_troubleshoot-telco-cluster-operations.html">Troubleshoot telco cluster operations</a>
 </li>
+<li><a href="tnf-cluster-degradation-causes_troubleshoot-a-degraded-two-node-cluster-with-fencing.html">TNF cluster degradation causes</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1851,7 +1867,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nodes-nodes-managing-about_make-changes-to-the-kubelet-settings-on-my-nodes">Modifying nodes</a></li><li class="level-4"><a href="#nodes-nodes-resources-configuring-about_make-changes-to-the-kubelet-settings-on-my-nodes">Understanding how resources are allocated to nodes</a></li><li class="level-5"><a href="#computing-allocated-resources_make-changes-to-the-kubelet-settings-on-my-nodes">How Red Hat OpenShift Container Platform computes allocated resources</a></li><li class="level-5"><a href="#system-reserved-compressible_make-changes-to-the-kubelet-settings-on-my-nodes">How Red Hat OpenShift Container Platform enforces system-reserved CPU</a></li><li class="level-5"><a href="#allocate-node-enforcement_make-changes-to-the-kubelet-settings-on-my-nodes">How nodes enforce resource constraints</a></li><li class="level-5"><a href="#allocate-eviction-thresholds_make-changes-to-the-kubelet-settings-on-my-nodes">Understanding Eviction Thresholds</a></li><li class="level-5"><a href="#allocate-scheduler-policy_make-changes-to-the-kubelet-settings-on-my-nodes">How the scheduler determines resource availability</a></li><li class="level-4"><a href="#nodes-nodes-resources-configuring-setting_make-changes-to-the-kubelet-settings-on-my-nodes">Manually allocating resources for nodes</a></li><li class="level-4"><a href="#understanding-process-id-limits_make-changes-to-the-kubelet-settings-on-my-nodes">Process ID limits</a></li><li class="level-5"><a href="#risks-setting-higher-process-id-limits_make-changes-to-the-kubelet-settings-on-my-nodes">Risks of setting higher process ID limits for Red Hat OpenShift Container Platform pods</a></li><li class="level-4"><a href="#nodes-nodes-resources-cpus-reserve_make-changes-to-the-kubelet-settings-on-my-nodes">Reserve CPUs for nodes</a></li><li class="level-4"><a href="#nodes-nodes-garbage-collection-containers_make-changes-to-the-kubelet-settings-on-my-nodes">Understanding how terminated containers are removed through garbage collection</a></li><li class="level-4"><a href="#nodes-nodes-garbage-collection-images_make-changes-to-the-kubelet-settings-on-my-nodes">Understanding how images are removed through garbage collection</a></li><li class="level-4"><a href="#nodes-nodes-garbage-collection-configuring_make-changes-to-the-kubelet-settings-on-my-nodes">Configure garbage collection for containers and images</a></li><li class="level-4"><a href="#tls-profiles-understanding_make-changes-to-the-kubelet-settings-on-my-nodes">Understand TLS security profiles</a></li><li class="level-4"><a href="#tls-profiles-kubelet-configuring_make-changes-to-the-kubelet-settings-on-my-nodes">Configure the TLS security profile for the kubelet</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nodes-nodes-managing-about_make-changes-to-the-kubelet-settings-on-my-nodes">Modifying nodes</a></li><li class="level-4"><a href="#nodes-nodes-resources-configuring-about_make-changes-to-the-kubelet-settings-on-my-nodes">Understanding how resources are allocated to nodes</a></li><li class="level-5"><a href="#computing-allocated-resources_make-changes-to-the-kubelet-settings-on-my-nodes">How Red Hat OpenShift Container Platform computes allocated resources</a></li><li class="level-5"><a href="#system-reserved-compressible_make-changes-to-the-kubelet-settings-on-my-nodes">How Red Hat OpenShift Container Platform enforces system-reserved CPU</a></li><li class="level-5"><a href="#allocate-node-enforcement_make-changes-to-the-kubelet-settings-on-my-nodes">How nodes enforce resource constraints</a></li><li class="level-5"><a href="#allocate-eviction-thresholds_make-changes-to-the-kubelet-settings-on-my-nodes">Understanding Eviction Thresholds</a></li><li class="level-5"><a href="#allocate-scheduler-policy_make-changes-to-the-kubelet-settings-on-my-nodes">How the scheduler determines resource availability</a></li><li class="level-4"><a href="#nodes-nodes-resources-configuring-setting_make-changes-to-the-kubelet-settings-on-my-nodes">Manually allocating resources for nodes</a></li><li class="level-4"><a href="#understanding-process-id-limits_make-changes-to-the-kubelet-settings-on-my-nodes">Process ID limits</a></li><li class="level-5"><a href="#risks-setting-higher-process-id-limits_make-changes-to-the-kubelet-settings-on-my-nodes">Risks of setting higher process ID limits for Red Hat OpenShift Container Platform pods</a></li><li class="level-4"><a href="#nodes-nodes-resources-cpus-reserve_make-changes-to-the-kubelet-settings-on-my-nodes">Reserve CPUs for nodes</a></li><li class="level-4"><a href="#nodes-nodes-garbage-collection-containers_make-changes-to-the-kubelet-settings-on-my-nodes">Understanding how terminated containers are removed through garbage collection</a></li><li class="level-4"><a href="#nodes-nodes-garbage-collection-images_make-changes-to-the-kubelet-settings-on-my-nodes">Understanding how images are removed through garbage collection</a></li><li class="level-4"><a href="#nodes-nodes-garbage-collection-configuring_make-changes-to-the-kubelet-settings-on-my-nodes">Configure garbage collection for containers and images</a></li><li class="level-4"><a href="#tls-profiles-understanding_make-changes-to-the-kubelet-settings-on-my-nodes">Understand TLS security profiles</a></li><li class="level-5"><a href="#tls-profiles-understanding-key-exchange-groups_make-changes-to-the-kubelet-settings-on-my-nodes">TLS key exchange groups</a></li><li class="level-4"><a href="#tls-profiles-kubelet-configuring_make-changes-to-the-kubelet-settings-on-my-nodes">Configure the TLS security profile for the kubelet</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="make-changes-to-the-kubelet-settings-on-my-nodes-overview_make-changes-to-the-kubelet-settings-on-my-nodes">Allocate resources to nodes</h3>
@@ -2678,7 +2694,7 @@ spec:
 <p>The following table lists the eviction thresholds:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1035. Variables for configuring container garbage collection</caption>
+<caption class="title">Table 1042. Variables for configuring container garbage collection</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -2789,7 +2805,7 @@ collection attempts to free. Default is <strong>80</strong>.</p>
 a custom resource.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1036. Variables for configuring image garbage collection</caption>
+<caption class="title">Table 1043. Variables for configuring image garbage collection</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3107,7 +3123,7 @@ worker   rendered-worker-b4c51bb33ccaae6fc4a6a5   False     True</code></pre>
 <p>You can specify one of the following TLS security profiles for each component:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1037. TLS security profiles</caption>
+<caption class="title">Table 1044. TLS security profiles</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -3237,6 +3253,120 @@ worker   rendered-worker-b4c51bb33ccaae6fc4a6a5   False     True</code></pre>
 </td>
 </tr>
 </table>
+</div>
+<div class="sect4">
+<h5 id="tls-profiles-understanding-key-exchange-groups_make-changes-to-the-kubelet-settings-on-my-nodes">TLS key exchange groups</h5>
+<div class="paragraph">
+<p>In addition to cipher suites and minimum TLS version, TLS security profiles include a list of supported key exchange groups. Key exchange groups determine the cryptographic algorithm used during the TLS handshake to securely establish a shared session key between client and server.</p>
+</div>
+<div class="paragraph">
+<p>The following key exchange groups are supported in Red&#160;Hat OpenShift Container Platform:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1045. TLS key exchange groups</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Group</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>X25519MLKEM768</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A post-quantum hybrid key encapsulation mechanism (KEM) that combines the post-quantum ML-KEM algorithm with the classical X25519 elliptic curve. This combination provides protection against both classical and quantum computing attacks.</p>
+</div>
+<div class="paragraph">
+<p><code>X25519MLKEM768</code> is enabled by default in the <code>Old</code>, <code>Intermediate</code>, and <code>Modern</code> predefined TLS profiles. No cluster administrator action is required to enable it.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>X25519MLKEM768</code> is not FIPS-approved. Components running in FIPS mode automatically ignore this group.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>X25519</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A classical Diffie-Hellman key exchange using Curve25519, which provides strong security with good performance. Enabled by default in all predefined TLS profiles.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>secp256r1</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>An NIST P-256 elliptic curve Diffie-Hellman key exchange. Enabled by default in all predefined TLS profiles.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>secp384r1</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>An NIST P-384 elliptic curve Diffie-Hellman key exchange. Enabled by default in all predefined TLS profiles.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>Custom</code> TLS profile type has an empty key exchange groups list by default. To configure specific key exchange groups with a custom profile, you must specify them explicitly in <code>spec.tlsSecurityProfile.custom.groups</code>.</p>
+</li>
+<li>
+<p>Not all Red&#160;Hat OpenShift Container Platform components honor the key exchange group ordering. Go-based components use Go&#8217;s internal preference order and treat the groups list as a permitted-groups filter rather than a strict ordering preference.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -3422,7 +3552,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-23 11:25:23 +0100
+Last updated 2026-10-26 14:12:22 +0000
 </div>
 </div>
 <style>

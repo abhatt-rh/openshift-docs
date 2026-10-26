@@ -716,6 +716,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="perform-a-control-plane-only-update-intro_control-plane-only-update.html">Perform a Control Plane Only update</a>
 </li>
+<li><a href="update-ai-plugin-intro_updating-ai.html">Create cluster update assessments with OpenShift Lightspeed</a>
+</li>
 <li><a href="update-using-custom-machine-config-pools_update-using-custom-machine-config-pools.html">Perform a canary rollout update</a>
 </li>
 <li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
@@ -903,6 +905,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
+<li><a href="recover-a-two-node-cluster-with-fencing-con_recover-a-two-node-cluster-with-fencing.html">Recover a two-node cluster with fencing</a>
+</li>
 <li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replace a healthy etcd member</a>
 </li>
 <li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replace an unhealthy etcd member</a>
@@ -933,6 +937,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="reclaim-registry-storage-con_reclaim-registry-storage.html">Reclaim registry storage</a>
 </li>
 <li><a href="deploy-images-from-external-sources-con_deploy-images-from-external-sources.html">Deploy images from external sources</a>
+</li>
+<li><a href="templates-overview_use-templates-to-deploy-applications.html">Understanding templates</a>
+</li>
+<li><a href="templates-writing_write-and-manage-templates.html">Writing templates</a>
+</li>
+<li><a href="templates-rails-setting-up-database_deploy-a-rails-application-with-templates.html">Setting up the database</a>
 </li>
 <li><a href="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console.html">Use developer workflows in the console</a>
 </li>
@@ -1160,6 +1170,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-web-terminal-timeout-and-image-settings-con_configure-web-terminal-timeout-and-image-settings.html">Configure web terminal timeout and image settings</a>
 </li>
 <li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
+</li>
+<li><a href="fencing-credential-management_manage-fencing-credentials-for-a-two-node-cluster.html">Fencing credential management</a>
+</li>
+<li><a href="tnf-tuning-fencing-parameters-overview_tune-fencing-parameters-for-a-two-node-cluster.html">Overview of tuning fencing parameters</a>
 </li>
 <li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
 </li>
@@ -1679,7 +1693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="remediate-node-configuration-drift-to-return-the-node-to-ready-con_remediate-node-configuration-drift-to-return-the-node-to-ready.html">Remediate node configuration drift to return the node to ready</a>
 </li>
-<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
+<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collect Windows application event logs</a>
 </li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
@@ -1731,7 +1745,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
+<li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collect Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
 </li>
@@ -1834,6 +1848,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="storage-troubleshooting-intro_troubleshoot-storage.html">Troubleshooting storage</a>
 </li>
 <li><a href="troubleshoot-telco-cluster-operations-intro_troubleshoot-telco-cluster-operations.html">Troubleshoot telco cluster operations</a>
+</li>
+<li><a href="tnf-cluster-degradation-causes_troubleshoot-a-degraded-two-node-cluster-with-fencing.html">TNF cluster degradation causes</a>
 </li>
 </ul>
 </li>
@@ -2688,7 +2704,7 @@ ocp4-moderate-fips-mode-enabled-on-all-nodes                   FAIL     high</co
 <p>The manual remediation steps are typically stored in the <code>description</code> attribute in the <code>ComplianceCheckResult</code> object.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 975. ComplianceCheckResult Status</caption>
+<caption class="title">Table 981. ComplianceCheckResult Status</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3630,7 +3646,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 976. Attributes for spec variables</caption>
+<caption class="title">Table 982. Attributes for spec variables</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -7012,7 +7028,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 <div class="sect5">
 <h6 id="cis-profiles_understand-compliance">CIS compliance profiles</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 977. Supported CIS compliance profiles</caption>
+<caption class="title">Table 983. Supported CIS compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7120,7 +7136,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 <div class="sect5">
 <h6 id="bsi-profiles_understand-compliance">BSI Profile Support</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 978. Supported BSI compliance profiles</caption>
+<caption class="title">Table 984. Supported BSI compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7210,7 +7226,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 <div class="sect5">
 <h6 id="e8-profiles_understand-compliance">Essential Eight compliance profiles</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 979. Supported Essential Eight compliance profiles</caption>
+<caption class="title">Table 985. Supported Essential Eight compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7266,7 +7282,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 980. Supported FedRAMP High compliance profiles</caption>
+<caption class="title">Table 986. Supported FedRAMP High compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7350,7 +7366,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 <div class="sect5">
 <h6 id="fedramp-moderate-profiles_understand-compliance">FedRAMP Moderate compliance profiles</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 981. Supported FedRAMP Moderate compliance profiles</caption>
+<caption class="title">Table 987. Supported FedRAMP Moderate compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7448,7 +7464,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 <div class="sect5">
 <h6 id="nerc-cip-profiles_understand-compliance">NERC-CIP compliance profiles</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 982. Supported NERC-CIP compliance profiles</caption>
+<caption class="title">Table 988. Supported NERC-CIP compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7505,7 +7521,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 <div class="sect5">
 <h6 id="pci-dss-profiles_understand-compliance">PCI-DSS compliance profiles</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 983. Supported PCI-DSS compliance profiles</caption>
+<caption class="title">Table 989. Supported PCI-DSS compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7620,7 +7636,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 984. Supported STIG compliance profiles</caption>
+<caption class="title">Table 990. Supported STIG compliance profiles</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7728,7 +7744,7 @@ warning: Manual editing of these files may indicate nefarious activity, such as 
 <p>For example, the NIST High-Impact and Moderate-Impact profiles extend the CIS profile to achieve compliance. As a result, extended compliance profiles eliminate the need to run both profiles in a single cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 985. Profile extensions</caption>
+<caption class="title">Table 991. Profile extensions</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -8696,7 +8712,7 @@ status:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-23 11:25:23 +0100
+Last updated 2026-10-26 14:12:22 +0000
 </div>
 </div>
 <style>

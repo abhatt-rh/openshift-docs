@@ -716,6 +716,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="perform-a-control-plane-only-update-intro_control-plane-only-update.html">Perform a Control Plane Only update</a>
 </li>
+<li><a href="update-ai-plugin-intro_updating-ai.html">Create cluster update assessments with OpenShift Lightspeed</a>
+</li>
 <li><a href="update-using-custom-machine-config-pools_update-using-custom-machine-config-pools.html">Perform a canary rollout update</a>
 </li>
 <li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
@@ -903,6 +905,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
+<li><a href="recover-a-two-node-cluster-with-fencing-con_recover-a-two-node-cluster-with-fencing.html">Recover a two-node cluster with fencing</a>
+</li>
 <li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replace a healthy etcd member</a>
 </li>
 <li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replace an unhealthy etcd member</a>
@@ -933,6 +937,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="reclaim-registry-storage-con_reclaim-registry-storage.html">Reclaim registry storage</a>
 </li>
 <li><a href="deploy-images-from-external-sources-con_deploy-images-from-external-sources.html">Deploy images from external sources</a>
+</li>
+<li><a href="templates-overview_use-templates-to-deploy-applications.html">Understanding templates</a>
+</li>
+<li><a href="templates-writing_write-and-manage-templates.html">Writing templates</a>
+</li>
+<li><a href="templates-rails-setting-up-database_deploy-a-rails-application-with-templates.html">Setting up the database</a>
 </li>
 <li><a href="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console.html">Use developer workflows in the console</a>
 </li>
@@ -1160,6 +1170,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-web-terminal-timeout-and-image-settings-con_configure-web-terminal-timeout-and-image-settings.html">Configure web terminal timeout and image settings</a>
 </li>
 <li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
+</li>
+<li><a href="fencing-credential-management_manage-fencing-credentials-for-a-two-node-cluster.html">Fencing credential management</a>
+</li>
+<li><a href="tnf-tuning-fencing-parameters-overview_tune-fencing-parameters-for-a-two-node-cluster.html">Overview of tuning fencing parameters</a>
 </li>
 <li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
 </li>
@@ -1679,7 +1693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="remediate-node-configuration-drift-to-return-the-node-to-ready-con_remediate-node-configuration-drift-to-return-the-node-to-ready.html">Remediate node configuration drift to return the node to ready</a>
 </li>
-<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
+<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collect Windows application event logs</a>
 </li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
@@ -1731,7 +1745,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
+<li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collect Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
 </li>
@@ -1835,6 +1849,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="troubleshoot-telco-cluster-operations-intro_troubleshoot-telco-cluster-operations.html">Troubleshoot telco cluster operations</a>
 </li>
+<li><a href="tnf-cluster-degradation-causes_troubleshoot-a-degraded-two-node-cluster-with-fencing.html">TNF cluster degradation causes</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1884,7 +1900,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have created a service account and assigned enough role-based access controls (RBAC) to install, update, and manage the extension that you want to install. For more information, see "Cluster extension permissions".</p>
+<p>You have access to the cluster by using an account with <code>cluster-admin</code> permissions.</p>
+</li>
+<li>
+<p>You have created the installation namespace.</p>
+</li>
+<li>
+<p>You have identified a supported package and an available version or channel in a catalog on the cluster.</p>
 </li>
 </ul>
 </div>
@@ -1896,21 +1918,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: olm.operatorframework.io/v1
-  kind: ClusterExtension
-  metadata:
-    name: &lt;clusterextension_name&gt;
-  spec:
-    namespace: &lt;installed_namespace&gt;
-    serviceAccount:
-      name: &lt;service_account_installer_name&gt;
-    source:
-      sourceType: Catalog
-      catalog:
-        packageName: &lt;package_name&gt;
-        channels:
-          - &lt;channel_name&gt;
-        version: &lt;version_or_version_range&gt;
-        upgradeConstraintPolicy: CatalogProvided</code></pre>
+kind: ClusterExtension
+metadata:
+  name: &lt;clusterextension_name&gt;
+spec:
+  namespace: &lt;installed_namespace&gt;
+  source:
+    sourceType: Catalog
+    catalog:
+      packageName: &lt;package_name&gt;
+      channels:
+        - &lt;channel_name&gt;
+      version: &lt;version_or_version_range&gt;
+      upgradeConstraintPolicy: CatalogProvided</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1921,10 +1941,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <dt class="hdlist1"><code>spec.namespace</code></dt>
 <dd>
 <p>Specifies the namespace where you want the bundle installed, such as <code>pipelines</code> or <code>my-extension</code>. Extensions are still cluster-scoped and might contain resources that are installed in different namespaces.</p>
-</dd>
-<dt class="hdlist1"><code>spec.serviceAccount.name</code></dt>
-<dd>
-<p>Specifies the name of the service account you created to install, update, and manage your extension.</p>
 </dd>
 <dt class="hdlist1"><code>spec.source.catalog.channels</code></dt>
 <dd>
@@ -1946,8 +1962,6 @@ metadata:
   name: pipelines-operator
 spec:
   namespace: pipelines
-  serviceAccount:
-    name: pipelines-installer
   source:
     sourceType: Catalog
     catalog:
@@ -1963,7 +1977,7 @@ spec:
 <p>Apply the CR to the cluster by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f pipeline-operator.yaml</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f pipelines-operator.yaml</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1995,7 +2009,7 @@ items:
   metadata:
     annotations:
       kubectl.kubernetes.io/last-applied-configuration: |
-        {"apiVersion":"olm.operatorframework.io/v1","kind":"ClusterExtension","metadata":{"annotations":{},"name":"pipes"},"spec":{"namespace":"pipelines","serviceAccount":{"name":"pipelines-installer"},"source":{"catalog":{"packageName":"openshift-pipelines-operator-rh","version":"1.14.x"},"sourceType":"Catalog"}}}
+        {"apiVersion":"olm.operatorframework.io/v1","kind":"ClusterExtension","metadata":{"annotations":{},"name":"pipes"},"spec":{"namespace":"pipelines","source":{"catalog":{"packageName":"openshift-pipelines-operator-rh","version":"1.14.x"},"sourceType":"Catalog"}}}
     creationTimestamp: "2025-02-18T21:48:13Z"
     finalizers:
     - olm.operatorframework.io/cleanup-unpack-cache
@@ -2006,8 +2020,6 @@ items:
     uid: e18b13fb-a96d-436f-be75-a9a0f2b07993
   spec:
     namespace: pipelines
-    serviceAccount:
-      name: pipelines-installer
     source:
       catalog:
         packageName: openshift-pipelines-operator-rh
@@ -2133,7 +2145,7 @@ metadata:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-23 11:25:23 +0100
+Last updated 2026-10-26 14:12:22 +0000
 </div>
 </div>
 <style>

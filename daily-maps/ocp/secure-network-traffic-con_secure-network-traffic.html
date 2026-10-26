@@ -716,6 +716,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="perform-a-control-plane-only-update-intro_control-plane-only-update.html">Perform a Control Plane Only update</a>
 </li>
+<li><a href="update-ai-plugin-intro_updating-ai.html">Create cluster update assessments with OpenShift Lightspeed</a>
+</li>
 <li><a href="update-using-custom-machine-config-pools_update-using-custom-machine-config-pools.html">Perform a canary rollout update</a>
 </li>
 <li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
@@ -903,6 +905,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
+<li><a href="recover-a-two-node-cluster-with-fencing-con_recover-a-two-node-cluster-with-fencing.html">Recover a two-node cluster with fencing</a>
+</li>
 <li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replace a healthy etcd member</a>
 </li>
 <li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replace an unhealthy etcd member</a>
@@ -933,6 +937,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="reclaim-registry-storage-con_reclaim-registry-storage.html">Reclaim registry storage</a>
 </li>
 <li><a href="deploy-images-from-external-sources-con_deploy-images-from-external-sources.html">Deploy images from external sources</a>
+</li>
+<li><a href="templates-overview_use-templates-to-deploy-applications.html">Understanding templates</a>
+</li>
+<li><a href="templates-writing_write-and-manage-templates.html">Writing templates</a>
+</li>
+<li><a href="templates-rails-setting-up-database_deploy-a-rails-application-with-templates.html">Setting up the database</a>
 </li>
 <li><a href="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console.html">Use developer workflows in the console</a>
 </li>
@@ -1160,6 +1170,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-web-terminal-timeout-and-image-settings-con_configure-web-terminal-timeout-and-image-settings.html">Configure web terminal timeout and image settings</a>
 </li>
 <li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
+</li>
+<li><a href="fencing-credential-management_manage-fencing-credentials-for-a-two-node-cluster.html">Fencing credential management</a>
+</li>
+<li><a href="tnf-tuning-fencing-parameters-overview_tune-fencing-parameters-for-a-two-node-cluster.html">Overview of tuning fencing parameters</a>
 </li>
 <li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
 </li>
@@ -1679,7 +1693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="remediate-node-configuration-drift-to-return-the-node-to-ready-con_remediate-node-configuration-drift-to-return-the-node-to-ready.html">Remediate node configuration drift to return the node to ready</a>
 </li>
-<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
+<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collect Windows application event logs</a>
 </li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
@@ -1731,7 +1745,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
+<li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collect Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
 </li>
@@ -1834,6 +1848,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="storage-troubleshooting-intro_troubleshoot-storage.html">Troubleshooting storage</a>
 </li>
 <li><a href="troubleshoot-telco-cluster-operations-intro_troubleshoot-telco-cluster-operations.html">Troubleshoot telco cluster operations</a>
+</li>
+<li><a href="tnf-cluster-degradation-causes_troubleshoot-a-degraded-two-node-cluster-with-fencing.html">TNF cluster degradation causes</a>
 </li>
 </ul>
 </li>
@@ -2787,27 +2803,17 @@ spec:
 <div class="sect4">
 <h5 id="replacing-default-ingress_configure-tls-for-ingress">Replace the default ingress certificate</h5>
 <div class="paragraph _abstract">
-<p>To secure the web console, CLI, and all applications under the <code>.apps</code> subdomain in Red&#160;Hat OpenShift Container Platform, you can replace the default ingress certificate by creating a TLS secret with your wildcard certificate and updating the Ingress Controller and cluster proxy configuration.</p>
+<p>To secure the web console, CLI, and all applications under the <code>.apps</code> subdomain in Red&#160;Hat OpenShift Container Platform, you can replace the default ingress certificate by creating a Transport Layer Security (TLS) secret with your wildcard certificate and updating the Ingress Controller and cluster proxy configuration.</p>
 </div>
-<div class="admonitionblock note">
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<img src="data:image/png;base64," alt="Note">
+<img src="data:image/png;base64," alt="Important">
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Before using the procedure, ensure you understand the following Ingress Controller behaviors:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>When certificates are renewed or rotated by using external certificate management tools, only the contents of the secret, such as the certificate and key, are updated. The secret name remains unchanged. Kubelet automatically propagates these updates to the mounted volume, allowing the router to detect the file changes and hot-reload the new certificate and key. As a result, no rolling update of the router deployment is triggered or required.</p>
-</li>
-<li>
-<p>For secret renewal or rotation, the cert-manager Operator changes the secret content, such as a cert/key pair, but does not change the secret name. This happens because kubelet automatically propagates changes to the secret in the volume mount. The router pod detects the file change and then hot reloads the new cert/key pair. Updating the secret content does not trigger rolling update.</p>
-</li>
-</ul>
+<p>Replacing the default ingress certificate does not change the web console route certificate. To support HTTP/2, the Console Operator creates a self-signed certificate for the console route, so browsers still show certificate warnings. To use a trusted certificate, set the console route certificate in the <code>spec.componentRoutes</code> field to your custom certificate. For more information, see "Customizing the console route."</p>
 </div>
 </td>
 </tr>
@@ -2826,13 +2832,7 @@ spec:
 <p>The certificate must include the <code>subjectAltName</code> extension showing <code>*.apps.&lt;clustername&gt;.&lt;domain&gt;</code>.</p>
 </li>
 <li>
-<p>The certificate file can contain one or more certificates in a chain. The file must list the wildcard certificate as the first certificate, followed by other intermediate certificates, and then ending with the root CA certificate.</p>
-</li>
-<li>
-<p>Copy the root CA certificate into an additional PEM format file.</p>
-</li>
-<li>
-<p>Verify that all certificates which include <code>-----END CERTIFICATE-----</code> also end with one carriage return after that line.</p>
+<p>The certificate file can contain one or more certificates in a chain. The file must list the wildcard certificate as the first certificate, followed by other intermediate certificates, and then ending with the root certificate authority (CA) certificate.</p>
 </li>
 </ul>
 </div>
@@ -2840,7 +2840,10 @@ spec:
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Create a config map that includes only the root CA certificate that is used to sign the wildcard certificate:</p>
+<p>Copy the root CA certificate into an additional PEM format file.</p>
+</li>
+<li>
+<p>Create a config map that includes only the root CA certificate that signs the wildcard certificate:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create configmap custom-ca \
@@ -2849,19 +2852,19 @@ spec:
 </div>
 </div>
 <div class="paragraph">
-<p>where</p>
+<p>where:</p>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>&lt;/path/to/example-ca.crt&gt;</code></dt>
 <dd>
-<p>The path to the root CA certificate file on your local file system. For example, <code>/etc/pki/ca-trust/source/anchors</code>.</p>
+<p>specifies the path to the root CA certificate file on your local file system. For example, <code>/etc/pki/ca-trust/source/anchors</code>.</p>
 </dd>
 </dl>
 </div>
 </li>
 <li>
-<p>Update the cluster-wide proxy configuration with the newly created config map:</p>
+<p>Update the cluster-wide proxy configuration with the new config map:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch proxy/cluster \
@@ -2877,7 +2880,7 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If you update only the trusted CA for your cluster, the MCO updates the <code>/etc/pki/ca-trust/source/anchors/openshift-config-user-ca-bundle.crt</code> file and the Machine Config Controller (MCC) applies the trusted CA update to each node so that a node reboot is not required. However, with these changes, the Machine Config Daemon (MCD) restarts critical services on each node, such as kubelet and CRI-O. These service restarts cause each node to briefly enter the <code>NotReady</code> state until the service is fully restarted.</p>
+<p>If you update only the trusted CA for your cluster, the MCO updates the <code>/etc/pki/ca-trust/source/anchors/openshift-config-user-ca-bundle.crt</code> file. The Machine Config Controller (MCC) applies the trusted CA update to each node so that a node reboot is not required. However, with these changes, the Machine Config Daemon (MCD) restarts critical services on each node, such as kubelet and CRI-O (Container Runtime Interface for Open Container Initiative). These service restarts cause each node to briefly enter the <code>NotReady</code> state until the service is fully restarted.</p>
 </div>
 <div class="paragraph">
 <p>If you change any other parameter in the <code>openshift-config-user-ca-bundle.crt</code> file, such as <code>noproxy</code>, the MCO reboots each node in your cluster.</p>
@@ -2886,6 +2889,9 @@ spec:
 </tr>
 </table>
 </div>
+</li>
+<li>
+<p>Verify that all certificates that include <code>-----END CERTIFICATE-----</code> also end with one carriage return after that line.</p>
 </li>
 <li>
 <p>Create a secret that contains the wildcard certificate chain and key:</p>
@@ -2904,21 +2910,21 @@ spec:
 <dl>
 <dt class="hdlist1"><code>&lt;secret&gt;</code></dt>
 <dd>
-<p>Specifies the name of the secret that will contain the certificate chain and private key.</p>
+<p>specifies the name of the secret that will contain the certificate chain and private key.</p>
 </dd>
 <dt class="hdlist1"><code>&lt;/path/to/cert.crt&gt;</code></dt>
 <dd>
-<p>Specifies the path to the certificate chain on your local file system.</p>
+<p>specifies the path to the certificate chain on your local file system.</p>
 </dd>
 <dt class="hdlist1"><code>&lt;/path/to/cert.key&gt;</code></dt>
 <dd>
-<p>Specifies the path to the private key associated with this certificate.</p>
+<p>specifies the path to the private key associated with this certificate.</p>
 </dd>
 </dl>
 </div>
 </li>
 <li>
-<p>Update the Ingress Controller configuration with the newly created secret:</p>
+<p>Update the Ingress Controller configuration with the new secret:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch ingresscontroller.operator default \
@@ -2927,12 +2933,16 @@ spec:
      -n openshift-ingress-operator</code></pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>&lt;secret&gt;</code>:: Specifies the name used for the secret. Replace <code>&lt;secret&gt;</code> with the name used for the secret.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;secret&gt;</code></dt>
+<dd>
+<p>specifies the name of the secret. Replace <code>&lt;secret&gt;</code> with the name you used for the secret.</p>
+</dd>
+</dl>
 </div>
 </li>
 </ol>
@@ -5836,7 +5846,7 @@ spec:
 <p>The following tables detail supported fields for objects.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 821. <code>AdminPolicyBasedExternalRoute</code> object</caption>
+<caption class="title">Table 827. <code>AdminPolicyBasedExternalRoute</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -5906,7 +5916,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 822. <code>nextHops</code> object</caption>
+<caption class="title">Table 828. <code>nextHops</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -5951,7 +5961,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 823. <code>nextHops.static</code> object</caption>
+<caption class="title">Table 829. <code>nextHops.static</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -5996,7 +6006,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 824. <code>nextHops.dynamic</code> object</caption>
+<caption class="title">Table 830. <code>nextHops.dynamic</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -7771,7 +7781,7 @@ ports               : [5e75f289-8273-4f8a-8798-8c10f7318833, de7e1b71-6184-445d-
 <p>The following table describes the different modes of operation:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 825. IPsec modes of operation</caption>
+<caption class="title">Table 831. IPsec modes of operation</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 60%;">
@@ -7838,7 +7848,7 @@ ports               : [5e75f289-8273-4f8a-8798-8c10f7318833, de7e1b71-6184-445d-
 <p>When IPsec is enabled in Red&#160;Hat OpenShift Container Platform, you must configure the network connectivity between machines to allow cluster components to communicate. Each machine must be able to resolve the hostnames of all other machines in the cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 826. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 832. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -9756,7 +9766,7 @@ spec:
 <p>Your proxy must exclude re-encrypting the following OpenShift URLs:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 827. URLs to exclude from egress traffic re-encryption</caption>
+<caption class="title">Table 833. URLs to exclude from egress traffic re-encryption</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -12400,7 +12410,7 @@ Volumes:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-23 11:25:23 +0100
+Last updated 2026-10-26 14:12:22 +0000
 </div>
 </div>
 <style>

@@ -716,6 +716,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="perform-a-control-plane-only-update-intro_control-plane-only-update.html">Perform a Control Plane Only update</a>
 </li>
+<li><a href="update-ai-plugin-intro_updating-ai.html">Create cluster update assessments with OpenShift Lightspeed</a>
+</li>
 <li><a href="update-using-custom-machine-config-pools_update-using-custom-machine-config-pools.html">Perform a canary rollout update</a>
 </li>
 <li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
@@ -903,6 +905,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
+<li><a href="recover-a-two-node-cluster-with-fencing-con_recover-a-two-node-cluster-with-fencing.html">Recover a two-node cluster with fencing</a>
+</li>
 <li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replace a healthy etcd member</a>
 </li>
 <li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replace an unhealthy etcd member</a>
@@ -933,6 +937,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="reclaim-registry-storage-con_reclaim-registry-storage.html">Reclaim registry storage</a>
 </li>
 <li><a href="deploy-images-from-external-sources-con_deploy-images-from-external-sources.html">Deploy images from external sources</a>
+</li>
+<li><a href="templates-overview_use-templates-to-deploy-applications.html">Understanding templates</a>
+</li>
+<li><a href="templates-writing_write-and-manage-templates.html">Writing templates</a>
+</li>
+<li><a href="templates-rails-setting-up-database_deploy-a-rails-application-with-templates.html">Setting up the database</a>
 </li>
 <li><a href="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console.html">Use developer workflows in the console</a>
 </li>
@@ -1160,6 +1170,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-web-terminal-timeout-and-image-settings-con_configure-web-terminal-timeout-and-image-settings.html">Configure web terminal timeout and image settings</a>
 </li>
 <li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
+</li>
+<li><a href="fencing-credential-management_manage-fencing-credentials-for-a-two-node-cluster.html">Fencing credential management</a>
+</li>
+<li><a href="tnf-tuning-fencing-parameters-overview_tune-fencing-parameters-for-a-two-node-cluster.html">Overview of tuning fencing parameters</a>
 </li>
 <li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
 </li>
@@ -1679,7 +1693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="remediate-node-configuration-drift-to-return-the-node-to-ready-con_remediate-node-configuration-drift-to-return-the-node-to-ready.html">Remediate node configuration drift to return the node to ready</a>
 </li>
-<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
+<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collect Windows application event logs</a>
 </li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
@@ -1731,7 +1745,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
+<li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collect Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
 </li>
@@ -1834,6 +1848,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="storage-troubleshooting-intro_troubleshoot-storage.html">Troubleshooting storage</a>
 </li>
 <li><a href="troubleshoot-telco-cluster-operations-intro_troubleshoot-telco-cluster-operations.html">Troubleshoot telco cluster operations</a>
+</li>
+<li><a href="tnf-cluster-degradation-causes_troubleshoot-a-degraded-two-node-cluster-with-fencing.html">TNF cluster degradation causes</a>
 </li>
 </ul>
 </li>
@@ -2834,7 +2850,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 901. PTP ordinary clock CR configuration options</caption>
+<caption class="title">Table 907. PTP ordinary clock CR configuration options</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3158,7 +3174,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 902. PTP boundary clock CR configuration options</caption>
+<caption class="title">Table 908. PTP boundary clock CR configuration options</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4749,7 +4765,7 @@ t-bc   10s</code></pre>
 <p>The following table describes the time receiver (TR) profile parameters used in the dual-port high availability configuration.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 903. Time receiver (TR) profile parameters for dual-port high availability</caption>
+<caption class="title">Table 909. Time receiver (TR) profile parameters for dual-port high availability</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -4832,7 +4848,7 @@ t-bc   10s</code></pre>
 <p>The following table describes the time transmitter (TT) profile parameters used in the dual-port high availability configuration.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 904. Time transmitter (TT) profile parameters</caption>
+<caption class="title">Table 910. Time transmitter (TT) profile parameters</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -4875,7 +4891,7 @@ t-bc   10s</code></pre>
 <p>The following table describes the individual <code>phc2sys</code> flags used in the dual time receiver port configuration.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 905. phc2sys flags for dual time receiver port high availability</caption>
+<caption class="title">Table 911. phc2sys flags for dual time receiver port high availability</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 80%;">
@@ -10133,7 +10149,7 @@ Use the binary value to decode the firmware version.
 For example:</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 906. DPLL firmware version</caption>
+<caption class="title">Table 912. DPLL firmware version</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -10706,7 +10722,7 @@ $GPGSV,3,1,10,04,12,039,41,05,31,222,46,06,50,064,48,09,28,064,42,1*62</code></p
 The Intel E810 NIC has four connectors for external 1PPS signals: <code>SMA1</code>, <code>SMA2</code>, <code>U.FL1</code>, and <code>U.FL2</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 907. Intel E810 NIC hardware connectors configuration</caption>
+<caption class="title">Table 913. Intel E810 NIC hardware connectors configuration</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -10867,7 +10883,7 @@ To get the required delay offset value, you must measure the cable delay using e
 <p>The following table describes the equivalent <code>ubxtool</code> commands:</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 908. Intel E810 ublxCmds configuration</caption>
+<caption class="title">Table 914. Intel E810 ublxCmds configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -10928,7 +10944,7 @@ Various factors such as cable length, ambient temperature, and component and man
 To compensate for the delay, you must calculate the specific value that you use to offset the signal delay.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 909. E810 dual-NIC T-GM PtpConfig CR reference</caption>
+<caption class="title">Table 915. E810 dual-NIC T-GM PtpConfig CR reference</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -11044,7 +11060,7 @@ Various factors such as cable length, ambient temperature, and component and man
 To compensate for the delay, you must calculate the specific value that you use to offset the signal delay.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 910. 3-card E810 T-GM PtpConfig CR reference</caption>
+<caption class="title">Table 916. 3-card E810 T-GM PtpConfig CR reference</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -11112,7 +11128,7 @@ The value that you configure depends on your specific measurements and SMA1 cabl
 <p>Holdover specification is the amount of time a PTP clock can maintain synchronization without receiving updates from the primary time source.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 911. T-GM clock class states</caption>
+<caption class="title">Table 917. T-GM clock class states</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11150,7 +11166,7 @@ The clock source might not be traceable to a category 1 frequency source.</p></t
 <p>The following reference information describes the configuration options for the <code>PtpConfig</code> custom resource (CR) that configures the <code>linuxptp</code> services (<code>ptp4l</code>, <code>phc2sys</code>, <code>ts2phc</code>) as a grandmaster clock.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 912. PtpConfig configuration options for PTP Grandmaster clock</caption>
+<caption class="title">Table 918. PtpConfig configuration options for PTP Grandmaster clock</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11309,7 +11325,7 @@ For example, <code>compute-1.example.com</code>.</p></td>
 <p>The following table describes the changes that you must make to the reference PTP configuration to use Intel Columbiaville E800 series NICs as ordinary clocks. Make the changes in a <code>PtpConfig</code> custom resource (CR) that you apply to the cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 913. Recommended PTP settings for Intel Columbiaville NIC</caption>
+<caption class="title">Table 919. Recommended PTP settings for Intel Columbiaville NIC</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -11364,7 +11380,7 @@ For example, <code>compute-1.example.com</code>.</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-23 11:25:23 +0100
+Last updated 2026-10-26 14:12:22 +0000
 </div>
 </div>
 <style>

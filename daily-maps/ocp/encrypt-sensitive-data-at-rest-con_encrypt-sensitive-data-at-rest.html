@@ -716,6 +716,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="perform-a-control-plane-only-update-intro_control-plane-only-update.html">Perform a Control Plane Only update</a>
 </li>
+<li><a href="update-ai-plugin-intro_updating-ai.html">Create cluster update assessments with OpenShift Lightspeed</a>
+</li>
 <li><a href="update-using-custom-machine-config-pools_update-using-custom-machine-config-pools.html">Perform a canary rollout update</a>
 </li>
 <li><a href="update-a-cluster-in-a-disconnected-environment-intro_update-a-cluster-in-a-disconnected-environment.html">Update a cluster in a disconnected environment</a>
@@ -903,6 +905,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
+<li><a href="recover-a-two-node-cluster-with-fencing-con_recover-a-two-node-cluster-with-fencing.html">Recover a two-node cluster with fencing</a>
+</li>
 <li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replace a healthy etcd member</a>
 </li>
 <li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replace an unhealthy etcd member</a>
@@ -933,6 +937,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="reclaim-registry-storage-con_reclaim-registry-storage.html">Reclaim registry storage</a>
 </li>
 <li><a href="deploy-images-from-external-sources-con_deploy-images-from-external-sources.html">Deploy images from external sources</a>
+</li>
+<li><a href="templates-overview_use-templates-to-deploy-applications.html">Understanding templates</a>
+</li>
+<li><a href="templates-writing_write-and-manage-templates.html">Writing templates</a>
+</li>
+<li><a href="templates-rails-setting-up-database_deploy-a-rails-application-with-templates.html">Setting up the database</a>
 </li>
 <li><a href="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console.html">Use developer workflows in the console</a>
 </li>
@@ -1160,6 +1170,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-web-terminal-timeout-and-image-settings-con_configure-web-terminal-timeout-and-image-settings.html">Configure web terminal timeout and image settings</a>
 </li>
 <li><a href="disable-the-web-console-con_disable-the-web-console.html">Disable the web console</a>
+</li>
+<li><a href="fencing-credential-management_manage-fencing-credentials-for-a-two-node-cluster.html">Fencing credential management</a>
+</li>
+<li><a href="tnf-tuning-fencing-parameters-overview_tune-fencing-parameters-for-a-two-node-cluster.html">Overview of tuning fencing parameters</a>
 </li>
 <li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
 </li>
@@ -1679,7 +1693,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="remediate-node-configuration-drift-to-return-the-node-to-ready-con_remediate-node-configuration-drift-to-return-the-node-to-ready.html">Remediate node configuration drift to return the node to ready</a>
 </li>
-<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
+<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collect Windows application event logs</a>
 </li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
@@ -1731,7 +1745,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
+<li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collect Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
 </li>
@@ -1835,6 +1849,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="troubleshoot-telco-cluster-operations-intro_troubleshoot-telco-cluster-operations.html">Troubleshoot telco cluster operations</a>
 </li>
+<li><a href="tnf-cluster-degradation-causes_troubleshoot-a-degraded-two-node-cluster-with-fencing.html">TNF cluster degradation causes</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1851,7 +1867,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#about-etcd_encrypt-sensitive-data-at-rest">etcd encryption</a></li><li class="level-4"><a href="#nbde-disk-encryption-technology-comparison_encrypt-sensitive-data-at-rest">Disk encryption technology comparison</a></li><li class="level-4"><a href="#about-etcd_encrypt-the-etcd-configuration-database">etcd encryption</a></li><li class="level-5"><a href="#etcd-encryption-types_encrypt-the-etcd-configuration-database">Supported encryption types</a></li><li class="level-5"><a href="#enabling-etcd-encryption_encrypt-the-etcd-configuration-database">Enable etcd encryption</a></li><li class="level-5"><a href="#disabling-etcd-encryption_encrypt-the-etcd-configuration-database">Disable etcd encryption</a></li><li class="level-5"><a href="#kms-about_encrypt-the-etcd-configuration-database">About Kubernetes KMS v2 encryption</a></li><li class="level-6"><a href="#kms-encrypted-resources_encrypt-the-etcd-configuration-database">Encrypted resources</a></li><li class="level-5"><a href="#kms-technology-preview-phases_encrypt-the-etcd-configuration-database">KMS Technology Preview limitations</a></li><li class="level-6"><a href="#kms-current-limitations_encrypt-the-etcd-configuration-database">Current limitations</a></li><li class="level-5"><a href="#kms-configuring_encrypt-the-etcd-configuration-database">Enable KMS encryption</a></li><li class="level-5"><a href="#kms-rotating-encryption-key_encrypt-the-etcd-configuration-database">Rotate the Vault encryption key</a></li><li class="level-5"><a href="#kms-migrating-from-local-encryption_encrypt-the-etcd-configuration-database">Migrate from local encryption to KMS encryption</a></li><li class="level-5"><a href="#kms-monitoring-status_encrypt-the-etcd-configuration-database">Monitor KMS encryption status</a></li><li class="level-5"><a href="#kms-troubleshooting_encrypt-the-etcd-configuration-database">KMS encryption troubleshooting</a></li><li class="level-6"><a href="#kms-invalid-configuration_encrypt-the-etcd-configuration-database">Invalid KMS configuration</a></li><li class="level-6"><a href="#kms-permissions-errors_encrypt-the-etcd-configuration-database">KMS permissions errors</a></li><li class="level-6"><a href="#kms-expired-deleted-key_encrypt-the-etcd-configuration-database">Expired or deleted KMS key</a></li><li class="level-6"><a href="#kms-api-server-degraded_encrypt-the-etcd-configuration-database">API server degraded or unavailable</a></li><li class="level-6"><a href="#kms-migration-stuck-slow_encrypt-the-etcd-configuration-database">Encryption migration stuck or slow</a></li><li class="level-6"><a href="#kms-collecting-debug-info_encrypt-the-etcd-configuration-database">Collecting debug information</a></li><li class="level-5"><a href="#kms-disabling-encryption_encrypt-the-etcd-configuration-database">Disable KMS encryption</a></li><li class="level-4"><a href="#encrypt-underlying-host-storage-across-cluster-nodes-con_encrypt-underlying-host-storage-across-cluster-nodes">Encrypt underlying host storage across cluster nodes</a></li><li class="level-5"><a href="#nbde-disk-encryption-technology-comparison_encrypt-underlying-host-storage-across-cluster-nodes">Disk encryption technology comparison</a></li><li class="level-6"><a href="#nbde-key-escrow_encrypt-underlying-host-storage-across-cluster-nodes">Key escrow</a></li><li class="level-6"><a href="#nbde-tpm-encryption_encrypt-underlying-host-storage-across-cluster-nodes">TPM encryption</a></li><li class="level-6"><a href="#nbde-network-bound-disk-encryption_encrypt-underlying-host-storage-across-cluster-nodes">Network-Bound Disk Encryption (NBDE)</a></li><li class="level-6"><a href="#nbde-secret-sharing-encryption_encrypt-underlying-host-storage-across-cluster-nodes">Secret sharing encryption</a></li><li class="level-5"><a href="#nbde-using-tang-servers-for-disk-encryption_encrypt-underlying-host-storage-across-cluster-nodes">Tang server disk encryption</a></li><li class="level-5"><a href="#nbde-locating-the-tang-servers_encrypt-underlying-host-storage-across-cluster-nodes">Tang server location planning</a></li><li class="level-5"><a href="#nbde-deciding-the-number-of-tang-servers-to-use_encrypt-underlying-host-storage-across-cluster-nodes">Tang server sizing requirements</a></li><li class="level-5"><a href="#nbde-logging-considerations_encrypt-underlying-host-storage-across-cluster-nodes">Logging considerations</a></li><li class="level-5"><a href="#nbde-installation-scenarios_encrypt-underlying-host-storage-across-cluster-nodes">Installation scenarios</a></li><li class="level-6"><a href="#nbde-compute-requirements_encrypt-underlying-host-storage-across-cluster-nodes">Compute requirements</a></li><li class="level-6"><a href="#nbde-automatic-start-at-boot_encrypt-underlying-host-storage-across-cluster-nodes">Automatic start at boot</a></li><li class="level-6"><a href="#nbde-http-versus-https_encrypt-underlying-host-storage-across-cluster-nodes">HTTP versus HTTPS</a></li><li class="level-5"><a href="#nbde-backing-up-server-keys_encrypt-underlying-host-storage-across-cluster-nodes">Back up keys for a Tang server</a></li><li class="level-5"><a href="#nbde-recovering-server-keys_encrypt-underlying-host-storage-across-cluster-nodes">Recover keys for a Tang server</a></li><li class="level-5"><a href="#nbde-rekeying-tang-servers_encrypt-underlying-host-storage-across-cluster-nodes">Rekey Tang servers</a></li><li class="level-6"><a href="#nbde-generating-a-new-tang-server-key_encrypt-underlying-host-storage-across-cluster-nodes">Generate a new Tang server key</a></li><li class="level-6"><a href="#nbde-rekeying-all-nbde-nodes_encrypt-underlying-host-storage-across-cluster-nodes">Rekey all NBDE nodes</a></li><li class="level-6"><a href="#nbde-troubleshooting-temporary-error-conditions_encrypt-underlying-host-storage-across-cluster-nodes">Troubleshoot temporary rekeying errors for Tang servers</a></li><li class="level-6"><a href="#nbde-troubleshooting-permanent-error-conditions_encrypt-underlying-host-storage-across-cluster-nodes">Troubleshoot permanent rekeying errors for Tang servers</a></li><li class="level-5"><a href="#nbde-deleting-old-tang-server-keys_encrypt-underlying-host-storage-across-cluster-nodes">Delete old Tang server keys</a></li><li class="level-5"><a href="#nbde-loss-of-a-client-machine_encrypt-underlying-host-storage-across-cluster-nodes">Loss of a client machine</a></li><li class="level-5"><a href="#nbde-loss-of-client-connectivity_encrypt-underlying-host-storage-across-cluster-nodes">Plan for a loss of client network connectivity</a></li><li class="level-5"><a href="#nbde-unexpected-loss-of-network-connectivity_encrypt-underlying-host-storage-across-cluster-nodes">Unexpected loss of network connectivity</a></li><li class="level-5"><a href="#nbde-recovering-network-connectivity-manually_encrypt-underlying-host-storage-across-cluster-nodes">Recover network connectivity manually</a></li><li class="level-5"><a href="#nbde-emergency-recovery-of-network-connectivity_encrypt-underlying-host-storage-across-cluster-nodes">Emergency recovery of network connectivity</a></li><li class="level-5"><a href="#nbde-loss-of-a-network-segment_encrypt-underlying-host-storage-across-cluster-nodes">Loss of a network segment</a></li><li class="level-5"><a href="#nbde-loss-of-a-tang-server_encrypt-underlying-host-storage-across-cluster-nodes">Loss of a Tang server</a></li><li class="level-5"><a href="#nbde-compromise-of-key-material_encrypt-underlying-host-storage-across-cluster-nodes">Rekey compromised key material</a></li><li class="level-5"><a href="#installing-nbde-tang-server-operator-using-web-console_encrypt-underlying-host-storage-across-cluster-nodes">Install the NBDE Tang Server Operator using the web console</a></li><li class="level-5"><a href="#installing-nbde-tang-server-operator-using-cli_encrypt-underlying-host-storage-across-cluster-nodes">Install the NBDE Tang Server Operator using CLI</a></li><li class="level-5"><a href="#deploying-nbde-tang-server_encrypt-underlying-host-storage-across-cluster-nodes">Deploy a Tang server using the NBDE Tang Server Operator</a></li><li class="level-5"><a href="#rotating-keys-using-nbde-tang-server-operator_encrypt-underlying-host-storage-across-cluster-nodes">Rotate keys using the NBDE Tang Server Operator</a></li><li class="level-5"><a href="#deleting-hidden-keys-with-nbde-tang-server-operator_encrypt-underlying-host-storage-across-cluster-nodes">Delete hidden keys with the NBDE Tang Server Operator</a></li><li class="level-5"><a href="#identifying-url-nbde-tang-server-operator-using-web-console_encrypt-underlying-host-storage-across-cluster-nodes">Identify URL of the NBDE Tang Server Operator using the web console</a></li><li class="level-5"><a href="#identifying-url-nbde-tang-server-operator-using-cli_encrypt-underlying-host-storage-across-cluster-nodes">Identify URL of the NBDE Tang Server Operator using CLI</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#about-etcd_encrypt-sensitive-data-at-rest">etcd encryption</a></li><li class="level-4"><a href="#nbde-disk-encryption-technology-comparison_encrypt-sensitive-data-at-rest">Disk encryption technology comparison</a></li><li class="level-4"><a href="#about-etcd_encrypt-the-etcd-configuration-database">etcd encryption</a></li><li class="level-5"><a href="#etcd-encryption-types_encrypt-the-etcd-configuration-database">Supported encryption types</a></li><li class="level-5"><a href="#enabling-etcd-encryption_encrypt-the-etcd-configuration-database">Enable etcd encryption</a></li><li class="level-5"><a href="#disabling-etcd-encryption_encrypt-the-etcd-configuration-database">Disable etcd encryption</a></li><li class="level-5"><a href="#kms-about_encrypt-the-etcd-configuration-database">About Kubernetes KMS v2 encryption</a></li><li class="level-6"><a href="#kms-architecture_encrypt-the-etcd-configuration-database">KMS plugin architecture</a></li><li class="level-6"><a href="#kms-encrypted-resources_encrypt-the-etcd-configuration-database">Encrypted resources</a></li><li class="level-5"><a href="#kms-technology-preview-phases_encrypt-the-etcd-configuration-database">KMS Technology Preview limitations</a></li><li class="level-6"><a href="#kms-current-limitations_encrypt-the-etcd-configuration-database">Current limitations</a></li><li class="level-5"><a href="#kms-configuring_encrypt-the-etcd-configuration-database">Enable KMS encryption</a></li><li class="level-5"><a href="#kms-rotating-encryption-key_encrypt-the-etcd-configuration-database">Rotate the Vault encryption key</a></li><li class="level-5"><a href="#kms-migrating-from-local-encryption_encrypt-the-etcd-configuration-database">Migrate from local encryption to KMS encryption</a></li><li class="level-5"><a href="#kms-monitoring-status_encrypt-the-etcd-configuration-database">Monitoring KMS encryption status</a></li><li class="level-5"><a href="#kms-troubleshooting_encrypt-the-etcd-configuration-database">KMS encryption troubleshooting</a></li><li class="level-6"><a href="#kms-encryption-not-activating_encrypt-the-etcd-configuration-database">KMS encryption does not activate</a></li><li class="level-6"><a href="#kms-invalid-configuration_encrypt-the-etcd-configuration-database">Invalid KMS configuration</a></li><li class="level-6"><a href="#kms-permissions-errors_encrypt-the-etcd-configuration-database">KMS permissions errors</a></li><li class="level-6"><a href="#kms-expired-deleted-key_encrypt-the-etcd-configuration-database">Expired or deleted KMS key</a></li><li class="level-6"><a href="#kms-api-server-degraded_encrypt-the-etcd-configuration-database">API server degraded or unavailable</a></li><li class="level-6"><a href="#kms-migration-stuck-slow_encrypt-the-etcd-configuration-database">Encryption migration stuck or slow</a></li><li class="level-6"><a href="#kms-collecting-debug-info_encrypt-the-etcd-configuration-database">Collecting debug information</a></li><li class="level-5"><a href="#kms-disabling-encryption_encrypt-the-etcd-configuration-database">Disable KMS encryption</a></li><li class="level-4"><a href="#encrypt-underlying-host-storage-across-cluster-nodes-con_encrypt-underlying-host-storage-across-cluster-nodes">Encrypt underlying host storage across cluster nodes</a></li><li class="level-5"><a href="#nbde-disk-encryption-technology-comparison_encrypt-underlying-host-storage-across-cluster-nodes">Disk encryption technology comparison</a></li><li class="level-6"><a href="#nbde-key-escrow_encrypt-underlying-host-storage-across-cluster-nodes">Key escrow</a></li><li class="level-6"><a href="#nbde-tpm-encryption_encrypt-underlying-host-storage-across-cluster-nodes">TPM encryption</a></li><li class="level-6"><a href="#nbde-network-bound-disk-encryption_encrypt-underlying-host-storage-across-cluster-nodes">Network-Bound Disk Encryption (NBDE)</a></li><li class="level-6"><a href="#nbde-secret-sharing-encryption_encrypt-underlying-host-storage-across-cluster-nodes">Secret sharing encryption</a></li><li class="level-5"><a href="#nbde-using-tang-servers-for-disk-encryption_encrypt-underlying-host-storage-across-cluster-nodes">Tang server disk encryption</a></li><li class="level-5"><a href="#nbde-locating-the-tang-servers_encrypt-underlying-host-storage-across-cluster-nodes">Tang server location planning</a></li><li class="level-5"><a href="#nbde-deciding-the-number-of-tang-servers-to-use_encrypt-underlying-host-storage-across-cluster-nodes">Tang server sizing requirements</a></li><li class="level-5"><a href="#nbde-logging-considerations_encrypt-underlying-host-storage-across-cluster-nodes">Logging considerations</a></li><li class="level-5"><a href="#nbde-installation-scenarios_encrypt-underlying-host-storage-across-cluster-nodes">Installation scenarios</a></li><li class="level-6"><a href="#nbde-compute-requirements_encrypt-underlying-host-storage-across-cluster-nodes">Compute requirements</a></li><li class="level-6"><a href="#nbde-automatic-start-at-boot_encrypt-underlying-host-storage-across-cluster-nodes">Automatic start at boot</a></li><li class="level-6"><a href="#nbde-http-versus-https_encrypt-underlying-host-storage-across-cluster-nodes">HTTP versus HTTPS</a></li><li class="level-5"><a href="#nbde-backing-up-server-keys_encrypt-underlying-host-storage-across-cluster-nodes">Back up keys for a Tang server</a></li><li class="level-5"><a href="#nbde-recovering-server-keys_encrypt-underlying-host-storage-across-cluster-nodes">Recover keys for a Tang server</a></li><li class="level-5"><a href="#nbde-rekeying-tang-servers_encrypt-underlying-host-storage-across-cluster-nodes">Rekey Tang servers</a></li><li class="level-6"><a href="#nbde-generating-a-new-tang-server-key_encrypt-underlying-host-storage-across-cluster-nodes">Generate a new Tang server key</a></li><li class="level-6"><a href="#nbde-rekeying-all-nbde-nodes_encrypt-underlying-host-storage-across-cluster-nodes">Rekey all NBDE nodes</a></li><li class="level-6"><a href="#nbde-troubleshooting-temporary-error-conditions_encrypt-underlying-host-storage-across-cluster-nodes">Troubleshoot temporary rekeying errors for Tang servers</a></li><li class="level-6"><a href="#nbde-troubleshooting-permanent-error-conditions_encrypt-underlying-host-storage-across-cluster-nodes">Troubleshoot permanent rekeying errors for Tang servers</a></li><li class="level-5"><a href="#nbde-deleting-old-tang-server-keys_encrypt-underlying-host-storage-across-cluster-nodes">Delete old Tang server keys</a></li><li class="level-5"><a href="#nbde-loss-of-a-client-machine_encrypt-underlying-host-storage-across-cluster-nodes">Loss of a client machine</a></li><li class="level-5"><a href="#nbde-loss-of-client-connectivity_encrypt-underlying-host-storage-across-cluster-nodes">Plan for a loss of client network connectivity</a></li><li class="level-5"><a href="#nbde-unexpected-loss-of-network-connectivity_encrypt-underlying-host-storage-across-cluster-nodes">Unexpected loss of network connectivity</a></li><li class="level-5"><a href="#nbde-recovering-network-connectivity-manually_encrypt-underlying-host-storage-across-cluster-nodes">Recover network connectivity manually</a></li><li class="level-5"><a href="#nbde-emergency-recovery-of-network-connectivity_encrypt-underlying-host-storage-across-cluster-nodes">Emergency recovery of network connectivity</a></li><li class="level-5"><a href="#nbde-loss-of-a-network-segment_encrypt-underlying-host-storage-across-cluster-nodes">Loss of a network segment</a></li><li class="level-5"><a href="#nbde-loss-of-a-tang-server_encrypt-underlying-host-storage-across-cluster-nodes">Loss of a Tang server</a></li><li class="level-5"><a href="#nbde-compromise-of-key-material_encrypt-underlying-host-storage-across-cluster-nodes">Rekey compromised key material</a></li><li class="level-5"><a href="#installing-nbde-tang-server-operator-using-web-console_encrypt-underlying-host-storage-across-cluster-nodes">Install the NBDE Tang Server Operator using the web console</a></li><li class="level-5"><a href="#installing-nbde-tang-server-operator-using-cli_encrypt-underlying-host-storage-across-cluster-nodes">Install the NBDE Tang Server Operator using CLI</a></li><li class="level-5"><a href="#deploying-nbde-tang-server_encrypt-underlying-host-storage-across-cluster-nodes">Deploy a Tang server using the NBDE Tang Server Operator</a></li><li class="level-5"><a href="#rotating-keys-using-nbde-tang-server-operator_encrypt-underlying-host-storage-across-cluster-nodes">Rotate keys using the NBDE Tang Server Operator</a></li><li class="level-5"><a href="#deleting-hidden-keys-with-nbde-tang-server-operator_encrypt-underlying-host-storage-across-cluster-nodes">Delete hidden keys with the NBDE Tang Server Operator</a></li><li class="level-5"><a href="#identifying-url-nbde-tang-server-operator-using-web-console_encrypt-underlying-host-storage-across-cluster-nodes">Identify URL of the NBDE Tang Server Operator using the web console</a></li><li class="level-5"><a href="#identifying-url-nbde-tang-server-operator-using-cli_encrypt-underlying-host-storage-across-cluster-nodes">Identify URL of the NBDE Tang Server Operator using CLI</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="encrypt-sensitive-data-at-rest-con_encrypt-sensitive-data-at-rest">Encrypt sensitive data at rest</h3>
@@ -2325,7 +2341,7 @@ Encryption mode set to identity and everything is decrypted</code></pre>
 <div class="sect4">
 <h5 id="kms-about_encrypt-the-etcd-configuration-database">About Kubernetes KMS v2 encryption</h5>
 <div class="paragraph _abstract">
-<p>Kubernetes KMS v2 uses external Key Management Services to encrypt etcd data and centralize key management.</p>
+<p>Kubernetes KMS v2 uses an external Key Management Service to encrypt etcd data and centralize key management.</p>
 </div>
 <div class="paragraph">
 <p>Kubernetes KMS v2 provides:</p>
@@ -2333,7 +2349,7 @@ Encryption mode set to identity and everything is decrypted</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p>Customer-managed encryption keys that never leave the external KMS</p>
+<p>Customer-managed encryption keys stored in an external KMS</p>
 </li>
 <li>
 <p>Centralized key management and auditing</p>
@@ -2344,9 +2360,45 @@ Encryption mode set to identity and everything is decrypted</code></pre>
 </ul>
 </div>
 <div class="sect5">
+<h6 id="kms-architecture_encrypt-the-etcd-configuration-database">KMS plugin architecture</h6>
+<div class="paragraph">
+<p>The KMS plugin configuration is specified inline in the <code>APIServer</code> resource. Encryption controllers deploy the KMS plugin and manage encryption key secrets.</p>
+</div>
+<div class="paragraph">
+<p>The workflow is consists of the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You create the credential secret and optional CA bundle in the <code>openshift-config</code> namespace.</p>
+</li>
+<li>
+<p>You configure the <code>APIServer</code> resource with the KMS provider settings and plugin image.</p>
+</li>
+<li>
+<p>The encryption controllers deploy the KMS plugin and begin encrypting etcd data.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>HashiCorp Vault Enterprise is the only supported KMS provider. Vault Community Edition is not supported. Vault Enterprise must be externally hosted and must not run inside the cluster service network.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect5">
 <h6 id="kms-encrypted-resources_encrypt-the-etcd-configuration-database">Encrypted resources</h6>
 <div class="paragraph">
-<p>When you enable KMS encryption, Red&#160;Hat OpenShift Container Platform encrypts the following sensitive resources in etcd:</p>
+<p>When you enable KMS encryption, Red&#160;Hat OpenShift Container Platform encrypts the following resources in etcd:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2394,23 +2446,52 @@ Encryption mode set to identity and everything is decrypted</code></pre>
 <div class="sect4">
 <h5 id="kms-technology-preview-phases_encrypt-the-etcd-configuration-database">KMS Technology Preview limitations</h5>
 <div class="paragraph _abstract">
-<p>Review the current limitations of Kubernetes KMS v2 to plan deployments and avoid unsupported configurations in Red&#160;Hat OpenShift Container Platform 4.21 or later.</p>
+<p>Review the current Kubernetes KMS v2 limitations to plan deployments and avoid unsupported configurations.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>KMS encryption is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+</div>
+<div class="paragraph">
+<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="sect5">
 <h6 id="kms-current-limitations_encrypt-the-etcd-configuration-database">Current limitations</h6>
 <div class="ulist">
 <ul>
 <li>
-<p>Plugins require manual installation on each control plane node</p>
+<p>HashiCorp Vault Enterprise is the only supported KMS provider. Vault Community Edition is not supported.</p>
 </li>
 <li>
-<p>Plugins must listen at <code>unix:///var/run/kmsplugin/kms.sock</code></p>
+<p>Vault Enterprise must be externally hosted. Hosting Vault inside the cluster service network is not supported.</p>
 </li>
 <li>
-<p>Only one KMS plugin can run at a time</p>
+<p>After rotating a Vault Transit encryption key, Red&#160;Hat OpenShift Container Platform does not automatically re-encrypt existing etcd data with the new key version.</p>
 </li>
 <li>
-<p>KMS-to-KMS migration requires intermediate migration to <code>identity</code> or <code>aescbc</code></p>
+<p>The KMS plugin image must be in pinned digest format, such as <code>registry.example.com/vault-plugin@sha256:&lt;digest&gt;</code>. Image tags are not allowed.</p>
+</li>
+<li>
+<p>In disconnected environments or clusters that use custom internal registries, you must manually mirror the KMS plugin image to an accessible registry.</p>
+</li>
+<li>
+<p>The KMS plugin does not expose Prometheus metrics in this Technology Preview phase.</p>
+</li>
+<li>
+<p>Unused KMS plugins are not removed from the <code>EncryptionConfiguration</code> after migration. You must decommission old providers manually.</p>
+</li>
+<li>
+<p>The <code>KMSEncryption</code> feature gate requires the <code>TechPreviewNoUpgrade</code> feature set. Clusters with this feature set cannot be upgraded.</p>
 </li>
 </ul>
 </div>
@@ -2419,7 +2500,7 @@ Encryption mode set to identity and everything is decrypted</code></pre>
 <div class="sect4">
 <h5 id="kms-configuring_encrypt-the-etcd-configuration-database">Enable KMS encryption</h5>
 <div class="paragraph _abstract">
-<p>You can enable external Key Management Service (KMS) encryption for etcd data to centralize key management and meet compliance requirements.</p>
+<p>You can enable Key Management Service (KMS) encryption for etcd data to centralize key management and meet compliance requirements.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -2428,38 +2509,38 @@ Encryption mode set to identity and everything is decrypted</code></pre>
 <p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
 </li>
 <li>
-<p>You have enabled the <code>TechPreviewNoUpgrade</code> feature set to enable the <code>KMSEncryption</code> feature gate.</p>
+<p>You have enabled the <code>TechPreviewNoUpgrade</code> feature set, which activates the <code>KMSEncryption</code> feature gate.</p>
 </li>
 <li>
-<p>You have a <code>HashiCorp Vault Enterprise</code> instance accessible from your control plane nodes. Vault Community Edition is not available.</p>
-</li>
-<li>
-<p>Your control plane nodes have network access to the Vault server.</p>
+<p>You have a HashiCorp Vault Enterprise instance that is externally hosted and accessible from your cluster. Vault Enterprise must not be hosted inside the cluster service network. Vault Community Edition is not supported.</p>
 </li>
 <li>
 <p>You have configured your Vault instance with:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Transit secrets engine enabled at the default <code>transit/</code> mount path</p>
+<p>Transit secrets engine enabled at a mount path, such as the default <code>transit/</code> path</p>
 </li>
 <li>
 <p>Encryption key created with type <code>aes256-gcm96</code> (recommended for FIPS 140-3 compliance)</p>
 </li>
 <li>
-<p>Vault policy allowing the Kubernetes KMS v2 plugin to encrypt, decrypt, and read key information</p>
+<p>Vault policy that allows the KMS plugin to encrypt, decrypt, and read key information</p>
 </li>
 <li>
-<p>Authentication method (token, <code>AppRole</code>, or <code>userpass</code>) configured with the policy attached</p>
+<p>Authentication method, such as <code>AppRole</code>, configured with the policy attached</p>
 </li>
 </ul>
 </div>
 </li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The Kubernetes KMS v2 plugin requires a Vault policy with the following capabilities:</p>
-</div>
+<li>
+<p>You have the fully qualified OCI image pull spec with SHA256 digest for the KMS plugin image. You can obtain the image from the Red Hat Ecosystem Catalog or from Docker Hub. For more information, see "HashiCorp Vault KMS plugin container image" and "Red Hat Ecosystem Catalog". In disconnected environments, the image is mirrored to an accessible registry.</p>
+</li>
+<li>
+<p>You have the <code>skopeo</code> and <code>jq</code> tools installed.</p>
+</li>
+<li>
+<p>You have configured a Vault policy with the following capabilities:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-hcl" data-lang="hcl">path "transit/encrypt/kms-key" {
@@ -2474,209 +2555,59 @@ path "transit/keys/kms-key" {
   capabilities = ["read"]
 }
 
-path "auth/token/lookup-self" {
+path "sys/license/status" {
   capabilities = ["read"]
 }</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Replace <code>kms-key</code> with your Vault Transit key name if using a different name.</p>
+<p>Replace <code>transit</code> with your Transit mount path and <code>kms-key</code> with your Vault Transit key name.</p>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Create an etcd backup before enabling KMS encryption.</p>
-</div>
-</td>
-</tr>
-</table>
+</li>
+<li>
+<p>You have created an etcd backup.</p>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Deploy the KMS plugin on each control plane host as a static pod:</p>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Configure the plugin to listen at <code>unix:///var/run/kmsplugin/kms.sock</code></p>
-</li>
-<li>
-<p>For your static pod, mount <code>/var/run/kmsplugin</code> as <code>hostPath</code></p>
-</li>
-<li>
-<p>Configure KMS provider connection details and authentication credentials</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The following steps show how to deploy the <code>HashiCorp</code> Vault KMS plugin as a static pod.</p>
-</div>
-</div>
-</div>
-</li>
-<li>
-<p>Create a static pod manifest file:</p>
+<p>Obtain the SHA256 digest for the KMS plugin image by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cat &gt; /tmp/vault-kms-plugin.yaml &lt;&lt;'EOF'
-apiVersion: v1
-kind: Pod
-metadata:
-  name: vault-kms-plugin
-  namespace: kube-system
-  labels:
-    app: vault-kms-plugin
-    tier: control-plane
-spec:
-  priorityClassName: system-node-critical
-  hostNetwork: true
-  containers:
-  - name: vault-kms-plugin
-    image: quay.io/redhat-isv-containers/698df066f8d1ddf179c15ef9:&lt;version&gt;
-    command:
-    - /vault-kubernetes-kms
-    - -vault-address=&lt;https://vault.example.com:8200&gt;
-    - -&lt;vault_namespace&gt;=admin
-    - -auth-method=userpass
-    - -userpass-username=&lt;vault_username&gt;
-    - -userpass-password=&lt;vault_password&gt;
-    - -transit-mount=transit
-    - -transit-key=kms-key
-    - -socket=unix:///var/run/kmsplugin/kms.sock
-    volumeMounts:
-    - name: kmsplugin
-      mountPath: /var/run/kmsplugin
-    resources:
-      requests:
-        cpu: 100m
-        memory: 128Mi
-      limits:
-        cpu: 500m
-        memory: 512Mi
-    securityContext:
-      privileged: true
-  volumes:
-  - name: kmsplugin
-    hostPath:
-      path: /var/run/kmsplugin
-      type: DirectoryOrCreate
-EOF</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ skopeo inspect docker://quay.io/redhat-isv-containers/698df066f8d1ddf179c15ef9:&lt;version&gt; | jq -r '.Digest'</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Replace the following values to match your environment:</p>
+<p>Replace <code>&lt;version&gt;</code> with the plugin version compatible with your cluster, such as <code>0.1.0-beta-ubi</code>.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">&lt;version&gt;</dt>
-<dd>
-<p>The Vault KMS plugin image version tag. Use <code>0.1.0-beta-ubi</code>.</p>
-</dd>
-<dt class="hdlist1">&lt;vault_username&gt;</dt>
-<dd>
-<p>Your Vault username for authentication.</p>
-</dd>
-<dt class="hdlist1">&lt;vault_password&gt;</dt>
-<dd>
-<p>Your Vault password for authentication.</p>
-</dd>
-<dt class="hdlist1"><a href="https://vault.example.com:8200" class="bare">https://vault.example.com:8200</a></dt>
-<dd>
-<p>The Vault address. Update this field to match your Vault server URL.</p>
-</dd>
-<dt class="hdlist1">&lt;vault_namespace&gt;</dt>
-<dd>
-<p>Optional field.</p>
 <div class="paragraph">
-<p>The manifest uses the Red Hat certified container image from Quay.io (<code>quay.io/redhat-isv-containers/698df066f8d1ddf179c15ef9</code>), which is the recommended image for Red&#160;Hat OpenShift Container Platform.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Alternatively, you can use the <a href="https://hub.docker.com/r/hashicorp/vault-kube-kms">HashiCorp image from Docker Hub</a> by replacing the image field with <code>docker.io/hashicorp/vault-kube-kms:0.1.0-beta-ubi</code>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</dd>
-</dl>
+<p>Use the resulting digest to construct the fully qualified pull spec in the format <code>quay.io/redhat-isv-containers/698df066f8d1ddf179c15ef9@sha256:&lt;digest&gt;</code>.</p>
 </div>
 </li>
 <li>
-<p>Deploy the static pod manifest to each control plane node by running the following commands:</p>
+<p>Create a secret in the <code>openshift-config</code> namespace with your Vault authentication credentials by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ MANIFEST=$(cat /tmp/vault-kms-plugin.yaml | base64)
-$ for node in $(oc get nodes --selector=node-role.kubernetes.io/master -o name | cut -d/ -f2); do
-    echo "Deploying to $node..."
-    oc debug node/$node -- chroot /host bash -c \
-      "echo '$MANIFEST' | base64 -d &gt; /etc/kubernetes/manifests/vault-kms-plugin.yaml"
-  done</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create secret generic vault-approle-secret \
+  --from-literal=role-id=&lt;your_role_id&gt; \
+  --from-literal=secret-id=&lt;your_secret_id&gt; \
+  -n openshift-config</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The kubelet automatically detects and starts static pods from <code>/etc/kubernetes/manifests/</code>.</p>
+<p>Replace <code>&lt;your_role_id&gt;</code> and <code>&lt;your_secret_id&gt;</code> with your Vault AppRole credentials.</p>
 </div>
 </li>
 <li>
-<p>Verify the static pods are running by entering the following command:</p>
+<p>Optional: If your Vault server uses a custom TLS certificate authority, create a config map in the <code>openshift-config</code> namespace with the CA bundle by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n kube-system -o wide | grep vault-kms</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create configmap vault-ca-bundle \
+  --from-file=ca-bundle.crt=&lt;path_to_ca_bundle&gt; \
+  -n openshift-config</code></pre>
 </div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">vault-kms-plugin-ip-10-0-16-7.compute.internal    1/1  Running  0  2m  10.0.16.7
-vault-kms-plugin-ip-10-0-32-93.compute.internal   1/1  Running  0  2m  10.0.32.93
-vault-kms-plugin-ip-10-0-69-106.compute.internal  1/1  Running  0  2m  10.0.69.106</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Static pod names include the node name as a suffix. You should see one pod per control plane node.</p>
-</div>
-</li>
-<li>
-<p>Verify the socket exists on a control plane node by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; -- chroot /host ls -la /var/run/kmsplugin/kms.sock</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">srwxr-xr-x. 1 root root 0 &lt;timestamp&gt; /var/run/kmsplugin/kms.sock</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Static pods are managed by kubelet on each node and cannot be deleted with <code>oc delete pod</code>. To remove a static pod, delete the manifest file from <code>/etc/kubernetes/manifests/</code> on each control plane node.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 </li>
 <li>
@@ -2697,28 +2628,70 @@ metadata:
   name: cluster
 spec:
   encryption:
-    type: KMS</code></pre>
+    type: KMS
+    kms:
+      type: Vault
+      vault:
+        kmsPluginImage: &lt;registry&gt;/&lt;repository&gt;@sha256:&lt;digest&gt;
+        vaultAddress: https://vault.example.com:8200
+        vaultNamespace: my-namespace
+        vaultAuthNamespace: my-auth-namespace
+        vaultKeyPath: transit/keys/kms-key
+        tls:
+          caBundle:
+            name: vault-ca-bundle
+          serverName: vault.example.com
+        authentication:
+          type: AppRole
+          appRole:
+            secret:
+              name: vault-approle-secret</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>kmsPluginImage</code></dt>
+<dd>
+<p>Specifies the KMS plugin container image as a fully qualified OCI pull spec with SHA256 digest. Image tags and short names are not allowed. In disconnected environments, use the mirrored location.</p>
+</dd>
+<dt class="hdlist1"><code>vaultAddress</code></dt>
+<dd>
+<p>Specifies the HTTPS URL of the Vault server. Paths, query parameters, and fragments are not allowed.</p>
+</dd>
+<dt class="hdlist1"><code>vaultNamespace</code></dt>
+<dd>
+<p>Specifies the Vault namespace. This value is optional.</p>
+</dd>
+<dt class="hdlist1"><code>vaultAuthNamespace</code></dt>
+<dd>
+<p>Specifies the Vault namespace for authentication when it differs from the Transit namespace. Defaults to the <code>vaultNamespace</code> value. This value is optional.</p>
+</dd>
+<dt class="hdlist1"><code>vaultKeyPath</code></dt>
+<dd>
+<p>Specifies the Transit encryption key path in the format <code>&lt;mount&gt;/keys/&lt;key_name&gt;</code>.</p>
+</dd>
+<dt class="hdlist1"><code>tls.caBundle.name</code></dt>
+<dd>
+<p>Specifies the config map in the <code>openshift-config</code> namespace containing the CA bundle. Required only if Vault uses a custom CA.</p>
+</dd>
+<dt class="hdlist1"><code>tls.serverName</code></dt>
+<dd>
+<p>Specifies the TLS server name for certificate verification. This value is optional.</p>
+</dd>
+<dt class="hdlist1"><code>authentication.appRole.secret.name</code></dt>
+<dd>
+<p>Specifies the secret name in the <code>openshift-config</code> namespace containing the AppRole credentials.</p>
+</dd>
+</dl>
 </div>
 </li>
 <li>
 <p>Save and exit.</p>
 <div class="paragraph">
-<p>Migration begins automatically. The <code>kube-apiserver</code>, <code>openshift-apiserver</code> and <code>oauth-apiserver</code> Operators will restart and roll out new revisions.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>openshift-apiserver</code> and <code>authentication</code> operators typically complete migration in 5-10 minutes. The <code>kube-apiserver</code> operator uses a conservative rollout strategy, updating one control plane node at a time and waiting for health checks before proceeding to the next node. This process can take 30 minutes or longer depending on cluster load.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>The <code>kube-apiserver</code>, <code>openshift-apiserver</code>, and <code>authentication</code> Operators validate the configuration and roll out new revisions.</p>
 </div>
 </li>
 </ol>
@@ -2734,26 +2707,36 @@ spec:
 </div>
 </div>
 <div class="paragraph">
-<p>Output should show <code>KMS</code>.</p>
+<p>The output shows <code>KMS</code>.</p>
+</div>
+</li>
+<li>
+<p>Check the KMS plugin health and configuration validation by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeapiserver cluster -ojsonpath='{.status.encryptionStatus}' | jq .</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Verify that <code>preflight.result.status</code> shows <code>Succeeded</code> and all nodes in <code>healthReports</code> show <code>Healthy</code>.</p>
 </div>
 </li>
 <li>
 <p>Monitor the <code>kube-apiserver</code> rollout progress by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeapiserver cluster -o jsonpath='{.status.nodeStatuses}' | jq -r '.[] | "\(.nodeName | split(".")[0]): current=\(.currentRevision) target=\(.targetRevision)"'</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get co kube-apiserver</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Example output during rollout</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">ip-10-0-16-166: current=10 target=0
-ip-10-0-32-93: current=9 target=10
-ip-10-0-69-106: current=9 target=0</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME             VERSION      AVAILABLE   PROGRESSING   DEGRADED   SINCE   MESSAGE
+kube-apiserver   5.0.0-rc.4   True        True          False      35m     NodeInstallerProgressing: 2 nodes are at revision 6; 1 node is at revision 7</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The operator rolls out one node at a time. When all nodes show the same <code>current</code> revision and <code>target</code> is <code>0</code>, the rollout is complete.</p>
+<p>When <code>PROGRESSING</code> shows <code>False</code>, the rollout is complete.</p>
 </div>
 </li>
 <li>
@@ -2766,8 +2749,8 @@ ip-10-0-69-106: current=9 target=0</code></pre>
 <div class="listingblock">
 <div class="title">Example output when complete</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">{
-  "lastTransitionTime": "2026-05-15T17:39:02Z",
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "lastTransitionTime": "2026-09-24T16:41:48Z",
   "message": "All resources encrypted: secrets, configmaps",
   "reason": "EncryptionCompleted",
   "status": "True",
@@ -2776,11 +2759,11 @@ ip-10-0-69-106: current=9 target=0</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Wait for <code>reason</code> to show <code>EncryptionCompleted</code> before proceeding to verify encryption in etcd.</p>
+<p>Wait for <code>reason</code> to show <code>EncryptionCompleted</code> before you verify encryption in etcd.</p>
 </div>
 </li>
 <li>
-<p>Verify secrets are encrypted in etcd:</p>
+<p>Verify that secrets are encrypted in etcd:</p>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -2789,7 +2772,7 @@ ip-10-0-69-106: current=9 target=0</code></pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Wait for the <code>kube-apiserver</code> rollout to complete on all control plane nodes before verifying encryption. During the rollout, API requests are distributed across nodes, and secrets created while some nodes are still on an earlier revision will not be encrypted with Kubernetes KMS v2.</p>
+<p>Wait for the <code>kube-apiserver</code> rollout to complete on all control plane nodes before you verify encryption. Secrets created while nodes run an earlier revision are not encrypted with KMS.</p>
 </div>
 </td>
 </tr>
@@ -2822,8 +2805,14 @@ ip-10-0-69-106: current=9 target=0</code></pre>
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc exec -n openshift-etcd &lt;etcd_pod_name&gt; -- etcdctl get /kubernetes.io/secrets/default/test-secret --print-value-only | hexdump -C | head -1</code></pre>
 </div>
 </div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">00000000  6b 38 73 3a 65 6e 63 3a  6b 6d 73 3a 76 32 3a 31  |k8s:enc:kms:v2:1|</code></pre>
+</div>
+</div>
 <div class="paragraph">
-<p>Output should begin with <code>k8s:enc:kms:v2:</code> followed by encrypted binary data.</p>
+<p>The output begins with <code>k8s:enc:kms:v2:</code> followed by encrypted binary data.</p>
 </div>
 </li>
 <li>
@@ -2845,6 +2834,12 @@ ip-10-0-69-106: current=9 target=0</code></pre>
 <div class="title">Additional resources</div>
 <ul>
 <li>
+<p><a href="https://hub.docker.com/r/hashicorp/vault-kube-kms">HashiCorp Vault KMS plugin container image</a></p>
+</li>
+<li>
+<p><a href="https://catalog.redhat.com/search?gs&amp;q=vault-kms">Red Hat Ecosystem Catalog</a></p>
+</li>
+<li>
 <p><a href="https://developer.hashicorp.com/vault/docs/secrets/transit">Vault Transit Secrets Engine</a></p>
 </li>
 <li>
@@ -2863,6 +2858,20 @@ ip-10-0-69-106: current=9 target=0</code></pre>
 <h5 id="kms-rotating-encryption-key_encrypt-the-etcd-configuration-database">Rotate the Vault encryption key</h5>
 <div class="paragraph _abstract">
 <p>You can rotate your Vault Transit encryption key to generate a new key version while maintaining access to data encrypted with earlier versions.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>After rotating the Vault encryption key, Red&#160;Hat OpenShift Container Platform does not automatically re-encrypt existing etcd data with the new key version. Existing data remains encrypted with the previous key version. The Vault-side rotation steps are safe to perform because Vault retains all previous key versions for decryption.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -2889,7 +2898,7 @@ ip-10-0-69-106: current=9 target=0</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Vault creates a new key version while maintaining earlier versions for decryption. The API server automatically uses the correct key version for each secret.</p>
+<p>Replace <code>kms-key</code> with your Vault Transit key name. Vault creates a new key version while retaining earlier versions for decryption.</p>
 </div>
 </li>
 <li>
@@ -2915,25 +2924,11 @@ ip-10-0-69-106: current=9 target=0</code></pre>
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get secret -A</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>All secrets should be readable without errors. Vault maintains all key versions and automatically uses the appropriate version for decryption.</p>
+</div>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>All secrets should be readable without errors.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Existing encrypted secrets do not need re-encryption. Vault maintains all key versions and automatically uses the appropriate version for decryption.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 <div class="ulist _additional-resources">
 <div class="title">Additional resources</div>
@@ -2953,7 +2948,7 @@ ip-10-0-69-106: current=9 target=0</code></pre>
 <div class="sect4">
 <h5 id="kms-migrating-from-local-encryption_encrypt-the-etcd-configuration-database">Migrate from local encryption to KMS encryption</h5>
 <div class="paragraph _abstract">
-<p>You can migrate from local etcd encryption to external KMS encryption to centralize key management and improve compliance.</p>
+<p>You can migrate from local etcd encryption to KMS encryption to centralize key management.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -2968,10 +2963,10 @@ ip-10-0-69-106: current=9 target=0</code></pre>
 <p>Your cluster is currently using <code>aescbc</code> or <code>aesgcm</code> encryption.</p>
 </li>
 <li>
-<p>You have deployed the KMS plugin on all control plane nodes.</p>
+<p>You have created the credential secret and optional CA bundle config map in the <code>openshift-config</code> namespace.</p>
 </li>
 <li>
-<p>Control plane nodes have network access to the KMS provider.</p>
+<p>You have the fully qualified OCI image pull spec with SHA256 digest for the KMS plugin image.</p>
 </li>
 </ul>
 </div>
@@ -3009,7 +3004,7 @@ ip-10-0-69-106: current=9 target=0</code></pre>
 </div>
 </li>
 <li>
-<p>Change the encryption type from <code>aescbc</code> or <code>aesgcm</code> to <code>KMS</code>:</p>
+<p>Change the encryption type from <code>aescbc</code> or <code>aesgcm</code> to <code>KMS</code> and add the inline Vault configuration by using the following example:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1
@@ -3018,81 +3013,220 @@ metadata:
   name: cluster
 spec:
   encryption:
-    type: KMS</code></pre>
+    type: KMS
+    kms:
+      type: Vault
+      vault:
+        kmsPluginImage: &lt;registry&gt;/&lt;repository&gt;@sha256:&lt;digest&gt;
+        vaultAddress: https://vault.example.com:8200
+        vaultKeyPath: transit/keys/kms-key
+        authentication:
+          type: AppRole
+          appRole:
+            secret:
+              name: vault-approle-secret</code></pre>
 </div>
 </div>
 </li>
 <li>
 <p>Save and exit.</p>
 <div class="paragraph">
-<p>Migration starts automatically and typically takes several minutes.</p>
+<p>After configuration validation succeeds, migration starts.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Verify migration completion for the OpenShift API server by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get openshiftapiserver -o jsonpath='{range .items[0].status.conditions[?(@.type=="Encrypted")]}{.reason}{"\n"}{end}'</code></pre>
+</div>
 </div>
 </li>
 <li>
-<p>Verify migration completion for all API servers by running the following commands:</p>
+<p>Verify migration completion for the Kubernetes API server by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get openshiftapiserver -o=jsonpath='{range .items[0].status.conditions[?(@.type=="Encrypted")]}{.reason}{"\n"}{end}'</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeapiserver -o jsonpath='{range .items[0].status.conditions[?(@.type=="Encrypted")]}{.reason}{"\n"}{end}'</code></pre>
 </div>
 </div>
+</li>
+<li>
+<p>Verify migration completion for the authentication Operator by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeapiserver -o=jsonpath='{range .items[0].status.conditions[?(@.type=="Encrypted")]}{.reason}{"\n"}{end}'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get authentication.operator.openshift.io -o=jsonpath='{range .items[0].status.conditions[?(@.type=="Encrypted")]}{.reason}{"\n"}{end}'</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get authentication.operator.openshift.io -o jsonpath='{range .items[0].status.conditions[?(@.type=="Encrypted")]}{.reason}{"\n"}{end}'</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>All outputs should show <code>EncryptionCompleted</code>.</p>
+<p>All outputs show <code>EncryptionCompleted</code>.</p>
 </div>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect4">
-<h5 id="kms-monitoring-status_encrypt-the-etcd-configuration-database">Monitor KMS encryption status</h5>
+<h5 id="kms-monitoring-status_encrypt-the-etcd-configuration-database">Monitoring KMS encryption status</h5>
 <div class="paragraph _abstract">
-<p>You can monitor KMS encryption status by using Operator and API server logs to verify successful configuration and detect issues.</p>
+<p>You can monitor KMS encryption status by inspecting operator encryption status conditions, health reports, and preflight results.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>KMS encryption is enabled.</p>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Check the kube-apiserver operator logs for KMS-related events by entering the following command:</p>
+<p>Check overall Operator status by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n openshift-kube-apiserver-operator deploy/kube-apiserver-operator | grep -i kms</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get co kube-apiserver</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>The <code>DEGRADED</code> column shows <code>True</code> if KMS configuration or connectivity problems exist.</p>
 </div>
 </li>
 <li>
-<p>View API server logs for KMS-related events by entering the following command:</p>
+<p>Inspect KMS health reports and preflight results by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n openshift-kube-apiserver -l apiserver=true --tail=100 | grep -i kms</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeapiserver cluster -ojsonpath='{.status.encryptionStatus}' | jq .</code></pre>
 </div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "healthReports": [
+    {
+      "keyID": "1",
+      "lastCheckedTime": "2026-09-24T16:44:19Z",
+      "nodeName": "ip-10-0-1-198.us-east-2.compute.internal",
+      "remoteKeyID": "CgQKAnYx...",
+      "status": "Healthy"
+    },
+    {
+      "keyID": "1",
+      "lastCheckedTime": "2026-09-24T16:44:45Z",
+      "nodeName": "ip-10-0-77-162.us-east-2.compute.internal",
+      "remoteKeyID": "CgQKAnYx...",
+      "status": "Healthy"
+    },
+    {
+      "keyID": "1",
+      "lastCheckedTime": "2026-09-24T16:44:25Z",
+      "nodeName": "ip-10-0-97-236.us-east-2.compute.internal",
+      "remoteKeyID": "CgQKAnYx...",
+      "status": "Healthy"
+    }
+  ],
+  "preflight": {
+    "observedConfigHash": "GNja6Q==",
+    "result": {
+      "configHash": "GNja6Q==",
+      "remoteKeyID": "always-succeed",
+      "status": "Succeeded"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>healthReports</code></dt>
+<dd>
+<p>Shows KMS plugin health per control plane node. Each entry includes the node name, key ID, a <code>status</code> of <code>Healthy</code>, <code>Unhealthy</code>, or <code>Error</code>, and an optional <code>detail</code> field with additional diagnostic information when the status is not <code>Healthy</code>.</p>
+</dd>
+<dt class="hdlist1"><code>preflight</code></dt>
+<dd>
+<p>Shows whether the configured KMS settings are valid. The <code>preflight.result.status</code> field shows <code>Succeeded</code> when the plugin can connect to the external Vault instance and the credentials are valid, or <code>Failed</code> when connectivity problems or invalid credentials exist.</p>
+</dd>
+</dl>
 </div>
 </li>
 <li>
-<p>Verify the KMS encryption configuration by entering the following command:</p>
+<p>Verify the Kubernetes API server encryption status by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get apiserver cluster -o jsonpath='{.spec.encryption}' | jq</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeapiserver cluster -o jsonpath='{.status.conditions[?(@.type=="Encrypted")]}' | jq .</code></pre>
 </div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "lastTransitionTime": "2026-09-24T16:41:48Z",
+  "message": "All resources encrypted: secrets, configmaps",
+  "reason": "EncryptionCompleted",
+  "status": "True",
+  "type": "Encrypted"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Wait for <code>reason</code> to show <code>EncryptionCompleted</code>.</p>
+</div>
+</li>
+<li>
+<p>Verify the authentication Operator encryption status by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get authentication.operator.openshift.io cluster -o jsonpath='{.status.conditions[?(@.type=="Encrypted")]}' | jq .</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "lastTransitionTime": "2026-09-24T16:22:10Z",
+  "message": "All resources encrypted: oauthaccesstokens.oauth.openshift.io, oauthauthorizetokens.oauth.openshift.io",
+  "reason": "EncryptionCompleted",
+  "status": "True",
+  "type": "Encrypted"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output shows <code>EncryptionCompleted</code>.</p>
+</div>
+</li>
+<li>
+<p>Verify the OpenShift API server encryption status by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get openshiftapiserver cluster -o jsonpath='{.status.conditions[?(@.type=="Encrypted")]}' | jq .</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "lastTransitionTime": "2026-09-24T16:25:54Z",
+  "message": "All resources encrypted: routes.route.openshift.io",
+  "reason": "EncryptionCompleted",
+  "status": "True",
+  "type": "Encrypted"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output shows <code>EncryptionCompleted</code>.</p>
 </div>
 </li>
 </ol>
-</div>
-<div class="ulist _additional-resources">
-<div class="title">Additional resources</div>
-<ul>
-<li>
-<p><a href="https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/">Kubernetes KMS provider documentation</a></p>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect4">
@@ -3101,12 +3235,67 @@ spec:
 <p>You can diagnose and resolve common KMS encryption issues to maintain secure key management and cluster availability.</p>
 </div>
 <div class="sect5">
-<h6 id="kms-invalid-configuration_encrypt-the-etcd-configuration-database">Invalid KMS configuration</h6>
+<h6 id="kms-encryption-not-activating_encrypt-the-etcd-configuration-database">KMS encryption does not activate</h6>
 <div class="paragraph">
-<p><strong>Symptom:</strong> APIServer resource shows validation errors during KMS encryption configuration.</p>
+<p>Symptom: KMS encryption does not activate after configuring the <code>APIServer</code> resource. The <code>kube-apiserver</code> Operator reports a degraded condition.</p>
 </div>
 <div class="paragraph">
-<p><strong>Diagnosis:</strong> Check kube-apiserver Operator logs:</p>
+<p>Diagnosis: Check the encryption status, including health reports and preflight results by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeapiserver cluster -ojsonpath='{.status.encryptionStatus}' | jq .</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>preflight.result.status</code> field shows whether configuration validation succeeded. The <code>healthReports</code> array shows plugin health per control plane node.</p>
+</div>
+<div class="paragraph">
+<p>If you need additional detail, check the kube-apiserver Operator logs by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n openshift-kube-apiserver-operator deploy/kube-apiserver-operator | grep -i "kms\|error"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Solutions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Verify that the Vault server is reachable from control plane nodes.</p>
+</li>
+<li>
+<p>Verify that the credential secret in <code>openshift-config</code> has valid credentials.</p>
+</li>
+<li>
+<p>Verify that the Transit encryption key exists at the path specified in <code>vaultKeyPath</code>.</p>
+</li>
+<li>
+<p>Verify that the Vault policy grants encrypt, decrypt, and read permissions on the key.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="kms-invalid-configuration_encrypt-the-etcd-configuration-database">Invalid KMS configuration</h6>
+<div class="paragraph">
+<p>Symptom: <code>APIServer</code> resource shows validation errors.</p>
+</div>
+<div class="paragraph">
+<p>Diagnosis: Check the preflight results in the encryption status by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeapiserver cluster -ojsonpath='{.status.encryptionStatus.preflight}' | jq .</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>preflight.result.status</code> field shows whether the configured KMS settings are valid. A failed preflight indicates connectivity problems with the external Vault instance or invalid credentials.</p>
+</div>
+<div class="paragraph">
+<p>If you need additional detail, check kube-apiserver Operator logs by running the following command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3114,23 +3303,21 @@ spec:
 </div>
 </div>
 <div class="paragraph">
-<p><strong>Solutions:</strong></p>
+<p>Solutions:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Verify plugin configuration follows provider requirements</p>
+<p>Verify that the <code>kms.vault</code> configuration in the <code>APIServer</code> resource has valid field values.</p>
 </li>
 <li>
-<p>Ensure all required fields are specified</p>
+<p>Verify that <code>kmsPluginImage</code> is a fully qualified OCI pull spec with a SHA256 digest.</p>
 </li>
 <li>
-<p>Verify plugin is running on all control plane nodes:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; -- chroot /host ls -la /var/run/kmsplugin/kms.sock</code></pre>
-</div>
-</div>
+<p>Verify that <code>vaultAddress</code> is a valid HTTPS URL without path or query parameters.</p>
+</li>
+<li>
+<p>Verify that the credential secret referenced by <code>authentication.appRole.secret.name</code> exists in the <code>openshift-config</code> namespace.</p>
 </li>
 </ul>
 </div>
@@ -3138,40 +3325,29 @@ spec:
 <div class="sect5">
 <h6 id="kms-permissions-errors_encrypt-the-etcd-configuration-database">KMS permissions errors</h6>
 <div class="paragraph">
-<p><strong>Symptom:</strong> Encryption migration fails with permission errors.</p>
+<p>Symptom: Encryption migration fails with permission errors.</p>
 </div>
 <div class="paragraph">
-<p><strong>Diagnosis:</strong> Check Operator and plugin logs:</p>
+<p>Diagnosis: Check Operator logs by running the following command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n openshift-kube-apiserver-operator deploy/kube-apiserver-operator | grep -i "kms\|permission\|access denied"</code></pre>
 </div>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; -- chroot /host journalctl -u kms-plugin</code></pre>
-</div>
-</div>
 <div class="paragraph">
-<p><strong>Solutions:</strong></p>
+<p>Solutions:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Verify plugin has valid authentication credentials</p>
+<p>Verify that the credential secret has valid and unexpired credentials.</p>
 </li>
 <li>
-<p>Check if credentials have expired</p>
+<p>Verify that the Vault policy grants encrypt and decrypt permissions.</p>
 </li>
 <li>
-<p>Ensure plugin principal has encrypt and decrypt permissions</p>
-</li>
-<li>
-<p>Verify KMS provider key policy allows plugin access</p>
-</li>
-<li>
-<p>Confirm encryption key is enabled and not scheduled for deletion</p>
+<p>Verify that the encryption key is enabled and not scheduled for deletion.</p>
 </li>
 </ul>
 </div>
@@ -3179,37 +3355,32 @@ spec:
 <div class="sect5">
 <h6 id="kms-expired-deleted-key_encrypt-the-etcd-configuration-database">Expired or deleted KMS key</h6>
 <div class="paragraph">
-<p><strong>Symptom:</strong> API server cannot decrypt secrets when accessing encrypted resources.</p>
+<p>Symptom: API server cannot decrypt encrypted resources.</p>
 </div>
 <div class="paragraph">
-<p><strong>Diagnosis:</strong> Check logs and verify key status:</p>
+<p>Diagnosis: Check API server logs and verify key status by running the following command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n openshift-kube-apiserver -l apiserver=true | grep -i "decrypt\|kms.*error"</code></pre>
 </div>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; -- chroot /host journalctl -u kms-plugin | grep -i "key\|error"</code></pre>
-</div>
-</div>
 <div class="paragraph">
-<p><strong>Solutions:</strong></p>
+<p>Solutions:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Re-enable the encryption key if disabled</p>
+<p>Re-enable the encryption key if it was disabled.</p>
 </li>
 <li>
-<p>Restore from backup if key was permanently deleted</p>
+<p>Restore from backup if the key was permanently deleted.</p>
 </li>
 <li>
-<p>Cancel key deletion if scheduled</p>
+<p>Cancel key deletion if it is scheduled.</p>
 </li>
 <li>
-<p>Ensure KMS provider maintains access to previous key versions</p>
+<p>Ensure the KMS provider retains access to earlier key versions.</p>
 </li>
 </ul>
 </div>
@@ -3231,15 +3402,29 @@ spec:
 <div class="sect5">
 <h6 id="kms-api-server-degraded_encrypt-the-etcd-configuration-database">API server degraded or unavailable</h6>
 <div class="paragraph">
-<p><strong>Symptom:</strong> API server becomes degraded or unresponsive after enabling KMS encryption.</p>
+<p>Symptom: API server becomes degraded or unresponsive after enabling KMS encryption.</p>
 </div>
 <div class="paragraph">
-<p><strong>Diagnosis:</strong> Check Operator status and logs:</p>
+<p>Diagnosis: Check the encryption status health reports by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeapiserver cluster -ojsonpath='{.status.encryptionStatus.healthReports}' | jq .</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Health reports show per-node plugin status. An <code>Unhealthy</code> status indicates connectivity or credential problems between that node and the Vault instance.</p>
+</div>
+<div class="paragraph">
+<p>Check overall Operator status by running the following command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusteroperator kube-apiserver</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>If you need additional detail, check API server logs by running the following command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3247,29 +3432,21 @@ spec:
 </div>
 </div>
 <div class="paragraph">
-<p><strong>Solutions:</strong></p>
+<p>Solutions:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Check network connectivity between control plane and KMS provider</p>
+<p>Check network connectivity between control plane nodes and Vault.</p>
 </li>
 <li>
-<p>Verify network policies, firewalls, and routes allow communication</p>
+<p>Verify network policies and firewalls allow communication.</p>
 </li>
 <li>
-<p>Monitor KMS provider rate limits and request increases if needed</p>
+<p>Check Vault for rate limiting.</p>
 </li>
 <li>
-<p>Verify DNS resolution and TLS certificate validation</p>
-</li>
-<li>
-<p>Confirm plugin is running on all control plane nodes:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt; -- chroot /host systemctl status kms-plugin</code></pre>
-</div>
-</div>
+<p>Verify DNS resolution and TLS certificate validation.</p>
 </li>
 </ul>
 </div>
@@ -3277,10 +3454,10 @@ spec:
 <div class="sect5">
 <h6 id="kms-migration-stuck-slow_encrypt-the-etcd-configuration-database">Encryption migration stuck or slow</h6>
 <div class="paragraph">
-<p><strong>Symptom:</strong> KMS encryption migration takes unusually long or becomes stuck.</p>
+<p>Symptom: Encryption migration takes unusually long or is stuck.</p>
 </div>
 <div class="paragraph">
-<p><strong>Diagnosis:</strong> Check Operator status and migration logs:</p>
+<p>Diagnosis: Check Operator status and migration logs by running the following commands:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3293,18 +3470,18 @@ spec:
 </div>
 </div>
 <div class="paragraph">
-<p><strong>Solutions:</strong></p>
+<p>Solutions:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Migration time depends on data size; monitor progress</p>
+<p>Migration time depends on data size. Monitor progress with Operator conditions.</p>
 </li>
 <li>
-<p>Monitor KMS provider audit logs for rate limiting or throttling events</p>
+<p>Check Vault audit logs for rate limiting or throttling.</p>
 </li>
 <li>
-<p>Check network performance between control plane and KMS provider</p>
+<p>Check network performance between control plane nodes and Vault.</p>
 </li>
 </ul>
 </div>
@@ -3312,7 +3489,7 @@ spec:
 <div class="sect5">
 <h6 id="kms-collecting-debug-info_encrypt-the-etcd-configuration-database">Collecting debug information</h6>
 <div class="paragraph">
-<p>Collect cluster logs:</p>
+<p>Collect cluster status and logs by running the following commands:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3322,6 +3499,11 @@ spec:
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get apiserver cluster -o yaml &gt; apiserver.yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeapiserver cluster -ojsonpath='{.status.encryptionStatus}' | jq . &gt; encryption-status.json</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -3340,13 +3522,10 @@ spec:
 <div class="ulist">
 <ul>
 <li>
-<p>KMS plugin logs from control plane nodes</p>
+<p>Vault audit logs</p>
 </li>
 <li>
-<p>KMS provider audit logs</p>
-</li>
-<li>
-<p>KMS provider key policy and permissions</p>
+<p>Vault key policy and permissions</p>
 </li>
 <li>
 <p>Authentication credentials status</p>
@@ -3375,7 +3554,7 @@ spec:
 <div class="sect4">
 <h5 id="kms-disabling-encryption_encrypt-the-etcd-configuration-database">Disable KMS encryption</h5>
 <div class="paragraph _abstract">
-<p>You can disable external KMS encryption and migrate to local encryption to simplify operations or resolve KMS connectivity issues.</p>
+<p>You can disable KMS encryption and migrate to local encryption or disable encryption entirely to simplify operations or resolve connectivity issues.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -3396,7 +3575,7 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Re-encryption of all etcd data will occur.</p>
+<p>Re-encryption of all etcd data occurs when you change the encryption type.</p>
 </div>
 </td>
 </tr>
@@ -3414,7 +3593,7 @@ spec:
 </div>
 </li>
 <li>
-<p>Change the encryption configuration:</p>
+<p>Change the encryption type and remove the <code>kms</code> section by using the following example:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1
@@ -3427,28 +3606,28 @@ spec:
 </div>
 </div>
 <div class="paragraph">
-<p>Replace <code>&lt;encryption&gt;</code> with <code>aescbc</code>, <code>aesgcm</code>, or <code>identity</code>.</p>
+<p>Replace <code>&lt;encryption&gt;</code> with <code>aescbc</code>, <code>aesgcm</code>, or <code>identity</code>. The <code>aescbc</code> and <code>aesgcm</code> types use locally managed encryption keys. The <code>identity</code> type disables all encryption and stores data as plain text. You must remove the entire <code>kms</code> section because the API rejects it when the encryption type is not <code>KMS</code>.</p>
 </div>
 </li>
 <li>
 <p>Save and exit.</p>
 <div class="paragraph">
-<p>Red&#160;Hat OpenShift Container Platform automatically migrates etcd data. Migration time depends on etcd size and secret count.</p>
+<p>Red&#160;Hat OpenShift Container Platform migrates etcd data. The KMS plugin remains as a read-only provider until migration completes.</p>
 </div>
 </li>
 <li>
 <p>Monitor the migration progress by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get openshiftapiserver -o=jsonpath='{range .items[0].status.conditions[?(@.type=="Encrypted")]}{.reason}{"\n"}{.message}{"\n"}{end}'</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeapiserver cluster -o jsonpath='{.status.conditions[?(@.type=="Encrypted")]}' | jq .</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Wait until the output shows <code>EncryptionCompleted</code>.</p>
+<p>Wait for <code>reason</code> to show <code>EncryptionCompleted</code>. The <code>kube-apiserver</code> is typically the last to complete.</p>
 </div>
 </li>
 <li>
-<p>Verify kube-apiserver pods rolled out by entering the following command:</p>
+<p>Verify that the <code>kube-apiserver</code> pods have rolled out by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n openshift-kube-apiserver -l app=openshift-kube-apiserver</code></pre>
@@ -3456,32 +3635,34 @@ spec:
 </div>
 </li>
 <li>
-<p>Remove the static pod manifest from each control plane node by running the following command:</p>
-<div class="listingblock">
+<p>After migration completes, clean up the KMS provider resources by using the following steps:</p>
+<div class="openblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ for node in $(oc get nodes --selector=node-role.kubernetes.io/master -o name | cut -d/ -f2); do
-    echo "Removing static pod from $node..."
-    oc debug node/$node -- chroot /host \
-      rm -f /etc/kubernetes/manifests/vault-kms-plugin.yaml
-  done</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The kubelet automatically stops static pods when their manifest is removed from <code>/etc/kubernetes/manifests/</code>.</p>
-</div>
-</li>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>Clean up the socket directory by running the following command:</p>
+<p>Delete the credential secret by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ for node in $(oc get nodes --selector=node-role.kubernetes.io/master -o name | cut -d/ -f2); do
-    oc debug node/$node -- chroot /host rm -rf /var/run/kmsplugin
-  done</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete secret vault-approle-secret -n openshift-config</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>After backup retention period passes, decommission the KMS key.</p>
+<p>Optional: Delete the CA bundle config map by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete configmap vault-ca-bundle -n openshift-config</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>After your backup retention period passes, decommission the KMS key.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
 </li>
 </ol>
 </div>
@@ -3526,7 +3707,7 @@ spec:
 </div>
 </div>
 <div class="paragraph">
-<p>Output should begin with <code>k8s:enc:aescbc:v1:</code>, <code>k8s:enc:aesgcm:v1:</code>, or show readable JSON for <code>identity</code>.</p>
+<p>The output begins with <code>k8s:enc:aescbc:v1:</code>, <code>k8s:enc:aesgcm:v1:</code>, or shows readable JSON for <code>identity</code>.</p>
 </div>
 </li>
 <li>
@@ -3552,7 +3733,7 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Do not delete the KMS key until migration completes successfully.</p>
+<p>Do not delete the KMS key until migration completes.</p>
 </div>
 </td>
 </tr>
@@ -5524,7 +5705,7 @@ Events:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-23 11:25:23 +0100
+Last updated 2026-10-26 14:12:22 +0000
 </div>
 </div>
 <style>
