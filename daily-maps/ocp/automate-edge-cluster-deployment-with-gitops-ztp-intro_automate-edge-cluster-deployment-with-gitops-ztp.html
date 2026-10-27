@@ -748,6 +748,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_administer.html">Administer</a>
 
 <ul class="sectlevel2">
+<li><a href="about-project-creation_configure-project-creation.html">About project creation</a>
+</li>
+<li><a href="impersonation-project-creation_create-project-as-another-user.html">Impersonating a user when you create a project</a>
+</li>
+<li><a href="pruning-groups_prune-cluster-objects.html">Pruning groups</a>
+</li>
 <li><a href="configure-default-pod-behavior-con_configure-default-pod-behavior.html">Configure default pod behavior</a>
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
@@ -923,6 +929,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_develop.html">Develop</a>
 
 <ul class="sectlevel2">
+<li><a href="applications-projects-overview_work-with-projects.html">Working on a project</a>
+</li>
+<li><a href="applications-create-using-cli-source-code_create-applications-from-the-cli.html">Creating an application from source code</a>
+</li>
+<li><a href="odc-deploying-java-applications_create-applications-from-the-developer-perspective.html">Deploying a Java application by uploading a JAR file</a>
+</li>
+<li><a href="applications-application-lifecycle_understand-deployments.html">Working on an application</a>
+</li>
+<li><a href="deployments-rolling-strategy_configure-deployment-strategies.html">Rolling strategy</a>
+</li>
+<li><a href="deployments-starting-a-deployment_manage-deployment-processes.html">Starting a deployment</a>
+</li>
+<li><a href="deployments-proxy-shard_use-route-based-deployment-strategies.html">Proxy shards and traffic splitting</a>
+</li>
+<li><a href="idle-idling-applications_idle-applications-to-save-resources.html">Application idling</a>
+</li>
 <li><a href="add-nodes-to-an-on-premise-cluster-con_add-nodes-to-an-on-premise-cluster.html">Add nodes to an on-premise cluster</a>
 </li>
 <li><a href="deploy-applications-with-red-hat-s2i-images-61-find-supported-red-hat-container-images-con_deploy-applications-with-red-hat-s2i-images-61-find-supported-red-hat-container-images.html">Find supported Red Hat container images</a>
@@ -1217,6 +1239,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
+<li><a href="review-namespace-policy-and-verify-admin-policy-deployment-con_review-namespace-policy-and-verify-admin-policy-deployment.html">Review namespace policy and verify admin policy deployment</a>
+</li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
@@ -1280,8 +1304,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nfs-selinux_reduce-pod-timouts-using-selinuxchangepolicy.html">SELinux</a>
 </li>
-<li><a href="persistent-storage-csi-aws-ebs-overview_aws-elastic-block-storage.html">Overview of the AWS EBS CSI Driver Operator</a>
-</li>
 <li><a href="persistent-storage-csi-azure-disk-overview_azure-disk-storage.html">Overview of Azure Disk CSI Driver Operator</a>
 </li>
 <li><a href="persistent-storage-csi-azure-file-overview_azure-file-storage.html">Overview</a>
@@ -1320,7 +1342,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="persistent-storage-csi-sc-intro_configure-default-storage-classes.html">Configure the default storage class</a>
 </li>
-<li><a href="persistent-storage-csi-aws-ebs-overview_aws-elastic-block-store-operator.html">Overview of the AWS EBS CSI Driver Operator</a>
+<li><a href="persistent-storage-csi-aws-ebs-intro_aws-elastic-block-store-operator.html">AWS EBS CSI Driver Operator</a>
 </li>
 <li><a href="efs-driver-overview_aws-elastic-file-storage.html">Overview</a>
 </li>
@@ -1456,10 +1478,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
 </li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="view-node-status-and-resource-usage-con_view-node-status-and-resource-usage.html">View node status and resource usage</a>
@@ -1513,6 +1531,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="nodes-cluster-limit-ranges-about_restrict-resource-consumption-with-limit-ranges.html">About limit ranges</a>
 </li>
 <li><a href="admin-quota-overview_set-resource-quotas-for-a-project.html">Resources managed by quota</a>
+</li>
+<li><a href="quotas-resources-managed_set-per-project-resource-quotas.html">Resources managed by quotas</a>
+</li>
+<li><a href="quotas-setting-projects_set-cluster-resource-quotas.html">Selecting multiple projects during quota creation</a>
 </li>
 <li><a href="container-limits_configure-compute-resource-limits.html">Container limits</a>
 </li>
@@ -1743,8 +1765,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
-<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
-</li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collect Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
@@ -1782,8 +1802,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
 <li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
-</li>
-<li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
@@ -4128,7 +4146,10 @@ spec:
 <div class="sect3">
 <h4 id="precache-images-for-disconnected-ztp-intro_precache-images-for-disconnected-ztp">Precache images for disconnected ZTP</h4>
 <div class="paragraph _abstract">
-<p>In environments with limited bandwidth where you use the GitOps ZTP solution to deploy a large number of clusters, you want to avoid downloading all the images that are required for bootstrapping and installing Red&#160;Hat OpenShift Container Platform. The limited bandwidth at remote single-node OpenShift sites can cause long deployment times. The <code>factory-precaching-cli</code> tool allows you to pre-stage servers before shipping them to the remote site for ZTP provisioning.</p>
+<p>In environments with limited bandwidth where you use the GitOps ZTP solution to deploy a large number of clusters, you want to avoid downloading all the images that are required for bootstrapping and installing Red&#160;Hat OpenShift Container Platform.</p>
+</div>
+<div class="paragraph">
+<p>The limited bandwidth at remote single-node OpenShift sites can cause long deployment times. The <code>factory-precaching-cli</code> tool allows you to pre-stage servers before shipping them to the remote site for ZTP provisioning.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -4178,9 +4199,13 @@ spec:
 <div class="sect4">
 <h5 id="ztp-getting-tool_precache-images-for-disconnected-ztp">Getting the factory-precaching-cli tool</h5>
 <div class="paragraph _abstract">
-<p>The factory-precaching-cli tool Go binary is publicly available in <a href="https://quay.io/openshift-kni/telco-ran-tools:latest">the {rds-first} tools container image</a>.
-The factory-precaching-cli tool Go binary in the container image is executed on the server running an RHCOS live image using <code>podman</code>.
-If you are working in a disconnected environment or have a private registry, you need to copy the image there so you can download the image to the server.</p>
+<p>The factory-precaching-cli tool Go binary in the container image is executed on the server running an RHCOS live image using <code>podman</code>.</p>
+</div>
+<div class="paragraph">
+<p>The factory-precaching-cli tool Go binary is publicly available in <a href="https://quay.io/openshift-kni/telco-ran-tools:latest">the {rds-first} tools container image</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you are working in a disconnected environment or have a private registry, you need to copy the image there so you can download the image to the server.</p>
 </div>
 <div class="ulist">
 <div class="title">Procedure</div>
@@ -4943,8 +4968,10 @@ Workers:                            83</code></pre>
 <div class="sect5">
 <h6 id="ztp-custom-pre-caching-in-disconnected-environment_precache-images-for-disconnected-ztp">Pre-caching custom images in disconnected environments</h6>
 <div class="paragraph _abstract">
-<p>The <code>--generate-imageset</code> argument stops the factory-precaching-cli tool after the <code>ImageSetConfiguration</code> custom resource (CR) is generated.
-This allows you to customize the <code>ImageSetConfiguration</code> CR before downloading any images.
+<p>The <code>--generate-imageset</code> argument stops the factory-precaching-cli tool after the <code>ImageSetConfiguration</code> custom resource (CR) is generated.</p>
+</div>
+<div class="paragraph">
+<p>This allows you to customize the <code>ImageSetConfiguration</code> CR before downloading any images.
 After you customized the CR, you can use the <code>--skip-imageset</code> argument to download the images that you specified in the <code>ImageSetConfiguration</code> CR.</p>
 </div>
 <div class="paragraph">
@@ -5191,8 +5218,10 @@ factory-precaching-cli download \
 <div class="sect4">
 <h5 id="ztp-pre-caching-config-con_precache-images-for-disconnected-ztp">Pre-caching images in GitOps ZTP</h5>
 <div class="paragraph _abstract">
-<p>The <code>ClusterInstance</code> manifest defines the installation and configuration parameters for an Red&#160;Hat OpenShift Container Platform cluster.
-In the GitOps Zero Touch Provisioning (ZTP) provisioning workflow, the factory-precaching-cli tool uses the following fields in the <code>ClusterInstance</code> manifest to load the pre-cached images:</p>
+<p>The <code>ClusterInstance</code> manifest defines the installation and configuration parameters for an Red&#160;Hat OpenShift Container Platform cluster.</p>
+</div>
+<div class="paragraph">
+<p>In the GitOps Zero Touch Provisioning (ZTP) provisioning workflow, the factory-precaching-cli tool uses the following fields in the <code>ClusterInstance</code> manifest to load the pre-cached images:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -6321,8 +6350,10 @@ Labels: beta.kubernetes.io/arch=amd64
 <div class="sect5">
 <h6 id="ztp-configuring-ipsec-using-ztp-and-siteconfig_ztp-deploy-far-edge-sites">Configuring IPsec encryption for single-node OpenShift clusters using GitOps ZTP and ClusterInstance resources</h6>
 <div class="paragraph _abstract">
-<p>You can enable IPsec encryption in managed single-node OpenShift clusters that you install using GitOps ZTP and Red&#160;Hat Advanced Cluster Management (RHACM).
-You can encrypt traffic between the managed cluster and IPsec endpoints external to the managed cluster. All network traffic between nodes on the OVN-Kubernetes cluster network is encrypted with IPsec in Transport mode.</p>
+<p>You can enable IPsec encryption in managed single-node OpenShift clusters that you install using GitOps ZTP and Red&#160;Hat Advanced Cluster Management (RHACM).</p>
+</div>
+<div class="paragraph">
+<p>You can encrypt traffic between the managed cluster and IPsec endpoints external to the managed cluster. All network traffic between nodes on the OVN-Kubernetes cluster network is encrypted with IPsec in Transport mode.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -6587,8 +6618,10 @@ spec:
 <div class="sect5">
 <h6 id="ztp-configuring-ipsec-using-ztp-and-siteconfig-for-mno_ztp-deploy-far-edge-sites">Configuring IPsec encryption for multi-node clusters using GitOps ZTP and ClusterInstance resources</h6>
 <div class="paragraph _abstract">
-<p>You can enable IPsec encryption in managed multi-node clusters that you install using GitOps ZTP and Red&#160;Hat Advanced Cluster Management (RHACM).
-You can encrypt traffic between the managed cluster and IPsec endpoints external to the managed cluster. All network traffic between nodes on the OVN-Kubernetes cluster network is encrypted with IPsec in Transport mode.</p>
+<p>You can enable IPsec encryption in managed multi-node clusters that you install using GitOps ZTP and Red&#160;Hat Advanced Cluster Management (RHACM).</p>
+</div>
+<div class="paragraph">
+<p>You can encrypt traffic between the managed cluster and IPsec endpoints external to the managed cluster. All network traffic between nodes on the OVN-Kubernetes cluster network is encrypted with IPsec in Transport mode.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -6989,6 +7022,10 @@ For example, ping an IP address in the <code>rightsubnet</code> range that you s
 </div>
 <div class="sect5">
 <h6 id="ztp-sno-accelerated-ztp_ztp-deploy-far-edge-sites">Accelerated provisioning of GitOps ZTP</h6>
+<div class="paragraph _abstract">
+<p>You can reduce the time taken for cluster installation by using accelerated provisioning of GitOps ZTP for single-node OpenShift.
+Accelerated ZTP speeds up installation by applying Day 2 manifests derived from policies at an earlier stage.</p>
+</div>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -7005,10 +7042,6 @@ For example, ping an IP address in the <code>rightsubnet</code> range that you s
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p>You can reduce the time taken for cluster installation by using accelerated provisioning of GitOps ZTP for single-node OpenShift.
-Accelerated ZTP speeds up installation by applying Day 2 manifests derived from policies at an earlier stage.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -7588,7 +7621,10 @@ For example, run the following command:</p>
 <div class="sect4">
 <h5 id="ztp-customizing-the-install-extra-manifests_ztp-advanced-installation-options">Customizing extra installation manifests in the GitOps ZTP pipeline</h5>
 <div class="paragraph _abstract">
-<p>You can define a set of extra manifests for inclusion in the installation phase of the GitOps Zero Touch Provisioning (ZTP) pipeline. These manifests are linked to the <code>ClusterInstance</code> custom resources (CRs) and are applied to the cluster during installation. Including <code>MachineConfig</code> CRs at install time makes the installation process more efficient.</p>
+<p>You can define a set of extra manifests for inclusion in the installation phase of the GitOps Zero Touch Provisioning (ZTP) pipeline.</p>
+</div>
+<div class="paragraph">
+<p>These manifests are linked to the <code>ClusterInstance</code> custom resources (CRs) and are applied to the cluster during installation. Including <code>MachineConfig</code> CRs at install time makes the installation process more efficient.</p>
 </div>
 <div class="paragraph">
 <p>Extra manifests must be packaged in <code>ConfigMap</code> resources and referenced in the <code>extraManifestsRefs</code> field of the <code>ClusterInstance</code> CR.</p>
@@ -7702,8 +7738,10 @@ spec:
 <div class="sect4">
 <h5 id="ztp-customizing-br-ex-bridge-install_ztp-advanced-installation-options">Customizing the br-ex bridge at installation time in the GitOps ZTP pipeline</h5>
 <div class="paragraph _abstract">
-<p>By default, Red&#160;Hat OpenShift Container Platform automatically configures the Open vSwitch (OVS) <code>br-ex</code> bridge on bare-metal nodes.
-For advanced networking requirements, you can override this default behavior by defining a customized <code>br-ex</code> bridge in an NMState configuration.
+<p>By default, Red&#160;Hat OpenShift Container Platform automatically configures the Open vSwitch (OVS) <code>br-ex</code> bridge on bare-metal nodes.</p>
+</div>
+<div class="paragraph">
+<p>For advanced networking requirements, you can override this default behavior by defining a customized <code>br-ex</code> bridge in an NMState configuration.
 When you configure the customized <code>br-ex</code> bridge as part of the GitOps Zero Touch Provisioning (ZTP) installation, the configuration is applied during cluster provisioning.
 This eliminates the need for the Day 2 migration procedure, which requires a node reboot.</p>
 </div>
@@ -8688,7 +8726,10 @@ control-plane-2.example.com    provisioning              true             5m</co
 <div class="sect4">
 <h5 id="ztp-troubleshooting-ztp-gitops-supermicro-tls_ztp-advanced-installation-options">Troubleshooting GitOps ZTP virtual media booting on SuperMicro servers</h5>
 <div class="paragraph _abstract">
-<p>SuperMicro X11 servers do not support virtual media installations when the image is served using the <code>https</code> protocol. As a result, single-node OpenShift deployments for this environment fail to boot on the target node. To avoid this issue, log in to the hub cluster and disable Transport Layer Security (TLS) in the <code>Provisioning</code> resource. This ensures the image is not served with TLS even though the image address uses the <code>https</code> scheme.</p>
+<p>SuperMicro X11 servers do not support virtual media installations when the image is served using the <code>https</code> protocol.</p>
+</div>
+<div class="paragraph">
+<p>As a result, single-node OpenShift deployments for this environment fail to boot on the target node. To avoid this issue, log in to the hub cluster and disable Transport Layer Security (TLS) in the <code>Provisioning</code> resource. This ensures the image is not served with TLS even though the image address uses the <code>https</code> scheme.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -9237,7 +9278,10 @@ type: kubernetes.io/dockerconfigjson</code></pre>
 <div class="sect4">
 <h5 id="setting-managed-bare-metal-host-kernel-arguments_ztp-manual-cluster-installation">Configuring Discovery ISO kernel arguments for manual installations using GitOps ZTP</h5>
 <div class="paragraph _abstract">
-<p>The GitOps Zero Touch Provisioning (ZTP) workflow uses the Discovery ISO as part of the Red&#160;Hat OpenShift Container Platform installation process on managed bare-metal hosts. You can edit the <code>InfraEnv</code> resource to specify kernel arguments for the Discovery ISO. This is useful for cluster installations with specific environmental requirements. For example, configure the <code>rd.net.timeout.carrier</code> kernel argument for the Discovery ISO to facilitate static networking for the cluster or to receive a DHCP address before downloading the root file system during installation. In Red&#160;Hat OpenShift Container Platform {product-version}, you can only add kernel arguments. You can not replace or delete kernel arguments.</p>
+<p>The GitOps Zero Touch Provisioning (ZTP) workflow uses the Discovery ISO as part of the Red&#160;Hat OpenShift Container Platform installation process on managed bare-metal hosts. You can edit the <code>InfraEnv</code> resource to specify kernel arguments for the Discovery ISO.</p>
+</div>
+<div class="paragraph">
+<p>This is useful for cluster installations with specific environmental requirements. For example, configure the <code>rd.net.timeout.carrier</code> kernel argument for the Discovery ISO to facilitate static networking for the cluster or to receive a DHCP address before downloading the root file system during installation. In Red&#160;Hat OpenShift Container Platform {product-version}, you can only add kernel arguments. You can not replace or delete kernel arguments.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -9460,8 +9504,10 @@ metadata:
 <div class="sect4">
 <h5 id="ztp-late-binding-bare-metal-host-pools_ztp-manual-cluster-installation">Late binding for bare-metal host pools in GitOps ZTP deployments</h5>
 <div class="paragraph _abstract">
-<p>In the standard GitOps ZTP flow, the <code>InfraEnv</code> custom resource (CR) references a specific <code>ClusterDeployment</code> CR, and all discovered hosts are automatically associated with that cluster.
-Late binding separates host discovery from cluster assignment, so you can manage a pool of bare-metal hosts independently from cluster lifecycle.</p>
+<p>In the standard GitOps ZTP flow, the <code>InfraEnv</code> custom resource (CR) references a specific <code>ClusterDeployment</code> CR, and all discovered hosts are automatically associated with that cluster.</p>
+</div>
+<div class="paragraph">
+<p>Late binding separates host discovery from cluster assignment, so you can manage a pool of bare-metal hosts independently from cluster lifecycle.</p>
 </div>
 <div class="paragraph">
 <p>With late binding, you create an <code>InfraEnv</code> CR without a <code>ClusterDeployment</code> reference, so that all hosts booted from the discovery ISO remain unbound and available for assignment to any cluster.
@@ -9492,8 +9538,10 @@ Common scenarios include:</p>
 <div class="sect4">
 <h5 id="ztp-binding-bmh-to-cluster-using-annotation_ztp-manual-cluster-installation">Bind bare-metal hosts to clusters using the cluster-reference annotation in GitOps ZTP deployments</h5>
 <div class="paragraph _abstract">
-<p>In GitOps ZTP deployments, you can declaratively bind individual <code>BareMetalHost</code> resources from a shared <code>InfraEnv</code> pool to specific <code>ClusterDeployment</code> CRs by using the <code>bmac.agent-install.openshift.io/cluster-reference</code> annotation.
-This approach is compatible with GitOps workflows because the binding is managed through annotations on the <code>BareMetalHost</code> resource rather than by patching <code>Agent</code> CRs directly.</p>
+<p>In GitOps ZTP deployments, you can declaratively bind individual <code>BareMetalHost</code> resources from a shared <code>InfraEnv</code> pool to specific <code>ClusterDeployment</code> CRs by using the <code>bmac.agent-install.openshift.io/cluster-reference</code> annotation.</p>
+</div>
+<div class="paragraph">
+<p>This approach is compatible with GitOps workflows because the binding is managed through annotations on the <code>BareMetalHost</code> resource rather than by patching <code>Agent</code> CRs directly.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -10076,9 +10124,11 @@ Can also be created without a <code>ClusterDeployment</code> reference to enable
 </div>
 <div class="sect4">
 <h5 id="ztp-migrate-clusterinstance-overview_ztp-migrate-siteconfig-to-clusterinstance">Overview of migrating from SiteConfig CRs to ClusterInstance CRs</h5>
+<div class="paragraph _abstract">
+<p>The <code>ClusterInstance</code> CR provides a more unified and generic approach to defining clusters and is the preferred method for managing cluster deployments in the GitOps ZTP workflow.</p>
+</div>
 <div class="paragraph">
-<p>The <code>ClusterInstance</code> CR provides a more unified and generic approach to defining clusters and is the preferred method for managing cluster deployments in the GitOps ZTP workflow.
-The SiteConfig Operator, which manages the <code>ClusterInstance</code> custom resource (CR), is a fully developed controller shipped as an add-on within Red&#160;Hat Advanced Cluster Management (RHACM).</p>
+<p>The SiteConfig Operator, which manages the <code>ClusterInstance</code> custom resource (CR), is a fully developed controller shipped as an add-on within Red&#160;Hat Advanced Cluster Management (RHACM).</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -10179,7 +10229,7 @@ The SiteConfig Operator, which manages the <code>ClusterInstance</code> custom r
 </div>
 <div class="sect4">
 <h5 id="ztp-creating-argocd-clusterinstance_ztp-migrate-siteconfig-to-clusterinstance">Preparing a parallel Argo CD pipeline for ClusterInstance CRs</h5>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>Create a parallel Argo CD project and application to manage the new <code>ClusterInstance</code> CRs and associated cluster resources.</p>
 </div>
 <div class="ulist">
@@ -10403,9 +10453,11 @@ policies                   Synced        Healthy</code></pre>
 </div>
 <div class="sect4">
 <h5 id="ztp-active-ocp-version_ztp-migrate-siteconfig-to-clusterinstance">Transitioning the active-ocp-version ClusterImageSet</h5>
+<div class="paragraph _abstract">
+<p>Optionally, the <code>active-ocp-version</code> <code>ClusterImageSet</code> is a GitOps Zero Touch Provisioning (ZTP) convention used in GitOps ZTP deployments.</p>
+</div>
 <div class="paragraph">
-<p>Optionally, the <code>active-ocp-version</code> <code>ClusterImageSet</code> is a GitOps Zero Touch Provisioning (ZTP) convention used in GitOps ZTP deployments.
-It provides a single, central definition of the Red&#160;Hat OpenShift Container Platform release image to use when provisioning clusters.
+<p>It provides a single, central definition of the Red&#160;Hat OpenShift Container Platform release image to use when provisioning clusters.
 By default, this resource is synchronized to the hub cluster from the <code>site-config/resources/</code> folder.</p>
 </div>
 <div class="paragraph">
@@ -10498,7 +10550,7 @@ resources:
 </div>
 <div class="sect4">
 <h5 id="ztp-migrating-sno-clusterinstance_ztp-migrate-siteconfig-to-clusterinstance">Performing the migration from SiteConfig CR to ClusterInstance CR</h5>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>Migrate a single-node OpenShift cluster from using a <code>SiteConfig</code> CR to a <code>ClusterInstance</code> CR by removing the <code>SiteConfig</code> CR from the old pipeline, and adding a corresponding <code>ClusterInstance</code> CR to the new pipeline.</p>
 </div>
 <div class="ulist">
@@ -10861,7 +10913,7 @@ clusterinstance.siteconfig.open-cluster-management.io/sno1            Completed 
 </div>
 <div class="sect5">
 <h6 id="ztp-site_converter-ref_ztp-migrate-siteconfig-to-clusterinstance">Reference flags for the siteconfig-converter tool</h6>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>The following matrix describes the flags for the <code>siteconfig-converter</code> tool.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -10919,7 +10971,7 @@ clusterinstance.siteconfig.open-cluster-management.io/sno1            Completed 
 </div>
 <div class="sect4">
 <h5 id="ztp-clusterinstance-cleanup_ztp-migrate-siteconfig-to-clusterinstance">Deleting the Argo CD pipeline post-migration</h5>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>After you migrate all single-node OpenShift clusters from using <code>SiteConfig</code> CRs to <code>ClusterInstance</code> CRs, you can delete the original Argo CD application and related resources that managed the <code>SiteConfig</code> CRs.</p>
 </div>
 <div class="admonitionblock note">
@@ -11037,7 +11089,7 @@ policies                   Synced        Healthy</code></pre>
 </div>
 <div class="sect4">
 <h5 id="ztp-clusterinstance-troubleshooting_ztp-migrate-siteconfig-to-clusterinstance">Troubleshooting the migration to ClusterInstance CRs</h5>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>Consider the following troubleshooting steps if you encounter issues during the migration from <code>SiteConfig</code> CRs to <code>ClusterInstance</code> CRs.</p>
 </div>
 <div class="ulist">
@@ -11274,7 +11326,10 @@ If you use the <code>{policy-gen-cr}</code> CR to change the order of the polici
 <div class="sect4">
 <h5 id="ztp-policygentemplates-for-ran_policygenerator-understand">{policy-gen-cr} CRs for RAN deployments</h5>
 <div class="paragraph _abstract">
-<p>Use <code>{policy-gen-cr}</code> custom resources (CRs) to customize the configuration applied to the cluster by using the GitOps Zero Touch Provisioning (ZTP) pipeline. The <code>{policy-gen-cr}</code> CR allows you to generate one or more policies to manage the set of configuration CRs on your fleet of clusters. The <code>{policy-gen-cr}</code> CR identifies the set of managed CRs, bundles them into policies, builds the policy wrapping around those CRs, and associates the policies with clusters by using label binding rules.</p>
+<p>Use <code>{policy-gen-cr}</code> custom resources (CRs) to customize the configuration applied to the cluster by using the GitOps Zero Touch Provisioning (ZTP) pipeline. The <code>{policy-gen-cr}</code> CR allows you to generate one or more policies to manage the set of configuration CRs on your fleet of clusters.</p>
+</div>
+<div class="paragraph">
+<p>The <code>{policy-gen-cr}</code> CR identifies the set of managed CRs, bundles them into policies, builds the policy wrapping around those CRs, and associates the policies with clusters by using label binding rules.</p>
 </div>
 <div class="paragraph">
 <p>The reference configuration, obtained from the GitOps ZTP container, is designed to provide a set of critical features and node tuning settings that ensure the cluster can support the stringent performance and resource utilization constraints typical of RAN (Radio Access Network) Distributed Unit (DU) applications. Changes or omissions from the baseline configuration can affect feature availability, performance, and resource utilization. Use the reference <code>{policy-gen-cr}</code> CRs as the basis to create a hierarchy of configuration files tailored to your specific site requirements.</p>
@@ -11597,7 +11652,10 @@ policies:
 <div class="sect4">
 <h5 id="ztp-using-pgt-to-update-source-crs_policygenerator-apply-configuration">Using {policy-gen-cr} CRs to override source CRs content</h5>
 <div class="paragraph _abstract">
-<p><code>{policy-gen-cr}</code> custom resources (CRs) allow you to overlay additional configuration details on top of the base source CRs provided with the GitOps plugin in the <code>ztp-site-generate</code> container. You can think of <code>{policy-gen-cr}</code> CRs as a logical merge or patch to the base CR. Use <code>{policy-gen-cr}</code> CRs to update a single field of the base CR, or overlay the entire contents of the base CR. You can update values and insert fields that are not in the base CR.</p>
+<p><code>{policy-gen-cr}</code> custom resources (CRs) allow you to overlay additional configuration details on top of the base source CRs provided with the GitOps plugin in the <code>ztp-site-generate</code> container.</p>
+</div>
+<div class="paragraph">
+<p>You can think of <code>{policy-gen-cr}</code> CRs as a logical merge or patch to the base CR. Use <code>{policy-gen-cr}</code> CRs to update a single field of the base CR, or overlay the entire contents of the base CR. You can update values and insert fields that are not in the base CR.</p>
 </div>
 <div class="paragraph">
 <p>The following example procedure describes how to update fields in the generated <code>PerformanceProfile</code> CR for the reference configuration based on the <code>{policy-gen-cr}</code> CR in the <code>{group-sno-ranGen}</code> file. Use the procedure as a basis for modifying other parts of the <code>{policy-gen-cr}</code> based on your requirements.</p>
@@ -11850,7 +11908,10 @@ ztp-install   cluster1           19h   Completed    All clusters are compliant w
 <div class="sect4">
 <h5 id="ztp-configuring-pgt-compliance-eval-timeouts_policygenerator-apply-configuration">Configuring policy compliance evaluation timeouts for {policy-gen-cr} CRs</h5>
 <div class="paragraph _abstract">
-<p>Use Red&#160;Hat Advanced Cluster Management (RHACM) installed on a hub cluster to monitor and report on whether your managed clusters are compliant with applied policies. RHACM uses policy templates to apply predefined policy controllers and policies. Policy controllers are Kubernetes custom resource definition (CRD) instances.</p>
+<p>Use Red&#160;Hat Advanced Cluster Management (RHACM) installed on a hub cluster to monitor and report on whether your managed clusters are compliant with applied policies.</p>
+</div>
+<div class="paragraph">
+<p>RHACM uses policy templates to apply predefined policy controllers and policies. Policy controllers are Kubernetes custom resource definition (CRD) instances.</p>
 </div>
 <div class="paragraph">
 <p>You can override the default policy evaluation intervals with <code>{policy-gen-cr}</code> custom resources (CRs). You configure duration settings that define how long a <code>ConfigurationPolicy</code> CR can be in a state of policy compliance or non-compliance before RHACM re-evaluates the applied cluster policies.</p>
@@ -12800,7 +12861,10 @@ ztp-site.example1-perf-policy                            inform               No
 <div class="sect4">
 <h5 id="ztp-coordinating-reboots-for-config-changes_policygenerator-monitor-and-manage">Coordinating reboots for configuration changes</h5>
 <div class="paragraph _abstract">
-<p>You can use Topology Aware Lifecycle Manager (TALM) to coordinate reboots across a fleet of spoke clusters when configuration changes require a reboot, such as deferred tuning changes. TALM reboots all nodes in the targeted <code>MachineConfigPool</code> on the selected clusters when the reboot policy is applied.</p>
+<p>You can use Topology Aware Lifecycle Manager (TALM) to coordinate reboots across a fleet of spoke clusters when configuration changes require a reboot, such as deferred tuning changes.</p>
+</div>
+<div class="paragraph">
+<p>TALM reboots all nodes in the targeted <code>MachineConfigPool</code> on the selected clusters when the reboot policy is applied.</p>
 </div>
 <div class="paragraph">
 <p>Instead of rebooting nodes after each individual change, you can apply all configuration updates through policies and then trigger a single, coordinated reboot.</p>
@@ -12938,7 +13002,10 @@ master   rendered-master-be5785c3b98eb7a1ec902fef2b81e865   True      False     
 <div class="sect4">
 <h5 id="ztp-validating-the-generation-of-configuration-policy-crs_policygenerator-monitor-and-manage">Validating the generation of configuration policy CRs</h5>
 <div class="paragraph _abstract">
-<p><code>Policy</code> custom resources (CRs) are generated in the same namespace as the <code>{policy-gen-cr}</code> from which they are created. The same troubleshooting flow applies to all policy CRs generated from a <code>{policy-gen-cr}</code> regardless of whether they are <code>ztp-common</code>, <code>ztp-group</code>, or <code>ztp-site</code> based, as shown using the following commands:</p>
+<p><code>Policy</code> custom resources (CRs) are generated in the same namespace as the <code>{policy-gen-cr}</code> from which they are created.</p>
+</div>
+<div class="paragraph">
+<p>The same troubleshooting flow applies to all policy CRs generated from a <code>{policy-gen-cr}</code> regardless of whether they are <code>ztp-common</code>, <code>ztp-group</code>, or <code>ztp-site</code> based, as shown using the following commands:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -13560,8 +13627,10 @@ However, this also leads to the highest power consumption, which might not be ne
 <div class="sect4">
 <h5 id="ztp-specifying-nics-in-pgt-crs-with-hub-cluster-templates_ztp-use-hub-cluster-templates">Specifying group and site configurations in group PolicyGenerator or PolicyGentemplate CRs</h5>
 <div class="paragraph _abstract">
-<p>You can manage the configuration of fleets of clusters with <code>ConfigMap</code> CRs by using hub templates to populate the group and site values in the generated policies that get applied to the managed clusters.
-Using hub templates in site <code>PolicyGenerator</code> or <code>PolicyGentemplate</code> CRs means that you do not need to create a policy CR for each site.</p>
+<p>You can manage the configuration of fleets of clusters with <code>ConfigMap</code> CRs by using hub templates to populate the group and site values in the generated policies that get applied to the managed clusters.</p>
+</div>
+<div class="paragraph">
+<p>Using hub templates in site <code>PolicyGenerator</code> or <code>PolicyGentemplate</code> CRs means that you do not need to create a policy CR for each site.</p>
 </div>
 <div class="paragraph">
 <p>You can group the clusters in a fleet in various categories, depending on the use case, for example hardware type or region.
@@ -14105,8 +14174,10 @@ spec:
 <div class="sect4">
 <h5 id="ztp-sno-du-configuring-the-container-mountspace_ztp-vdu-reference-cluster-configuration">Reduced platform management footprint</h5>
 <div class="paragraph _abstract">
-<p>To reduce the overall management footprint of the platform, a <code>MachineConfig</code> custom resource (CR) is required that places all Kubernetes-specific mount points in a new namespace separate from the host operating system.
-The following base64-encoded example <code>MachineConfig</code> CR illustrates this configuration.</p>
+<p>To reduce the overall management footprint of the platform, a <code>MachineConfig</code> custom resource (CR) is required that places all Kubernetes-specific mount points in a new namespace separate from the host operating system.</p>
+</div>
+<div class="paragraph">
+<p>The following base64-encoded example <code>MachineConfig</code> CR illustrates this configuration.</p>
 </div>
 <div class="listingblock">
 <div class="title">Recommended container mount namespace configuration (<code>01-container-mount-ns-and-kubelet-conf-master.yaml</code>)</div>
@@ -14255,8 +14326,10 @@ spec:
 <div class="sect4">
 <h5 id="ztp-sno-du-enabling-kdump_ztp-vdu-reference-cluster-configuration">Automatic kernel crash dumps with kdump</h5>
 <div class="paragraph _abstract">
-<p><code>kdump</code> is a Linux kernel feature that creates a kernel crash dump when the kernel crashes.
-You can use the crash dump to debug and find the cause of the kernel crash.
+<p><code>kdump</code> is a Linux kernel feature that creates a kernel crash dump when the kernel crashes.</p>
+</div>
+<div class="paragraph">
+<p>You can use the crash dump to debug and find the cause of the kernel crash.
 To enable <code>kdump</code>, you apply <code>MachineConfig</code> custom resources (CRs) that reserve memory for the crash kernel and enable the <code>kdump</code> systemd service.
 The <code>ztp-site-generate</code> container provides the following reference CRs for this configuration:</p>
 </div>
@@ -14289,8 +14362,10 @@ You can extract the CRs from the container image and find them in the <code>out/
 <div class="sect4">
 <h5 id="ztp-sno-du-disabling-crio-wipe_ztp-vdu-reference-cluster-configuration">Disable automatic CRI-O cache wipe</h5>
 <div class="paragraph _abstract">
-<p>After an uncontrolled host shutdown or cluster reboot, CRI-O automatically deletes the entire CRI-O cache, causing all images to be pulled from the registry when the node reboots.
-This can result in unacceptably slow recovery times or recovery failures.
+<p>After an uncontrolled host shutdown or cluster reboot, CRI-O automatically deletes the entire CRI-O cache, causing all images to be pulled from the registry when the node reboots.</p>
+</div>
+<div class="paragraph">
+<p>This can result in unacceptably slow recovery times or recovery failures.
 To prevent this from happening in single-node OpenShift clusters that you install with GitOps ZTP, disable the CRI-O delete cache feature during cluster installation.</p>
 </div>
 <div class="listingblock">
@@ -14394,7 +14469,7 @@ spec:
 </div>
 <div class="sect4">
 <h5 id="ztp-sno-du-configuring-disk-encryption-with-pcr-protection_ztp-vdu-reference-cluster-configuration">Enabling disk encryption with TPM and PCR protection</h5>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>You can use the <code>diskEncryption</code> field in the <code>ClusterInstance</code> custom resource (CR) to configure disk encryption with Trusted Platform Module (TPM) and Platform Configuration Registers (PCRs) protection.</p>
 </div>
 <div class="paragraph">
@@ -14485,7 +14560,7 @@ spec:
 </div>
 <div class="sect4">
 <h5 id="ztp-sno-du-disk-encryption_ztp-vdu-reference-cluster-configuration">About disk encryption with TPM and PCR protection</h5>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>You can use the <code>diskEncryption</code> field in the <code>ClusterInstance</code> custom resource (CR) to configure disk encryption with Trusted Platform Module (TPM) and Platform Configuration Registers (PCRs) protection.</p>
 </div>
 <div class="paragraph">
@@ -14529,7 +14604,7 @@ spec:
 </div>
 <div class="sect4">
 <h5 id="ztp-sno-du-enabling-workload-partitioning_ztp-vdu-reference-cluster-configuration">Workload partitioning</h5>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>Single-node OpenShift clusters that run DU workloads require workload partitioning. This limits the cores allowed to run platform services, maximizing the CPU core for application payloads.</p>
 </div>
 <div class="admonitionblock note">
@@ -15119,8 +15194,10 @@ status:
 <div class="sect4">
 <h5 id="ztp-sno-du-configuring-ptp_ztp-vdu-postinstallation-configuration">PTP</h5>
 <div class="paragraph _abstract">
-<p>Single-node OpenShift clusters use Precision Time Protocol (PTP) for network time synchronization.
-The following example <code>PtpConfig</code> custom resources (CRs) illustrate configurations for ordinary clocks, boundary clocks, and Telecom Grandmaster clocks on supported Intel Ethernet hardware.
+<p>Single-node OpenShift clusters use Precision Time Protocol (PTP) for network time synchronization.</p>
+</div>
+<div class="paragraph">
+<p>The following example <code>PtpConfig</code> custom resources (CRs) illustrate configurations for ordinary clocks, boundary clocks, and Telecom Grandmaster clocks on supported Intel Ethernet hardware.
 You must select the profile that matches your qualified GNR-D hardware layout and complete interface renaming prerequisites before you apply Granite Rapids-D Telecom Grandmaster YAML on Intel Granite Rapids-D servers.</p>
 </div>
 <div class="listingblock">
@@ -16137,7 +16214,10 @@ data:
 <div class="sect4">
 <h5 id="ztp-sno-du-reducing-resource-usage-with-olm-pprof_ztp-vdu-postinstallation-configuration">Operator Lifecycle Manager</h5>
 <div class="paragraph _abstract">
-<p>Single-node OpenShift clusters that run distributed unit workloads require consistent access to CPU resources. Operator Lifecycle Manager (OLM) collects performance data from Operators at regular intervals, resulting in an increase in CPU utilisation. The following <code>ConfigMap</code> custom resource (CR) disables the collection of Operator performance data by OLM.</p>
+<p>Single-node OpenShift clusters that run distributed unit workloads require consistent access to CPU resources.</p>
+</div>
+<div class="paragraph">
+<p>Operator Lifecycle Manager (OLM) collects performance data from Operators at regular intervals, resulting in an increase in CPU utilisation. The following <code>ConfigMap</code> custom resource (CR) disables the collection of Operator performance data by OLM.</p>
 </div>
 <div class="listingblock">
 <div class="title">Recommended cluster OLM configuration (<code>ReduceOLMFootprint.yaml</code>)</div>
@@ -17579,7 +17659,10 @@ prometheusK8s:
 <div class="sect4">
 <h5 id="ztp-additional-worker-daemon-selector-comp_ztp-add-worker-nodes-to-sno">Ensuring PTP and SR-IOV daemon selector compatibility</h5>
 <div class="paragraph _abstract">
-<p>If the DU profile was deployed using the GitOps Zero Touch Provisioning (ZTP) plugin version 4.11 or earlier, the PTP and SR-IOV Operators might be configured to place the daemons only on nodes labeled as <code>master</code>. This configuration prevents the PTP and SR-IOV daemons from operating on the worker node. If the PTP and SR-IOV daemon node selectors are incorrectly configured on your system, you must change the daemons before proceeding with the worker DU profile configuration.</p>
+<p>If the DU profile was deployed using the GitOps Zero Touch Provisioning (ZTP) plugin version 4.11 or earlier, the PTP and SR-IOV Operators might be configured to place the daemons only on nodes labeled as <code>master</code>.</p>
+</div>
+<div class="paragraph">
+<p>This configuration prevents the PTP and SR-IOV daemons from operating on the worker node. If the PTP and SR-IOV daemon node selectors are incorrectly configured on your system, you must change the daemons before proceeding with the worker DU profile configuration.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
@@ -17682,7 +17765,10 @@ openshift-sriov-network-operator -ojsonpath='{.spec}' | jq</code></pre>
 <div class="sect4">
 <h5 id="ztp-additional-worker-node-selector-comp_ztp-add-worker-nodes-to-sno">PTP and SR-IOV node selector compatibility</h5>
 <div class="paragraph _abstract">
-<p>The PTP configuration resources and SR-IOV network node policies use <code>node-role.kubernetes.io/master: ""</code> as the node selector. If the additional worker node has the same NIC configuration as the control plane node, the policies used to configure the control plane node can be reused for the worker node. However, the node selector must be changed to select both node types, for example with the <code>"node-role.kubernetes.io/worker"</code> label.</p>
+<p>The PTP configuration resources and SR-IOV network node policies use <code>node-role.kubernetes.io/master: ""</code> as the node selector.</p>
+</div>
+<div class="paragraph">
+<p>If the additional worker node has the same NIC configuration as the control plane node, the policies used to configure the control plane node can be reused for the worker node. However, the node selector must be changed to select both node types, for example with the <code>"node-role.kubernetes.io/worker"</code> label.</p>
 </div>
 </div>
 <div class="sect4">
@@ -18314,7 +18400,10 @@ generators:
 <div class="sect4">
 <h5 id="ztp-installing-the-new-gitops-ztp-applications_update-ztp-gitops-pipeline">Installing the new GitOps ZTP applications</h5>
 <div class="paragraph _abstract">
-<p>Using the extracted <code>argocd/deployment</code> directory, and after ensuring that the applications point to your site Git repository, apply the full contents of the deployment directory. Applying the full contents of the directory ensures that all necessary resources for the applications are correctly configured.</p>
+<p>Using the extracted <code>argocd/deployment</code> directory, and after ensuring that the applications point to your site Git repository, apply the full contents of the deployment directory.</p>
+</div>
+<div class="paragraph">
+<p>Applying the full contents of the directory ensures that all necessary resources for the applications are correctly configured.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
@@ -18512,7 +18601,10 @@ spec:
 <div class="sect4">
 <h5 id="ztp-roll-out-the-configuration-changes_update-ztp-gitops-pipeline">Rolling out the GitOps ZTP configuration changes</h5>
 <div class="paragraph _abstract">
-<p>If any configuration changes were included in the upgrade due to implementing recommended changes, the upgrade process results in a set of policy CRs on the hub cluster in the <code>Non-Compliant</code> state. With the GitOps Zero Touch Provisioning (ZTP) version 4.10 and later <code>ztp-site-generate</code> container, these policies are set to <code>inform</code> mode and are not pushed to the managed clusters without an additional step by the user. This ensures that potentially disruptive changes to the clusters can be managed in terms of when the changes are made, for example, during a maintenance window, and how many clusters are updated concurrently.</p>
+<p>If any configuration changes were included in the upgrade due to implementing recommended changes, the upgrade process results in a set of policy CRs on the hub cluster in the <code>Non-Compliant</code> state.</p>
+</div>
+<div class="paragraph">
+<p>With the GitOps Zero Touch Provisioning (ZTP) version 4.10 and later <code>ztp-site-generate</code> container, these policies are set to <code>inform</code> mode and are not pushed to the managed clusters without an additional step by the user. This ensures that potentially disruptive changes to the clusters can be managed in terms of when the changes are made, for example, during a maintenance window, and how many clusters are updated concurrently.</p>
 </div>
 <div class="paragraph">
 <p>To roll out the changes, create one or more <code>ClusterGroupUpgrade</code> CRs as detailed in the TALM documentation. The CR must contain the list of <code>Non-Compliant</code> policies that you want to push out to the managed clusters as well as a list or selector of which clusters should be included in the update.</p>
@@ -18532,7 +18624,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-26 14:12:22 +0000
+Last updated 2026-10-27 17:47:20 +0000
 </div>
 </div>
 <style>

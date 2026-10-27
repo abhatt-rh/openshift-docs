@@ -749,6 +749,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_administer.html">Administer</a>
 
 <ul class="sectlevel2">
+<li><a href="about-project-creation_configure-project-creation.html">About project creation</a>
+</li>
+<li><a href="impersonation-project-creation_create-project-as-another-user.html">Impersonating a user when you create a project</a>
+</li>
+<li><a href="pruning-groups_prune-cluster-objects.html">Pruning groups</a>
+</li>
 <li><a href="configure-default-pod-behavior-con_configure-default-pod-behavior.html">Configure default pod behavior</a>
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
@@ -924,6 +930,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_develop.html">Develop</a>
 
 <ul class="sectlevel2">
+<li><a href="applications-projects-overview_work-with-projects.html">Working on a project</a>
+</li>
+<li><a href="applications-create-using-cli-source-code_create-applications-from-the-cli.html">Creating an application from source code</a>
+</li>
+<li><a href="odc-deploying-java-applications_create-applications-from-the-developer-perspective.html">Deploying a Java application by uploading a JAR file</a>
+</li>
+<li><a href="applications-application-lifecycle_understand-deployments.html">Working on an application</a>
+</li>
+<li><a href="deployments-rolling-strategy_configure-deployment-strategies.html">Rolling strategy</a>
+</li>
+<li><a href="deployments-starting-a-deployment_manage-deployment-processes.html">Starting a deployment</a>
+</li>
+<li><a href="deployments-proxy-shard_use-route-based-deployment-strategies.html">Proxy shards and traffic splitting</a>
+</li>
+<li><a href="idle-idling-applications_idle-applications-to-save-resources.html">Application idling</a>
+</li>
 <li><a href="add-nodes-to-an-on-premise-cluster-con_add-nodes-to-an-on-premise-cluster.html">Add nodes to an on-premise cluster</a>
 </li>
 <li><a href="deploy-applications-with-red-hat-s2i-images-61-find-supported-red-hat-container-images-con_deploy-applications-with-red-hat-s2i-images-61-find-supported-red-hat-container-images.html">Find supported Red Hat container images</a>
@@ -1217,6 +1239,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
+<li><a href="review-namespace-policy-and-verify-admin-policy-deployment-con_review-namespace-policy-and-verify-admin-policy-deployment.html">Review namespace policy and verify admin policy deployment</a>
+</li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
@@ -1280,8 +1304,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nfs-selinux_reduce-pod-timouts-using-selinuxchangepolicy.html">SELinux</a>
 </li>
-<li><a href="persistent-storage-csi-aws-ebs-overview_aws-elastic-block-storage.html">Overview of the AWS EBS CSI Driver Operator</a>
-</li>
 <li><a href="persistent-storage-csi-azure-disk-overview_azure-disk-storage.html">Overview of Azure Disk CSI Driver Operator</a>
 </li>
 <li><a href="persistent-storage-csi-azure-file-overview_azure-file-storage.html">Overview</a>
@@ -1320,7 +1342,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="persistent-storage-csi-sc-intro_configure-default-storage-classes.html">Configure the default storage class</a>
 </li>
-<li><a href="persistent-storage-csi-aws-ebs-overview_aws-elastic-block-store-operator.html">Overview of the AWS EBS CSI Driver Operator</a>
+<li><a href="persistent-storage-csi-aws-ebs-intro_aws-elastic-block-store-operator.html">AWS EBS CSI Driver Operator</a>
 </li>
 <li><a href="efs-driver-overview_aws-elastic-file-storage.html">Overview</a>
 </li>
@@ -1456,10 +1478,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
 </li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="view-node-status-and-resource-usage-con_view-node-status-and-resource-usage.html">View node status and resource usage</a>
@@ -1513,6 +1531,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="nodes-cluster-limit-ranges-about_restrict-resource-consumption-with-limit-ranges.html">About limit ranges</a>
 </li>
 <li><a href="admin-quota-overview_set-resource-quotas-for-a-project.html">Resources managed by quota</a>
+</li>
+<li><a href="quotas-resources-managed_set-per-project-resource-quotas.html">Resources managed by quotas</a>
+</li>
+<li><a href="quotas-setting-projects_set-cluster-resource-quotas.html">Selecting multiple projects during quota creation</a>
 </li>
 <li><a href="container-limits_configure-compute-resource-limits.html">Container limits</a>
 </li>
@@ -1743,8 +1765,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
-<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
-</li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collect Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
@@ -1782,8 +1802,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
 <li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
-</li>
-<li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
@@ -1922,7 +1940,7 @@ Hardware offloading is not compatible with DPDK applications.</p>
 <p>Hardware offloading is supported on the following network interface controllers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 866. Supported network interface controllers</caption>
+<caption class="title">Table 872. Supported network interface controllers</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -2614,7 +2632,7 @@ metadata:
 <p>The following table describes the currently supported DPU devices.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 867. Supported devices</caption>
+<caption class="title">Table 873. Supported devices</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3784,7 +3802,7 @@ spec:
 <div class="content">
 <img src="data:image/png;base64," alt="DPDK and TAP plugin">
 </div>
-<div class="title">Figure 104. DPDK and TAP example configuration</div>
+<div class="title">Figure 108. DPDK and TAP example configuration</div>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -6885,7 +6903,10 @@ openshift-sriov-network-operator   worker-1   InProgress    Drain_Required      
 <div class="sect4">
 <h5 id="nw-sriov-configure-exclude-topology-manager_configure-sr-iov-network-devices">Excluding the SR-IOV network topology for NUMA-aware scheduling</h5>
 <div class="paragraph _abstract">
-<p>To exclude advertising the SR-IOV network resource&#8217;s Non-Uniform Memory Access (NUMA) node to the Topology Manager, you can configure the <code>excludeTopology</code> specification in the <code>SriovNetworkNodePolicy</code> custom resource. Use this configuration for more flexible SR-IOV network deployments during NUMA-aware pod scheduling.</p>
+<p>To exclude advertising the SR-IOV network resource&#8217;s Non-Uniform Memory Access (NUMA) node to the Topology Manager, you can configure the <code>excludeTopology</code> specification in the <code>SriovNetworkNodePolicy</code> custom resource.</p>
+</div>
+<div class="paragraph">
+<p>Use this configuration for more flexible SR-IOV network deployments during NUMA-aware pod scheduling.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -7376,7 +7397,7 @@ spec:
 <p>The following table describes the configuration for static IP address assignment:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 868. <code>ipam</code> static configuration object</caption>
+<caption class="title">Table 874. <code>ipam</code> static configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7416,7 +7437,7 @@ spec:
 <p>The <code>addresses</code> array requires objects with the following fields:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 869. <code>ipam.addresses[]</code> array</caption>
+<caption class="title">Table 875. <code>ipam.addresses[]</code> array</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7443,7 +7464,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 870. <code>ipam.routes[]</code> array</caption>
+<caption class="title">Table 876. <code>ipam.routes[]</code> array</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7470,7 +7491,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 871. <code>ipam.dns</code> object</caption>
+<caption class="title">Table 877. <code>ipam.dns</code> object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -7590,7 +7611,7 @@ spec:
 <p>The following table describes the configuration objects for dynamic IP address assignment with Whereabouts:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 872. <code>ipam</code> whereabouts configuration parameters</caption>
+<caption class="title">Table 878. <code>ipam</code> whereabouts configuration parameters</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10520,7 +10541,7 @@ link/ether 9e:23:69:42:fb:8a brd ff:ff:ff:ff:ff:ff</code></pre>
 <p>The fields for the Ingress Node Firewall configuration object are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 873. Ingress Node Firewall Configuration object</caption>
+<caption class="title">Table 879. Ingress Node Firewall Configuration object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10687,7 +10708,7 @@ EOF</code></pre>
 <p>The fields for the Ingress Node Firewall rules object are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 874. Ingress Node Firewall rules object</caption>
+<caption class="title">Table 880. Ingress Node Firewall rules object</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10766,7 +10787,7 @@ EOF</code></pre>
 <p>The values for the <code>ingress</code> object are defined in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 875. <code>ingress</code> object</caption>
+<caption class="title">Table 881. <code>ingress</code> object</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 20%;">
@@ -11156,7 +11177,7 @@ ingress-node-firewall-daemon-pqx56         3/3    Running        0         5d21h
 <p>The following table describes the currently supported DPU devices.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 876. Supported devices</caption>
+<caption class="title">Table 882. Supported devices</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -12163,7 +12184,7 @@ Hardware offloading is not compatible with DPDK applications.</p>
 <p>Hardware offloading is supported on the following network interface controllers:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 877. Supported network interface controllers</caption>
+<caption class="title">Table 883. Supported network interface controllers</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 40%;">
@@ -13124,7 +13145,7 @@ metadata:
 <p>Three nodes form the control plane of the management cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 878. Control plane node requirements</caption>
+<caption class="title">Table 884. Control plane node requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -13169,7 +13190,7 @@ metadata:
 <p>Two physical x86 servers host the NVIDIA BlueField-3 DPUs and act as worker nodes for the management cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 879. Worker node requirements</caption>
+<caption class="title">Table 885. Worker node requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -13224,7 +13245,7 @@ metadata:
 <p>One NVIDIA BlueField-3 DPU is required per worker node.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 880. BlueField-3 DPU requirements</caption>
+<caption class="title">Table 886. BlueField-3 DPU requirements</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -13326,7 +13347,7 @@ metadata:
 <p>A DPF v26.4.1 deployment requires specific versions of Red&#160;Hat OpenShift Container Platform, the OpenShift CLI (<code>oc</code>), hosted control planes, the NVIDIA DPF Operator, and RHCOS BFB, plus <code>cluster-admin</code> privileges on the management cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 881. Software version requirements</caption>
+<caption class="title">Table 887. Software version requirements</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -13373,7 +13394,7 @@ metadata:
 <p>The base BFB is layered with the NVIDIA DOCA stack at provisioning time, and the DOCA services run on the DPUs as separately deployed <code>DPUService</code> resources. The following versions are pinned by this deployment:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 882. NVIDIA DOCA component versions</caption>
+<caption class="title">Table 888. NVIDIA DOCA component versions</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -13566,8 +13587,10 @@ Only control plane nodes are required at this stage.</p>
 <div class="sect4">
 <h5 id="nw-dpf-worker-machineconfig_prepare-the-management-cluster-for-dpf">Configure worker nodes for DPU operation</h5>
 <div class="paragraph _abstract">
-<p>You must deploy the <code>dpu-worker-config</code> Helm chart to configure worker nodes with DPUs before adding those nodes to the management cluster.
-The <code>dpu-worker-config</code> Helm chart creates the <code>MachineConfigPool</code>, <code>dpu-worker-configuration</code> MachineConfig, and other required resources that configure the bridge, OVS services, and IP routing on worker nodes.
+<p>You must deploy the <code>dpu-worker-config</code> Helm chart to configure worker nodes with DPUs before adding those nodes to the management cluster.</p>
+</div>
+<div class="paragraph">
+<p>The <code>dpu-worker-config</code> Helm chart creates the <code>MachineConfigPool</code>, <code>dpu-worker-configuration</code> MachineConfig, and other required resources that configure the bridge, OVS services, and IP routing on worker nodes.
 The <code>MachineConfigPool</code> groups DPU-equipped worker nodes so that the Machine Config Operator can apply DPU-specific configurations to them.</p>
 </div>
 <div class="paragraph">
@@ -13743,7 +13766,10 @@ dpu-worker-configuration                           3.2.0             2m</code></
 <div class="sect4">
 <h5 id="nw-dpf-installing-mce-operator_prepare-the-management-cluster-for-dpf">Install the multicluster engine Operator</h5>
 <div class="paragraph _abstract">
-<p>If you did not install the multicluster engine Operator by using the Assisted Installer, install it from the OpenShift CLI. You do not need to install Red Hat Advanced Cluster Management or create a <code>MultiClusterHub</code> resource to use the multicluster engine Operator. If the Assisted Installer already created a <code>MultiClusterEngine</code> resource, skip this procedure.</p>
+<p>If you did not install the multicluster engine Operator by using the Assisted Installer, install it from the OpenShift CLI.</p>
+</div>
+<div class="paragraph">
+<p>You do not need to install Red Hat Advanced Cluster Management or create a <code>MultiClusterHub</code> resource to use the multicluster engine Operator. If the Assisted Installer already created a <code>MultiClusterEngine</code> resource, skip this procedure.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -14592,7 +14618,7 @@ In current multicluster engine Operator versions the component is named <code>hy
 The values of these variables are used in multiple DPF Operator installation and configuration procedures.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 883. DPF Operator environment variables</caption>
+<caption class="title">Table 889. DPF Operator environment variables</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15124,7 +15150,7 @@ The <code>DPUFlavor</code> also supports an optional <code>configFiles</code> fi
 <p>The <code>nvconfig</code> section contains BlueField-3 firmware parameters that the DPU agent applies by using <code>mlxconfig</code> during provisioning. If any parameter differs from the current firmware configuration, the provisioning controller triggers a system-level reset so that the changes take effect. The following parameters are required for DPF operation:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 884. Required BlueField-3 NVConfig parameters</caption>
+<caption class="title">Table 890. Required BlueField-3 NVConfig parameters</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -16128,8 +16154,10 @@ spec:
 <div class="sect4">
 <h5 id="nw-dpf-creating-service-nads_configure-dpu-network-services">Create the DPUServiceNAD resource</h5>
 <div class="paragraph _abstract">
-<p>Create a <code>DPUServiceNAD</code> custom resource to define the network attachment available to DPU services on the hosted cluster.
-The <code>DPUServiceNAD</code> resource maps to an Open vSwitch (OVS) bridge on the DPU and specifies the resource type, IP address management (IPAM) mode, and maximum transmission unit (MTU) configuration:</p>
+<p>Create a <code>DPUServiceNAD</code> custom resource to define the network attachment available to DPU services on the hosted cluster.</p>
+</div>
+<div class="paragraph">
+<p>The <code>DPUServiceNAD</code> resource maps to an Open vSwitch (OVS) bridge on the DPU and specifies the resource type, IP address management (IPAM) mode, and maximum transmission unit (MTU) configuration:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -16463,8 +16491,10 @@ subjects:
 <div class="sect3">
 <h4 id="nw-dpf-hosted-cluster-overview_provision-a-dpu-hosted-cluster">DPU hosted cluster provisioning with the DPF HCP Provisioner Operator</h4>
 <div class="paragraph _abstract">
-<p>The DPF HCP Provisioner Operator abstracts hosted control plane complexity for DPF by orchestrating the full lifecycle of hosted clusters for DPU environments.
-The Operator treats the hosted control plane as a black box and maintains a 1:1:1 relationship: each <code>DPFHCPProvisioner</code> custom resource maps to exactly one <code>DPUCluster</code> and one <code>HostedCluster</code>.</p>
+<p>The DPF HCP Provisioner Operator abstracts hosted control plane complexity for DPF by orchestrating the full lifecycle of hosted clusters for DPU environments.</p>
+</div>
+<div class="paragraph">
+<p>The Operator treats the hosted control plane as a black box and maintains a 1:1:1 relationship: each <code>DPFHCPProvisioner</code> custom resource maps to exactly one <code>DPUCluster</code> and one <code>HostedCluster</code>.</p>
 </div>
 <div class="paragraph">
 <p>The Operator provides the following capabilities:</p>
@@ -16653,7 +16683,7 @@ spec:
 These environment variables must be set before you create secrets, the <code>DPUCluster</code> resource, or the <code>DPFHCPProvisioner</code> resource.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 885. Hosted cluster provisioning environment variables</caption>
+<caption class="title">Table 891. Hosted cluster provisioning environment variables</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -17631,8 +17661,10 @@ Do not proceed to the next steps until all pending CSRs are approved.</p>
 <div class="sect4">
 <h5 id="nw-dpf-verifying-dpu-provisioning_provision-and-configure-dpu-worker-nodes">Verify DPU provisioning</h5>
 <div class="paragraph _abstract">
-<p>After the worker nodes join the management cluster, the <code>DPUSet</code> controller automatically detects nodes with the <code>feature.node.kubernetes.io/dpu-enabled</code> label, which the Node Feature Discovery Operator applies to DPU-equipped nodes.
-The controller then creates a <code>DPU</code> object for each node and starts the provisioning process.
+<p>After the worker nodes join the management cluster, the <code>DPUSet</code> controller automatically detects nodes with the <code>feature.node.kubernetes.io/dpu-enabled</code> label, which the Node Feature Discovery Operator applies to DPU-equipped nodes.</p>
+</div>
+<div class="paragraph">
+<p>The controller then creates a <code>DPU</code> object for each node and starts the provisioning process.
 You can monitor the provisioning stages to verify progress.</p>
 </div>
 <div class="ulist">
@@ -18054,8 +18086,10 @@ thanos-ruler-user-workload-0           ...     Running   0          ...</code></
 <div class="sect4">
 <h5 id="nw-dpf-configuring-dts-servicemonitor_observe-dpu-telemetry-with-doca-telemetry-service">Configure the DTS ServiceMonitor</h5>
 <div class="paragraph _abstract">
-<p>Create a <code>ServiceMonitor</code> resource to instruct the user workload monitoring Prometheus instance to scrape the DOCA Telemetry Service (DTS) metrics endpoint.
-The <code>ServiceMonitor</code> selects the mirrored DTS service in the <code>dpf-operator-system</code> namespace and scrapes its <code>/metrics</code> path on the <code>httpserverport</code> every 30 seconds.</p>
+<p>Create a <code>ServiceMonitor</code> resource to instruct the user workload monitoring Prometheus instance to scrape the DOCA Telemetry Service (DTS) metrics endpoint.</p>
+</div>
+<div class="paragraph">
+<p>The <code>ServiceMonitor</code> selects the mirrored DTS service in the <code>dpf-operator-system</code> namespace and scrapes its <code>/metrics</code> path on the <code>httpserverport</code> every 30 seconds.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -19020,7 +19054,7 @@ Grafana is not required for basic metric viewing.</p>
 <p>You should get one series per DPU. Hover over a line to see its labels. Note the <code>source</code> label, which is the DPU node name that identifies each DPU.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 886. DTS <code>PromQL</code> queries</caption>
+<caption class="title">Table 892. DTS <code>PromQL</code> queries</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -19093,7 +19127,7 @@ Adjust the time range by using the <strong>time-range</strong> control on the da
 These dashboards are loaded into Grafana automatically through <code>GrafanaDashboard</code> resources created from <code>ConfigMaps</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 887. DPF framework dashboards</caption>
+<caption class="title">Table 893. DPF framework dashboards</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 60%;">
@@ -20999,7 +21033,7 @@ In the debug shell, run:</p>
 <p>The following table lists the support and hardware offload status of OVN-Kubernetes features in this release.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 888. OVN-Kubernetes feature support and offload status</caption>
+<caption class="title">Table 894. OVN-Kubernetes feature support and offload status</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 25%;">
@@ -21173,7 +21207,7 @@ Access the Prometheus web console and go to <strong>Status</strong> &#8594; <str
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-26 14:12:22 +0000
+Last updated 2026-10-27 17:47:20 +0000
 </div>
 </div>
 <style>

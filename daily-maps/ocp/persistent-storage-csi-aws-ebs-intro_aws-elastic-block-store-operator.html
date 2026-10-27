@@ -437,8 +437,48 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
+<!-- navmap-right-toc-start -->
+<style>
+  body.navmap-has-right-toc { padding-right: 18em; }
+  #navmap-right-toc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 16em;
+    height: 100%;
+    overflow: auto;
+    padding: 1.25em 1em;
+    background: #f8f8f7;
+    border-left: 1px solid #e7e7e9;
+    z-index: 1000;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    font-size: .9em;
+  }
+  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
+  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
+  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
+  #navmap-right-toc li.level-3 { padding-left: 1em; }
+  #navmap-right-toc li.level-4 { padding-left: 2em; }
+  #navmap-right-toc li.level-5,
+  #navmap-right-toc li.level-6 { padding-left: 3em; }
+  #navmap-right-toc a { text-decoration: none; }
+  @media screen and (max-width: 1023px) {
+    body.navmap-has-right-toc { padding-right: 0; }
+    #navmap-right-toc {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 1em;
+      border: 1px solid #e7e7e9;
+      border-radius: 4px;
+    }
+  }
+
+
+</style>
+<!-- navmap-right-toc-end -->
 </head>
-<body id="virt-about-the-overview-dashboard_view-cluster-resource-inventory" class="book toc2 toc-left">
+<body id="persistent-storage-csi-aws-ebs-intro_aws-elastic-block-store-operator" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -709,6 +749,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_administer.html">Administer</a>
 
 <ul class="sectlevel2">
+<li><a href="about-project-creation_configure-project-creation.html">About project creation</a>
+</li>
+<li><a href="impersonation-project-creation_create-project-as-another-user.html">Impersonating a user when you create a project</a>
+</li>
+<li><a href="pruning-groups_prune-cluster-objects.html">Pruning groups</a>
+</li>
 <li><a href="configure-default-pod-behavior-con_configure-default-pod-behavior.html">Configure default pod behavior</a>
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
@@ -884,6 +930,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_develop.html">Develop</a>
 
 <ul class="sectlevel2">
+<li><a href="applications-projects-overview_work-with-projects.html">Working on a project</a>
+</li>
+<li><a href="applications-create-using-cli-source-code_create-applications-from-the-cli.html">Creating an application from source code</a>
+</li>
+<li><a href="odc-deploying-java-applications_create-applications-from-the-developer-perspective.html">Deploying a Java application by uploading a JAR file</a>
+</li>
+<li><a href="applications-application-lifecycle_understand-deployments.html">Working on an application</a>
+</li>
+<li><a href="deployments-rolling-strategy_configure-deployment-strategies.html">Rolling strategy</a>
+</li>
+<li><a href="deployments-starting-a-deployment_manage-deployment-processes.html">Starting a deployment</a>
+</li>
+<li><a href="deployments-proxy-shard_use-route-based-deployment-strategies.html">Proxy shards and traffic splitting</a>
+</li>
+<li><a href="idle-idling-applications_idle-applications-to-save-resources.html">Application idling</a>
+</li>
 <li><a href="add-nodes-to-an-on-premise-cluster-con_add-nodes-to-an-on-premise-cluster.html">Add nodes to an on-premise cluster</a>
 </li>
 <li><a href="deploy-applications-with-red-hat-s2i-images-61-find-supported-red-hat-container-images-con_deploy-applications-with-red-hat-s2i-images-61-find-supported-red-hat-container-images.html">Find supported Red Hat container images</a>
@@ -1178,6 +1240,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
+<li><a href="review-namespace-policy-and-verify-admin-policy-deployment-con_review-namespace-policy-and-verify-admin-policy-deployment.html">Review namespace policy and verify admin policy deployment</a>
+</li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
@@ -1215,7 +1279,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_storage.html">Storage</a>
-
 <ul class="sectlevel2">
 <li><a href="automate-dynamic-storage-provisioning-con_automate-dynamic-storage-provisioning.html">Automate dynamic storage provisioning</a>
 </li>
@@ -1240,8 +1303,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="storage-persistent-storage-fsgroup_reduce-pod-timeouts-using-fsgroup.html">Reduce pod timeouts by using fsGroup</a>
 </li>
 <li><a href="nfs-selinux_reduce-pod-timouts-using-selinuxchangepolicy.html">SELinux</a>
-</li>
-<li><a href="persistent-storage-csi-aws-ebs-overview_aws-elastic-block-storage.html">Overview of the AWS EBS CSI Driver Operator</a>
 </li>
 <li><a href="persistent-storage-csi-azure-disk-overview_azure-disk-storage.html">Overview of Azure Disk CSI Driver Operator</a>
 </li>
@@ -1281,7 +1342,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="persistent-storage-csi-sc-intro_configure-default-storage-classes.html">Configure the default storage class</a>
 </li>
-<li><a href="persistent-storage-csi-aws-ebs-overview_aws-elastic-block-store-operator.html">Overview of the AWS EBS CSI Driver Operator</a>
+<li><a href="persistent-storage-csi-aws-ebs-intro_aws-elastic-block-store-operator.html"><span class="toc-current">AWS EBS CSI Driver Operator</span></a>
 </li>
 <li><a href="efs-driver-overview_aws-elastic-file-storage.html">Overview</a>
 </li>
@@ -1395,6 +1456,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
+
 <ul class="sectlevel2">
 <li><a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a>
 </li>
@@ -1415,10 +1477,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="install-node-observability-operator_install-the-node-observability-operator.html">Installing the Node Observability Operator</a>
 </li>
 <li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
-</li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html"><span class="toc-current">About the Red&#160;Hat OpenShift Container Platform dashboards page</span></a>
 </li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
@@ -1473,6 +1531,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="nodes-cluster-limit-ranges-about_restrict-resource-consumption-with-limit-ranges.html">About limit ranges</a>
 </li>
 <li><a href="admin-quota-overview_set-resource-quotas-for-a-project.html">Resources managed by quota</a>
+</li>
+<li><a href="quotas-resources-managed_set-per-project-resource-quotas.html">Resources managed by quotas</a>
+</li>
+<li><a href="quotas-setting-projects_set-cluster-resource-quotas.html">Selecting multiple projects during quota creation</a>
 </li>
 <li><a href="container-limits_configure-compute-resource-limits.html">Container limits</a>
 </li>
@@ -1703,8 +1765,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
-<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
-</li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collect Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
@@ -1742,8 +1802,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
 <li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
-</li>
-<li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
@@ -1827,91 +1885,254 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#persistent-storage-csi-aws-ebs-overview_aws-elastic-block-store-operator">Overview of the AWS EBS CSI Driver Operator</a></li><li class="level-4"><a href="#csi-about_aws-elastic-block-store-operator">About CSI</a></li><li class="level-4"><a href="#byok_aws-elastic-block-store-operator">User-managed encryption</a></li><li class="level-4"><a href="#aws-definition_aws-elastic-block-store-operator">AWS Elastic Block Store (EBS) StorageObject object definition</a></li><li class="level-4"><a href="#maximum-number-of-ebs-volumes-on-a-node_aws-elastic-block-store-operator">Maximum number of EBS volumes on a node</a></li><li class="level-4"><a href="#persistent-storage-csi-eusc_aws-elastic-block-store-operator">Support for European Sovereign Cloud (EUSC) region</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="virt-about-the-overview-dashboard_view-cluster-resource-inventory">About the Red&#160;Hat OpenShift Container Platform dashboards page</h3>
+<h3 id="persistent-storage-csi-aws-ebs-intro_aws-elastic-block-store-operator">AWS EBS CSI Driver Operator</h3>
 <div class="paragraph _abstract">
-<p>Access the Red&#160;Hat OpenShift Container Platform dashboard, which captures high-level information about the cluster, by navigating to <strong>Home</strong> &#8594; <strong>Overview</strong> from the Red&#160;Hat OpenShift Container Platform web console.</p>
+<p>You can provision and manage AWS Elastic Block Storage (EBS) in Red&#160;Hat OpenShift Container Platform by using the AWS EBS Container Storage Interface (CSI) Driver Operator and driver, which provide dynamic volume provisioning and eliminate the need to pre-provision storage.</p>
+</div>
+<div class="sect3">
+<h4 id="persistent-storage-csi-aws-ebs-overview_aws-elastic-block-store-operator">Overview of the AWS EBS CSI Driver Operator</h4>
+<div class="paragraph _abstract">
+<p>Red&#160;Hat OpenShift Container Platform is capable of provisioning persistent volumes (PVs) using the AWS Elastic Block Storage (EBS) Container Storage Interface (CSI) driver.</p>
 </div>
 <div class="paragraph">
-<p>The Red&#160;Hat OpenShift Container Platform dashboard provides various cluster information, captured in individual dashboard cards.</p>
+<p>Familiarity with persistent storage and configuring CSI volumes is recommended when working with a CSI Operator and driver. For more information, see "Understanding persistent storage" and "Configuring CSI volumes".</p>
 </div>
 <div class="paragraph">
-<p>The Red&#160;Hat OpenShift Container Platform dashboard consists of the following cards:</p>
+<p>To create CSI-provisioned PVs that mount to AWS EBS storage assets, Red&#160;Hat OpenShift Container Platform installs the AWS EBS CSI Driver Operator (a Red Hat operator) and the AWS EBS CSI driver by default in the <code>openshift-cluster-csi-drivers</code> namespace.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Details</strong> provides a brief overview of informational cluster details.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">AWS EBS CSI Driver Operator</dt>
+<dd>
+<p>The AWS EBS CSI Driver Operator provides a <code>StorageClass</code> by default that you can use to create persistent volume claims (PVCs). You can disable this default storage class if desired (see "Managing the default storage class"). You also have the option to create the AWS EBS <code>StorageClass</code> as described in "Creating the EBS storage class".</p>
+</dd>
+<dt class="hdlist1">AWS EBS CSI driver</dt>
+<dd>
+<p>The AWS EBS CSI driver enables you to create and mount AWS EBS PVs.</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Statuses include <strong>OK</strong>, <strong>error</strong>, <strong>warning</strong>, <strong>in progress</strong>, and <strong>unknown</strong>. Resources can add custom status names.</p>
+<p>If you installed the AWS EBS CSI Operator and driver on an Red&#160;Hat OpenShift Container Platform 4.5 cluster, you must uninstall the 4.5 Operator and driver before you update to Red&#160;Hat OpenShift Container Platform {product-version}.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Red&#160;Hat OpenShift Container Platform defaults to using the CSI plugin to provision Amazon Elastic Block Store (Amazon EBS) storage.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For information about dynamically provisioning AWS EBS persistent volumes in Red&#160;Hat OpenShift Container Platform, see "Dynamic provisioning".</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="csi-about_aws-elastic-block-store-operator">About CSI</h4>
+<div class="paragraph _abstract">
+<p>The Container Storage Interface (CSI) enables storage vendors to deliver plugins through a standard interface without modifying Kubernetes core code, replacing traditional embedded storage drivers.</p>
+</div>
+<div class="paragraph">
+<p>CSI Operators give Red&#160;Hat OpenShift Container Platform users storage options, such as volume snapshots, that are not possible with in-tree volume plugins.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="byok_aws-elastic-block-store-operator">User-managed encryption</h4>
+<div class="paragraph _abstract">
+<p>The user-managed encryption feature allows you to provide keys during installation that encrypt Red&#160;Hat OpenShift Container Platform node root volumes, and enables all managed storage classes to use these keys to encrypt provisioned storage volumes.</p>
+</div>
+<div class="paragraph">
+<p>You must specify the custom key in the <code>platform.&lt;cloud_type&gt;.defaultMachinePlatform</code> field in the install-config YAML file.</p>
+</div>
+<div class="paragraph">
+<p>This features supports the following storage types:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Cluster ID</p>
-</li>
-<li>
-<p>Provider</p>
-</li>
-<li>
-<p>Version</p>
-</li>
-</ul>
+<p>Amazon Web Services (AWS) Elastic Block storage (EBS)</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If there is no encrypted key defined in the storage class, only set <code>encrypted: "true"</code> in the storage class. The AWS EBS CSI driver uses the AWS managed alias/aws/ebs, which is created by Amazon EBS automatically in each region by default to encrypt provisioned storage volumes. In addition, the managed storage classes all have the <code>encrypted: "true"</code> setting.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For information about installing AWS EBS with user-managed encryption, see "Optional AWS configuration parameters".</p>
 </div>
 </li>
 <li>
-<p><strong>Cluster Inventory</strong> details the number of resources and associated statuses. It is helpful when intervention is required to resolve problems, including information about:</p>
+<p>Microsoft Azure Disk storage</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the OS (root) disk is encrypted, and there is no encrypted key defined in the storage class, Azure Disk CSI driver uses the OS disk encryption key by default to encrypt provisioned storage volumes.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For information about installing Azure Disk with user-managed encryption, see "Preparing an Azure Disk Encryption Set".</p>
+</div>
+</li>
+<li>
+<p>Google Cloud Platform (GCP) persistent disk (PD) storage</p>
+<div class="paragraph">
+<p>For information about installing GCP PD with user-managed encryption, see "Additional Google Cloud configuration parameters".</p>
+</div>
+</li>
+<li>
+<p>IBM Cloud&#174; Virtual Private Cloud (VPC) Block storage</p>
+<div class="paragraph">
+<p>For information about installing with IBM Cloud with user-managed encryption, see "User-managed encryption for IBM Cloud" and "Installing on IBM Cloud".</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="aws-definition_aws-elastic-block-store-operator">AWS Elastic Block Store (EBS) StorageObject object definition</h4>
+<div class="paragraph _abstract">
+<p>This AWS EBS storage class example shows how to configure volume type, IOPS performance, encryption settings, and filesystem type for dynamically provisioned persistent volumes.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example AWS EBS storage class YAML file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: &lt;storage-class-name&gt;
+provisioner: ebs.csi.aws.com
+parameters:
+  type: io1
+  iopsPerGB: "10"
+  encrypted: "true"
+  kmsKeyId: keyvalue
+  fsType: ext4</code></pre>
+</div>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Number of nodes.</p>
+<p><code>metadata.name</code>: Name of the storage class. The persistent volume claim uses this storage class for provisioning the associated persistent volumes.</p>
 </li>
 <li>
-<p>Number of pods.</p>
+<p><code>parameters.type</code>: Select from <code>io1</code>, <code>gp3</code>, <code>sc1</code>, <code>st1</code>. The default is <code>gp3</code>. For valid Amazon Resource Name (ARN) values, see the AWS documentation, <em>Identify AWS resources with Amazon Resource Names (ARNs)</em>.</p>
 </li>
 <li>
-<p>Persistent storage volume claims.</p>
-</li>
-<li>
-<p>Bare-metal hosts in the cluster, listed according to their state (only available in <strong>metal3</strong> environment).</p>
-</li>
-</ul>
+<p>Optional: <code>parameters.iopsPerGB</code>. Only for <strong>io1</strong> volumes. I/O operations per second per GiB.</p>
+<div class="paragraph">
+<p>The AWS volume plugin multiplies this with the size of the requested volume to compute IOPS of the volume. The maximum value is 20,000 IOPS, which
+is the maximum supported by AWS.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see the AWS documentation, <em>Identify AWS resources with Amazon Resource Names (ARNs)</em>.</p>
 </div>
 </li>
 <li>
-<p><strong>Status</strong> helps administrators understand how cluster resources are consumed. Click a resource to jump to a detailed page listing pods and nodes that consume the largest amount of the specified cluster resource (CPU, memory, or storage).</p>
+<p>Optional: <code>parameters.encrypted</code>. Indicates whether to encrypt the EBS volume. Valid values are <code>true</code> or <code>false</code>.</p>
 </li>
 <li>
-<p><strong>Cluster Utilization</strong> shows the capacity of various resources over a specified period of time, to help administrators understand the scale and frequency of high resource consumption, including information about:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>CPU time.</p>
-</li>
-<li>
-<p>Memory allocation.</p>
-</li>
-<li>
-<p>Storage consumed.</p>
-</li>
-<li>
-<p>Network resources consumed.</p>
-</li>
-<li>
-<p>Pod count.</p>
-</li>
-</ul>
+<p>Optional: <code>parameters.kmsKeyId</code>. The full ARN of the key to use when encrypting the volume. If none is supplied, but <code>encypted</code> is set to <code>true</code>, then AWS generates a key.</p>
+<div class="paragraph">
+<p>For valid ARN values, see the AWS documentation, <em>Identify AWS resources with Amazon Resource Names (ARNs)</em>.</p>
 </div>
 </li>
 <li>
-<p><strong>Activity</strong> lists messages related to recent activity in the cluster, such as pod creation or virtual machine migration to another host.</p>
+<p>Optional: <code>parameters.fsType</code>. File system that is created on dynamically provisioned volumes. This value is copied to the <code>fsType</code> field of dynamically provisioned persistent volumes, and the file system is created when the volume is mounted for the first time. The default value is <code>ext4</code>.</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="maximum-number-of-ebs-volumes-on-a-node_aws-elastic-block-store-operator">Maximum number of EBS volumes on a node</h4>
+<div class="paragraph _abstract">
+<p>By default, you can attach a maximum of 39 EBS volumes attached to one node. This limit is consistent with the AWS volume limits. The volume limit depends on the instance type.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As a cluster administrator, you must use either in-tree or Container Storage Interface (CSI) volumes and their respective storage classes, but never both volume types at the same time. The maximum attached EBS volume number is counted separately for in-tree and CSI volumes, which means you could have up to 39 EBS volumes of each type.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="persistent-storage-csi-eusc_aws-elastic-block-store-operator">Support for European Sovereign Cloud (EUSC) region</h4>
+<div class="paragraph _abstract">
+<p>European Sovereign Cloud (EUSC) region acts as a "digital fortress" built within a specific country&#8217;s borders. Sovereign Clouds are specifically designed to meet strict legal, jurisdictional, and security requirements of a particular nation or entity.</p>
+</div>
+<div class="paragraph">
+<p>In the context of storage, EUSC ensures that all data, including primary storage, backups, and the resulting metadata, resides physically within the specific nation&#8217;s borders and remains exclusively under its legal jurisdiction.</p>
+</div>
+<div class="paragraph">
+<p>For Red&#160;Hat OpenShift Container Platform 4.22, and later, only AWS Elastic Block Storage supports EUSC. AWS Elastic File Storage (EFS) is not supported.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>EUSC is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+</div>
+<div class="paragraph">
+<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For information about installing an Red&#160;Hat OpenShift Container Platform cluster into the AWS EUSC, see "AWS EUSC region".</p>
+</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a> | ↑ Up: <a href="_observe.html">Observe</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a> →</p>
+<p>← Previous: <a href="persistent-storage-csi-sc-intro_configure-default-storage-classes.html">Configure the default storage class</a> | ↑ Up: <a href="_storage.html">Storage</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="efs-driver-overview_aws-elastic-file-storage.html">Overview</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -1922,7 +2143,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-26 14:12:22 +0000
+Last updated 2026-10-27 17:47:20 +0000
 </div>
 </div>
 <style>

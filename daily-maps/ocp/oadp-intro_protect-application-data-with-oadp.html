@@ -748,6 +748,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="_administer.html">Administer</a>
 <ul class="sectlevel2">
+<li><a href="about-project-creation_configure-project-creation.html">About project creation</a>
+</li>
+<li><a href="impersonation-project-creation_create-project-as-another-user.html">Impersonating a user when you create a project</a>
+</li>
+<li><a href="pruning-groups_prune-cluster-objects.html">Pruning groups</a>
+</li>
 <li><a href="configure-default-pod-behavior-con_configure-default-pod-behavior.html">Configure default pod behavior</a>
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
@@ -923,6 +929,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_develop.html">Develop</a>
 
 <ul class="sectlevel2">
+<li><a href="applications-projects-overview_work-with-projects.html">Working on a project</a>
+</li>
+<li><a href="applications-create-using-cli-source-code_create-applications-from-the-cli.html">Creating an application from source code</a>
+</li>
+<li><a href="odc-deploying-java-applications_create-applications-from-the-developer-perspective.html">Deploying a Java application by uploading a JAR file</a>
+</li>
+<li><a href="applications-application-lifecycle_understand-deployments.html">Working on an application</a>
+</li>
+<li><a href="deployments-rolling-strategy_configure-deployment-strategies.html">Rolling strategy</a>
+</li>
+<li><a href="deployments-starting-a-deployment_manage-deployment-processes.html">Starting a deployment</a>
+</li>
+<li><a href="deployments-proxy-shard_use-route-based-deployment-strategies.html">Proxy shards and traffic splitting</a>
+</li>
+<li><a href="idle-idling-applications_idle-applications-to-save-resources.html">Application idling</a>
+</li>
 <li><a href="add-nodes-to-an-on-premise-cluster-con_add-nodes-to-an-on-premise-cluster.html">Add nodes to an on-premise cluster</a>
 </li>
 <li><a href="deploy-applications-with-red-hat-s2i-images-61-find-supported-red-hat-container-images-con_deploy-applications-with-red-hat-s2i-images-61-find-supported-red-hat-container-images.html">Find supported Red Hat container images</a>
@@ -1217,6 +1239,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
+<li><a href="review-namespace-policy-and-verify-admin-policy-deployment-con_review-namespace-policy-and-verify-admin-policy-deployment.html">Review namespace policy and verify admin policy deployment</a>
+</li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
 </li>
 <li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
@@ -1280,8 +1304,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nfs-selinux_reduce-pod-timouts-using-selinuxchangepolicy.html">SELinux</a>
 </li>
-<li><a href="persistent-storage-csi-aws-ebs-overview_aws-elastic-block-storage.html">Overview of the AWS EBS CSI Driver Operator</a>
-</li>
 <li><a href="persistent-storage-csi-azure-disk-overview_azure-disk-storage.html">Overview of Azure Disk CSI Driver Operator</a>
 </li>
 <li><a href="persistent-storage-csi-azure-file-overview_azure-file-storage.html">Overview</a>
@@ -1320,7 +1342,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="persistent-storage-csi-sc-intro_configure-default-storage-classes.html">Configure the default storage class</a>
 </li>
-<li><a href="persistent-storage-csi-aws-ebs-overview_aws-elastic-block-store-operator.html">Overview of the AWS EBS CSI Driver Operator</a>
+<li><a href="persistent-storage-csi-aws-ebs-intro_aws-elastic-block-store-operator.html">AWS EBS CSI Driver Operator</a>
 </li>
 <li><a href="efs-driver-overview_aws-elastic-file-storage.html">Overview</a>
 </li>
@@ -1456,10 +1478,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
 </li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-information-on-the-dashboard.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
-<li><a href="virt-about-the-overview-dashboard_view-cluster-resource-inventory.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
-</li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="view-node-status-and-resource-usage-con_view-node-status-and-resource-usage.html">View node status and resource usage</a>
@@ -1513,6 +1531,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="nodes-cluster-limit-ranges-about_restrict-resource-consumption-with-limit-ranges.html">About limit ranges</a>
 </li>
 <li><a href="admin-quota-overview_set-resource-quotas-for-a-project.html">Resources managed by quota</a>
+</li>
+<li><a href="quotas-resources-managed_set-per-project-resource-quotas.html">Resources managed by quotas</a>
+</li>
+<li><a href="quotas-setting-projects_set-cluster-resource-quotas.html">Selecting multiple projects during quota creation</a>
 </li>
 <li><a href="container-limits_configure-compute-resource-limits.html">Container limits</a>
 </li>
@@ -1743,8 +1765,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
-<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
-</li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collect Windows application event logs</a>
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
@@ -1782,8 +1802,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
 <li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
-</li>
-<li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
@@ -1945,7 +1963,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>OADP also provides plugins for Red&#160;Hat OpenShift Container Platform resource backups, OpenShift Virtualization resource backups, and Container Storage Interface (CSI) snapshots.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 645. OADP plugins</caption>
+<caption class="title">Table 649. OADP plugins</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -2164,7 +2182,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Review the OADP support matrix for version compatibility with Red&#160;Hat OpenShift Container Platform releases and lifecycle policy information, including Extended Update Support (EUS) options.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 646. Supported versions of OADP</caption>
+<caption class="title">Table 650. Supported versions of OADP</caption>
 <colgroup>
 <col style="width: 10%;">
 <col style="width: 12%;">
@@ -2174,16 +2192,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <col style="width: 20%;">
 <col style="width: 20%;">
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Version</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat OpenShift Container Platform version</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">General availability</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Full support ends</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maintenance ends</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Extended Update Support (EUS)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Extended Update Support Term 2 (EUS Term 2)</p></td>
+<th class="tableblock halign-left valign-top">Version</th>
+<th class="tableblock halign-left valign-top">Red&#160;Hat OpenShift Container Platform version</th>
+<th class="tableblock halign-left valign-top">General availability</th>
+<th class="tableblock halign-left valign-top">Full support ends</th>
+<th class="tableblock halign-left valign-top">Maintenance ends</th>
+<th class="tableblock halign-left valign-top">Extended Update Support (EUS)</th>
+<th class="tableblock halign-left valign-top">Extended Update Support Term 2 (EUS Term 2)</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1.6</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
@@ -2252,6 +2272,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>30 Jun 2028</p>
 </div>
+<div class="paragraph">
+<p>EUS must be on Red&#160;Hat OpenShift Container Platform 4.21</p>
+</div>
 <div class="ulist">
 <ul>
 </ul>
@@ -2263,7 +2286,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>30 Jun 2029</p>
 </div>
 <div class="paragraph">
-<p>EUS must be on Red&#160;Hat OpenShift Container Platform 4.21</p>
+<p>EUS Term 2 must be on Red&#160;Hat OpenShift Container Platform 4.21</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2274,16 +2297,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>EUS Term 2 must be on Red&#160;Hat OpenShift Container Platform 4.21</p>
-</div>
-<div class="ulist">
-<ul>
-</ul>
-</div>
-<div class="paragraph nav-footer">
-<p></p>
-</div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1.4</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
@@ -2327,8 +2340,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph nav-footer">
 <p></p>
 </div></div></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>27 Jun 2027</p>
 </div>
@@ -2342,6 +2353,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph nav-footer">
 <p></p>
 </div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1.3</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
@@ -2382,26 +2395,41 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph nav-footer">
 <p></p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>31 Oct 2026</p>
+</div>
+<div class="paragraph">
+<p>EUS Term 2 must be on Red&#160;Hat OpenShift Container Platform 4.14</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
 </tr>
 </tbody>
 </table>
 <div class="sect5">
 <h6 id="oadp-operator-unsupported_learn-about-oadp-capabilities">Unsupported versions of the OADP Operator</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 647. Previous versions of the OADP Operator which are no longer supported</caption>
+<caption class="title">Table 651. Previous versions of the OADP Operator which are no longer supported</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
 <col style="width: 25%;">
 <col style="width: 25%;">
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Version</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">General availability</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Full support ended</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maintenance ended</p></td>
+<th class="tableblock halign-left valign-top">Version</th>
+<th class="tableblock halign-left valign-top">General availability</th>
+<th class="tableblock halign-left valign-top">Full support ended</th>
+<th class="tableblock halign-left valign-top">Maintenance ended</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">14 Jun 2023</p></td>
@@ -3262,7 +3290,10 @@ data:
 <div class="sect4">
 <h5 id="oadp-velero-cpu-memory-requirements_plan-oadp-deployment">Velero CPU and memory requirements based on collected data</h5>
 <div class="paragraph _abstract">
-<p>The following recommendations are based on observations of performance made in the scale and performance lab. The backup and restore resources can be impacted by the type of plugin, the amount of resources required by that backup or restore, and the respective data contained in the persistent volumes (PVs) related to those resources.</p>
+<p>The following recommendations are based on observations of performance made in the scale and performance lab.</p>
+</div>
+<div class="paragraph">
+<p>The backup and restore resources can be impacted by the type of plugin, the amount of resources required by that backup or restore, and the respective data contained in the persistent volumes (PVs) related to those resources.</p>
 </div>
 <div class="sect5">
 <h6 id="_cpu_and_memory_requirement_for_configurations">CPU and memory requirement for configurations</h6>
@@ -4220,7 +4251,10 @@ spec:
 <div class="sect5">
 <h6 id="oadp-configuring-aws-md5sum_connect-oadp-to-backup-storage">Configure the backup storage location with a MD5 checksum algorithm</h6>
 <div class="paragraph _abstract">
-<p>You can configure the Backup Storage Location (BSL) in the Data Protection Application (DPA) to use a MD5 checksum algorithm for both Amazon Simple Storage Service (Amazon S3) and S3-compatible storage providers. The checksum algorithm calculates the checksum for uploading and downloading objects to Amazon S3. You can use one of the following options to set the <code>checksumAlgorithm</code> field in the <code>spec.backupLocations.velero.config.checksumAlgorithm</code> section of the DPA.</p>
+<p>You can configure the Backup Storage Location (BSL) in the Data Protection Application (DPA) to use a MD5 checksum algorithm for both Amazon Simple Storage Service (Amazon S3) and S3-compatible storage providers.</p>
+</div>
+<div class="paragraph">
+<p>The checksum algorithm calculates the checksum for uploading and downloading objects to Amazon S3. You can use one of the following options to set the <code>checksumAlgorithm</code> field in the <code>spec.backupLocations.velero.config.checksumAlgorithm</code> section of the DPA.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -6115,7 +6149,10 @@ spec:
 <div class="sect5">
 <h6 id="oadp-auth-azure-STS_connect-oadp-to-backup-storage">Use OADP with Azure Security Token Service authentication</h6>
 <div class="paragraph _abstract">
-<p>You can use Microsoft Entra Workload ID to access Azure storage for OADP backup and restore operations. This approach uses the signed Kubernetes service account tokens of the OpenShift cluster. These token are automatically rotated every hour and exchanged with the Azure Active Directory (AD) access tokens, eliminating the need for long-term client secrets.</p>
+<p>You can use Microsoft Entra Workload ID to access Azure storage for OADP backup and restore operations.</p>
+</div>
+<div class="paragraph">
+<p>This approach uses the signed Kubernetes service account tokens of the OpenShift cluster. These token are automatically rotated every hour and exchanged with the Azure Active Directory (AD) access tokens, eliminating the need for long-term client secrets.</p>
 </div>
 <div class="paragraph">
 <p>To use the Azure Security Token Service (STS) configuration, you need the <code>credentialsMode</code> field set to <code>Manual</code> during cluster installation. This approach uses the Cloud Credential Operator (<code>ccoctl</code>) to set up the workload identity infrastructure, including the OpenID Connect (OIDC) provider, issuer configuration, and user-assigned managed identities.</p>
@@ -9828,8 +9865,10 @@ spec:
 <div class="paragraph _abstract">
 <p>You can use the OADP command-line interface (CLI) to view and modify client configuration settings. Configuration is stored in <code>~/.config/velero/config.json</code>.</p>
 </div>
+<div class="paragraph">
+<p>Before you use these commands, ensure that the following conditions are met:</p>
+</div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
 <p>The OADP CLI plugin is installed.</p>
@@ -9908,7 +9947,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 648. Flags for the <code>oc oadp completion install</code> command</caption>
+<caption class="title">Table 652. Flags for the <code>oc oadp completion install</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9972,8 +10011,10 @@ spec:
 <div class="paragraph _abstract">
 <p>You can use the OADP command-line interface (CLI) to create, view, describe, download, and delete backups.</p>
 </div>
+<div class="paragraph">
+<p>Before you use these commands, ensure that the following conditions are met:</p>
+</div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
 <p>The OADP CLI plugin is installed and configured in admin mode.</p>
@@ -9994,7 +10035,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 649. Flags for the <code>oc oadp backup create</code> command</caption>
+<caption class="title">Table 653. Flags for the <code>oc oadp backup create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10093,7 +10134,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 650. Flags for the <code>oc oadp backup get</code> command</caption>
+<caption class="title">Table 654. Flags for the <code>oc oadp backup get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10123,7 +10164,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 651. Flags for the <code>oc oadp backup describe</code> command</caption>
+<caption class="title">Table 655. Flags for the <code>oc oadp backup describe</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10175,7 +10216,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 652. Flags for the <code>oc oadp backup delete</code> command</caption>
+<caption class="title">Table 656. Flags for the <code>oc oadp backup delete</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10200,8 +10241,10 @@ spec:
 <div class="paragraph _abstract">
 <p>You can use the OADP command-line interface (CLI) to create, view, describe, and delete restores.</p>
 </div>
+<div class="paragraph">
+<p>Before you use these commands, ensure that the following conditions are met:</p>
+</div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
 <p>The OADP CLI plugin is installed and configured in admin mode.</p>
@@ -10225,7 +10268,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 653. Flags for the <code>oc oadp restore create</code> command</caption>
+<caption class="title">Table 657. Flags for the <code>oc oadp restore create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10311,7 +10354,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 654. Flags for the <code>oc oadp restore get</code> command</caption>
+<caption class="title">Table 658. Flags for the <code>oc oadp restore get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10341,7 +10384,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 655. Flags for the <code>oc oadp restore describe</code> command</caption>
+<caption class="title">Table 659. Flags for the <code>oc oadp restore describe</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10382,7 +10425,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 656. Flags for the <code>oc oadp restore delete</code> command</caption>
+<caption class="title">Table 660. Flags for the <code>oc oadp restore delete</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10407,8 +10450,10 @@ spec:
 <div class="paragraph _abstract">
 <p>You can use the OADP command-line interface (CLI) to create, view, describe, and delete backup schedules. Schedules automate the creation of backups at specified intervals by using a cron expression.</p>
 </div>
+<div class="paragraph">
+<p>Before you use these commands, ensure that the following conditions are met:</p>
+</div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
 <p>The OADP CLI plugin is installed and configured in admin mode.</p>
@@ -10429,7 +10474,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 657. Flags for the <code>oc oadp schedule create</code> command</caption>
+<caption class="title">Table 661. Flags for the <code>oc oadp schedule create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10520,7 +10565,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 658. Flags for the <code>oc oadp schedule get</code> command</caption>
+<caption class="title">Table 662. Flags for the <code>oc oadp schedule get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10561,7 +10606,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 659. Flags for the <code>oc oadp schedule delete</code> command</caption>
+<caption class="title">Table 663. Flags for the <code>oc oadp schedule delete</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10586,8 +10631,10 @@ spec:
 <div class="paragraph _abstract">
 <p>You can use the OADP command-line interface (CLI) to create, view, set, and delete backup storage locations (BSLs). Backup storage locations define where backup data is stored, such as an object storage bucket.</p>
 </div>
+<div class="paragraph">
+<p>Before you use these commands, ensure that the following conditions are met:</p>
+</div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
 <p>The OADP CLI plugin is installed and configured in admin mode.</p>
@@ -10608,7 +10655,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 660. Flags for the <code>oc oadp backup-location create</code> command</caption>
+<caption class="title">Table 664. Flags for the <code>oc oadp backup-location create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10672,7 +10719,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 661. Flags for the <code>oc oadp backup-location get</code> command</caption>
+<caption class="title">Table 665. Flags for the <code>oc oadp backup-location get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10713,7 +10760,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 662. Flags for the <code>oc oadp backup-location delete</code> command</caption>
+<caption class="title">Table 666. Flags for the <code>oc oadp backup-location delete</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10738,8 +10785,10 @@ spec:
 <div class="paragraph _abstract">
 <p>You can use the OADP command-line interface (CLI) to create, view, set, and delete volume snapshot locations (VSLs). Volume snapshot locations define where persistent volume (PV) snapshots are stored.</p>
 </div>
+<div class="paragraph">
+<p>Before you use these commands, ensure that the following conditions are met:</p>
+</div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
 <p>The OADP CLI plugin is installed and configured in admin mode.</p>
@@ -10760,7 +10809,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 663. Flags for the <code>oc oadp snapshot-location create</code> command</caption>
+<caption class="title">Table 667. Flags for the <code>oc oadp snapshot-location create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10806,7 +10855,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 664. Flags for the <code>oc oadp snapshot-location get</code> command</caption>
+<caption class="title">Table 668. Flags for the <code>oc oadp snapshot-location get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10847,7 +10896,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 665. Flags for the <code>oc oadp snapshot-location delete</code> command</caption>
+<caption class="title">Table 669. Flags for the <code>oc oadp snapshot-location delete</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10872,8 +10921,10 @@ spec:
 <div class="paragraph _abstract">
 <p>When the OADP Operator is configured with <code>nonAdmin.requireApprovalForBSL: true</code>, non-admin users who create a <code>NonAdminBackupStorageLocation</code> (NABSL) object trigger an approval request. You can use the OADP command-line interface (CLI) to view, describe, approve, and reject these requests.</p>
 </div>
+<div class="paragraph">
+<p>Before you use these commands, ensure that the following conditions are met:</p>
+</div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
 <p>The OADP CLI plugin is installed and configured in admin mode.</p>
@@ -10897,7 +10948,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 666. Flags for the <code>oc oadp nabsl-request get</code> command</caption>
+<caption class="title">Table 670. Flags for the <code>oc oadp nabsl-request get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10944,7 +10995,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 667. Flags for the <code>oc oadp nabsl-request approve</code> command</caption>
+<caption class="title">Table 671. Flags for the <code>oc oadp nabsl-request approve</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -10983,7 +11034,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 668. Flags for the <code>oc oadp nabsl-request reject</code> command</caption>
+<caption class="title">Table 672. Flags for the <code>oc oadp nabsl-request reject</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11042,7 +11093,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 669. Flags for the <code>oc oadp must-gather</code> command</caption>
+<caption class="title">Table 673. Flags for the <code>oc oadp must-gather</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11127,7 +11178,6 @@ spec:
 </ul>
 </div>
 <div class="paragraph">
-<div class="title">Prerequisites</div>
 <p>Before you use OADP self-service, a cluster administrator must complete the following tasks:</p>
 </div>
 <div class="ulist">
@@ -11168,8 +11218,10 @@ spec:
 <div class="paragraph _abstract">
 <p>You can use the OADP command-line interface (CLI) to create, view, describe, and delete non-admin backups in your namespace.</p>
 </div>
+<div class="paragraph">
+<p>Before you use these commands, ensure that the following conditions are met:</p>
+</div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
 <p>The OADP CLI plugin is installed and configured in non-admin mode.</p>
@@ -11196,7 +11248,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 670. Flags for the <code>oc oadp nonadmin backup create</code> command</caption>
+<caption class="title">Table 674. Flags for the <code>oc oadp nonadmin backup create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11296,7 +11348,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 671. Flags for the <code>oc oadp nonadmin backup get</code> command</caption>
+<caption class="title">Table 675. Flags for the <code>oc oadp nonadmin backup get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11326,7 +11378,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 672. Flags for the <code>oc oadp nonadmin backup describe</code> command</caption>
+<caption class="title">Table 676. Flags for the <code>oc oadp nonadmin backup describe</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11360,7 +11412,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 673. Flags for the <code>oc oadp nonadmin backup logs</code> command</caption>
+<caption class="title">Table 677. Flags for the <code>oc oadp nonadmin backup logs</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11404,7 +11456,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 674. Flags for the <code>oc oadp nonadmin backup delete</code> command</caption>
+<caption class="title">Table 678. Flags for the <code>oc oadp nonadmin backup delete</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11442,8 +11494,10 @@ spec:
 <div class="paragraph _abstract">
 <p>You can use the OADP command-line interface (CLI) to create, view, describe, and delete non-administrator restores in your namespace.</p>
 </div>
+<div class="paragraph">
+<p>Before you use these commands, ensure that the following conditions are met:</p>
+</div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
 <p>The OADP CLI plugin is installed and configured in non-administrator mode.</p>
@@ -11481,7 +11535,7 @@ spec:
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 675. Flags for the <code>oc oadp nonadmin restore create</code> command</caption>
+<caption class="title">Table 679. Flags for the <code>oc oadp nonadmin restore create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11551,7 +11605,7 @@ spec:
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 676. Flags for the <code>oc oadp nonadmin restore get</code> command</caption>
+<caption class="title">Table 680. Flags for the <code>oc oadp nonadmin restore get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11592,7 +11646,7 @@ spec:
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 677. Flags for the <code>oc oadp nonadmin restore describe</code> command</caption>
+<caption class="title">Table 681. Flags for the <code>oc oadp nonadmin restore describe</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11637,7 +11691,7 @@ spec:
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 678. Flags for the <code>oc oadp nonadmin restore logs</code> command</caption>
+<caption class="title">Table 682. Flags for the <code>oc oadp nonadmin restore logs</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11692,7 +11746,7 @@ spec:
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 679. Flags for the <code>oc oadp nonadmin restore delete</code> command</caption>
+<caption class="title">Table 683. Flags for the <code>oc oadp nonadmin restore delete</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11744,8 +11798,10 @@ spec:
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>Before you use these commands, ensure that the following conditions are met:</p>
+</div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
 <p>The OADP CLI plugin is installed and configured in non-administrator mode.</p>
@@ -11783,7 +11839,7 @@ spec:
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 680. Flags for the <code>oc oadp nonadmin bsl create</code> command</caption>
+<caption class="title">Table 684. Flags for the <code>oc oadp nonadmin bsl create</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -11888,7 +11944,7 @@ spec:
 </dl>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 681. Flags for the <code>oc oadp nonadmin bsl get</code> command</caption>
+<caption class="title">Table 685. Flags for the <code>oc oadp nonadmin bsl get</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -12272,50 +12328,53 @@ metadata:
 spec:
   hooks: {}
   includedNamespaces:
-  - &lt;namespace&gt; <img src="data:image/png;base64," alt="1">
-  includedResources: [] <img src="data:image/png;base64," alt="2">
-  excludedResources: [] <img src="data:image/png;base64," alt="3">
-  storageLocation: &lt;velero-sample-1&gt; <img src="data:image/png;base64," alt="4">
+  - &lt;namespace&gt;
+  includedResources: []
+  excludedResources: []
+  storageLocation: &lt;velero-sample-1&gt;
   ttl: 720h0m0s
-  labelSelector: <img src="data:image/png;base64," alt="5">
+  labelSelector:
     matchLabels:
       app=&lt;label_1&gt;
       app=&lt;label_2&gt;
       app=&lt;label_3&gt;
-  orLabelSelectors: <img src="data:image/png;base64," alt="6">
+  orLabelSelectors:
   - matchLabels:
       app=&lt;label_1&gt;
       app=&lt;label_2&gt;
       app=&lt;label_3&gt;</code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><img src="data:image/png;base64," alt="1"></td>
-<td>Specify an array of namespaces to back up.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="2"></td>
-<td>Optional: Specify an array of resources to include in the backup. Resources might be shortcuts (for example, 'po' for 'pods') or fully-qualified. If unspecified, all resources are included.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="3"></td>
-<td>Optional: Specify an array of resources to exclude from the backup. Resources might be shortcuts (for example, 'po' for 'pods') or fully-qualified.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="4"></td>
-<td>Specify the name of the <code>backupStorageLocations</code> CR.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="5"></td>
-<td>Map of {key,value} pairs of backup resources that have <strong>all</strong> of the specified labels.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="6"></td>
-<td>Map of {key,value} pairs of backup resources that have <strong>one or more</strong> of the specified labels.</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>includedNamespaces</code></dt>
+<dd>
+<p>Specifies an array of namespaces to back up.</p>
+</dd>
+<dt class="hdlist1"><code>includedResources</code></dt>
+<dd>
+<p>Optional: Specifies an array of resources to include in the backup. Resources might be shortcuts (for example, 'po' for 'pods') or fully-qualified. If unspecified, all resources are included.</p>
+</dd>
+<dt class="hdlist1"><code>excludedResources</code></dt>
+<dd>
+<p>Optional: Specifies an array of resources to exclude from the backup. Resources might be shortcuts (for example, 'po' for 'pods') or fully-qualified.</p>
+</dd>
+<dt class="hdlist1"><code>storageLocation</code></dt>
+<dd>
+<p>Specifies the name of the <code>backupStorageLocations</code> CR.</p>
+</dd>
+<dt class="hdlist1"><code>labelSelector</code></dt>
+<dd>
+<p>Map of {key,value} pairs of backup resources that have <strong>all</strong> of the specified labels.</p>
+</dd>
+<dt class="hdlist1"><code>orLabelSelectors</code></dt>
+<dd>
+<p>Map of {key,value} pairs of backup resources that have <strong>one or more</strong> of the specified labels.</p>
+</dd>
+</dl>
 </div>
 </li>
 </ol>
@@ -12356,7 +12415,7 @@ spec:
 <li>
 <p>Namespace partitioning: To keep data integrity, OADP uses namespace-level isolation when processing parallel backups. Two backups cannot run simultaneously if they share any included namespaces.</p>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 682. Parallel backup execution examples</caption>
+<caption class="title">Table 686. Parallel backup execution examples</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -12484,75 +12543,78 @@ spec:
     resources:
       - name: &lt;hook_name&gt;
         includedNamespaces:
-        - &lt;namespace&gt; <img src="data:image/png;base64," alt="1">
-        excludedNamespaces: <img src="data:image/png;base64," alt="2">
+        - &lt;namespace&gt;
+        excludedNamespaces:
         - &lt;namespace&gt;
         includedResources:
-        - pods <img src="data:image/png;base64," alt="3">
-        excludedResources: [] <img src="data:image/png;base64," alt="4">
-        labelSelector: <img src="data:image/png;base64," alt="5">
+        - pods
+        excludedResources: []
+        labelSelector:
           matchLabels:
             app: velero
             component: server
-        pre: <img src="data:image/png;base64," alt="6">
+        pre:
           - exec:
-              container: &lt;container&gt; <img src="data:image/png;base64," alt="7">
+              container: &lt;container&gt;
               command:
-              - /bin/uname <img src="data:image/png;base64," alt="8">
+              - /bin/uname
               - -a
-              onError: Fail <img src="data:image/png;base64," alt="9">
-              timeout: 30s <img src="data:image/png;base64," alt="10">
-        post: <img src="data:image/png;base64," alt="11">
+              onError: Fail
+              timeout: 30s
+        post:
 ...</code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><img src="data:image/png;base64," alt="1"></td>
-<td>Optional: You can specify namespaces to which the hook applies. If this value is not specified, the hook applies to all namespaces.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="2"></td>
-<td>Optional: You can specify namespaces to which the hook does not apply.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="3"></td>
-<td>Currently, pods are the only supported resource that hooks can apply to.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="4"></td>
-<td>Optional: You can specify resources to which the hook does not apply.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="5"></td>
-<td>Optional: This hook only applies to objects matching the label. If this value is not specified, the hook applies to all namespaces.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="6"></td>
-<td>Array of hooks to run before the backup.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="7"></td>
-<td>Optional: If the container is not specified, the command runs in the first container in the pod.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="8"></td>
-<td>This is the entrypoint for the init container being added.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="9"></td>
-<td>Allowed values for error handling are <code>Fail</code> and <code>Continue</code>. The default is <code>Fail</code>.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="10"></td>
-<td>Optional: How long to wait for the commands to run. The default is <code>30s</code>.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="11"></td>
-<td>This block defines an array of hooks to run after the backup, with the same parameters as the pre-backup hooks.</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>includedNamespaces</code></dt>
+<dd>
+<p>Optional: Specifies namespaces to which the hook applies. If this value is not specified, the hook applies to all namespaces.</p>
+</dd>
+<dt class="hdlist1"><code>excludedNamespaces</code></dt>
+<dd>
+<p>Optional: Specifies namespaces to which the hook does not apply.</p>
+</dd>
+<dt class="hdlist1"><code>pods</code></dt>
+<dd>
+<p>Currently, pods are the only supported resource that hooks can apply to.</p>
+</dd>
+<dt class="hdlist1"><code>excludedResources</code></dt>
+<dd>
+<p>Optional: Specifies resources to which the hook does not apply.</p>
+</dd>
+<dt class="hdlist1"><code>labelSelector</code></dt>
+<dd>
+<p>Optional: The hook only applies to objects matching the label. If this value is not specified, the hook applies to all namespaces.</p>
+</dd>
+<dt class="hdlist1"><code>pre</code></dt>
+<dd>
+<p>Array of hooks to run before the backup.</p>
+</dd>
+<dt class="hdlist1"><code>container</code></dt>
+<dd>
+<p>Optional: If the container is not specified, the command runs in the first container in the pod.</p>
+</dd>
+<dt class="hdlist1"><code>command</code></dt>
+<dd>
+<p>The entrypoint for the init container being added.</p>
+</dd>
+<dt class="hdlist1"><code>onError</code></dt>
+<dd>
+<p>Allowed values for error handling are <code>Fail</code> and <code>Continue</code>. The default is <code>Fail</code>.</p>
+</dd>
+<dt class="hdlist1"><code>timeout</code></dt>
+<dd>
+<p>Optional: How long to wait for the commands to run. The default is <code>30s</code>.</p>
+</dd>
+<dt class="hdlist1"><code>post</code></dt>
+<dd>
+<p>Defines an array of hooks to run after the backup, with the same parameters as the pre-backup hooks.</p>
+</dd>
+</dl>
 </div>
 </li>
 </ul>
@@ -14373,7 +14435,10 @@ data:
 <div class="sect4">
 <h5 id="oadp-usecase-restore_restore-applications">Restore an application to a different namespace using OADP</h5>
 <div class="paragraph _abstract">
-<p>Restore a backup of an application by using OADP to a new target namespace, <code>test-restore-application</code>. To restore a backup, you create a restore custom resource (CR) as shown in the following example. In the restore CR, the source namespace refers to the application namespace that you included in the backup. You then verify the restore by changing your project to the new restored namespace and verifying the resources.</p>
+<p>Restore a backup of an application by using OADP to a new target namespace, <code>test-restore-application</code>.</p>
+</div>
+<div class="paragraph">
+<p>To restore a backup, you create a restore custom resource (CR) as shown in the following example. In the restore CR, the source namespace refers to the application namespace that you included in the backup. You then verify the restore by changing your project to the new restored namespace and verifying the resources.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -17207,7 +17272,7 @@ spec:
 <p>OADP supports incremental backups of <code>block</code> and <code>Filesystem</code> persistent volumes for both containerized, and OpenShift Virtualization workloads. The following table summarizes the support for File System Backup (FSB), Container Storage Interface (CSI), and CSI Data Mover:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 683. OADP backup support matrix for containerized workloads</caption>
+<caption class="title">Table 687. OADP backup support matrix for containerized workloads</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -17242,7 +17307,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 684. OADP backup support matrix for OpenShift Virtualization workloads</caption>
+<caption class="title">Table 688. OADP backup support matrix for OpenShift Virtualization workloads</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -17486,7 +17551,10 @@ spec:
 <div class="sect4">
 <h5 id="oadp-kopia-algorithms-benchmarking_optimize-backup-performance">Benchmark Kopia hashing, encryption, and splitter algorithms</h5>
 <div class="paragraph _abstract">
-<p>Run Kopia commands to benchmark the hashing, encryption, and splitter algorithms. Based on the benchmarking results, you can select the most suitable algorithm for your workload. You run the Kopia benchmarking commands from a pod on the cluster. The benchmarking results can vary depending on CPU speed, available RAM, disk speed, current I/O load, and so on.</p>
+<p>Run Kopia commands to benchmark the hashing, encryption, and splitter algorithms.</p>
+</div>
+<div class="paragraph">
+<p>Based on the benchmarking results, you can select the most suitable algorithm for your workload. You run the Kopia benchmarking commands from a pod on the cluster. The benchmarking results can vary depending on CPU speed, available RAM, disk speed, current I/O load, and so on.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -18304,7 +18372,10 @@ spec:
 <div class="sect4">
 <h5 id="oadp-restore-single-vm-from-multiple-vm-backup_back-up-and-restore-virtual-machines">Restore a single VM from a backup of multiple VMs</h5>
 <div class="paragraph _abstract">
-<p>If you have a backup containing multiple virtual machines (VMs), and you want to restore only one VM, you can use the <code>LabelSelectors</code> section in the <code>Restore</code> CR to select the VM to restore. To ensure that the persistent volume claim (PVC) attached to the VM is correctly restored, and the restored VM is not stuck in a <code>Provisioning</code> status, use both the <code>app: &lt;vm_name&gt;</code> and the <code>kubevirt.io/created-by</code> labels. To match the <code>kubevirt.io/created-by</code> label, use the UID of <code>DataVolume</code> of the VM.</p>
+<p>If you have a backup containing multiple virtual machines (VMs), and you want to restore only one VM, you can use the <code>LabelSelectors</code> section in the <code>Restore</code> CR to select the VM to restore.</p>
+</div>
+<div class="paragraph">
+<p>To ensure that the persistent volume claim (PVC) attached to the VM is correctly restored, and the restored VM is not stuck in a <code>Provisioning</code> status, use both the <code>app: &lt;vm_name&gt;</code> and the <code>kubevirt.io/created-by</code> labels. To match the <code>kubevirt.io/created-by</code> label, use the UID of <code>DataVolume</code> of the VM.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -18550,7 +18621,7 @@ spec:
 <p>The OADP VMFR feature uses the following custom resources (CRs) to perform file-level restore operations:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 685. Custom resources</caption>
+<caption class="title">Table 689. Custom resources</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -18579,7 +18650,7 @@ spec:
 <p>Review the status phases of <code>VirtualMachineBackupsDiscovery</code> (VMBD) and <code>VirtualMachineFileRestore</code> (VMFR) custom resources (CRs) to track the progress of file-level restore operations. This helps you monitor and troubleshoot VMFR requests.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 686. VirtualMachineBackupsDiscovery phases</caption>
+<caption class="title">Table 690. VirtualMachineBackupsDiscovery phases</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -18614,7 +18685,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 687. VirtualMachineFileRestore phases</caption>
+<caption class="title">Table 691. VirtualMachineFileRestore phases</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -18653,7 +18724,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 688. PVC restore state values</caption>
+<caption class="title">Table 692. PVC restore state values</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -20477,7 +20548,7 @@ spec:
 <div class="sect5">
 <h6 id="_environment_variables">Environment variables</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 689. Credential environment variables</caption>
+<caption class="title">Table 693. Credential environment variables</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -20508,7 +20579,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 690. Configuration environment variables</caption>
+<caption class="title">Table 694. Configuration environment variables</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -20540,7 +20611,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 691. Behavior environment variables</caption>
+<caption class="title">Table 695. Behavior environment variables</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -20577,7 +20648,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 692. Logging environment variables</caption>
+<caption class="title">Table 696. Logging environment variables</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -20612,7 +20683,7 @@ spec:
 <div class="sect5">
 <h6 id="_file_locations">File locations</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 693. Default file locations</caption>
+<caption class="title">Table 697. Default file locations</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -20645,7 +20716,7 @@ spec:
 <p>VMDP is based on Kopia and uses the same repository format. Repositories are fully compatible between the two tools.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 694. Command mapping between VMDP and Kopia</caption>
+<caption class="title">Table 698. Command mapping between VMDP and Kopia</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -20688,7 +20759,7 @@ spec:
 <div class="sect5">
 <h6 id="_s3_compatible_storage">S3-compatible storage</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 695. S3 storage options</caption>
+<caption class="title">Table 699. S3 storage options</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -20777,7 +20848,7 @@ spec:
 <div class="sect5">
 <h6 id="_filesystem_storage">Filesystem storage</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 696. Filesystem storage options</caption>
+<caption class="title">Table 700. Filesystem storage options</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -20829,7 +20900,7 @@ spec:
 <p>VMDP is built for <a href="https://access.redhat.com/articles/4234591">OpenShift Virtualization certified guest operating systems</a> on the following platforms:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 697. Supported guest operating systems</caption>
+<caption class="title">Table 701. Supported guest operating systems</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -21157,7 +21228,7 @@ Flags:
 <p>Review the available commands for managing backup storage locations (BSL) with the virtual machine data protection (VMDP) command-line interface (CLI). This helps you to connect, disconnect, and manage your BSL connections.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 698. BSL management commands</caption>
+<caption class="title">Table 702. BSL management commands</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -21563,7 +21634,7 @@ Flags:
 <p>The OADP Self-Service feature has the following new custom resources (CRs) to perform the backup and restore operations for a namespace admin user:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 699. Custom resources</caption>
+<caption class="title">Table 703. Custom resources</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -21707,7 +21778,7 @@ Flags:
 <p>The phase of the CRs only progress forward. Once a phase transitions to the next phase, it cannot revert to a previous phase.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 700. Phases</caption>
+<caption class="title">Table 704. Phases</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -23148,7 +23219,7 @@ status:
 <p>You can download the following NADR resources:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 701. NADR resources</caption>
+<caption class="title">Table 705. NADR resources</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -24519,7 +24590,7 @@ spec:
 <p>Review the following table for a list of <code>Velero</code> metrics provided by OADP together with their <a href="https://prometheus.io/docs/concepts/metric_types/">Types</a>:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 702. Velero metrics</caption>
+<caption class="title">Table 706. Velero metrics</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -25020,7 +25091,7 @@ status:
 <p>Review the specification fields available in the <code>DataProtectionTest</code> (DPT) custom resource (CR) to configure backup location, upload speed tests, CSI volume snapshot tests, and other options. This helps you customize the DPT CR to validate your specific OADP configuration requirements.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 703. DPT CR spec fields</caption>
+<caption class="title">Table 707. DPT CR spec fields</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -25073,7 +25144,7 @@ status:
 <p>Review the status fields in the <code>DataProtectionTest</code> (DPT) custom resource (CR) to monitor test progress, upload speed results, bucket metadata, and snapshot test outcomes. This helps you interpret the DPT CR results and identify any issues with your OADP configuration.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 704. DPT CR status fields</caption>
+<caption class="title">Table 708. DPT CR status fields</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -25434,7 +25505,7 @@ spec:
 <p>Troubleshoot common <code>DataProtectionTest</code> (DPT) custom resource (CR) issues, such as stuck progress states, upload test failures, and snapshot test failures. This helps you identify and resolve problems with your DPT configuration.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 705. DPT CR troubleshooting</caption>
+<caption class="title">Table 709. DPT CR troubleshooting</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -25484,7 +25555,7 @@ spec:
 <p>The following are <code>DataProtectionApplicationSpec</code> OADP APIs:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 706. DataProtectionApplicationSpec</caption>
+<caption class="title">Table 710. DataProtectionApplicationSpec</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -25556,10 +25627,10 @@ spec:
 <div class="sect5">
 <h6 id="backuplocation-type_oadp-api-reference">BackupLocation type</h6>
 <div class="paragraph _abstract">
-<p>The following are <code>BackupLocation</code> OADP APIs:</p>
+<p>Use the <code>BackupLocation</code> OADP API type to define where OADP stores backups in Red&#160;Hat OpenShift Container Platform. You can specify a Velero backup storage location or an automatically provisioned cloud storage bucket.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 707. BackupLocation</caption>
+<caption class="title">Table 711. BackupLocation</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -25614,10 +25685,10 @@ spec:
 <div class="sect5">
 <h6 id="snapshotlocation-type_oadp-api-reference">SnapshotLocation type</h6>
 <div class="paragraph _abstract">
-<p>The following are <code>SnapshotLocation</code> OADP APIs:</p>
+<p>Use the <code>SnapshotLocation</code> OADP API type to define where OADP stores volume snapshots in Red&#160;Hat OpenShift Container Platform. It uses the Velero <code>VolumeSnapshotLocationSpec</code> to specify the snapshot storage backend.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 708. SnapshotLocation</caption>
+<caption class="title">Table 712. SnapshotLocation</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -25650,10 +25721,10 @@ spec:
 <div class="sect5">
 <h6 id="applicationconfig-type_oadp-api-reference">ApplicationConfig type</h6>
 <div class="paragraph _abstract">
-<p>The following are <code>ApplicationConfig</code> OADP APIs:</p>
+<p>Use the <code>ApplicationConfig</code> OADP API type to define Velero and Restic server configuration for OADP backup and restore operations in Red&#160;Hat OpenShift Container Platform.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 709. ApplicationConfig</caption>
+<caption class="title">Table 713. ApplicationConfig</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -25691,10 +25762,10 @@ spec:
 <div class="sect5">
 <h6 id="veleroconfig-type_oadp-api-reference">VeleroConfig type</h6>
 <div class="paragraph _abstract">
-<p>The following are <code>VeleroConfig</code> OADP APIs:</p>
+<p>Use the <code>VeleroConfig</code> OADP API type to configure the Velero server instance for OADP in Red&#160;Hat OpenShift Container Platform. It controls plugins, feature flags, pod configuration, and logging for the Velero server.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 710. VeleroConfig</caption>
+<caption class="title">Table 714. VeleroConfig</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -25757,10 +25828,10 @@ spec:
 <div class="sect5">
 <h6 id="resticconfig-type_oadp-api-reference">ResticConfig type</h6>
 <div class="paragraph _abstract">
-<p>The following are <code>ResticConfig</code> OADP APIs:</p>
+<p>Use the <code>ResticConfig</code> OADP API type to enable and configure Restic-based backup and restore in Red&#160;Hat OpenShift Container Platform. It defines the Restic timeout, supplemental groups, and pod configuration.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 711. ResticConfig</caption>
+<caption class="title">Table 715. ResticConfig</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -25808,10 +25879,10 @@ spec:
 <div class="sect5">
 <h6 id="podconfig-type_oadp-api-reference">PodConfig type</h6>
 <div class="paragraph _abstract">
-<p>The following are <code>PodConfig</code> OADP APIs:</p>
+<p>Use the <code>PodConfig</code> OADP API type to configure pod-level settings for Velero and Restic pods in Red&#160;Hat OpenShift Container Platform. It defines node selectors, tolerations, resource limits, and labels for backup and restore pods.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 712. PodConfig</caption>
+<caption class="title">Table 716. PodConfig</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -25851,10 +25922,10 @@ spec:
 <div class="sect5">
 <h6 id="features-type_oadp-api-reference">Features type</h6>
 <div class="paragraph _abstract">
-<p>The following are <code>Features</code> OADP APIs:</p>
+<p>Use the <code>Features</code> OADP API type to configure optional OADP features in Red&#160;Hat OpenShift Container Platform. It defines the Data Mover configuration for volume snapshot data movement.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 713. Features</caption>
+<caption class="title">Table 717. Features</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -25887,10 +25958,10 @@ spec:
 <div class="sect5">
 <h6 id="datamover-type_oadp-api-reference">DataMover type</h6>
 <div class="paragraph _abstract">
-<p>The following are <code>DataMover</code> OADP APIs:</p>
+<p>Use the <code>DataMover</code> OADP API type to enable and configure the volume snapshot mover controller and CSI Data Mover plugin in Red&#160;Hat OpenShift Container Platform. It controls data movement for volume snapshot backup and restore operations.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 714. DataMover</caption>
+<caption class="title">Table 718. DataMover</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -25925,10 +25996,10 @@ spec:
 <div class="sect5">
 <h6 id="customplugin-type_oadp-api-reference">CustomPlugin type</h6>
 <div class="paragraph _abstract">
-<p>The following are <code>CustomPlugin</code> OADP APIs:</p>
+<p>Use the <code>CustomPlugin</code> OADP API type to define the name and container image of a custom Velero plugin for OADP in Red&#160;Hat OpenShift Container Platform.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 715. CustomPlugin</caption>
+<caption class="title">Table 719. CustomPlugin</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -26308,7 +26379,7 @@ spec:
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 716. Flags for the <code>oc oadp must-gather</code> command</caption>
+<caption class="title">Table 720. Flags for the <code>oc oadp must-gather</code> command</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -27218,7 +27289,10 @@ velero-7b6c7fb8d7-ppc8m                                     1/1     Running     
 <div class="sect4">
 <h5 id="oadp-restic-restore-failing-psa-policy_diagnose-and-resolve-oadp-failures">Troubleshoot restic restore partially failed issue on OpenShift Container Platform 4.14 onward due to changed PSA policy</h5>
 <div class="paragraph _abstract">
-<p>Resolve a partial failure of Restic restore on OpenShift Container Platform 4.14 onward caused by Pod Security Admission (PSA) policy enforcement by adjusting the <code>restore-resource-priorities</code> field in your <code>DataProtectionApplication</code> (DPA) custom resource (CR). By doing so, you ensure that <code>SecurityContextConstraints</code> (SCC) resources are restored before pods. This helps you to complete restore operations successfully when PSA policies deny pod admission due to Velero resource restore order.</p>
+<p>Resolve a partial failure of Restic restore on OpenShift Container Platform 4.14 onward caused by Pod Security Admission (PSA) policy enforcement by adjusting the <code>restore-resource-priorities</code> field in your <code>DataProtectionApplication</code> (DPA) custom resource (CR).</p>
+</div>
+<div class="paragraph">
+<p>By doing so, you ensure that <code>SecurityContextConstraints</code> (SCC) resources are restored before pods. This helps you to complete restore operations successfully when PSA policies deny pod admission due to Velero resource restore order.</p>
 </div>
 <div class="paragraph">
 <p>From 4.14 onward, OpenShift Container Platform enforces a PSA policy that can hinder the readiness of pods during a Restic restore process. If an SCC resource is not found when a pod is created, and the PSA policy on the pod is not set up to meet the required standards, pod admission is denied.</p>
@@ -27567,7 +27641,10 @@ runtime error: index out of range with length 1, stack trace: goroutine 94…</c
 <div class="sect3">
 <h4 id="oadp-uninstall-intro_uninstall-oadp">Uninstall OADP</h4>
 <div class="paragraph _abstract">
-<p>You can uninstall the OpenShift API for Data Protection (OADP) by deleting the OADP Operator from your cluster. Before uninstalling, ensure that you have deleted all backup and restore custom resources and that no backup operations are in progress. For instructions on deleting an Operator, see "Deleting Operators from a cluster" in the <em>Operator Lifecycle Manager</em> documentation.</p>
+<p>You can uninstall the OpenShift API for Data Protection (OADP) by deleting the OADP Operator from your cluster.</p>
+</div>
+<div class="paragraph">
+<p>Before uninstalling, ensure that you have deleted all backup and restore custom resources and that no backup operations are in progress. For instructions on deleting an Operator, see "Deleting Operators from a cluster" in the <em>Operator Lifecycle Manager</em> documentation.</p>
 </div>
 </div>
 </div>
@@ -27583,7 +27660,7 @@ runtime error: index out of range with length 1, stack trace: goroutine 94…</c
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-26 14:12:22 +0000
+Last updated 2026-10-27 17:47:20 +0000
 </div>
 </div>
 <style>
