@@ -764,8 +764,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
-<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
-</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -841,6 +839,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machineconfig-garbage-collect-removing_remove-no-longer-used-machine-config-objects.html">Remove unused rendered machine configs</a>
 </li>
 <li><a href="machine-health-checks-resource_review-sample-machinehealthcheck-resource.html">About the MachineHealthCheck custom resource</a>
+</li>
+<li><a href="remote-health-monitoring-overview_remote-health-monitoring.html">Remotely monitor the health of Red&#160;Hat OpenShift Container Platform clusters</a>
 </li>
 <li><a href="nodes-pods-daemonsets-about_run-background-tasks-on-a-node-with-daemonsets.html">Daemon set scheduling</a>
 </li>
@@ -1231,7 +1231,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-ingress-and-routes-con_configure-ingress-and-routes.html">Configure ingress and routes</a>
 </li>
+<li><a href="configure-sr-iov-network-devices-con_configure-sr-iov-network-devices.html">Configure SR-IOV network devices</a>
+</li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
 </li>
@@ -1243,11 +1247,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
 </li>
-<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
-</li>
 <li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
-</li>
-<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1588,8 +1588,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
-<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
-</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1605,9 +1603,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
-</li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
+</li>
+<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
 </li>
 <li><a href="deploy-a-plugin-on-a-cluster-con_deploy-a-plugin-on-a-cluster.html">Deploy a plugin on a cluster</a>
 </li>
@@ -1679,8 +1677,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
-</li>
-<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
@@ -4140,7 +4136,7 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The <code>factory-precaching-cli</code> tool is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+<p>Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
 </div>
 <div class="paragraph">
 <p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
@@ -7015,7 +7011,7 @@ Accelerated ZTP speeds up installation by applying Day 2 manifests derived from 
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Accelerated provisioning of GitOps ZTP is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+<p>Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
 </div>
 <div class="paragraph">
 <p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
@@ -8981,7 +8977,7 @@ spec:
   baseDomain: "example.com"
   pullSecretRef:
     name: "assisted-deployment-pull-secret"
-  clusterImageSetNameRef: "openshift-4.22"
+  clusterImageSetNameRef: "openshift-5.0"
   sshPublicKey: "ssh-rsa AAAA..."
   clusterName: "example-ai-sno"
   networkType: "OVNKubernetes"
@@ -10126,7 +10122,7 @@ Can also be created without a <code>ClusterDeployment</code> reference to enable
 </table>
 </div>
 <div class="paragraph">
-<p>The migration from <code>SiteConfig</code> CRs to <code>ClusterInstance</code> CRs provides several improvements, such as enhanced scalability and a clear separation of cluster parameters from the cluster deployment method. For more information about these improvements, and the SiteConfig Operator, see <a href="https://docs.redhat.com/en/documentation/red_hat_advanced_cluster_management_for_kubernetes/2.12/html-single/multicluster_engine_operator_with_red_hat_advanced_cluster_management/index#siteconfig-intro">SiteConfig</a>.</p>
+<p>The migration from <code>SiteConfig</code> CRs to <code>ClusterInstance</code> CRs provides several improvements, such as enhanced scalability and a clear separation of cluster parameters from the cluster deployment method.</p>
 </div>
 <div class="paragraph">
 <p>The migration process involves the following high-level steps:</p>
@@ -10207,6 +10203,14 @@ Can also be created without a <code>ClusterDeployment</code> reference to enable
 ...</code></pre>
 </div>
 </div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="https://docs.redhat.com/en/documentation/red_hat_advanced_cluster_management_for_kubernetes/2.12/html-single/multicluster_engine_operator_with_red_hat_advanced_cluster_management/index#siteconfig-intro">SiteConfig</a></p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
 <h5 id="ztp-creating-argocd-clusterinstance_ztp-migrate-siteconfig-to-clusterinstance">Preparing a parallel Argo CD pipeline for ClusterInstance CRs</h5>
@@ -10272,18 +10276,21 @@ spec:
   - group: 'metal3.io'
     kind: DataImage
   - group: 'siteconfig.open-cluster-management.io'
-    kind: ClusterInstance <img src="data:image/png;base64," alt="1">
+    kind: ClusterInstance
   sourceRepos:
   - '*'</code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><img src="data:image/png;base64," alt="1"></td>
-<td>The <code>ClusterInstance</code> CR manages the <code>siteconfig.open-cluster-management.io</code> object instead of the <code>SiteConfig</code> CR.</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.namespaceResourceWhitelist[].kind</code></dt>
+<dd>
+<p>The <code>ClusterInstance</code> CR manages the <code>siteconfig.open-cluster-management.io</code> object instead of the <code>SiteConfig</code> CR.</p>
+</dd>
+</dl>
 </div>
 </li>
 <li>
@@ -10305,9 +10312,9 @@ spec:
     kind: ManagedCluster
     managedFieldsManagers:
     - controller
-  project: ztp-app-project-v2 <img src="data:image/png;base64," alt="1">
+  project: ztp-app-project-v2
   source:
-    path: site-configs-v2 <img src="data:image/png;base64," alt="2">
+    path: site-configs-v2
     repoURL: http://infra.5g-deployment.lab:3000/student/ztp-repository.git
     targetRevision: main
   syncPolicy:
@@ -10317,15 +10324,18 @@ spec:
     - RespectIgnoreDifferences=true</code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><img src="data:image/png;base64," alt="1"></td>
-<td>The <code>project</code> field must match the name of the <code>AppProject</code> resource created in the previous step.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="2"></td>
-<td>The <code>path</code> field must match the root folder in your Git repository that will contain the <code>ClusterInstance</code> CRs and associated resources.
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.project</code></dt>
+<dd>
+<p>Specifies the Argo CD project. The value must match the name of the <code>AppProject</code> resource created in the previous step.</p>
+</dd>
+<dt class="hdlist1"><code>spec.source.path</code></dt>
+<dd>
+<p>Specifies the root folder in your Git repository that will contain the <code>ClusterInstance</code> CRs and associated resources.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -10339,9 +10349,9 @@ spec:
 </td>
 </tr>
 </table>
-</div></td>
-</tr>
-</table>
+</div>
+</dd>
+</dl>
 </div>
 </li>
 </ol>
@@ -10568,26 +10578,29 @@ resources:
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-text" data-lang="text">site-configs-v2/
-├── hub-1/ <img src="data:image/png;base64," alt="1">
+├── hub-1/
 │   └── extra-manifest/
 ├── pre-reqs/
-│   └── sno1/ <img src="data:image/png;base64," alt="2">
+│   └── sno1/
 ├── reference-manifest/
 │   └── 5.0/
 └── resources/</code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><img src="data:image/png;base64," alt="1"></td>
-<td>The <code>hub-1/</code> folder will contain the <code>ClusterInstance</code> CR for each cluster.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="2"></td>
-<td>Mirror the target cluster, in this example <code>sno1</code>, to include the required pre-requisite resources such as the image registry pull secret, the baseboard management controller credentials, and so on.</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>hub-1/</code></dt>
+<dd>
+<p>Contains the <code>ClusterInstance</code> CR for each cluster.</p>
+</dd>
+<dt class="hdlist1"><code>pre-reqs/sno1/</code></dt>
+<dd>
+<p>Contains the required pre-requisite resources for the target cluster, such as the image registry pull secret and the baseboard management controller credentials.</p>
+</dd>
+</dl>
 </div>
 </li>
 <li>
@@ -10855,11 +10868,11 @@ clusterinstance.siteconfig.open-cluster-management.io/sno1            Completed 
 <div class="content">
 <pre class="highlight"><code class="language-text" data-lang="text">site-configs-v2/
 ├── hub-1/
-│   ├── sno1.yaml <img src="data:image/png;base64," alt="1">
+│   ├── sno1.yaml
 ├── extra-manifest/
-│   ├── enable-crun-worker.yaml <img src="data:image/png;base64," alt="2">
+│   ├── enable-crun-worker.yaml
 │   └── enable-crun-master.yaml
-├── kustomization.yaml <img src="data:image/png;base64," alt="3">
+├── kustomization.yaml
 ├── pre-reqs/
 │   └── sno1/
 │       ├── bmc-credentials.yaml
@@ -10873,21 +10886,24 @@ clusterinstance.siteconfig.open-cluster-management.io/sno1            Completed 
     └── kustomization.yaml</code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><img src="data:image/png;base64," alt="1"></td>
-<td>This <code>ClusterInstance</code> CR for the <code>sno1</code> cluster.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="2"></td>
-<td>The tool automatically generates the extra manifests referenced by the <code>ClusterInstance</code> CR.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="3"></td>
-<td>The tool generates a <code>kuztomization.yaml</code> file snippet to create the <code>ConfigMap</code> resources that specifies the extra manifests. You can merge the generated <code>kustomization</code> snippet with your original <code>kuztomization.yaml</code> file.</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>hub-1/sno1.yaml</code></dt>
+<dd>
+<p>The <code>ClusterInstance</code> CR for the <code>sno1</code> cluster.</p>
+</dd>
+<dt class="hdlist1"><code>extra-manifest/</code></dt>
+<dd>
+<p>Contains the extra manifests automatically generated by the <code>siteconfig-converter</code> tool and referenced by the <code>ClusterInstance</code> CR.</p>
+</dd>
+<dt class="hdlist1"><code>kustomization.yaml</code></dt>
+<dd>
+<p>The <code>kustomization.yaml</code> snippet generated by the tool to create the <code>ConfigMap</code> resources that specify the extra manifests. Merge this snippet with your original <code>kustomization.yaml</code> file.</p>
+</dd>
+</dl>
 </div>
 </li>
 </ol>
@@ -11172,7 +11188,7 @@ policies                   Synced        Healthy</code></pre>
 Using the RHACM <code>PolicyGenerator</code> API provides a generic way of patching resources which is not possible with <code>PolicyGenTemplate</code> resources.</p>
 </div>
 <div class="paragraph">
-<p>The <code>PolicyGenerator</code> API is a part of the <a href="https://open-cluster-management.io/">Open Cluster Management</a> standard, while the <code>PolicyGenTemplate</code> API is not.
+<p>The <code>PolicyGenerator</code> API is a part of the Open Cluster Management standard, while the <code>PolicyGenTemplate</code> API is not.
 A comparison of <code>PolicyGenerator</code> and <code>PolicyGenTemplate</code> resource patching and placement strategies are described in the following table.</p>
 </div>
 <div class="admonitionblock important">
@@ -11210,8 +11226,7 @@ Equivalent and improved functionality is available using Red&#160;Hat Advanced C
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Uses Kustomize strategic merges for merging resources.
-For more information see <a href="https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/">Declarative Management of Kubernetes Objects Using Kustomize</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uses Kustomize strategic merges for merging resources.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Works by replacing variables with their values as defined by the patch.
 This is less flexible than Kustomize merge strategies.</p></td>
 </tr>
@@ -11229,7 +11244,7 @@ Replacing a list in a merge patch is supported.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Merging and replacing lists is supported in a limited fashion - you can only merge one object in the list.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Does not currently support the <a href="https://spec.openapis.org/oas/latest.html">OpenAPI specification</a> for resource patching.
+<td class="tableblock halign-left valign-top"><p class="tableblock">Does not currently support the OpenAPI specification for resource patching.
 This means that additional directives are required in the patch to merge content that does not follow a schema, for example, <code>PtpConfig</code> resources.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Works by replacing fields and values with values as defined by the patch.</p></td>
 </tr>
@@ -11243,6 +11258,20 @@ This means that additional directives are required in the patch to merge content
 </tr>
 </tbody>
 </table>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="https://open-cluster-management.io/">Open Cluster Management</a></p>
+</li>
+<li>
+<p><a href="https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/">Declarative Management of Kubernetes Objects Using Kustomize</a></p>
+</li>
+<li>
+<p><a href="https://spec.openapis.org/oas/latest.html">OpenAPI specification</a></p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
 <h5 id="ztp-the-policygentemplate_policygenerator-understand">About the {policy-gen-cr} CRD</h5>
@@ -11253,7 +11282,6 @@ This means that additional directives are required in the patch to merge content
 <p>The following example shows a <code>{policy-gen-cr}</code> CR (<code>{common-ranGen}</code>) extracted from the <code>ztp-site-generate</code> reference container. The <code>{common-ranGen}</code> file defines two Red&#160;Hat Advanced Cluster Management (RHACM) policies. The policies manage a collection of configuration CRs, one for each unique value of <code>policyName</code> in the CR. <code>{common-ranGen}</code> creates a single placement binding and a placement to bind the policies to clusters based on the labels listed in the <code>{binding-field}</code> section.</p>
 </div>
 <div class="paragraph">
-<div class="title">Example {policy-gen-cr} CR - {common-ranGen}</div>
 <p>A <code>{policy-gen-cr}</code> CR can be constructed with any number of included CRs. Apply the following example CR in the hub cluster to generate a policy containing a single CR:</p>
 </div>
 <div class="listingblock">
@@ -12812,15 +12840,6 @@ ztp-site.example1-perf-policy                            inform               No
 </li>
 <li>
 <p>Click on a cluster policy to check its status.</p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -12837,6 +12856,15 @@ ztp-site.example1-perf-policy                            inform               No
 </td>
 </tr>
 </table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect4">
@@ -13151,9 +13179,6 @@ ztp-site.example-sno-config-policy           inform               Compliant     
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete clustergroupupgrades -n ztp-install $CLUSTER</code></pre>
 </div>
 </div>
-</li>
-</ol>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -13170,6 +13195,9 @@ ztp-site.example-sno-config-policy           inform               Compliant     
 </td>
 </tr>
 </table>
+</div>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect4">
@@ -14488,25 +14516,28 @@ spec:
   - clusterName: "encryption-tpm2"
     clusterImageSetNameRef: "openshift-v5.0.0"
     diskEncryption:
-      type: "tpm2" <img src="data:image/png;base64," alt="1">
+      type: "tpm2"
       tpm2:
-        pcrList: "1,7" <img src="data:image/png;base64," alt="2">
+        pcrList: "1,7"
     nodes:
       - hostName: "node1"
         role: master</code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><img src="data:image/png;base64," alt="1"></td>
-<td>Set the disk encryption type to <code>tpm2</code>.</td>
-</tr>
-<tr>
-<td><img src="data:image/png;base64," alt="2"></td>
-<td>Configure the list of PCRs to be used for disk encryption. You must use PCR registers 1 and 7.</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.clusters[].diskEncryption.type</code></dt>
+<dd>
+<p>Specifies the disk encryption type. Set to <code>tpm2</code> to use Trusted Platform Module encryption.</p>
+</dd>
+<dt class="hdlist1"><code>spec.clusters[].diskEncryption.tpm2.pcrList</code></dt>
+<dd>
+<p>Specifies the list of PCRs to use for disk encryption. You must use PCR registers 1 and 7.</p>
+</dd>
+</dl>
 </div>
 </li>
 </ul>
@@ -14518,22 +14549,25 @@ spec:
 <p>Check that the disk encryption with TPM and PCR protection is enabled by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ clevis luks list -d &lt;disk_path&gt; <img src="data:image/png;base64," alt="1"></code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ clevis luks list -d &lt;disk_path&gt;</code></pre>
 </div>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><img src="data:image/png;base64," alt="1"></td>
-<td>Replace <code>&lt;disk_path&gt;</code> with the path to the disk. For example, <code>/dev/sda4</code>.
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;disk_path&gt;</code></dt>
+<dd>
+<p>Specifies the path to the disk. For example, <code>/dev/sda4</code>.</p>
 <div class="listingblock">
 <div class="title">Example output</div>
 <div class="content">
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">1: tpm2 '{"hash":"sha256","key":"ecc","pcr_bank":"sha256","pcr_ids":"1,7"}'</code></pre>
 </div>
-</div></td>
-</tr>
-</table>
+</div>
+</dd>
+</dl>
 </div>
 </li>
 </ul>
@@ -14573,7 +14607,7 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Configuring disk encryption by using the <code>diskEncryption</code> field in the <code>ClusterInstance</code> CR is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+<p>Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
 </div>
 <div class="paragraph">
 <p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
@@ -14612,9 +14646,13 @@ Changes to CPU settings cause the node to reboot.</p>
 <img src="data:image/png;base64," alt="Note">
 </td>
 <td class="content">
-<div class="title">Upgrading from Red&#160;Hat OpenShift Container Platform 4.12 to 4.13+</div>
-<div class="paragraph">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Upgrading from Red&#160;Hat OpenShift Container Platform 4.12 to 4.13+</dt>
+<dd>
 <p>When transitioning to using <code>cpuPartitioningMode</code> for enabling workload partitioning, remove the workload partitioning <code>MachineConfig</code> CRs from the <code>/extra-manifest</code> folder that you use to provision the cluster.</p>
+</dd>
+</dl>
 </div>
 </td>
 </tr>
@@ -14630,19 +14668,25 @@ metadata:
   namespace: "&lt;site_name&gt;"
 spec:
   baseDomain: "example.com"
-  cpuPartitioningMode: AllNodes <img src="data:image/png;base64," alt="1"></code></pre>
+  cpuPartitioningMode: AllNodes</code></pre>
 </div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><img src="data:image/png;base64," alt="1"></td>
-<td>Set the <code>cpuPartitioningMode</code> field to <code>AllNodes</code> to configure workload partitioning for all nodes in the cluster.</td>
-</tr>
-</table>
 </div>
 <div class="paragraph">
-<div class="title">Verification</div>
+<p>+
+where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.cpuPartitioningMode</code></dt>
+<dd>
+<p>Set to <code>AllNodes</code> to configure workload partitioning for all nodes in the cluster.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>To verify:</p>
+</div>
+<div class="paragraph">
 <p>Check that the applications and cluster system CPU pinning is correct. Run the following commands:</p>
 </div>
 <div class="olist arabic">
@@ -15678,7 +15722,7 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Telecom Grandmaster clock configuration on Intel Granite Rapids-D (GNR-D) hardware is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+<p>Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
 </div>
 <div class="paragraph">
 <p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
@@ -18605,7 +18649,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-28 13:08:06 +0000
+Last updated 2026-10-30 13:35:37 +0000
 </div>
 </div>
 <style>

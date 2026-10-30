@@ -765,8 +765,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
-<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
-</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -842,6 +840,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machineconfig-garbage-collect-removing_remove-no-longer-used-machine-config-objects.html">Remove unused rendered machine configs</a>
 </li>
 <li><a href="machine-health-checks-resource_review-sample-machinehealthcheck-resource.html">About the MachineHealthCheck custom resource</a>
+</li>
+<li><a href="remote-health-monitoring-overview_remote-health-monitoring.html">Remotely monitor the health of Red&#160;Hat OpenShift Container Platform clusters</a>
 </li>
 <li><a href="nodes-pods-daemonsets-about_run-background-tasks-on-a-node-with-daemonsets.html">Daemon set scheduling</a>
 </li>
@@ -1232,7 +1232,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-ingress-and-routes-con_configure-ingress-and-routes.html">Configure ingress and routes</a>
 </li>
+<li><a href="configure-sr-iov-network-devices-con_configure-sr-iov-network-devices.html">Configure SR-IOV network devices</a>
+</li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
 </li>
@@ -1244,11 +1248,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
 </li>
-<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
-</li>
 <li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
-</li>
-<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1588,8 +1588,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
-<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
-</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1605,9 +1603,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
-</li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
+</li>
+<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
 </li>
 <li><a href="deploy-a-plugin-on-a-cluster-con_deploy-a-plugin-on-a-cluster.html">Deploy a plugin on a cluster</a>
 </li>
@@ -1679,8 +1677,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
-</li>
-<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
@@ -1873,12 +1869,121 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#security-monitoring-events_monitor-platform-vulnerabilities-and-audit-security-incidents">Watch cluster events</a></li><li class="level-4"><a href="#security-monitoring-cluster-logging_monitor-platform-vulnerabilities-and-audit-security-incidents">Logging</a></li><li class="level-4"><a href="#security-monitoring-audit-logs_monitor-platform-vulnerabilities-and-audit-security-incidents">Audit logs</a></li><li class="level-4"><a href="#about-audit-log-profiles_configure-audit-policies-and-review-logs-to-investigate-incidents">About audit log policy profiles</a></li><li class="level-5"><a href="#configuring-audit-policy_configure-audit-policies-and-review-logs-to-investigate-incidents">Configure the audit log policy</a></li><li class="level-5"><a href="#configuring-audit-policy-custom_configure-audit-policies-and-review-logs-to-investigate-incidents">Configure the audit log policy with custom rules</a></li><li class="level-5"><a href="#configuring-audit-policy-disable_configure-audit-policies-and-review-logs-to-investigate-incidents">Disable audit logging</a></li><li class="level-5"><a href="#nodes-pods-audit-log-basic_configure-audit-policies-and-review-logs-to-investigate-incidents">About the API audit log</a></li><li class="level-5"><a href="#nodes-nodes-audit-log-basic-viewing_configure-audit-policies-and-review-logs-to-investigate-incidents">View the audit logs</a></li><li class="level-5"><a href="#security-audit-log-basic-filtering_configure-audit-policies-and-review-logs-to-investigate-incidents">Filter audit logs</a></li><li class="level-5"><a href="#gathering-data-audit-logs_audit-log-view">Gather audit logs</a></li><li class="level-4"><a href="#scan-container-workloads-for-known-software-vulnerabilities-con_scan-container-workloads-for-known-software-vulnerabilities">Scan container workloads for known software vulnerabilities</a></li><li class="level-5"><a href="#security-pod-scan-cso_scan-container-workloads-for-known-software-vulnerabilities">Install the Red Hat Quay Container Security Operator</a></li><li class="level-5"><a href="#security-pod-scan-cso-using_scan-container-workloads-for-known-software-vulnerabilities">Use the Red Hat Quay Container Security Operator</a></li><li class="level-5"><a href="#security-pod-scan-query-cli_scan-container-workloads-for-known-software-vulnerabilities">Query image vulnerabilities from the CLI</a></li><li class="level-5"><a href="#uninstalling-container-security-operator_scan-container-workloads-for-known-software-vulnerabilities">Uninstall the Red Hat Quay Container Security Operator</a></li><li class="level-4"><a href="#track-unauthorized-file-changes-on-underlying-host-nodes-con_track-unauthorized-file-changes-on-underlying-host-nodes">Track unauthorized file changes on underlying host nodes</a></li><li class="level-5"><a href="#installing-file-integrity-operator-using-web-console_track-unauthorized-file-changes-on-underlying-host-nodes">Install the File Integrity Operator using the web console</a></li><li class="level-5"><a href="#installing-file-integrity-operator-using-cli_track-unauthorized-file-changes-on-underlying-host-nodes">Install the File Integrity Operator using the CLI</a></li><li class="level-5"><a href="#understanding-file-integrity-custom-resource_track-unauthorized-file-changes-on-underlying-host-nodes">Create the FileIntegrity custom resource</a></li><li class="level-5"><a href="#checking-the-file-integrity-CR-status_track-unauthorized-file-changes-on-underlying-host-nodes">Check the FileIntegrity custom resource status</a></li><li class="level-5"><a href="#file-integrity-CR-phases_track-unauthorized-file-changes-on-underlying-host-nodes">FileIntegrity custom resource phases</a></li><li class="level-5"><a href="#understanding-file-integrity-node-statuses-object_track-unauthorized-file-changes-on-underlying-host-nodes">Understand the FileIntegrityNodeStatuses object</a></li><li class="level-5"><a href="#file-integrity-node-status-types_track-unauthorized-file-changes-on-underlying-host-nodes">FileIntegrityNodeStatus CR status types</a></li><li class="level-6"><a href="#file-integrity-node-status-success_track-unauthorized-file-changes-on-underlying-host-nodes">FileIntegrityNodeStatus CR success example</a></li><li class="level-6"><a href="#file-integrity-node-status-failure_track-unauthorized-file-changes-on-underlying-host-nodes">FileIntegrityNodeStatus CR failure status example</a></li><li class="level-5"><a href="#file-integrity-events_track-unauthorized-file-changes-on-underlying-host-nodes">Understand events</a></li><li class="level-5"><a href="#viewing-file-integrity-object-attributes_track-unauthorized-file-changes-on-underlying-host-nodes">View FileIntegrity object attributes</a></li><li class="level-5"><a href="#important-file-integrity-object-attributes_track-unauthorized-file-changes-on-underlying-host-nodes">Important attributes</a></li><li class="level-5"><a href="#file-integrity-examine-default-config_track-unauthorized-file-changes-on-underlying-host-nodes">Examine the default configuration</a></li><li class="level-5"><a href="#file-integrity-understanding-default-config_track-unauthorized-file-changes-on-underlying-host-nodes">Understand the default File Integrity Operator configuration</a></li><li class="level-5"><a href="#file-integrity-operator-supplying-custom-aide-config_track-unauthorized-file-changes-on-underlying-host-nodes">Supply a custom AIDE configuration</a></li><li class="level-5"><a href="#file-integrity-operator-defining-custom-config_track-unauthorized-file-changes-on-underlying-host-nodes">Define a custom File Integrity Operator configuration</a></li><li class="level-5"><a href="#file-integrity-operator-changing-custom-config_track-unauthorized-file-changes-on-underlying-host-nodes">Change the custom File Integrity configuration</a></li><li class="level-5"><a href="#file-integrity-operator-reinitializing-database_track-unauthorized-file-changes-on-underlying-host-nodes">Reinitialize the database</a></li><li class="level-5"><a href="#file-integrity-operator-machine-config-integration_track-unauthorized-file-changes-on-underlying-host-nodes">Machine config integration</a></li><li class="level-5"><a href="#file-integrity-operator-exploring-daemon-sets_track-unauthorized-file-changes-on-underlying-host-nodes">Explore the daemon sets</a></li><li class="level-5"><a href="#olm-preparing-upgrade_track-unauthorized-file-changes-on-underlying-host-nodes">About preparing for an Operator update</a></li><li class="level-5"><a href="#olm-approving-pending-upgrade_track-unauthorized-file-changes-on-underlying-host-nodes">Approving a pending Operator update manually</a></li><li class="level-5"><a href="#olm-changing-update-channel_track-unauthorized-file-changes-on-underlying-host-nodes">Changing the update channel for an Operator</a></li><li class="level-5"><a href="#fio-uninstall-console_track-unauthorized-file-changes-on-underlying-host-nodes">Uninstall the File Integrity Operator using the web console</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#odc-image-vulnerabilities-breakdown_monitor-platform-vulnerabilities-and-audit-security-incidents">Image vulnerability metrics and severity levels</a></li><li class="level-4"><a href="#odc-monitoring-your-application-image-vulnerabilities-metrics_monitor-platform-vulnerabilities-and-audit-security-incidents">Monitoring your application and image vulnerabilities metrics</a></li><li class="level-4"><a href="#security-monitoring-events_monitor-platform-vulnerabilities-and-audit-security-incidents">Watch cluster events</a></li><li class="level-4"><a href="#security-monitoring-cluster-logging_monitor-platform-vulnerabilities-and-audit-security-incidents">Logging</a></li><li class="level-4"><a href="#security-monitoring-audit-logs_monitor-platform-vulnerabilities-and-audit-security-incidents">Audit logs</a></li><li class="level-4"><a href="#about-audit-log-profiles_configure-audit-policies-and-review-logs-to-investigate-incidents">About audit log policy profiles</a></li><li class="level-5"><a href="#configuring-audit-policy_configure-audit-policies-and-review-logs-to-investigate-incidents">Configure the audit log policy</a></li><li class="level-5"><a href="#configuring-audit-policy-custom_configure-audit-policies-and-review-logs-to-investigate-incidents">Configure the audit log policy with custom rules</a></li><li class="level-5"><a href="#configuring-audit-policy-disable_configure-audit-policies-and-review-logs-to-investigate-incidents">Disable audit logging</a></li><li class="level-5"><a href="#nodes-pods-audit-log-basic_configure-audit-policies-and-review-logs-to-investigate-incidents">About the API audit log</a></li><li class="level-5"><a href="#nodes-nodes-audit-log-basic-viewing_configure-audit-policies-and-review-logs-to-investigate-incidents">View the audit logs</a></li><li class="level-5"><a href="#security-audit-log-basic-filtering_configure-audit-policies-and-review-logs-to-investigate-incidents">Filter audit logs</a></li><li class="level-5"><a href="#gathering-data-audit-logs_audit-log-view">Gather audit logs</a></li><li class="level-4"><a href="#scan-container-workloads-for-known-software-vulnerabilities-con_scan-container-workloads-for-known-software-vulnerabilities">Scan container workloads for known software vulnerabilities</a></li><li class="level-5"><a href="#security-pod-scan-cso_scan-container-workloads-for-known-software-vulnerabilities">Install the Red Hat Quay Container Security Operator</a></li><li class="level-5"><a href="#security-pod-scan-cso-using_scan-container-workloads-for-known-software-vulnerabilities">Use the Red Hat Quay Container Security Operator</a></li><li class="level-5"><a href="#security-pod-scan-query-cli_scan-container-workloads-for-known-software-vulnerabilities">Query image vulnerabilities from the CLI</a></li><li class="level-5"><a href="#uninstalling-container-security-operator_scan-container-workloads-for-known-software-vulnerabilities">Uninstall the Red Hat Quay Container Security Operator</a></li><li class="level-4"><a href="#track-unauthorized-file-changes-on-underlying-host-nodes-con_track-unauthorized-file-changes-on-underlying-host-nodes">Track unauthorized file changes on underlying host nodes</a></li><li class="level-5"><a href="#installing-file-integrity-operator-using-web-console_track-unauthorized-file-changes-on-underlying-host-nodes">Install the File Integrity Operator using the web console</a></li><li class="level-5"><a href="#installing-file-integrity-operator-using-cli_track-unauthorized-file-changes-on-underlying-host-nodes">Install the File Integrity Operator using the CLI</a></li><li class="level-5"><a href="#understanding-file-integrity-custom-resource_track-unauthorized-file-changes-on-underlying-host-nodes">Create the FileIntegrity custom resource</a></li><li class="level-5"><a href="#checking-the-file-integrity-CR-status_track-unauthorized-file-changes-on-underlying-host-nodes">Check the FileIntegrity custom resource status</a></li><li class="level-5"><a href="#file-integrity-CR-phases_track-unauthorized-file-changes-on-underlying-host-nodes">FileIntegrity custom resource phases</a></li><li class="level-5"><a href="#understanding-file-integrity-node-statuses-object_track-unauthorized-file-changes-on-underlying-host-nodes">Understand the FileIntegrityNodeStatuses object</a></li><li class="level-5"><a href="#file-integrity-node-status-types_track-unauthorized-file-changes-on-underlying-host-nodes">FileIntegrityNodeStatus CR status types</a></li><li class="level-6"><a href="#file-integrity-node-status-success_track-unauthorized-file-changes-on-underlying-host-nodes">FileIntegrityNodeStatus CR success example</a></li><li class="level-6"><a href="#file-integrity-node-status-failure_track-unauthorized-file-changes-on-underlying-host-nodes">FileIntegrityNodeStatus CR failure status example</a></li><li class="level-5"><a href="#file-integrity-events_track-unauthorized-file-changes-on-underlying-host-nodes">Understand events</a></li><li class="level-5"><a href="#viewing-file-integrity-object-attributes_track-unauthorized-file-changes-on-underlying-host-nodes">View FileIntegrity object attributes</a></li><li class="level-5"><a href="#important-file-integrity-object-attributes_track-unauthorized-file-changes-on-underlying-host-nodes">Important attributes</a></li><li class="level-5"><a href="#file-integrity-examine-default-config_track-unauthorized-file-changes-on-underlying-host-nodes">Examine the default configuration</a></li><li class="level-5"><a href="#file-integrity-understanding-default-config_track-unauthorized-file-changes-on-underlying-host-nodes">Understand the default File Integrity Operator configuration</a></li><li class="level-5"><a href="#file-integrity-operator-supplying-custom-aide-config_track-unauthorized-file-changes-on-underlying-host-nodes">Supply a custom AIDE configuration</a></li><li class="level-5"><a href="#file-integrity-operator-defining-custom-config_track-unauthorized-file-changes-on-underlying-host-nodes">Define a custom File Integrity Operator configuration</a></li><li class="level-5"><a href="#file-integrity-operator-changing-custom-config_track-unauthorized-file-changes-on-underlying-host-nodes">Change the custom File Integrity configuration</a></li><li class="level-5"><a href="#file-integrity-operator-reinitializing-database_track-unauthorized-file-changes-on-underlying-host-nodes">Reinitialize the database</a></li><li class="level-5"><a href="#file-integrity-operator-machine-config-integration_track-unauthorized-file-changes-on-underlying-host-nodes">Machine config integration</a></li><li class="level-5"><a href="#file-integrity-operator-exploring-daemon-sets_track-unauthorized-file-changes-on-underlying-host-nodes">Explore the daemon sets</a></li><li class="level-5"><a href="#olm-preparing-upgrade_track-unauthorized-file-changes-on-underlying-host-nodes">About preparing for an Operator update</a></li><li class="level-5"><a href="#olm-approving-pending-upgrade_track-unauthorized-file-changes-on-underlying-host-nodes">Approving a pending Operator update manually</a></li><li class="level-5"><a href="#olm-changing-update-channel_track-unauthorized-file-changes-on-underlying-host-nodes">Changing the update channel for an Operator</a></li><li class="level-5"><a href="#fio-uninstall-console_track-unauthorized-file-changes-on-underlying-host-nodes">Uninstall the File Integrity Operator using the web console</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="monitor-platform-vulnerabilities-and-audit-security-incidents-con_monitor-platform-vulnerabilities-and-audit-security-incidents">Monitor platform vulnerabilities and audit security incidents</h3>
 <div class="paragraph _abstract">
 <p>Monitoring and auditing a cluster is an important part of safeguarding it against inappropriate usage. Cluster events, logging, and audit logs give you the record you need to detect known vulnerabilities, investigate suspicious activity, and show what changed on the cluster and who changed it.</p>
+</div>
+<div class="sect3">
+<h4 id="odc-image-vulnerabilities-breakdown_monitor-platform-vulnerabilities-and-audit-security-incidents">Image vulnerability metrics and severity levels</h4>
+<div class="paragraph _abstract">
+<p>Review container image security scan results on the project dashboard to identify and prioritize vulnerabilities for remediation.</p>
+</div>
+<div class="paragraph">
+<p>In the <strong>Developer</strong> perspective, the project dashboard shows the <strong>Image Vulnerabilities</strong> link in the <strong>Status</strong> section. Using this link, you can view the <strong>Image Vulnerabilities breakdown</strong> window, which displays metrics such as the total count of vulnerable container images and fixable container images, organized by severity. The icon color indicates severity:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Red: High severity. Fix immediately.</p>
+</li>
+<li>
+<p>Orange: Medium severity. Can be fixed after high-severity vulnerabilities.</p>
+</li>
+<li>
+<p>Yellow: Low severity. Can be fixed after high and medium-severity vulnerabilities.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Based on the severity level, you can prioritize vulnerabilities and fix them in an organized manner.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="odc-monitoring-your-application-image-vulnerabilities-metrics_monitor-platform-vulnerabilities-and-audit-security-incidents">Monitoring your application and image vulnerabilities metrics</h4>
+<div class="paragraph _abstract">
+<p>Analyze application dependency vulnerabilities across your cluster to identify and remediate security issues in container images.</p>
+</div>
+<div class="paragraph">
+<p>After you create applications in your project and deploy them, use the <strong>Developer</strong> perspective in the web console to see the metrics for your application dependency vulnerabilities across your cluster. The metrics help you to analyze the following image vulnerabilities in detail:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Total count of vulnerable images in a selected project</p>
+</li>
+<li>
+<p>Severity-based counts of all vulnerable images in a selected project</p>
+</li>
+<li>
+<p>Drill down into severity to obtain the details, such as count of vulnerabilities, count of fixable vulnerabilities, and number of affected pods for each vulnerable image</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have installed the Red&#160;Hat Quay Container Security Operator.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The Red&#160;Hat Quay Container Security Operator detects vulnerabilities by scanning the images that are in the Red&#160;Hat Quay registry.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the <strong>Developer</strong> perspective, click <strong>Project</strong> to open the project dashboard.</p>
+</li>
+<li>
+<p>For a detailed vulnerabilities overview, click the <strong>Vulnerabilities</strong> tab.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>To get more detail about an image, click its name.</p>
+</li>
+<li>
+<p>View the default graph with all types of vulnerabilities in the <strong>Details</strong> tab.</p>
+</li>
+<li>
+<p>Optional: Click the toggle button to view a specific type of vulnerability. For example, click <strong>App dependency</strong> to see vulnerabilities specific to application dependency.</p>
+</li>
+<li>
+<p>Optional: You can filter the list of vulnerabilities based on their <strong>Severity</strong> and <strong>Type</strong> or sort them by <strong>Severity</strong>, <strong>Package</strong>, <strong>Type</strong>, <strong>Source</strong>, <strong>Current Version</strong>, and <strong>Fixed in Version</strong>.</p>
+</li>
+<li>
+<p>Click a <strong>Vulnerability</strong> to get its associated details:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Base image</strong> vulnerabilities display information from a Red Hat Security Advisory (RHSA).</p>
+</li>
+<li>
+<p><strong>App dependency</strong> vulnerabilities display information from the Snyk security application.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
 </div>
 <div class="sect3">
 <h4 id="security-monitoring-events_monitor-platform-vulnerabilities-and-audit-security-incidents">Watch cluster events</h4>
@@ -2431,7 +2536,7 @@ spec:
 <p>Audit works at the API server level, logging all requests coming to the server. Each audit log contains the following information:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 988. Audit log fields</caption>
+<caption class="title">Table 989. Audit log fields</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -3897,7 +4002,7 @@ Events:  &lt;none&gt;</code></pre>
 <p>The following <code>spec</code> and <code>spec.config</code> attributes are important when configuring a <code>FileIntegrity</code> CR.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 989. Important <code>spec</code> and <code>spec.config</code> attributes</caption>
+<caption class="title">Table 990. Important <code>spec</code> and <code>spec.config</code> attributes</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4472,7 +4577,7 @@ running aide check
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-28 13:08:06 +0000
+Last updated 2026-10-30 13:35:37 +0000
 </div>
 </div>
 <style>

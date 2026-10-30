@@ -765,8 +765,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
-<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
-</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -842,6 +840,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machineconfig-garbage-collect-removing_remove-no-longer-used-machine-config-objects.html">Remove unused rendered machine configs</a>
 </li>
 <li><a href="machine-health-checks-resource_review-sample-machinehealthcheck-resource.html">About the MachineHealthCheck custom resource</a>
+</li>
+<li><a href="remote-health-monitoring-overview_remote-health-monitoring.html">Remotely monitor the health of Red&#160;Hat OpenShift Container Platform clusters</a>
 </li>
 <li><a href="nodes-pods-daemonsets-about_run-background-tasks-on-a-node-with-daemonsets.html">Daemon set scheduling</a>
 </li>
@@ -1231,7 +1231,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-ingress-and-routes-con_configure-ingress-and-routes.html">Configure ingress and routes</a>
 </li>
+<li><a href="configure-sr-iov-network-devices-con_configure-sr-iov-network-devices.html">Configure SR-IOV network devices</a>
+</li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
 </li>
@@ -1243,11 +1247,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
 </li>
-<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
-</li>
 <li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
-</li>
-<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1588,8 +1588,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
-<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
-</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1605,9 +1603,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
-</li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
+</li>
+<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
 </li>
 <li><a href="deploy-a-plugin-on-a-cluster-con_deploy-a-plugin-on-a-cluster.html">Deploy a plugin on a cluster</a>
 </li>
@@ -1679,8 +1677,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
-</li>
-<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
@@ -1951,7 +1947,7 @@ sh-5.1#</code></pre>
 </div>
 <div class="sect3">
 <h4 id="rdma-creating-persistent-naming-rules_configure-rdma-for-gpu-workloads">Creating persistent naming rules</h4>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>In some cases, device names won&#8217;t persist following a reboot. For example, on R760xa systems Mellanox devices might be renamed after a reboot. You can avoid this problem by using a <code>MachineConfig</code> to set persistence.</p>
 </div>
 <div class="olist arabic">
@@ -2040,17 +2036,17 @@ master   rendered-master-9adfe851c2c14d9598eea5ec3df6c187   True      False     
 worker   rendered-worker-4568f1b174066b4b1a4de794cf538fee   False     True       False      2              0                   0                     0                      6h21m</code></pre>
 </div>
 </div>
-</li>
-</ol>
-</div>
 <div class="paragraph">
 <p>The nodes will reboot and when the updating field returns to <code>false</code>, you can validate on the nodes by looking at the devices in a debug pod.</p>
+</div>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect3">
 <h4 id="rdma-configuring-the-nfd-operator_configure-rdma-for-gpu-workloads">Configuring the NFD Operator</h4>
-<div class="paragraph">
-<p>The Node Feature Discovery (NFD) Operator manages the detection of hardware features and configuration in an Red&#160;Hat OpenShift Container Platform cluster by labeling the nodes with hardware-specific information. NFD labels the host with node-specific attributes, such as PCI cards, kernel, operating system version, and so on.</p>
+<div class="paragraph _abstract">
+<p>The Node Feature Discovery (NFD) Operator manages the detection of hardware features and configuration in an Red&#160;Hat OpenShift Container Platform cluster by labeling the nodes with hardware-specific information.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
@@ -2298,7 +2294,7 @@ nfd-worker-kp6gg                        1/1     Running   0          21s</code><
 </div>
 <div class="sect3">
 <h4 id="rdma-configuring-the-sriov-operator_configure-rdma-for-gpu-workloads">Configuring the SR-IOV Operator</h4>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>Single root I/O virtualization (SR-IOV) enhances the performance of NVIDIA GPUDirect RDMA by providing sharing across multiple pods from a single device.</p>
 </div>
 <div class="ulist">
@@ -2376,7 +2372,7 @@ spec:
 </div>
 <div class="sect3">
 <h4 id="rdma-configuring-the-nvidia-network-operator_configure-rdma-for-gpu-workloads">Configuring the NVIDIA network Operator</h4>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>The NVIDIA network Operator manages NVIDIA networking resources and networking related components such as drivers and device plugins to enable NVIDIA GPUDirect RDMA workloads.</p>
 </div>
 <div class="ulist">
@@ -2630,7 +2626,7 @@ spec:
 </div>
 <div class="sect3">
 <h4 id="rdma-configuring-the-gpu-operator_configure-rdma-for-gpu-workloads">Configuring the GPU Operator</h4>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>The GPU Operator automates the management of the NVIDIA drivers, device plugins for GPUs, the NVIDIA Container Toolkit, and other components required for GPU provisioning.</p>
 </div>
 <div class="ulist">
@@ -3132,7 +3128,7 @@ rdma-eth-33-workload   1/1     Running   0          22s</code></pre>
 </div>
 <div class="sect4">
 <h5 id="rdma-creating-host-device-rdma-roce_configure-rdma-for-gpu-workloads">Creating a host device RDMA on RoCE</h5>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>Create the workload pods for a host device Remote Direct Memory Access (RDMA) for the NVIDIA Network Operator and test the pod configuration.</p>
 </div>
 <div class="ulist">
@@ -3644,7 +3640,7 @@ EOF</code></pre>
 </div>
 <div class="sect4">
 <h5 id="rdma-creating-shared-device-rdma-ib_configure-rdma-for-gpu-workloads">Creating a shared device RDMA on Infiniband</h5>
-<div class="paragraph">
+<div class="paragraph _abstract">
 <p>Create the workload pods for a shared device Remote Direct Memory Access (RDMA) for an Infiniband installation.</p>
 </div>
 <div class="olist arabic">
@@ -4656,7 +4652,7 @@ destroying current CUDA Ctx</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-28 13:08:06 +0000
+Last updated 2026-10-30 13:35:37 +0000
 </div>
 </div>
 <style>

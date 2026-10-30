@@ -764,8 +764,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
-<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
-</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -841,6 +839,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machineconfig-garbage-collect-removing_remove-no-longer-used-machine-config-objects.html">Remove unused rendered machine configs</a>
 </li>
 <li><a href="machine-health-checks-resource_review-sample-machinehealthcheck-resource.html">About the MachineHealthCheck custom resource</a>
+</li>
+<li><a href="remote-health-monitoring-overview_remote-health-monitoring.html">Remotely monitor the health of Red&#160;Hat OpenShift Container Platform clusters</a>
 </li>
 <li><a href="nodes-pods-daemonsets-about_run-background-tasks-on-a-node-with-daemonsets.html">Daemon set scheduling</a>
 </li>
@@ -1231,7 +1231,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-ingress-and-routes-con_configure-ingress-and-routes.html">Configure ingress and routes</a>
 </li>
+<li><a href="configure-sr-iov-network-devices-con_configure-sr-iov-network-devices.html">Configure SR-IOV network devices</a>
+</li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
 </li>
@@ -1243,11 +1247,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
 </li>
-<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
-</li>
 <li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
-</li>
-<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1588,8 +1588,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
-<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
-</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1605,9 +1603,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
-</li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
+</li>
+<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
 </li>
 <li><a href="deploy-a-plugin-on-a-cluster-con_deploy-a-plugin-on-a-cluster.html">Deploy a plugin on a cluster</a>
 </li>
@@ -1679,8 +1677,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
-</li>
-<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
@@ -2653,7 +2649,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p><strong>Machine types based on 64-bit x86 architecture</strong></p>
 </div>
 <div class="paragraph">
-<p><a href="https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_x86_64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_x86_64.md</a></p>
+<p><a href="https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_x86_64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_x86_64.md</a></p>
 </div>
 </div>
 <div class="sect5">
@@ -2682,7 +2678,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p><strong>Machine types based on 64-bit ARM architecture</strong></p>
 </div>
 <div class="paragraph">
-<p><a href="https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_aarch64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_aarch64.md</a></p>
+<p><a href="https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_aarch64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_aarch64.md</a></p>
 </div>
 </div>
 </div>
@@ -12307,7 +12303,7 @@ use key-based, long-term credentials.
 </td>
 <td class="content">
 <div class="paragraph">
-<p>European Sovereign Cloud (EUSC) region is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+<p>Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
 </div>
 <div class="paragraph">
 <p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
@@ -13327,7 +13323,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p><strong>Machine types based on 64-bit x86 architecture</strong></p>
 </div>
 <div class="paragraph">
-<p><a href="https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_x86_64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_x86_64.md</a></p>
+<p><a href="https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_x86_64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_x86_64.md</a></p>
 </div>
 </div>
 <div class="sect5">
@@ -13356,7 +13352,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p><strong>Machine types based on 64-bit ARM architecture</strong></p>
 </div>
 <div class="paragraph">
-<p><a href="https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_aarch64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_aarch64.md</a></p>
+<p><a href="https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_aarch64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_aarch64.md</a></p>
 </div>
 </div>
 <div class="sect5">
@@ -17328,7 +17324,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p><strong>Machine types based on 64-bit x86 architecture</strong></p>
 </div>
 <div class="paragraph">
-<p><a href="https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_x86_64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_x86_64.md</a></p>
+<p><a href="https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_x86_64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_x86_64.md</a></p>
 </div>
 </div>
 <div class="sect5">
@@ -17357,7 +17353,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p><strong>Machine types based on 64-bit ARM architecture</strong></p>
 </div>
 <div class="paragraph">
-<p><a href="https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_aarch64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_aarch64.md</a></p>
+<p><a href="https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_aarch64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_aarch64.md</a></p>
 </div>
 </div>
 <div class="sect5">
@@ -20268,7 +20264,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p><strong>Machine types based on 64-bit x86 architecture</strong></p>
 </div>
 <div class="paragraph">
-<p><a href="https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_x86_64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_x86_64.md</a></p>
+<p><a href="https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_x86_64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_x86_64.md</a></p>
 </div>
 </div>
 <div class="sect5">
@@ -20297,7 +20293,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p><strong>Machine types based on 64-bit ARM architecture</strong></p>
 </div>
 <div class="paragraph">
-<p><a href="https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_aarch64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_aarch64.md</a></p>
+<p><a href="https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_aarch64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_aarch64.md</a></p>
 </div>
 </div>
 <div class="sect5">
@@ -25578,7 +25574,7 @@ metadata, run the following command:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-4.22/upi/aws/cloudformation/01_vpc.yaml[role=include]</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-5.0/upi/aws/cloudformation/01_vpc.yaml[role=include]</code></pre>
 </div>
 </div>
 </div>
@@ -25884,7 +25880,7 @@ HOSTEDZONES	65F8F38E-2268-B835-E15C-AB55336FCBFA	/hostedzone/Z21IXYZABCZ2A4	mycl
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-4.22/upi/aws/cloudformation/02_cluster_infra.yaml[role=include]</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-5.0/upi/aws/cloudformation/02_cluster_infra.yaml[role=include]</code></pre>
 </div>
 </div>
 </div>
@@ -26110,7 +26106,7 @@ ResourceRecords:
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-4.22/upi/aws/cloudformation/03_cluster_security.yaml[role=include]</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-5.0/upi/aws/cloudformation/03_cluster_security.yaml[role=include]</code></pre>
 </div>
 </div>
 </div>
@@ -28953,7 +28949,7 @@ EOF</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-4.22/upi/aws/cloudformation/04_cluster_bootstrap.yaml[role=include]</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-5.0/upi/aws/cloudformation/04_cluster_bootstrap.yaml[role=include]</code></pre>
 </div>
 </div>
 </div>
@@ -29254,7 +29250,7 @@ and <code>m6g.xlarge</code> is a type for ARM64.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-4.22/upi/aws/cloudformation/05_cluster_master_nodes.yaml[role=include]</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-5.0/upi/aws/cloudformation/05_cluster_master_nodes.yaml[role=include]</code></pre>
 </div>
 </div>
 </div>
@@ -29521,7 +29517,7 @@ and <code>m6g.large</code> is a type for ARM64.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-4.22/upi/aws/cloudformation/06_cluster_worker_node.yaml[role=include]</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-5.0/upi/aws/cloudformation/06_cluster_worker_node.yaml[role=include]</code></pre>
 </div>
 </div>
 </div>
@@ -31620,7 +31616,7 @@ metadata, run the following command:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-4.22/upi/aws/cloudformation/01_vpc.yaml[role=include]</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-5.0/upi/aws/cloudformation/01_vpc.yaml[role=include]</code></pre>
 </div>
 </div>
 </div>
@@ -31926,7 +31922,7 @@ HOSTEDZONES	65F8F38E-2268-B835-E15C-AB55336FCBFA	/hostedzone/Z21IXYZABCZ2A4	mycl
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-4.22/upi/aws/cloudformation/02_cluster_infra.yaml[role=include]</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-5.0/upi/aws/cloudformation/02_cluster_infra.yaml[role=include]</code></pre>
 </div>
 </div>
 </div>
@@ -32152,7 +32148,7 @@ ResourceRecords:
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-4.22/upi/aws/cloudformation/03_cluster_security.yaml[role=include]</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-5.0/upi/aws/cloudformation/03_cluster_security.yaml[role=include]</code></pre>
 </div>
 </div>
 </div>
@@ -34787,7 +34783,7 @@ AMI for an AWS region, such as <code>us-west-1</code>:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-4.22/upi/aws/cloudformation/04_cluster_bootstrap.yaml[role=include]</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-5.0/upi/aws/cloudformation/04_cluster_bootstrap.yaml[role=include]</code></pre>
 </div>
 </div>
 </div>
@@ -35088,7 +35084,7 @@ and <code>m6g.xlarge</code> is a type for ARM64.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-4.22/upi/aws/cloudformation/05_cluster_master_nodes.yaml[role=include]</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-5.0/upi/aws/cloudformation/05_cluster_master_nodes.yaml[role=include]</code></pre>
 </div>
 </div>
 </div>
@@ -35341,7 +35337,7 @@ and <code>m6g.large</code> is a type for ARM64.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-4.22/upi/aws/cloudformation/06_cluster_worker_node.yaml[role=include]</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">link:https://raw.githubusercontent.com/openshift/installer/release-5.0/upi/aws/cloudformation/06_cluster_worker_node.yaml[role=include]</code></pre>
 </div>
 </div>
 </div>
@@ -44130,7 +44126,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p><strong>Machine types based on 64-bit x86 architecture</strong></p>
 </div>
 <div class="paragraph">
-<p><a href="https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_x86_64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_x86_64.md</a></p>
+<p><a href="https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_x86_64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_x86_64.md</a></p>
 </div>
 </div>
 <div class="sect5">
@@ -44159,7 +44155,7 @@ Red&#160;Hat OpenShift Container Platform.</p>
 <p><strong>Machine types based on 64-bit ARM architecture</strong></p>
 </div>
 <div class="paragraph">
-<p><a href="https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_aarch64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-4.22/docs/user/aws/tested_instance_types_aarch64.md</a></p>
+<p><a href="https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_aarch64.md" class="bare include">https://raw.githubusercontent.com/openshift/installer/release-5.0/docs/user/aws/tested_instance_types_aarch64.md</a></p>
 </div>
 </div>
 <div class="sect5">
@@ -48018,7 +48014,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-28 13:08:06 +0000
+Last updated 2026-10-30 13:35:37 +0000
 </div>
 </div>
 <style>

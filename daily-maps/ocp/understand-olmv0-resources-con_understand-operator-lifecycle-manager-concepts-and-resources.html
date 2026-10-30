@@ -765,8 +765,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
-<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
-</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -842,6 +840,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machineconfig-garbage-collect-removing_remove-no-longer-used-machine-config-objects.html">Remove unused rendered machine configs</a>
 </li>
 <li><a href="machine-health-checks-resource_review-sample-machinehealthcheck-resource.html">About the MachineHealthCheck custom resource</a>
+</li>
+<li><a href="remote-health-monitoring-overview_remote-health-monitoring.html">Remotely monitor the health of Red&#160;Hat OpenShift Container Platform clusters</a>
 </li>
 <li><a href="nodes-pods-daemonsets-about_run-background-tasks-on-a-node-with-daemonsets.html">Daemon set scheduling</a>
 </li>
@@ -1232,7 +1232,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-ingress-and-routes-con_configure-ingress-and-routes.html">Configure ingress and routes</a>
 </li>
+<li><a href="configure-sr-iov-network-devices-con_configure-sr-iov-network-devices.html">Configure SR-IOV network devices</a>
+</li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
 </li>
@@ -1244,11 +1248,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
 </li>
-<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
-</li>
 <li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
-</li>
-<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1589,8 +1589,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
-<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
-</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1605,9 +1603,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
-</li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
+</li>
+<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
 </li>
 <li><a href="deploy-a-plugin-on-a-cluster-con_deploy-a-plugin-on-a-cluster.html">Deploy a plugin on a cluster</a>
 </li>
@@ -1679,8 +1677,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
-</li>
-<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
@@ -2623,8 +2619,11 @@ status:
 </div>
 <div class="sect4">
 <h5 id="olm-upgrades_understand-operator-lifecycle-manager-workflow">Operator installation and upgrade workflow in OLM</h5>
+<div class="paragraph _abstract">
+<p>In the Operator Lifecycle Manager (OLM) ecosystem, the <code>ClusterServiceVersion</code> (CSV), <code>CatalogSource</code>, and <code>Subscription</code> resources are used to resolve Operator installations and upgrades.</p>
+</div>
 <div class="paragraph">
-<p>In the Operator Lifecycle Manager (OLM) ecosystem, the following resources are used to resolve Operator installations and upgrades:</p>
+<p>The following resources are used to resolve Operator installations and upgrades:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2646,7 +2645,7 @@ status:
 <div class="content">
 <img src="data:image/png;base64," alt="olm catalogsource">
 </div>
-<div class="title">Figure 128. Catalog source overview</div>
+<div class="title">Figure 133. Catalog source overview</div>
 </div>
 <div class="paragraph">
 <p>Within a catalog source, Operators are organized into <em>packages</em> and streams of updates called <em>channels</em>, which should be a familiar update pattern from Red&#160;Hat OpenShift Container Platform or other software on a continuous release cycle like web browsers.</p>
@@ -2655,7 +2654,7 @@ status:
 <div class="content">
 <img src="data:image/png;base64," alt="olm channels">
 </div>
-<div class="title">Figure 129. Packages and channels in a Catalog source</div>
+<div class="title">Figure 134. Packages and channels in a Catalog source</div>
 </div>
 <div class="paragraph">
 <p>A user indicates a particular package and channel in a particular catalog source in a <em>subscription</em>, for example an <code>etcd</code> package and its <code>alpha</code> channel. If a subscription is made to a package that has not yet been installed in the namespace, the latest Operator for that package is installed.</p>
@@ -2681,7 +2680,7 @@ status:
 <div class="content">
 <img src="data:image/png;base64," alt="olm replaces">
 </div>
-<div class="title">Figure 130. OLM graph of available channel updates</div>
+<div class="title">Figure 135. OLM graph of available channel updates</div>
 </div>
 <div class="listingblock">
 <div class="title">Example channels in a package</div>
@@ -2768,7 +2767,7 @@ spec:
 <div class="content">
 <img src="data:image/png;base64," alt="olm skipping updates">
 </div>
-<div class="title">Figure 131. Skipping updates</div>
+<div class="title">Figure 136. Skipping updates</div>
 </div>
 <div class="paragraph">
 <p>This graph maintains that:</p>
@@ -2848,7 +2847,7 @@ metadata:
 <div class="content">
 <img src="data:image/png;base64," alt="olm z stream">
 </div>
-<div class="title">Figure 132. Replacing several Operators</div>
+<div class="title">Figure 137. Replacing several Operators</div>
 </div>
 <div class="paragraph">
 <p>This graph maintains that:</p>
@@ -3533,7 +3532,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-28 13:08:06 +0000
+Last updated 2026-10-30 13:35:37 +0000
 </div>
 </div>
 <style>

@@ -765,8 +765,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
-<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
-</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -842,6 +840,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machineconfig-garbage-collect-removing_remove-no-longer-used-machine-config-objects.html">Remove unused rendered machine configs</a>
 </li>
 <li><a href="machine-health-checks-resource_review-sample-machinehealthcheck-resource.html">About the MachineHealthCheck custom resource</a>
+</li>
+<li><a href="remote-health-monitoring-overview_remote-health-monitoring.html">Remotely monitor the health of Red&#160;Hat OpenShift Container Platform clusters</a>
 </li>
 <li><a href="nodes-pods-daemonsets-about_run-background-tasks-on-a-node-with-daemonsets.html">Daemon set scheduling</a>
 </li>
@@ -1231,7 +1231,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-ingress-and-routes-con_configure-ingress-and-routes.html">Configure ingress and routes</a>
 </li>
+<li><a href="configure-sr-iov-network-devices-con_configure-sr-iov-network-devices.html">Configure SR-IOV network devices</a>
+</li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html"><span class="toc-current">Network Observability Operator</span></a>
 </li>
@@ -1243,11 +1247,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
 </li>
-<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
-</li>
 <li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
-</li>
-<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1588,8 +1588,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
-<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
-</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1605,9 +1603,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
-</li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
+</li>
+<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
 </li>
 <li><a href="deploy-a-plugin-on-a-cluster-con_deploy-a-plugin-on-a-cluster.html">Deploy a plugin on a cluster</a>
 </li>
@@ -1679,8 +1677,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
-</li>
-<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
@@ -2787,7 +2783,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 893. Shared cache parameters</caption>
+<caption class="title">Table 912. Shared cache parameters</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 16.6666%;">
@@ -3051,7 +3047,7 @@ flowlogs-pipeline-informers-7d9f8b5c4d-xyz34   1/1     Running   0          5m</
 <p>If you only want to export flows to a Kafka consumer or IPFIX collector, or you only need dashboard metrics, then you do not need to install Loki or provide storage for Loki. The following table compares available features with and without Loki.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 894. Comparison of feature availability with and without Loki</caption>
+<caption class="title">Table 913. Comparison of feature availability with and without Loki</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3391,7 +3387,7 @@ flowlogs-pipeline-informers-7d9f8b5c4d-xyz34   1/1     Running   0          5m</
 <p>The query language uses the following syntax:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 895. Query language syntax</caption>
+<caption class="title">Table 914. Query language syntax</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3529,7 +3525,7 @@ spec:
 </ul>
 </div>
 <table id="network-observability-resource-recommendations-table_optimize-collection-performance-and-resource-usage" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 896. Resource recommendations for cluster sizes</caption>
+<caption class="title">Table 915. Resource recommendations for cluster sizes</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 20%;">
@@ -3638,7 +3634,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 897. Total average resource usage</caption>
+<caption class="title">Table 916. Total average resource usage</caption>
 <colgroup>
 <col>
 <col>
@@ -3714,7 +3710,7 @@ spec:
 <p>Reference the required and optional parameters for configuring flow filter rules in the <code>FlowCollector</code> resource, including CIDR ranges, filter actions, protocols, and specific port configurations.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 898. Required configuration parameters</caption>
+<caption class="title">Table 917. Required configuration parameters</caption>
 <colgroup>
 <col style="width: 27.2727%;">
 <col style="width: 72.7273%;">
@@ -3808,7 +3804,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 899. Optional configuration parameters</caption>
+<caption class="title">Table 918. Optional configuration parameters</caption>
 <colgroup>
 <col style="width: 27.2727%;">
 <col style="width: 72.7273%;">
@@ -4336,7 +4332,7 @@ spec:
 <p>This reference applies to compression configured in both <code>spec.kafka.compression</code> for flow collection and <code>spec.exporters</code> for flow export.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 900. Kafka compression codec comparison</caption>
+<caption class="title">Table 919. Kafka compression codec comparison</caption>
 <colgroup>
 <col style="width: 14.2857%;">
 <col style="width: 14.2857%;">
@@ -4505,7 +4501,7 @@ spec:
 <div class="openblock">
 <div class="content">
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 901. Fields for the <code>netobserv_io_network_health</code> annotation in recording rules</caption>
+<caption class="title">Table 920. Fields for the <code>netobserv_io_network_health</code> annotation in recording rules</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4616,7 +4612,7 @@ spec:
 </ul>
 </div>
 <table id="network-observability-resource-recommendations-table_scale-components-based-on-cluster-size" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 902. Resource recommendations for cluster sizes</caption>
+<caption class="title">Table 921. Resource recommendations for cluster sizes</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 20%;">
@@ -4724,7 +4720,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 903. Total average resource usage</caption>
+<caption class="title">Table 922. Total average resource usage</caption>
 <colgroup>
 <col>
 <col>
@@ -5519,7 +5515,7 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>OVN Observability / Viewing <code>NetworkEvents</code> is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+<p>Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
 </div>
 <div class="paragraph">
 <p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
@@ -6387,7 +6383,7 @@ spec:
 <p>The query language uses the following syntax:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 904. Query language syntax</caption>
+<caption class="title">Table 923. Query language syntax</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -6481,7 +6477,7 @@ spec:
 <p>Here is a list of all available filter keys:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 905. Filter keys</caption>
+<caption class="title">Table 924. Filter keys</caption>
 <colgroup>
 <col style="width: 9.0909%;">
 <col style="width: 9.0909%;">
@@ -7144,7 +7140,7 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>eBPF Manager Operator with network observability is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+<p>Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
 </div>
 <div class="paragraph">
 <p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
@@ -10109,7 +10105,7 @@ spec:
 <p>The optional <code>netobserv_io_network_health</code> annotation is a JSON string that controls how the alert renders on the <strong>Network Health</strong> page.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 906. Fields for the <code>netobserv_io_network_health</code> annotation</caption>
+<caption class="title">Table 925. Fields for the <code>netobserv_io_network_health</code> annotation</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10365,7 +10361,7 @@ spec:
 <div class="openblock">
 <div class="content">
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 907. Fields for the <code>netobserv_io_network_health</code> annotation in recording rules</caption>
+<caption class="title">Table 926. Fields for the <code>netobserv_io_network_health</code> annotation in recording rules</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -11778,7 +11774,7 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>OVN Observability / Viewing <code>NetworkEvents</code> is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+<p>Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
 </div>
 <div class="paragraph">
 <p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
@@ -13486,7 +13482,7 @@ netobserv-ebpf-agent-abc12              1/1     Running   0          2m</code></
 <p>Transport Layer Security (TLS) metadata fields track and define encryption protocols, protocol versions, and cipher suite data to help you analyze secure network flows.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 908. TLS tracking fields</caption>
+<caption class="title">Table 927. TLS tracking fields</caption>
 <colgroup>
 <col style="width: 14.2857%;">
 <col style="width: 28.5714%;">
@@ -14160,7 +14156,7 @@ Rule:		Deny to 0.0.0.0/0</code></pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>OVN-Kubernetes networking events tracking is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+<p>Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
 </div>
 <div class="paragraph">
 <p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
@@ -14291,7 +14287,7 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>OVN-Kubernetes networking events tracking is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+<p>Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
 </div>
 <div class="paragraph">
 <p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
@@ -14657,7 +14653,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 909. DNS flow metadata</caption>
+<caption class="title">Table 928. DNS flow metadata</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16338,14 +16334,20 @@ $ podman rm netobserv-cli</code></pre>
 <div class="listingblock">
 <div class="title"><code>oc netobserv</code> syntax</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc netobserv [&lt;command&gt;] [&lt;feature_option&gt;] [&lt;command_options&gt;] <img src="data:image/png;base64," alt="1"></code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc netobserv [&lt;command&gt;] [&lt;feature_option&gt;] [&lt;command_options&gt;]</code></pre>
 </div>
 </div>
-<div class="colist arabic">
+<div class="admonitionblock note">
 <table>
 <tr>
-<td><img src="data:image/png;base64," alt="1"></td>
-<td>Feature options can only be used with the <code>oc netobserv flows</code> command. They cannot be used with the <code>oc netobserv packets</code> command.</td>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Feature options can only be used with the <code>oc netobserv flows</code> command. They cannot be used with the <code>oc netobserv packets</code> command.</p>
+</div>
+</td>
 </tr>
 </table>
 </div>
@@ -16353,7 +16355,7 @@ $ podman rm netobserv-cli</code></pre>
 <div class="sect6">
 <h7 id="cli-basic-commands_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Basic commands</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 910. Basic commands</caption>
+<caption class="title">Table 929. Basic commands</caption>
 <colgroup>
 <col style="width: 27.2727%;">
 <col style="width: 72.7273%;">
@@ -18266,7 +18268,7 @@ spec:
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a> →</p>
+<p>← Previous: <a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -18277,7 +18279,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-28 13:08:06 +0000
+Last updated 2026-10-30 13:35:37 +0000
 </div>
 </div>
 <style>

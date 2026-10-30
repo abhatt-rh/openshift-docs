@@ -764,8 +764,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
-<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
-</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -841,6 +839,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machineconfig-garbage-collect-removing_remove-no-longer-used-machine-config-objects.html">Remove unused rendered machine configs</a>
 </li>
 <li><a href="machine-health-checks-resource_review-sample-machinehealthcheck-resource.html">About the MachineHealthCheck custom resource</a>
+</li>
+<li><a href="remote-health-monitoring-overview_remote-health-monitoring.html">Remotely monitor the health of Red&#160;Hat OpenShift Container Platform clusters</a>
 </li>
 <li><a href="nodes-pods-daemonsets-about_run-background-tasks-on-a-node-with-daemonsets.html">Daemon set scheduling</a>
 </li>
@@ -1231,7 +1231,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-ingress-and-routes-con_configure-ingress-and-routes.html">Configure ingress and routes</a>
 </li>
+<li><a href="configure-sr-iov-network-devices-con_configure-sr-iov-network-devices.html">Configure SR-IOV network devices</a>
+</li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
 </li>
@@ -1243,11 +1247,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
 </li>
-<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
-</li>
 <li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
-</li>
-<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1588,8 +1588,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
-<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
-</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1605,9 +1603,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
-</li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
+</li>
+<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
 </li>
 <li><a href="deploy-a-plugin-on-a-cluster-con_deploy-a-plugin-on-a-cluster.html">Deploy a plugin on a cluster</a>
 </li>
@@ -1679,8 +1677,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
-</li>
-<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
@@ -4493,8 +4489,10 @@ spec:
 <div class="paragraph">
 <p>The <code>source-crs/ibu/PlatformBackupRestoreWithIBGU.yaml</code> file is provided in the ZTP container image.</p>
 </div>
+<div class="paragraph">
+<p><code>PlatformBackupRestoreWithIBGU.yaml</code>:</p>
+</div>
 <div class="listingblock">
-<div class="title">PlatformBackupRestoreWithIBGU.yaml</div>
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: velero.io/v1
 kind: Backup
@@ -4564,8 +4562,10 @@ spec:
 <div class="paragraph">
 <p>If you use LVM Storage to create persistent volumes, you can use the <code>source-crs/ibu/PlatformBackupRestoreLvms.yaml</code> provided in the ZTP container image to back up your LVM Storage resources.</p>
 </div>
+<div class="paragraph">
+<p><code>PlatformBackupRestoreLvms.yaml</code>:</p>
+</div>
 <div class="listingblock">
-<div class="title">PlatformBackupRestoreLvms.yaml</div>
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: velero.io/v1
 kind: Backup
@@ -4612,8 +4612,12 @@ spec:
 <ol class="loweralpha" type="a">
 <li>
 <p>Create the OADP CRs for cluster-scoped application artifacts in the <code>openshift-adp</code> namespace:</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Example OADP CRs for cluster-scoped application artifacts for LSO and LVM Storage:</p>
+</div>
 <div class="listingblock">
-<div class="title">Example OADP CRs for cluster-scoped application artifacts for LSO and LVM Storage</div>
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: velero.io/v1
 kind: Backup
@@ -4647,23 +4651,22 @@ spec:
     backup-app-cluster-resources</code></pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Replace the example resource names in the <code>lca.openshift.io/apply-label</code> field with your actual resources.</p>
-</li>
-<li>
-<p>The value in the <code>lca.openshift.io/apply-wave</code> field must be higher than the value in the platform <code>Restore</code> CRs and lower than the value in the application namespace-scoped <code>Restore</code> CR.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>+
+*  Replace the example resource names in the <code>lca.openshift.io/apply-label</code> field with your actual resources.
+* The value in the <code>lca.openshift.io/apply-wave</code> field must be higher than the value in the platform <code>Restore</code> CRs and lower than the value in the application namespace-scoped <code>Restore</code> CR.</p>
+</div>
+</div>
 </div>
 </li>
 <li>
 <p>Create the OADP CRs for your namespace-scoped application artifacts in the <code>source-crs/custom-crs</code> directory:</p>
 <div class="openblock">
 <div class="content">
+<div class="paragraph">
+<p>Example OADP CRs namespace-scoped application artifacts when LSO is used:</p>
+</div>
 <div class="listingblock">
-<div class="title">Example OADP CRs namespace-scoped application artifacts when LSO is used</div>
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: velero.io/v1
 kind: Backup
@@ -4710,8 +4713,10 @@ spec:
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Example OADP CRs namespace-scoped application artifacts when LVM Storage is used:</p>
+</div>
 <div class="listingblock">
-<div class="title">Example OADP CRs namespace-scoped application artifacts when LVM Storage is used</div>
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: velero.io/v1
 kind: Backup
@@ -6466,7 +6471,7 @@ spec:
 </div>
 </div>
 <div class="paragraph">
-<p>Where:</p>
+<p>where:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -6475,9 +6480,6 @@ spec:
 </li>
 <li>
 <p><code>seedImageRef</code>: Target platform version, the seed image, and the secret required to access the image.</p>
-</li>
-</ul>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6492,8 +6494,7 @@ spec:
 </tr>
 </table>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p><code>extraManifests</code>: Optional: Applies additional manifests, which are not in the seed image, to the target cluster. Also applies <code>ConfigMap</code> objects for custom catalog sources.</p>
 </li>
@@ -6525,8 +6526,10 @@ spec:
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get ibgu -o yaml</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Example output:</p>
+</div>
 <div class="listingblock">
-<div class="title">Example output</div>
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml"># ...
 status:
@@ -6630,8 +6633,10 @@ The TALM deletes the resources that are related to the upgrade on the selected c
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get ibgu -o yaml</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Example output:</p>
+</div>
 <div class="listingblock">
-<div class="title">Example output</div>
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml"># ...
 status:
@@ -6797,8 +6802,10 @@ spec:
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get ibgu -o yaml</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Example output:</p>
+</div>
 <div class="listingblock">
-<div class="title">Example output</div>
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml"># ...
 status:
@@ -7028,8 +7035,11 @@ spec:
 <pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get ibgu -o yaml</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>+
+.Example output</p>
+</div>
 <div class="listingblock">
-<div class="title">Example output</div>
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml"># ...
 status:
@@ -7061,7 +7071,7 @@ status:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-28 13:08:06 +0000
+Last updated 2026-10-30 13:35:37 +0000
 </div>
 </div>
 <style>
