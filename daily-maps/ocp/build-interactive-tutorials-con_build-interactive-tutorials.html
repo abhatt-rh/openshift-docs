@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="understanding-quick-starts_create-quick-start-tutorials" class="book toc2 toc-left navmap-has-right-toc">
+<body id="build-interactive-tutorials-con_build-interactive-tutorials" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -528,6 +528,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="security-rhcos-overview_understand-host-security-controls.html">Red Hat Enterprise Linux CoreOS (RHCOS)</a>
 </li>
+<li><a href="interactive-in-app-tutorial-con_interactive-in-app-tutorial.html">Building interactive tutorials</a>
+</li>
 </ul>
 </li>
 <li><a href="_get_started.html">Get started</a>
@@ -542,6 +544,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-default-pod-behavior-con_configure-default-pod-behavior.html">Configure default pod behavior</a>
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
+</li>
+<li><a href="create-first-quick-start-tutorial-con_create-first-quick-start-tutorial.html">Create your first quick start tutorial</a>
 </li>
 </ul>
 </li>
@@ -765,6 +769,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
+<li><a href="nodes-containers-port-forwarding-about_configure-port-forwarding-to-pods.html">Understand port forwarding</a>
+</li>
+<li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
+</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -774,6 +782,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
+</li>
+<li><a href="infrastructure-components_create-infrastructure-nodes-to-host-infrastructure-workloads.html">Move components to infrastructure nodes to reduce costs</a>
 </li>
 <li><a href="mco-update-boot-images_configure-my-cluster-to-automatically-update-the-boot-image-on-my-nodes.html">About boot image management</a>
 </li>
@@ -1086,6 +1096,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="change-the-control-plane-instance-type-con_change-the-control-plane-instance-type.html">Change the control plane instance type</a>
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
+</li>
+<li><a href="create-custom-machine-compute-set-con_create-custom-machine-compute-set.adoc.html">Create a custom machine compute set</a>
 </li>
 <li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
 </li>
@@ -1459,10 +1471,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="enable-pressure-stall-information-monitoring-con_enable-pressure-stall-information-monitoring.html">Enable Pressure Stall Information monitoring</a>
 </li>
-<li><a href="install-node-observability-operator_install-the-node-observability-operator.html">Installing the Node Observability Operator</a>
-</li>
-<li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
-</li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="view-node-status-and-resource-usage-con_view-node-status-and-resource-usage.html">View node status and resource usage</a>
@@ -1492,6 +1500,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="setting_up_cpu_manager_configure-cpu-isolation-for-latency-sensitive-workloads.html">Set up CPU Manager</a>
 </li>
 <li><a href="cnf-about-numa-aware-scheduling_schedule-numa-aware-workloads.html">About NUMA-aware scheduling</a>
+</li>
+<li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
 <li><a href="using-the-nfd-topology-updater_enable-nfd-topology-updater-for-numa-topology.html">Use the NFD Topology Updater</a>
 </li>
@@ -1595,17 +1605,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
-<li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
-</li>
-<li><a href="nodes-containers-port-forwarding-about_configure-port-forwarding-to-pods.html">Understand port forwarding</a>
-</li>
-<li><a href="infrastructure-components_create-infrastructure-nodes-to-host-infrastructure-workloads.html">Move components to infrastructure nodes to reduce costs</a>
-</li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="build-interactive-tutorials-con_build-interactive-tutorials.html"><span class="toc-current">Building interactive tutorials</span></a>
 </li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html"><span class="toc-current">Understand quick starts</span></a>
+<li><a href="create-quick-start-tutorials-con_create-quick-start-tutorials.html">Create quick-start tutorials</a>
 </li>
 <li><a href="deploy-a-plugin-on-a-cluster-con_deploy-a-plugin-on-a-cluster.html">Deploy a plugin on a cluster</a>
 </li>
@@ -1614,8 +1620,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="optional-capabilities-operators_discover-optional-capabilities-and-product-integrations.html">Enhance the Red&#160;Hat OpenShift Container Platform web console with Operators</a>
 </li>
 <li><a href="enable-a-dynamic-plugin-with-the-cli-con_enable-a-dynamic-plugin-with-the-cli.html">Enable a dynamic plugin with the CLI</a>
-</li>
-<li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
 <li><a href="control-user-access-to-extensions-con_control-user-access-to-extensions.html">Control user access to extensions</a>
 </li>
@@ -1869,413 +1873,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#quick-start-user-workflow_create-quick-start-tutorials">Quick start user workflow</a></li><li class="level-4"><a href="#quick-start-components_create-quick-start-tutorials">Quick start components</a></li><li class="level-4"><a href="#contributing-quick-starts_create-quick-start-tutorials">Contribute quick starts</a></li><li class="level-5"><a href="#viewing-quick-start-api-documentation_create-quick-start-tutorials">View the quick start API documentation</a></li><li class="level-5"><a href="#understanding-quick-start-elements_create-quick-start-tutorials">Map the elements in the quick start to the quick start CR</a></li><li class="level-6"><a href="#conclusion-quick-start-element_create-quick-start-tutorials">Conclusion element</a></li><li class="level-6"><a href="#description-quick-start-element_create-quick-start-tutorials">Description element</a></li><li class="level-6"><a href="#displayName-quick-start-element_create-quick-start-tutorials">The displayName element</a></li><li class="level-6"><a href="#duration-minutes-quick-start-element_create-quick-start-tutorials">The durationMinutes element</a></li><li class="level-6"><a href="#icon-quick-start-element_create-quick-start-tutorials">Icon element</a></li><li class="level-6"><a href="#introduction-quick-start-element_create-quick-start-tutorials">Introduction element</a></li><li class="level-5"><a href="#adding-custom-icon-to-quick-start_create-quick-start-tutorials">Add a custom icon to a quick start</a></li><li class="level-5"><a href="#limiting-access-to-quick-starts_create-quick-start-tutorials">Limit access to a quick start</a></li><li class="level-5"><a href="#linking-to-other-quick-starts_create-quick-start-tutorials">Link to other quick starts</a></li><li class="level-5"><a href="#supported-tags-for-quick-starts_create-quick-start-tutorials">Supported tags for quick starts</a></li><li class="level-5"><a href="#quick-start-highlighting-reference_create-quick-start-tutorials">Quick start highlighting markdown reference</a></li><li class="level-6"><a href="#quick-start-highlighting-perspective-switcher_create-quick-start-tutorials">Perspective switcher</a></li><li class="level-6"><a href="#quick-start-highlighting-admin-perspective_create-quick-start-tutorials">Administrator perspective navigation links</a></li><li class="level-6"><a href="#quick-start-highlighting-dev-perspective_create-quick-start-tutorials">Developer perspective navigation links</a></li><li class="level-6"><a href="#quick-start-highlighting-common-nav_create-quick-start-tutorials">Common navigation links</a></li><li class="level-6"><a href="#quick-start-highlighting-masthead-links_create-quick-start-tutorials">Masthead links</a></li><li class="level-5"><a href="#quick-starts-accessing-and-executing-code-snippets_create-quick-start-tutorials">Code snippet markdown reference</a></li><li class="level-6"><a href="#quick-starts-syntax-for-inline-code-snippets_create-quick-start-tutorials">Syntax for inline code snippets</a></li><li class="level-6"><a href="#quick-starts-syntax-for-multi-line-code-snippets_create-quick-start-tutorials">Syntax for multi-line code snippets</a></li><li class="level-4"><a href="#quick-start-content-guidelines_create-quick-start-tutorials">Quick start content guidelines</a></li><li class="level-5"><a href="#quick-start-content-guidelines-card-copy_create-quick-start-tutorials">Card copy</a></li><li class="level-5"><a href="#quick-start-content-guidelines-introduction_create-quick-start-tutorials">Introduction</a></li><li class="level-5"><a href="#quick-start-content-guidelines-task-steps_create-quick-start-tutorials">Task steps</a></li><li class="level-5"><a href="#quick-start-content-guidelines-check-your-work-module_create-quick-start-tutorials">Check your work module</a></li><li class="level-5"><a href="#quick-start-content-guidelines-formatting-UI-elements_create-quick-start-tutorials">Formatting UI elements</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#adding-custom-icon-to-quick-start_build-interactive-tutorials">Add a custom icon to a quick start</a></li><li class="level-4"><a href="#limiting-access-to-quick-starts_build-interactive-tutorials">Limit access to a quick start</a></li><li class="level-4"><a href="#linking-to-other-quick-starts_build-interactive-tutorials">Link to other quick starts</a></li><li class="level-4"><a href="#supported-tags-for-quick-starts_build-interactive-tutorials">Supported tags for quick starts</a></li><li class="level-4"><a href="#quick-start-highlighting-reference_build-interactive-tutorials">Quick start highlighting markdown reference</a></li><li class="level-5"><a href="#quick-start-highlighting-perspective-switcher_build-interactive-tutorials">Perspective switcher</a></li><li class="level-5"><a href="#quick-start-highlighting-admin-perspective_build-interactive-tutorials">Administrator perspective navigation links</a></li><li class="level-5"><a href="#quick-start-highlighting-dev-perspective_build-interactive-tutorials">Developer perspective navigation links</a></li><li class="level-5"><a href="#quick-start-highlighting-common-nav_build-interactive-tutorials">Common navigation links</a></li><li class="level-5"><a href="#quick-start-highlighting-masthead-links_build-interactive-tutorials">Masthead links</a></li><li class="level-4"><a href="#quick-starts-accessing-and-executing-code-snippets_build-interactive-tutorials">Code snippet markdown reference</a></li><li class="level-5"><a href="#quick-starts-syntax-for-inline-code-snippets_build-interactive-tutorials">Syntax for inline code snippets</a></li><li class="level-5"><a href="#quick-starts-syntax-for-multi-line-code-snippets_build-interactive-tutorials">Syntax for multi-line code snippets</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="understanding-quick-starts_create-quick-start-tutorials">Understand quick starts</h3>
+<h3 id="build-interactive-tutorials-con_build-interactive-tutorials">Building interactive tutorials</h3>
 <div class="paragraph _abstract">
-<p>A quick start is a guided tutorial with user tasks. In the web console, you can access quick starts under the <strong>Help</strong> menu. They are especially useful for getting oriented with an application, Operator, or other product offering.</p>
-</div>
-<div class="paragraph">
-<p>A quick start primarily consists of tasks and steps. Each task has multiple steps, and each quick start has multiple tasks. For example:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Task 1</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Step 1</p>
-</li>
-<li>
-<p>Step 2</p>
-</li>
-<li>
-<p>Step 3</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Task 2</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Step 1</p>
-</li>
-<li>
-<p>Step 2</p>
-</li>
-<li>
-<p>Step 3</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Task 3</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Step 1</p>
-</li>
-<li>
-<p>Step 2</p>
-</li>
-<li>
-<p>Step 3</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
+<p>Learn how to build, customize, and manage interactive quick-start tutorials in Red&#160;Hat OpenShift Container Platform, including adding custom icons, controlling access, linking related tutorials, highlighting UI elements, and executing embedded code snippets.</p>
 </div>
 <div class="sect3">
-<h4 id="quick-start-user-workflow_create-quick-start-tutorials">Quick start user workflow</h4>
-<div class="paragraph _abstract">
-<p>When you interact with an existing quick start tutorial, this is the expected workflow experience:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>In the <strong>Administrator</strong> or <strong>Developer</strong> perspective, click the <strong>Help icon</strong> and select <strong>Quick Starts</strong>.</p>
-</li>
-<li>
-<p>Click a quick start card.</p>
-</li>
-<li>
-<p>In the panel that is displayed, click <strong>Start</strong>.</p>
-</li>
-<li>
-<p>Complete the on-screen instructions, then click <strong>Next</strong>.</p>
-</li>
-<li>
-<p>In the <strong>Check your work</strong> module that is displayed, answer the question to confirm that you successfully completed the task.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>If you select <strong>Yes</strong>, click <strong>Next</strong> to continue to the next task.</p>
-</li>
-<li>
-<p>If you select <strong>No</strong>, repeat the task instructions and check your work again.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Repeat steps 1 through 6 above to complete the remaining tasks in the quick start.</p>
-</li>
-<li>
-<p>After completing the final task, click <strong>Close</strong> to close the quick start.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="quick-start-components_create-quick-start-tutorials">Quick start components</h4>
-<div class="paragraph _abstract">
-<p>A quick start consists of various components, such as cards, introductions, task headings, and more.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Card</strong>: The catalog tile that provides the basic information of the quick start, including title, description, time commitment, and completion status</p>
-</li>
-<li>
-<p><strong>Introduction</strong>: A brief overview of the goal and tasks of the quick start</p>
-</li>
-<li>
-<p><strong>Task headings</strong>: Hyper-linked titles for each task in the quick start</p>
-</li>
-<li>
-<p><strong>Check your work module</strong>: A module for a user to confirm that they completed a task successfully before advancing to the next task in the quick start</p>
-</li>
-<li>
-<p><strong>Hints</strong>: An animation to help users identify specific areas of the product</p>
-</li>
-<li>
-<p><strong>Buttons</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Next and back buttons</strong>: Buttons for navigating the steps and modules within each task of a quick start</p>
-</li>
-<li>
-<p><strong>Final screen buttons</strong>: Buttons for closing the quick start, going back to previous tasks within the quick start, and viewing all quick starts</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The main content area of a quick start includes the following sections:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Card copy</strong></p>
-</li>
-<li>
-<p><strong>Introduction</strong></p>
-</li>
-<li>
-<p><strong>Task steps</strong></p>
-</li>
-<li>
-<p><strong>Modals and in-app messaging</strong></p>
-</li>
-<li>
-<p><strong>Check your work module</strong></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="contributing-quick-starts_create-quick-start-tutorials">Contribute quick starts</h4>
-<div class="paragraph _abstract">
-<p>Red&#160;Hat OpenShift Container Platform introduces the quick start custom resource, which is defined by a <code>ConsoleQuickStart</code> object. Operators and administrators can use this resource to contribute quick starts to the cluster.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You must have cluster administrator privileges.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>To create a new quick start, run:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">$ oc get -o yaml consolequickstart spring-with-s2i &gt; my-quick-start.yaml</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Run:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">$ oc create -f my-quick-start.yaml</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Update the YAML file using the guidance outlined in this documentation.</p>
-</li>
-<li>
-<p>Save your edits.</p>
-</li>
-</ol>
-</div>
-<div class="sect4">
-<h5 id="viewing-quick-start-api-documentation_create-quick-start-tutorials">View the quick start API documentation</h5>
-<div class="paragraph _abstract">
-<p>You can view the API documentation for the <code>ConsoleQuickStart</code> resource by using the <code>oc explain</code> command.</p>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>To see the quick start API documentation, run:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc explain consolequickstarts</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Run <code>oc explain -h</code> for more information about <code>oc explain</code> usage.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="understanding-quick-start-elements_create-quick-start-tutorials">Map the elements in the quick start to the quick start CR</h5>
-<div class="paragraph _abstract">
-<p>These mappings show where each part of the quick start custom resource (CR) is displayed in the quick start within the web console.</p>
-</div>
-<div class="sect5">
-<h6 id="conclusion-quick-start-element_create-quick-start-tutorials">Conclusion element</h6>
-<div class="listingblock">
-<div class="title">Viewing the conclusion element in the YAML file</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">...
-summary:
-  failed: Try the steps again.
-  success: Your Spring application is running.
-title: Run the Spring application
-conclusion: &gt;-
-  Your Spring application is deployed and ready.</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>conclusion</code> field defines the conclusion text.</p>
-</div>
-<div class="paragraph">
-<p>In the web console, the conclusion is displayed in the last section of the quick start.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="data:image/png;base64," alt="quick start conclusion in the web console">
-</div>
-</div>
-</div>
-<div class="sect5">
-<h6 id="description-quick-start-element_create-quick-start-tutorials">Description element</h6>
-<div class="listingblock">
-<div class="title">Viewing the description element in the YAML file</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: console.openshift.io/v1
-kind: ConsoleQuickStart
-metadata:
-  name: spring-with-s2i
-spec:
-  description: 'Import a Spring Application from git, build, and deploy it onto OpenShift.'
-...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>description</code> field defines the description text.</p>
-</div>
-<div class="paragraph">
-<p>In the web console, the description is displayed on the introductory tile of the quick start on the <strong>Quick Starts</strong> page.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="data:image/png;base64," alt="quick start description in the web console">
-</div>
-</div>
-</div>
-<div class="sect5">
-<h6 id="displayName-quick-start-element_create-quick-start-tutorials">The <code>displayName</code> element</h6>
-<div class="listingblock">
-<div class="title">Viewing the <code>displayName</code> element in the YAML file</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: console.openshift.io/v1
-kind: ConsoleQuickStart
-metadata:
-  name: spring-with-s2i
-spec:
-  description: 'Import a Spring Application from git, build, and deploy it onto OpenShift.'
-  displayName: Get started with Spring
-  durationMinutes: 10</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>displayName</code> field defines the display name text.</p>
-</div>
-<div class="paragraph">
-<p>In the web console, the display name is displayed on the introductory tile of the quick start on the <strong>Quick Starts</strong> page.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="data:image/png;base64," alt="quick start display name in the web console">
-</div>
-</div>
-</div>
-<div class="sect5">
-<h6 id="duration-minutes-quick-start-element_create-quick-start-tutorials">The <code>durationMinutes</code> element</h6>
-<div class="listingblock">
-<div class="title">Viewing the <code>durationMinutes</code> element in the YAML file</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: console.openshift.io/v1
-kind: ConsoleQuickStart
-metadata:
-  name: spring-with-s2i
-spec:
-  description: 'Import a Spring Application from git, build, and deploy it onto OpenShift.'
-  displayName: Get started with Spring
-  durationMinutes: 10</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>durationMinutes</code> field defines, in minutes, how long the quick start should take to complete.</p>
-</div>
-<div class="paragraph">
-<p>In the web console, the duration minutes element is displayed on the introductory tile of the quick start on the <strong>Quick Starts</strong> page.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="data:image/png;base64," alt="quick start durationMinutes element in the web console">
-</div>
-</div>
-</div>
-<div class="sect5">
-<h6 id="icon-quick-start-element_create-quick-start-tutorials">Icon element</h6>
-<div class="listingblock">
-<div class="title">Viewing the icon element in the YAML file</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">...
-spec:
-  description: 'Import a Spring Application from git, build, and deploy it onto OpenShift.'
-  displayName: Get started with Spring
-  durationMinutes: 10
-  icon: &gt;-
-    data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJMYXllcl8xIiBkYXRhLW5hbWU9IkxheWVyIDEiIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMTUzZDNjO30uY2xzLTJ7ZmlsbDojZDhkYTlkO30uY2xzLTN7ZmlsbDojNThjMGE4O30uY2xzLTR7ZmlsbDojZmZmO30uY2xzLTV7ZmlsbDojM2Q5MTkxO308L3N0eWxlPjwvZGVmcz48dGl0bGU+c25vd2Ryb3BfaWNvbl9yZ2JfZGVmYXVsdDwvdGl0bGU+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTAxMi42OSw1OTNjLTExLjEyLTM4LjA3LTMxLTczLTU5LjIxLTEwMy44LTkuNS0xMS4zLTIzLjIxLTI4LjI5LTM5LjA2LTQ3Ljk0QzgzMy41MywzNDEsNzQ1LjM3LDIzNC4xOCw2NzQsMTY4Ljk0Yy01LTUuMjYtMTAuMjYtMTAuMzEtMTUuNjUtMTUuMDdhMjQ2LjQ5LDI0Ni40OSwwLDAsMC0zNi41NS0yNi44LDE4Mi41LDE4Mi41LDAsMCwwLTIwLjMtMTEuNzcsMjAxLjUzLDIwMS41MywwLDAsMC00My4xOS0xNUExNTUuMjQsMTU1LjI0LDAsMCwwLDUyOCw5NS4yYy02Ljc2LS42OC0xMS43NC0uODEtMTQuMzktLjgxaDBsLTEuNjIsMC0xLjYyLDBhMTc3LjMsMTc3LjMsMCwwLDAtMzEuNzcsMy4zNSwyMDguMjMsMjA4LjIzLDAsMCwwLTU2LjEyLDE3LjU2LDE4MSwxODEsMCwwLDAtMjAuMjcsMTEuNzUsMjQ3LjQzLDI0Ny40MywwLDAsMC0zNi41NywyNi44MUMzNjAuMjUsMTU4LjYyLDM1NSwxNjMuNjgsMzUwLDE2OWMtNzEuMzUsNjUuMjUtMTU5LjUsMTcyLTI0MC4zOSwyNzIuMjhDOTMuNzMsNDYwLjg4LDgwLDQ3Ny44Nyw3MC41Miw0ODkuMTcsNDIuMzUsNTIwLDIyLjQzLDU1NC45LDExLjMxLDU5MywuNzIsNjI5LjIyLTEuNzMsNjY3LjY5LDQsNzA3LjMxLDE1LDc4Mi40OSw1NS43OCw4NTkuMTIsMTE4LjkzLDkyMy4wOWEyMiwyMiwwLDAsMCwxNS41OSw2LjUyaDEuODNsMS44Ny0uMzJjODEuMDYtMTMuOTEsMTEwLTc5LjU3LDE0My40OC0xNTUuNiwzLjkxLTguODgsNy45NS0xOC4wNSwxMi4yLTI3LjQzcTUuNDIsOC41NCwxMS4zOSwxNi4yM2MzMS44NSw0MC45MSw3NS4xMiw2NC42NywxMzIuMzIsNzIuNjNsMTguOCwyLjYyLDQuOTUtMTguMzNjMTMuMjYtNDkuMDcsMzUuMy05MC44NSw1MC42NC0xMTYuMTksMTUuMzQsMjUuMzQsMzcuMzgsNjcuMTIsNTAuNjQsMTE2LjE5bDUsMTguMzMsMTguOC0yLjYyYzU3LjItOCwxMDAuNDctMzEuNzIsMTMyLjMyLTcyLjYzcTYtNy42OCwxMS4zOS0xNi4yM2M0LjI1LDkuMzgsOC4yOSwxOC41NSwxMi4yLDI3LjQzLDMzLjQ5LDc2LDYyLjQyLDE0MS42OSwxNDMuNDgsMTU1LjZsMS44MS4zMWgxLjg5YTIyLDIyLDAsMCwwLDE1LjU5LTYuNTJjNjMuMTUtNjQsMTAzLjk1LTE0MC42LDExNC44OS0yMTUuNzhDMTAyNS43Myw2NjcuNjksMTAyMy4yOCw2MjkuMjIsMTAxMi42OSw1OTNaIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMzY0LjE1LDE4NS4yM2MxNy44OS0xNi40LDM0LjctMzAuMTUsNDkuNzctNDAuMTFhMjEyLDIxMiwwLDAsMSw2NS45My0yNS43M0ExOTgsMTk4LDAsMCwxLDUxMiwxMTYuMjdhMTk2LjExLDE5Ni4xMSwwLDAsMSwzMiwzLjFjNC41LjkxLDkuMzYsMi4wNiwxNC41MywzLjUyLDYwLjQxLDIwLjQ4LDg0LjkyLDkxLjA1LTQ3LjQ0LDI0OC4wNi0yOC43NSwzNC4xMi0xNDAuNywxOTQuODQtMTg0LjY2LDI2OC40MmE2MzAuODYsNjMwLjg2LDAsMCwwLTMzLjIyLDU4LjMyQzI3Niw2NTUuMzQsMjY1LjQsNTk4LDI2NS40LDUyMC4yOSwyNjUuNCwzNDAuNjEsMzExLjY5LDI0MC43NCwzNjQuMTUsMTg1LjIzWiIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTUyNy41NCwzODQuODNjODQuMDYtOTkuNywxMTYuMDYtMTc3LjI4LDk1LjIyLTIzMC43NCwxMS42Miw4LjY5LDI0LDE5LjIsMzcuMDYsMzEuMTMsNTIuNDgsNTUuNSw5OC43OCwxNTUuMzgsOTguNzgsMzM1LjA3LDAsNzcuNzEtMTAuNiwxMzUuMDUtMjcuNzcsMTc3LjRhNjI4LjczLDYyOC43MywwLDAsMC0zMy4yMy01OC4zMmMtMzktNjUuMjYtMTMxLjQ1LTE5OS0xNzEuOTMtMjUyLjI3QzUyNi4zMywzODYuMjksNTI3LDM4NS41Miw1MjcuNTQsMzg0LjgzWiIvPjxwYXRoIGNsYXNzPSJjbHMtNCIgZD0iTTEzNC41OCw5MDguMDdoLS4wNmEuMzkuMzksMCwwLDEtLjI3LS4xMWMtMTE5LjUyLTEyMS4wNy0xNTUtMjg3LjQtNDcuNTQtNDA0LjU4LDM0LjYzLTQxLjE0LDEyMC0xNTEuNiwyMDIuNzUtMjQyLjE5LTMuMTMsNy02LjEyLDE0LjI1LTguOTIsMjEuNjktMjQuMzQsNjQuNDUtMzYuNjcsMTQ0LjMyLTM2LjY3LDIzNy40MSwwLDU2LjUzLDUuNTgsMTA2LDE2LjU5LDE0Ny4xNEEzMDcuNDksMzA3LjQ5LDAsMCwwLDI4MC45MSw3MjNDMjM3LDgxNi44OCwyMTYuOTMsODkzLjkzLDEzNC41OCw5MDguMDdaIi8+PHBhdGggY2xhc3M9ImNscy01IiBkPSJNNTgzLjQzLDgxMy43OUM1NjAuMTgsNzI3LjcyLDUxMiw2NjQuMTUsNTEyLDY2NC4xNXMtNDguMTcsNjMuNTctNzEuNDMsMTQ5LjY0Yy00OC40NS02Ljc0LTEwMC45MS0yNy41Mi0xMzUuNjYtOTEuMThhNjQ1LjY4LDY0NS42OCwwLDAsMSwzOS41Ny03MS41NGwuMjEtLjMyLjE5LS4zM2MzOC02My42MywxMjYuNC0xOTEuMzcsMTY3LjEyLTI0NS42Niw0MC43MSw1NC4yOCwxMjkuMSwxODIsMTY3LjEyLDI0NS42NmwuMTkuMzMuMjEuMzJhNjQ1LjY4LDY0NS42OCwwLDAsMSwzOS41Nyw3MS41NEM2ODQuMzQsNzg2LjI3LDYzMS44OCw4MDcuMDUsNTgzLjQzLDgxMy43OVoiLz48cGF0aCBjbGFzcz0iY2xzLTQiIGQ9Ik04ODkuNzUsOTA4YS4zOS4zOSwwLDAsMS0uMjcuMTFoLS4wNkM4MDcuMDcsODkzLjkzLDc4Nyw4MTYuODgsNzQzLjA5LDcyM2EzMDcuNDksMzA3LjQ5LDAsMCwwLDIwLjQ1LTU1LjU0YzExLTQxLjExLDE2LjU5LTkwLjYxLDE2LjU5LTE0Ny4xNCwwLTkzLjA4LTEyLjMzLTE3My0zNi42Ni0yMzcuNHEtNC4yMi0xMS4xNi04LjkzLTIxLjdjODIuNzUsOTAuNTksMTY4LjEyLDIwMS4wNSwyMDIuNzUsMjQyLjE5QzEwNDQuNzksNjIwLjU2LDEwMDkuMjcsNzg2Ljg5LDg4OS43NSw5MDhaIi8+PC9zdmc+Cg==
-...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>icon</code> field defines the icon as a base64 value.</p>
-</div>
-<div class="paragraph">
-<p>In the web console, the icon is displayed on the introductory tile of the quick start on the <strong>Quick Starts</strong> page.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="data:image/png;base64," alt="quick start icon element in the web console">
-</div>
-</div>
-</div>
-<div class="sect5">
-<h6 id="introduction-quick-start-element_create-quick-start-tutorials">Introduction element</h6>
-<div class="listingblock">
-<div class="title">Viewing the introduction element in the YAML file</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">...
-  introduction: &gt;-
-    **Spring** is a Java framework for building applications based on a distributed microservices architecture.
-
-    - Spring enables easy packaging and configuration of Spring applications into a self-contained executable application which can be easily deployed as a container to OpenShift.
-
-    - Spring applications can integrate OpenShift capabilities to provide a natural "Spring on OpenShift" developer experience for both existing and net-new Spring applications. For example:
-
-    - Externalized configuration using Kubernetes ConfigMaps and integration with Spring Cloud Kubernetes
-
-    - Service discovery using Kubernetes Services
-
-    - Load balancing with Replication Controllers
-
-    - Kubernetes health probes and integration with Spring Actuator
-
-    - Metrics: Prometheus, Grafana, and integration with Spring Cloud Sleuth
-
-    - Distributed tracing with Istio
-
-    - Developer tooling through Red Hat OpenShift and Red Hat CodeReady developer tooling to quickly scaffold new Spring projects, gain access to familiar Spring APIs in your favorite IDE, and deploy to Red Hat OpenShift
-...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>introduction</code> field introduces the quick start and lists the tasks within it.</p>
-</div>
-<div class="paragraph">
-<p>In the web console, after you click a quick start card, a side panel slides in that introduces the quick start and lists the tasks within it.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="data:image/png;base64," alt="quick start introduction element in the web console">
-</div>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="adding-custom-icon-to-quick-start_create-quick-start-tutorials">Add a custom icon to a quick start</h5>
+<h4 id="adding-custom-icon-to-quick-start_build-interactive-tutorials">Add a custom icon to a quick start</h4>
 <div class="paragraph _abstract">
 <p>A default icon is provided for all quick starts. You can provide your own custom icon.</p>
 </div>
@@ -2300,8 +1906,8 @@ spec:
 </ol>
 </div>
 </div>
-<div class="sect4">
-<h5 id="limiting-access-to-quick-starts_create-quick-start-tutorials">Limit access to a quick start</h5>
+<div class="sect3">
+<h4 id="limiting-access-to-quick-starts_build-interactive-tutorials">Limit access to a quick start</h4>
 <div class="paragraph _abstract">
 <p>Not all quick starts should be available for everyone. The <code>accessReviewResources</code> section of the YAML file provides the ability to limit access to the quick start.</p>
 </div>
@@ -2331,8 +1937,8 @@ spec:
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="linking-to-other-quick-starts_create-quick-start-tutorials">Link to other quick starts</h5>
+<div class="sect3">
+<h4 id="linking-to-other-quick-starts_build-interactive-tutorials">Link to other quick starts</h4>
 <div class="paragraph _abstract">
 <p>You can link a quick start to another quick start by setting the <code>nextQuickStart</code> field.</p>
 </div>
@@ -2346,8 +1952,8 @@ spec:
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="supported-tags-for-quick-starts_create-quick-start-tutorials">Supported tags for quick starts</h5>
+<div class="sect3">
+<h4 id="supported-tags-for-quick-starts_build-interactive-tutorials">Supported tags for quick starts</h4>
 <div class="paragraph _abstract">
 <p>Write your quick start content in markdown using these tags. The markdown is converted to HTML.</p>
 </div>
@@ -2446,8 +2052,8 @@ spec:
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="quick-start-highlighting-reference_create-quick-start-tutorials">Quick start highlighting markdown reference</h5>
+<div class="sect3">
+<h4 id="quick-start-highlighting-reference_build-interactive-tutorials">Quick start highlighting markdown reference</h4>
 <div class="paragraph _abstract">
 <p>You can use highlighting, or hints, in a quick start to add a link that highlights and animates a component of the web console.</p>
 </div>
@@ -2464,16 +2070,16 @@ spec:
 </li>
 </ul>
 </div>
-<div class="sect5">
-<h6 id="quick-start-highlighting-perspective-switcher_create-quick-start-tutorials">Perspective switcher</h6>
+<div class="sect4">
+<h5 id="quick-start-highlighting-perspective-switcher_build-interactive-tutorials">Perspective switcher</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-text" data-lang="text">[Perspective switcher]{{highlight qs-perspective-switcher}}</code></pre>
 </div>
 </div>
 </div>
-<div class="sect5">
-<h6 id="quick-start-highlighting-admin-perspective_create-quick-start-tutorials">Administrator perspective navigation links</h6>
+<div class="sect4">
+<h5 id="quick-start-highlighting-admin-perspective_build-interactive-tutorials">Administrator perspective navigation links</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-text" data-lang="text">[Home]{{highlight qs-nav-home}}
@@ -2489,8 +2095,8 @@ spec:
 </div>
 </div>
 </div>
-<div class="sect5">
-<h6 id="quick-start-highlighting-dev-perspective_create-quick-start-tutorials">Developer perspective navigation links</h6>
+<div class="sect4">
+<h5 id="quick-start-highlighting-dev-perspective_build-interactive-tutorials">Developer perspective navigation links</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-text" data-lang="text">[Add]{{highlight qs-nav-add}}
@@ -2501,8 +2107,8 @@ spec:
 </div>
 </div>
 </div>
-<div class="sect5">
-<h6 id="quick-start-highlighting-common-nav_create-quick-start-tutorials">Common navigation links</h6>
+<div class="sect4">
+<h5 id="quick-start-highlighting-common-nav_build-interactive-tutorials">Common navigation links</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-text" data-lang="text">[Builds]{{highlight qs-nav-builds}}
@@ -2511,8 +2117,8 @@ spec:
 </div>
 </div>
 </div>
-<div class="sect5">
-<h6 id="quick-start-highlighting-masthead-links_create-quick-start-tutorials">Masthead links</h6>
+<div class="sect4">
+<h5 id="quick-start-highlighting-masthead-links_build-interactive-tutorials">Masthead links</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-text" data-lang="text">[CloudShell]{{highlight qs-masthead-cloudshell}}
@@ -2526,13 +2132,13 @@ spec:
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="quick-starts-accessing-and-executing-code-snippets_create-quick-start-tutorials">Code snippet markdown reference</h5>
+<div class="sect3">
+<h4 id="quick-starts-accessing-and-executing-code-snippets_build-interactive-tutorials">Code snippet markdown reference</h4>
 <div class="paragraph _abstract">
 <p>Embed executable and copyable CLI code snippets in a quick start using this markdown syntax. Executing a snippet requires the Web Terminal Operator; copying works with or without it installed.</p>
 </div>
-<div class="sect5">
-<h6 id="quick-starts-syntax-for-inline-code-snippets_create-quick-start-tutorials">Syntax for inline code snippets</h6>
+<div class="sect4">
+<h5 id="quick-starts-syntax-for-inline-code-snippets_build-interactive-tutorials">Syntax for inline code snippets</h5>
 <div class="listingblock">
 <div class="content">
 <pre>`code block`{{copy}}
@@ -2554,8 +2160,8 @@ spec:
 </table>
 </div>
 </div>
-<div class="sect5">
-<h6 id="quick-starts-syntax-for-multi-line-code-snippets_create-quick-start-tutorials">Syntax for multi-line code snippets</h6>
+<div class="sect4">
+<h5 id="quick-starts-syntax-for-multi-line-code-snippets_build-interactive-tutorials">Syntax for multi-line code snippets</h5>
 <div class="listingblock">
 <div class="content">
 <pre>```
@@ -2570,327 +2176,8 @@ multi line code block
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="quick-start-content-guidelines_create-quick-start-tutorials">Quick start content guidelines</h4>
-<div class="paragraph _abstract">
-<p>Follow these content guidelines when writing quick starts for the Red&#160;Hat OpenShift Container Platform web console.</p>
-</div>
-<div class="sect4">
-<h5 id="quick-start-content-guidelines-card-copy_create-quick-start-tutorials">Card copy</h5>
-<div class="paragraph">
-<p>You can customize the title and description on a quick start card, but you cannot customize the status.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Keep your description to one to two sentences.</p>
-</li>
-<li>
-<p>Start with a verb and communicate the goal of the user. Correct example:</p>
-<div class="listingblock">
-<div class="content">
-<pre>Create a serverless application.</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="quick-start-content-guidelines-introduction_create-quick-start-tutorials">Introduction</h5>
-<div class="paragraph">
-<p>After clicking a quick start card, a side panel slides in that introduces the quick start and lists the tasks within it.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Make your introduction content clear, concise, informative, and friendly.</p>
-</li>
-<li>
-<p>State the outcome of the quick start. A user should understand the purpose of the quick start before they begin.</p>
-</li>
-<li>
-<p>Give action to the user, not the quick start.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Correct example</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>In this quick start, you will deploy a sample application to {product-title}.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Incorrect example</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>This quick start shows you how to deploy a sample application to {product-title}.</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>The introduction should be a maximum of four to five sentences, depending on the complexity of the feature. A long introduction can overwhelm the user.</p>
-</li>
-<li>
-<p>List the quick start tasks after the introduction content, and start each task with a verb. Do not specify the number of tasks because the copy would need to be updated every time a task is added or removed.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Correct example</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>Tasks to complete: Create a serverless application; Connect an event source; Force a new revision</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Incorrect example</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>You will complete these 3 tasks: Creating a serverless application; Connecting an event source; Forcing a new revision</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="quick-start-content-guidelines-task-steps_create-quick-start-tutorials">Task steps</h5>
-<div class="paragraph">
-<p>After the user clicks <strong>Start</strong>, a series of steps is displayed that they must perform to complete the quick start.</p>
-</div>
-<div class="paragraph">
-<p>Follow these general guidelines when writing task steps:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Use "Click" for buttons and labels. Use "Select" for checkboxes, radio buttons, and drop-down menus.</p>
-</li>
-<li>
-<p>Use "Click" by itself. Do not add "on" after it.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Correct example</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>Click OK.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Incorrect example</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>Click on the OK button.</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Tell users how to navigate between <strong>Administrator</strong> and <strong>Developer</strong> perspectives. Even if you think a user might already be in the appropriate perspective, give them instructions on how to get there so that they are definitely where they need to be.</p>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Enter the Developer perspective: In the main navigation, click the dropdown menu and select Developer.
-Enter the Administrator perspective: In the main navigation, click the dropdown menu and select Admin.</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Use the "Location, action" structure. Tell a user where to go before telling them what to do.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Correct example</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>In the node.js deployment, hover over the icon.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Incorrect example</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>Hover over the icon in the node.js deployment.</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Keep your product terminology capitalization consistent.</p>
-</li>
-<li>
-<p>If you must specify a menu type or list as a dropdown, write "dropdown” as one word without a hyphen.</p>
-</li>
-<li>
-<p>Clearly distinguish between a user action and additional information on product functionality.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>User action</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>Change the time range of the dashboard by clicking the dropdown menu and selecting time range.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Additional information</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>To look at data in a specific time frame, you can change the time range of the dashboard.</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Avoid directional language, such as "In the upper-right corner, click the icon". Directional language becomes outdated every time UI layouts change. Also, a direction for desktop users might not be accurate for users with a different screen size. Instead, identify something using its name.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Correct example</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>In the navigation menu, click Settings.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Incorrect example</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>In the left-hand menu, click Settings.</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Do not identify items by color alone, such as "Click the gray circle". Color identifiers are not useful for sight-limited users, especially colorblind users. Instead, identify an item using its name or copy, such as button copy.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Correct example</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>The success message indicates a connection.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Incorrect example</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>The message with a green icon indicates a connection.</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Use the second-person point of view, you, consistently:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Correct example</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>Set up your environment.</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Incorrect example</strong>:</p>
-<div class="listingblock">
-<div class="content">
-<pre>Let's set up our environment.</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="quick-start-content-guidelines-check-your-work-module_create-quick-start-tutorials">Check your work module</h5>
-<div class="ulist">
-<ul>
-<li>
-<p>After a user completes a step, a <strong>Check your work</strong> module displays. This module prompts the user to answer a yes or no question about the step results, which gives them the opportunity to review their work. For this module, you only need to write a single yes or no question.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>If the user answers <strong>Yes</strong>, a checkmark displays.</p>
-</li>
-<li>
-<p>If the user answers <strong>No</strong>, an error message displays with a link to relevant documentation, if necessary. The user then has the opportunity to go back and try again.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="quick-start-content-guidelines-formatting-UI-elements_create-quick-start-tutorials">Formatting UI elements</h5>
-<div class="paragraph">
-<p>Format UI elements by using these guidelines:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Copy for buttons, dropdowns, tabs, fields, and other UI controls: Write the copy as it is displayed in the UI and bold it.</p>
-</li>
-<li>
-<p>All other UI elements (including page, window, and panel names): Write the copy as it is displayed in the UI and bold it.</p>
-</li>
-<li>
-<p>Code or user-entered text: Use monospaced font.</p>
-</li>
-<li>
-<p>Hints: If a hint to a navigation or masthead element is included, style the text as you would a link.</p>
-</li>
-<li>
-<p>CLI commands: Use monospaced font.</p>
-</li>
-<li>
-<p>In running text, use a bold, monospaced font for a command.</p>
-</li>
-<li>
-<p>If a parameter or option is a variable value, use an italic monospaced font.</p>
-</li>
-<li>
-<p>Use a bold, monospaced font for the parameter and a monospaced font for the option.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a> | ↑ Up: <a href="_extend.html">Extend</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="deploy-a-plugin-on-a-cluster-con_deploy-a-plugin-on-a-cluster.html">Deploy a plugin on a cluster</a> →</p>
+<p>← Previous: <a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a> | ↑ Up: <a href="_extend.html">Extend</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2901,7 +2188,7 @@ Enter the Administrator perspective: In the main navigation, click the dropdown 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-30 13:35:37 +0000
+Last updated 2026-11-04 12:35:22 +0000
 </div>
 </div>
 <style>

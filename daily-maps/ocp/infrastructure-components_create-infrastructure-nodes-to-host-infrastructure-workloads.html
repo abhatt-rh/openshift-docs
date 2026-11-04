@@ -528,6 +528,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="security-rhcos-overview_understand-host-security-controls.html">Red Hat Enterprise Linux CoreOS (RHCOS)</a>
 </li>
+<li><a href="interactive-in-app-tutorial-con_interactive-in-app-tutorial.html">Building interactive tutorials</a>
+</li>
 </ul>
 </li>
 <li><a href="_get_started.html">Get started</a>
@@ -542,6 +544,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-default-pod-behavior-con_configure-default-pod-behavior.html">Configure default pod behavior</a>
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
+</li>
+<li><a href="create-first-quick-start-tutorial-con_create-first-quick-start-tutorial.html">Create your first quick start tutorial</a>
 </li>
 </ul>
 </li>
@@ -753,7 +757,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_migrate.html">Migrate</a>
 </li>
 <li><a href="_administer.html">Administer</a>
-
 <ul class="sectlevel2">
 <li><a href="about-project-creation_configure-project-creation.html">About project creation</a>
 </li>
@@ -765,6 +768,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
+<li><a href="nodes-containers-port-forwarding-about_configure-port-forwarding-to-pods.html">Understand port forwarding</a>
+</li>
+<li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
+</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -774,6 +781,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
+</li>
+<li><a href="infrastructure-components_create-infrastructure-nodes-to-host-infrastructure-workloads.html"><span class="toc-current">Move components to infrastructure nodes to reduce costs</span></a>
 </li>
 <li><a href="mco-update-boot-images_configure-my-cluster-to-automatically-update-the-boot-image-on-my-nodes.html">About boot image management</a>
 </li>
@@ -1086,6 +1095,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="change-the-control-plane-instance-type-con_change-the-control-plane-instance-type.html">Change the control plane instance type</a>
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
+</li>
+<li><a href="create-custom-machine-compute-set-con_create-custom-machine-compute-set.adoc.html">Create a custom machine compute set</a>
 </li>
 <li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
 </li>
@@ -1459,10 +1470,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="enable-pressure-stall-information-monitoring-con_enable-pressure-stall-information-monitoring.html">Enable Pressure Stall Information monitoring</a>
 </li>
-<li><a href="install-node-observability-operator_install-the-node-observability-operator.html">Installing the Node Observability Operator</a>
-</li>
-<li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
-</li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="view-node-status-and-resource-usage-con_view-node-status-and-resource-usage.html">View node status and resource usage</a>
@@ -1492,6 +1499,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="setting_up_cpu_manager_configure-cpu-isolation-for-latency-sensitive-workloads.html">Set up CPU Manager</a>
 </li>
 <li><a href="cnf-about-numa-aware-scheduling_schedule-numa-aware-workloads.html">About NUMA-aware scheduling</a>
+</li>
+<li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
 <li><a href="using-the-nfd-topology-updater_enable-nfd-topology-updater-for-numa-topology.html">Use the NFD Topology Updater</a>
 </li>
@@ -1592,20 +1601,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
+
 <ul class="sectlevel2">
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
-<li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
-</li>
-<li><a href="nodes-containers-port-forwarding-about_configure-port-forwarding-to-pods.html">Understand port forwarding</a>
-</li>
-<li><a href="infrastructure-components_create-infrastructure-nodes-to-host-infrastructure-workloads.html"><span class="toc-current">Move components to infrastructure nodes to reduce costs</span></a>
-</li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="build-interactive-tutorials-con_build-interactive-tutorials.html">Building interactive tutorials</a>
 </li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
+<li><a href="create-quick-start-tutorials-con_create-quick-start-tutorials.html">Create quick-start tutorials</a>
 </li>
 <li><a href="deploy-a-plugin-on-a-cluster-con_deploy-a-plugin-on-a-cluster.html">Deploy a plugin on a cluster</a>
 </li>
@@ -1614,8 +1620,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="optional-capabilities-operators_discover-optional-capabilities-and-product-integrations.html">Enhance the Red&#160;Hat OpenShift Container Platform web console with Operators</a>
 </li>
 <li><a href="enable-a-dynamic-plugin-with-the-cli-con_enable-a-dynamic-plugin-with-the-cli.html">Enable a dynamic plugin with the CLI</a>
-</li>
-<li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
 <li><a href="control-user-access-to-extensions-con_control-user-access-to-extensions.html">Control user access to extensions</a>
 </li>
@@ -1869,7 +1873,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#machineset-yaml-aws_creating-infrastructure-machinesets">Sample YAML for a compute machine set custom resource on AWS</a></li><li class="level-4"><a href="#machineset-creating_create-infrastructure-nodes-to-host-infrastructure-workloads">Create a compute machine set</a></li><li class="level-4"><a href="#creating-an-infra-node_create-infrastructure-nodes-to-host-infrastructure-workloads">Create an infrastructure node</a></li><li class="level-4"><a href="#creating-infra-machines_create-infrastructure-nodes-to-host-infrastructure-workloads">Create a machine config pool for infrastructure machines</a></li><li class="level-4"><a href="#binding-infra-node-workloads-using-taints-tolerations_create-infrastructure-nodes-to-host-infrastructure-workloads">Bind infrastructure node workloads using taints and tolerations</a></li><li class="level-4"><a href="#moving-resources-to-infrastructure-machinesets_create-infrastructure-nodes-to-host-infrastructure-workloads">Move resources to infrastructure machine sets</a></li><li class="level-5"><a href="#infrastructure-moving-router_create-infrastructure-nodes-to-host-infrastructure-workloads">Move the router</a></li><li class="level-5"><a href="#infrastructure-moving-registry_create-infrastructure-nodes-to-host-infrastructure-workloads">Move the default registry</a></li><li class="level-5"><a href="#infrastructure-moving-monitoring_create-infrastructure-nodes-to-host-infrastructure-workloads">Move the monitoring solution</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#creating-an-infra-node_create-infrastructure-nodes-to-host-infrastructure-workloads">Create an infrastructure node</a></li><li class="level-4"><a href="#creating-infra-machines_create-infrastructure-nodes-to-host-infrastructure-workloads">Create a machine config pool for infrastructure machines</a></li><li class="level-4"><a href="#binding-infra-node-workloads-using-taints-tolerations_create-infrastructure-nodes-to-host-infrastructure-workloads">Bind infrastructure node workloads using taints and tolerations</a></li><li class="level-4"><a href="#moving-resources-to-infrastructure-machinesets_create-infrastructure-nodes-to-host-infrastructure-workloads">Move resources to infrastructure machine sets</a></li><li class="level-5"><a href="#infrastructure-moving-router_create-infrastructure-nodes-to-host-infrastructure-workloads">Move the router</a></li><li class="level-5"><a href="#infrastructure-moving-registry_create-infrastructure-nodes-to-host-infrastructure-workloads">Move the default registry</a></li><li class="level-5"><a href="#infrastructure-moving-monitoring_create-infrastructure-nodes-to-host-infrastructure-workloads">Move the monitoring solution</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="infrastructure-components_create-infrastructure-nodes-to-host-infrastructure-workloads">Move components to infrastructure nodes to reduce costs</h3>
@@ -1930,351 +1934,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="paragraph">
 <p>For information about infrastructure nodes and which components can run on infrastructure nodes, see the "Red Hat OpenShift control plane and infrastructure nodes" section in the OpenShift sizing and subscription guide for enterprise Kubernetes document.</p>
-</div>
-<div class="sect3">
-<h4 id="machineset-yaml-aws_creating-infrastructure-machinesets">Sample YAML for a compute machine set custom resource on AWS</h4>
-<div class="paragraph _abstract">
-<p>The sample YAML defines a compute machine set that runs in the <code>us-east-1a</code> Amazon Web Services (AWS) Local Zone and creates nodes that are labeled with
-<code>node-role.kubernetes.io/infra: ""</code>.</p>
-</div>
-<div class="paragraph">
-<p>The sample YAML specifies a taint to prevent user workloads from being scheduled on
-<code>infra</code>
-nodes.</p>
-</div>
-<div class="paragraph">
-<p>After adding the <code>NoSchedule</code> taint on the infrastructure node, existing DNS pods running on that node are marked as <code>misscheduled</code>. You must either delete or <a href="https://access.redhat.com/solutions/6592171">add toleration on <code>misscheduled</code> DNS pods</a>.</p>
-</div>
-<div class="paragraph">
-<p>In this sample, <code>&lt;infrastructure_id&gt;</code> is the infrastructure ID label that is based on the cluster ID that you set when you provisioned the cluster, and
-<code>&lt;infra&gt;</code>
-is the node label to add.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineSet
-metadata:
-  labels:
-    machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-  name: &lt;infrastructure_id&gt;-infra-&lt;zone&gt;
-  namespace: openshift-machine-api
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-      machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-infra-&lt;zone&gt;
-  template:
-    metadata:
-      labels:
-        machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-        machine.openshift.io/cluster-api-machine-role: infra
-        machine.openshift.io/cluster-api-machine-type: infra
-        machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-infra-&lt;zone&gt;
-    spec:
-      metadata:
-        labels:
-          node-role.kubernetes.io/infra: ""
-      providerSpec:
-        value:
-          ami:
-            id: ami-046fe691f52a953f9
-          apiVersion: machine.openshift.io/v1beta1
-          blockDevices:
-            - ebs:
-                iops: 0
-                volumeSize: 120
-                volumeType: gp2
-          credentialsSecret:
-            name: aws-cloud-credentials
-          deviceIndex: 0
-          iamInstanceProfile:
-            id: &lt;infrastructure_id&gt;-worker-profile
-          instanceType: m6i.large
-          kind: AWSMachineProviderConfig
-          placement:
-            availabilityZone: &lt;zone&gt;
-            region: &lt;region&gt;
-          securityGroups:
-            - filters:
-                - name: tag:Name
-                  values:
-                    - &lt;infrastructure_id&gt;-node
-            - filters:
-                - name: tag:Name
-                  values:
-                    - &lt;infrastructure_id&gt;-lb
-          subnet:
-            filters:
-              - name: tag:Name
-                values:
-                  - &lt;infrastructure_id&gt;-subnet-private-&lt;zone&gt;
-          tags:
-            - name: kubernetes.io/cluster/&lt;infrastructure_id&gt;
-              value: owned
-            - name: &lt;custom_tag_name&gt;
-              value: &lt;custom_tag_value&gt;
-          userDataSecret:
-            name: worker-user-data
-      taints:
-        - key: node-role.kubernetes.io/infra
-          effect: NoSchedule</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID that is based on the cluster ID that you set when you provisioned the cluster. If you have the OpenShift CLI installed, you can obtain the infrastructure ID by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get -o jsonpath='{.status.infrastructureName}{"\n"}' infrastructure cluster</code></pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;-infra-&lt;zone&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID, <code>infra</code> role node label, and zone.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;infra&gt;</code></dt>
-<dd>
-<p>Specifies the <code>infra</code> role node label.</p>
-</dd>
-</dl>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>spec.template.spec.providerSpec.value.ami.id</code> stanza specifies a valid Red Hat Enterprise Linux CoreOS (RHCOS) Amazon Machine Image (AMI) for your AWS zone for your Red&#160;Hat OpenShift Container Platform nodes. If you want to use an AWS Machine Image (AMI) for your AWS zone as a boot image for your Red&#160;Hat OpenShift Container Platform nodes, you should use the latest image when adding a new machine set. If you want to use an AWS Marketplace image, you must complete the Red&#160;Hat OpenShift Container Platform subscription from the <a href="https://aws.amazon.com/marketplace/fulfillment?productId=59ead7de-2540-4653-a8b0-fa7926d5c845">AWS Marketplace</a> to obtain an AMI ID for your region.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-machine-api \
-    -o jsonpath='{.spec.template.spec.providerSpec.value.ami.id}{"\n"}' \
-    get machineset/&lt;infrastructure_id&gt;-&lt;role&gt;-&lt;zone&gt;</code></pre>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;zone&gt;</code></dt>
-<dd>
-<p>Specifies the zone name, for example, <code>us-east-1a</code>.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;region&gt;</code></dt>
-<dd>
-<p>Specifies the region, for example, <code>us-east-1</code>.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;-subnet-private-&lt;zone&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID and zone.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;custom_tag_name&gt;</code></dt>
-<dd>
-<p>Optional: Specifies custom tag data for your cluster. For example, you might add an admin contact email address by specifying a <code>name:value</code> pair of <code>Email:admin-email@example.com</code>.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Custom tags can also be specified during installation in the <code>install-config.yaml</code> file. If the <code>install-config.yaml</code> file and the machine set include a tag with the same <code>name</code> data, the value for the tag from the machine set takes priority over the value for the tag in the <code>install-config.yaml</code> file.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>Machine sets running on AWS support non-guaranteed Spot Instances. You can save on costs by using Spot Instances at a lower price compared to On-Demand Instances on AWS. For more information, see "Machine sets that deploy machines as Spot Instances".</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="machineset-creating_create-infrastructure-nodes-to-host-infrastructure-workloads">Create a compute machine set</h4>
-<div class="paragraph _abstract">
-<p>To dynamically manage machine compute resources, you can create your own compute machine sets in addition to the compute machine sets created by the installation program. Use the Red&#160;Hat OpenShift Container Platform CLI to automate node provisioning.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>Deploy an Red&#160;Hat OpenShift Container Platform cluster.</p>
-</li>
-<li>
-<p>Install the OpenShift CLI (<code>oc</code>).</p>
-</li>
-<li>
-<p>Log in to <code>oc</code> as a user with <code>cluster-admin</code> permission.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a new YAML file that contains the compute machine set custom resource (CR) sample and is named <code>&lt;file_name&gt;.yaml</code>.</p>
-<div class="paragraph">
-<p>Ensure that you set the <code>&lt;clusterID&gt;</code> and <code>&lt;role&gt;</code> parameter values.</p>
-</div>
-</li>
-<li>
-<p>Optional: If you are not sure which value to set for a specific field, you can check an existing compute machine set from your cluster.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>To list the compute machine sets in your cluster, run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machinesets -n openshift-machine-api</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The following is example output:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                                DESIRED   CURRENT   READY   AVAILABLE   AGE
-agl030519-vplxk-worker-us-east-1a   1         1         1       1           55m
-agl030519-vplxk-worker-us-east-1b   1         1         1       1           55m
-agl030519-vplxk-worker-us-east-1c   1         1         1       1           55m
-agl030519-vplxk-worker-us-east-1d   0         0                             55m
-agl030519-vplxk-worker-us-east-1e   0         0                             55m
-agl030519-vplxk-worker-us-east-1f   0         0                             55m</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>To view values of a specific compute machine set custom resource (CR), run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machineset &lt;machineset_name&gt; \
-  -n openshift-machine-api -o yaml</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The following is example output:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineSet
-metadata:
-  labels:
-    machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-  name: &lt;infrastructure_id&gt;-&lt;role&gt;
-  namespace: openshift-machine-api
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-      machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;
-  template:
-    metadata:
-      labels:
-        machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-        machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-        machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-        machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;
-    spec:
-      providerSpec:
-        ...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>metadata.labels.machine.openshift.io/cluster-api-cluster</code></dt>
-<dd>
-<p>Specifies the cluster infrastructure ID.</p>
-</dd>
-<dt class="hdlist1"><code>metadata.labels.name</code></dt>
-<dd>
-<p>Specifies a default node label.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>For clusters that have user-provisioned infrastructure, a compute machine set can only create <code>worker</code> and <code>infra</code> type machines.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</dd>
-<dt class="hdlist1"><code>spec.template.metadata.spec.providerSpec</code></dt>
-<dd>
-<p>Specifies the values of the compute machine set CR. The values are platform-specific. For more information about <code>&lt;providerSpec&gt;</code> parameters in the CR, see the sample compute machine set CR configuration for your provider.</p>
-</dd>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Create a <code>MachineSet</code> CR by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;file_name&gt;.yaml</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>View the list of compute machine sets by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machineset -n openshift-machine-api</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The following is example output:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                                DESIRED   CURRENT   READY   AVAILABLE   AGE
-agl030519-vplxk-infra-us-east-1a    1         1         1       1           11m
-agl030519-vplxk-worker-us-east-1a   1         1         1       1           55m
-agl030519-vplxk-worker-us-east-1b   1         1         1       1           55m
-agl030519-vplxk-worker-us-east-1c   1         1         1       1           55m
-agl030519-vplxk-worker-us-east-1d   0         0                             55m
-agl030519-vplxk-worker-us-east-1e   0         0                             55m
-agl030519-vplxk-worker-us-east-1f   0         0                             55m</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>When the new compute machine set is available, the <code>DESIRED</code> and <code>CURRENT</code> values match. If the compute machine set is not available, wait a few minutes and run the command again.</p>
-</div>
-</li>
-</ul>
-</div>
 </div>
 <div class="sect3">
 <h4 id="creating-an-infra-node_create-infrastructure-nodes-to-host-infrastructure-workloads">Create an infrastructure node</h4>
@@ -3180,7 +2839,7 @@ data:
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="nodes-containers-port-forwarding-about_configure-port-forwarding-to-pods.html">Understand port forwarding</a> | ↑ Up: <a href="_extend.html">Extend</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a> →</p>
+<p>← Previous: <a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a> | ↑ Up: <a href="_administer.html">Administer</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="mco-update-boot-images_configure-my-cluster-to-automatically-update-the-boot-image-on-my-nodes.html">About boot image management</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -3191,7 +2850,7 @@ data:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-30 13:35:37 +0000
+Last updated 2026-11-04 12:35:22 +0000
 </div>
 </div>
 <style>

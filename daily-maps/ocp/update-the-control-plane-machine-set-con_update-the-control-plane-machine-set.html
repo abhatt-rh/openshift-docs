@@ -528,6 +528,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="security-rhcos-overview_understand-host-security-controls.html">Red Hat Enterprise Linux CoreOS (RHCOS)</a>
 </li>
+<li><a href="interactive-in-app-tutorial-con_interactive-in-app-tutorial.html">Building interactive tutorials</a>
+</li>
 </ul>
 </li>
 <li><a href="_get_started.html">Get started</a>
@@ -542,6 +544,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-default-pod-behavior-con_configure-default-pod-behavior.html">Configure default pod behavior</a>
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
+</li>
+<li><a href="create-first-quick-start-tutorial-con_create-first-quick-start-tutorial.html">Create your first quick start tutorial</a>
 </li>
 </ul>
 </li>
@@ -765,6 +769,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
+<li><a href="nodes-containers-port-forwarding-about_configure-port-forwarding-to-pods.html">Understand port forwarding</a>
+</li>
+<li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
+</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -774,6 +782,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
+</li>
+<li><a href="infrastructure-components_create-infrastructure-nodes-to-host-infrastructure-workloads.html">Move components to infrastructure nodes to reduce costs</a>
 </li>
 <li><a href="mco-update-boot-images_configure-my-cluster-to-automatically-update-the-boot-image-on-my-nodes.html">About boot image management</a>
 </li>
@@ -1085,6 +1095,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="change-the-control-plane-instance-type-con_change-the-control-plane-instance-type.html">Change the control plane instance type</a>
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
+</li>
+<li><a href="create-custom-machine-compute-set-con_create-custom-machine-compute-set.adoc.html">Create a custom machine compute set</a>
 </li>
 <li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
 </li>
@@ -1458,10 +1470,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="enable-pressure-stall-information-monitoring-con_enable-pressure-stall-information-monitoring.html">Enable Pressure Stall Information monitoring</a>
 </li>
-<li><a href="install-node-observability-operator_install-the-node-observability-operator.html">Installing the Node Observability Operator</a>
-</li>
-<li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
-</li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="view-node-status-and-resource-usage-con_view-node-status-and-resource-usage.html">View node status and resource usage</a>
@@ -1491,6 +1499,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="setting_up_cpu_manager_configure-cpu-isolation-for-latency-sensitive-workloads.html">Set up CPU Manager</a>
 </li>
 <li><a href="cnf-about-numa-aware-scheduling_schedule-numa-aware-workloads.html">About NUMA-aware scheduling</a>
+</li>
+<li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
 <li><a href="using-the-nfd-topology-updater_enable-nfd-topology-updater-for-numa-topology.html">Use the NFD Topology Updater</a>
 </li>
@@ -1595,17 +1605,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
-<li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
-</li>
-<li><a href="nodes-containers-port-forwarding-about_configure-port-forwarding-to-pods.html">Understand port forwarding</a>
-</li>
-<li><a href="infrastructure-components_create-infrastructure-nodes-to-host-infrastructure-workloads.html">Move components to infrastructure nodes to reduce costs</a>
-</li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="build-interactive-tutorials-con_build-interactive-tutorials.html">Building interactive tutorials</a>
 </li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
+<li><a href="create-quick-start-tutorials-con_create-quick-start-tutorials.html">Create quick-start tutorials</a>
 </li>
 <li><a href="deploy-a-plugin-on-a-cluster-con_deploy-a-plugin-on-a-cluster.html">Deploy a plugin on a cluster</a>
 </li>
@@ -1614,8 +1620,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="optional-capabilities-operators_discover-optional-capabilities-and-product-integrations.html">Enhance the Red&#160;Hat OpenShift Container Platform web console with Operators</a>
 </li>
 <li><a href="enable-a-dynamic-plugin-with-the-cli-con_enable-a-dynamic-plugin-with-the-cli.html">Enable a dynamic plugin with the CLI</a>
-</li>
-<li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
 <li><a href="control-user-access-to-extensions-con_control-user-access-to-extensions.html">Control user access to extensions</a>
 </li>
@@ -3243,7 +3247,7 @@ If you specify this value in the provider specification when using a failure dom
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-30 13:35:37 +0000
+Last updated 2026-11-04 12:35:22 +0000
 </div>
 </div>
 <style>

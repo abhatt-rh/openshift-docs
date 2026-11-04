@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability" class="book toc2 toc-left navmap-has-right-toc">
+<body id="create-quick-start-tutorials-con_create-quick-start-tutorials" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -528,6 +528,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="security-rhcos-overview_understand-host-security-controls.html">Red Hat Enterprise Linux CoreOS (RHCOS)</a>
 </li>
+<li><a href="interactive-in-app-tutorial-con_interactive-in-app-tutorial.html">Building interactive tutorials</a>
+</li>
 </ul>
 </li>
 <li><a href="_get_started.html">Get started</a>
@@ -542,6 +544,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-default-pod-behavior-con_configure-default-pod-behavior.html">Configure default pod behavior</a>
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
+</li>
+<li><a href="create-first-quick-start-tutorial-con_create-first-quick-start-tutorial.html">Create your first quick start tutorial</a>
 </li>
 </ul>
 </li>
@@ -765,6 +769,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
+<li><a href="nodes-containers-port-forwarding-about_configure-port-forwarding-to-pods.html">Understand port forwarding</a>
+</li>
+<li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
+</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -774,6 +782,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
+</li>
+<li><a href="infrastructure-components_create-infrastructure-nodes-to-host-infrastructure-workloads.html">Move components to infrastructure nodes to reduce costs</a>
 </li>
 <li><a href="mco-update-boot-images_configure-my-cluster-to-automatically-update-the-boot-image-on-my-nodes.html">About boot image management</a>
 </li>
@@ -1086,6 +1096,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="change-the-control-plane-instance-type-con_change-the-control-plane-instance-type.html">Change the control plane instance type</a>
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
+</li>
+<li><a href="create-custom-machine-compute-set-con_create-custom-machine-compute-set.adoc.html">Create a custom machine compute set</a>
 </li>
 <li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
 </li>
@@ -1441,6 +1453,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
+
 <ul class="sectlevel2">
 <li><a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a>
 </li>
@@ -1457,10 +1470,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="monitor-image-registry-health-con_monitor-image-registry-health.html">Monitor image registry health</a>
 </li>
 <li><a href="enable-pressure-stall-information-monitoring-con_enable-pressure-stall-information-monitoring.html">Enable Pressure Stall Information monitoring</a>
-</li>
-<li><a href="install-node-observability-operator_install-the-node-observability-operator.html">Installing the Node Observability Operator</a>
-</li>
-<li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html"><span class="toc-current">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</span></a>
 </li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
@@ -1491,6 +1500,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="setting_up_cpu_manager_configure-cpu-isolation-for-latency-sensitive-workloads.html">Set up CPU Manager</a>
 </li>
 <li><a href="cnf-about-numa-aware-scheduling_schedule-numa-aware-workloads.html">About NUMA-aware scheduling</a>
+</li>
+<li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
 <li><a href="using-the-nfd-topology-updater_enable-nfd-topology-updater-for-numa-topology.html">Use the NFD Topology Updater</a>
 </li>
@@ -1591,21 +1602,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
-
 <ul class="sectlevel2">
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
-<li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
-</li>
-<li><a href="nodes-containers-port-forwarding-about_configure-port-forwarding-to-pods.html">Understand port forwarding</a>
-</li>
-<li><a href="infrastructure-components_create-infrastructure-nodes-to-host-infrastructure-workloads.html">Move components to infrastructure nodes to reduce costs</a>
-</li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="build-interactive-tutorials-con_build-interactive-tutorials.html">Building interactive tutorials</a>
 </li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
+<li><a href="create-quick-start-tutorials-con_create-quick-start-tutorials.html"><span class="toc-current">Create quick-start tutorials</span></a>
 </li>
 <li><a href="deploy-a-plugin-on-a-cluster-con_deploy-a-plugin-on-a-cluster.html">Deploy a plugin on a cluster</a>
 </li>
@@ -1614,8 +1620,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="optional-capabilities-operators_discover-optional-capabilities-and-product-integrations.html">Enhance the Red&#160;Hat OpenShift Container Platform web console with Operators</a>
 </li>
 <li><a href="enable-a-dynamic-plugin-with-the-cli-con_enable-a-dynamic-plugin-with-the-cli.html">Enable a dynamic plugin with the CLI</a>
-</li>
-<li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
 <li><a href="control-user-access-to-extensions-con_control-user-access-to-extensions.html">Control user access to extensions</a>
 </li>
@@ -1869,379 +1873,334 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#running-profiling-query_profile-node-performance-with-node-observability">Running the profiling query</a></li><li class="level-4"><a href="#node-observability-operator-scripting_profile-node-performance-with-node-observability">Node Observability Operator scripting</a></li><li class="level-5"><a href="#node-observability-scripting_profile-node-performance-with-node-observability">Configuring Node Observability Operator scripting</a></li><li class="level-5"><a href="#node-observability-scripting-cr_profile-node-performance-with-node-observability">Creating the Node Observability custom resource for scripting</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#quick-start-content-guidelines_create-quick-start-tutorials">Quick start content guidelines</a></li><li class="level-5"><a href="#quick-start-content-guidelines-card-copy_create-quick-start-tutorials">Card copy</a></li><li class="level-5"><a href="#quick-start-content-guidelines-introduction_create-quick-start-tutorials">Introduction</a></li><li class="level-5"><a href="#quick-start-content-guidelines-task-steps_create-quick-start-tutorials">Task steps</a></li><li class="level-5"><a href="#quick-start-content-guidelines-check-your-work-module_create-quick-start-tutorials">Check your work module</a></li><li class="level-5"><a href="#quick-start-content-guidelines-formatting-UI-elements_create-quick-start-tutorials">Formatting UI elements</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</h3>
+<h3 id="create-quick-start-tutorials-con_create-quick-start-tutorials">Create quick-start tutorials</h3>
 <div class="paragraph _abstract">
-<p>Creating a Node Observability custom resource to collect CRI-O and Kubelet profiling data.</p>
+<p>Learn how to build, customize, and manage interactive quick-start tutorials in Red&#160;Hat OpenShift Container Platform, including adding custom icons, controlling access, linking related tutorials, highlighting UI elements, and executing embedded code snippets.</p>
 </div>
 <div class="sect3">
-<h4 id="running-profiling-query_profile-node-performance-with-node-observability">Running the profiling query</h4>
+<h4 id="quick-start-content-guidelines_create-quick-start-tutorials">Quick start content guidelines</h4>
 <div class="paragraph _abstract">
-<p>To run the profiling query, you must create a <code>NodeObservabilityRun</code> resource. The profiling query is a blocking operation that fetches CRI-O and Kubelet profiling data for a duration of 30 seconds.</p>
-</div>
-<div class="paragraph">
-<p>After the profiling query is complete, you must retrieve the profiling data inside the container file system <code>/run/node-observability</code> directory. The lifetime of data is bound to the agent pod through the <code>emptyDir</code> volume, so you can access the profiling data while the agent pod is in the <code>running</code> status.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You can request only one profiling query at any point of time.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have installed the Node Observability Operator.</p>
-</li>
-<li>
-<p>You have created the <code>NodeObservability</code> custom resource (CR).</p>
-</li>
-<li>
-<p>You have access to the cluster with <code>cluster-admin</code> privileges.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a <code>NodeObservabilityRun</code> resource file named <code>nodeobservabilityrun.yaml</code> that contains the following text:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: nodeobservability.olm.openshift.io/v1alpha2
-kind: NodeObservabilityRun
-metadata:
-  name: nodeobservabilityrun
-spec:
-  nodeObservabilityRef:
-    name: cluster</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Trigger the profiling query by running the <code>NodeObservabilityRun</code> resource:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f nodeobservabilityrun.yaml</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Review the status of the <code>NodeObservabilityRun</code> by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodeobservabilityrun nodeobservabilityrun -o yaml  | yq '.status.conditions'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">conditions:
-- lastTransitionTime: "2022-07-07T14:57:34Z"
-  message: Ready to start profiling
-  reason: Ready
-  status: "True"
-  type: Ready
-- lastTransitionTime: "2022-07-07T14:58:10Z"
-  message: Profiling query done
-  reason: Finished
-  status: "True"
-  type: Finished</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The profiling query is complete once the status is <code>True</code> and type is <code>Finished</code>.</p>
-</div>
-</li>
-<li>
-<p>Retrieve the profiling data from the container&#8217;s <code>/run/node-observability</code> path by running the following bash script:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">for a in $(oc get nodeobservabilityrun nodeobservabilityrun -o yaml | yq .status.agents[].name); do
-  echo "agent ${a}"
-  mkdir -p "/tmp/${a}"
-  for p in $(oc exec "${a}" -c node-observability-agent -- bash -c "ls /run/node-observability/*.pprof"); do
-    f="$(basename ${p})"
-    echo "copying ${f} to /tmp/${a}/${f}"
-    oc exec "${a}" -c node-observability-agent -- cat "${p}" &gt; "/tmp/${a}/${f}"
-  done
-done</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="node-observability-operator-scripting_profile-node-performance-with-node-observability">Node Observability Operator scripting</h4>
-<div class="paragraph _abstract">
-<p>Scripting allows you to run pre-configured bash scripts, using the current Node Observability Operator and Node Observability Agent.</p>
-</div>
-<div class="paragraph">
-<p>These scripts monitor key metrics like CPU load, memory pressure, and worker node issues. They also collect sar reports and custom performance metrics.</p>
+<p>Follow these content guidelines when writing quick starts for the Red&#160;Hat OpenShift Container Platform web console.</p>
 </div>
 <div class="sect4">
-<h5 id="node-observability-scripting_profile-node-performance-with-node-observability">Configuring Node Observability Operator scripting</h5>
-<div class="paragraph _abstract">
-<p>You can configure the Node Observability Operator to run pre-configured scripts for collecting metrics data from compute nodes.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have installed the Node Observability Operator.</p>
-</li>
-<li>
-<p>You have created the <code>NodeObservability</code> custom resource (CR).</p>
-</li>
-<li>
-<p>You have access to the cluster with <code>cluster-admin</code> privileges.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a file named <code>nodeobservabilityrun-script.yaml</code> that contains the following content:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: nodeobservability.olm.openshift.io/v1alpha2
-kind: NodeObservabilityRun
-metadata:
-  name: nodeobservabilityrun-script
-  namespace: node-observability-operator
-spec:
-  nodeObservabilityRef:
-    name: cluster
-    type: scripting</code></pre>
-</div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
+<h5 id="quick-start-content-guidelines-card-copy_create-quick-start-tutorials">Card copy</h5>
 <div class="paragraph">
-<p>You can request only the following scripts:</p>
+<p>You can customize the title and description on a quick start card, but you cannot customize the status.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>metrics.sh</code></p>
+<p>Keep your description to one to two sentences.</p>
 </li>
 <li>
-<p><code>network-metrics.sh</code> (uses <code>monitor.sh</code>)</p>
+<p>Start with a verb and communicate the goal of the user. Correct example:</p>
+<div class="listingblock">
+<div class="content">
+<pre>Create a serverless application.</pre>
+</div>
+</div>
 </li>
 </ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Trigger the scripting by creating the <code>NodeObservabilityRun</code> resource with the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f nodeobservabilityrun-script.yaml</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Review the status of the <code>NodeObservabilityRun</code> scripting by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodeobservabilityrun nodeobservabilityrun-script -o yaml  | yq '.status.conditions'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">Status:
-  Agents:
-    Ip:    10.128.2.252
-    Name:  node-observability-agent-n2fpm
-    Port:  8443
-    Ip:    10.131.0.186
-    Name:  node-observability-agent-wcc8p
-    Port:  8443
-  Conditions:
-    Conditions:
-      Last Transition Time:  2023-12-19T15:10:51Z
-      Message:               Ready to start profiling
-      Reason:                Ready
-      Status:                True
-      Type:                  Ready
-      Last Transition Time:  2023-12-19T15:11:01Z
-      Message:               Profiling query done
-      Reason:                Finished
-      Status:                True
-      Type:                  Finished
-  Finished Timestamp:        2023-12-19T15:11:01Z
-  Start Timestamp:           2023-12-19T15:10:51Z</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The scripting is complete once <code>Status</code> is <code>True</code> and <code>Type</code> is <code>Finished</code>.</p>
-</div>
-</li>
-<li>
-<p>Retrieve the scripting data from the root path of the container by running the following bash script:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">#!/bin/bash
-
-RUN=$(oc get nodeobservabilityrun --no-headers | awk '{print $1}')
-
-for a in $(oc get nodeobservabilityruns.nodeobservability.olm.openshift.io/${RUN} -o json | jq .status.agents[].name); do
-  echo "agent ${a}"
-  agent=$(echo ${a} | tr -d "\"\'\`")
-  base_dir=$(oc exec "${agent}" -c node-observability-agent -- bash -c "ls -t | grep node-observability-agent" | head -1)
-  echo "${base_dir}"
-  mkdir -p "/tmp/${agent}"
-  for p in $(oc exec "${agent}" -c node-observability-agent -- bash -c "ls ${base_dir}"); do
-    f="/${base_dir}/${p}"
-    echo "copying ${f} to /tmp/${agent}/${p}"
-    oc exec "${agent}" -c node-observability-agent -- cat ${f} &gt; "/tmp/${agent}/${p}"
-  done
-done</code></pre>
-</div>
-</div>
-</li>
-</ol>
 </div>
 </div>
 <div class="sect4">
-<h5 id="node-observability-scripting-cr_profile-node-performance-with-node-observability">Creating the Node Observability custom resource for scripting</h5>
-<div class="paragraph _abstract">
-<p>You must create and run the <code>NodeObservability</code> custom resource (CR) before you run the scripting. When you run the <code>NodeObservability</code> CR, it enables the agent in scripting mode on the compute nodes matching the <code>nodeSelector</code> label.</p>
+<h5 id="quick-start-content-guidelines-introduction_create-quick-start-tutorials">Introduction</h5>
+<div class="paragraph">
+<p>After clicking a quick start card, a side panel slides in that introduces the quick start and lists the tasks within it.</p>
 </div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have installed the Node Observability Operator.</p>
+<p>Make your introduction content clear, concise, informative, and friendly.</p>
 </li>
 <li>
-<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+<p>State the outcome of the quick start. A user should understand the purpose of the quick start before they begin.</p>
 </li>
 <li>
-<p>You have access to the cluster with <code>cluster-admin</code> privileges.</p>
+<p>Give action to the user, not the quick start.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Correct example</strong>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>In this quick start, you will deploy a sample application to {product-title}.</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Incorrect example</strong>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>This quick start shows you how to deploy a sample application to {product-title}.</pre>
+</div>
+</div>
 </li>
 </ul>
 </div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
+</li>
 <li>
-<p>Log in to the Red&#160;Hat OpenShift Container Platform cluster by running the following command:</p>
+<p>The introduction should be a maximum of four to five sentences, depending on the complexity of the feature. A long introduction can overwhelm the user.</p>
+</li>
+<li>
+<p>List the quick start tasks after the introduction content, and start each task with a verb. Do not specify the number of tasks because the copy would need to be updated every time a task is added or removed.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Correct example</strong>:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc login -u kubeadmin https://&lt;host_name&gt;:6443</code></pre>
+<pre>Tasks to complete: Create a serverless application; Connect an event source; Force a new revision</pre>
 </div>
 </div>
 </li>
 <li>
-<p>Switch to the <code>node-observability-operator</code> namespace by running the following command:</p>
+<p><strong>Incorrect example</strong>:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc project node-observability-operator</code></pre>
+<pre>You will complete these 3 tasks: Creating a serverless application; Connecting an event source; Forcing a new revision</pre>
 </div>
 </div>
 </li>
-<li>
-<p>Create a file named <code>nodeobservability.yaml</code> that contains the following content:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">    apiVersion: nodeobservability.olm.openshift.io/v1alpha2
-    kind: NodeObservability
-    metadata:
-      name: cluster
-    spec:
-      nodeSelector:
-        kubernetes.io/hostname: &lt;node_hostname&gt;
-      type: scripting</code></pre>
+</ul>
 </div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="quick-start-content-guidelines-task-steps_create-quick-start-tutorials">Task steps</h5>
+<div class="paragraph">
+<p>After the user clicks <strong>Start</strong>, a series of steps is displayed that they must perform to complete the quick start.</p>
 </div>
 <div class="paragraph">
-<p>where:</p>
+<p>Follow these general guidelines when writing task steps:</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>cluster</code></dt>
-<dd>
-<p>You must specify the name as <code>cluster</code> because there should be only one <code>NodeObservability</code> CR per cluster.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;node_hostname&gt;</code></dt>
-<dd>
-<p>Specify the nodes on which the Node Observability agent must be deployed.</p>
-</dd>
-<dt class="hdlist1"><code>scripting</code></dt>
-<dd>
-<p>To deploy the agent in scripting mode, you must set the type to <code>scripting</code>.</p>
-</dd>
-</dl>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use "Click" for buttons and labels. Use "Select" for checkboxes, radio buttons, and drop-down menus.</p>
 </li>
 <li>
-<p>Create the <code>NodeObservability</code> CR by running the following command:</p>
+<p>Use "Click" by itself. Do not add "on" after it.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Correct example</strong>:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f nodeobservability.yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">nodeobservability.olm.openshift.io/cluster created</code></pre>
+<pre>Click OK.</pre>
 </div>
 </div>
 </li>
 <li>
-<p>Review the status of the <code>NodeObservability</code> CR by running the following command:</p>
+<p><strong>Incorrect example</strong>:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nob/cluster -o yaml | yq '.status.conditions'</code></pre>
+<pre>Click on the OK button.</pre>
 </div>
 </div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">conditions:
-  conditions:
-  - lastTransitionTime: "2022-07-05T07:33:54Z"
-    message: 'DaemonSet node-observability-ds ready: true NodeObservabilityScripting
-      ready: true'
-    reason: Ready
-    status: "True"
-    type: Ready</code></pre>
+</li>
+</ul>
 </div>
-</div>
+</li>
+<li>
+<p>Tell users how to navigate between <strong>Administrator</strong> and <strong>Developer</strong> perspectives. Even if you think a user might already be in the appropriate perspective, give them instructions on how to get there so that they are definitely where they need to be.</p>
 <div class="paragraph">
-<p>The <code>NodeObservability</code> CR run is completed when the <code>reason</code> is <code>Ready</code> and <code>status</code> is <code>"True"</code>.</p>
+<p>Examples:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Enter the Developer perspective: In the main navigation, click the dropdown menu and select Developer.
+Enter the Administrator perspective: In the main navigation, click the dropdown menu and select Admin.</pre>
+</div>
 </div>
 </li>
-</ol>
+<li>
+<p>Use the "Location, action" structure. Tell a user where to go before telling them what to do.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Correct example</strong>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>In the node.js deployment, hover over the icon.</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Incorrect example</strong>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>Hover over the icon in the node.js deployment.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Keep your product terminology capitalization consistent.</p>
+</li>
+<li>
+<p>If you must specify a menu type or list as a dropdown, write "dropdown” as one word without a hyphen.</p>
+</li>
+<li>
+<p>Clearly distinguish between a user action and additional information on product functionality.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>User action</strong>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>Change the time range of the dashboard by clicking the dropdown menu and selecting time range.</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Additional information</strong>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>To look at data in a specific time frame, you can change the time range of the dashboard.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Avoid directional language, such as "In the upper-right corner, click the icon". Directional language becomes outdated every time UI layouts change. Also, a direction for desktop users might not be accurate for users with a different screen size. Instead, identify something using its name.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Correct example</strong>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>In the navigation menu, click Settings.</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Incorrect example</strong>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>In the left-hand menu, click Settings.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Do not identify items by color alone, such as "Click the gray circle". Color identifiers are not useful for sight-limited users, especially colorblind users. Instead, identify an item using its name or copy, such as button copy.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Correct example</strong>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>The success message indicates a connection.</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Incorrect example</strong>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>The message with a green icon indicates a connection.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Use the second-person point of view, you, consistently:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Correct example</strong>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>Set up your environment.</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Incorrect example</strong>:</p>
+<div class="listingblock">
+<div class="content">
+<pre>Let's set up our environment.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="quick-start-content-guidelines-check-your-work-module_create-quick-start-tutorials">Check your work module</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>After a user completes a step, a <strong>Check your work</strong> module displays. This module prompts the user to answer a yes or no question about the step results, which gives them the opportunity to review their work. For this module, you only need to write a single yes or no question.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If the user answers <strong>Yes</strong>, a checkmark displays.</p>
+</li>
+<li>
+<p>If the user answers <strong>No</strong>, an error message displays with a link to relevant documentation, if necessary. The user then has the opportunity to go back and try again.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="quick-start-content-guidelines-formatting-UI-elements_create-quick-start-tutorials">Formatting UI elements</h5>
+<div class="paragraph">
+<p>Format UI elements by using these guidelines:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Copy for buttons, dropdowns, tabs, fields, and other UI controls: Write the copy as it is displayed in the UI and bold it.</p>
+</li>
+<li>
+<p>All other UI elements (including page, window, and panel names): Write the copy as it is displayed in the UI and bold it.</p>
+</li>
+<li>
+<p>Code or user-entered text: Use monospaced font.</p>
+</li>
+<li>
+<p>Hints: If a hint to a navigation or masthead element is included, style the text as you would a link.</p>
+</li>
+<li>
+<p>CLI commands: Use monospaced font.</p>
+</li>
+<li>
+<p>In running text, use a bold, monospaced font for a command.</p>
+</li>
+<li>
+<p>If a parameter or option is a variable value, use an italic monospaced font.</p>
+</li>
+<li>
+<p>Use a bold, monospaced font for the parameter and a monospaced font for the option.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="install-node-observability-operator_install-the-node-observability-operator.html">Installing the Node Observability Operator</a> | ↑ Up: <a href="_observe.html">Observe</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a> →</p>
+<p>← Previous: <a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a> | ↑ Up: <a href="_extend.html">Extend</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="deploy-a-plugin-on-a-cluster-con_deploy-a-plugin-on-a-cluster.html">Deploy a plugin on a cluster</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2252,7 +2211,7 @@ done</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-30 13:35:37 +0000
+Last updated 2026-11-04 12:35:22 +0000
 </div>
 </div>
 <style>

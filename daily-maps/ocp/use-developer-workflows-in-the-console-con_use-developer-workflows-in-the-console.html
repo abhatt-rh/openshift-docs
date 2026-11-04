@@ -528,6 +528,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="security-rhcos-overview_understand-host-security-controls.html">Red Hat Enterprise Linux CoreOS (RHCOS)</a>
 </li>
+<li><a href="interactive-in-app-tutorial-con_interactive-in-app-tutorial.html">Building interactive tutorials</a>
+</li>
 </ul>
 </li>
 <li><a href="_get_started.html">Get started</a>
@@ -542,6 +544,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-default-pod-behavior-con_configure-default-pod-behavior.html">Configure default pod behavior</a>
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
+</li>
+<li><a href="create-first-quick-start-tutorial-con_create-first-quick-start-tutorial.html">Create your first quick start tutorial</a>
 </li>
 </ul>
 </li>
@@ -765,6 +769,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
+<li><a href="nodes-containers-port-forwarding-about_configure-port-forwarding-to-pods.html">Understand port forwarding</a>
+</li>
+<li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
+</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -774,6 +782,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
+</li>
+<li><a href="infrastructure-components_create-infrastructure-nodes-to-host-infrastructure-workloads.html">Move components to infrastructure nodes to reduce costs</a>
 </li>
 <li><a href="mco-update-boot-images_configure-my-cluster-to-automatically-update-the-boot-image-on-my-nodes.html">About boot image management</a>
 </li>
@@ -1085,6 +1095,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="change-the-control-plane-instance-type-con_change-the-control-plane-instance-type.html">Change the control plane instance type</a>
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
+</li>
+<li><a href="create-custom-machine-compute-set-con_create-custom-machine-compute-set.adoc.html">Create a custom machine compute set</a>
 </li>
 <li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
 </li>
@@ -1458,10 +1470,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="enable-pressure-stall-information-monitoring-con_enable-pressure-stall-information-monitoring.html">Enable Pressure Stall Information monitoring</a>
 </li>
-<li><a href="install-node-observability-operator_install-the-node-observability-operator.html">Installing the Node Observability Operator</a>
-</li>
-<li><a href="requesting-crio-kubelet-profiling-using-noo_profile-node-performance-with-node-observability.html">Requesting CRI-O and Kubelet profiling data using the Node Observability Operator</a>
-</li>
 <li><a href="virt-about-the-overview-dashboard_view-cluster-resource-utilization.html">About the Red&#160;Hat OpenShift Container Platform dashboards page</a>
 </li>
 <li><a href="view-node-status-and-resource-usage-con_view-node-status-and-resource-usage.html">View node status and resource usage</a>
@@ -1491,6 +1499,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="setting_up_cpu_manager_configure-cpu-isolation-for-latency-sensitive-workloads.html">Set up CPU Manager</a>
 </li>
 <li><a href="cnf-about-numa-aware-scheduling_schedule-numa-aware-workloads.html">About NUMA-aware scheduling</a>
+</li>
+<li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
 <li><a href="using-the-nfd-topology-updater_enable-nfd-topology-updater-for-numa-topology.html">Use the NFD Topology Updater</a>
 </li>
@@ -1595,17 +1605,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="install-and-delete-cluster-extensions-con_install-and-delete-cluster-extensions.html">Install and delete cluster extensions</a>
 </li>
-<li><a href="add-nodes-to-the-cluster-con_add-nodes-to-the-cluster.html">Add nodes to the cluster</a>
-</li>
-<li><a href="nodes-containers-port-forwarding-about_configure-port-forwarding-to-pods.html">Understand port forwarding</a>
-</li>
-<li><a href="infrastructure-components_create-infrastructure-nodes-to-host-infrastructure-workloads.html">Move components to infrastructure nodes to reduce costs</a>
-</li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
+</li>
+<li><a href="build-interactive-tutorials-con_build-interactive-tutorials.html">Building interactive tutorials</a>
 </li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Understand quick starts</a>
+<li><a href="create-quick-start-tutorials-con_create-quick-start-tutorials.html">Create quick-start tutorials</a>
 </li>
 <li><a href="deploy-a-plugin-on-a-cluster-con_deploy-a-plugin-on-a-cluster.html">Deploy a plugin on a cluster</a>
 </li>
@@ -1614,8 +1620,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="optional-capabilities-operators_discover-optional-capabilities-and-product-integrations.html">Enhance the Red&#160;Hat OpenShift Container Platform web console with Operators</a>
 </li>
 <li><a href="enable-a-dynamic-plugin-with-the-cli-con_enable-a-dynamic-plugin-with-the-cli.html">Enable a dynamic plugin with the CLI</a>
-</li>
-<li><a href="cluster-autoscaler-about_enable-autoscaling-for-cluster-nodes.html">The cluster autoscaler</a>
 </li>
 <li><a href="control-user-access-to-extensions-con_control-user-access-to-extensions.html">Control user access to extensions</a>
 </li>
@@ -1869,7 +1873,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#about-developer_web-console_use-developer-workflows-in-the-console">Developer role in the web console</a></li><li class="level-4"><a href="#enabling-developer-perspective_web-console_use-developer-workflows-in-the-console">Enable the Developer perspective in the web console</a></li><li class="level-4"><a href="#odc-creating-sample-applications_use-developer-workflows-in-the-console">Create sample applications</a></li><li class="level-4"><a href="#odc-using-quickstarts_use-developer-workflows-in-the-console">Creating applications by using Quick Starts</a></li><li class="level-4"><a href="#odc-importing-codebase-from-git-to-create-application_use-developer-workflows-in-the-console">Import a codebase from Git to create an application</a></li><li class="level-4"><a href="#odc-deploying-container-image_use-developer-workflows-in-the-console">Create applications by deploying container image</a></li><li class="level-4"><a href="#odc-using-the-developer-catalog-to-add-services-or-components_use-developer-workflows-in-the-console">Use the Developer Catalog to add services or components to your application</a></li><li class="level-4"><a href="#odc-viewing-application-topology_use-developer-workflows-in-the-console">View the topology of your application</a></li><li class="level-4"><a href="#odc-interacting-with-applications-and-components_use-developer-workflows-in-the-console">Interact with applications and components</a></li><li class="level-4"><a href="#odc-scaling-application-pods-and-checking-builds-and-routes_use-developer-workflows-in-the-console">Scale application pods and check builds and routes</a></li><li class="level-4"><a href="#odc-adding-components-to-an-existing-project_use-developer-workflows-in-the-console">Adding components to an existing project</a></li><li class="level-4"><a href="#odc-grouping-multiple-components_use-developer-workflows-in-the-console">Grouping multiple components within an application</a></li><li class="level-4"><a href="#odc-adding-services-to-your-application_use-developer-workflows-in-the-console">Adding services to your application</a></li><li class="level-4"><a href="#odc-removing-services-from-your-application_use-developer-workflows-in-the-console">Removing services from your application</a></li><li class="level-4"><a href="#odc-labels-and-annotations-used-for-topology-view_use-developer-workflows-in-the-console">Labels and annotations used for the Topology view</a></li><li class="level-4"><a href="#installing-a-helm-chart-on-an-openshift-cluster_use-developer-workflows-in-the-console">Installing a Helm chart on an Red Hat OpenShift Container Platform cluster</a></li><li class="level-4"><a href="#creating-a-custom-helm-chart-on-openshift_use-developer-workflows-in-the-console">Creating a custom Helm chart on Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#adding-helm-chart-repositories_use-developer-workflows-in-the-console">Adding custom Helm chart repositories</a></li><li class="level-4"><a href="#adding-namespace-scoped-helm-chart-repositories_use-developer-workflows-in-the-console">Adding namespace-scoped custom Helm chart repositories</a></li><li class="level-4"><a href="#creating-credentials-and-certificates-to-add-helm-repositories_use-developer-workflows-in-the-console">Creating credentials and CA certificates to add Helm chart repositories</a></li><li class="level-4"><a href="#filtering-helm-charts-by-certification-level_use-developer-workflows-in-the-console">Filtering Helm Charts by their certification level</a></li><li class="level-4"><a href="#helm-disabling-helm-chart-repositories_use-developer-workflows-in-the-console">Disabling Helm Chart repositories</a></li><li class="level-4"><a href="#odc-creating-helm-releases-using-developer-perspective_use-developer-workflows-in-the-console">Creating Helm releases by using the web console</a></li><li class="level-4"><a href="#odc-upgrading-helm-release_use-developer-workflows-in-the-console">Upgrading a Helm release</a></li><li class="level-4"><a href="#odc-rolling-back-helm-release_use-developer-workflows-in-the-console">Roll back a Helm release</a></li><li class="level-4"><a href="#odc-deleting-helm-release_use-developer-workflows-in-the-console">Deleting a Helm release</a></li><li class="level-4"><a href="#odc-editing-source-code-using-developer-perspective_use-developer-workflows-in-the-console">Edit the source code of an application using the Developer perspective</a></li><li class="level-4"><a href="#odc-editing-application-configuration-using-developer-perspective_use-developer-workflows-in-the-console">Edit the application configuration using the Developer perspective</a></li><li class="level-4"><a href="#monitoring-capabilities-in-the-developer-perspective_use-developer-workflows-in-the-console">Monitoring capabilities from the Developer perspective</a></li><li class="level-4"><a href="#odc-monitoring-your-application-metrics_use-developer-workflows-in-the-console">Monitor your application metrics</a></li><li class="level-4"><a href="#odc-deleting-applications-using-developer-perspective_use-developer-workflows-in-the-console">Delete applications using the Developer perspective</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#about-developer_web-console_use-developer-workflows-in-the-console">Developer role in the web console</a></li><li class="level-4"><a href="#enabling-developer-perspective_web-console_use-developer-workflows-in-the-console">Enable the Developer perspective in the web console</a></li><li class="level-4"><a href="#odc-creating-sample-applications_use-developer-workflows-in-the-console">Create sample applications</a></li><li class="level-4"><a href="#odc-using-quickstarts_use-developer-workflows-in-the-console">Creating applications by using Quick Starts</a></li><li class="level-4"><a href="#odc-importing-codebase-from-git-to-create-application_use-developer-workflows-in-the-console">Import a codebase from Git to create an application</a></li><li class="level-4"><a href="#odc-deploying-container-image_use-developer-workflows-in-the-console">Create applications by deploying container image</a></li><li class="level-4"><a href="#odc-using-the-developer-catalog-to-add-services-or-components_use-developer-workflows-in-the-console">Use the Developer Catalog to add services or components to your application</a></li><li class="level-4"><a href="#odc-viewing-application-topology_use-developer-workflows-in-the-console">View the topology of your application</a></li><li class="level-4"><a href="#odc-interacting-with-applications-and-components_use-developer-workflows-in-the-console">Interact with applications and components</a></li><li class="level-4"><a href="#odc-scaling-application-pods-and-checking-builds-and-routes_use-developer-workflows-in-the-console">Scale application pods and check builds and routes</a></li><li class="level-4"><a href="#odc-adding-components-to-an-existing-project_use-developer-workflows-in-the-console">Adding components to an existing project</a></li><li class="level-4"><a href="#odc-grouping-multiple-components_use-developer-workflows-in-the-console">Grouping multiple components within an application</a></li><li class="level-4"><a href="#odc-adding-services-to-your-application_use-developer-workflows-in-the-console">Adding services to your application</a></li><li class="level-4"><a href="#odc-removing-services-from-your-application_use-developer-workflows-in-the-console">Removing services from your application</a></li><li class="level-4"><a href="#odc-labels-and-annotations-used-for-topology-view_use-developer-workflows-in-the-console">Labels and annotations used for the Topology view</a></li><li class="level-4"><a href="#installing-a-helm-chart-on-an-openshift-cluster_use-developer-workflows-in-the-console">Installing a Helm chart on an Red Hat OpenShift Container Platform cluster</a></li><li class="level-4"><a href="#creating-a-custom-helm-chart-on-openshift_use-developer-workflows-in-the-console">Creating a custom Helm chart on Red Hat OpenShift Container Platform</a></li><li class="level-4"><a href="#adding-helm-chart-repositories_use-developer-workflows-in-the-console">Adding custom Helm chart repositories</a></li><li class="level-4"><a href="#adding-namespace-scoped-helm-chart-repositories_use-developer-workflows-in-the-console">Adding namespace-scoped custom Helm chart repositories</a></li><li class="level-4"><a href="#creating-credentials-and-certificates-to-add-helm-repositories_use-developer-workflows-in-the-console">Creating credentials and CA certificates to add Helm chart repositories</a></li><li class="level-4"><a href="#filtering-helm-charts-by-certification-level_use-developer-workflows-in-the-console">Filtering Helm Charts by their certification level</a></li><li class="level-4"><a href="#helm-disabling-helm-chart-repositories_use-developer-workflows-in-the-console">Disabling Helm Chart repositories</a></li><li class="level-4"><a href="#odc-creating-helm-releases-using-developer-perspective_use-developer-workflows-in-the-console">Creating Helm releases by using the web console</a></li><li class="level-4"><a href="#odc-creating-helm-release-from-url_use-developer-workflows-in-the-console">Installing a Helm release from a URL</a></li><li class="level-4"><a href="#odc-upgrading-helm-release_use-developer-workflows-in-the-console">Upgrading a Helm release</a></li><li class="level-4"><a href="#odc-rolling-back-helm-release_use-developer-workflows-in-the-console">Roll back a Helm release</a></li><li class="level-4"><a href="#odc-deleting-helm-release_use-developer-workflows-in-the-console">Deleting a Helm release</a></li><li class="level-4"><a href="#odc-editing-source-code-using-developer-perspective_use-developer-workflows-in-the-console">Edit the source code of an application using the Developer perspective</a></li><li class="level-4"><a href="#odc-editing-application-configuration-using-developer-perspective_use-developer-workflows-in-the-console">Edit the application configuration using the Developer perspective</a></li><li class="level-4"><a href="#monitoring-capabilities-in-the-developer-perspective_use-developer-workflows-in-the-console">Monitoring capabilities from the Developer perspective</a></li><li class="level-4"><a href="#odc-monitoring-your-application-metrics_use-developer-workflows-in-the-console">Monitor your application metrics</a></li><li class="level-4"><a href="#odc-deleting-applications-using-developer-perspective_use-developer-workflows-in-the-console">Delete applications using the Developer perspective</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console">Use developer workflows in the console</h3>
@@ -3585,6 +3589,163 @@ EOF</pre>
 </div>
 </div>
 <div class="sect3">
+<h4 id="odc-creating-helm-release-from-url_use-developer-workflows-in-the-console">Installing a Helm release from a URL</h4>
+<div class="paragraph _abstract">
+<p>A Helm release is a deployed instance of a Helm chart in your Red&#160;Hat OpenShift Container Platform cluster. You can install a Helm release directly from a chart URL instead of from the software catalog.</p>
+</div>
+<div class="paragraph">
+<p>Usually, you install charts from the software catalog in the web console. By default, the catalog lists charts that Red Hat provides, and administrators can add more charts for the whole cluster or for a single namespace. If you need only one or two charts, you can skip adding them to the catalog and install a chart directly from its URL instead. However, a chart that you install from a URL does not get the review that Red Hat and your administrators give catalog charts, so use this method only when you trust the source of the chart.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Charts that Red Hat or your administrators have not reviewed can introduce security risks to your cluster.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have logged in to the Red&#160;Hat OpenShift Container Platform web console.</p>
+</li>
+<li>
+<p>You have the necessary project permissions to install a Helm chart.</p>
+</li>
+<li>
+<p>You have a URL for a Helm chart.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the Red&#160;Hat OpenShift Container Platform web console, navigate to <strong>Ecosystem &gt; Helm</strong>. The <strong>Helm</strong> view opens.</p>
+</li>
+<li>
+<p>In the <strong>Project</strong> drop-down menu, select the project where you want to install the Helm release; for example, <strong>default</strong>.</p>
+</li>
+<li>
+<p>From the <strong>Helm releases</strong> tab, click <strong>Create</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Helm chart URL</strong>. The <strong>Install Helm chart from URL</strong> view opens.</p>
+</li>
+<li>
+<p>In the <strong>Chart URL</strong> field, enter the URL for the Helm chart you want to install.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For Helm charts stored in an OCI-compliant registry, the URL must use the <code>oci://</code> protocol; for example, <code>oci://quay.io/organization/repository/chart-name</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>In the <strong>Release name</strong> field, enter a name for the Helm release you want to install.</p>
+</li>
+<li>
+<p>In the <strong>Chart version</strong> field, enter the chart version number if the web console does not detect it automatically.</p>
+</li>
+<li>
+<p>Optional: If the chart URL requires authentication, select a secret from the <strong>Secret for Basic authentication</strong> list. If the secret you need does not exist, create it:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>From the <strong>Secret for Basic authentication</strong> list, select <strong>Create Secret</strong>. The <strong>Create authentication Secret</strong> dialog opens.</p>
+</li>
+<li>
+<p>In the <strong>Secret name</strong> field, enter a unique name for the secret.</p>
+</li>
+<li>
+<p>Optional: In the <strong>Secret username</strong> field, enter the username for the chart URL.</p>
+</li>
+<li>
+<p>In the <strong>Secret password or token</strong> field, enter the password or token for the chart URL.</p>
+</li>
+<li>
+<p>Click <strong>Create</strong>. The web console selects the new secret in the <strong>Secret for Basic authentication</strong> list.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click <strong>Next</strong>. The <strong>Configure Helm release</strong> view opens.</p>
+</li>
+<li>
+<p>Review the configuration. Make sure that the <strong>Chart URL</strong>, <strong>Release name</strong>, and <strong>Version</strong> fields are correct.</p>
+</li>
+<li>
+<p>For the <strong>Configure via</strong> option, select either <strong>Form view</strong> or <strong>YAML view</strong>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Choose <strong>Form view</strong> (the default) for a guided configuration of standard parameters.</p>
+</li>
+<li>
+<p>Choose <strong>YAML view</strong> if you need to change advanced settings that are not available in <strong>Form view</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <strong>Form view</strong> might not display every field from your Helm chart. If the chart does not include a values schema, <strong>Form view</strong> is unavailable and you must use <strong>YAML view</strong>. For full control over all configuration parameters, select <strong>YAML view</strong>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <strong>Install</strong>. The <strong>Helm releases</strong> tab opens and displays a status of <strong>Deployed</strong> if the installation succeeds.</p>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>The <strong>Helm releases</strong> tab displays the new Helm release in the table.</p>
+</li>
+<li>
+<p>The <strong>Status</strong> column for the Helm release displays <strong>Deployed</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="https://helm.sh">Official Helm documentation</a></p>
+</li>
+<li>
+<p><a href="https://www.redhat.com/en/blog/quay-oci-artifact-support-for-helm-charts">Quay OCI artifact support for Helm charts</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
 <h4 id="odc-upgrading-helm-release_use-developer-workflows-in-the-console">Upgrading a Helm release</h4>
 <div class="paragraph _abstract">
 <p>You can upgrade a Helm release to use a new chart version or update your release configuration.</p>
@@ -3932,7 +4093,7 @@ EOF</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-30 13:35:37 +0000
+Last updated 2026-11-04 12:35:22 +0000
 </div>
 </div>
 <style>
