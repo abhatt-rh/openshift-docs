@@ -1874,13 +1874,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>You disable the boot image management feature for the control plane or worker machine sets in your cluster by editing the <code>MachineConfiguration</code> object.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
 <div class="paragraph">
 <p>The following table lists the platforms on which boot image management is available:</p>
 </div>
@@ -1920,15 +1913,41 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </tbody>
 </table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>On VMware vSphere, the Machine Config Operator (MCO) manages boot images by matching each machine set to a failure domain defined in the Infrastructure resource, <code>infrastructures.config.openshift.io/cluster</code>. If no failure domain matches, the MCO derives the required topology information, such as compute cluster and network objects, from the provider specification of the machine set.</p>
+</div>
+<div class="paragraph">
+<p>In rare situations, the MCO cannot manage boot images for a machine set. The following examples detail the cause of these rare situations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You did not specify a resource pool or you specified a resource pool path that does not follow the standard <code>/&lt;datacenter&gt;/host/&lt;cluster&gt;/Resources/&#8230;&#8203;</code> format in the <code>providerSpec.resourcePool</code> field of the machine set configuration.</p>
+</li>
+<li>
+<p>You did not specify any network device under the <code>providerSpec</code> stanza of the machine set.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A skipped machine set is not degraded but is logged with a warning. You must manage boot images manually for a skipped machine set or the boot image skew widens over time. For information on manual boot image updates, see "Manually updating the boot image".</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>For all other platforms, the MCO does not automatically update the boot image with each cluster update. Images from the Google Cloud Marketplace are not automatically updated.</p>
 </div>
 <div class="paragraph">
 <p>For clusters where automatic updates are disabled or not supported, you can manually update the boot image on your cluster. See "Manually updating the boot image" for information. The method to update or specify the image varies by platform.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 <div class="paragraph">
 <p>Disabling this feature does not rollback the nodes or machine sets to the originally-installed boot image. The machine sets retain the boot image version that was present when the feature was disabled and is not updated if the cluster is upgraded to a new Red&#160;Hat OpenShift Container Platform version in the future. This feature has no effect on existing nodes.</p>
@@ -2124,7 +2143,7 @@ status:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-11-04 12:39:10 +0000
+Last updated 2026-11-05 21:35:17 +0000
 </div>
 </div>
 <style>
